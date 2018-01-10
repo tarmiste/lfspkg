@@ -1,0 +1,45 @@
+Submitted By:            Pierre Labastie <pierre.labastie@neuf.fr>
+Date:                    2017-06-22
+Initial Package version: 4.89
+Upstream Status:         From upstream
+Origin:                  Upstream repo
+Description:             Cleanup (prevent repeated use of -p/-oMr to avoid mem
+                         leak). Security fix for CVE-2017-1000369
+
+diff --git a/src/exim.c b/src/src/exim.c
+index 67583e58..88e11977 100644
+--- a/src/exim.c
++++ b/src/exim.c
+@@ -3092,7 +3092,14 @@ for (i = 1; i < argc; i++)
+ 
+       /* -oMr: Received protocol */
+ 
+-      else if (Ustrcmp(argrest, "Mr") == 0) received_protocol = argv[++i];
++      else if (Ustrcmp(argrest, "Mr") == 0)
++
++        if (received_protocol)
++          {
++          fprintf(stderr, "received_protocol is set already\n");
++          exit(EXIT_FAILURE);
++          }
++        else received_protocol = argv[++i];
+ 
+       /* -oMs: Set sender host name */
+ 
+@@ -3188,7 +3195,15 @@ for (i = 1; i < argc; i++)
+ 
+     if (*argrest != 0)
+       {
+-      uschar *hn = Ustrchr(argrest, ':');
++      uschar *hn;
++
++      if (received_protocol)
++        {
++        fprintf(stderr, "received_protocol is set already\n");
++        exit(EXIT_FAILURE);
++        }
++
++      hn = Ustrchr(argrest, ':');
+       if (hn == NULL)
+         {
+         received_protocol = argrest;
