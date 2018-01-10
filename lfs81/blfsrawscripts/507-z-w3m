@@ -1,0 +1,86 @@
+#!/bin/bash
+set -e
+
+PKG_DIR=w3m
+SRC_DIR=${SRC_ARCHIVE}${SRC_SUBDIRS:+/${PKG_DIR}}
+BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
+mkdir -p $SRC_DIR
+mkdir -p $BUILD_DIR
+
+cd $SRC_DIR     ###### Getting source
+
+PACKAGE=w3m-0.5.3.tar.gz
+if [[ ! -f $PACKAGE ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE $PACKAGE
+  else
+    wget -T 30 -t 5 https://downloads.sourceforge.net/w3m/w3m-0.5.3.tar.gz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/w/$PACKAGE
+  fi
+fi
+echo "1b845a983a50b8dec0169ac48479eacc  $PACKAGE" | md5sum -c -
+
+PATCH=w3m-0.5.3-bdwgc72-1.patch
+if [[ ! -f $PATCH ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PATCH ]] ; then
+    cp $SRC_ARCHIVE/$PATCH $PATCH
+  else
+    wget -T 30 -t 5 http://www.linuxfromscratch.org/patches/blfs/8.1/w3m-0.5.3-bdwgc72-1.patch ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/w/$PATCH
+  fi
+fi
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PATCH $BUILD_DIR
+
+
+cd $BUILD_DIR        ##### Unpacking source
+find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
+case $PACKAGE in
+  *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
+     tar -xvf $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR=`grep '[^./]\+' unpacked | head -n1 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.tar.lz)
+     bsdtar -xvf $SRC_DIR/$PACKAGE 2> unpacked
+     UNPACKDIR=`head -n1 unpacked | cut  -d" " -f2 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.zip)
+     zipinfo -1 $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR="$(sed 's@/.*@@' unpacked | uniq )"
+     if test $(wc -w <<< $UNPACKDIR) -eq 1; then
+       unzip $SRC_DIR/$PACKAGE
+     else
+       UNPACKDIR=${PACKAGE%.zip}
+       unzip -d $UNPACKDIR $SRC_DIR/$PACKAGE
+     fi
+     ;;
+  *)
+     UNPACKDIR=$PKG_DIR-build
+     mkdir $UNPACKDIR
+     cp $SRC_DIR/$PACKAGE $UNPACKDIR
+     cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
+     ;;
+esac
+#######  Building package
+cd $UNPACKDIR
+
+patch -Np1 -i ../w3m-0.5.3-bdwgc72-1.patch &&
+sed -i 's/file_handle/file_foo/' istream.{c,h} &&
+sed -i 's#gdk-pixbuf-xlib-2.0#& x11#' configure &&
+
+PKG_CONFIG_PATH="/usr/lib/openssl-1.0/pkgconfig:$PKG_CONFIG_PATH" \
+    ./configure --prefix=/usr --sysconfdir=/etc  &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+install -v -m644 -D doc/keymap.default /etc/w3m/keymap &&
+install -v -m644    doc/menu.default /etc/w3m/menu &&
+install -v -m755 -d /usr/share/doc/w3m-0.5.3 &&
+install -v -m644    doc/{HISTORY,READ*,keymap.*,menu.*,*.html} \\
+                    /usr/share/doc/w3m-0.5.3
+ROOT_EOF
+sudo /sbin/ldconfig
+
+cd $BUILD_DIR
+[[ -n "$KEEP_FILES" ]] || sudo rm -rf $UNPACKDIR unpacked
+
+exit

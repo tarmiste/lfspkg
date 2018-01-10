@@ -1,0 +1,114 @@
+#!/bin/bash
+set -e
+
+PKG_DIR=opencv
+SRC_DIR=${SRC_ARCHIVE}${SRC_SUBDIRS:+/${PKG_DIR}}
+BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
+mkdir -p $SRC_DIR
+mkdir -p $BUILD_DIR
+
+cd $SRC_DIR     ###### Getting source
+
+PACKAGE=opencv-3.3.0.zip
+if [[ ! -f $PACKAGE ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE $PACKAGE
+  else
+    wget -T 30 -t 5 https://downloads.sourceforge.net/opencvlibrary/opencv-3.3.0.zip ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/o/$PACKAGE
+  fi
+fi
+echo "cc586ebe960a7cdd87100e89088abc06  $PACKAGE" | md5sum -c -
+
+PACKAGE1=ippicv_2017u2_lnx_intel64_20170418.tgz
+if [[ ! -f $PACKAGE1 ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE1 ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE1 $PACKAGE1
+  else
+    wget -T 30 -t 5 https://raw.githubusercontent.com/opencv/opencv_3rdparty/a62e20676a60ee0ad6581e217fe7e4bada3b95db/ippicv/ippicv_2017u2_lnx_intel64_20170418.tgz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/i/$PACKAGE1
+  fi
+fi
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PACKAGE1 $BUILD_DIR
+
+PACKAGE1=opencv_contrib-3.3.0.tar.gz
+if [[ ! -f $PACKAGE1 ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE1 ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE1 $PACKAGE1
+  else
+    wget -T 30 -t 5 https://github.com/opencv/opencv_contrib/archive/3.3.0/opencv_contrib-3.3.0.tar.gz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/o/$PACKAGE1
+  fi
+fi
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PACKAGE1 $BUILD_DIR
+
+
+cd $BUILD_DIR        ##### Unpacking source
+find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
+case $PACKAGE in
+  *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
+     tar -xvf $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR=`grep '[^./]\+' unpacked | head -n1 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.tar.lz)
+     bsdtar -xvf $SRC_DIR/$PACKAGE 2> unpacked
+     UNPACKDIR=`head -n1 unpacked | cut  -d" " -f2 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.zip)
+     zipinfo -1 $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR="$(sed 's@/.*@@' unpacked | uniq )"
+     if test $(wc -w <<< $UNPACKDIR) -eq 1; then
+       unzip $SRC_DIR/$PACKAGE
+     else
+       UNPACKDIR=${PACKAGE%.zip}
+       unzip -d $UNPACKDIR $SRC_DIR/$PACKAGE
+     fi
+     ;;
+  *)
+     UNPACKDIR=$PKG_DIR-build
+     mkdir $UNPACKDIR
+     cp $SRC_DIR/$PACKAGE $UNPACKDIR
+     cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
+     ;;
+esac
+#######  Building package
+cd $UNPACKDIR
+
+ipp_file=ippicv_2017u2_lnx_intel64_20170418.tgz &&
+ipp_hash=$(md5sum ../$ipp_file | cut -d" " -f1) &&
+ipp_dir=.cache/ippicv                           &&
+
+mkdir -p $ipp_dir &&
+cp ../$ipp_file $ipp_dir/$ipp_hash-$ipp_file
+tar xf ../opencv_contrib-3.3.0.tar.gz
+mkdir build &&
+cd    build &&
+
+cmake -DCMAKE_INSTALL_PREFIX=/usr      \
+      -DCMAKE_BUILD_TYPE=Release       \
+      -DENABLE_CXX11=ON                \
+      -DBUILD_PERF_TESTS=OFF           \
+      -DWITH_XINE=ON                   \
+      -DBUILD_TESTS=OFF                \
+      -DENABLE_PRECOMPILED_HEADERS=OFF \
+      -DCMAKE_SKIP_RPATH=ON            \
+      -DBUILD_WITH_DEBUG_INFO=OFF      \
+      -Wno-dev  ..                     &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install             &&
+
+case \$(uname -m) in
+  x86_64) ARCH=intel64 ;;
+       *) ARCH=ia32    ;;
+esac                     &&
+
+cp -v 3rdparty/ippicv/ippicv_lnx/lib/\$ARCH/libippicv.a /usr/lib &&
+unset ARCH
+ROOT_EOF
+sudo /sbin/ldconfig
+
+cd $BUILD_DIR
+[[ -n "$KEEP_FILES" ]] || sudo rm -rf $UNPACKDIR unpacked
+
+exit

@@ -1,0 +1,96 @@
+#!/bin/bash
+set -e
+
+PKG_DIR=parted
+SRC_DIR=${SRC_ARCHIVE}${SRC_SUBDIRS:+/${PKG_DIR}}
+BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
+mkdir -p $SRC_DIR
+mkdir -p $BUILD_DIR
+
+cd $SRC_DIR     ###### Getting source
+
+PACKAGE=parted-3.2.tar.xz
+if [[ ! -f $PACKAGE ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE $PACKAGE
+  else
+    wget -T 30 -t 5 https://ftp.gnu.org/gnu/parted/parted-3.2.tar.xz ||
+    wget -T 30 -t 5 ftp://ftp.gnu.org/gnu/parted/parted-3.2.tar.xz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/p/$PACKAGE
+  fi
+fi
+echo "0247b6a7b314f8edeb618159fa95f9cb  $PACKAGE" | md5sum -c -
+
+PATCH=parted-3.2-devmapper-1.patch
+if [[ ! -f $PATCH ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PATCH ]] ; then
+    cp $SRC_ARCHIVE/$PATCH $PATCH
+  else
+    wget -T 30 -t 5 http://www.linuxfromscratch.org/patches/blfs/8.1/parted-3.2-devmapper-1.patch ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/p/$PATCH
+  fi
+fi
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PATCH $BUILD_DIR
+
+
+cd $BUILD_DIR        ##### Unpacking source
+find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
+case $PACKAGE in
+  *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
+     tar -xvf $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR=`grep '[^./]\+' unpacked | head -n1 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.tar.lz)
+     bsdtar -xvf $SRC_DIR/$PACKAGE 2> unpacked
+     UNPACKDIR=`head -n1 unpacked | cut  -d" " -f2 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.zip)
+     zipinfo -1 $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR="$(sed 's@/.*@@' unpacked | uniq )"
+     if test $(wc -w <<< $UNPACKDIR) -eq 1; then
+       unzip $SRC_DIR/$PACKAGE
+     else
+       UNPACKDIR=${PACKAGE%.zip}
+       unzip -d $UNPACKDIR $SRC_DIR/$PACKAGE
+     fi
+     ;;
+  *)
+     UNPACKDIR=$PKG_DIR-build
+     mkdir $UNPACKDIR
+     cp $SRC_DIR/$PACKAGE $UNPACKDIR
+     cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
+     ;;
+esac
+#######  Building package
+cd $UNPACKDIR
+
+patch -Np1 -i ../parted-3.2-devmapper-1.patch
+./configure --prefix=/usr --disable-static &&
+make &&
+
+make -C doc html                                       &&
+makeinfo --html      -o doc/html       doc/parted.texi &&
+makeinfo --plaintext -o doc/parted.txt doc/parted.texi
+texi2pdf             -o doc/parted.pdf doc/parted.texi &&
+texi2dvi             -o doc/parted.dvi doc/parted.texi &&
+dvips                -o doc/parted.ps  doc/parted.dvi
+sed -i '/t0251-gpt-unicode.sh/d' tests/Makefile
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+install -v -m755 -d /usr/share/doc/parted-3.2/html &&
+install -v -m644    doc/html/* \\
+                    /usr/share/doc/parted-3.2/html &&
+install -v -m644    doc/{FAT,API,parted.{txt,html}} \\
+                    /usr/share/doc/parted-3.2
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -v -m644 doc/FAT doc/API doc/parted.{pdf,ps,dvi} \\
+                    /usr/share/doc/parted-3.2
+ROOT_EOF
+sudo /sbin/ldconfig
+
+cd $BUILD_DIR
+[[ -n "$KEEP_FILES" ]] || sudo rm -rf $UNPACKDIR unpacked
+
+exit

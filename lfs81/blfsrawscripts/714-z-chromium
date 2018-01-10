@@ -1,0 +1,222 @@
+#!/bin/bash
+set -e
+
+PKG_DIR=chromium
+SRC_DIR=${SRC_ARCHIVE}${SRC_SUBDIRS:+/${PKG_DIR}}
+BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
+mkdir -p $SRC_DIR
+mkdir -p $BUILD_DIR
+
+cd $SRC_DIR     ###### Getting source
+
+PACKAGE=chromium-60.0.3112.101.tar.xz
+if [[ ! -f $PACKAGE ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE $PACKAGE
+  else
+    wget -T 30 -t 5 https://commondatastorage.googleapis.com/chromium-browser-official/chromium-60.0.3112.101.tar.xz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/c/$PACKAGE
+  fi
+fi
+echo "9fe9af85faeaf617cb61997c431a02e2  $PACKAGE" | md5sum -c -
+
+PATCH=chromium-60.0.3112.101-gcc7-1.patch
+if [[ ! -f $PATCH ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PATCH ]] ; then
+    cp $SRC_ARCHIVE/$PATCH $PATCH
+  else
+    wget -T 30 -t 5 http://www.linuxfromscratch.org/patches/blfs/8.1/chromium-60.0.3112.101-gcc7-1.patch ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/c/$PATCH
+  fi
+fi
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PATCH $BUILD_DIR
+
+PATCH=chromium-60.0.3112.101-glibc-2.26-1.patch
+if [[ ! -f $PATCH ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PATCH ]] ; then
+    cp $SRC_ARCHIVE/$PATCH $PATCH
+  else
+    wget -T 30 -t 5 http://www.linuxfromscratch.org/patches/blfs/8.1/chromium-60.0.3112.101-glibc-2.26-1.patch ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/c/$PATCH
+  fi
+fi
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PATCH $BUILD_DIR
+
+PACKAGE1=google-chrome-stable_60.0.3112.101-1_amd64.deb
+if [[ ! -f $PACKAGE1 ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE1 ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE1 $PACKAGE1
+  else
+    wget -T 30 -t 5 http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_60.0.3112.101-1_amd64.deb ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/g/$PACKAGE1
+  fi
+fi
+echo "70f90d19dcf51a87b7f6df788b5fddc7  $PACKAGE1" | md5sum -c -
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PACKAGE1 $BUILD_DIR
+
+PACKAGE1=google-chrome-stable_48.0.2564.116-1_i386.deb
+if [[ ! -f $PACKAGE1 ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE1 ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE1 $PACKAGE1
+  else
+    wget -T 30 -t 5 http://mirror.retrosnub.co.uk/apt/google/pool/main/g/google-chrome-stable/google-chrome-stable_48.0.2564.116-1_i386.deb ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/g/$PACKAGE1
+  fi
+fi
+echo "895e877b9bfe5da05a061369c2078626  $PACKAGE1" | md5sum -c -
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PACKAGE1 $BUILD_DIR
+
+
+cd $BUILD_DIR        ##### Unpacking source
+find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
+case $PACKAGE in
+  *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
+     tar -xvf $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR=`grep '[^./]\+' unpacked | head -n1 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.tar.lz)
+     bsdtar -xvf $SRC_DIR/$PACKAGE 2> unpacked
+     UNPACKDIR=`head -n1 unpacked | cut  -d" " -f2 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.zip)
+     zipinfo -1 $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR="$(sed 's@/.*@@' unpacked | uniq )"
+     if test $(wc -w <<< $UNPACKDIR) -eq 1; then
+       unzip $SRC_DIR/$PACKAGE
+     else
+       UNPACKDIR=${PACKAGE%.zip}
+       unzip -d $UNPACKDIR $SRC_DIR/$PACKAGE
+     fi
+     ;;
+  *)
+     UNPACKDIR=$PKG_DIR-build
+     mkdir $UNPACKDIR
+     cp $SRC_DIR/$PACKAGE $UNPACKDIR
+     cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
+     ;;
+esac
+#######  Building package
+cd $UNPACKDIR
+
+patch -Np1 -i ../chromium-60.0.3112.101-gcc7-1.patch
+patch -Np1 -i ../chromium-60.0.3112.101-glibc-2.26-1.patch
+sed 's/WIDEVINE_CDM_AVAILABLE/&\n\n#define WIDEVINE_CDM_VERSION_STRING "Pinkie Pie"/' \
+    -i third_party/widevine/cdm/stub/widevine_cdm_version.h
+sed "/delayed_task_manager.cc/a\      'base/task_scheduler/environment_config.cc'," \
+    -i tools/gn/bootstrap/bootstrap.py
+for LIB in ffmpeg flac harfbuzz-ng libjpeg \
+           libjpeg_turbo libpng libwebp libxslt yasm; do
+    find -type f -path "*third_party/$LIB/*"     \
+        \! -path "*third_party/$LIB/chromium/*"  \
+        \! -path "*third_party/$LIB/google/*"    \
+        \! -path "*base/third_party/icu/*"       \
+        \! -path "*base/third_party/libevent/*"  \
+        \! -regex '.*\.\(gn\|gni\|isolate\|py\)' \
+        -delete
+done &&
+
+python build/linux/unbundle/replace_gn_files.py \
+    --system-libraries ffmpeg flac harfbuzz-ng libjpeg \
+                       libpng libwebp libxslt yasm &&
+python third_party/libaddressinput/chromium/tools/update-strings.py
+GN_CONFIG=('google_api_key="AIzaSyDxKL42zsPjbke5O8_rPVpVrLrJ8aeE9rQ"'
+'google_default_client_id="595013732528-llk8trb03f0ldpqq6nprjp1s79596646.apps.googleusercontent.com"'
+'google_default_client_secret="5ntt6GbbkjnTVXx-MSxbmx5e"'
+'clang_use_chrome_plugins=false'
+'enable_hangout_services_extension=true'
+'enable_nacl=false'
+'enable_nacl_nonsfi=false'
+'enable_swiftshader=false'
+'enable_widevine=true'
+'fatal_linker_warnings=false'
+'ffmpeg_branding="Chrome"'
+'fieldtrial_testing_like_official_build=true'
+'is_debug=false'
+'is_clang=false'
+'link_pulseaudio=true'
+'linux_use_bundled_binutils=false'
+'proprietary_codecs=true'
+'remove_webcore_debug_symbols=true'
+'symbol_level=0'
+'treat_warnings_as_errors=false'
+'use_allocator="none"'
+'use_cups=true'
+'use_gconf=false'
+'use_gnome_keyring=false'
+'use_gold=false'
+'use_gtk3=true'
+'use_kerberos=true'
+'use_pulseaudio=true'
+'use_sysroot=false')
+python tools/gn/bootstrap/bootstrap.py --gn-gen-args "${GN_CONFIG[*]}" &&
+out/Release/gn gen out/Release --args="${GN_CONFIG[*]}"
+mkdir -p third_party/node/linux/node-linux-x64/bin &&
+ln -s /usr/bin/node third_party/node/linux/node-linux-x64/bin/ &&
+ninja -C out/Release chrome chrome_sandbox chromedriver widevinecdmadapter
+sudo -E sh << ROOT_EOF
+install -vDm755  out/Release/chrome \\
+                 /usr/lib/chromium/chromium                   &&
+install -vDm4755 out/Release/chrome_sandbox \\
+                 /usr/lib/chromium/chrome-sandbox             &&
+install -vDm755  out/Release/chromedriver \\
+                 /usr/lib/chromium/chromedriver               &&
+ln -svf /usr/lib/chromium/chromium /usr/bin                   &&
+ln -svf /usr/lib/chromium/chromedriver /usr/bin/              &&
+
+install -vm644  out/Release/icudtl.dat /usr/lib/chromium/     &&
+install -vDm644 out/Release/gen/content/content_resources.pak \\
+                /usr/lib/chromium/                            &&
+install -vm644  out/Release/{*.pak,*.bin} \\
+                /usr/lib/chromium/                            &&
+
+cp -av out/Release/locales /usr/lib/chromium/                 &&
+chown -Rv root:root /usr/lib/chromium/locales                 &&
+
+install -vDm644 out/Release/chrome.1 \\
+                /usr/share/man/man1/chromium.1
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+for size in 16 32; do
+    install -vDm644 \\
+        "chrome/app/theme/default_100_percent/chromium/product_logo_\$size.png" \\
+        "/usr/share/icons/hicolor/\${size}x\${size}/apps/chromium.png"
+done &&
+
+for size in 22 24 48 64 128 256; do
+    install -vDm644 "chrome/app/theme/chromium/product_logo_\$size.png" \\
+        "/usr/share/icons/hicolor/\${size}x\${size}/apps/chromium.png"
+done &&
+
+cat > /usr/share/applications/chromium.desktop << "EOF"
+[Desktop Entry]
+Encoding=UTF-8
+Name=Chromium Web Browser
+Comment=Access the Internet
+GenericName=Web Browser
+Exec=chromium %u
+Terminal=false
+Type=Application
+Icon=chromium
+Categories=GTK;Network;WebBrowser;
+MimeType=application/xhtml+xml;text/xml;application/xhtml+xml;text/mml;x-scheme-handler/http;x-scheme-handler/https;
+EOF
+ROOT_EOF
+mkdir temp                                         &&
+cd temp                                            &&
+case $(uname -m) in
+    x86_64) ar -x ../../google-chrome-stable_60.0.3112.101-1_amd64.deb
+    ;;
+    i?86)   ar -x ../../google-chrome-stable_48.0.2564.116-1_i386.deb
+    ;;
+esac
+sudo -E sh << ROOT_EOF
+tar -xf data.tar.xz                                                        &&
+install -vm755 ../out/Release/libwidevinecdmadapter.so /usr/lib/chromium/  &&
+install -vm755 opt/google/chrome/libwidevinecdm.so  /usr/lib/chromium/
+ROOT_EOF
+sudo /sbin/ldconfig
+
+cd $BUILD_DIR
+[[ -n "$KEEP_FILES" ]] || sudo rm -rf $UNPACKDIR unpacked
+
+exit

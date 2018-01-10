@@ -1,0 +1,45 @@
+#!/bin/bash
+set -e
+
+mkdir xc &&
+cd xc
+export XORG_PREFIX="**EDITME<PREFIX>EDITME**"
+export XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc \
+    --localstatedir=/var --disable-static"
+sudo -E sh << ROOT_EOF
+cat > /etc/profile.d/xorg.sh << EOF
+XORG_PREFIX="\$XORG_PREFIX"
+XORG_CONFIG="--prefix=\\\$XORG_PREFIX --sysconfdir=/etc --localstatedir=/var --disable-static"
+export XORG_PREFIX XORG_CONFIG
+EOF
+chmod 644 /etc/profile.d/xorg.sh
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+cat >> /etc/profile.d/xorg.sh << "EOF"
+
+pathappend \$XORG_PREFIX/bin             PATH
+pathappend \$XORG_PREFIX/lib/pkgconfig   PKG_CONFIG_PATH
+pathappend \$XORG_PREFIX/share/pkgconfig PKG_CONFIG_PATH
+
+pathappend \$XORG_PREFIX/lib             LIBRARY_PATH
+pathappend \$XORG_PREFIX/include         C_INCLUDE_PATH
+pathappend \$XORG_PREFIX/include         CPLUS_INCLUDE_PATH
+
+ACLOCAL="aclocal -I \$XORG_PREFIX/share/aclocal"
+
+export PATH PKG_CONFIG_PATH ACLOCAL LIBRARY_PATH C_INCLUDE_PATH CPLUS_INCLUDE_PATH
+EOF
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+echo "\$XORG_PREFIX/lib" >> /etc/ld.so.conf
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+sed "s@**EDITME/usr/X11R6EDITME**@\$XORG_PREFIX@g" -i /etc/man_db.conf
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+ln -sf \$XORG_PREFIX/share/X11 /usr/share/X11
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+ln -sf \$XORG_PREFIX /usr/X11R6
+ROOT_EOF
+exit

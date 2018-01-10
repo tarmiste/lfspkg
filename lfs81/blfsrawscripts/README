@@ -1,0 +1,6 @@
+
+These scriptlets were created with the blfs tool.   
+
+Modify Config.in to change all 'default n' to 'default y'.
+Then run make.
+The contents of the scripts subdirectory are these scriptlets.

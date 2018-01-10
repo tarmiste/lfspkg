@@ -1,0 +1,151 @@
+#!/bin/bash
+set -e
+
+PKG_DIR=logrotate
+SRC_DIR=${SRC_ARCHIVE}${SRC_SUBDIRS:+/${PKG_DIR}}
+BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
+mkdir -p $SRC_DIR
+mkdir -p $BUILD_DIR
+
+cd $SRC_DIR     ###### Getting source
+
+PACKAGE=logrotate-3.11.0.tar.xz
+if [[ ! -f $PACKAGE ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE $PACKAGE
+  else
+    wget -T 30 -t 5 https://github.com/logrotate/logrotate/releases/download/3.11.0/logrotate-3.11.0.tar.xz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/l/$PACKAGE
+  fi
+fi
+echo "3a9280e4caeb837427a2d54518fbcdac  $PACKAGE" | md5sum -c -
+
+
+cd $BUILD_DIR        ##### Unpacking source
+find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
+case $PACKAGE in
+  *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
+     tar -xvf $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR=`grep '[^./]\+' unpacked | head -n1 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.tar.lz)
+     bsdtar -xvf $SRC_DIR/$PACKAGE 2> unpacked
+     UNPACKDIR=`head -n1 unpacked | cut  -d" " -f2 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.zip)
+     zipinfo -1 $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR="$(sed 's@/.*@@' unpacked | uniq )"
+     if test $(wc -w <<< $UNPACKDIR) -eq 1; then
+       unzip $SRC_DIR/$PACKAGE
+     else
+       UNPACKDIR=${PACKAGE%.zip}
+       unzip -d $UNPACKDIR $SRC_DIR/$PACKAGE
+     fi
+     ;;
+  *)
+     UNPACKDIR=$PKG_DIR-build
+     mkdir $UNPACKDIR
+     cp $SRC_DIR/$PACKAGE $UNPACKDIR
+     cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
+     ;;
+esac
+#######  Building package
+cd $UNPACKDIR
+
+sed -i '/exit 5/s/^/echo uncompress failed -- skipping #/' test/test &&
+
+./configure --prefix=/usr &&
+make
+#make -k test || true
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+cat > /etc/logrotate.conf << EOF
+# Begin of /etc/logrotate.conf
+
+# Rotate log files weekly
+weekly
+
+# Don't mail logs to anybody
+nomail
+
+# If the log file is empty, it will not be rotated
+notifempty
+
+# Number of backups that will be kept
+# This will keep the 2 newest backups only
+rotate 2
+
+# Create new empty files after rotating old ones
+# This will create empty log files, with owner
+# set to root, group set to sys, and permissions 644
+create 0664 root sys
+
+# Compress the backups with gzip
+compress
+
+# No packages own lastlog or wtmp -- rotate them here
+/var/log/wtmp {
+    monthly
+    create 0664 root utmp
+    rotate 1
+}
+
+/var/log/lastlog {
+    monthly
+    rotate 1
+}
+
+# Some packages drop log rotation info in this directory
+# so we include any file in it.
+include /etc/logrotate.d
+
+# End of /etc/logrotate.conf
+EOF
+
+chmod -v 0644 /etc/logrotate.conf
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+ mkdir -p /etc/logrotate.d
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+cat > /etc/logrotate.d/sys.log << EOF
+/var/log/sys.log {
+   # If the log file is larger than 100kb, rotate it
+   size   100k
+   rotate 5
+   weekly
+   postrotate
+      /bin/killall -HUP syslogd
+   endscript
+}
+EOF
+
+chmod -v 0644 /etc/logrotate.d/sys.log
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+cat > /etc/logrotate.d/example.log << EOF
+file1
+file2
+file3 {
+   ...
+   postrotate
+    ...
+   endscript
+}
+EOF
+
+chmod -v 0644 /etc/logrotate.d/example.log
+ROOT_EOF
+
+
+cd $BUILD_DIR
+[[ -n "$KEEP_FILES" ]] || sudo rm -rf $UNPACKDIR unpacked
+
+exit

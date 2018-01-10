@@ -1,0 +1,140 @@
+#!/bin/bash
+set -e
+
+PKG_DIR=fop
+SRC_DIR=${SRC_ARCHIVE}${SRC_SUBDIRS:+/${PKG_DIR}}
+BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
+mkdir -p $SRC_DIR
+mkdir -p $BUILD_DIR
+
+cd $SRC_DIR     ###### Getting source
+
+PACKAGE=fop-2.2-src.tar.gz
+if [[ ! -f $PACKAGE ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE $PACKAGE
+  else
+    wget -T 30 -t 5 https://archive.apache.org/dist/xmlgraphics/fop/source/fop-2.2-src.tar.gz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/f/$PACKAGE
+  fi
+fi
+echo "6d2388bd8851b4883d3258c0afc96895  $PACKAGE" | md5sum -c -
+
+PACKAGE1=offo-hyphenation.zip
+if [[ ! -f $PACKAGE1 ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE1 ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE1 $PACKAGE1
+  else
+    wget -T 30 -t 5 https://downloads.sourceforge.net/offo/2.2/offo-hyphenation.zip ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/o/$PACKAGE1
+  fi
+fi
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PACKAGE1 $BUILD_DIR
+
+PACKAGE1=jai-1_1_3-lib-linux-i586.tar.gz
+if [[ ! -f $PACKAGE1 ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE1 ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE1 $PACKAGE1
+  else
+    wget -T 30 -t 5 http://download.java.net/media/jai/builds/release/1_1_3/jai-1_1_3-lib-linux-i586.tar.gz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/j/$PACKAGE1
+  fi
+fi
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PACKAGE1 $BUILD_DIR
+
+PACKAGE1=jai-1_1_3-lib-linux-amd64.tar.gz
+if [[ ! -f $PACKAGE1 ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE1 ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE1 $PACKAGE1
+  else
+    wget -T 30 -t 5 http://download.java.net/media/jai/builds/release/1_1_3/jai-1_1_3-lib-linux-amd64.tar.gz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/j/$PACKAGE1
+  fi
+fi
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PACKAGE1 $BUILD_DIR
+
+
+cd $BUILD_DIR        ##### Unpacking source
+find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
+case $PACKAGE in
+  *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
+     tar -xvf $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR=`grep '[^./]\+' unpacked | head -n1 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.tar.lz)
+     bsdtar -xvf $SRC_DIR/$PACKAGE 2> unpacked
+     UNPACKDIR=`head -n1 unpacked | cut  -d" " -f2 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.zip)
+     zipinfo -1 $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR="$(sed 's@/.*@@' unpacked | uniq )"
+     if test $(wc -w <<< $UNPACKDIR) -eq 1; then
+       unzip $SRC_DIR/$PACKAGE
+     else
+       UNPACKDIR=${PACKAGE%.zip}
+       unzip -d $UNPACKDIR $SRC_DIR/$PACKAGE
+     fi
+     ;;
+  *)
+     UNPACKDIR=$PKG_DIR-build
+     mkdir $UNPACKDIR
+     cp $SRC_DIR/$PACKAGE $UNPACKDIR
+     cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
+     ;;
+esac
+#######  Building package
+cd $UNPACKDIR
+
+unzip ../offo-hyphenation.zip &&
+cp offo-hyphenation/hyph/* fop/hyph &&
+rm -rf offo-hyphenation
+sudo -E sh << ROOT_EOF
+case \`uname -m\` in
+  i?86)
+    tar -xf ../jai-1_1_3-lib-linux-i586.tar.gz
+    cp -v jai-1_1_3/lib/{jai*,mlibwrapper_jai.jar} \$JAVA_HOME/jre/lib/ext/
+    cp -v jai-1_1_3/lib/libmlib_jai.so             \$JAVA_HOME/jre/lib/i386/
+    ;;
+
+  x86_64)
+    tar -xf ../jai-1_1_3-lib-linux-amd64.tar.gz
+    cp -v jai-1_1_3/lib/{jai*,mlibwrapper_jai.jar} \$JAVA_HOME/jre/lib/ext/
+    cp -v jai-1_1_3/lib/libmlib_jai.so             \$JAVA_HOME/jre/lib/amd64/
+    ;;
+esac
+ROOT_EOF
+sed -i '\@</javad@i\
+<arg value="-Xdoclint:none"/>\
+<arg value="--allow-script-in-comments"/>' fop/build.xml
+sed -e '/hyph\.stack/s/512k/1M/' \
+    -i fop/build.xml
+cd fop                    &&
+export LC_ALL=en_US.UTF-8 &&
+
+ant compile               &&
+ant jar-main              &&
+ant jar-hyphenation       &&
+ant javadocs              &&
+mv build/javadocs .
+sed -e '/haltonfailure/s/yes/off/' \
+    -i build.xml
+sudo -E sh << ROOT_EOF
+install -v -d -m755 -o root -g root          /opt/fop-2.2 &&
+cp -v  ../{KEYS,LICENSE,NOTICE,README}       /opt/fop-2.2 &&
+cp -vR build conf examples fop* javadocs lib /opt/fop-2.2 &&
+chmod a+x /opt/fop-2.2/fop                                &&
+
+ln -v -sfn fop-2.2 /opt/fop
+ROOT_EOF
+sudo /sbin/ldconfig
+
+cat > ~/.foprc << "EOF"
+FOP_OPTS="-Xmx**EDITME<RAM_Installed>EDITME**m"
+FOP_HOME="/opt/fop"
+EOF
+
+
+cd $BUILD_DIR
+[[ -n "$KEEP_FILES" ]] || sudo rm -rf $UNPACKDIR unpacked
+
+exit

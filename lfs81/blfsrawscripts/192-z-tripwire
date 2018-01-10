@@ -1,0 +1,102 @@
+#!/bin/bash
+set -e
+
+PKG_DIR=tripwire
+SRC_DIR=${SRC_ARCHIVE}${SRC_SUBDIRS:+/${PKG_DIR}}
+BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
+mkdir -p $SRC_DIR
+mkdir -p $BUILD_DIR
+
+cd $SRC_DIR     ###### Getting source
+
+PACKAGE=tripwire-open-source-2.4.3.5.tar.gz
+if [[ ! -f $PACKAGE ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE $PACKAGE
+  else
+    wget -T 30 -t 5 https://github.com/Tripwire/tripwire-open-source/releases/download/2.4.3.5/tripwire-open-source-2.4.3.5.tar.gz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/t/$PACKAGE
+  fi
+fi
+echo "34f09583d7ab4c10003db61707f1b707  $PACKAGE" | md5sum -c -
+
+
+cd $BUILD_DIR        ##### Unpacking source
+find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
+case $PACKAGE in
+  *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
+     tar -xvf $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR=`grep '[^./]\+' unpacked | head -n1 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.tar.lz)
+     bsdtar -xvf $SRC_DIR/$PACKAGE 2> unpacked
+     UNPACKDIR=`head -n1 unpacked | cut  -d" " -f2 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.zip)
+     zipinfo -1 $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR="$(sed 's@/.*@@' unpacked | uniq )"
+     if test $(wc -w <<< $UNPACKDIR) -eq 1; then
+       unzip $SRC_DIR/$PACKAGE
+     else
+       UNPACKDIR=${PACKAGE%.zip}
+       unzip -d $UNPACKDIR $SRC_DIR/$PACKAGE
+     fi
+     ;;
+  *)
+     UNPACKDIR=$PKG_DIR-build
+     mkdir $UNPACKDIR
+     cp $SRC_DIR/$PACKAGE $UNPACKDIR
+     cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
+     ;;
+esac
+#######  Building package
+cd $UNPACKDIR
+
+sed -e 's|TWDB="${prefix}|TWDB="/var|'   \
+    -e '/TWMAN/ s|${prefix}|/usr/share|' \
+    -e '/TWDOCS/s|${prefix}/doc/tripwire|/usr/share/doc/tripwire-2.4.3.5|' \
+    -i installer/install.cfg                               &&
+
+find . -name Makefile.am | xargs                           \
+    sed -i 's/^[[:alpha:]_]*_HEADERS.*=/noinst_HEADERS =/' &&
+
+sed '/dist/d' -i man/man?/Makefile.am                      &&
+autoreconf -fi                                             &&
+
+./configure --prefix=/usr --sysconfdir=/etc/tripwire       &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+cp -v policy/*.txt /usr/share/doc/tripwire-2.4.3.5
+ROOT_EOF
+sed -i -e 's@installer/install.sh@& -n -s **EDITME<site-password>EDITME** -l **EDITME<local-password>EDITME**@' Makefile
+sed '/-t 0/,+3d' -i installer/install.sh
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+twadmin --create-polfile --site-keyfile /etc/tripwire/site.key \\
+    /etc/tripwire/twpol.txt &&
+tripwire --init
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+tripwire --check > /etc/tripwire/report.txt
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+twprint --print-report -r /var/lib/tripwire/report/**EDITME<report-name.twr>EDITME**
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+tripwire --update --twrfile /var/lib/tripwire/report/**EDITME<report-name.twr>EDITME**
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+twadmin --create-polfile /etc/tripwire/twpol.txt &&
+tripwire --init
+ROOT_EOF
+
+cd $BUILD_DIR
+[[ -n "$KEEP_FILES" ]] || sudo rm -rf $UNPACKDIR unpacked
+
+exit

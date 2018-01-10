@@ -1,0 +1,172 @@
+#!/bin/bash
+set -e
+
+PKG_DIR=php
+SRC_DIR=${SRC_ARCHIVE}${SRC_SUBDIRS:+/${PKG_DIR}}
+BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
+mkdir -p $SRC_DIR
+mkdir -p $BUILD_DIR
+
+cd $SRC_DIR     ###### Getting source
+
+PACKAGE=php-7.1.8.tar.xz
+if [[ ! -f $PACKAGE ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE $PACKAGE
+  else
+    wget -T 30 -t 5 http://www.php.net/distributions/php-7.1.8.tar.xz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/p/$PACKAGE
+  fi
+fi
+echo "937dba5d7f12bca3c6864db52ea499e1  $PACKAGE" | md5sum -c -
+
+PACKAGE1=download-docs.php
+if [[ ! -f $PACKAGE1 ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE1 ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE1 $PACKAGE1
+  else
+    wget -T 30 -t 5 http://www.php.net/download-docs.php ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/d/$PACKAGE1
+  fi
+fi
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PACKAGE1 $BUILD_DIR
+
+
+cd $BUILD_DIR        ##### Unpacking source
+find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
+case $PACKAGE in
+  *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
+     tar -xvf $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR=`grep '[^./]\+' unpacked | head -n1 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.tar.lz)
+     bsdtar -xvf $SRC_DIR/$PACKAGE 2> unpacked
+     UNPACKDIR=`head -n1 unpacked | cut  -d" " -f2 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.zip)
+     zipinfo -1 $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR="$(sed 's@/.*@@' unpacked | uniq )"
+     if test $(wc -w <<< $UNPACKDIR) -eq 1; then
+       unzip $SRC_DIR/$PACKAGE
+     else
+       UNPACKDIR=${PACKAGE%.zip}
+       unzip -d $UNPACKDIR $SRC_DIR/$PACKAGE
+     fi
+     ;;
+  *)
+     UNPACKDIR=$PKG_DIR-build
+     mkdir $UNPACKDIR
+     cp $SRC_DIR/$PACKAGE $UNPACKDIR
+     cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
+     ;;
+esac
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr                \
+            --sysconfdir=/etc            \
+            --localstatedir=/var         \
+            --datadir=/usr/share/php     \
+            --mandir=/usr/share/man      \
+            --enable-fpm                 \
+            --with-fpm-user=apache       \
+            --with-fpm-group=apache      \
+            --with-config-file-path=/etc \
+            --with-zlib                  \
+            --enable-bcmath              \
+            --with-bz2                   \
+            --enable-calendar            \
+            --enable-dba=shared          \
+            --with-gdbm                  \
+            --with-gmp                   \
+            --enable-ftp                 \
+            --with-gettext               \
+            --enable-mbstring            \
+            --with-readline              &&
+make
+#make -k test || true
+sudo -E sh << ROOT_EOF
+make -j1 install                                     &&
+install -v -m644 php.ini-production /etc/php.ini &&
+
+install -v -m755 -d /usr/share/doc/php-7.1.8 &&
+install -v -m644    CODING_STANDARDS EXTENSIONS INSTALL NEWS README* UPGRADING* php.gif \\
+                    /usr/share/doc/php-7.1.8 &&
+ln -v -sfn          /usr/lib/php/doc/Archive_Tar/docs/Archive_Tar.txt \\
+                    /usr/share/doc/php-7.1.8 &&
+ln -v -sfn          /usr/lib/php/doc/Structures_Graph/docs \\
+                    /usr/share/doc/php-7.1.8
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+if [ -f /etc/php-fpm.conf.default ]; then
+  mv -v /etc/php-fpm.conf{.default,} &&
+  mv -v /etc/php-fpm.d/www.conf{.default,}
+fi
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -v -m644 ../php_manual_en.html.gz \\
+    /usr/share/doc/php-7.1.8 &&
+gunzip -v /usr/share/doc/php-7.1.8/php_manual_en.html.gz
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+tar -xvf ../php_manual_en.tar.gz \\
+    -C /usr/share/doc/php-7.1.8 --no-same-owner
+ROOT_EOF
+sudo /sbin/ldconfig
+
+
+sudo -E sh << ROOT_EOF
+sed -i 's@php/includes"@&\\ninclude_path = ".:/usr/lib/php"@' \\
+    /etc/php.ini
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+sed -i -e '/proxy_module/s/^#//'      \\
+       -e '/proxy_fcgi_module/s/^#//' \\
+       /etc/httpd/httpd.conf
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+echo \\
+'ProxyPassMatch ^/(.*\\.php)\$ fcgi://127.0.0.1:9000/srv/www/\$1' >> \\
+/etc/httpd/httpd.conf
+ROOT_EOF
+
+
+[[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts
+pushd $SRC_DIR/blfs-bootscripts
+URL=http://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20170731.tar.xz
+BOOTPACKG=$(basename $URL)
+if [[ ! -f $BOOTPACKG ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PKG_DIR/$BOOTPACKG ]] ; then
+    cp $SRC_ARCHIVE/$PKG_DIR/$BOOTPACKG $BOOTPACKG
+  elif [[ -f $SRC_ARCHIVE/$BOOTPACKG ]] ; then
+    cp $SRC_ARCHIVE/$BOOTPACKG $BOOTPACKG
+  else
+    wget -T 30 -t 5 $URL
+    cp $BOOTPACKG $SRC_ARCHIVE
+  fi
+  rm -f unpacked
+fi
+
+if [[ -e unpacked ]] ; then
+  BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+  if ! [[ -d $BOOTUNPACKDIR ]]; then
+    rm unpacked
+    tar -xvf $BOOTPACKG > unpacked
+    BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+  fi
+else
+  tar -xvf $BOOTPACKG > unpacked
+  BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+fi
+cd $BOOTUNPACKDIR
+sudo -E sh << ROOT_EOF
+make -j1 install-php
+ROOT_EOF
+
+popd
+cd $BUILD_DIR
+[[ -n "$KEEP_FILES" ]] || sudo rm -rf $UNPACKDIR unpacked
+
+exit

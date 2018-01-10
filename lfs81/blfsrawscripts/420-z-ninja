@@ -1,0 +1,89 @@
+#!/bin/bash
+set -e
+
+PKG_DIR=ninja
+SRC_DIR=${SRC_ARCHIVE}${SRC_SUBDIRS:+/${PKG_DIR}}
+BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
+mkdir -p $SRC_DIR
+mkdir -p $BUILD_DIR
+
+cd $SRC_DIR     ###### Getting source
+
+PACKAGE=ninja-1.7.2.tar.gz
+if [[ ! -f $PACKAGE ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE $PACKAGE
+  else
+    wget -T 30 -t 5 https://github.com/ninja-build/ninja/archive/v1.7.2/ninja-1.7.2.tar.gz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/n/$PACKAGE
+  fi
+fi
+echo "7b482218757acbaeac4d4d54a3cd94e1  $PACKAGE" | md5sum -c -
+
+
+cd $BUILD_DIR        ##### Unpacking source
+find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
+case $PACKAGE in
+  *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
+     tar -xvf $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR=`grep '[^./]\+' unpacked | head -n1 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.tar.lz)
+     bsdtar -xvf $SRC_DIR/$PACKAGE 2> unpacked
+     UNPACKDIR=`head -n1 unpacked | cut  -d" " -f2 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.zip)
+     zipinfo -1 $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR="$(sed 's@/.*@@' unpacked | uniq )"
+     if test $(wc -w <<< $UNPACKDIR) -eq 1; then
+       unzip $SRC_DIR/$PACKAGE
+     else
+       UNPACKDIR=${PACKAGE%.zip}
+       unzip -d $UNPACKDIR $SRC_DIR/$PACKAGE
+     fi
+     ;;
+  *)
+     UNPACKDIR=$PKG_DIR-build
+     mkdir $UNPACKDIR
+     cp $SRC_DIR/$PACKAGE $UNPACKDIR
+     cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
+     ;;
+esac
+#######  Building package
+cd $UNPACKDIR
+
+./configure.py --bootstrap
+emacs -Q --batch -f batch-byte-compile misc/ninja-mode.el
+./configure.py &&
+./ninja ninja_test &&
+./ninja_test --gtest_filter=-SubprocessTest.SetWithLots
+sudo -E sh << ROOT_EOF
+install -vm755 ninja /usr/bin/ &&
+install -vDm644 misc/ninja.vim \\
+                /usr/share/vim/vim80/syntax/ninja.vim &&
+install -vDm644 misc/bash-completion \\
+                /usr/share/bash-completion/completions/ninja &&
+install -vDm644 misc/zsh-completion \\
+                /usr/share/zsh/site-functions/_ninja
+
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -vDm644 misc/ninja-mode.el \\
+                /usr/share/emacs/site-lisp/ninja-mode.el
+install -vDm644 misc/ninja-mode.elc \\
+                /usr/share/emacs/site-lisp/ninja-mode.elc
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+ninja manual &&
+install -vDm644 doc/manual.html /usr/share/doc/ninja-1.7.2/manual.html
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+ninja doxygen &&
+install -vDdm644 doc/doxygen/html/* /usr/share/doc/ninja-1.7.2/
+ROOT_EOF
+sudo /sbin/ldconfig
+
+cd $BUILD_DIR
+[[ -n "$KEEP_FILES" ]] || sudo rm -rf $UNPACKDIR unpacked
+
+exit

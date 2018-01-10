@@ -1,0 +1,131 @@
+#!/bin/bash
+set -e
+
+PKG_DIR=docbook-xsl
+SRC_DIR=${SRC_ARCHIVE}${SRC_SUBDIRS:+/${PKG_DIR}}
+BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
+mkdir -p $SRC_DIR
+mkdir -p $BUILD_DIR
+
+cd $SRC_DIR     ###### Getting source
+
+PACKAGE=docbook-xsl-1.79.1.tar.bz2
+if [[ ! -f $PACKAGE ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE $PACKAGE
+  else
+    wget -T 30 -t 5 https://downloads.sourceforge.net/docbook/docbook-xsl-1.79.1.tar.bz2 ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/d/$PACKAGE
+  fi
+fi
+echo "b48cbf929a2ad85e6672f710777ca7bc  $PACKAGE" | md5sum -c -
+
+PACKAGE1=docbook-xsl-doc-1.79.1.tar.bz2
+if [[ ! -f $PACKAGE1 ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE1 ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE1 $PACKAGE1
+  else
+    wget -T 30 -t 5 https://downloads.sourceforge.net/docbook/docbook-xsl-doc-1.79.1.tar.bz2 ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/d/$PACKAGE1
+  fi
+fi
+echo "7eb51958e1bf97f3c5b013c42eb61e31  $PACKAGE1" | md5sum -c -
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PACKAGE1 $BUILD_DIR
+
+
+cd $BUILD_DIR        ##### Unpacking source
+find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
+case $PACKAGE in
+  *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
+     tar -xvf $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR=`grep '[^./]\+' unpacked | head -n1 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.tar.lz)
+     bsdtar -xvf $SRC_DIR/$PACKAGE 2> unpacked
+     UNPACKDIR=`head -n1 unpacked | cut  -d" " -f2 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.zip)
+     zipinfo -1 $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR="$(sed 's@/.*@@' unpacked | uniq )"
+     if test $(wc -w <<< $UNPACKDIR) -eq 1; then
+       unzip $SRC_DIR/$PACKAGE
+     else
+       UNPACKDIR=${PACKAGE%.zip}
+       unzip -d $UNPACKDIR $SRC_DIR/$PACKAGE
+     fi
+     ;;
+  *)
+     UNPACKDIR=$PKG_DIR-build
+     mkdir $UNPACKDIR
+     cp $SRC_DIR/$PACKAGE $UNPACKDIR
+     cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
+     ;;
+esac
+#######  Building package
+cd $UNPACKDIR
+
+tar -xf ../docbook-xsl-doc-1.79.1.tar.bz2 --strip-components=1
+sudo -E sh << ROOT_EOF
+install -v -m755 -d /usr/share/xml/docbook/xsl-stylesheets-1.79.1 &&
+
+cp -v -R VERSION assembly common eclipse epub epub3 extensions fo        \\
+         highlighting html htmlhelp images javahelp lib manpages params  \\
+         profiling roundtrip slides template tests tools webhelp website \\
+         xhtml xhtml-1_1 xhtml5                                          \\
+    /usr/share/xml/docbook/xsl-stylesheets-1.79.1 &&
+
+ln -s VERSION /usr/share/xml/docbook/xsl-stylesheets-1.79.1/VERSION.xsl &&
+
+install -v -m644 -D README \\
+                    /usr/share/doc/docbook-xsl-1.79.1/README.txt &&
+install -v -m644    RELEASE-NOTES* NEWS* \\
+                    /usr/share/doc/docbook-xsl-1.79.1
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+cp -v -R doc/* /usr/share/doc/docbook-xsl-1.79.1
+ROOT_EOF
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+if [ ! -d /etc/xml ]; then install -v -m755 -d /etc/xml; fi &&
+if [ ! -f /etc/xml/catalog ]; then
+    xmlcatalog --noout --create /etc/xml/catalog
+fi &&
+
+xmlcatalog --noout --add "rewriteSystem" \\
+           "http://docbook.sourceforge.net/release/xsl/1.79.1" \\
+           "/usr/share/xml/docbook/xsl-stylesheets-1.79.1" \\
+    /etc/xml/catalog &&
+
+xmlcatalog --noout --add "rewriteURI" \\
+           "http://docbook.sourceforge.net/release/xsl/1.79.1" \\
+           "/usr/share/xml/docbook/xsl-stylesheets-1.79.1" \\
+    /etc/xml/catalog &&
+
+xmlcatalog --noout --add "rewriteSystem" \\
+           "http://docbook.sourceforge.net/release/xsl/current" \\
+           "/usr/share/xml/docbook/xsl-stylesheets-1.79.1" \\
+    /etc/xml/catalog &&
+
+xmlcatalog --noout --add "rewriteURI" \\
+           "http://docbook.sourceforge.net/release/xsl/current" \\
+           "/usr/share/xml/docbook/xsl-stylesheets-1.79.1" \\
+    /etc/xml/catalog
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+xmlcatalog --noout --add "rewriteSystem" \\
+           "http://docbook.sourceforge.net/release/xsl/**EDITME<version>EDITME**" \\
+           "/usr/share/xml/docbook/xsl-stylesheets-**EDITME<version>EDITME**" \\
+    /etc/xml/catalog &&
+
+xmlcatalog --noout --add "rewriteURI" \\
+           "http://docbook.sourceforge.net/release/xsl/**EDITME<version>EDITME**" \\
+           "/usr/share/xml/docbook/xsl-stylesheets-**EDITME<version>EDITME**" \\
+    /etc/xml/catalog
+ROOT_EOF
+
+cd $BUILD_DIR
+[[ -n "$KEEP_FILES" ]] || sudo rm -rf $UNPACKDIR unpacked
+
+exit

@@ -1,0 +1,169 @@
+#!/bin/bash
+set -e
+
+PKG_DIR=texlive
+SRC_DIR=${SRC_ARCHIVE}${SRC_SUBDIRS:+/${PKG_DIR}}
+BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
+mkdir -p $SRC_DIR
+mkdir -p $BUILD_DIR
+
+cd $SRC_DIR     ###### Getting source
+
+PACKAGE=texlive-20170524-source.tar.xz
+if [[ ! -f $PACKAGE ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE $PACKAGE
+  else
+    wget -T 30 -t 5 ftp://tug.org/texlive/historic/2017/texlive-20170524-source.tar.xz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/t/$PACKAGE
+  fi
+fi
+echo "f98f6bde0a2c20fc894d983d542beaad  $PACKAGE" | md5sum -c -
+
+PACKAGE1=texlive-20170524-texmf.tar.xz
+if [[ ! -f $PACKAGE1 ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE1 ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE1 $PACKAGE1
+  else
+    wget -T 30 -t 5 ftp://tug.org/texlive/historic/2017/texlive-20170524-texmf.tar.xz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/t/$PACKAGE1
+  fi
+fi
+echo "44bb5d71fc64ac90118f8c5013e39b89  $PACKAGE1" | md5sum -c -
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PACKAGE1 $BUILD_DIR
+
+PATCH=texlive-20170524-source-gcc7-1.patch
+if [[ ! -f $PATCH ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PATCH ]] ; then
+    cp $SRC_ARCHIVE/$PATCH $PATCH
+  else
+    wget -T 30 -t 5 http://www.linuxfromscratch.org/patches/blfs/8.1/texlive-20170524-source-gcc7-1.patch ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/t/$PATCH
+  fi
+fi
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PATCH $BUILD_DIR
+
+PATCH=texlive-20170524-source-upstream_fixes-2.patch
+if [[ ! -f $PATCH ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PATCH ]] ; then
+    cp $SRC_ARCHIVE/$PATCH $PATCH
+  else
+    wget -T 30 -t 5 http://www.linuxfromscratch.org/patches/blfs/8.1/texlive-20170524-source-upstream_fixes-2.patch ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/t/$PATCH
+  fi
+fi
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PATCH $BUILD_DIR
+
+PATCH=texlive-20170524-texmf-upstream_fixes-1.patch
+if [[ ! -f $PATCH ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PATCH ]] ; then
+    cp $SRC_ARCHIVE/$PATCH $PATCH
+  else
+    wget -T 30 -t 5 http://www.linuxfromscratch.org/patches/blfs/8.1/texlive-20170524-texmf-upstream_fixes-1.patch ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/t/$PATCH
+  fi
+fi
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PATCH $BUILD_DIR
+
+
+cd $BUILD_DIR        ##### Unpacking source
+find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
+case $PACKAGE in
+  *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
+     tar -xvf $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR=`grep '[^./]\+' unpacked | head -n1 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.tar.lz)
+     bsdtar -xvf $SRC_DIR/$PACKAGE 2> unpacked
+     UNPACKDIR=`head -n1 unpacked | cut  -d" " -f2 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.zip)
+     zipinfo -1 $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR="$(sed 's@/.*@@' unpacked | uniq )"
+     if test $(wc -w <<< $UNPACKDIR) -eq 1; then
+       unzip $SRC_DIR/$PACKAGE
+     else
+       UNPACKDIR=${PACKAGE%.zip}
+       unzip -d $UNPACKDIR $SRC_DIR/$PACKAGE
+     fi
+     ;;
+  *)
+     UNPACKDIR=$PKG_DIR-build
+     mkdir $UNPACKDIR
+     cp $SRC_DIR/$PACKAGE $UNPACKDIR
+     cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
+     ;;
+esac
+#######  Building package
+cd $UNPACKDIR
+
+sudo -E sh << ROOT_EOF
+cat >> /etc/ld.so.conf << EOF
+# Begin texlive 2017 addition
+
+/opt/texlive/2017/lib
+
+# End texlive 2017 addition
+EOF
+ROOT_EOF
+export TEXARCH=$(uname -m | sed -e 's/i.86/i386/' -e 's/$/-linux/') &&
+
+patch -Np1 -i ../texlive-20170524-source-gcc7-1.patch           &&
+patch -Np1 -i ../texlive-20170524-source-upstream_fixes-2.patch &&
+
+mkdir texlive-build &&
+cd texlive-build    &&
+
+../configure                                                    \
+    --prefix=/opt/texlive/2017                                  \
+    --bindir=/opt/texlive/2017/bin/$TEXARCH                     \
+    --datarootdir=/opt/texlive/2017                             \
+    --includedir=/opt/texlive/2017/include                      \
+    --infodir=/opt/texlive/2017/texmf-dist/doc/info             \
+    --libdir=/opt/texlive/2017/lib                              \
+    --mandir=/opt/texlive/2017/texmf-dist/doc/man               \
+    --disable-native-texlive-build                              \
+    --disable-static --enable-shared                            \
+    --with-system-cairo                                         \
+    --with-system-fontconfig                                    \
+    --with-system-freetype2                                     \
+    --with-system-gmp                                           \
+    --with-system-graphite2                                     \
+    --with-system-harfbuzz                                      \
+    --with-system-icu                                           \
+    --with-system-libgs                                         \
+    --with-system-libpaper                                      \
+    --with-system-libpng                                        \
+    --with-system-mpfr                                          \
+    --with-system-pixman                                        \
+    --with-system-poppler                                       \
+    --with-system-xpdf                                          \
+    --with-system-zlib                                          \
+    --with-banner-add=" - BLFS" &&
+
+make
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install-strip &&
+/sbin/ldconfig &&
+make -j1 texlinks &&
+mkdir -pv /opt/texlive/2017/tlpkg/TeXLive/ &&
+install -v -m644 ../texk/tests/TeXLive/* /opt/texlive/2017/tlpkg/TeXLive/
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+tar -xf ../../texlive-20170524-texmf.tar.xz -C /opt/texlive/2017 --strip-components=1 &&
+pushd /opt/texlive/2017 &&
+patch -Np1 -i /sources/texlive-20170524-texmf-upstream_fixes-1.patch &&
+popd
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+mktexlsr &&
+fmtutil-sys --all &&
+mtxrun --generate
+ROOT_EOF
+sudo /sbin/ldconfig
+
+cd $BUILD_DIR
+[[ -n "$KEEP_FILES" ]] || sudo rm -rf $UNPACKDIR unpacked
+
+exit

@@ -1,0 +1,41 @@
+#!/bin/bash
+set -e
+
+PKG_DIR=lxqt-post-install
+SRC_DIR=${SRC_ARCHIVE}${SRC_SUBDIRS:+/${PKG_DIR}}
+BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
+mkdir -p $SRC_DIR
+mkdir -p $BUILD_DIR
+
+cd $SRC_DIR     ###### Getting source
+
+sudo -E sh << ROOT_EOF
+ln -svfn \$LXQT_PREFIX/share/lxqt /usr/share/lxqt &&
+
+cp -v {\$LXQT_PREFIX,/usr}/share/xsessions/lxqt.desktop &&
+
+for i in \$LXQT_PREFIX/share/applications/*
+do
+  ln -svf \$i /usr/share/applications/
+done
+
+for i in \$LXQT_PREFIX/share/desktop-directories/*
+do
+  ln -svf \$i /usr/share/desktop-directories/
+done
+
+unset i
+
+ldconfig
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+update-mime-database /usr/share/mime          &&
+xdg-icon-resource forceupdate --theme hicolor &&
+update-desktop-database -q
+ROOT_EOF
+
+cd $BUILD_DIR
+[[ -n "$KEEP_FILES" ]] || sudo rm -rf $UNPACKDIR unpacked
+
+exit

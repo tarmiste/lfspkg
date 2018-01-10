@@ -1,0 +1,117 @@
+#!/bin/bash
+set -e
+
+PKG_DIR=ffmpeg
+SRC_DIR=${SRC_ARCHIVE}${SRC_SUBDIRS:+/${PKG_DIR}}
+BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
+mkdir -p $SRC_DIR
+mkdir -p $BUILD_DIR
+
+cd $SRC_DIR     ###### Getting source
+
+PACKAGE=ffmpeg-3.3.3.tar.xz
+if [[ ! -f $PACKAGE ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE $PACKAGE
+  else
+    wget -T 30 -t 5 http://ffmpeg.org/releases/ffmpeg-3.3.3.tar.xz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/f/$PACKAGE
+  fi
+fi
+echo "743dc66ebe67180283b92d029f690d0f  $PACKAGE" | md5sum -c -
+
+
+cd $BUILD_DIR        ##### Unpacking source
+find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
+case $PACKAGE in
+  *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
+     tar -xvf $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR=`grep '[^./]\+' unpacked | head -n1 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.tar.lz)
+     bsdtar -xvf $SRC_DIR/$PACKAGE 2> unpacked
+     UNPACKDIR=`head -n1 unpacked | cut  -d" " -f2 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.zip)
+     zipinfo -1 $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR="$(sed 's@/.*@@' unpacked | uniq )"
+     if test $(wc -w <<< $UNPACKDIR) -eq 1; then
+       unzip $SRC_DIR/$PACKAGE
+     else
+       UNPACKDIR=${PACKAGE%.zip}
+       unzip -d $UNPACKDIR $SRC_DIR/$PACKAGE
+     fi
+     ;;
+  *)
+     UNPACKDIR=$PKG_DIR-build
+     mkdir $UNPACKDIR
+     cp $SRC_DIR/$PACKAGE $UNPACKDIR
+     cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
+     ;;
+esac
+#######  Building package
+cd $UNPACKDIR
+
+sed -i 's/-lflite"/-lflite -lasound"/' configure &&
+
+./configure --prefix=/usr        \
+            --enable-gpl         \
+            --enable-version3    \
+            --enable-nonfree     \
+            --disable-static     \
+            --enable-shared      \
+            --disable-debug      \
+            --enable-libass      \
+            --enable-libfdk-aac  \
+            --enable-libfreetype \
+            --enable-libmp3lame  \
+            --enable-libopus     \
+            --enable-libtheora   \
+            --enable-libvorbis   \
+            --enable-libvpx      \
+            --enable-libx264     \
+            --enable-libx265     \
+            --docdir=/usr/share/doc/ffmpeg-3.3.3 &&
+
+make &&
+
+gcc tools/qt-faststart.c -o tools/qt-faststart
+pushd doc &&
+for DOCNAME in `basename -s .html *.html`
+do
+    texi2pdf -b $DOCNAME.texi &&
+    texi2dvi -b $DOCNAME.texi &&
+
+    dvips    -o $DOCNAME.ps   \
+                $DOCNAME.dvi
+done &&
+popd &&
+unset DOCNAME
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+
+install -v -m755    tools/qt-faststart /usr/bin &&
+install -v -m755 -d           /usr/share/doc/ffmpeg-3.3.3 &&
+install -v -m644    doc/*.txt /usr/share/doc/ffmpeg-3.3.3
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -v -m644 doc/*.pdf /usr/share/doc/ffmpeg-3.3.3 &&
+install -v -m644 doc/*.ps  /usr/share/doc/ffmpeg-3.3.3
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -v -m755 -d /usr/share/doc/ffmpeg-3.3.3/api                     &&
+cp -vr doc/doxy/html/* /usr/share/doc/ffmpeg-3.3.3/api                  &&
+find /usr/share/doc/ffmpeg-3.3.3/api -type f -exec chmod -c 0644 \\{} \\; &&
+find /usr/share/doc/ffmpeg-3.3.3/api -type d -exec chmod -c 0755 \\{} \\;
+ROOT_EOF
+make fate-rsync SAMPLES=fate-suite/
+rsync -vrltLW  --delete --timeout=60 --contimeout=60 \
+      rsync://fate-suite.ffmpeg.org/fate-suite/ fate-suite/
+make fate THREADS=**EDITMENEDITME** SAMPLES=fate-suite/ | tee ../fate.log &&
+grep ^TEST ../fate.log | wc -l
+sudo /sbin/ldconfig
+
+cd $BUILD_DIR
+[[ -n "$KEEP_FILES" ]] || sudo rm -rf $UNPACKDIR unpacked
+
+exit

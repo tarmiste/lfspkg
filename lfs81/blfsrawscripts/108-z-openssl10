@@ -1,0 +1,98 @@
+#!/bin/bash
+set -e
+
+PKG_DIR=openssl10
+SRC_DIR=${SRC_ARCHIVE}${SRC_SUBDIRS:+/${PKG_DIR}}
+BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
+mkdir -p $SRC_DIR
+mkdir -p $BUILD_DIR
+
+cd $SRC_DIR     ###### Getting source
+
+PACKAGE=openssl-1.0.2l.tar.gz
+if [[ ! -f $PACKAGE ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE $PACKAGE
+  else
+    wget -T 30 -t 5 https://openssl.org/source/openssl-1.0.2l.tar.gz ||
+    wget -T 30 -t 5 ftp://openssl.org/source/openssl-1.0.2l.tar.gz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/o/$PACKAGE
+  fi
+fi
+echo "f85123cd390e864dfbe517e7616e6566  $PACKAGE" | md5sum -c -
+
+PATCH=openssl-1.0.2l-compat_versioned_symbols-1.patch
+if [[ ! -f $PATCH ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PATCH ]] ; then
+    cp $SRC_ARCHIVE/$PATCH $PATCH
+  else
+    wget -T 30 -t 5 http://www.linuxfromscratch.org/patches/blfs/8.1/openssl-1.0.2l-compat_versioned_symbols-1.patch ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/o/$PATCH
+  fi
+fi
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PATCH $BUILD_DIR
+
+
+cd $BUILD_DIR        ##### Unpacking source
+find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
+case $PACKAGE in
+  *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
+     tar -xvf $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR=`grep '[^./]\+' unpacked | head -n1 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.tar.lz)
+     bsdtar -xvf $SRC_DIR/$PACKAGE 2> unpacked
+     UNPACKDIR=`head -n1 unpacked | cut  -d" " -f2 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.zip)
+     zipinfo -1 $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR="$(sed 's@/.*@@' unpacked | uniq )"
+     if test $(wc -w <<< $UNPACKDIR) -eq 1; then
+       unzip $SRC_DIR/$PACKAGE
+     else
+       UNPACKDIR=${PACKAGE%.zip}
+       unzip -d $UNPACKDIR $SRC_DIR/$PACKAGE
+     fi
+     ;;
+  *)
+     UNPACKDIR=$PKG_DIR-build
+     mkdir $UNPACKDIR
+     cp $SRC_DIR/$PACKAGE $UNPACKDIR
+     cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
+     ;;
+esac
+#######  Building package
+cd $UNPACKDIR
+
+ patch -Np1 -i ../openssl-1.0.2l-compat_versioned_symbols-1.patch &&
+
+./config --prefix=/usr            \
+         --openssldir=/etc/ssl    \
+         --libdir=lib/openssl-1.0 \
+         shared                   \
+         zlib-dynamic             &&
+
+make depend                       &&
+make -j1
+#make -k -j1 test || true
+sudo -E sh << ROOT_EOF
+make -j1 INSTALL_PREFIX=\$PWD/Dest install_sw                      &&
+
+install -vdm755                   /usr/lib/openssl-1.0        &&
+cp -Rv Dest/usr/lib/openssl-1.0/* /usr/lib/openssl-1.0        &&
+
+mv -v  /usr/lib/openssl-1.0/lib{crypto,ssl}.so.1.0.0 /usr/lib &&
+ln -sv ../libssl.so.1.0.0         /usr/lib/openssl-1.0        &&
+ln -sv ../libcrypto.so.1.0.0      /usr/lib/openssl-1.0        &&
+
+install -vdm755                   /usr/include/openssl-1.0    &&
+cp -Rv Dest/usr/include/openssl   /usr/include/openssl-1.0    &&
+
+sed 's@/include\$@/include/openssl-1.0@' -i /usr/lib/openssl-1.0/pkgconfig/*.pc
+ROOT_EOF
+sudo /sbin/ldconfig
+
+cd $BUILD_DIR
+[[ -n "$KEEP_FILES" ]] || sudo rm -rf $UNPACKDIR unpacked
+
+exit

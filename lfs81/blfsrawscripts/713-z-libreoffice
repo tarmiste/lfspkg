@@ -1,0 +1,179 @@
+#!/bin/bash
+set -e
+
+PKG_DIR=libreoffice
+SRC_DIR=${SRC_ARCHIVE}${SRC_SUBDIRS:+/${PKG_DIR}}
+BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
+mkdir -p $SRC_DIR
+mkdir -p $BUILD_DIR
+
+cd $SRC_DIR     ###### Getting source
+
+PACKAGE=libreoffice-5.4.0.3.tar.xz
+if [[ ! -f $PACKAGE ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE $PACKAGE
+  else
+    wget -T 30 -t 5 http://download.documentfoundation.org/libreoffice/src/5.4.0/libreoffice-5.4.0.3.tar.xz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/l/$PACKAGE
+  fi
+fi
+echo "3491becc5b7e3b1658239b8be877770c  $PACKAGE" | md5sum -c -
+
+PACKAGE1=libreoffice-dictionaries-5.4.0.3.tar.xz
+if [[ ! -f $PACKAGE1 ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE1 ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE1 $PACKAGE1
+  else
+    wget -T 30 -t 5 http://download.documentfoundation.org/libreoffice/src/5.4.0/libreoffice-dictionaries-5.4.0.3.tar.xz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/l/$PACKAGE1
+  fi
+fi
+echo "df72048ade4fe7a63a7934af65f2e5bd  $PACKAGE1" | md5sum -c -
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PACKAGE1 $BUILD_DIR
+
+PACKAGE1=libreoffice-help-5.4.0.3.tar.xz
+if [[ ! -f $PACKAGE1 ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE1 ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE1 $PACKAGE1
+  else
+    wget -T 30 -t 5 http://download.documentfoundation.org/libreoffice/src/5.4.0/libreoffice-help-5.4.0.3.tar.xz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/l/$PACKAGE1
+  fi
+fi
+echo "c3e731156d2b5594cd3e0dc8c36d7ea3  $PACKAGE1" | md5sum -c -
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PACKAGE1 $BUILD_DIR
+
+PACKAGE1=libreoffice-translations-5.4.0.3.tar.xz
+if [[ ! -f $PACKAGE1 ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE1 ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE1 $PACKAGE1
+  else
+    wget -T 30 -t 5 http://download.documentfoundation.org/libreoffice/src/5.4.0/libreoffice-translations-5.4.0.3.tar.xz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/l/$PACKAGE1
+  fi
+fi
+echo "18ea9867fea2fd0f9149df43ce286e30  $PACKAGE1" | md5sum -c -
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PACKAGE1 $BUILD_DIR
+
+
+cd $BUILD_DIR        ##### Unpacking source
+find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
+case $PACKAGE in
+  *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
+     tar -xvf $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR=`grep '[^./]\+' unpacked | head -n1 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.tar.lz)
+     bsdtar -xvf $SRC_DIR/$PACKAGE 2> unpacked
+     UNPACKDIR=`head -n1 unpacked | cut  -d" " -f2 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.zip)
+     zipinfo -1 $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR="$(sed 's@/.*@@' unpacked | uniq )"
+     if test $(wc -w <<< $UNPACKDIR) -eq 1; then
+       unzip $SRC_DIR/$PACKAGE
+     else
+       UNPACKDIR=${PACKAGE%.zip}
+       unzip -d $UNPACKDIR $SRC_DIR/$PACKAGE
+     fi
+     ;;
+  *)
+     UNPACKDIR=$PKG_DIR-build
+     mkdir $UNPACKDIR
+     cp $SRC_DIR/$PACKAGE $UNPACKDIR
+     cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
+     ;;
+esac
+#######  Building package
+cd $UNPACKDIR
+
+tar -xf libreoffice-5.4.0.3.tar.xz --no-overwrite-dir &&
+cd libreoffice-5.4.0.3
+install -dm755 external/tarballs &&
+ln -sv ../../../libreoffice-dictionaries-5.4.0.3.tar.xz external/tarballs/ &&
+ln -sv ../../../libreoffice-help-5.4.0.3.tar.xz         external/tarballs/
+ln -sv ../../../libreoffice-translations-5.4.0.3.tar.xz external/tarballs/
+export LO_PREFIX=**EDITME<PREFIX>EDITME**
+sed -e "/gzip -f/d"   \
+    -e "s|.1.gz|.1|g" \
+    -i bin/distro-install-desktop-integration &&
+
+sed -e "/distro-install-file-lists/d" -i Makefile.in &&
+
+./autogen.sh --prefix=$LO_PREFIX         \
+             --sysconfdir=/etc           \
+             --with-vendor=BLFS          \
+             --with-lang='fr en-GB'      \
+             --with-help                 \
+             --with-myspell-dicts        \
+             --with-alloc=system         \
+             --without-junit             \
+             --without-system-dicts      \
+             --disable-dconf             \
+             --disable-odk               \
+             --enable-release-build=yes  \
+             --enable-python=system      \
+             --with-system-apr           \
+             --with-system-boost         \
+             --with-system-cairo         \
+             --with-system-clucene       \
+             --with-system-curl          \
+             --with-system-expat         \
+             --with-system-graphite      \
+             --with-system-harfbuzz      \
+             --with-system-icu           \
+             --with-system-jpeg          \
+             --with-system-lcms2         \
+             --with-system-libatomic_ops \
+             --with-system-libpng        \
+             --with-system-libxml        \
+             --with-system-neon          \
+             --with-system-nss           \
+             --with-system-odbc          \
+             --with-system-openldap      \
+             --with-system-openssl       \
+             --with-system-poppler       \
+             --with-system-postgresql    \
+             --with-system-redland       \
+             --with-system-serf          \
+             --with-system-zlib
+#make -k build-nocheck || true
+make build-nocheck
+sudo -E sh << ROOT_EOF
+make -j1 distro-pack-install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+if [ "\$LO_PREFIX" != "/usr" ]; then
+
+  # This symlink is necessary for the desktop menu entries
+  ln -svf \$LO_PREFIX/lib/libreoffice/program/soffice /usr/bin/libreoffice &&
+
+  # Icons
+  mkdir -vp /usr/share/pixmaps
+  for i in \$LO_PREFIX/share/icons/hicolor/32x32/apps/*; do
+    ln -svf \$i /usr/share/pixmaps
+  done &&
+
+  # Desktop menu entries
+  for i in \$LO_PREFIX/lib/libreoffice/share/xdg/*; do
+    ln -svf \$i /usr/share/applications/libreoffice-\$(basename \$i)
+  done &&
+
+  # Man pages
+  for i in \$LO_PREFIX/share/man/man1/*; do
+    ln -svf \$i /usr/share/man/man1/
+  done
+
+  unset i
+fi
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+update-desktop-database
+ROOT_EOF
+sudo /sbin/ldconfig
+
+cd $BUILD_DIR
+[[ -n "$KEEP_FILES" ]] || sudo rm -rf $UNPACKDIR unpacked
+
+exit

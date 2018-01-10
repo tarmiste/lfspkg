@@ -1,0 +1,86 @@
+#!/bin/bash
+set -e
+
+PKG_DIR=btrfs-progs
+SRC_DIR=${SRC_ARCHIVE}${SRC_SUBDIRS:+/${PKG_DIR}}
+BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
+mkdir -p $SRC_DIR
+mkdir -p $BUILD_DIR
+
+cd $SRC_DIR     ###### Getting source
+
+PACKAGE=btrfs-progs-v4.12.tar.xz
+if [[ ! -f $PACKAGE ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE $PACKAGE
+  else
+    wget -T 30 -t 5 https://www.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v4.12.tar.xz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/b/$PACKAGE
+  fi
+fi
+echo "4b1a143677597de413381118db8c10bb  $PACKAGE" | md5sum -c -
+
+
+cd $BUILD_DIR        ##### Unpacking source
+find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
+case $PACKAGE in
+  *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
+     tar -xvf $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR=`grep '[^./]\+' unpacked | head -n1 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.tar.lz)
+     bsdtar -xvf $SRC_DIR/$PACKAGE 2> unpacked
+     UNPACKDIR=`head -n1 unpacked | cut  -d" " -f2 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.zip)
+     zipinfo -1 $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR="$(sed 's@/.*@@' unpacked | uniq )"
+     if test $(wc -w <<< $UNPACKDIR) -eq 1; then
+       unzip $SRC_DIR/$PACKAGE
+     else
+       UNPACKDIR=${PACKAGE%.zip}
+       unzip -d $UNPACKDIR $SRC_DIR/$PACKAGE
+     fi
+     ;;
+  *)
+     UNPACKDIR=$PKG_DIR-build
+     mkdir $UNPACKDIR
+     cp $SRC_DIR/$PACKAGE $UNPACKDIR
+     cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
+     ;;
+esac
+#######  Building package
+cd $UNPACKDIR
+
+sed -i '1,100 s/\.gz//g' Documentation/Makefile.in &&
+
+./configure --prefix=/usr \
+            --bindir=/bin \
+            --libdir=/lib &&
+make
+mv tests/fuzz-tests/003-multi-check-unmounted/test.sh{,.broken}    &&
+mv tests/fuzz-tests/004-simple-dump-tree/test.sh{,.broken}         &&
+mv tests/fuzz-tests/007-simple-super-recover/test.sh{,.broken}     &&
+mv tests/fuzz-tests/009-simple-zero-log/test.sh{,.broken}          &&
+mv tests/misc-tests/019-receive-clones-on-munted-subvol/test.sh{,.broken}
+pushd tests
+   ./fsck-tests.sh
+   ./mkfs-tests.sh
+   ./convert-tests.sh
+   ./misc-tests.sh
+   ./cli-tests.sh
+   ./fuzz-tests.sh
+popd
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+
+ln -sfv ../../lib/\$(readlink /lib/libbtrfs.so) /usr/lib/libbtrfs.so &&
+rm -v /lib/libbtrfs.{a,so} &&
+mv -v /bin/{mkfs,fsck}.btrfs /sbin
+ROOT_EOF
+sudo /sbin/ldconfig
+
+cd $BUILD_DIR
+[[ -n "$KEEP_FILES" ]] || sudo rm -rf $UNPACKDIR unpacked
+
+exit

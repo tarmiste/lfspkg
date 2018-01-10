@@ -1,0 +1,222 @@
+#!/bin/bash
+set -e
+
+PKG_DIR=shadow
+SRC_DIR=${SRC_ARCHIVE}${SRC_SUBDIRS:+/${PKG_DIR}}
+BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
+mkdir -p $SRC_DIR
+mkdir -p $BUILD_DIR
+
+cd $SRC_DIR     ###### Getting source
+
+PACKAGE=shadow-4.5.tar.xz
+if [[ ! -f $PACKAGE ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE $PACKAGE
+  else
+    wget -T 30 -t 5 https://github.com/shadow-maint/shadow/releases/download/4.5/shadow-4.5.tar.xz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/s/$PACKAGE
+  fi
+fi
+echo "c350da50c2120de6bb29177699d89fe3  $PACKAGE" | md5sum -c -
+
+
+cd $BUILD_DIR        ##### Unpacking source
+find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
+case $PACKAGE in
+  *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
+     tar -xvf $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR=`grep '[^./]\+' unpacked | head -n1 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.tar.lz)
+     bsdtar -xvf $SRC_DIR/$PACKAGE 2> unpacked
+     UNPACKDIR=`head -n1 unpacked | cut  -d" " -f2 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.zip)
+     zipinfo -1 $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR="$(sed 's@/.*@@' unpacked | uniq )"
+     if test $(wc -w <<< $UNPACKDIR) -eq 1; then
+       unzip $SRC_DIR/$PACKAGE
+     else
+       UNPACKDIR=${PACKAGE%.zip}
+       unzip -d $UNPACKDIR $SRC_DIR/$PACKAGE
+     fi
+     ;;
+  *)
+     UNPACKDIR=$PKG_DIR-build
+     mkdir $UNPACKDIR
+     cp $SRC_DIR/$PACKAGE $UNPACKDIR
+     cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
+     ;;
+esac
+#######  Building package
+cd $UNPACKDIR
+
+sed -i 's@DICTPATH.*@DICTPATH\t/lib/cracklib/pw_dict@' etc/login.defs
+sed -i 's/groups$(EXEEXT) //' src/Makefile.in &&
+
+find man -name Makefile.in -exec sed -i 's/groups\.1 / /'   {} \; &&
+find man -name Makefile.in -exec sed -i 's/getspnam\.3 / /' {} \; &&
+find man -name Makefile.in -exec sed -i 's/passwd\.5 / /'   {} \; &&
+
+sed -i -e 's@#ENCRYPT_METHOD DES@ENCRYPT_METHOD SHA512@' \
+       -e 's@/var/spool/mail@/var/mail@' etc/login.defs &&
+
+sed -i 's/1000/999/' etc/useradd                           &&
+
+./configure --sysconfdir=/etc --with-group-name-max-length=32 &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+mv -v /usr/bin/passwd /bin
+ROOT_EOF
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+sed -i 's/yes/no/' /etc/default/useradd
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+install -v -m644 /etc/login.defs /etc/login.defs.orig &&
+for FUNCTION in FAIL_DELAY               \\
+                FAILLOG_ENAB             \\
+                LASTLOG_ENAB             \\
+                MAIL_CHECK_ENAB          \\
+                OBSCURE_CHECKS_ENAB      \\
+                PORTTIME_CHECKS_ENAB     \\
+                QUOTAS_ENAB              \\
+                CONSOLE MOTD_FILE        \\
+                FTMP_FILE NOLOGINS_FILE  \\
+                ENV_HZ PASS_MIN_LEN      \\
+                SU_WHEEL_ONLY            \\
+                CRACKLIB_DICTPATH        \\
+                PASS_CHANGE_TRIES        \\
+                PASS_ALWAYS_WARN         \\
+                CHFN_AUTH ENCRYPT_METHOD \\
+                ENVIRON_FILE
+do
+    sed -i "s/^\${FUNCTION}/# &/" /etc/login.defs
+done
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+cat > /etc/pam.d/login << "EOF"
+# Begin /etc/pam.d/login
+
+# Set failure delay before next prompt to 3 seconds
+auth      optional    pam_faildelay.so  delay=3000000
+
+# Check to make -j1 sure that the user is allowed to login
+auth      requisite   pam_nologin.so
+
+# Check to make -j1 sure that root is allowed to login
+# Disabled by default. You will need to create /etc/securetty
+# file for this module to function. See man 5 securetty.
+#auth      required    pam_securetty.so
+
+# Additional group memberships - disabled by default
+#auth      optional    pam_group.so
+
+# include the default auth settings
+auth      include     system-auth
+
+# check access for the user
+account   required    pam_access.so
+
+# include the default account settings
+account   include     system-account
+
+# Set default environment variables for the user
+session   required    pam_env.so
+
+# Set resource limits for the user
+session   required    pam_limits.so
+
+# Display date of last login - Disabled by default
+#session   optional    pam_lastlog.so
+
+# Display the message of the day - Disabled by default
+#session   optional    pam_motd.so
+
+# Check user's mail - Disabled by default
+#session   optional    pam_mail.so      standard quiet
+
+# include the default session and password settings
+session   include     system-session
+password  include     system-password
+
+# End /etc/pam.d/login
+EOF
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+cat > /etc/pam.d/passwd << "EOF"
+# Begin /etc/pam.d/passwd
+
+password  include     system-password
+
+# End /etc/pam.d/passwd
+EOF
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+cat > /etc/pam.d/su << "EOF"
+# Begin /etc/pam.d/su
+
+# always allow root
+auth      sufficient  pam_rootok.so
+auth      include     system-auth
+
+# include the default account settings
+account   include     system-account
+
+# Set default environment variables for the service user
+session   required    pam_env.so
+
+# include system session defaults
+session   include     system-session
+
+# End /etc/pam.d/su
+EOF
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+cat > /etc/pam.d/chage << "EOF"
+# Begin /etc/pam.d/chage
+
+# always allow root
+auth      sufficient  pam_rootok.so
+
+# include system defaults for auth account and session
+auth      include     system-auth
+account   include     system-account
+session   include     system-session
+
+# Always permit for authentication updates
+password  required    pam_permit.so
+
+# End /etc/pam.d/chage
+EOF
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+for PROGRAM in chfn chgpasswd chpasswd chsh groupadd groupdel \\
+               groupmems groupmod newusers useradd userdel usermod
+do
+    install -v -m644 /etc/pam.d/chage /etc/pam.d/\${PROGRAM}
+    sed -i "s/chage/\$PROGRAM/" /etc/pam.d/\${PROGRAM}
+done
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+[ -f /etc/login.access ] && mv -v /etc/login.access{,.NOUSE}
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+[ -f /etc/limits ] && mv -v /etc/limits{,.NOUSE}
+ROOT_EOF
+
+cd $BUILD_DIR
+[[ -n "$KEEP_FILES" ]] || sudo rm -rf $UNPACKDIR unpacked
+
+exit

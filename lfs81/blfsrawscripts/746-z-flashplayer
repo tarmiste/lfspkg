@@ -1,0 +1,91 @@
+#!/bin/bash
+set -e
+
+PKG_DIR=flashplayer
+SRC_DIR=${SRC_ARCHIVE}${SRC_SUBDIRS:+/${PKG_DIR}}
+BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
+mkdir -p $SRC_DIR
+mkdir -p $BUILD_DIR
+
+cd $SRC_DIR     ###### Getting source
+
+
+cd $BUILD_DIR        ##### Unpacking source
+find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
+case $PACKAGE in
+  *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
+     tar -xvf $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR=`grep '[^./]\+' unpacked | head -n1 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.tar.lz)
+     bsdtar -xvf $SRC_DIR/$PACKAGE 2> unpacked
+     UNPACKDIR=`head -n1 unpacked | cut  -d" " -f2 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.zip)
+     zipinfo -1 $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR="$(sed 's@/.*@@' unpacked | uniq )"
+     if test $(wc -w <<< $UNPACKDIR) -eq 1; then
+       unzip $SRC_DIR/$PACKAGE
+     else
+       UNPACKDIR=${PACKAGE%.zip}
+       unzip -d $UNPACKDIR $SRC_DIR/$PACKAGE
+     fi
+     ;;
+  *)
+     UNPACKDIR=$PKG_DIR-build
+     mkdir $UNPACKDIR
+     cp $SRC_DIR/$PACKAGE $UNPACKDIR
+     cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
+     ;;
+esac
+#######  Building package
+cd $UNPACKDIR
+
+mkdir flashplayer &&
+cd flashplayer    &&
+case $(uname -m) in
+    x86_64) tar -xf ../flash_player_npapi_linux.x86_64.tar.gz
+    ;;
+    i?86)   tar -xf ../flash_player_npapi_linux.i386.tar.gz
+    ;;
+esac
+sudo -E sh << ROOT_EOF
+install -vdm755 /usr/lib/mozilla/plugins &&
+install -vm755 libflashplayer.so /usr/lib/mozilla/plugins/libflashplayer.so &&
+install -vm755 usr/bin/flash-player-properties /usr/bin &&
+install -vm644 usr/share/applications/flash-player-properties.desktop \\
+               /usr/share/applications &&
+for size in 16 22 24 32 48
+do
+    install -vdm755 usr/share/icons/hicolor/\${size}x\${size}/apps/ &&
+    install -vm644 usr/share/icons/hicolor/\${size}x\${size}/apps/flash-player-properties.png \\
+                   /usr/share/icons/hicolor/\${size}x\${size}/apps
+done &&
+update-desktop-database
+ROOT_EOF
+mkdir flashplayer &&
+cd flashplayer    &&
+case $(uname -m) in
+    x86_64) tar -xf ../flash_player_ppapi_linux.x86_64.tar.gz
+    ;;
+    i?86)   tar -xf ../flash_player_ppapi_linux.i386.tar.gz
+    ;;
+esac
+sudo -E sh << ROOT_EOF
+install -vdm755 /usr/lib/PepperFlash &&
+install -vDm755 libpepflashplayer.so /usr/lib/PepperFlash/ &&
+install -vm644 manifest.json /usr/lib/PepperFlash/
+ROOT_EOF
+tar -xf chromium-launcher-5.tar.gz &&
+cd chromium-launcher-5             &&
+make PREFIX=/usr
+sudo -E sh << ROOT_EOF
+mv -v /usr/bin/chromium /usr/bin/chromium-orig &&
+make -j1 PREFIX=/usr install-strip
+ROOT_EOF
+sudo /sbin/ldconfig
+
+cd $BUILD_DIR
+[[ -n "$KEEP_FILES" ]] || sudo rm -rf $UNPACKDIR unpacked
+
+exit
