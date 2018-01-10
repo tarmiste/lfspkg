@@ -1,0 +1,49 @@
+pkgname=tcl
+pkgver=8.6.7
+pkgrel=1
+pkgdesc="The Tcl scripting language"
+arch=('x86_64')
+url="http://tcl.sourceforge.net/"
+license=('custom')
+#depends=('zlib')
+options=('staticlibs')
+source=(http://downloads.sourceforge.net/sourceforge/tcl/tcl${pkgver}-src.tar.gz)
+sha1sums=('68934c6ecf827348085e0f06c7396b31fb539d83')
+
+build() {
+  export SRCDIR=`pwd`
+  cd tcl${pkgver}/unix
+  ./configure --prefix=/usr           \
+            --mandir=/usr/share/man \
+            $([ $(uname -m) = x86_64 ] && echo --enable-64bit) &&
+  make
+
+  sed -e "s#$SRCDIR/unix#/usr/lib#" \
+    -e "s#$SRCDIR#/usr/include#"  \
+    -i tclConfig.sh               &&
+
+  sed -e "s#$SRCDIR/unix/pkgs/tdbc1.0.5#/usr/lib/tdbc1.0.5#" \
+    -e "s#$SRCDIR/pkgs/tdbc1.0.5/generic#/usr/include#"    \
+    -e "s#$SRCDIR/pkgs/tdbc1.0.5/library#/usr/lib/tcl8.6#" \
+    -e "s#$SRCDIR/pkgs/tdbc1.0.5#/usr/include#"            \
+    -i pkgs/tdbc1.0.5/tdbcConfig.sh                        &&
+
+  sed -e "s#$SRCDIR/unix/pkgs/itcl4.1.0#/usr/lib/itcl4.1.0#" \
+    -e "s#$SRCDIR/pkgs/itcl4.1.0/generic#/usr/include#"    \
+    -e "s#$SRCDIR/pkgs/itcl4.1.0#/usr/include#"            \
+    -i pkgs/itcl4.1.0/itclConfig.sh                        &&
+
+  unset SRCDIR
+}
+
+check() {
+  cd tcl${pkgver}/unix
+  make test
+}
+
+package() {
+  cd tcl${pkgver}/unix
+  make INSTALL_ROOT="${pkgdir}" install install-private-headers
+  ln -sf tclsh${pkgver%.*} "${pkgdir}/usr/bin/tclsh"
+  chmod -v 755 ${pkgdir}/usr/lib/libtcl${pkgver%.*}.so
+}

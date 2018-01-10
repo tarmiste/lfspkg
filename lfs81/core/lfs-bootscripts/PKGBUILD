@@ -1,0 +1,51 @@
+pkgname=lfs-bootscripts
+pkgver=20170626
+pkgrel=1
+pkgdesc="scripts to start/stop the LFS system at bootup/shutdown"
+arch=('x86_64')
+source=(
+http://www.linuxfromscratch.org/lfs/downloads/8.1/${pkgname}-${pkgver}.tar.bz2 
+clock
+fstab
+hostname
+hosts
+ifconfig.eth0
+inittab
+inputrc
+profile
+resolv.conf
+shells
+lfs-release
+lsb-release)
+
+md5sums=('d4992527d67f28e2d0c12e3495422eab'
+         '680723f0829e4b76845859f984dc878a'
+         '0d80233ecec41028dbc3b8e647c08200'
+         'b450e32f7deaf36039d5295168ea8f93'
+         'a3c43fab11f6895ed130f18d2cb05f17'
+         '8625b4dae3c083082a92120d17de8ae9'
+         'fbcc905d78f8738db569c9fbb21782aa'
+         '2ca09cd10bcc4f6adb0c5b1521bfdb7e'
+         'd5499968dc7f60b841f41bd5a6e150b3'
+         'fa0849c01bfc631b9072b68e130c7483'
+         '2ed0cf9d92e8a8fa49a41918b8a0207f'
+         '64d33a2184a7fa244ae83c6fafad6cb9'
+         '2e757740196a62e1dcd5bb456a094aed')
+
+package() {
+    cd "${pkgname}-${pkgver}"
+    make DESTDIR=${pkgdir} install
+    mkdir -pv ${pkgdir}/etc/sysconfig
+    cp ${srcdir}/ifconfig.eth0 ${pkgdir}/etc/sysconfig
+    cp ${srcdir}/resolv.conf ${pkgdir}/etc
+    cp ${srcdir}/hostname ${pkgdir}/etc
+    cp ${srcdir}/hosts ${pkgdir}/etc
+    cp ${srcdir}/inittab ${pkgdir}/etc
+    cp ${srcdir}/clock ${pkgdir}/etc/sysconfig
+    cp ${srcdir}/profile ${pkgdir}/etc
+    cp ${srcdir}/inputrc ${pkgdir}/etc
+    cp ${srcdir}/shells ${pkgdir}/etc
+    cp ${srcdir}/fstab ${pkgdir}/etc
+    cp ${srcdir}/lfs-release ${pkgdir}/etc
+    cp ${srcdir}/lsb-release ${pkgdir}/etc
+}
