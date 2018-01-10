@@ -8,3 +8,7 @@ BLFSTOOLSEQ=689
 pkgname=libxfce4util
 pkgver=4.12.1
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

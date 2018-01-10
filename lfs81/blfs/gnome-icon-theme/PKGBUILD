@@ -8,3 +8,7 @@ BLFSTOOLSEQ=621
 pkgname=gnome-icon-theme
 pkgver=3.12.0
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

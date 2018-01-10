@@ -8,3 +8,7 @@ BLFSTOOLSEQ=787
 pkgname=rox-filer
 pkgver=2.11
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

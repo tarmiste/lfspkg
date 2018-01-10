@@ -8,3 +8,7 @@ BLFSTOOLSEQ=156
 pkgname=elfutils
 pkgver=0.170
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

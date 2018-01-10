@@ -8,3 +8,7 @@ BLFSTOOLSEQ=222
 pkgname=poppler
 pkgver=0.57.0
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

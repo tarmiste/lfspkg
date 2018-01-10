@@ -8,3 +8,7 @@ BLFSTOOLSEQ=588
 pkgname=font-adobe-75dpi
 pkgver=1.0.3
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

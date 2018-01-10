@@ -8,3 +8,7 @@ BLFSTOOLSEQ=060
 pkgname=libXaw
 pkgver=1.0.13
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

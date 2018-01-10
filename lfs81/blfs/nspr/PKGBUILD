@@ -8,3 +8,7 @@ BLFSTOOLSEQ=086
 pkgname=nspr
 pkgver=4.16
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

@@ -8,3 +8,7 @@ BLFSTOOLSEQ=668
 pkgname=libburn
 pkgver=1.4.6
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

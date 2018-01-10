@@ -8,3 +8,7 @@ BLFSTOOLSEQ=644
 pkgname=k3b
 pkgver=2017-02-12
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

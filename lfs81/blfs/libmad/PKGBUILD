@@ -8,3 +8,7 @@ BLFSTOOLSEQ=632
 pkgname=libmad
 pkgver=0.15.1b
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

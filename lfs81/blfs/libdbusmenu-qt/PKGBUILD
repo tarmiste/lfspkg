@@ -8,3 +8,7 @@ BLFSTOOLSEQ=336
 pkgname=libdbusmenu-qt
 pkgver=0.9.3+16.04.20160218
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

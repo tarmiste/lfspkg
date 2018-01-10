@@ -8,3 +8,7 @@ BLFSTOOLSEQ=108
 pkgname=popt
 pkgver=1.16
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

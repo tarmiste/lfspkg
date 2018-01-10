@@ -8,3 +8,7 @@ BLFSTOOLSEQ=471
 pkgname=udisks
 pkgver=1.0.5
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

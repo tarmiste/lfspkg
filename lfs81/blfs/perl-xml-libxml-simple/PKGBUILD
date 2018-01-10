@@ -8,3 +8,7 @@ BLFSTOOLSEQ=524
 pkgname=perl-xml-libxml-simple
 pkgver=0.97
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

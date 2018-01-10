@@ -8,3 +8,7 @@ BLFSTOOLSEQ=578
 pkgname=xorg-intel-driver
 pkgver=20170826
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

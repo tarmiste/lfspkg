@@ -8,3 +8,7 @@ BLFSTOOLSEQ=214
 pkgname=xterm2
 pkgver=330
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

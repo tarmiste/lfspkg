@@ -8,3 +8,7 @@ BLFSTOOLSEQ=437
 pkgname=dbus-python
 pkgver=1.2.4
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

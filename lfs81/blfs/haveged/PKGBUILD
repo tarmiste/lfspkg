@@ -8,3 +8,7 @@ BLFSTOOLSEQ=252
 pkgname=haveged
 pkgver=1.9.1
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

@@ -8,3 +8,7 @@ BLFSTOOLSEQ=085
 pkgname=autoconf213
 pkgver=2.13
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

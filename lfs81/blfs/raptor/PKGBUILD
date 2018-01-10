@@ -8,3 +8,7 @@ BLFSTOOLSEQ=467
 pkgname=raptor
 pkgver=2.0.15
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

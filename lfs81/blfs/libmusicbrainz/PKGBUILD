@@ -8,3 +8,7 @@ BLFSTOOLSEQ=643
 pkgname=libmusicbrainz
 pkgver=2.1.5
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

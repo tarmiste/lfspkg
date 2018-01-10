@@ -8,3 +8,7 @@ BLFSTOOLSEQ=392
 pkgname=c-ares
 pkgver=1.12.0
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

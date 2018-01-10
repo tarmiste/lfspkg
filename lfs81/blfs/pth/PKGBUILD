@@ -8,3 +8,7 @@ BLFSTOOLSEQ=283
 pkgname=pth
 pkgver=2.0.7
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

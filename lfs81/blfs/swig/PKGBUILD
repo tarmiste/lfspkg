@@ -8,3 +8,7 @@ BLFSTOOLSEQ=250
 pkgname=swig
 pkgver=3.0.12
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

@@ -8,3 +8,7 @@ BLFSTOOLSEQ=724
 pkgname=lxappearance-obconf
 pkgver=0.2.3
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

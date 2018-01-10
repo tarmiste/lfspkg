@@ -8,3 +8,7 @@ BLFSTOOLSEQ=641
 pkgname=libsamplerate
 pkgver=0.1.9
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

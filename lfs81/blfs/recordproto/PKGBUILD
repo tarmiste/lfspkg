@@ -8,3 +8,7 @@ BLFSTOOLSEQ=033
 pkgname=recordproto
 pkgver=1.14.2
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

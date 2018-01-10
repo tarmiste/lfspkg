@@ -8,3 +8,7 @@ BLFSTOOLSEQ=266
 pkgname=gtk-doc
 pkgver=1.26
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

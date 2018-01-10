@@ -8,3 +8,7 @@ BLFSTOOLSEQ=293
 pkgname=gtk3
 pkgver=3.22.18
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

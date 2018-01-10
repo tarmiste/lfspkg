@@ -8,3 +8,7 @@ BLFSTOOLSEQ=602
 pkgname=goffice010
 pkgver=0.10.35
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

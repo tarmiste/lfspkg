@@ -8,3 +8,7 @@ BLFSTOOLSEQ=099
 pkgname=cracklib
 pkgver=2.9.6
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

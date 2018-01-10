@@ -8,3 +8,7 @@ BLFSTOOLSEQ=748
 pkgname=lxqt-qtplugin
 pkgver=0.11.1
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

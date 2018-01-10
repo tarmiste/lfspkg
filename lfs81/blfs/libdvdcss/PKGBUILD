@@ -8,3 +8,7 @@ BLFSTOOLSEQ=673
 pkgname=libdvdcss
 pkgver=1.4.0
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

@@ -8,3 +8,7 @@ BLFSTOOLSEQ=469
 pkgname=redland
 pkgver=1.0.17
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

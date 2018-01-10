@@ -8,3 +8,7 @@ BLFSTOOLSEQ=397
 pkgname=pulseaudio
 pkgver=10.0
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

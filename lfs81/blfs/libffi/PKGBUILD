@@ -8,3 +8,7 @@ BLFSTOOLSEQ=002
 pkgname=libffi
 pkgver=3.2.1
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

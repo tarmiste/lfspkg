@@ -8,3 +8,7 @@ BLFSTOOLSEQ=306
 pkgname=emacs
 pkgver=25.2
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

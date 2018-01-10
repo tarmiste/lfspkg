@@ -8,3 +8,7 @@ BLFSTOOLSEQ=756
 pkgname=xscreensaver
 pkgver=5.37
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

@@ -8,3 +8,7 @@ BLFSTOOLSEQ=604
 pkgname=pangomm
 pkgver=2.40.1
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

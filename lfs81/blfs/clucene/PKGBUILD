@@ -8,3 +8,7 @@ BLFSTOOLSEQ=368
 pkgname=clucene
 pkgver=2.3.3.4
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

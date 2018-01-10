@@ -8,3 +8,7 @@ BLFSTOOLSEQ=422
 pkgname=gegl
 pkgver=0.3.20
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

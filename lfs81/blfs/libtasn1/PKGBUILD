@@ -8,3 +8,7 @@ BLFSTOOLSEQ=105
 pkgname=libtasn1
 pkgver=4.12
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

@@ -8,3 +8,7 @@ BLFSTOOLSEQ=491
 pkgname=perl-business-ismn
 pkgver=1.131
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

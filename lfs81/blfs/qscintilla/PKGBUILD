@@ -8,3 +8,7 @@ BLFSTOOLSEQ=324
 pkgname=qscintilla
 pkgver=2.10.1
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

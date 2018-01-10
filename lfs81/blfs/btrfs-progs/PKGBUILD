@@ -8,3 +8,7 @@ BLFSTOOLSEQ=276
 pkgname=btrfs-progs
 pkgver=4.12
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

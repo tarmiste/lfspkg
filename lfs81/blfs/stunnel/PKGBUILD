@@ -8,3 +8,7 @@ BLFSTOOLSEQ=271
 pkgname=stunnel
 pkgver=5.42
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

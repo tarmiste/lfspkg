@@ -8,3 +8,7 @@ BLFSTOOLSEQ=068
 pkgname=libXft
 pkgver=2.3.2
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

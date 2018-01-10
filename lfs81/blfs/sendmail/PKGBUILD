@@ -8,3 +8,7 @@ BLFSTOOLSEQ=145
 pkgname=sendmail
 pkgver=8.15.2
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

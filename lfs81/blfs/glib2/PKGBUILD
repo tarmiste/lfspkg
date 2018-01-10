@@ -8,3 +8,7 @@ BLFSTOOLSEQ=006
 pkgname=glib2
 pkgver=2.52.3
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

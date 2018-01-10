@@ -8,3 +8,7 @@ BLFSTOOLSEQ=231
 pkgname=clisp
 pkgver=2.49
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

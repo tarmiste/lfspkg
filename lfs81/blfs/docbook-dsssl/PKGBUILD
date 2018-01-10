@@ -8,3 +8,7 @@ BLFSTOOLSEQ=377
 pkgname=docbook-dsssl
 pkgver=1.79
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

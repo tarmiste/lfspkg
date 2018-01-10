@@ -8,3 +8,7 @@ BLFSTOOLSEQ=470
 pkgname=sg3_utils
 pkgver=1.42
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

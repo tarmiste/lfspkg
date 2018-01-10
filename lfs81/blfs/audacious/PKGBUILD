@@ -8,3 +8,7 @@ BLFSTOOLSEQ=814
 pkgname=audacious
 pkgver=3.9
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3

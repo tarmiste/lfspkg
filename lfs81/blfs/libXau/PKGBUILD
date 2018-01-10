@@ -8,3 +8,7 @@ BLFSTOOLSEQ=046
 pkgname=libXau
 pkgver=1.0.8
 pkgrel=1
+# EDITHOOK2
+pkgdesc=""
+arch=('x86_64')
+# EDITHOOK3
