@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=437
+pkgname=dbus-python
+pkgver=1.2.4
+pkgrel=1

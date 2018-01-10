@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=277
+pkgname=fuse2
+pkgver=2.9.7
+pkgrel=1

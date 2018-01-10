@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=511
+pkgname=perl-list-moreutils
+pkgver=0.419
+pkgrel=1

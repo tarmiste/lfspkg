@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=186
+pkgname=xmessage
+pkgver=1.0.4
+pkgrel=1

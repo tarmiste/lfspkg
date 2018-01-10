@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=361
+pkgname=sdl
+pkgver=1.2.15
+pkgrel=1

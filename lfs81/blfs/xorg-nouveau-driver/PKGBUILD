@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=580
+pkgname=xorg-nouveau-driver
+pkgver=1.0.15
+pkgrel=1

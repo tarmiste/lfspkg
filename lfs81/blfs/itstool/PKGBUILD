@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=262
+pkgname=itstool
+pkgver=2.0.2
+pkgrel=1

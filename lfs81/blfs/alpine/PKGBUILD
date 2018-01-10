@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=558
+pkgname=alpine
+pkgver=2.21
+pkgrel=1

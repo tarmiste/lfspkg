@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=477
+pkgname=rust
+pkgver=1.19.0
+pkgrel=1

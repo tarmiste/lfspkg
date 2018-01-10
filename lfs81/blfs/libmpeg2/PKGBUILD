@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=810
+pkgname=libmpeg2
+pkgver=0.5.1
+pkgrel=1

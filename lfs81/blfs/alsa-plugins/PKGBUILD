@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=796
+pkgname=alsa-plugins
+pkgver=1.1.4
+pkgrel=1

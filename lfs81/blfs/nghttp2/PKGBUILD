@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=550
+pkgname=nghttp2
+pkgver=1.25.0
+pkgrel=1

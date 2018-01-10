@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=524
+pkgname=perl-xml-libxml-simple
+pkgver=0.97
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=471
+pkgname=udisks
+pkgver=1.0.5
+pkgrel=1

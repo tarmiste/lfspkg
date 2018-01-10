@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=341
+pkgname=slang
+pkgver=2.3.1
+pkgrel=1

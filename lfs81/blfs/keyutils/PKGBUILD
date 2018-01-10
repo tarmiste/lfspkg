@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=540
+pkgname=keyutils
+pkgver=1.5.10
+pkgrel=1

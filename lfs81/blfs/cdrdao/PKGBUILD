@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=672
+pkgname=cdrdao
+pkgver=1.2.3
+pkgrel=1

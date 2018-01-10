@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=651
+pkgname=libkexiv2
+pkgver=17.08.0
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=671
+pkgname=libao
+pkgver=1.2.0
+pkgrel=1

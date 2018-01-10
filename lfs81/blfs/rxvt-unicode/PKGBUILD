@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=788
+pkgname=rxvt-unicode
+pkgver=9.22
+pkgrel=1

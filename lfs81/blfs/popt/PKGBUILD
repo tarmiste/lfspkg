@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=108
+pkgname=popt
+pkgver=1.16
+pkgrel=1

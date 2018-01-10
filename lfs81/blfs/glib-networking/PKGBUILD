@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=313
+pkgname=glib-networking
+pkgver=2.50.0
+pkgrel=1

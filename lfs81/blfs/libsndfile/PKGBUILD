@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=395
+pkgname=libsndfile
+pkgver=1.0.28
+pkgrel=1

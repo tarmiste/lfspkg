@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=537
+pkgname=scour
+pkgver=0.36
+pkgrel=1

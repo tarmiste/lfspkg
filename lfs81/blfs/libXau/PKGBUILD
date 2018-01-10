@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=046
+pkgname=libXau
+pkgver=1.0.8
+pkgrel=1

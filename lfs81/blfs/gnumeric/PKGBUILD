@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=765
+pkgname=gnumeric
+pkgver=1.12.35
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=641
+pkgname=libsamplerate
+pkgver=0.1.9
+pkgrel=1

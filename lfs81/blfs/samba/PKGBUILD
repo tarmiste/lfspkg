@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=462
+pkgname=samba
+pkgver=4.6.7
+pkgrel=1

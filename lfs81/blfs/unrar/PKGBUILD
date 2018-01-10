@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=679
+pkgname=unrar
+pkgver=5.5.8
+pkgrel=1

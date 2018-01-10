@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=730
+pkgname=lxqt-build-tools
+pkgver=0.3.2
+pkgrel=1

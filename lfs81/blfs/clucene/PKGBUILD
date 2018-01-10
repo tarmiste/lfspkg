@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=368
+pkgname=clucene
+pkgver=2.3.3.4
+pkgrel=1

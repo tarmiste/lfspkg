@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=029
+pkgname=inputproto
+pkgver=2.3.2
+pkgrel=1

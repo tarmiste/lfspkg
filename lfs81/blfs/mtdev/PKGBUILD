@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=242
+pkgname=mtdev
+pkgver=1.1.5
+pkgrel=1

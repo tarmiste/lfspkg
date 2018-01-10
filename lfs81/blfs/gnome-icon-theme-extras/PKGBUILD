@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=622
+pkgname=gnome-icon-theme-extras
+pkgver=3.12.0
+pkgrel=1

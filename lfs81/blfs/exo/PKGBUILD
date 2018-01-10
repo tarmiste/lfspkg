@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=692
+pkgname=exo
+pkgver=0.10.7
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=135
+pkgname=postgresql
+pkgver=9.6.4
+pkgrel=1

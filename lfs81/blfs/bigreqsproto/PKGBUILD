@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=020
+pkgname=bigreqsproto
+pkgver=1.1.2
+pkgrel=1

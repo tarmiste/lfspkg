@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=075
+pkgname=libXvMC
+pkgver=1.0.10
+pkgrel=1

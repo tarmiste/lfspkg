@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=281
+pkgname=mdadm
+pkgver=4.0
+pkgrel=1

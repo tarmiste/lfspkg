@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=723
+pkgname=gpicview
+pkgver=0.2.5
+pkgrel=1

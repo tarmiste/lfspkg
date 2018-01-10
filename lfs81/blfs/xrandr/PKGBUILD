@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=190
+pkgname=xrandr
+pkgver=1.5.0
+pkgrel=1

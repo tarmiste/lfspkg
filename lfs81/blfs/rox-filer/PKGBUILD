@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=787
+pkgname=rox-filer
+pkgver=2.11
+pkgrel=1

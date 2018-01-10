@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=618
+pkgname=sawfish
+pkgver=1.12.0
+pkgrel=1

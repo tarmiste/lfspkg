@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=339
+pkgname=dhcpcd
+pkgver=6.11.5
+pkgrel=1

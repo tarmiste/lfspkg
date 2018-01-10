@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=015
+pkgname=util-macros
+pkgver=1.19.1
+pkgrel=1

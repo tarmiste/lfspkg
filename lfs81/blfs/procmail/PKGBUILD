@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=559
+pkgname=procmail
+pkgver=3.22
+pkgrel=1

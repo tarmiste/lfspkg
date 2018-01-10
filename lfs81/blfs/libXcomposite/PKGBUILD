@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=062
+pkgname=libXcomposite
+pkgver=0.4.4
+pkgrel=1

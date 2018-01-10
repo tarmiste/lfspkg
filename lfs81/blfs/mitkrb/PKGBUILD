@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=112
+pkgname=mitkrb
+pkgver=1.15.1
+pkgrel=1

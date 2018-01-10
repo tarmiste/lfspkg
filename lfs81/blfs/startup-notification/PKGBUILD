@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=611
+pkgname=startup-notification
+pkgver=0.12
+pkgrel=1

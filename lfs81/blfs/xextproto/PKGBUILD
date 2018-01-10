@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=039
+pkgname=xextproto
+pkgver=7.3.0
+pkgrel=1

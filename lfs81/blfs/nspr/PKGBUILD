@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=086
+pkgname=nspr
+pkgver=4.16
+pkgrel=1

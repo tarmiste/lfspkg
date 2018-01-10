@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=816
+pkgname=freetts
+pkgver=1.2.2
+pkgrel=1

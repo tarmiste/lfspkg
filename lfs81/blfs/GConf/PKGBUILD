@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=300
+pkgname=GConf
+pkgver=3.2.6
+pkgrel=1

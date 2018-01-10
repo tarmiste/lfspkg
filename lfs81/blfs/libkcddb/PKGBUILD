@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=640
+pkgname=libkcddb
+pkgver=17.08.0
+pkgrel=1

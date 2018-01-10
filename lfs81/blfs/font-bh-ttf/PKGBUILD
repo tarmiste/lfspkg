@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=204
+pkgname=font-bh-ttf
+pkgver=1.0.3
+pkgrel=1

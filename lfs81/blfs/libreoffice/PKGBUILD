@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=767
+pkgname=libreoffice
+pkgver=5.4.0.3
+pkgrel=1

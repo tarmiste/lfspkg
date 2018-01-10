@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=591
+pkgname=font-isas-misc
+pkgver=1.0.3
+pkgrel=1

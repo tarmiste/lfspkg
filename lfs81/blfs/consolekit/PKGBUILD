@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=098
+pkgname=consolekit
+pkgver=1.0.2
+pkgrel=1

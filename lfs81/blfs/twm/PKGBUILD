@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=212
+pkgname=twm
+pkgver=1.0.9
+pkgrel=1

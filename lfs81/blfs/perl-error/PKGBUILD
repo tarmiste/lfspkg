@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=479
+pkgname=perl-error
+pkgver=0.17025
+pkgrel=1

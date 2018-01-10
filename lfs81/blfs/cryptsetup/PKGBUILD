@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=110
+pkgname=cryptsetup
+pkgver=1.7.5
+pkgrel=1

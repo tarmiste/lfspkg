@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=397
+pkgname=pulseaudio
+pkgver=10.0
+pkgrel=1

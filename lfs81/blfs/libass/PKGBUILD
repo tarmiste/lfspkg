@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=412
+pkgname=libass
+pkgver=0.13.7
+pkgrel=1

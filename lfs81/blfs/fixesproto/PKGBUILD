@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=026
+pkgname=fixesproto
+pkgver=5.0
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=728
+pkgname=lxterminal
+pkgver=0.3.0
+pkgrel=1

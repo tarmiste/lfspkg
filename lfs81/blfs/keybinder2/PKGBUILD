@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=608
+pkgname=keybinder2
+pkgver=0.3.0
+pkgrel=1

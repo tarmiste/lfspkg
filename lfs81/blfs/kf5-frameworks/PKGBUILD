@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=347
+pkgname=kf5-frameworks
+pkgver=5.37.0
+pkgrel=1

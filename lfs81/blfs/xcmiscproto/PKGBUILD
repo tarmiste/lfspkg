@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=038
+pkgname=xcmiscproto
+pkgver=1.2.2
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=819
+pkgname=vorbistools
+pkgver=1.4.0
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=625
+pkgname=lxde-icon-theme
+pkgver=0.5.1
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=654
+pkgname=gjs
+pkgver=1.48.6
+pkgrel=1

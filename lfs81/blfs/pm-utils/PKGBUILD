@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=090
+pkgname=pm-utils
+pkgver=1.4.1
+pkgrel=1

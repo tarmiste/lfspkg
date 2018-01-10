@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=323
+pkgname=chrpath
+pkgver=0.16
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=208
+pkgname=font-xfree86-type1
+pkgver=1.0.4
+pkgrel=1

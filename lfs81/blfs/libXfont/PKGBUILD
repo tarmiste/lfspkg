@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=585
+pkgname=libXfont
+pkgver=1.5.2
+pkgrel=1

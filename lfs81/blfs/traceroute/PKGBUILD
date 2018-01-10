@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=682
+pkgname=traceroute
+pkgver=2.1.0
+pkgrel=1

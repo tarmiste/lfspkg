@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=346
+pkgname=polkit-qt
+pkgver=0.112.0
+pkgrel=1

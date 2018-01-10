@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=777
+pkgname=ekiga
+pkgver=4.0.1
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=497
+pkgname=perl-datetime-calendar-julian
+pkgver=0.04
+pkgrel=1

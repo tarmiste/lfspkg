@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=561
+pkgname=mailx
+pkgver=12.5
+pkgrel=1

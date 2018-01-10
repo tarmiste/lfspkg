@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=002
+pkgname=libffi
+pkgver=3.2.1
+pkgrel=1

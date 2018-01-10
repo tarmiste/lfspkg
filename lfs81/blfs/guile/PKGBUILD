@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=476
+pkgname=guile
+pkgver=2.2.2
+pkgrel=1

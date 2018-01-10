@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=144
+pkgname=openssl10
+pkgver=1.0.2l Libraries
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=795
+pkgname=alsa-oss
+pkgver=1.0.28
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=180
+pkgname=xkbcomp
+pkgver=1.4.0
+pkgrel=1

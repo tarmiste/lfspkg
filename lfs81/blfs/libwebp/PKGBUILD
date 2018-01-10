@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=329
+pkgname=libwebp
+pkgver=0.6.0
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=535
+pkgname=pygobject2
+pkgver=2.28.6
+pkgrel=1

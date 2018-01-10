@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=106
+pkgname=p11-kit
+pkgver=0.23.8
+pkgrel=1

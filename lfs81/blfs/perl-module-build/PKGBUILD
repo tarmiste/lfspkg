@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=498
+pkgname=perl-module-build
+pkgver=0.4224
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=556
+pkgname=neon
+pkgver=0.30.2
+pkgrel=1

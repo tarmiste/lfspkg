@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=267
+pkgname=pango
+pkgver=1.40.10
+pkgrel=1

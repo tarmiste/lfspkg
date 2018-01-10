@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=320
+pkgname=gvfs
+pkgver=1.32.1
+pkgrel=1

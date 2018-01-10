@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=338
+pkgname=libnl
+pkgver=3.3.0
+pkgrel=1

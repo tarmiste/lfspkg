@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=718
+pkgname=lxpanel
+pkgver=0.9.3
+pkgrel=1

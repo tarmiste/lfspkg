@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=586
+pkgname=bdftopcf
+pkgver=1.0.5
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=488
+pkgname=perl-archive-zip
+pkgver=1.59
+pkgrel=1

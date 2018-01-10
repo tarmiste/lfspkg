@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=220
+pkgname=cairo
+pkgver=1.14.10
+pkgrel=1

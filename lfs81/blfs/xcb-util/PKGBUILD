@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=161
+pkgname=xcb-util
+pkgver=0.4.0
+pkgrel=1

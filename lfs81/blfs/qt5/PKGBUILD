@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=249
+pkgname=qt5
+pkgver=5.9.1
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=170
+pkgname=xauth
+pkgver=1.0.10
+pkgrel=1

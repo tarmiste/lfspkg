@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=459
+pkgname=logrotate
+pkgver=3.11.0
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=439
+pkgname=ibus
+pkgver=1.5.16
+pkgrel=1

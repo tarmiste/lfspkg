@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=674
+pkgname=cdrtools
+pkgver=3.02a07
+pkgrel=1

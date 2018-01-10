@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=575
+pkgname=xorg-ati-driver
+pkgver=7.9.0
+pkgrel=1

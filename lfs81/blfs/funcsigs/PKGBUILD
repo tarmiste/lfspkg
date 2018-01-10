@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=532
+pkgname=funcsigs
+pkgver=1.0.2
+pkgrel=1

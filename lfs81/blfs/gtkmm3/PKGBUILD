@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=606
+pkgname=gtkmm3
+pkgver=3.22.1
+pkgrel=1

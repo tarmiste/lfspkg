@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=296
+pkgname=enchant
+pkgver=1.6.0
+pkgrel=1

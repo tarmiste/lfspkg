@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=079
+pkgname=libpciaccess
+pkgver=0.13.5
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=676
+pkgname=cheese
+pkgver=3.24.0
+pkgrel=1

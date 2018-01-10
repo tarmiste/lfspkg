@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=603
+pkgname=gtk-engines
+pkgver=2.20.2
+pkgrel=1

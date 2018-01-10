@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=123
+pkgname=libgudev
+pkgver=220
+pkgrel=1

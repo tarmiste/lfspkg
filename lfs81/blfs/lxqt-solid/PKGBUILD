@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=746
+pkgname=lxqt-solid
+pkgver=5.37.0 for lxqt
+pkgrel=1

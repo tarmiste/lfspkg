@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=274
+pkgname=lzo
+pkgver=2.10
+pkgrel=1

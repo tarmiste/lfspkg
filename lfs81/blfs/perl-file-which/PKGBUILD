@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=503
+pkgname=perl-file-which
+pkgver=1.21
+pkgrel=1

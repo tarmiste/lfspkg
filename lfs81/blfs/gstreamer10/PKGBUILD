@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=232
+pkgname=gstreamer10
+pkgver=1.12.2
+pkgrel=1

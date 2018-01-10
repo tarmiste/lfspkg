@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=774
+pkgname=compface
+pkgver=1.5.2
+pkgrel=1

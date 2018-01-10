@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=203
+pkgname=font-adobe-utopia-type1
+pkgver=1.0.4
+pkgrel=1

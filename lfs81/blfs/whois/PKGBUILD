@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=548
+pkgname=whois
+pkgver=5.2.17
+pkgrel=1

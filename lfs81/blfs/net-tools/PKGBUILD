@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=255
+pkgname=net-tools
+pkgver=CVS_20101030
+pkgrel=1

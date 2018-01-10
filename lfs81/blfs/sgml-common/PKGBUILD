@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=092
+pkgname=sgml-common
+pkgver=0.6.3
+pkgrel=1

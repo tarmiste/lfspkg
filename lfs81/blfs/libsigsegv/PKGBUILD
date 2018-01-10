@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=230
+pkgname=libsigsegv
+pkgver=2.11
+pkgrel=1

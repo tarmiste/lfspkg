@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=324
+pkgname=qscintilla
+pkgver=2.10.1
+pkgrel=1

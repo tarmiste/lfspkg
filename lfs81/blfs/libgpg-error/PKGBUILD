@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=100
+pkgname=libgpg-error
+pkgver=1.27
+pkgrel=1

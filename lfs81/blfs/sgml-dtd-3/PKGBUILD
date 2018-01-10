@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=375
+pkgname=sgml-dtd-3
+pkgver=3.1
+pkgrel=1

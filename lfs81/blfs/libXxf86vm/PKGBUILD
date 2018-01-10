@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=077
+pkgname=libXxf86vm
+pkgver=1.1.4
+pkgrel=1

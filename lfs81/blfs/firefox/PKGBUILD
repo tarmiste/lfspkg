@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=770
+pkgname=firefox
+pkgver=55.0.3
+pkgrel=1

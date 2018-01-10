@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=121
+pkgname=lcms2
+pkgver=2.8
+pkgrel=1

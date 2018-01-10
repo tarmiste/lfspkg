@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=681
+pkgname=gnome-calculator
+pkgver=3.24.0
+pkgrel=1

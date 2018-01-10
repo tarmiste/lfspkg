@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=525
+pkgname=perl-xml-libxslt
+pkgver=1.95
+pkgrel=1

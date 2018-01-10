@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=431
+pkgname=openjpeg2
+pkgver=2.2.0
+pkgrel=1

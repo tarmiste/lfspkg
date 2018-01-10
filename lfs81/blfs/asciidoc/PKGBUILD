@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=275
+pkgname=asciidoc
+pkgver=8.6.9
+pkgrel=1

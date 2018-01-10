@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=636
+pkgname=ark5
+pkgver=17.08.0
+pkgrel=1

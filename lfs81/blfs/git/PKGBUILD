@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=484
+pkgname=git
+pkgver=2.14.1
+pkgrel=1

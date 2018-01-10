@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=085
+pkgname=autoconf213
+pkgver=2.13
+pkgrel=1

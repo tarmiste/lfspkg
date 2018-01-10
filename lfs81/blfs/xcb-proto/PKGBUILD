@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=047
+pkgname=xcb-proto
+pkgver=1.12
+pkgrel=1

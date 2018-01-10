@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=152
+pkgname=libdrm
+pkgver=2.4.82
+pkgrel=1

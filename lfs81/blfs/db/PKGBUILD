@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=111
+pkgname=db
+pkgver=6.2.32
+pkgrel=1

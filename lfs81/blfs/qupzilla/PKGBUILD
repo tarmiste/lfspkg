@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=772
+pkgname=qupzilla
+pkgver=2.1.2
+pkgrel=1

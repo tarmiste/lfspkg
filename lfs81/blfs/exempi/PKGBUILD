@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=369
+pkgname=exempi
+pkgver=2.4.3
+pkgrel=1

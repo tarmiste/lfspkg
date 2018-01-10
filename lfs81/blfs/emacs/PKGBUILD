@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=306
+pkgname=emacs
+pkgver=25.2
+pkgrel=1

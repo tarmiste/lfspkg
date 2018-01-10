@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=592
+pkgname=atkmm
+pkgver=2.24.2
+pkgrel=1

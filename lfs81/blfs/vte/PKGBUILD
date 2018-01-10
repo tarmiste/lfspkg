@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=362
+pkgname=vte
+pkgver=0.48.3
+pkgrel=1

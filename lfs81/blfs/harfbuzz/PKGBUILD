@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=009
+pkgname=harfbuzz
+pkgver=1.4.8
+pkgrel=1

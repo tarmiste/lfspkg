@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=776
+pkgname=opal
+pkgver=3.10.10
+pkgrel=1

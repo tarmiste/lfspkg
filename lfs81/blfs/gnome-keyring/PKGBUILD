@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=657
+pkgname=gnome-keyring
+pkgver=3.20.1
+pkgrel=1

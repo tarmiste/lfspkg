@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=427
+pkgname=libdvdnav
+pkgver=5.0.3
+pkgrel=1

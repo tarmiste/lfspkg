@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=409
+pkgname=exiv2
+pkgver=0.25
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=344
+pkgname=wpa_supplicant
+pkgver=2.6
+pkgrel=1

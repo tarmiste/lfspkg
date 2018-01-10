@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=485
+pkgname=junit
+pkgver=4.11
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=448
+pkgname=tree
+pkgver=1.7.0
+pkgrel=1

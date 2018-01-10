@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=826
+pkgname=cups-filters
+pkgver=1.17.2
+pkgrel=1

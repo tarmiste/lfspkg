@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=219
+pkgname=libpaper
+pkgver=1.1.24+nmu5
+pkgrel=1

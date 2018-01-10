@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=642
+pkgname=taglib
+pkgver=1.11.1
+pkgrel=1

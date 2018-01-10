@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=116
+pkgname=libevent
+pkgver=2.1.8
+pkgrel=1

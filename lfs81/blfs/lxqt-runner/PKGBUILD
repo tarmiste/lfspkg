@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=758
+pkgname=lxqt-runner
+pkgver=0.11.1
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=526
+pkgname=perl-xml-writer
+pkgver=0.625
+pkgrel=1

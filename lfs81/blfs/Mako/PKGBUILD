@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=155
+pkgname=Mako
+pkgver=1.0.4
+pkgrel=1

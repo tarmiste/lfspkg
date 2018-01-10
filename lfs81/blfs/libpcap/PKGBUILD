@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=546
+pkgname=libpcap
+pkgver=1.8.1
+pkgrel=1

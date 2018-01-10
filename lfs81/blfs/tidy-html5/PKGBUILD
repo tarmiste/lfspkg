@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=446
+pkgname=tidy-html5
+pkgver=5.4.0
+pkgrel=1

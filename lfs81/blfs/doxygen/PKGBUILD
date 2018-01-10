@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=229
+pkgname=doxygen
+pkgver=1.8.13
+pkgrel=1

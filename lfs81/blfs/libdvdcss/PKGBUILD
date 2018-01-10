@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=673
+pkgname=libdvdcss
+pkgver=1.4.0
+pkgrel=1

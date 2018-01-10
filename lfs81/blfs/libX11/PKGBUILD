@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=051
+pkgname=libX11
+pkgver=1.6.5
+pkgrel=1

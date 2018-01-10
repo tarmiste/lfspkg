@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=517
+pkgname=perl-sort-key
+pkgver=1.33
+pkgrel=1

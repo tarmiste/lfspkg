@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=254
+pkgname=libcap-pam
+pkgver=2.25 with PAM
+pkgrel=1

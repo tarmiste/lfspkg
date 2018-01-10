@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=210
+pkgname=libepoxy
+pkgver=1.4.3
+pkgrel=1

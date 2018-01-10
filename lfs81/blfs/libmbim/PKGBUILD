@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=389
+pkgname=libmbim
+pkgver=1.14.2
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=217
+pkgname=gc
+pkgver=7.6.0
+pkgrel=1

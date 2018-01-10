@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=773
+pkgname=seamonkey
+pkgver=2.48
+pkgrel=1

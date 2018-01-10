@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=322
+pkgname=joe
+pkgver=4.4
+pkgrel=1

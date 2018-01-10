@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=372
+pkgname=glibmm
+pkgver=2.52.0
+pkgrel=1

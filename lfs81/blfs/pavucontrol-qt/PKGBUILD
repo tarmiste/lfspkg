@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=762
+pkgname=pavucontrol-qt
+pkgver=0.2.0
+pkgrel=1

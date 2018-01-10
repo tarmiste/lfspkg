@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=542
+pkgname=ntp
+pkgver=4.2.8p10
+pkgrel=1

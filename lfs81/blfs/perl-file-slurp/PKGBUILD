@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=505
+pkgname=perl-file-slurp
+pkgver=9999.19
+pkgrel=1

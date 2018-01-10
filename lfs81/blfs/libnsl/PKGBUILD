@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=555
+pkgname=libnsl
+pkgver=1.1.0
+pkgrel=1

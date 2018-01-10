@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=465
+pkgname=p7zip
+pkgver=16.02
+pkgrel=1

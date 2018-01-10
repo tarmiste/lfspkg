@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=093
+pkgname=unzip
+pkgver=6.0
+pkgrel=1

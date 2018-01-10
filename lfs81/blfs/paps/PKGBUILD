@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=831
+pkgname=paps
+pkgver=0.6.8
+pkgrel=1

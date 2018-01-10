@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=234
+pkgname=iso-codes
+pkgver=3.75
+pkgrel=1

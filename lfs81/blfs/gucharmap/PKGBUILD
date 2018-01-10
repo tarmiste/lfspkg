@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=297
+pkgname=gucharmap
+pkgver=10.0.0
+pkgrel=1

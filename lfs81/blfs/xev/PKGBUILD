@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=176
+pkgname=xev
+pkgver=1.2.2
+pkgrel=1

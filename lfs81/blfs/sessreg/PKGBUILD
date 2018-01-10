@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=166
+pkgname=sessreg
+pkgver=1.1.1
+pkgrel=1

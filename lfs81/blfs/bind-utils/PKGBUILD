@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=545
+pkgname=bind-utils
+pkgver=9.11.2
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=006
+pkgname=glib2
+pkgver=2.52.3
+pkgrel=1

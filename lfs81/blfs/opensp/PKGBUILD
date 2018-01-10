@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=373
+pkgname=opensp
+pkgver=1.5.2
+pkgrel=1

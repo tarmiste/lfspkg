@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=480
+pkgname=scons
+pkgver=2.5.1
+pkgrel=1

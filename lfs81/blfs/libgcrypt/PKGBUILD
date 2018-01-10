@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=101
+pkgname=libgcrypt
+pkgver=1.8.0
+pkgrel=1

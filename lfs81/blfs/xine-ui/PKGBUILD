@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=822
+pkgname=xine-ui
+pkgver=0.99.9
+pkgrel=1

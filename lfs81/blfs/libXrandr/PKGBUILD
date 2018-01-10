@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=071
+pkgname=libXrandr
+pkgver=1.5.1
+pkgrel=1

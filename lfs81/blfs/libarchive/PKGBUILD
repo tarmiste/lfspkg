@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=114
+pkgname=libarchive
+pkgver=3.3.2
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=196
+pkgname=xwd
+pkgver=1.0.6
+pkgrel=1

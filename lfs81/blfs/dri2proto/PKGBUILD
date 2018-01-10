@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=024
+pkgname=dri2proto
+pkgver=2.8
+pkgrel=1

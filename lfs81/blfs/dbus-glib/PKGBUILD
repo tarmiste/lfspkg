@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=083
+pkgname=dbus-glib
+pkgver=0.108
+pkgrel=1

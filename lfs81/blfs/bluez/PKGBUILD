@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=359
+pkgname=bluez
+pkgver=5.46
+pkgrel=1

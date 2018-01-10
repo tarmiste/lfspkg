@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=683
+pkgname=gnome-nettool
+pkgver=3.8.1
+pkgrel=1

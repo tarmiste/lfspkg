@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=710
+pkgname=xfburn
+pkgver=0.5.4
+pkgrel=1

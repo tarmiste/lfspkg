@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=364
+pkgname=qemu
+pkgver=2.9.0
+pkgrel=1

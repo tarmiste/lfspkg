@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=779
+pkgname=fontforge
+pkgver=20170731
+pkgrel=1

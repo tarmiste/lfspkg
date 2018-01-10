@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=614
+pkgname=sddm
+pkgver=0.15.0
+pkgrel=1

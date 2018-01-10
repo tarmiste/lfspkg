@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=258
+pkgname=shadow
+pkgver=4.5
+pkgrel=1

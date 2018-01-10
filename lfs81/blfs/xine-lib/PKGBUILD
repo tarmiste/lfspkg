@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=428
+pkgname=xine-lib
+pkgver=1.2.8
+pkgrel=1

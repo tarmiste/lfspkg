@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=331
+pkgname=phonon
+pkgver=4.9.1
+pkgrel=1

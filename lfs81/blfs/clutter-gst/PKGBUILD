@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=598
+pkgname=clutter-gst
+pkgver=3.0.24
+pkgrel=1

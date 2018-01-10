@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=747
+pkgname=lxqt-powermanagement
+pkgver=0.11.1
+pkgrel=1

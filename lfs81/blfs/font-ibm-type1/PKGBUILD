@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=206
+pkgname=font-ibm-type1
+pkgver=1.0.3
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=766
+pkgname=sane
+pkgver=1.0.27
+pkgrel=1

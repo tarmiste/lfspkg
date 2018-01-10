@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=407
+pkgname=babl
+pkgver=0.1.30
+pkgrel=1

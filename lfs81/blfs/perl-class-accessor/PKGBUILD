@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=493
+pkgname=perl-class-accessor
+pkgver=0.34
+pkgrel=1

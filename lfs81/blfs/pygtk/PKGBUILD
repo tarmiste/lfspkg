@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=536
+pkgname=pygtk
+pkgver=2.24.0
+pkgrel=1

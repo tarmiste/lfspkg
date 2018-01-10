@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=798
+pkgname=audiofile
+pkgver=0.3.6
+pkgrel=1

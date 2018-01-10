@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=436
+pkgname=libnotify
+pkgver=0.7.7
+pkgrel=1

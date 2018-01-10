@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=644
+pkgname=k3b
+pkgver=2017-02-12
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=088
+pkgname=js38
+pkgver=38.2.1
+pkgrel=1

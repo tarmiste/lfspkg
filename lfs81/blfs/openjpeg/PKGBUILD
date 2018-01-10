@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=221
+pkgname=openjpeg
+pkgver=1.5.2
+pkgrel=1

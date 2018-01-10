@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=294
+pkgname=desktop-file-utils
+pkgver=0.23
+pkgrel=1

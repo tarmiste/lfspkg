@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=343
+pkgname=upower
+pkgver=0.99.5
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=216
+pkgname=libatomic_ops
+pkgver=7.4.6
+pkgrel=1

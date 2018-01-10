@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=342
+pkgname=newt
+pkgver=0.52.20
+pkgrel=1

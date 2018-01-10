@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=513
+pkgname=perl-lwp-protocol-https
+pkgver=6.06
+pkgrel=1

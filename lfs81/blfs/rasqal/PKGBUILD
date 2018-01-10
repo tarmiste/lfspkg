@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=468
+pkgname=rasqal
+pkgver=0.9.33
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=183
+pkgname=xkill
+pkgver=1.0.4
+pkgrel=1

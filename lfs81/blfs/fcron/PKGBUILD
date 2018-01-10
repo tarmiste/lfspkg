@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=456
+pkgname=fcron
+pkgver=3.2.0
+pkgrel=1

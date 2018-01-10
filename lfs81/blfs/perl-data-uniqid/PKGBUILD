@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=496
+pkgname=perl-data-uniqid
+pkgver=0.12
+pkgrel=1

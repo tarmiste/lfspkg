@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=756
+pkgname=xscreensaver
+pkgver=5.37
+pkgrel=1

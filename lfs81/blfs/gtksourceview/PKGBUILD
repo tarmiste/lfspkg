@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=307
+pkgname=gtksourceview
+pkgver=3.24.3
+pkgrel=1

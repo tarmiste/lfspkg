@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=552
+pkgname=wireshark
+pkgver=2.4.0
+pkgrel=1

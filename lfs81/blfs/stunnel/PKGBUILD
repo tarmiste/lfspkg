@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=271
+pkgname=stunnel
+pkgver=5.42
+pkgrel=1

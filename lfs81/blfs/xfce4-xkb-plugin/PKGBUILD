@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=697
+pkgname=xfce4-xkb-plugin
+pkgver=0.7.1
+pkgrel=1

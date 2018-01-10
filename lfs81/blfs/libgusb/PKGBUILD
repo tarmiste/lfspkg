@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=127
+pkgname=libgusb
+pkgver=0.2.11
+pkgrel=1

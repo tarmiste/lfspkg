@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=137
+pkgname=openldap
+pkgver=2.4.45
+pkgrel=1

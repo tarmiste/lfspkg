@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=763
+pkgname=qterminal
+pkgver=0.7.1
+pkgrel=1

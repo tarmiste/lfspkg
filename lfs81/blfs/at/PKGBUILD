@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=451
+pkgname=at
+pkgver=3.1.20
+pkgrel=1

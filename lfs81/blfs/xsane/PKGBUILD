@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=827
+pkgname=xsane
+pkgver=0.999
+pkgrel=1

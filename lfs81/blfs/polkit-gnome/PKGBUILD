@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=663
+pkgname=polkit-gnome
+pkgver=0.105
+pkgrel=1

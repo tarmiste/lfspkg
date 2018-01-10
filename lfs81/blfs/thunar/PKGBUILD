@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=698
+pkgname=thunar
+pkgver=1.6.12
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=279
+pkgname=gptfdisk
+pkgver=1.0.3
+pkgrel=1

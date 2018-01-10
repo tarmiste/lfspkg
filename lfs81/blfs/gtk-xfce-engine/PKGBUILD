@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=694
+pkgname=gtk-xfce-engine
+pkgver=3.2.0
+pkgrel=1

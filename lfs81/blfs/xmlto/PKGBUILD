@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=097
+pkgname=xmlto
+pkgver=0.0.28
+pkgrel=1

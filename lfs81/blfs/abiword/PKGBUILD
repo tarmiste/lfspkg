@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=764
+pkgname=abiword
+pkgver=3.0.2
+pkgrel=1

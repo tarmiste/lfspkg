@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=470
+pkgname=sg3_utils
+pkgver=1.42
+pkgrel=1

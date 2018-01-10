@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=382
+pkgname=json-c
+pkgver=0.12.1
+pkgrel=1

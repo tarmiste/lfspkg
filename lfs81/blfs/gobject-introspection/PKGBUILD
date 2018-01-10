@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=007
+pkgname=gobject-introspection
+pkgver=1.52.1
+pkgrel=1

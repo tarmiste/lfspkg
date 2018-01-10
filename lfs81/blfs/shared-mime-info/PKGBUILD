@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=260
+pkgname=shared-mime-info
+pkgver=1.8
+pkgrel=1

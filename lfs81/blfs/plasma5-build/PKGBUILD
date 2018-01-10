@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=653
+pkgname=plasma5-build
+pkgver=5.10.5
+pkgrel=1

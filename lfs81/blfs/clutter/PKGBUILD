@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=595
+pkgname=clutter
+pkgver=1.26.2
+pkgrel=1

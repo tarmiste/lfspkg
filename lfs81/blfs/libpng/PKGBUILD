@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=010
+pkgname=libpng
+pkgver=1.6.31
+pkgrel=1

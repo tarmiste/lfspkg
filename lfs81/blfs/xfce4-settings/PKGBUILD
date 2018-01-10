@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=703
+pkgname=xfce4-settings
+pkgver=4.12.1
+pkgrel=1

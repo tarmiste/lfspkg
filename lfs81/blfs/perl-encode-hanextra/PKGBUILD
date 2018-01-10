@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=501
+pkgname=perl-encode-hanextra
+pkgver=0.23
+pkgrel=1

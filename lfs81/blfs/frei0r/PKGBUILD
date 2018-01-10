@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=802
+pkgname=frei0r
+pkgver=1.6.1
+pkgrel=1

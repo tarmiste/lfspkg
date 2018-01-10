@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=261
+pkgname=gdk-pixbuf
+pkgver=2.36.8
+pkgrel=1

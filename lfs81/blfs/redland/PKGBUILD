@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=469
+pkgname=redland
+pkgver=1.0.17
+pkgrel=1

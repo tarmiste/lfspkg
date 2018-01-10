@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=578
+pkgname=xorg-intel-driver
+pkgver=20170826
+pkgrel=1

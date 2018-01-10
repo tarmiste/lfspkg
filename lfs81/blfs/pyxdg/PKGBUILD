@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=438
+pkgname=pyxdg
+pkgver=0.25
+pkgrel=1

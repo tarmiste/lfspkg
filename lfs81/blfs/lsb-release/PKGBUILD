@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=720
+pkgname=lsb-release
+pkgver=1.4
+pkgrel=1

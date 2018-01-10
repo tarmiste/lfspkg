@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=213
+pkgname=xclock
+pkgver=1.0.7
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=565
+pkgname=vsftpd
+pkgver=3.0.3
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=584
+pkgname=xorg-wacom-driver
+pkgver=0.35.0
+pkgrel=1

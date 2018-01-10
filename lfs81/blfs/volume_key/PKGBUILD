@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=273
+pkgname=volume_key
+pkgver=0.3.9
+pkgrel=1

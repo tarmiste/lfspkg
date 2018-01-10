@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=154
+pkgname=MarkupSafe
+pkgver=1.0
+pkgrel=1

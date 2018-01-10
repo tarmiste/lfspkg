@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=243
+pkgname=pcre2
+pkgver=10.30
+pkgrel=1

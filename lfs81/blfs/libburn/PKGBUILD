@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=668
+pkgname=libburn
+pkgver=1.4.6
+pkgrel=1

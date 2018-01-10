@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=316
+pkgname=libbytesize
+pkgver=0.11
+pkgrel=1

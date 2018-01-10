@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=610
+pkgname=qtwebengine
+pkgver=5.9.1
+pkgrel=1

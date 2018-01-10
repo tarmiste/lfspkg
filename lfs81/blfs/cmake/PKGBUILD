@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=115
+pkgname=cmake
+pkgver=3.9.1
+pkgrel=1

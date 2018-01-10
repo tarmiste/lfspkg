@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=314
+pkgname=libsoup
+pkgver=2.58.2
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=025
+pkgname=dri3proto
+pkgver=1.0
+pkgrel=1

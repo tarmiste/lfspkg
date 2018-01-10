@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=639
+pkgname=libmusicbrainz5
+pkgver=5.1.0
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=095
+pkgname=docbook-xsl
+pkgver=1.79.1
+pkgrel=1

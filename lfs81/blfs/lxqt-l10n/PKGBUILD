@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=751
+pkgname=lxqt-l10n
+pkgver=0.11.2
+pkgrel=1

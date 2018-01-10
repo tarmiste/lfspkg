@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=268
+pkgname=hicolor-icon-theme
+pkgver=0.15
+pkgrel=1

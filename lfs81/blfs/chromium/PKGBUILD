@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=768
+pkgname=chromium
+pkgver=60.0.3112.101
+pkgrel=1

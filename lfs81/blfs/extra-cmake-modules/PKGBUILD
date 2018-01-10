@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=327
+pkgname=extra-cmake-modules
+pkgver=5.37.0
+pkgrel=1

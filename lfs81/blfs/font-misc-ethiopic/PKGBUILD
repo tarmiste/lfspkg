@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=207
+pkgname=font-misc-ethiopic
+pkgver=1.0.3
+pkgrel=1

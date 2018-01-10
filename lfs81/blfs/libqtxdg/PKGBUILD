@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=732
+pkgname=libqtxdg
+pkgver=2.0.0
+pkgrel=1

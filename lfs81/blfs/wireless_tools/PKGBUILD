@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=544
+pkgname=wireless_tools
+pkgver=29
+pkgrel=1

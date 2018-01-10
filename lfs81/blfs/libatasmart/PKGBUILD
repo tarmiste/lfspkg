@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=315
+pkgname=libatasmart
+pkgver=0.19
+pkgrel=1

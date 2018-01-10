@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=159
+pkgname=mesa
+pkgver=17.1.6
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=287
+pkgname=smartmontools
+pkgver=6.5
+pkgrel=1

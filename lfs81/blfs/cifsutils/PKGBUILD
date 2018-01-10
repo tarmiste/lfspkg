@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=541
+pkgname=cifsutils
+pkgver=6.7
+pkgrel=1

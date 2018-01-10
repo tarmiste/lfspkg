@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=415
+pkgname=libvpx
+pkgver=1.6.1
+pkgrel=1

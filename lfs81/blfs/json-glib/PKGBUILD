@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=383
+pkgname=json-glib
+pkgver=1.2.8
+pkgrel=1

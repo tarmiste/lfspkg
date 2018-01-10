@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=175
+pkgname=xdriinfo
+pkgver=1.0.5
+pkgrel=1

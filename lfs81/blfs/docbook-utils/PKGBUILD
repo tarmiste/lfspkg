@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=378
+pkgname=docbook-utils
+pkgver=0.6.14
+pkgrel=1

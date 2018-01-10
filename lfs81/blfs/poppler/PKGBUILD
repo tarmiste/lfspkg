@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=222
+pkgname=poppler
+pkgver=0.57.0
+pkgrel=1

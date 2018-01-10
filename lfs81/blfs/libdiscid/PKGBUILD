@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=808
+pkgname=libdiscid
+pkgver=0.6.2
+pkgrel=1

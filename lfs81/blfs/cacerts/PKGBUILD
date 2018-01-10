@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=018
+pkgname=cacerts
+pkgver=1.0.0
+pkgrel=1

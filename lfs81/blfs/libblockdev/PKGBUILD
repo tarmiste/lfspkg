@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=317
+pkgname=libblockdev
+pkgver=2.11-1
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=295
+pkgname=aspell
+pkgver=0.60.6.1
+pkgrel=1

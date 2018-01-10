@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=053
+pkgname=libFS
+pkgver=1.0.7
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=632
+pkgname=libmad
+pkgver=0.15.1b
+pkgrel=1

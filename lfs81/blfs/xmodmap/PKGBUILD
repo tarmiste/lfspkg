@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=187
+pkgname=xmodmap
+pkgver=1.0.9
+pkgrel=1

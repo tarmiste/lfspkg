@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=560
+pkgname=fetchmail
+pkgver=6.3.26
+pkgrel=1

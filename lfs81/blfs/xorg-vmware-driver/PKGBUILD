@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=583
+pkgname=xorg-vmware-driver
+pkgver=13.2.1
+pkgrel=1

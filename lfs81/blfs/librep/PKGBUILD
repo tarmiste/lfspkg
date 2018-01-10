@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=443
+pkgname=librep
+pkgver=0.92.7
+pkgrel=1

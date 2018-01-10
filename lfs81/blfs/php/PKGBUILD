@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=531
+pkgname=php
+pkgver=7.1.8
+pkgrel=1

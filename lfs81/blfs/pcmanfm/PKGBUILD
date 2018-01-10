@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=717
+pkgname=pcmanfm
+pkgver=1.2.5
+pkgrel=1

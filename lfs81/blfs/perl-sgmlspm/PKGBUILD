@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=516
+pkgname=perl-sgmlspm
+pkgver=1.1
+pkgrel=1

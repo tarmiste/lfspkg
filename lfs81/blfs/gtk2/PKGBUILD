@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=269
+pkgname=gtk2
+pkgver=2.24.31
+pkgrel=1

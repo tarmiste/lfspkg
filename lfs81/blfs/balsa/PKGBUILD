@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=775
+pkgname=balsa
+pkgver=2.5.3
+pkgrel=1

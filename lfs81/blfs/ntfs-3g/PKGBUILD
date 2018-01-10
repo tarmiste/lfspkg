@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=282
+pkgname=ntfs-3g
+pkgver=3g-2017.3.23
+pkgrel=1

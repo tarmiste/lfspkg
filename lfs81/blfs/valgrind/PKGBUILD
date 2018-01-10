@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=122
+pkgname=valgrind
+pkgver=3.13.0
+pkgrel=1

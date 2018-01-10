@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=133
+pkgname=cpio
+pkgver=2.12
+pkgrel=1

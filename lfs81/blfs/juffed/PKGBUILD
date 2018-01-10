@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=326
+pkgname=juffed
+pkgver=0.10.r71.gc3c1a3f
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=037
+pkgname=videoproto
+pkgver=2.3.3
+pkgrel=1

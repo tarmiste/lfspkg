@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=790
+pkgname=tigervnc
+pkgver=1.8.0
+pkgrel=1

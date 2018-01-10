@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=082
+pkgname=dbus
+pkgver=1.10.22
+pkgrel=1

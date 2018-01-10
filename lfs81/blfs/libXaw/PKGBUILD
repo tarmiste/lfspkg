@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=060
+pkgname=libXaw
+pkgver=1.0.13
+pkgrel=1

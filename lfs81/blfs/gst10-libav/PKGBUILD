@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=804
+pkgname=gst10-libav
+pkgver=1.12.2
+pkgrel=1

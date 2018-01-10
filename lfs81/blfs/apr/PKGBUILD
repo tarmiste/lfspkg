@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=365
+pkgname=apr
+pkgver=1.6.2
+pkgrel=1

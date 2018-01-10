@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=714
+pkgname=libfm-extra
+pkgver=1.2.5
+pkgrel=1

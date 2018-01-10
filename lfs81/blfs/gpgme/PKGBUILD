@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=251
+pkgname=gpgme
+pkgver=1.9.0
+pkgrel=1

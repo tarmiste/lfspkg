@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=332
+pkgname=perl-uri
+pkgver=1.72
+pkgrel=1

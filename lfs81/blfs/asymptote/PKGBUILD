@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=227
+pkgname=asymptote
+pkgver=2.41
+pkgrel=1

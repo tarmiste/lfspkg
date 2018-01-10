@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=596
+pkgname=soundtouch
+pkgver=2.0.0
+pkgrel=1

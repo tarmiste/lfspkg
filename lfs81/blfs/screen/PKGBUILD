@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=445
+pkgname=screen
+pkgver=4.5.1
+pkgrel=1

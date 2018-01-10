@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=094
+pkgname=DocBook
+pkgver=4.5
+pkgrel=1

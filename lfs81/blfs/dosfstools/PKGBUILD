@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=318
+pkgname=dosfstools
+pkgver=4.1
+pkgrel=1

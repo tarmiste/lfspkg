@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=499
+pkgname=perl-datetime-format-builder
+pkgver=0.81
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=134
+pkgname=openjdk
+pkgver=1.8.0.141
+pkgrel=1

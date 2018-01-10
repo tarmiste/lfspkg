@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=707
+pkgname=parole
+pkgver=0.8.1
+pkgrel=1

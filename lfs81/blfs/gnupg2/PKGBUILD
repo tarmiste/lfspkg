@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=228
+pkgname=gnupg2
+pkgver=2.1.23
+pkgrel=1

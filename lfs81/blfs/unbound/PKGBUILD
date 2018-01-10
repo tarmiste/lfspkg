@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=569
+pkgname=unbound
+pkgver=1.6.5
+pkgrel=1

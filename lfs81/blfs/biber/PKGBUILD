@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=527
+pkgname=biber
+pkgver=2.7
+pkgrel=1

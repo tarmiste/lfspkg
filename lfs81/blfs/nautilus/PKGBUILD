@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=661
+pkgname=nautilus
+pkgver=3.24.2.1
+pkgrel=1

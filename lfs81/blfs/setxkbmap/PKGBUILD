@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=167
+pkgname=setxkbmap
+pkgver=1.3.1
+pkgrel=1

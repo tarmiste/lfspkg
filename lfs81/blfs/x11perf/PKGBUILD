@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=169
+pkgname=x11perf
+pkgver=1.6.0
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=460
+pkgname=perl-parse-yapp
+pkgver=1.21
+pkgrel=1

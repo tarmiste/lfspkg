@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=370
+pkgname=fftw
+pkgver=3.3.6-pl2
+pkgrel=1

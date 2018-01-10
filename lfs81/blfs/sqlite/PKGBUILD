@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=104
+pkgname=sqlite
+pkgver=3.20.0
+pkgrel=1

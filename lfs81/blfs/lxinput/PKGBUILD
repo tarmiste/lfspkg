@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=725
+pkgname=lxinput
+pkgver=0.3.5
+pkgrel=1

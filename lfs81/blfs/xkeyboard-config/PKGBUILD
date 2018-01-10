@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=209
+pkgname=xkeyboard-config
+pkgver=2.21
+pkgrel=1

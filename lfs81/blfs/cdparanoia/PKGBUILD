@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=233
+pkgname=cdparanoia
+pkgver=III-10.2
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=430
+pkgname=opencv
+pkgver=3.3.0
+pkgrel=1

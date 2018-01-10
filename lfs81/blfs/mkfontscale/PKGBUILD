@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=165
+pkgname=mkfontscale
+pkgver=1.1.2
+pkgrel=1

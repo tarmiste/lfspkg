@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=508
+pkgname=perl-ipc-run3
+pkgver=0.048
+pkgrel=1

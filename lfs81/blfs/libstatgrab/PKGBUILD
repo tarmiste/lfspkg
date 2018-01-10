@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=753
+pkgname=libstatgrab
+pkgver=0.91
+pkgrel=1

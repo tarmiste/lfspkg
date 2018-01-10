@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=146
+pkgname=nasm
+pkgver=2.13.01
+pkgrel=1

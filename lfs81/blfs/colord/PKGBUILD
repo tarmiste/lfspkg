@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=128
+pkgname=colord
+pkgver=1.2.12
+pkgrel=1

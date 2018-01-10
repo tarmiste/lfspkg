@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=162
+pkgname=iceauth
+pkgver=1.0.7
+pkgrel=1

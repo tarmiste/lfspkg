@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=390
+pkgname=libqmi
+pkgver=1.18.0
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=702
+pkgname=xfce4-power-manager
+pkgver=1.6.0
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=522
+pkgname=perl-unicode-collate
+pkgver=1.19
+pkgrel=1

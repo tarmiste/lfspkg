@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=280
+pkgname=jfsutils
+pkgver=1.1.15
+pkgrel=1

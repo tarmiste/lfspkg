@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=143
+pkgname=libusb-compat
+pkgver=0.1.5
+pkgrel=1

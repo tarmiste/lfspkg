@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=429
+pkgname=apache-ant
+pkgver=1.10.1
+pkgrel=1

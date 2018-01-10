@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=387
+pkgname=libiodbc
+pkgver=3.52.12
+pkgrel=1

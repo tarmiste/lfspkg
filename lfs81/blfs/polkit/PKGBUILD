@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=089
+pkgname=polkit
+pkgver=0.113+git_2919920+js38
+pkgrel=1

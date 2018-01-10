@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=381
+pkgname=gsl
+pkgver=2.4
+pkgrel=1

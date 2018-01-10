@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=502
+pkgname=perl-encode-jis2k
+pkgver=0.03
+pkgrel=1

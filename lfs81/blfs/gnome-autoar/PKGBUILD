@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=655
+pkgname=gnome-autoar
+pkgver=0.2.2
+pkgrel=1

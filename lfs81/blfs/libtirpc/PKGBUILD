@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=440
+pkgname=libtirpc
+pkgver=1.0.2
+pkgrel=1

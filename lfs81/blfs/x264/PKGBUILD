@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=417
+pkgname=x264
+pkgver=20170822-2245
+pkgrel=1

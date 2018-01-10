@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=040
+pkgname=xf86bigfontproto
+pkgver=1.2.0
+pkgrel=1

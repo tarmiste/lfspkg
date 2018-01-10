@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=626
+pkgname=oxygen-icons5
+pkgver=5.37.0
+pkgrel=1

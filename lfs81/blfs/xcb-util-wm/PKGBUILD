@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=248
+pkgname=xcb-util-wm
+pkgver=0.4.1
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=789
+pkgname=thunderbird
+pkgver=52.3.0
+pkgrel=1

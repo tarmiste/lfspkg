@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=444
+pkgname=rep-gtk
+pkgver=0.90.8.3
+pkgrel=1

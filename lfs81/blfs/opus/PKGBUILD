@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=416
+pkgname=opus
+pkgver=1.2.1
+pkgrel=1

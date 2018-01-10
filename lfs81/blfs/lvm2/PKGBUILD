@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=103
+pkgname=lvm2
+pkgver=2.02.171
+pkgrel=1

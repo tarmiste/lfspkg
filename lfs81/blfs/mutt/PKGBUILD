@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=562
+pkgname=mutt
+pkgver=1.8.3
+pkgrel=1

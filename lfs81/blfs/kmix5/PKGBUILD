@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=649
+pkgname=kmix5
+pkgver=17.08.0
+pkgrel=1

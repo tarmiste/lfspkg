@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=021
+pkgname=compositeproto
+pkgver=0.4.2
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=113
+pkgname=curl
+pkgver=7.55.1
+pkgrel=1

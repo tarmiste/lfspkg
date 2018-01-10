@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=590
+pkgname=font-daewoo-misc
+pkgver=1.0.3
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=194
+pkgname=xsetroot
+pkgver=1.1.1
+pkgrel=1

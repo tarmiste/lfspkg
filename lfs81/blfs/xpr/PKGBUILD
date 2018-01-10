@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=188
+pkgname=xpr
+pkgver=1.0.4
+pkgrel=1

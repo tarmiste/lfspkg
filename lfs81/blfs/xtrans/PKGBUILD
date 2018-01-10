@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=050
+pkgname=xtrans
+pkgver=1.3.5
+pkgrel=1

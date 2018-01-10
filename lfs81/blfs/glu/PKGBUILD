@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=225
+pkgname=glu
+pkgver=9.0.0
+pkgrel=1

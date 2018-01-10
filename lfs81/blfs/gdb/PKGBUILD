@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=478
+pkgname=gdb
+pkgver=8.0
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=786
+pkgname=pidgin
+pkgver=2.12.0
+pkgrel=1

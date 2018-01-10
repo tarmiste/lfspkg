@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=211
+pkgname=xorg-server
+pkgver=1.19.3
+pkgrel=1

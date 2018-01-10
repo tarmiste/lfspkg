@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=740
+pkgname=lxqt-libkscreen
+pkgver=5.10.5 for lxqt
+pkgrel=1

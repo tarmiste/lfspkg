@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=782
+pkgname=hexchat
+pkgver=2.12.4
+pkgrel=1

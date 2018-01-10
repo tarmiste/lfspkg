@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=589
+pkgname=font-jis-misc
+pkgver=1.0.3
+pkgrel=1

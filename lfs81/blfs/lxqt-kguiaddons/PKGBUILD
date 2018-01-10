@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=752
+pkgname=lxqt-kguiaddons
+pkgver=5.37.0 for lxqt
+pkgrel=1

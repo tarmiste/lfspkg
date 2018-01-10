@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=290
+pkgname=at-spi2-core
+pkgver=2.24.1
+pkgrel=1

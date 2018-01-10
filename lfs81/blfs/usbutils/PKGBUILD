@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=125
+pkgname=usbutils
+pkgver=008
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=519
+pkgname=perl-test-differences
+pkgver=0.64
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=696
+pkgname=xfce4-panel
+pkgver=4.12.1
+pkgrel=1

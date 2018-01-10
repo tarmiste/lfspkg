@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=340
+pkgname=dhcp
+pkgver=4.3.6
+pkgrel=1

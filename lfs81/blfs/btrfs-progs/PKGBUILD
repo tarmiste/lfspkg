@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=276
+pkgname=btrfs-progs
+pkgver=4.12
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=587
+pkgname=font-adobe-100dpi
+pkgver=1.0.3
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=613
+pkgname=lxdm
+pkgver=0.5.3
+pkgrel=1

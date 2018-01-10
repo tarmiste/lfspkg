@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=257
+pkgname=openssh
+pkgver=7.5p1
+pkgrel=1

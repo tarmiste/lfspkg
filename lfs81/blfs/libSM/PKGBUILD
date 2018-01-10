@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=055
+pkgname=libSM
+pkgver=1.2.2
+pkgrel=1

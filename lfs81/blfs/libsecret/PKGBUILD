@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=312
+pkgname=libsecret
+pkgver=0.18.5
+pkgrel=1

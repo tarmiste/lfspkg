@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=624
+pkgname=gnome-themes-standard
+pkgver=3.22.3
+pkgrel=1

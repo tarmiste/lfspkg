@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=366
+pkgname=unixodbc
+pkgver=2.3.4
+pkgrel=1

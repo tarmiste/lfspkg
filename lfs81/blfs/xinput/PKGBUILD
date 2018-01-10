@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=179
+pkgname=xinput
+pkgver=1.6.2
+pkgrel=1

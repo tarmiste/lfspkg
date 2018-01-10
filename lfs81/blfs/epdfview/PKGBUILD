@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=830
+pkgname=epdfview
+pkgver=0.1.8
+pkgrel=1

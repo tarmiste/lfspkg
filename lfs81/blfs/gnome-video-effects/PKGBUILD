@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=658
+pkgname=gnome-video-effects
+pkgver=0.4.3
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=153
+pkgname=Beaker
+pkgver=1.9.0
+pkgrel=1

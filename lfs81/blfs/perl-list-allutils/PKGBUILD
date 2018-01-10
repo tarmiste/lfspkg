@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=510
+pkgname=perl-list-allutils
+pkgver=0.14
+pkgrel=1

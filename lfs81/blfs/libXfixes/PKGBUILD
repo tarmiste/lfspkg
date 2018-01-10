@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=061
+pkgname=libXfixes
+pkgver=5.0.3
+pkgrel=1

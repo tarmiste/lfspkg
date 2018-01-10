@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=231
+pkgname=clisp
+pkgver=2.49
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=109
+pkgname=libpwquality
+pkgver=1.4.0
+pkgrel=1

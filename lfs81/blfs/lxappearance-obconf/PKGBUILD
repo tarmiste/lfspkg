@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=724
+pkgname=lxappearance-obconf
+pkgver=0.2.3
+pkgrel=1

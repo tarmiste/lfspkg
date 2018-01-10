@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=708
+pkgname=ristretto
+pkgver=0.8.2
+pkgrel=1

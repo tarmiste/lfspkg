@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=074
+pkgname=libXv
+pkgver=1.0.11
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=434
+pkgname=qpdf
+pkgver=6.0.0
+pkgrel=1

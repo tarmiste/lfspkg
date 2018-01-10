@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=337
+pkgname=libndp
+pkgver=1.6
+pkgrel=1

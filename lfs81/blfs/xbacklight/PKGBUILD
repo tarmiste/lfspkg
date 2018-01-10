@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=171
+pkgname=xbacklight
+pkgver=1.2.1
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=308
+pkgname=pycairo
+pkgver=1.15.1
+pkgrel=1

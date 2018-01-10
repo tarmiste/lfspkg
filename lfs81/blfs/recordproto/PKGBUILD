@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=033
+pkgname=recordproto
+pkgver=1.14.2
+pkgrel=1

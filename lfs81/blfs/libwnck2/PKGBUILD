@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=695
+pkgname=libwnck2
+pkgver=2.30.7
+pkgrel=1

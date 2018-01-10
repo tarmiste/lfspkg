@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=235
+pkgname=libogg
+pkgver=1.3.2
+pkgrel=1

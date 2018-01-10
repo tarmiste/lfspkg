@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=057
+pkgname=libXt
+pkgver=1.1.5
+pkgrel=1

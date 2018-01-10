@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=442
+pkgname=rarian
+pkgver=0.8.1
+pkgrel=1

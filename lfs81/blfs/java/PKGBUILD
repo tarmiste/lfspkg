@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=131
+pkgname=java
+pkgver=1.8.0.141
+pkgrel=1

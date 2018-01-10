@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=494
+pkgname=perl-data-compare
+pkgver=1.25
+pkgrel=1

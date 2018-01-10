@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=515
+pkgname=perl-regexp-common
+pkgver=2017060201
+pkgrel=1

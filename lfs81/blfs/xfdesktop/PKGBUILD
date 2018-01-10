@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=704
+pkgname=xfdesktop
+pkgver=4.12.4
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=474
+pkgname=gcc
+pkgver=7.2.0
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=124
+pkgname=libusb
+pkgver=1.0.21
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=568
+pkgname=postfix
+pkgver=3.2.2
+pkgrel=1

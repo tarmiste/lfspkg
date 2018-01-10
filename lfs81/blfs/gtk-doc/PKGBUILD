@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=266
+pkgname=gtk-doc
+pkgver=1.26
+pkgrel=1

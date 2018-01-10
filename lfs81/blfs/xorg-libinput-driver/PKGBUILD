@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=579
+pkgname=xorg-libinput-driver
+pkgver=0.25.1
+pkgrel=1

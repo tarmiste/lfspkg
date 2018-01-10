@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=737
+pkgname=lxqt-admin
+pkgver=0.11.1
+pkgrel=1

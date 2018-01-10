@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=829
+pkgname=a2ps
+pkgver=4.14
+pkgrel=1

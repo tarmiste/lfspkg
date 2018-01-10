@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=399
+pkgname=ptlib
+pkgver=2.10.11
+pkgrel=1

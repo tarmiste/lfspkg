@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=293
+pkgname=gtk3
+pkgver=3.22.18
+pkgrel=1

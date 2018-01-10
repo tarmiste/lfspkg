@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=069
+pkgname=libXi
+pkgver=1.7.9
+pkgrel=1

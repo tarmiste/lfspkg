@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=447
+pkgname=time
+pkgver=1.7
+pkgrel=1

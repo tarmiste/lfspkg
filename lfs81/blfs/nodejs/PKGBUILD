@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=393
+pkgname=nodejs
+pkgver=8.4.0
+pkgrel=1

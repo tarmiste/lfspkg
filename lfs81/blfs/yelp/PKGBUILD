@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=666
+pkgname=yelp
+pkgver=3.22.0
+pkgrel=1

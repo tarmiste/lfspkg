@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=475
+pkgname=gcc-ada
+pkgver=7.2.0
+pkgrel=1

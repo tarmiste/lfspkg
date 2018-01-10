@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=156
+pkgname=elfutils
+pkgver=0.170
+pkgrel=1

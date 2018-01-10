@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=151
+pkgname=pixman
+pkgver=0.34.0
+pkgrel=1

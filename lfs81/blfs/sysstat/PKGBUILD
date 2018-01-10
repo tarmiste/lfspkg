@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=256
+pkgname=sysstat
+pkgver=11.6.0
+pkgrel=1

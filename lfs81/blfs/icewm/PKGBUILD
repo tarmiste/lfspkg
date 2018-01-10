@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=616
+pkgname=icewm
+pkgver=1.4.2
+pkgrel=1

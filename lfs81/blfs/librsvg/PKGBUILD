@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=305
+pkgname=librsvg
+pkgver=2.40.18
+pkgrel=1

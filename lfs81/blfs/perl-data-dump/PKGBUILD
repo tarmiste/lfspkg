@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=495
+pkgname=perl-data-dump
+pkgver=1.23
+pkgrel=1

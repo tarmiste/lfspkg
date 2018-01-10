@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=140
+pkgname=npth
+pkgver=1.5
+pkgrel=1

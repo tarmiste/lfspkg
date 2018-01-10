@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=142
+pkgname=imagemagick
+pkgver=7.0.6-10
+pkgrel=1

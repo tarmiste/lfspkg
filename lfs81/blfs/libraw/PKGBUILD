@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=425
+pkgname=libraw
+pkgver=0.18.2
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=384
+pkgname=libesmtp
+pkgver=1.0.6
+pkgrel=1

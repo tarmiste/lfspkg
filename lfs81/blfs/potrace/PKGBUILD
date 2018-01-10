@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=432
+pkgname=potrace
+pkgver=1.15
+pkgrel=1

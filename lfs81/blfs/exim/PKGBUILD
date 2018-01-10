@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=567
+pkgname=exim
+pkgver=4.89
+pkgrel=1

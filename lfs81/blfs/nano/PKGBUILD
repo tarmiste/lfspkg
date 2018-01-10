@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=351
+pkgname=nano
+pkgver=2.8.7
+pkgrel=1

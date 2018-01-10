@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=554
+pkgname=ldns
+pkgver=1.7.0
+pkgrel=1

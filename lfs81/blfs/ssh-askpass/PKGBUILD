@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=270
+pkgname=ssh-askpass
+pkgver=7.5p1
+pkgrel=1

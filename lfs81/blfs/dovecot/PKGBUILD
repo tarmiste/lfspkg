@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=566
+pkgname=dovecot
+pkgver=2.2.32
+pkgrel=1

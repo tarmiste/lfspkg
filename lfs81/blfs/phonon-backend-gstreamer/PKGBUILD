@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=631
+pkgname=phonon-backend-gstreamer
+pkgver=4.9.0
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=237
+pkgname=libtheora
+pkgver=1.1.1
+pkgrel=1

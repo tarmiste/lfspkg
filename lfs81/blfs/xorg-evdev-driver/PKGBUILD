@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=576
+pkgname=xorg-evdev-driver
+pkgver=2.10.5
+pkgrel=1

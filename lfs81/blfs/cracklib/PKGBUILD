@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=099
+pkgname=cracklib
+pkgver=2.9.6
+pkgrel=1

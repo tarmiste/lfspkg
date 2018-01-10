@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=036
+pkgname=scrnsaverproto
+pkgver=1.2.2
+pkgrel=1

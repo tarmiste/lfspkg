@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=781
+pkgname=gparted
+pkgver=0.29.0
+pkgrel=1

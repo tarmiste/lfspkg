@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=299
+pkgname=ed
+pkgver=1.14.2
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=828
+pkgname=psutils
+pkgver=p17
+pkgrel=1

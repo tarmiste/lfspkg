@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=145
+pkgname=sendmail
+pkgver=8.15.2
+pkgrel=1

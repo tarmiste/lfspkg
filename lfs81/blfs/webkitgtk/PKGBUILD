@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=612
+pkgname=webkitgtk
+pkgver=2.16.6
+pkgrel=1

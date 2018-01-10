@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=463
+pkgname=mc
+pkgver=4.8.19
+pkgrel=1

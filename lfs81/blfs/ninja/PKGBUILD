@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=487
+pkgname=ninja
+pkgver=1.7.2
+pkgrel=1

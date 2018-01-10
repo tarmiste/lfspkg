@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=600
+pkgname=colord-gtk
+pkgver=0.1.26
+pkgrel=1

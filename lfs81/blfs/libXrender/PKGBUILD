@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=063
+pkgname=libXrender
+pkgver=0.9.10
+pkgrel=1

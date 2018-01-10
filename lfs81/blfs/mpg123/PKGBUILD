@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=813
+pkgname=mpg123
+pkgver=1.25.6
+pkgrel=1

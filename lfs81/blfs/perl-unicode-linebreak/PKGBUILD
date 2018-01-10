@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=523
+pkgname=perl-unicode-linebreak
+pkgver=2017.004
+pkgrel=1

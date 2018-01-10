@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=733
+pkgname=lxqt-kwindowsystem
+pkgver=5.37.0 for lxqt
+pkgrel=1

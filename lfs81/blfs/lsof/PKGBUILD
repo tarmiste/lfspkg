@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=441
+pkgname=lsof
+pkgver=4.89
+pkgrel=1

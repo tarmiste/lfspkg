@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=356
+pkgname=sdl2
+pkgver=2.0.5
+pkgrel=1

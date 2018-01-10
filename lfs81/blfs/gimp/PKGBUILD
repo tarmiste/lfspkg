@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=780
+pkgname=gimp
+pkgver=2.8.22
+pkgrel=1

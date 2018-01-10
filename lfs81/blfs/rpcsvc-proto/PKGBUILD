@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=452
+pkgname=rpcsvc-proto
+pkgver=1.2
+pkgrel=1

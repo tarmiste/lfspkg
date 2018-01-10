@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=794
+pkgname=alsa-firmware
+pkgver=1.0.29
+pkgrel=1

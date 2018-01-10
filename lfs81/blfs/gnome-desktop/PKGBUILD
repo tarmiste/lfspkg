@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=656
+pkgname=gnome-desktop
+pkgver=3.24.2
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=675
+pkgname=brasero
+pkgver=3.12.2
+pkgrel=1

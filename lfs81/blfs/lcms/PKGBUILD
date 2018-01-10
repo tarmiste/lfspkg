@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=423
+pkgname=lcms
+pkgver=1.19
+pkgrel=1

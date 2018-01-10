@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=533
+pkgname=lxml
+pkgver=3.8.0
+pkgrel=1

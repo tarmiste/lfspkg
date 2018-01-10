@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=160
+pkgname=xbitmaps
+pkgver=1.1.1
+pkgrel=1

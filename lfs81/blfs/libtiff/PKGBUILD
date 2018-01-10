@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=149
+pkgname=libtiff
+pkgver=4.0.8
+pkgrel=1

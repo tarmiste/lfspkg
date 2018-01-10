@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=709
+pkgname=libisoburn
+pkgver=1.4.6
+pkgrel=1

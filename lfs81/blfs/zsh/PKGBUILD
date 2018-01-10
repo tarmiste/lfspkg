@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=355
+pkgname=zsh
+pkgver=5.4.2
+pkgrel=1

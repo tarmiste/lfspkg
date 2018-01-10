@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=823
+pkgname=ijs
+pkgver=0.35
+pkgrel=1

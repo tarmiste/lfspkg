@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=272
+pkgname=tripwire
+pkgver=2.4.3.5
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=117
+pkgname=mariadb
+pkgver=10.2.8
+pkgrel=1

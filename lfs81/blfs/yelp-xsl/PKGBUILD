@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=665
+pkgname=yelp-xsl
+pkgver=3.20.1
+pkgrel=1

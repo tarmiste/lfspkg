@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=422
+pkgname=gegl
+pkgver=0.3.20
+pkgrel=1

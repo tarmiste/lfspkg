@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=214
+pkgname=xterm2
+pkgver=330
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=490
+pkgname=perl-business-isbn
+pkgver=3.004
+pkgrel=1

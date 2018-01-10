@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=406
+pkgname=aalib
+pkgver=1.4rc5
+pkgrel=1

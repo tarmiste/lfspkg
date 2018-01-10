@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=577
+pkgname=xorg-fbdev-driver
+pkgver=0.4.4
+pkgrel=1

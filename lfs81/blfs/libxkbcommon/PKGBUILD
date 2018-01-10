@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=241
+pkgname=libxkbcommon
+pkgver=0.7.2
+pkgrel=1

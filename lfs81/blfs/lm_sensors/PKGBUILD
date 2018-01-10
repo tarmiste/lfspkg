@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=458
+pkgname=lm_sensors
+pkgver=3.4.0
+pkgrel=1

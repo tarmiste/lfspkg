@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=814
+pkgname=audacious
+pkgver=3.9
+pkgrel=1

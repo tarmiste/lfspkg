@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=353
+pkgname=vim
+pkgver=8.0.586
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=528
+pkgname=perl-text-csv
+pkgver=1.95
+pkgrel=1

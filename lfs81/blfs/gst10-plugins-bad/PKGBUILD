@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=597
+pkgname=gst10-plugins-bad
+pkgver=1.12.2
+pkgrel=1

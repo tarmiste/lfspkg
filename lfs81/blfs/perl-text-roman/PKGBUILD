@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=521
+pkgname=perl-text-roman
+pkgver=3.5
+pkgrel=1

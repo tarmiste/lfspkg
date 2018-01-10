@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=785
+pkgname=inkscape
+pkgver=0.92.2
+pkgrel=1

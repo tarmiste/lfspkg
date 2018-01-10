@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=664
+pkgname=totem-pl-parser
+pkgver=3.10.8
+pkgrel=1

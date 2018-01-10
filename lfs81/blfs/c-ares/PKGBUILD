@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=392
+pkgname=c-ares
+pkgver=1.12.0
+pkgrel=1

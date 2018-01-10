@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=760
+pkgname=lximage-qt
+pkgver=0.5.1
+pkgrel=1

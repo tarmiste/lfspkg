@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=815
+pkgname=sharutils
+pkgver=4.15.2
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=530
+pkgname=apache
+pkgver=2.4.27
+pkgrel=1

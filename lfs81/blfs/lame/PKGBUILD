@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=414
+pkgname=lame
+pkgver=3.99.5
+pkgrel=1

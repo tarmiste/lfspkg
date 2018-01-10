@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=022
+pkgname=damageproto
+pkgver=1.2.1
+pkgrel=1

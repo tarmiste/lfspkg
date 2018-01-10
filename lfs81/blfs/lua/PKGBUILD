@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=264
+pkgname=lua
+pkgver=5.3.4
+pkgrel=1

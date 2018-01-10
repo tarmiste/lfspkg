@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=486
+pkgname=mercurial
+pkgver=4.3.1
+pkgrel=1

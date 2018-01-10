@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=620
+pkgname=icon-naming-utils
+pkgver=0.8.90
+pkgrel=1

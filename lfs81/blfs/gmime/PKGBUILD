@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=379
+pkgname=gmime
+pkgver=2.6.23
+pkgrel=1

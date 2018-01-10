@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=252
+pkgname=haveged
+pkgver=1.9.1
+pkgrel=1

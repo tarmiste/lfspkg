@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=250
+pkgname=swig
+pkgver=3.0.12
+pkgrel=1

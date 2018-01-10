@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=334
+pkgname=libglade
+pkgver=2.6.4
+pkgrel=1

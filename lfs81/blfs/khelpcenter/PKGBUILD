@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=647
+pkgname=khelpcenter
+pkgver=17.08.0
+pkgrel=1

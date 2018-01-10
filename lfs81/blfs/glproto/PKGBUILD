@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=028
+pkgname=glproto
+pkgver=1.4.17
+pkgrel=1

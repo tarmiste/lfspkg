@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=633
+pkgname=vlc
+pkgver=2.2.6
+pkgrel=1

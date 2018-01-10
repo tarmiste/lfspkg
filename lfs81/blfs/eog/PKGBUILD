@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=677
+pkgname=eog
+pkgver=3.24.1
+pkgrel=1

@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=745
+pkgname=lxqt-kidletime
+pkgver=5.37.0 for lxqt
+pkgrel=1

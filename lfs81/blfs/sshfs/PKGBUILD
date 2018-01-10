@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=288
+pkgname=sshfs
+pkgver=3.2.0
+pkgrel=1

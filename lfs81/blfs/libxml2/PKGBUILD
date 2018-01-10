@@ -4,3 +4,7 @@
 # EDITHOOK1
 #
 
+BLFSTOOLSEQ=091
+pkgname=libxml2
+pkgver=2.9.4
+pkgrel=1
