@@ -12,3 +12,29 @@ pkgrel=1
 pkgdesc=""
 arch=('x86_64')
 # EDITHOOK3
+url=""
+license=('GPL')
+groups=()
+# EDITHOOK4
+depends=()
+makedepends=()
+optdepends=()
+provides=()
+conflicts=()
+replaces=()
+backup=()
+options=()
+install=
+changelog=
+# EDITHOOK5
+sources=(
+    http://download.documentfoundation.org/libreoffice/src/5.4.0/libreoffice-5.4.0.3.tar.xz
+    http://download.documentfoundation.org/libreoffice/src/5.4.0/libreoffice-dictionaries-5.4.0.3.tar.xz
+    http://download.documentfoundation.org/libreoffice/src/5.4.0/libreoffice-help-5.4.0.3.tar.xz
+    http://download.documentfoundation.org/libreoffice/src/5.4.0/libreoffice-translations-5.4.0.3.tar.xz
+)
+# EDITHOOK6
+noextract=()
+md5sums=() #generate with 'makepkg -g'
+# EDITHOOK7
+

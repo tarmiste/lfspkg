@@ -12,3 +12,27 @@ pkgrel=1
 pkgdesc=""
 arch=('x86_64')
 # EDITHOOK3
+url=""
+license=('GPL')
+groups=()
+# EDITHOOK4
+depends=()
+makedepends=()
+optdepends=()
+provides=()
+conflicts=()
+replaces=()
+backup=()
+options=()
+install=
+changelog=
+# EDITHOOK5
+sources=(
+    https://sourceware.org/ftp/docbook-tools/new-trials/SOURCES/sgml-common-0.6.3.tgz
+sgml-common-0.6.3-manpage-1.patch
+)
+# EDITHOOK6
+noextract=()
+md5sums=() #generate with 'makepkg -g'
+# EDITHOOK7
+

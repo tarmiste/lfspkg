@@ -12,3 +12,27 @@ pkgrel=1
 pkgdesc=""
 arch=('x86_64')
 # EDITHOOK3
+url=""
+license=('GPL')
+groups=()
+# EDITHOOK4
+depends=()
+makedepends=()
+optdepends=()
+provides=()
+conflicts=()
+replaces=()
+backup=()
+options=()
+install=
+changelog=
+# EDITHOOK5
+sources=(
+    https://github.com/plk/biber/archive/v2.7.tar.gz
+    http://sourceforge.net/projects/biblatex/files/biblatex-3.7/biblatex-3.7.tds.tgz
+)
+# EDITHOOK6
+noextract=()
+md5sums=() #generate with 'makepkg -g'
+# EDITHOOK7
+

@@ -12,3 +12,27 @@ pkgrel=1
 pkgdesc=""
 arch=('x86_64')
 # EDITHOOK3
+url=""
+license=('GPL')
+groups=()
+# EDITHOOK4
+depends=()
+makedepends=()
+optdepends=()
+provides=()
+conflicts=()
+replaces=()
+backup=()
+options=()
+install=
+changelog=
+# EDITHOOK5
+sources=(
+    http://anduin.linuxfromscratch.org/BLFS/OpenJDK/OpenJDK-1.8.0.141/OpenJDK-1.8.0.141-i686-bin.tar.xz
+    http://anduin.linuxfromscratch.org/BLFS/OpenJDK/OpenJDK-1.8.0.141/OpenJDK-1.8.0.141-x86_64-bin.tar.xz
+)
+# EDITHOOK6
+noextract=()
+md5sums=() #generate with 'makepkg -g'
+# EDITHOOK7
+

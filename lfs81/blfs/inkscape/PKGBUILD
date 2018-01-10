@@ -12,3 +12,27 @@ pkgrel=1
 pkgdesc=""
 arch=('x86_64')
 # EDITHOOK3
+url=""
+license=('GPL')
+groups=()
+# EDITHOOK4
+depends=()
+makedepends=()
+optdepends=()
+provides=()
+conflicts=()
+replaces=()
+backup=()
+options=()
+install=
+changelog=
+# EDITHOOK5
+sources=(
+    https://media.inkscape.org/dl/resources/file/inkscape-0.92.2.tar.bz2
+inkscape-0.92.2-use_versioned_ImageMagick6-1.patch
+)
+# EDITHOOK6
+noextract=()
+md5sums=() #generate with 'makepkg -g'
+# EDITHOOK7
+

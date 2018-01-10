@@ -12,3 +12,29 @@ pkgrel=1
 pkgdesc=""
 arch=('x86_64')
 # EDITHOOK3
+url=""
+license=('GPL')
+groups=()
+# EDITHOOK4
+depends=()
+makedepends=()
+optdepends=()
+provides=()
+conflicts=()
+replaces=()
+backup=()
+options=()
+install=
+changelog=
+# EDITHOOK5
+sources=(
+    http://llvm.org/releases/4.0.1/llvm-4.0.1.src.tar.xz
+    http://llvm.org/releases/4.0.1/cfe-4.0.1.src.tar.xz
+    http://llvm.org/releases/4.0.1/compiler-rt-4.0.1.src.tar.xz
+compiler-rt-4.0.1-glibc-2.26-1.patch
+)
+# EDITHOOK6
+noextract=()
+md5sums=() #generate with 'makepkg -g'
+# EDITHOOK7
+
