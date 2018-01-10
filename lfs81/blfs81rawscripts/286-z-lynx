@@ -1,0 +1,100 @@
+#!/bin/bash
+set -e
+
+PKG_DIR=lynx
+SRC_DIR=${SRC_ARCHIVE}${SRC_SUBDIRS:+/${PKG_DIR}}
+BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
+mkdir -p $SRC_DIR
+mkdir -p $BUILD_DIR
+
+cd $SRC_DIR     ###### Getting source
+
+PACKAGE=lynx2.8.8rel.2.tar.bz2
+if [[ ! -f $PACKAGE ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE $PACKAGE
+  else
+    wget -T 30 -t 5 http://invisible-mirror.net/archives/lynx/tarballs/lynx2.8.8rel.2.tar.bz2 ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/l/$PACKAGE
+  fi
+fi
+echo "b231c2aa34dfe7ca25681ef4e55ee7e8  $PACKAGE" | md5sum -c -
+
+PATCH=lynx-2.8.8rel.2-openssl_1.1.0-1.patch
+if [[ ! -f $PATCH ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PATCH ]] ; then
+    cp $SRC_ARCHIVE/$PATCH $PATCH
+  else
+    wget -T 30 -t 5 http://www.linuxfromscratch.org/patches/blfs/8.1/lynx-2.8.8rel.2-openssl_1.1.0-1.patch ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/l/$PATCH
+  fi
+fi
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PATCH $BUILD_DIR
+
+
+cd $BUILD_DIR        ##### Unpacking source
+find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
+case $PACKAGE in
+  *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
+     tar -xvf $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR=`grep '[^./]\+' unpacked | head -n1 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.tar.lz)
+     bsdtar -xvf $SRC_DIR/$PACKAGE 2> unpacked
+     UNPACKDIR=`head -n1 unpacked | cut  -d" " -f2 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.zip)
+     zipinfo -1 $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR="$(sed 's@/.*@@' unpacked | uniq )"
+     if test $(wc -w <<< $UNPACKDIR) -eq 1; then
+       unzip $SRC_DIR/$PACKAGE
+     else
+       UNPACKDIR=${PACKAGE%.zip}
+       unzip -d $UNPACKDIR $SRC_DIR/$PACKAGE
+     fi
+     ;;
+  *)
+     UNPACKDIR=$PKG_DIR-build
+     mkdir $UNPACKDIR
+     cp $SRC_DIR/$PACKAGE $UNPACKDIR
+     cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
+     ;;
+esac
+#######  Building package
+cd $UNPACKDIR
+
+patch -p1 -i ../lynx-2.8.8rel.2-openssl_1.1.0-1.patch
+./configure --prefix=/usr          \
+            --sysconfdir=/etc/lynx \
+            --datadir=/usr/share/doc/lynx-2.8.8rel.2 \
+            --with-zlib            \
+            --with-bzlib           \
+            --with-ssl             \
+            --with-screen=ncursesw \
+            --enable-locale-charset &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install-full &&
+chgrp -v -R root /usr/share/doc/lynx-2.8.8rel.2/lynx_doc
+ROOT_EOF
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+sed -e '/#LOCALE/     a LOCALE_CHARSET:TRUE'     \\
+    -i /etc/lynx/lynx.cfg
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+sed -e '/#DEFAULT_ED/ a DEFAULT_EDITOR:vi'       \\
+    -i /etc/lynx/lynx.cfg
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+sed -e '/#PERSIST/    a PERSISTENT_COOKIES:TRUE' \\
+    -i /etc/lynx/lynx.cfg
+ROOT_EOF
+
+cd $BUILD_DIR
+[[ -n "$KEEP_FILES" ]] || sudo rm -rf $UNPACKDIR unpacked
+
+exit

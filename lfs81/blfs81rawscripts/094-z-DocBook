@@ -1,0 +1,163 @@
+#!/bin/bash
+set -e
+
+PKG_DIR=DocBook
+SRC_DIR=${SRC_ARCHIVE}${SRC_SUBDIRS:+/${PKG_DIR}}
+BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
+mkdir -p $SRC_DIR
+mkdir -p $BUILD_DIR
+
+cd $SRC_DIR     ###### Getting source
+
+PACKAGE=docbook-xml-4.5.zip
+if [[ ! -f $PACKAGE ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE $PACKAGE
+  else
+    wget -T 30 -t 5 http://www.docbook.org/xml/4.5/docbook-xml-4.5.zip ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/d/$PACKAGE
+  fi
+fi
+echo "03083e288e87a7e829e437358da7ef9e  $PACKAGE" | md5sum -c -
+
+
+cd $BUILD_DIR        ##### Unpacking source
+find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
+case $PACKAGE in
+  *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
+     tar -xvf $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR=`grep '[^./]\+' unpacked | head -n1 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.tar.lz)
+     bsdtar -xvf $SRC_DIR/$PACKAGE 2> unpacked
+     UNPACKDIR=`head -n1 unpacked | cut  -d" " -f2 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.zip)
+     zipinfo -1 $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR="$(sed 's@/.*@@' unpacked | uniq )"
+     if test $(wc -w <<< $UNPACKDIR) -eq 1; then
+       unzip $SRC_DIR/$PACKAGE
+     else
+       UNPACKDIR=${PACKAGE%.zip}
+       unzip -d $UNPACKDIR $SRC_DIR/$PACKAGE
+     fi
+     ;;
+  *)
+     UNPACKDIR=$PKG_DIR-build
+     mkdir $UNPACKDIR
+     cp $SRC_DIR/$PACKAGE $UNPACKDIR
+     cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
+     ;;
+esac
+#######  Building package
+cd $UNPACKDIR
+
+sudo -E sh << ROOT_EOF
+install -v -d -m755 /usr/share/xml/docbook/xml-dtd-4.5 &&
+install -v -d -m755 /etc/xml &&
+chown -R root:root . &&
+cp -v -af docbook.cat *.dtd ent/ *.mod \\
+    /usr/share/xml/docbook/xml-dtd-4.5
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+if [ ! -e /etc/xml/docbook ]; then
+    xmlcatalog --noout --create /etc/xml/docbook
+fi &&
+xmlcatalog --noout --add "public" \\
+    "-//OASIS//DTD DocBook XML V4.5//EN" \\
+    "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" \\
+    /etc/xml/docbook &&
+xmlcatalog --noout --add "public" \\
+    "-//OASIS//DTD DocBook XML CALS Table Model V4.5//EN" \\
+    "file:///usr/share/xml/docbook/xml-dtd-4.5/calstblx.dtd" \\
+    /etc/xml/docbook &&
+xmlcatalog --noout --add "public" \\
+    "-//OASIS//DTD XML Exchange Table Model 19990315//EN" \\
+    "file:///usr/share/xml/docbook/xml-dtd-4.5/soextblx.dtd" \\
+    /etc/xml/docbook &&
+xmlcatalog --noout --add "public" \\
+    "-//OASIS//ELEMENTS DocBook XML Information Pool V4.5//EN" \\
+    "file:///usr/share/xml/docbook/xml-dtd-4.5/dbpoolx.mod" \\
+    /etc/xml/docbook &&
+xmlcatalog --noout --add "public" \\
+    "-//OASIS//ELEMENTS DocBook XML Document Hierarchy V4.5//EN" \\
+    "file:///usr/share/xml/docbook/xml-dtd-4.5/dbhierx.mod" \\
+    /etc/xml/docbook &&
+xmlcatalog --noout --add "public" \\
+    "-//OASIS//ELEMENTS DocBook XML HTML Tables V4.5//EN" \\
+    "file:///usr/share/xml/docbook/xml-dtd-4.5/htmltblx.mod" \\
+    /etc/xml/docbook &&
+xmlcatalog --noout --add "public" \\
+    "-//OASIS//ENTITIES DocBook XML Notations V4.5//EN" \\
+    "file:///usr/share/xml/docbook/xml-dtd-4.5/dbnotnx.mod" \\
+    /etc/xml/docbook &&
+xmlcatalog --noout --add "public" \\
+    "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" \\
+    "file:///usr/share/xml/docbook/xml-dtd-4.5/dbcentx.mod" \\
+    /etc/xml/docbook &&
+xmlcatalog --noout --add "public" \\
+    "-//OASIS//ENTITIES DocBook XML Additional General Entities V4.5//EN" \\
+    "file:///usr/share/xml/docbook/xml-dtd-4.5/dbgenent.mod" \\
+    /etc/xml/docbook &&
+xmlcatalog --noout --add "rewriteSystem" \\
+    "http://www.oasis-open.org/docbook/xml/4.5" \\
+    "file:///usr/share/xml/docbook/xml-dtd-4.5" \\
+    /etc/xml/docbook &&
+xmlcatalog --noout --add "rewriteURI" \\
+    "http://www.oasis-open.org/docbook/xml/4.5" \\
+    "file:///usr/share/xml/docbook/xml-dtd-4.5" \\
+    /etc/xml/docbook
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+if [ ! -e /etc/xml/catalog ]; then
+    xmlcatalog --noout --create /etc/xml/catalog
+fi &&
+xmlcatalog --noout --add "delegatePublic" \\
+    "-//OASIS//ENTITIES DocBook XML" \\
+    "file:///etc/xml/docbook" \\
+    /etc/xml/catalog &&
+xmlcatalog --noout --add "delegatePublic" \\
+    "-//OASIS//DTD DocBook XML" \\
+    "file:///etc/xml/docbook" \\
+    /etc/xml/catalog &&
+xmlcatalog --noout --add "delegateSystem" \\
+    "http://www.oasis-open.org/docbook/" \\
+    "file:///etc/xml/docbook" \\
+    /etc/xml/catalog &&
+xmlcatalog --noout --add "delegateURI" \\
+    "http://www.oasis-open.org/docbook/" \\
+    "file:///etc/xml/docbook" \\
+    /etc/xml/catalog
+ROOT_EOF
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+for DTDVERSION in 4.1.2 4.2 4.3 4.4
+do
+  xmlcatalog --noout --add "public" \\
+    "-//OASIS//DTD DocBook XML V\$DTDVERSION//EN" \\
+    "http://www.oasis-open.org/docbook/xml/\$DTDVERSION/docbookx.dtd" \\
+    /etc/xml/docbook
+  xmlcatalog --noout --add "rewriteSystem" \\
+    "http://www.oasis-open.org/docbook/xml/\$DTDVERSION" \\
+    "file:///usr/share/xml/docbook/xml-dtd-4.5" \\
+    /etc/xml/docbook
+  xmlcatalog --noout --add "rewriteURI" \\
+    "http://www.oasis-open.org/docbook/xml/\$DTDVERSION" \\
+    "file:///usr/share/xml/docbook/xml-dtd-4.5" \\
+    /etc/xml/docbook
+  xmlcatalog --noout --add "delegateSystem" \\
+    "http://www.oasis-open.org/docbook/xml/\$DTDVERSION/" \\
+    "file:///etc/xml/docbook" \\
+    /etc/xml/catalog
+  xmlcatalog --noout --add "delegateURI" \\
+    "http://www.oasis-open.org/docbook/xml/\$DTDVERSION/" \\
+    "file:///etc/xml/docbook" \\
+    /etc/xml/catalog
+done
+ROOT_EOF
+
+cd $BUILD_DIR
+[[ -n "$KEEP_FILES" ]] || sudo rm -rf $UNPACKDIR unpacked
+
+exit

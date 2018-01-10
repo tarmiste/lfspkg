@@ -1,0 +1,122 @@
+#!/bin/bash
+set -e
+
+PKG_DIR=lua
+SRC_DIR=${SRC_ARCHIVE}${SRC_SUBDIRS:+/${PKG_DIR}}
+BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
+mkdir -p $SRC_DIR
+mkdir -p $BUILD_DIR
+
+cd $SRC_DIR     ###### Getting source
+
+PACKAGE=lua-5.3.4.tar.gz
+if [[ ! -f $PACKAGE ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE $PACKAGE
+  else
+    wget -T 30 -t 5 http://www.lua.org/ftp/lua-5.3.4.tar.gz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/l/$PACKAGE
+  fi
+fi
+echo "53a9c68bcc0eda58bdc2095ad5cdfc63  $PACKAGE" | md5sum -c -
+
+PATCH=lua-5.3.4-shared_library-1.patch
+if [[ ! -f $PATCH ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PATCH ]] ; then
+    cp $SRC_ARCHIVE/$PATCH $PATCH
+  else
+    wget -T 30 -t 5 http://www.linuxfromscratch.org/patches/blfs/8.1/lua-5.3.4-shared_library-1.patch ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/l/$PATCH
+  fi
+fi
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PATCH $BUILD_DIR
+
+PACKAGE1=lua-5.3.4-tests.tar.gz
+if [[ ! -f $PACKAGE1 ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PACKAGE1 ]] ; then
+    cp $SRC_ARCHIVE/$PACKAGE1 $PACKAGE1
+  else
+    wget -T 30 -t 5 http://www.lua.org/tests/lua-5.3.4-tests.tar.gz ||
+    wget -T 30 -t 5 ${FTP_SERVER}svn/l/$PACKAGE1
+  fi
+fi
+echo "b14fe3748c1cb2d74e3acd1943629ba3  $PACKAGE1" | md5sum -c -
+[[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PACKAGE1 $BUILD_DIR
+
+
+cd $BUILD_DIR        ##### Unpacking source
+find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
+case $PACKAGE in
+  *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
+     tar -xvf $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR=`grep '[^./]\+' unpacked | head -n1 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.tar.lz)
+     bsdtar -xvf $SRC_DIR/$PACKAGE 2> unpacked
+     UNPACKDIR=`head -n1 unpacked | cut  -d" " -f2 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.zip)
+     zipinfo -1 $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR="$(sed 's@/.*@@' unpacked | uniq )"
+     if test $(wc -w <<< $UNPACKDIR) -eq 1; then
+       unzip $SRC_DIR/$PACKAGE
+     else
+       UNPACKDIR=${PACKAGE%.zip}
+       unzip -d $UNPACKDIR $SRC_DIR/$PACKAGE
+     fi
+     ;;
+  *)
+     UNPACKDIR=$PKG_DIR-build
+     mkdir $UNPACKDIR
+     cp $SRC_DIR/$PACKAGE $UNPACKDIR
+     cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
+     ;;
+esac
+#######  Building package
+cd $UNPACKDIR
+
+cat > lua.pc << "EOF"
+V=5.3
+R=5.3.4
+
+prefix=/usr
+INSTALL_BIN=${prefix}/bin
+INSTALL_INC=${prefix}/include
+INSTALL_LIB=${prefix}/lib
+INSTALL_MAN=${prefix}/share/man/man1
+INSTALL_LMOD=${prefix}/share/lua/${V}
+INSTALL_CMOD=${prefix}/lib/lua/${V}
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Lua
+Description: An Extensible Extension Language
+Version: ${R}
+Requires:
+Libs: -L${libdir} -llua -lm -ldl
+Cflags: -I${includedir}
+EOF
+patch -Np1 -i ../lua-5.3.4-shared_library-1.patch &&
+sed -i '/#define LUA_ROOT/s:/usr/local/:/usr/:' src/luaconf.h &&
+
+make MYCFLAGS="-DLUA_COMPAT_5_2 -DLUA_COMPAT_5_1" linux
+#make -k test || true
+sudo -E sh << ROOT_EOF
+make -j1 INSTALL_TOP=/usr                \\
+     INSTALL_DATA="cp -d"            \\
+     INSTALL_MAN=/usr/share/man/man1 \\
+     TO_LIB="liblua.so liblua.so.5.3 liblua.so.5.3.4" \\
+     install &&
+
+mkdir -pv                      /usr/share/doc/lua-5.3.4 &&
+cp -v doc/*.{html,css,gif,png} /usr/share/doc/lua-5.3.4 &&
+
+install -v -m644 -D lua.pc /usr/lib/pkgconfig/lua.pc
+ROOT_EOF
+sudo /sbin/ldconfig
+
+cd $BUILD_DIR
+[[ -n "$KEEP_FILES" ]] || sudo rm -rf $UNPACKDIR unpacked
+
+exit
