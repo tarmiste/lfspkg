@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/J/JO/JOSEPHW/XML-Writer-0.625.tar.gz
 )
 # EDITHOOK6

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://archive.mozilla.org/pub/seamonkey/releases/2.48/source/seamonkey-2.48.source.tar.xz
 )
 # EDITHOOK6

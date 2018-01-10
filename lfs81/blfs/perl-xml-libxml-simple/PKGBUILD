@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/G/GR/GRANTM/XML-LibXML-Simple-0.97.tar.gz
 )
 # EDITHOOK6

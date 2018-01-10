@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://files.pythonhosted.org/packages/source/M/Mako/Mako-1.0.4.tar.gz
 )
 # EDITHOOK6

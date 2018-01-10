@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/lxde/lxsession-0.5.3.tar.xz
 )
 # EDITHOOK6

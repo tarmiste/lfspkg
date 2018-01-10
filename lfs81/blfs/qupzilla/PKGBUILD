@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/QupZilla/qupzilla/releases/download/v2.1.2/QupZilla-2.1.2.tar.xz
 qupzilla-2.1.2-openssl1.1-1.patch
 )

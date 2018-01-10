@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://dbus.freedesktop.org/releases/dbus-glib/dbus-glib-0.108.tar.gz
 )
 # EDITHOOK6

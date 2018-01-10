@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://archive.mozilla.org/pub/opus/opus-1.2.1.tar.gz
 )
 # EDITHOOK6

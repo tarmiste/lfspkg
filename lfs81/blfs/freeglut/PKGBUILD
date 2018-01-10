@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/freeglut/freeglut-3.0.0.tar.gz
 )
 # EDITHOOK6

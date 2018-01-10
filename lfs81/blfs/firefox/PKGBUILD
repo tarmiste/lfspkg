@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://archive.mozilla.org/pub/firefox/releases/55.0.3/source/firefox-55.0.3.source.tar.xz
 firefox-55.0.3-system_graphite2_harfbuzz-1.patch
 )

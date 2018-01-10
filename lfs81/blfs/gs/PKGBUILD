@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs921/ghostscript-9.21.tar.gz
     https://downloads.sourceforge.net/gs-fonts/ghostscript-fonts-std-8.11.tar.gz
     https://downloads.sourceforge.net/gs-fonts/gnu-gs-fonts-other-6.0.tar.gz

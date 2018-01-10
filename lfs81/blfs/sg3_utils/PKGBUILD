@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://sg.danny.cz/sg/p/sg3_utils-1.42.tar.xz
 )
 # EDITHOOK6

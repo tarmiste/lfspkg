@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://ftp.gnu.org/gnu/ed/ed-1.14.2.tar.lz
 )
 # EDITHOOK6

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://user-dirs.freedesktop.org/releases/xdg-user-dirs-0.16.tar.gz
 )
 # EDITHOOK6

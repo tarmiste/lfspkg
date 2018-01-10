@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://download.gimp.org/pub/gegl/0.3/gegl-0.3.20.tar.bz2
 )
 # EDITHOOK6

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://www.mega-nerd.com/libsndfile/files/libsndfile-1.0.28.tar.gz
 )
 # EDITHOOK6

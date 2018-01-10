@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://upower.freedesktop.org/releases/upower-0.99.5.tar.xz
 )
 # EDITHOOK6

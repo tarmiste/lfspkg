@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://archive.xfce.org/src/xfce/thunar/1.6/Thunar-1.6.12.tar.bz2
 )
 # EDITHOOK6

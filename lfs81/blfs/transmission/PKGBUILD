@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://transmission.cachefly.net/transmission-2.92.tar.xz
 transmission-2.92-openssl-1.1.0-1.patch
 )

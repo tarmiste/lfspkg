@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://www.abisource.com/downloads/wv/1.2.9/wv-1.2.9.tar.gz
 )
 # EDITHOOK6

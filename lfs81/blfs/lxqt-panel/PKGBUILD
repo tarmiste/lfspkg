@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/lxde/lxqt-panel/releases/download/0.11.1/lxqt-panel-0.11.1.tar.xz
 )
 # EDITHOOK6

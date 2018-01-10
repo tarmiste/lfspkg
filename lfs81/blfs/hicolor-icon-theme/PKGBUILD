@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://icon-theme.freedesktop.org/releases/hicolor-icon-theme-0.15.tar.xz
 )
 # EDITHOOK6

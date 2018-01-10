@@ -27,10 +27,10 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/nfs/nfs-utils-2.1.1.tar.bz2
-    $URL
-    $URL
+    http://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20170731.tar.xz
+    http://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20170731.tar.xz
 )
 # EDITHOOK6
 noextract=()

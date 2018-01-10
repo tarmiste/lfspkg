@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.gnupg.org/ftp/gcrypt/libassuan/libassuan-2.4.3.tar.bz2
 )
 # EDITHOOK6

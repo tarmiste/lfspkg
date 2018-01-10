@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://download.librdf.org/source/raptor2-2.0.15.tar.gz
 )
 # EDITHOOK6

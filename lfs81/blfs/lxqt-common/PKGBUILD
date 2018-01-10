@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/lxde/lxqt-common-deprecated--do-not-use-anymore-/releases/download/0.11.2/lxqt-common-0.11.2.tar.xz
 )
 # EDITHOOK6

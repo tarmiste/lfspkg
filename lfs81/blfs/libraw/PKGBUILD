@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://www.libraw.org/data/LibRaw-0.18.2.tar.gz
 )
 # EDITHOOK6

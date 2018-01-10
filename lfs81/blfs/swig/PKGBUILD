@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/swig/swig-3.0.12.tar.gz
 )
 # EDITHOOK6

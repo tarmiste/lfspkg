@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://archive.apache.org/dist/apr/apr-util-1.6.0.tar.bz2
 )
 # EDITHOOK6

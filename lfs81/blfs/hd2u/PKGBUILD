@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://hany.sk/~hany/_data/hd2u/hd2u-1.0.3.tgz
 )
 # EDITHOOK6

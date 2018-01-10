@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.x.org/pub/individual/app/xauth-1.0.10.tar.bz2
 )
 # EDITHOOK6

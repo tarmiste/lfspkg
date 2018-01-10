@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://get.videolan.org/libdvdnav/5.0.3/libdvdnav-5.0.3.tar.bz2
 )
 # EDITHOOK6

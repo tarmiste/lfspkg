@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.26.tar.gz
 )
 # EDITHOOK6

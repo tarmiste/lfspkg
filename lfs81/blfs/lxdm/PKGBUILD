@@ -27,9 +27,9 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/lxdm/lxdm-0.5.3.tar.xz
-    $URL
+    http://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20170731.tar.xz
 )
 # EDITHOOK6
 noextract=()

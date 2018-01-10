@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/mad/libmad-0.15.1b.tar.gz
 libmad-0.15.1b-fixes-1.patch
 )

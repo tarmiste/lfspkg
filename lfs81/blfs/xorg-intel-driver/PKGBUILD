@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://anduin.linuxfromscratch.org/BLFS/xf86-video-intel/xf86-video-intel-20170826.tar.xz
 )
 # EDITHOOK6

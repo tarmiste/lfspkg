@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://tadas.dailyda.com/software/obex-data-server-0.4.6.tar.gz
 obex-data-server-0.4.6-build-fixes-1.patch
 )

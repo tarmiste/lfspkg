@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/V/VP/VPIT/autovivification-0.17.tar.gz
 )
 # EDITHOOK6

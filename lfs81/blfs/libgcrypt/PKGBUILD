@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.8.0.tar.bz2
 )
 # EDITHOOK6

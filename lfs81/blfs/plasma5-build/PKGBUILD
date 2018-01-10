@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
 wget -r -nH -nd -A '*.xz' -np $url
 )
 # EDITHOOK6

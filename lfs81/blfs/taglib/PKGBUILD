@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://taglib.github.io/releases/taglib-1.11.1.tar.gz
 )
 # EDITHOOK6

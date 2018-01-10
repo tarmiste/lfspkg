@@ -27,9 +27,9 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://roy.marples.name/downloads/dhcpcd/dhcpcd-6.11.5.tar.xz
-    $URL
+    http://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20170731.tar.xz
 )
 # EDITHOOK6
 noextract=()

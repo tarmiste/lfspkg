@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://releases.pagure.org/newt/newt-0.52.20.tar.gz
 )
 # EDITHOOK6

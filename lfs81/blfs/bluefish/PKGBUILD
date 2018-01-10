@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://www.bennewitz.com/bluefish/stable/source/bluefish-2.2.10.tar.bz2
 )
 # EDITHOOK6

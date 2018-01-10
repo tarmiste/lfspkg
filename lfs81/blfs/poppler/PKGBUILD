@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://poppler.freedesktop.org/poppler-0.57.0.tar.xz
     https://poppler.freedesktop.org/poppler-data-0.4.8.tar.gz
 )

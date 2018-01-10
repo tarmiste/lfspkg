@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://ftp.gnome.org/pub/gnome/sources/yelp/3.22/yelp-3.22.0.tar.xz
 )
 # EDITHOOK6

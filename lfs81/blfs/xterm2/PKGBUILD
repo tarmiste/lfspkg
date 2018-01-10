@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://invisible-mirror.net/archives/xterm/xterm-330.tgz
 )
 # EDITHOOK6

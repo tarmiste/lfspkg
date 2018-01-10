@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.xiph.org/releases/vorbis/vorbis-tools-1.4.0.tar.gz
 )
 # EDITHOOK6

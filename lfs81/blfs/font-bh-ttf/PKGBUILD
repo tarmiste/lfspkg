@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.x.org/pub/individual/font/font-bh-ttf-1.0.3.tar.bz2
 )
 # EDITHOOK6

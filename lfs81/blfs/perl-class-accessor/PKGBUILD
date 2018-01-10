@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/K/KA/KASEI/Class-Accessor-0.34.tar.gz
 )
 # EDITHOOK6

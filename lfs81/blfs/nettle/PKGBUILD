@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://ftp.gnu.org/gnu/nettle/nettle-3.3.tar.gz
 )
 # EDITHOOK6

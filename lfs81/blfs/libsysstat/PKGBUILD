@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/lxde/libsysstat/releases/download/0.3.3/libsysstat-0.3.3.tar.xz
 )
 # EDITHOOK6

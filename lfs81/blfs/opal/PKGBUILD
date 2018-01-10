@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://ftp.gnome.org/pub/gnome/sources/opal/3.10/opal-3.10.10.tar.xz
 opal-3.10.10-ffmpeg2-1.patch
 )

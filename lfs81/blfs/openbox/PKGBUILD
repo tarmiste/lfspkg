@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://openbox.org/dist/openbox/openbox-3.6.1.tar.gz
 )
 # EDITHOOK6

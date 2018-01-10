@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/P/PI/PIJLL/DateTime-Calendar-Julian-0.04.tar.gz
 )
 # EDITHOOK6

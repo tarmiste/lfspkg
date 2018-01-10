@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/htacg/tidy-html5/releases/download/5.4.0/tidy-html5-5.4.0.tar.gz
 )
 # EDITHOOK6

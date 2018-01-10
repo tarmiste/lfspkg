@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://media.inkscape.org/dl/resources/file/inkscape-0.92.2.tar.bz2
 inkscape-0.92.2-use_versioned_ImageMagick6-1.patch
 )

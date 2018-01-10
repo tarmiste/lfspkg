@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://s3.amazonaws.com/json-c_releases/releases/json-c-0.12.1.tar.gz
 )
 # EDITHOOK6

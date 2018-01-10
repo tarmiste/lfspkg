@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://sourceware.org/ftp/libffi/libffi-3.2.1.tar.gz
 )
 # EDITHOOK6

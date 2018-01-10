@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://www.libarchive.org/downloads/libarchive-3.3.2.tar.gz
 )
 # EDITHOOK6

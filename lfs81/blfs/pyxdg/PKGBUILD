@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://people.freedesktop.org/~takluyver/pyxdg-0.25.tar.gz
 )
 # EDITHOOK6

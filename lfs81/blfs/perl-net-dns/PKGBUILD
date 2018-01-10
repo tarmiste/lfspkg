@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/N/NL/NLNETLABS/Net-DNS-1.12.tar.gz
 )
 # EDITHOOK6

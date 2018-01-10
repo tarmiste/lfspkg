@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://releases.pagure.org/xmlto/xmlto-0.0.28.tar.bz2
 )
 # EDITHOOK6

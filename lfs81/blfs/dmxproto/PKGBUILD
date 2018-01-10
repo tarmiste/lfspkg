@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.x.org/pub/individual/proto/dmxproto-2.3.1.tar.bz2
 )
 # EDITHOOK6

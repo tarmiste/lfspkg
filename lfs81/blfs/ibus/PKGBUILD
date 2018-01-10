@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/ibus/ibus/releases/download/1.5.16/ibus-1.5.16.tar.gz
 )
 # EDITHOOK6

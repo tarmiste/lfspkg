@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/TigerVNC/tigervnc/archive/v1.8.0/tigervnc-1.8.0.tar.gz
     https://www.x.org/pub/individual/xserver/xorg-server-1.19.3.tar.bz2
 )

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.samba.org/ftp/linux-cifs/cifs-utils/cifs-utils-6.7.tar.bz2
 )
 # EDITHOOK6

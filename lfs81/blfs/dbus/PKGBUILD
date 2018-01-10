@@ -27,9 +27,9 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://dbus.freedesktop.org/releases/dbus/dbus-1.10.22.tar.gz
-    $URL
+    http://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20170731.tar.xz
 )
 # EDITHOOK6
 noextract=()

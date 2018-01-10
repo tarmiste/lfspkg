@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/pcre/pcre2-10.30.tar.bz2
 )
 # EDITHOOK6

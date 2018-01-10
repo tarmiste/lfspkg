@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.samba.org/ftp/samba/stable/samba-4.6.7.tar.gz
 )
 # EDITHOOK6

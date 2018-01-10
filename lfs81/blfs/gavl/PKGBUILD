@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/gmerlin/gavl-1.4.0.tar.gz
 )
 # EDITHOOK6

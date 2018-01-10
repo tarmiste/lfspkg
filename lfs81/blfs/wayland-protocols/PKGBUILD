@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://wayland.freedesktop.org/releases/wayland-protocols-1.10.tar.xz
 )
 # EDITHOOK6

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://wayland.freedesktop.org/releases/wayland-1.14.0.tar.xz
 )
 # EDITHOOK6

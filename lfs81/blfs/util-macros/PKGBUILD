@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.x.org/pub/individual/util/util-macros-1.19.1.tar.bz2
 )
 # EDITHOOK6

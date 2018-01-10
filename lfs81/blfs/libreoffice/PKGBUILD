@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://download.documentfoundation.org/libreoffice/src/5.4.0/libreoffice-5.4.0.3.tar.xz
     http://download.documentfoundation.org/libreoffice/src/5.4.0/libreoffice-dictionaries-5.4.0.3.tar.xz
     http://download.documentfoundation.org/libreoffice/src/5.4.0/libreoffice-help-5.4.0.3.tar.xz

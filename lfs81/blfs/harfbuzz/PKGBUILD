@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.freedesktop.org/software/harfbuzz/release/harfbuzz-1.4.8.tar.bz2
 )
 # EDITHOOK6

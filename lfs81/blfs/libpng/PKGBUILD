@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/libpng/libpng-1.6.31.tar.xz
 libpng-1.6.31-apng.patch.gz
 )

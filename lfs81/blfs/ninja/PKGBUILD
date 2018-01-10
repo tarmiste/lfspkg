@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/ninja-build/ninja/archive/v1.7.2/ninja-1.7.2.tar.gz
 )
 # EDITHOOK6

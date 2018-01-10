@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://bitbucket.org/multicoreware/x265/downloads/x265_2.5.tar.gz
 )
 # EDITHOOK6

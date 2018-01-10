@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://www.surina.net/soundtouch/soundtouch-2.0.0.tar.gz
 )
 # EDITHOOK6

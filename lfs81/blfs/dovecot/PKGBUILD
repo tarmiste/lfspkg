@@ -27,9 +27,9 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.dovecot.org/releases/2.2/dovecot-2.2.32.tar.gz
-    $URL
+    http://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20170731.tar.xz
 )
 # EDITHOOK6
 noextract=()

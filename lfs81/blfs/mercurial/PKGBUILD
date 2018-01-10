@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.mercurial-scm.org/release/mercurial-4.3.1.tar.gz
 )
 # EDITHOOK6

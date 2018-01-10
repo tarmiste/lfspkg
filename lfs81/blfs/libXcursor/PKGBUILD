@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.x.org/pub/individual/lib/libXcursor-1.1.14.tar.bz2
 )
 # EDITHOOK6

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/mpg123/mpg123-1.25.6.tar.bz2
 )
 # EDITHOOK6

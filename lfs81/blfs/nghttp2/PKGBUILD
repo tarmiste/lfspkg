@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/nghttp2/nghttp2/releases/download/v1.25.0/nghttp2-1.25.0.tar.xz
 )
 # EDITHOOK6

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.xiph.org/releases/cdparanoia/cdparanoia-III-10.2.src.tgz
 cdparanoia-III-10.2-gcc_fixes-1.patch
 )

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/cdrtools/cdrtools-3.02a07.tar.bz2
 )
 # EDITHOOK6

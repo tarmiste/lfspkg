@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://download.qemu-project.org/qemu-2.9.0.tar.bz2
 )
 # EDITHOOK6

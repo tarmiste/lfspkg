@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/docbook/docbook-dsssl-1.79.tar.bz2
     https://downloads.sourceforge.net/docbook/docbook-dsssl-doc-1.79.tar.bz2
 )

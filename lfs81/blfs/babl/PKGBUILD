@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://download.gimp.org/pub/babl/0.1/babl-0.1.30.tar.bz2
 )
 # EDITHOOK6

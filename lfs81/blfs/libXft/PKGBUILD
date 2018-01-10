@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.x.org/pub/individual/lib/libXft-2.3.2.tar.bz2
 )
 # EDITHOOK6

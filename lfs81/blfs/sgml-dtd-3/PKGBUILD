@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://www.docbook.org/sgml/3.1/docbk31.zip
 )
 # EDITHOOK6

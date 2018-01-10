@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/lxde/lxtask-0.1.8.tar.xz
 )
 # EDITHOOK6

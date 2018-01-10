@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://tug.ctan.org/support/xindy/base/xindy-2.5.1.tar.gz
 xindy-2.5.1-upstream_fixes-1.patch
 )

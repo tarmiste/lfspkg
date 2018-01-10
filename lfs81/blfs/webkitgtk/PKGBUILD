@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://webkitgtk.org/releases/webkitgtk-2.16.6.tar.xz
 )
 # EDITHOOK6

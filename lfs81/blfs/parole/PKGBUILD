@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://archive.xfce.org/src/apps/parole/0.8/parole-0.8.1.tar.bz2
 )
 # EDITHOOK6

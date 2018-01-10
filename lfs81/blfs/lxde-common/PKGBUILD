@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/lxde/lxde-common-0.99.2.tar.xz
 )
 # EDITHOOK6

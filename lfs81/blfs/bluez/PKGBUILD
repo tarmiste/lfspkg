@@ -27,9 +27,9 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.kernel.org/pub/linux/bluetooth/bluez-5.46.tar.xz
-    $URL
+    http://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20170731.tar.xz
 bluez-5.46-obexd_without_systemd-1.patch
 )
 # EDITHOOK6

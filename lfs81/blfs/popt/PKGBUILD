@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://rpm5.org/files/popt/popt-1.16.tar.gz
 )
 # EDITHOOK6

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/libfuse/sshfs/releases/download/sshfs-3.2.0/sshfs-3.2.0.tar.gz
 )
 # EDITHOOK6

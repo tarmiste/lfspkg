@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/paps/paps-0.6.8.tar.gz
 )
 # EDITHOOK6

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://gondor.apana.org.au/~herbert/dash/files/dash-0.5.9.1.tar.gz
 )
 # EDITHOOK6

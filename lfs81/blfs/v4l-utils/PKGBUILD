@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.linuxtv.org/downloads/v4l-utils/v4l-utils-1.12.5.tar.bz2
 )
 # EDITHOOK6

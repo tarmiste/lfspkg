@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/D/DR/DROLSKY/List-AllUtils-0.14.tar.gz
 )
 # EDITHOOK6

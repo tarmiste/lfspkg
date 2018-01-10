@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/R/RJ/RJBS/IPC-Run3-0.048.tar.gz
 )
 # EDITHOOK6

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/S/SH/SHLOMIF/Error-0.17025.tar.gz
 )
 # EDITHOOK6

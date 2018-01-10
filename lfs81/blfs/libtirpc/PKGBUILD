@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/libtirpc/libtirpc-1.0.2.tar.bz2
 )
 # EDITHOOK6

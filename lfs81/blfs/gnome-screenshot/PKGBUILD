@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://ftp.gnome.org/pub/gnome/sources/gnome-screenshot/3.22/gnome-screenshot-3.22.0.tar.xz
 )
 # EDITHOOK6

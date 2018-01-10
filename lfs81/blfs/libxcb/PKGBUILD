@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://xcb.freedesktop.org/dist/libxcb-1.12.tar.bz2
 libxcb-1.12-python3-1.patch
 )

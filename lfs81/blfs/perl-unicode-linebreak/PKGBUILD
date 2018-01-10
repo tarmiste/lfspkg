@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/N/NE/NEZUMI/Unicode-LineBreak-2017.004.tar.gz
 )
 # EDITHOOK6

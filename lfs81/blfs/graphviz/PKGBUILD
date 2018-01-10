@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://graphviz.org/pub/graphviz/stable/SOURCES/graphviz-2.40.1.tar.gz
 graphviz-2.40.1-qt5-1.patch
 )

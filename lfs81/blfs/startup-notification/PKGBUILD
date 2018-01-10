@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.freedesktop.org/software/startup-notification/releases/startup-notification-0.12.tar.gz
 )
 # EDITHOOK6

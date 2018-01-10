@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/A/AM/AMBS/Text-BibTeX-0.81.tar.gz
 )
 # EDITHOOK6

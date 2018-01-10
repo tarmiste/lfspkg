@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://download.kde.org/stable/frameworks/5.37/kidletime-5.37.0.tar.xz
 )
 # EDITHOOK6

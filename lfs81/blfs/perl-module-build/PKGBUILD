@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/L/LE/LEONT/Module-Build-0.4224.tar.gz
 )
 # EDITHOOK6

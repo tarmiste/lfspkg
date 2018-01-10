@@ -27,12 +27,12 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://www.zsh.org/pub/zsh-5.4.2.tar.gz
     http://www.zsh.org/pub/zsh-5.4.2-doc.tar.xz
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
+#md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 

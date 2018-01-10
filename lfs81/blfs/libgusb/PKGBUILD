@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://people.freedesktop.org/~hughsient/releases/libgusb-0.2.11.tar.xz
 )
 # EDITHOOK6

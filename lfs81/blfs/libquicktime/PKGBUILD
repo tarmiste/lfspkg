@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/libquicktime/libquicktime-1.2.4.tar.gz
 libquicktime-1.2.4-ffmpeg3-1.patch
 )

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://dl.hexchat.net/hexchat/hexchat-2.12.4-repack.tar.xz
 )
 # EDITHOOK6

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/shadow-maint/shadow/releases/download/4.5/shadow-4.5.tar.xz
 )
 # EDITHOOK6

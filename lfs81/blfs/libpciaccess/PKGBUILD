@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.x.org/pub/individual/lib/libpciaccess-0.13.5.tar.bz2
 )
 # EDITHOOK6

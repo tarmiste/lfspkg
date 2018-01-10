@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://0pointer.de/lennart/projects/libcanberra/libcanberra-0.30.tar.xz
 )
 # EDITHOOK6

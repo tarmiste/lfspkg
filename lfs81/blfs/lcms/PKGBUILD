@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/lcms/lcms-1.19.tar.gz
 lcms-1.19-cve_2013_4276-1.patch
 )

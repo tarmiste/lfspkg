@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/lcms/lcms2-2.8.tar.gz
 )
 # EDITHOOK6

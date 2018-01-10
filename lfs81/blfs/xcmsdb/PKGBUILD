@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.x.org/pub/individual/app/xcmsdb-1.0.5.tar.bz2
 )
 # EDITHOOK6

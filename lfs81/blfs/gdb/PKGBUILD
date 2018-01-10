@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://ftp.gnu.org/gnu/gdb/gdb-8.0.tar.xz
 )
 # EDITHOOK6

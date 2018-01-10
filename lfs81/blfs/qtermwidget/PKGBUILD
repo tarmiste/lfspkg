@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/lxde/qtermwidget/releases/download/0.7.1/qtermwidget-0.7.1.tar.xz
 )
 # EDITHOOK6

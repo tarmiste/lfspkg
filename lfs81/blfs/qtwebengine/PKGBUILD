@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://download.qt.io/archive/qt/5.9/5.9.1/submodules/qtwebengine-opensource-src-5.9.1.tar.xz
 )
 # EDITHOOK6

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.kernel.org/pub/software/scm/git/git-2.14.1.tar.xz
     https://www.kernel.org/pub/software/scm/git/git-manpages-2.14.1.tar.xz
     https://www.kernel.org/pub/software/scm/git/git-htmldocs-2.14.1.tar.xz

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://icedtea.wildebeest.org/download/source/icedtea-web-1.7.tar.gz
 )
 # EDITHOOK6

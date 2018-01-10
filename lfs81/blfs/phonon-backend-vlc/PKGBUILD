@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://download.kde.org/stable/phonon/phonon-backend-vlc/0.9.1/phonon-backend-vlc-0.9.1.tar.xz
 )
 # EDITHOOK6

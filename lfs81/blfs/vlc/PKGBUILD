@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://download.videolan.org/vlc/2.2.6/vlc-2.2.6.tar.xz
 vlc-2.2.6-ffmpeg3-1.patch
 )

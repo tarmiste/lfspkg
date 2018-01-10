@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.imagemagick.org/download/releases/ImageMagick-7.0.6-10.tar.xz
 )
 # EDITHOOK6

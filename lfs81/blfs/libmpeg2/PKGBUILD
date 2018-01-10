@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://libmpeg2.sourceforge.net/files/libmpeg2-0.5.1.tar.gz
 )
 # EDITHOOK6

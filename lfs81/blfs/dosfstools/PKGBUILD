@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/dosfstools/dosfstools/releases/download/v4.1/dosfstools-4.1.tar.xz
 )
 # EDITHOOK6

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://www.fftw.org/fftw-3.3.6-pl2.tar.gz
 )
 # EDITHOOK6

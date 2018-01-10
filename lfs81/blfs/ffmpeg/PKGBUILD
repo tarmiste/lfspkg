@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://ffmpeg.org/releases/ffmpeg-3.3.3.tar.xz
 )
 # EDITHOOK6

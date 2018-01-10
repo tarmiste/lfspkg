@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.x.org/pub/individual/lib/libXfont2-2.0.1.tar.bz2
 )
 # EDITHOOK6

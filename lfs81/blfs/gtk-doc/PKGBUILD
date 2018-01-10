@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://ftp.gnome.org/pub/gnome/sources/gtk-doc/1.26/gtk-doc-1.26.tar.xz
 )
 # EDITHOOK6

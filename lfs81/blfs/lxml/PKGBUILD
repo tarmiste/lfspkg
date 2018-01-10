@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://files.pythonhosted.org/packages/source/l/lxml/lxml-3.8.0.tar.gz
 )
 # EDITHOOK6

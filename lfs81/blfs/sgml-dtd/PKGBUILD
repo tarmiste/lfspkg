@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://www.docbook.org/sgml/4.5/docbook-4.5.zip
 )
 # EDITHOOK6

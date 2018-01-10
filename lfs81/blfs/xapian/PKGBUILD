@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://oligarchy.co.uk/xapian/1.4.4/xapian-core-1.4.4.tar.xz
 )
 # EDITHOOK6

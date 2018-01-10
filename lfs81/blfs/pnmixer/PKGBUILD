@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/downloads/nicklan/pnmixer/pnmixer-0.5.1.tar.gz
 )
 # EDITHOOK6

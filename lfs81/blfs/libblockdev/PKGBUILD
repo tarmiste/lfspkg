@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/storaged-project/libblockdev/archive/libblockdev-2.11-1.tar.gz
 )
 # EDITHOOK6

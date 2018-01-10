@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://ftp.stack.nl/pub/doxygen/doxygen-1.8.13.src.tar.gz
 )
 # EDITHOOK6

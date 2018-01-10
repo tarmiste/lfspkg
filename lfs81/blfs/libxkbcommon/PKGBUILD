@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://xkbcommon.org/download/libxkbcommon-0.7.2.tar.xz
 )
 # EDITHOOK6

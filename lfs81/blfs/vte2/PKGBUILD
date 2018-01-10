@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://ftp.gnome.org/pub/gnome/sources/vte/0.28/vte-0.28.2.tar.xz
 )
 # EDITHOOK6

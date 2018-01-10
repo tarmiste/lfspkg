@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://sqlite.org/2017/sqlite-autoconf-3200000.tar.gz
     https://sqlite.org/2017/sqlite-doc-3200000.zip
 )

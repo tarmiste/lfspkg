@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.x.org/pub/individual/app/xwud-1.0.4.tar.bz2
 )
 # EDITHOOK6

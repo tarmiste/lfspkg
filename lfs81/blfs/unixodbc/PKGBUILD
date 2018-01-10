@@ -27,10 +27,10 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
+    ftp://ftp.unixodbc.org/pub/unixODBC/unixODBC-2.3.4.tar.gz
 )
 # EDITHOOK6
 noextract=()
 md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
-

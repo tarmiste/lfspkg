@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://hal.freedesktop.org/releases/udisks-1.0.5.tar.gz
 )
 # EDITHOOK6

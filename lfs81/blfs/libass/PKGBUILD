@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/libass/libass/releases/download/0.13.7/libass-0.13.7.tar.xz
 )
 # EDITHOOK6

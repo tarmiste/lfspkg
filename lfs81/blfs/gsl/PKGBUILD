@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://ftp.gnu.org/gnu/gsl/gsl-2.4.tar.gz
 )
 # EDITHOOK6

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://nodejs.org/dist/v8.4.0/node-v8.4.0.tar.xz
 )
 # EDITHOOK6

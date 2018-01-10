@@ -27,7 +27,8 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
+    ftp://ftp.isc.org/isc/bind9/9.11.2/bind-9.11.2.tar.gz
 )
 # EDITHOOK6
 noextract=()

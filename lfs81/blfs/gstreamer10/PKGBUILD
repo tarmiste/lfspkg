@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.12.2.tar.xz
 )
 # EDITHOOK6

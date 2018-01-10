@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://www.libsdl.org/release/SDL-1.2.15.tar.gz
 )
 # EDITHOOK6

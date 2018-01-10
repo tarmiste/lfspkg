@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/lxde/lxrandr-0.3.1.tar.xz
 )
 # EDITHOOK6

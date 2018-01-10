@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://alioth.debian.org/frs/download.php/latestfile/813/chrpath-0.16.tar.gz
 )
 # EDITHOOK6

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/logrotate/logrotate/releases/download/3.11.0/logrotate-3.11.0.tar.xz
 )
 # EDITHOOK6

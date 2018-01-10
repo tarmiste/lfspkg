@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://files.pythonhosted.org/packages/source/f/funcsigs/funcsigs-1.0.2.tar.gz
 )
 # EDITHOOK6

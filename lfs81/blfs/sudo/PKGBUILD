@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://www.sudo.ws/dist/sudo-1.8.20p2.tar.gz
 )
 # EDITHOOK6

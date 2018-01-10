@@ -27,7 +27,8 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
+    ftp://ftp.freedesktop.org/pub/mesa/glu/glu-9.0.0.tar.bz2
 )
 # EDITHOOK6
 noextract=()

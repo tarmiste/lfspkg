@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://files.pythonhosted.org/packages/source/B/Beaker/Beaker-1.9.0.tar.gz
 )
 # EDITHOOK6

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://download.kde.org/stable/plasma/5.10.5/libkscreen-5.10.5.tar.xz
 )
 # EDITHOOK6

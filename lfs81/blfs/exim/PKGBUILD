@@ -27,10 +27,10 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://mirrors-usa.go-parts.com/eximftp/exim/exim4/exim-4.89.tar.xz
     http://exim.org/docs.html
-    $URL
+    http://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20170731.tar.xz
 exim-4.89-avoid_mem_clash-1.patch
 )
 # EDITHOOK6

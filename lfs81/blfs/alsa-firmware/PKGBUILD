@@ -27,7 +27,8 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
+    ftp://ftp.alsa-project.org/pub/firmware/alsa-firmware-1.0.29.tar.bz2
 )
 # EDITHOOK6
 noextract=()

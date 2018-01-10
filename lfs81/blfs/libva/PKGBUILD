@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/01org/libva/releases/download/1.8.3/libva-1.8.3.tar.bz2
     https://github.com/01org/intel-vaapi-driver/releases/download/1.8.3/intel-vaapi-driver-1.8.3.tar.bz2
 )

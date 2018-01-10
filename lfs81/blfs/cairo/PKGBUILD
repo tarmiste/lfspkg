@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cairographics.org/releases/cairo-1.14.10.tar.xz
 )
 # EDITHOOK6

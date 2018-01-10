@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://ftp.gnu.org/gnu/libtasn1/libtasn1-4.12.tar.gz
 )
 # EDITHOOK6

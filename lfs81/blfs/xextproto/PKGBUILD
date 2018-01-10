@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.x.org/pub/individual/proto/xextproto-7.3.0.tar.bz2
 )
 # EDITHOOK6

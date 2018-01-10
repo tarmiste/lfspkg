@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
 texlive-20170524-source-gcc7-1.patch
 texlive-20170524-source-upstream_fixes-2.patch
 texlive-20170524-texmf-upstream_fixes-1.patch

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://dri.freedesktop.org/libdrm/libdrm-2.4.82.tar.bz2
 )
 # EDITHOOK6

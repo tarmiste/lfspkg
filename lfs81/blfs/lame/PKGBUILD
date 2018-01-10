@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/lame/lame-3.99.5.tar.gz
 )
 # EDITHOOK6

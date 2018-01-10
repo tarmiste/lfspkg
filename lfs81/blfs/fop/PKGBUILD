@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://archive.apache.org/dist/xmlgraphics/fop/source/fop-2.2-src.tar.gz
     https://downloads.sourceforge.net/offo/2.2/offo-hyphenation.zip
     http://download.java.net/media/jai/builds/release/1_1_3/jai-1_1_3-lib-linux-i586.tar.gz

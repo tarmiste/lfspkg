@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/thkukuk/rpcsvc-proto/archive/rpcsvc-proto-1.2.tar.gz
 )
 # EDITHOOK6

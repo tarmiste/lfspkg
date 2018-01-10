@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cairographics.org/releases/cairomm-1.12.2.tar.gz
 )
 # EDITHOOK6

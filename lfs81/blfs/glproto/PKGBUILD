@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.x.org/pub/individual/proto/glproto-1.4.17.tar.bz2
 )
 # EDITHOOK6

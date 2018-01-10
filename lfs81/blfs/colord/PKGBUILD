@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.freedesktop.org/software/colord/releases/colord-1.2.12.tar.xz
 )
 # EDITHOOK6

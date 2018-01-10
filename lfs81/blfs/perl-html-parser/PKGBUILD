@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/G/GA/GAAS/HTML-Parser-3.72.tar.gz
 )
 # EDITHOOK6

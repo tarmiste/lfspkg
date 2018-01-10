@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://links.twibright.com/download/links-2.14.tar.bz2
 )
 # EDITHOOK6

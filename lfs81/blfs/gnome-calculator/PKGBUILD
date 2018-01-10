@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://ftp.gnome.org/pub/gnome/sources/gnome-calculator/3.24/gnome-calculator-3.24.0.tar.xz
 )
 # EDITHOOK6

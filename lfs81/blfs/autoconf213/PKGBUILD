@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://ftp.gnu.org/gnu/autoconf/autoconf-2.13.tar.gz
 autoconf-2.13-consolidated_fixes-1.patch
 )

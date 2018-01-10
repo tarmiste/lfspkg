@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://www.mega-nerd.com/SRC/libsamplerate-0.1.9.tar.gz
 )
 # EDITHOOK6

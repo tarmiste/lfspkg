@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://ftp.gnome.org/pub/gnome/sources/pyatspi/2.24/pyatspi-2.24.0.tar.xz
 )
 # EDITHOOK6

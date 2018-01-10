@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/aa-project/aalib-1.4rc5.tar.gz
 )
 # EDITHOOK6

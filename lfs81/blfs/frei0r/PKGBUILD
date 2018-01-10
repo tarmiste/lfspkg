@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://files.dyne.org/frei0r/releases/frei0r-plugins-1.6.1.tar.gz
 )
 # EDITHOOK6

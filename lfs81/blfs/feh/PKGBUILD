@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://feh.finalrewind.org/feh-2.19.3.tar.bz2
 )
 # EDITHOOK6

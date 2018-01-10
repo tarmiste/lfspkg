@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://0pointer.de/lennart/projects/libdaemon/libdaemon-0.14.tar.gz
 )
 # EDITHOOK6

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/lxde/lxqt-build-tools/releases/download/0.3.2/lxqt-build-tools-0.3.2.tar.xz
 )
 # EDITHOOK6

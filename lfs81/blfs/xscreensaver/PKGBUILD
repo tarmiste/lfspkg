@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://www.jwz.org/xscreensaver/xscreensaver-5.37.tar.gz
 )
 # EDITHOOK6

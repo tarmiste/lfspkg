@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/openobex/openobex-1.7.2-Source.tar.gz
 )
 # EDITHOOK6

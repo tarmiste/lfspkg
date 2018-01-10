@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://ftp.gnu.org/gnu/enscript/enscript-1.6.6.tar.gz
 )
 # EDITHOOK6

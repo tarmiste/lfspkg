@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://ftp.gnu.org/gnu/pth/pth-2.0.7.tar.gz
 )
 # EDITHOOK6

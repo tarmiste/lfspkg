@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/freetts/freetts-1.2.2-src.zip
     https://downloads.sourceforge.net/freetts/freetts-1.2.2-tst.zip
 )

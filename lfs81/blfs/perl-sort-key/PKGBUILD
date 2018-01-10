@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/S/SA/SALVA/Sort-Key-1.33.tar.gz
 )
 # EDITHOOK6

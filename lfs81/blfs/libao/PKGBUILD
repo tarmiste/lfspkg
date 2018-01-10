@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.xiph.org/releases/ao/libao-1.2.0.tar.gz
 )
 # EDITHOOK6

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/lxde/liblxqt/releases/download/0.11.1/liblxqt-0.11.1.tar.xz
 )
 # EDITHOOK6

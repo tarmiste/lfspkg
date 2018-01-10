@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://archive.mozilla.org/pub/nspr/releases/v4.16/src/nspr-4.16.tar.gz
 )
 # EDITHOOK6

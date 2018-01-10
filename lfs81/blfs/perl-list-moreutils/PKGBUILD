@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/R/RE/REHSACK/List-MoreUtils-0.419.tar.gz
 )
 # EDITHOOK6

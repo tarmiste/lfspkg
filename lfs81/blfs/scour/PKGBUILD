@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/scour-project/scour/archive/v0.36/scour-0.36.tar.gz
 )
 # EDITHOOK6

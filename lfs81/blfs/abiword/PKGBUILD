@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://www.abisource.com/downloads/abiword/3.0.2/source/abiword-3.0.2.tar.gz
     http://www.abisource.com/downloads/abiword/3.0.2/source/abiword-docs-3.0.2.tar.gz
 abiword-3.0.2-gtk3_22_render_fix-1.patch

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://download.gimp.org/pub/gimp/v2.8/gimp-2.8.22.tar.bz2
     https://download.gimp.org/pub/gimp/help/gimp-help-2.8.2.tar.bz2
 )

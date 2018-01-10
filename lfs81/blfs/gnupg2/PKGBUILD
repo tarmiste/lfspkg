@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.1.23.tar.bz2
 )
 # EDITHOOK6

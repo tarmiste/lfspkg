@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://archive.xfce.org/src/apps/xfburn/0.5/xfburn-0.5.4.tar.bz2
 )
 # EDITHOOK6

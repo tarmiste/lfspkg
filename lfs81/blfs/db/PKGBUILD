@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://download.oracle.com/berkeley-db/db-6.2.32.tar.gz
 )
 # EDITHOOK6

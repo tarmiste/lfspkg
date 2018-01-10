@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://ftp.gnu.org/gnu/gcc/gcc-7.2.0/gcc-7.2.0.tar.xz
     http://mirrors.cdn.adacore.com/art/591c6d80c7a447af2deed1d7
     http://mirrors.cdn.adacore.com/art/564b3e9dc8e196b040fbe248

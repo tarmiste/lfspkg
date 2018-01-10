@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/fetchmail/fetchmail-6.3.26.tar.xz
 fetchmail-6.3.26-disable_sslv3-1.patch
 )

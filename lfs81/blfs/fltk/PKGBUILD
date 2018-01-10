@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://fltk.org/pub/fltk/1.3.4/fltk-1.3.4-source.tar.gz
 )
 # EDITHOOK6

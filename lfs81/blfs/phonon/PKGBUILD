@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://download.kde.org/stable/phonon/4.9.1/phonon-4.9.1.tar.xz
 )
 # EDITHOOK6

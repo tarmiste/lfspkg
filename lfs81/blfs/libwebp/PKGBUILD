@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://downloads.webmproject.org/releases/webp/libwebp-0.6.0.tar.gz
 )
 # EDITHOOK6

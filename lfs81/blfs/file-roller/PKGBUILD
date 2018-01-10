@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://ftp.gnome.org/pub/gnome/sources/file-roller/3.24/file-roller-3.24.1.tar.xz
 )
 # EDITHOOK6

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/B/BD/BDFOY/Business-ISMN-1.131.tar.gz
 )
 # EDITHOOK6

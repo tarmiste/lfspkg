@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/lxde/pavucontrol-qt/releases/download/0.2.0/pavucontrol-qt-0.2.0.tar.xz
 )
 # EDITHOOK6

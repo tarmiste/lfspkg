@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.x.org/pub/individual/app/xrandr-1.5.0.tar.bz2
 )
 # EDITHOOK6

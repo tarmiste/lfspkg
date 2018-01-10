@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.nano-editor.org/dist/v2.8/nano-2.8.7.tar.xz
 )
 # EDITHOOK6

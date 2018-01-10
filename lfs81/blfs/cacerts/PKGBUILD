@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://anduin.linuxfromscratch.org/BLFS/other/make-ca.sh-20170514
     http://anduin.linuxfromscratch.org/BLFS/other/certdata.txt
 wget http://www.cacert.org/certs/root.crt

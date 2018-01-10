@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://download.librdf.org/source/rasqal-0.9.33.tar.gz
 )
 # EDITHOOK6

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://people.freedesktop.org/~aplattner/vdpau/libvdpau-1.1.1.tar.bz2
 )
 # EDITHOOK6

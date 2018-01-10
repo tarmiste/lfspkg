@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/S/SY/SYP/Text-Roman-3.5.tar.gz
 )
 # EDITHOOK6

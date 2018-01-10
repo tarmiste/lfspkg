@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/cjlin1/liblinear/archive/v211/liblinear-211.tar.gz
 )
 # EDITHOOK6

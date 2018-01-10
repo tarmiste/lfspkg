@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/E/ET/ETHER/URI-1.72.tar.gz
 )
 # EDITHOOK6

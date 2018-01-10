@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://download.tuxfamily.org/librep/librep_0.92.7.tar.xz
 )
 # EDITHOOK6

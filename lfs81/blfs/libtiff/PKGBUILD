@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://download.osgeo.org/libtiff/tiff-4.0.8.tar.gz
 )
 # EDITHOOK6

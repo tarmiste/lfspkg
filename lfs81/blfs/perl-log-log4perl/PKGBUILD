@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/M/MS/MSCHILLI/Log-Log4perl-1.49.tar.gz
 )
 # EDITHOOK6

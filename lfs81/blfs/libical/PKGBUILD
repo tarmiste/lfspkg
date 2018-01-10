@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/libical/libical/releases/download/v2.0.0/libical-2.0.0.tar.gz
 )
 # EDITHOOK6

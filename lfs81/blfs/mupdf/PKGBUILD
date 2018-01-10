@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://www.mupdf.com/downloads/archive/mupdf-1.11-source.tar.gz
 mupdf-1.11-openjpeg-2.patch
 mupdf-1.11-shared_libs-1.patch

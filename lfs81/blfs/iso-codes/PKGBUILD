@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://pkg-isocodes.alioth.debian.org/downloads/iso-codes-3.75.tar.xz
 )
 # EDITHOOK6

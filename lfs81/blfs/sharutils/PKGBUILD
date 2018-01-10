@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://ftp.gnu.org/gnu/sharutils/sharutils-4.15.2.tar.xz
 )
 # EDITHOOK6

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/tcl/tcl8.6.7-src.tar.gz
     https://downloads.sourceforge.net/tcl/tcl8.6.7-html.tar.gz
 )

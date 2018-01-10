@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://download.kde.org/stable/applications/17.08.0/src/kdenlive-17.08.0.tar.xz
 )
 # EDITHOOK6

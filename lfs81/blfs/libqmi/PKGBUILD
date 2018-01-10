@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.freedesktop.org/software/libqmi/libqmi-1.18.0.tar.xz
 )
 # EDITHOOK6

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://curl.haxx.se/download/curl-7.55.1.tar.xz
 )
 # EDITHOOK6

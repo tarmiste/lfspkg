@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://www.ring.gr.jp/archives/net/mail/procmail/procmail-3.22.tar.gz
 )
 # EDITHOOK6

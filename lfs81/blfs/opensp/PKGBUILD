@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/openjade/OpenSP-1.5.2.tar.gz
 )
 # EDITHOOK6

@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://ftp.gnome.org/pub/gnome/sources/gedit/3.22/gedit-3.22.1.tar.xz
 )
 # EDITHOOK6

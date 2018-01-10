@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://www.oberhumer.com/opensource/lzo/download/lzo-2.10.tar.gz
 )
 # EDITHOOK6

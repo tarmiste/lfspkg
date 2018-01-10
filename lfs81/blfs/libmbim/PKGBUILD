@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.freedesktop.org/software/libmbim/libmbim-1.14.2.tar.xz
 )
 # EDITHOOK6

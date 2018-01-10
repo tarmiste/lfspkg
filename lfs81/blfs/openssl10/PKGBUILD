@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://openssl.org/source/openssl-1.0.2l.tar.gz
 )
 # EDITHOOK6

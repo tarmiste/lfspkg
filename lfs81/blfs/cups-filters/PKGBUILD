@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.openprinting.org/download/cups-filters/cups-filters-1.17.2.tar.xz
 )
 # EDITHOOK6

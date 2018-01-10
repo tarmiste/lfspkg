@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://ftp.gnu.org/gnu/clisp/latest/clisp-2.49.tar.bz2
 clisp-2.49-readline7_fixes-1.patch
 )

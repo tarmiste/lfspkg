@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
 Data-Uniqid-0.12-disable_failing_test-1.patch
 )
 # EDITHOOK6

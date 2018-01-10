@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/lxde/lximage-qt/releases/download/0.5.1/lximage-qt-0.5.1.tar.xz
 )
 # EDITHOOK6

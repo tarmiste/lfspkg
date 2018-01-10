@@ -27,8 +27,8 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
-    $URL
+source=(
+    http://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20170731.tar.xz
 cyrus-sasl-2.1.26-fixes-3.patch
 cyrus-sasl-2.1.26-openssl-1.1.0-1.patch
 )

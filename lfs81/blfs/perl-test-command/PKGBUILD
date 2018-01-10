@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/D/DA/DANBOO/Test-Command-0.11.tar.gz
 )
 # EDITHOOK6

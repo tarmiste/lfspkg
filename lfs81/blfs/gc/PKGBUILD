@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://www.hboehm.info/gc/gc_source/gc-7.6.0.tar.gz
 )
 # EDITHOOK6

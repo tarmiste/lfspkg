@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://github.com/LMDB/lmdb/archive/LMDB_0.9.21.tar.gz
 )
 # EDITHOOK6

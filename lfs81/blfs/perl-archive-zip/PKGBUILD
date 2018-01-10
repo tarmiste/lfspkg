@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/P/PH/PHRED/Archive-Zip-1.59.tar.gz
 )
 # EDITHOOK6

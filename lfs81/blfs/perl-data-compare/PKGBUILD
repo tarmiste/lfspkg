@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/D/DC/DCANTRELL/Data-Compare-1.25.tar.gz
 )
 # EDITHOOK6

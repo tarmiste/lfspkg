@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tar.xz
     https://docs.python.org/3.6/archives/python-3.6.2-docs-html.tar.bz2
 )

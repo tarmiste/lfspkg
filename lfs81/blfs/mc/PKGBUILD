@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://ftp.midnight-commander.org/mc-4.8.19.tar.xz
 )
 # EDITHOOK6

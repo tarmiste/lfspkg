@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.freedesktop.org/software/colord/releases/colord-gtk-0.1.26.tar.xz
 )
 # EDITHOOK6

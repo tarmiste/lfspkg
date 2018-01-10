@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://llvm.org/releases/4.0.1/llvm-4.0.1.src.tar.xz
     http://llvm.org/releases/4.0.1/cfe-4.0.1.src.tar.xz
     http://llvm.org/releases/4.0.1/compiler-rt-4.0.1.src.tar.xz

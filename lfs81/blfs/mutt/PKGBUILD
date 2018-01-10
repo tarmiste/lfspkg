@@ -27,7 +27,8 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
+    ftp://ftp.mutt.org/pub/mutt/mutt-1.8.3.tar.gz
 )
 # EDITHOOK6
 noextract=()

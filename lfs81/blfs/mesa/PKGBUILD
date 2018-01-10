@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://mesa.freedesktop.org/archive/mesa-17.1.6.tar.xz
 mesa-17.1.6-add_xdemos-1.patch
 )

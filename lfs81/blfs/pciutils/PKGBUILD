@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.kernel.org/pub/software/utils/pciutils/pciutils-3.5.5.tar.xz
 )
 # EDITHOOK6

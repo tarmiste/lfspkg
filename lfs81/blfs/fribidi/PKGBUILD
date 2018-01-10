@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.fribidi.org/download/fribidi-0.19.7.tar.bz2
 )
 # EDITHOOK6

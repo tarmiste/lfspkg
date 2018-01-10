@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://get.videolan.org/libdvdread/5.0.3/libdvdread-5.0.3.tar.bz2
 )
 # EDITHOOK6

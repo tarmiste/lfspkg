@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.xiph.org/releases/speex/speex-1.2.0.tar.gz
     https://downloads.xiph.org/releases/speex/speexdsp-1.2rc3.tar.gz
 )

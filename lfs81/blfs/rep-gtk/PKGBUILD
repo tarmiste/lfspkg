@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://download.tuxfamily.org/librep/rep-gtk/rep-gtk_0.90.8.3.tar.xz
 )
 # EDITHOOK6

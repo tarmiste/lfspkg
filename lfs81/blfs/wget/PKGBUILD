@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://ftp.gnu.org/gnu/wget/wget-1.19.1.tar.xz
 )
 # EDITHOOK6

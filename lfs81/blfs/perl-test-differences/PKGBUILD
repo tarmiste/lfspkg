@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.cpan.org/authors/id/D/DC/DCANTRELL/Test-Differences-0.64.tar.gz
 )
 # EDITHOOK6

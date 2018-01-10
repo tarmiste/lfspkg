@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://www.nasm.us/pub/nasm/releasebuilds/2.13.01/nasm-2.13.01.tar.xz
     http://www.nasm.us/pub/nasm/releasebuilds/2.13.01/nasm-2.13.01-xdoc.tar.xz
 )

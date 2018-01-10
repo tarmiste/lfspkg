@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://downloads.sourceforge.net/linuxwacom/xf86-input-wacom-0.35.0.tar.bz2
 )
 # EDITHOOK6

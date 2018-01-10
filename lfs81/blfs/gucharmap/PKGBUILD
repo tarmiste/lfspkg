@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     http://ftp.gnome.org/pub/gnome/sources/gucharmap/10.0/gucharmap-10.0.0.tar.xz
 )
 # EDITHOOK6

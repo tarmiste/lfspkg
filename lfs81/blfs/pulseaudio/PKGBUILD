@@ -27,7 +27,7 @@ options=()
 install=
 changelog=
 # EDITHOOK5
-sources=(
+source=(
     https://www.freedesktop.org/software/pulseaudio/releases/pulseaudio-10.0.tar.xz
 )
 # EDITHOOK6
