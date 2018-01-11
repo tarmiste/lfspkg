@@ -33,6 +33,7 @@ fetchmail-6.3.26-disable_sslv3-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('61b66faad044afa26e142bb1791aa2b3'
+         'fe68c03d9ae5c85a73d847346b462382')

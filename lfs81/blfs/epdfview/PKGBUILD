@@ -33,6 +33,7 @@ epdfview-0.1.8-fixes-2.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('e50285b01612169b2594fea375f53ae4'
+         'f1b7c1e596c8bdd60dec43ecf38ca212')

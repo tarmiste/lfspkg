@@ -34,6 +34,7 @@ cdparanoia-III-10.2-gcc_fixes-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('b304bbe8ab63373924a744eac9ebc652'
+         '4d6a164f760b59c2f0d82d0997dbdce1')

@@ -33,6 +33,7 @@ openssl-1.0.2l-compat_versioned_symbols-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('7b521dea79ab159e8ec879d2333369fa'
+         'b94d4b17b2fdddf8bfe422041320e174')

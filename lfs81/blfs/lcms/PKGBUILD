@@ -33,6 +33,7 @@ lcms-1.19-cve_2013_4276-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('8af94611baf20d9646c7c2c285859818'
+         '412d2135fb46181b57a728f3c3e019b3')

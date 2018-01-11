@@ -33,6 +33,7 @@ balsa-2.5.3-openssl-1.1.0-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('d02bc62af34c4d1b0c1f6cfb4efff8db'
+         'c0cd694fe84ba5dc1aeaafe62c047182')

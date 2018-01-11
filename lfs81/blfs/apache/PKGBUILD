@@ -34,6 +34,8 @@ httpd-2.4.27-blfs_layout-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('97b6bbfa83c866dbe20ef317e3afd108'
+         'feeffb543c42d3a9790d4e77437b57db'
+         'f24185eaa0cbcab3c0b07032584575d9')

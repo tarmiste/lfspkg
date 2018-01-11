@@ -33,6 +33,7 @@ clucene-2.3.3.4-contribs_lib-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('48d647fbd8ef8889e5a7f422c1bfda94'
+         'bafcf476c9176566c41be30e76a85774')

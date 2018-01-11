@@ -33,6 +33,7 @@ xarchiver-0.5.4-fixes-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('1b4cd37a6af03afc957a8e307417e8d0'
+         '0b3c933f2ed64e75d572f88bc26635fd')

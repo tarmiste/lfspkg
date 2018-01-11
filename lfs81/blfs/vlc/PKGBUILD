@@ -33,6 +33,7 @@ vlc-2.2.6-ffmpeg3-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('031d1bbef7737d44d18d78d6761ed26e'
+         '00b03cf5656f8da349b87052dd223d7b')

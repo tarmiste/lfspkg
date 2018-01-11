@@ -33,6 +33,7 @@ libquicktime-1.2.4-ffmpeg3-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('81cfcebad9b7ee7e7cfbefc861d6d61b'
+         '8a0f1e55e448fa13b03712d2d7cd3bd7')

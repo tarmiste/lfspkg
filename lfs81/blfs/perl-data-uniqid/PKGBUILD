@@ -32,6 +32,6 @@ Data-Uniqid-0.12-disable_failing_test-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('d43bc05ff51d888c8b95f9db45eb320d')

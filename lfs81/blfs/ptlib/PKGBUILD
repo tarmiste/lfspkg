@@ -34,6 +34,8 @@ ptlib-2.10.11-openssl-1.1.0-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('3ffdf89170dbfa6d29a015ef8741a4e4'
+         'fece800647f4c5ec103ddffa522d2def'
+         '42b73c7bdea0e5d5e91a432682d88a40')

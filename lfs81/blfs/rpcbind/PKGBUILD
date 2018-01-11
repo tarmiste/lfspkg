@@ -34,6 +34,8 @@ rpcbind-0.2.4-vulnerability_fixes-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('cf10cd41ed8228fc54c316191c1f07fe'
+         'feeffb543c42d3a9790d4e77437b57db'
+         'dd70cbfd64bfd0df4f42ee94c92a4c36')

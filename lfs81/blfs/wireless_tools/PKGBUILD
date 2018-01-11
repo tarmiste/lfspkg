@@ -33,6 +33,7 @@ wireless_tools-29-fix_iwlist_scanning-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('e06c222e186f7cc013fd272d023710cb'
+         '9db3a9451d8cb969e388e089be401408')

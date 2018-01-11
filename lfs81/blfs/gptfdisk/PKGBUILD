@@ -33,6 +33,7 @@ gptfdisk-1.0.3-convenience-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('07b625a583b66c8c5840be5923f3e3fe'
+         'd21db7941c4a1992cebdf3603fe4233e')

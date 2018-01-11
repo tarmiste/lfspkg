@@ -33,6 +33,7 @@ qtwebkit-5.9.0-icu_59-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('1fc0ed873cc9326b823a8a83126714f5'
+         'b67e9ffcd9b478cb4fcda90b89af54c4')

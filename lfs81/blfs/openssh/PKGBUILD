@@ -34,6 +34,8 @@ openssh-7.5p1-openssl-1.1.0-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('652fdc7d8392f112bef11cacf7e69e23'
+         'feeffb543c42d3a9790d4e77437b57db'
+         'f5aa210fd557cac83508ec3a71cfafa1')

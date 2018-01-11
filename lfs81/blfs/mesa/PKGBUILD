@@ -33,6 +33,7 @@ mesa-17.1.6-add_xdemos-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('54758bf842f9ea53c8b57cce4311b87e'
+         '48cce4c6a8ae116c4e00ae128ba97603')

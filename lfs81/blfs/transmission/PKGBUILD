@@ -33,6 +33,7 @@ transmission-2.92-openssl-1.1.0-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('3fce404a436e3cd7fde80fb6ed61c264'
+         '7627c44c7f60c4309de32275ede253a4')

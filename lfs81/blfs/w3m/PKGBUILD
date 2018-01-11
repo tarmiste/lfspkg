@@ -33,6 +33,7 @@ w3m-0.5.3-bdwgc72-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('1b845a983a50b8dec0169ac48479eacc'
+         '0023b3d259ee913f7b421812f7379f58')

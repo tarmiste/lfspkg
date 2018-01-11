@@ -33,6 +33,7 @@ heirloom-mailx-12.5-fixes-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('29a6033ef1412824d02eb9d9213cb1f2'
+         'a52abdd8a685e07f47d01de1539ffcd2')

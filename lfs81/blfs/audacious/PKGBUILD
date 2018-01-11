@@ -33,6 +33,7 @@ source=(
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('11d2b36f66c79e60ada9e1f6208abf19'
+         'fe467c4dcee8abbf571e69ed980a56b6')

@@ -34,6 +34,8 @@ cyrus-sasl-2.1.26-openssl-1.1.0-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('feeffb543c42d3a9790d4e77437b57db'
+         'f1ca57cf6c46b2e217e86ad04d6da7e7'
+         'f3ebd5111a47e13841aaa48ece36bf19')

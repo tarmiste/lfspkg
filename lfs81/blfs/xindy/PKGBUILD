@@ -33,6 +33,7 @@ xindy-2.5.1-upstream_fixes-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('221acfeeb0f6f8388f89a59c56491041'
+         '24e555f4a2762dac7da9e312228b8283')

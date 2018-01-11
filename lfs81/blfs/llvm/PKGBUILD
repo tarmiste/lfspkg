@@ -35,6 +35,9 @@ compiler-rt-4.0.1-glibc-2.26-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('a818e70321b91e2bb2d47e60edd5408f'
+         'a6c7b3e953f8b93e252af5917df7db97'
+         '0227ac853ce422125f8bb08f6ad5c995'
+         'fbb13b55f2f154eee288df02bb3308ff')

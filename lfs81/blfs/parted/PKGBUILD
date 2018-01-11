@@ -33,6 +33,7 @@ parted-3.2-devmapper-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('0247b6a7b314f8edeb618159fa95f9cb'
+         '83d297bd20a11b47a4239b101bc26ad2')

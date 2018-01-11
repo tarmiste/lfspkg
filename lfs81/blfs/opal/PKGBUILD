@@ -33,6 +33,7 @@ opal-3.10.10-ffmpeg2-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('6efa1b4c5e0ad6460019b4c6df0898d7'
+         '9d345ae609936d7d9b878274ebc3cdf6')

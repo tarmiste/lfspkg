@@ -33,6 +33,7 @@ clisp-2.49-readline7_fixes-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('1962b99d5e530390ec3829236d168649'
+         '88393744b629d658039ceb3c575764fd')

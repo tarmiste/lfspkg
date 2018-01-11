@@ -33,6 +33,7 @@ inkscape-0.92.2-use_versioned_ImageMagick6-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('6f6bcbd0237ecd064460315465467b04'
+         'a3155f618b68eb0516ff2605c6ba55fa')

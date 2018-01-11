@@ -34,6 +34,8 @@ texlive-20170524-texmf-upstream_fixes-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('ba5dac09edc51c21306b665d71247810'
+         '7c01f0664c7f1fff9704b0ad06fa4a5e'
+         '3f5e83c08f2a4f088bdb814de8d99905')

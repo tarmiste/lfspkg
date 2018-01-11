@@ -34,6 +34,8 @@ abiword-3.0.2-gtk3_22_render_fix-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('cda6dd58c747c133b421cc7eb18f5796'
+         'c92c0e1e2081db20757231a53d80c338'
+         '4127d3f8779734988dbd88042438998b')

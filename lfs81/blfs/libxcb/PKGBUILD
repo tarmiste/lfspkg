@@ -33,6 +33,7 @@ libxcb-1.12-python3-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('28e552bd78bc1050b6b26ca1db0e5bb6'
+         '5b9bbd8730c4c7d6e0876912a61d8621')

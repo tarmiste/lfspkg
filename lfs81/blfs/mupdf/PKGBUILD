@@ -34,6 +34,8 @@ mupdf-1.11-shared_libs-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('ab9a6629f572225e803c4cf426bdb09c'
+         '74a77ab819b5ac96aa30db968b9f5f68'
+         '2405dfd2e997b2de7065134d0bb78bfa')

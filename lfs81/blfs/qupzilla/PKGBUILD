@@ -33,6 +33,7 @@ qupzilla-2.1.2-openssl1.1-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('84e4b9dda1e0bb5ad96f3b87f9fc1328'
+         'c743034a24813ba53ed97ee7fba59e97')

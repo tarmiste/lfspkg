@@ -33,6 +33,7 @@ transcode-1.1.7-ffmpeg3-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('9bb25a796a8591fb764de46ee87ce505'
+         '33eb57fd8a83366f825a22588e6f53f8')

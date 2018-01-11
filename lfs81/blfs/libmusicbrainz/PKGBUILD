@@ -33,6 +33,7 @@ libmusicbrainz-2.1.5-missing-includes-1.patch
 )
 # EDITHOOK6
 noextract=()
-md5sums=() #generate with 'makepkg -g'
 # EDITHOOK7
 
+md5sums=('d5e19bb77edd6ea798ce206bd05ccc5f'
+         'bba1b3f762cb9de526c27bdce48c2480')
