@@ -37,3 +37,40 @@ noextract=()
 
 md5sums=('9415cb7f2b3a847f2310ccea258b101e'
          'f47d01329c088e0c42bd8ebc280247ed')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+patch -Np1 -i ../pygobject-2.28.6-fixes-1.patch   &&
+./configure --prefix=/usr --disable-introspection &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo /sbin/ldconfig
+

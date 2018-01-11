@@ -35,3 +35,43 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('c76cab12a642a024bd1a262615a1a4a8')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr                   \
+            --with-iodbc-inidir=/etc/iodbc  \
+            --includedir=/usr/include/iodbc \
+            --disable-libodbc               \
+            --disable-static                &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo /sbin/ldconfig
+

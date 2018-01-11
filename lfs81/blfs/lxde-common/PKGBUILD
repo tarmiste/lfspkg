@@ -35,3 +35,44 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('14a9d19c4576dc15d985453ccb8ca9f6')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr --sysconfdir=/etc &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+update-mime-database /usr/share/mime &&
+gtk-update-icon-cache -qf /usr/share/icons/hicolor &&
+update-desktop-database -q
+ROOT_EOF
+sudo /sbin/ldconfig
+

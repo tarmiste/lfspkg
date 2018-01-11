@@ -35,3 +35,47 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('9927f21e1ab6ba96315e7f0e30746deb')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -i -e 's/png_ptr->jmpbuf/png_jmpbuf(png_ptr)/' src/xsane-save.c &&
+./configure --prefix=/usr                                           &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 xsanedocdir=/usr/share/doc/xsane-0.999 install &&
+ln -v -s ../../doc/xsane-0.999 /usr/share/sane/xsane/doc
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+ln -v -s <browser> /usr/bin/netscape
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+ln -v -s /usr/bin/xsane /usr/lib/gimp/2.0/plug-ins/
+ROOT_EOF
+sudo /sbin/ldconfig
+

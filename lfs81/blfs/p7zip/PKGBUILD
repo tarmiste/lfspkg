@@ -35,3 +35,41 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('a0128d661cfe7cc8c121e73519c54fbf')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+make all3
+#make -k test || true
+sudo -E sh << ROOT_EOF
+make -j1 DEST_HOME=/usr \\
+     DEST_MAN=/usr/share/man \\
+     DEST_SHARE_DOC=/usr/share/doc/p7zip-16.02 install
+ROOT_EOF
+sudo /sbin/ldconfig
+

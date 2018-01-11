@@ -35,3 +35,71 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('b44afd10ee1e64624c23115aa51dcd55')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo /sbin/ldconfig
+
+echo startfluxbox > ~/.xinitrc
+
+sudo -E sh << ROOT_EOF
+mkdir -pv /usr/share/xsessions &&
+cat > /usr/share/xsessions/fluxbox.desktop << "EOF"
+[Desktop Entry]
+Encoding=UTF-8
+Name=Fluxbox
+Comment=This session logs you into Fluxbox
+Exec=startfluxbox
+Type=Application
+EOF
+ROOT_EOF
+
+mkdir -v ~/.fluxbox &&
+cp -v /usr/share/fluxbox/init ~/.fluxbox/init &&
+cp -v /usr/share/fluxbox/keys ~/.fluxbox/keys
+
+cd ~/.fluxbox &&
+fluxbox-generate_menu **EDITME<user_options>EDITME**
+
+cp -v /usr/share/fluxbox/menu ~/.fluxbox/menu
+
+cp /usr/share/fluxbox/styles/<theme> ~/.fluxbox/theme &&
+
+sed -i 's,\(session.styleFile:\).*,\1 ~/.fluxbox/theme,' ~/.fluxbox/init &&
+
+[ -f ~/.fluxbox/theme ] &&
+echo "background.pixmap: </path/to/nice/image.ext>" >> ~/.fluxbox/theme ||
+[ -d ~/.fluxbox/theme ] &&
+echo "background.pixmap: </path/to/nice/image.ext>" >> ~/.fluxbox/theme/theme.cfg
+

@@ -37,3 +37,129 @@ noextract=()
 
 md5sums=('745384ed0dedb3f66b33fe84d66466f9'
          'feeffb543c42d3a9790d4e77437b57db')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sudo -E sh << ROOT_EOF
+groupadd -g 87 ntp &&
+useradd -c "Network Time Protocol" -d /var/lib/ntp -u 87 \\
+        -g ntp -s /bin/false ntp
+ROOT_EOF
+sed -e "s/https/http/"              \
+    -e 's/"(\\S+)"/"?([^\\s"]+)"?/' \
+    -i scripts/update-leap/update-leap.in
+./configure CFLAGS="-O2 -g -fPIC" \
+            --prefix=/usr         \
+            --bindir=/usr/sbin    \
+            --sysconfdir=/etc     \
+            --enable-linuxcaps    \
+            --with-lineeditlibs=readline \
+            --docdir=/usr/share/doc/ntp-4.2.8p10 &&
+make
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+install -v -o ntp -g ntp -d /var/lib/ntp
+ROOT_EOF
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+cat > /etc/ntp.conf << "EOF"
+# Asia
+server 0.asia.pool.ntp.org
+
+# Australia
+server 0.oceania.pool.ntp.org
+
+# Europe
+server 0.europe.pool.ntp.org
+
+# North America
+server 0.north-america.pool.ntp.org
+
+# South America
+server 2.south-america.pool.ntp.org
+
+driftfile /var/lib/ntp/ntp.drift
+pidfile   /var/run/ntpd.pid
+
+leapfile  /etc/ntp.leapseconds
+EOF
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+cat >> /etc/ntp.conf << "EOF"
+# Security session
+restrict    default limited kod nomodify notrap nopeer noquery
+restrict -6 default limited kod nomodify notrap nopeer noquery
+
+restrict 127.0.0.1
+restrict ::1
+EOF
+ROOT_EOF
+
+[[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts
+pushd $SRC_DIR/blfs-bootscripts
+URL=http://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20170731.tar.xz
+BOOTPACKG=$(basename $URL)
+if [[ ! -f $BOOTPACKG ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PKG_DIR/$BOOTPACKG ]] ; then
+    cp $SRC_ARCHIVE/$PKG_DIR/$BOOTPACKG $BOOTPACKG
+  elif [[ -f $SRC_ARCHIVE/$BOOTPACKG ]] ; then
+    cp $SRC_ARCHIVE/$BOOTPACKG $BOOTPACKG
+  else
+    wget -T 30 -t 5 $URL
+    cp $BOOTPACKG $SRC_ARCHIVE
+  fi
+  rm -f unpacked
+fi
+
+if [[ -e unpacked ]] ; then
+  BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+  if ! [[ -d $BOOTUNPACKDIR ]]; then
+    rm unpacked
+    tar -xvf $BOOTPACKG > unpacked
+    BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+  fi
+else
+  tar -xvf $BOOTPACKG > unpacked
+  BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+fi
+cd $BOOTUNPACKDIR
+sudo -E sh << ROOT_EOF
+make -j1 install-ntpd
+ROOT_EOF
+
+popd
+
+sudo -E sh << ROOT_EOF
+ln -v -sf ../init.d/setclock /etc/rc.d/rc0.d/K46setclock &&
+ln -v -sf ../init.d/setclock /etc/rc.d/rc6.d/K46setclock
+ROOT_EOF
+

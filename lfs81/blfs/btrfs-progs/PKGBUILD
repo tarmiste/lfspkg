@@ -35,3 +35,60 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('4b1a143677597de413381118db8c10bb')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -i '1,100 s/\.gz//g' Documentation/Makefile.in &&
+
+./configure --prefix=/usr \
+            --bindir=/bin \
+            --libdir=/lib &&
+make
+mv tests/fuzz-tests/003-multi-check-unmounted/test.sh{,.broken}    &&
+mv tests/fuzz-tests/004-simple-dump-tree/test.sh{,.broken}         &&
+mv tests/fuzz-tests/007-simple-super-recover/test.sh{,.broken}     &&
+mv tests/fuzz-tests/009-simple-zero-log/test.sh{,.broken}          &&
+mv tests/misc-tests/019-receive-clones-on-munted-subvol/test.sh{,.broken}
+pushd tests
+   ./fsck-tests.sh
+   ./mkfs-tests.sh
+   ./convert-tests.sh
+   ./misc-tests.sh
+   ./cli-tests.sh
+   ./fuzz-tests.sh
+popd
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+
+ln -sfv ../../lib/\$(readlink /lib/libbtrfs.so) /usr/lib/libbtrfs.so &&
+rm -v /lib/libbtrfs.{a,so} &&
+mv -v /bin/{mkfs,fsck}.btrfs /sbin
+ROOT_EOF
+sudo /sbin/ldconfig
+

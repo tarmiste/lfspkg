@@ -35,3 +35,44 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('70b288f821234593a8e7920e435b259b')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -e 's/^LIBNEWT =/#&/' \
+    -e '/install -m 644 $(LIBNEWT)/ s/^/#/' \
+    -e 's/$(LIBNEWT)/$(LIBNEWTSONAME)/g' \
+    -i Makefile.in                           &&
+
+./configure --prefix=/usr --with-gpm-support &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo /sbin/ldconfig
+

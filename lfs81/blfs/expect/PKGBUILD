@@ -35,3 +35,45 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('44e1a4f4c877e9ddc5a542dfa7ecc92b')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr           \
+            --with-tcl=/usr/lib     \
+            --enable-shared         \
+            --mandir=/usr/share/man \
+            --with-tclinclude=/usr/include &&
+make
+#make -k test || true
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+ln -svf expect5.45/libexpect5.45.so /usr/lib
+ROOT_EOF
+sudo /sbin/ldconfig
+

@@ -35,3 +35,54 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('3e7c3a95e7f8518346267f48a11966cd')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr                     \
+            --sysconfdir=/etc                 \
+            --docdir=/usr/share/doc/icewm-1.4.2 &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install         &&
+rm /usr/share/xsessions/icewm.desktop
+ROOT_EOF
+sudo /sbin/ldconfig
+
+echo icewm-session > ~/.xinitrc
+
+mkdir -v ~/.icewm                                       &&
+cp -v /usr/share/icewm/keys ~/.icewm/keys               &&
+cp -v /usr/share/icewm/menu ~/.icewm/menu               &&
+cp -v /usr/share/icewm/preferences ~/.icewm/preferences &&
+cp -v /usr/share/icewm/toolbar ~/.icewm/toolbar         &&
+cp -v /usr/share/icewm/winoptions ~/.icewm/winoptions
+
+icewm-menu-fdo >~/.icewm/menu
+
+

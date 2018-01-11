@@ -37,3 +37,49 @@ noextract=()
 
 md5sums=('d5e19bb77edd6ea798ce206bd05ccc5f'
          'bba1b3f762cb9de526c27bdce48c2480')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+patch -Np1 -i ../libmusicbrainz-2.1.5-missing-includes-1.patch &&
+
+CXXFLAGS=-std=c++98 \
+./configure --prefix=/usr --disable-static &&
+make
+(cd python && python setup.py build)
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+install -v -m644 -D docs/mb_howto.txt \\
+    /usr/share/doc/libmusicbrainz-2.1.5/mb_howto.txt
+ROOT_EOF
+#make -k  || true
+sudo -E sh << ROOT_EOF
+(cd python && python setup.py install)
+ROOT_EOF
+sudo /sbin/ldconfig
+

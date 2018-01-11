@@ -35,3 +35,47 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('9d96df8417572a2afb781a7c4c811a85')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -e '/_XData32/s:register long:register _Xconst long:' \
+    -i src/video/x11/SDL_x11sym.h &&
+
+./configure --prefix=/usr --disable-static &&
+
+make
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+
+install -v -m755 -d /usr/share/doc/SDL-1.2.15/html &&
+install -v -m644    docs/html/*.html \\
+                    /usr/share/doc/SDL-1.2.15/html
+ROOT_EOF
+sudo /sbin/ldconfig
+

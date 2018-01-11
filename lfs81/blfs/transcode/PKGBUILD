@@ -37,3 +37,46 @@ noextract=()
 
 md5sums=('9bb25a796a8591fb764de46ee87ce505'
          '33eb57fd8a83366f825a22588e6f53f8')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -i "s:#include <freetype/ftglyph.h>:#include FT_GLYPH_H:" filter/subtitler/load_font.c
+sed -i 's|doc/transcode|&-$(PACKAGE_VERSION)|' \
+       $(find . -name Makefile.in -exec grep -l 'docsdir =' {} \;) &&
+
+patch -Np1 -i ../transcode-1.1.7-ffmpeg3-1.patch                   &&
+./configure --prefix=/usr \
+            --enable-alsa \
+            --enable-libmpeg2 &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo /sbin/ldconfig
+

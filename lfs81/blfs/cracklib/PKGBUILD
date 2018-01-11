@@ -37,3 +37,58 @@ noextract=()
 
 md5sums=('c52f463585d85924b28cdc1e373ae06d'
          'cae1257e3a9f95c917cc9dbbab852316')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -i '/skipping/d' util/packer.c &&
+
+./configure --prefix=/usr    \
+            --disable-static \
+            --with-default-dict=/lib/cracklib/pw_dict &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install                      &&
+mv -v /usr/lib/libcrack.so.* /lib &&
+ln -sfv ../../lib/\$(readlink /usr/lib/libcrack.so) /usr/lib/libcrack.so
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -v -m644 -D    ../cracklib-words-2.9.6.gz \\
+                         /usr/share/dict/cracklib-words.gz     &&
+
+gunzip -v                /usr/share/dict/cracklib-words.gz     &&
+ln -v -sf cracklib-words /usr/share/dict/words                 &&
+echo \$(hostname) >>      /usr/share/dict/cracklib-extra-words  &&
+install -v -m755 -d      /lib/cracklib                         &&
+
+create-cracklib-dict     /usr/share/dict/cracklib-words \\
+                         /usr/share/dict/cracklib-extra-words
+ROOT_EOF
+make test
+sudo /sbin/ldconfig
+

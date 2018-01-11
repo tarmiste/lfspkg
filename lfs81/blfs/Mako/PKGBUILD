@@ -35,3 +35,41 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('c5fc31a323dd4990683d2f2da02d4e20')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sudo -E sh << ROOT_EOF
+python setup.py install --optimize=1
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+sed -i "s:mako-render:&3:g" setup.py &&
+python3 setup.py install --optimize=1
+ROOT_EOF
+sudo /sbin/ldconfig
+

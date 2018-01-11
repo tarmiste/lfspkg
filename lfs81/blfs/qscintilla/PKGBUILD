@@ -35,3 +35,47 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('e6d74c445bae69ba335acef65d526260')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+cd Qt4Qt5             &&
+qmake qscintilla.pro  &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+
+ln -sfv libqscintilla2_qt5.so.13.0.0 \$QT5DIR/lib/libqt5scintilla2.so
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -v -m755 -d \$QT5DIR/share/doc/QScintilla-2.10.1/html &&
+install -v -m644    ../doc/html-Qt4Qt5/* \\
+                    \$QT5DIR/share/doc/QScintilla-2.10.1/html
+ROOT_EOF
+sudo /sbin/ldconfig
+

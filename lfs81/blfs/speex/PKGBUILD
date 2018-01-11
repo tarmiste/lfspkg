@@ -37,3 +37,52 @@ noextract=()
 
 md5sums=('8ab7bb2589110dfaf0ed7fa7757dc49c'
          '70d9d31184f7eb761192fd1ef0b73333')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr    \
+            --disable-static \
+            --docdir=/usr/share/doc/speex-1.2.0 &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+cd ..                          &&
+tar -xf speexdsp-1.2rc3.tar.gz &&
+cd speexdsp-1.2rc3             &&
+
+./configure --prefix=/usr    \
+            --disable-static \
+            --docdir=/usr/share/doc/speexdsp-1.2rc3 &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo /sbin/ldconfig
+

@@ -39,3 +39,73 @@ noextract=()
 md5sums=('53a9c68bcc0eda58bdc2095ad5cdfc63'
          'b14fe3748c1cb2d74e3acd1943629ba3'
          '63ecacd3ff6552537a73f8c30c396caf')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+cat > lua.pc << "EOF"
+V=5.3
+R=5.3.4
+
+prefix=/usr
+INSTALL_BIN=${prefix}/bin
+INSTALL_INC=${prefix}/include
+INSTALL_LIB=${prefix}/lib
+INSTALL_MAN=${prefix}/share/man/man1
+INSTALL_LMOD=${prefix}/share/lua/${V}
+INSTALL_CMOD=${prefix}/lib/lua/${V}
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Lua
+Description: An Extensible Extension Language
+Version: ${R}
+Requires:
+Libs: -L${libdir} -llua -lm -ldl
+Cflags: -I${includedir}
+EOF
+patch -Np1 -i ../lua-5.3.4-shared_library-1.patch &&
+sed -i '/#define LUA_ROOT/s:/usr/local/:/usr/:' src/luaconf.h &&
+
+make MYCFLAGS="-DLUA_COMPAT_5_2 -DLUA_COMPAT_5_1" linux
+#make -k test || true
+sudo -E sh << ROOT_EOF
+make -j1 INSTALL_TOP=/usr                \\
+     INSTALL_DATA="cp -d"            \\
+     INSTALL_MAN=/usr/share/man/man1 \\
+     TO_LIB="liblua.so liblua.so.5.3 liblua.so.5.3.4" \\
+     install &&
+
+mkdir -pv                      /usr/share/doc/lua-5.3.4 &&
+cp -v doc/*.{html,css,gif,png} /usr/share/doc/lua-5.3.4 &&
+
+install -v -m644 -D lua.pc /usr/lib/pkgconfig/lua.pc
+ROOT_EOF
+sudo /sbin/ldconfig
+

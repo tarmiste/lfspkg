@@ -35,3 +35,75 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('02781eb15b364aedef79da7a5113f5b7')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sudo -E sh << ROOT_EOF
+groupadd -g 61 kvm
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+usermod -a -G kvm **EDITME<username>EDITME**
+ROOT_EOF
+if [ $(uname -m) = i686 ]; then
+   QEMU_ARCH=i386-softmmu
+else
+   QEMU_ARCH=x86_64-softmmu
+fi
+
+mkdir -vp build &&
+cd        build &&
+
+../configure --prefix=/usr               \
+             --sysconfdir=/etc           \
+             --target-list=$QEMU_ARCH    \
+             --audio-drv-list=alsa       \
+             --with-sdlabi=2.0           \
+             --docdir=/usr/share/doc/qemu-2.9.0 &&
+
+unset QEMU_ARCH &&
+
+make
+#make V=1 -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+cat > /lib/udev/rules.d/65-kvm.rules << "EOF"
+KERNEL=="kvm", GROUP="kvm", MODE="0660"
+EOF
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+chgrp kvm  /usr/libexec/qemu-bridge-helper &&
+chmod 4750 /usr/libexec/qemu-bridge-helper
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+ln -sv qemu-system-\`uname -m\` /usr/bin/qemu
+ROOT_EOF
+sudo /sbin/ldconfig
+

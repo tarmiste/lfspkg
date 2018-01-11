@@ -35,3 +35,55 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('e30d35f03f6a8351c79782d68b91a0e9')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+mkdir -v build &&
+cd       build &&
+
+cmake -DCMAKE_BUILD_TYPE=Release          \
+      -DCMAKE_INSTALL_PREFIX=$LXQT_PREFIX \
+      ..       &&
+
+make
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+cat >> /etc/profile.d/lxqt.sh << "EOF"
+# Begin lxqt-qtplugin configuration
+
+export QT_QPA_PLATFORMTHEME=lxqt
+
+# End lxqt-qtplugin configuration
+EOF
+ROOT_EOF
+

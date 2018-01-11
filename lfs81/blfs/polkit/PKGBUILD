@@ -35,3 +35,63 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('11ec10c04899651e40ef66766932254d')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sudo -E sh << ROOT_EOF
+groupadd -fg 27 polkitd &&
+useradd -c "PolicyKit Daemon Owner" -d /etc/polkit-1 -u 27 \\
+        -g polkitd -s /bin/false polkitd
+ROOT_EOF
+./configure --prefix=/usr                    \
+            --sysconfdir=/etc                \
+            --localstatedir=/var             \
+            --disable-static                 \
+            --enable-libsystemd-login=no     \
+            --with-authfw=shadow             &&
+make
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+cat > /etc/pam.d/polkit-1 << "EOF"
+# Begin /etc/pam.d/polkit-1
+
+auth     include        system-auth
+account  include        system-account
+password include        system-password
+session  include        system-session
+
+# End /etc/pam.d/polkit-1
+EOF
+ROOT_EOF
+

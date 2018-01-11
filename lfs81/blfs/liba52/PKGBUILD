@@ -35,3 +35,47 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('caa9f5bc44232dc8aeea773fea56be80')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr \
+            --mandir=/usr/share/man \
+            --enable-shared \
+            --disable-static \
+            CFLAGS="-g -O2 $([ $(uname -m) = x86_64 ] && echo -fPIC)" &&
+make
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+cp liba52/a52_internal.h /usr/include/a52dec &&
+install -v -m644 -D doc/liba52.txt \\
+    /usr/share/doc/liba52-0.7.4/liba52.txt
+ROOT_EOF
+sudo /sbin/ldconfig
+

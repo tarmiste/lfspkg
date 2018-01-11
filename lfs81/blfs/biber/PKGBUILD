@@ -37,3 +37,42 @@ noextract=()
 
 md5sums=('4956fbf23546b6325647b6c81b2b4bea'
          '0aa6937010eaaf2154e3ebd00a2fae77')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+perl ./Build.PL &&
+./Build
+#make -k  || true
+sudo -E sh << ROOT_EOF
+tar -xf ../biblatex-3.7.tds.tgz -C /opt/texlive/2017/texmf-dist &&
+texhash &&
+./Build install
+ROOT_EOF
+sudo /sbin/ldconfig
+

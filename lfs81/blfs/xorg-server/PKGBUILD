@@ -35,3 +35,50 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('015d2fc4b9f2bfe7a626edb63a62c65e')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure $XORG_CONFIG            \
+           --enable-glamor          \
+           --enable-install-setuid  \
+           --enable-suid-wrapper    \
+           --disable-systemd-logind \
+           --with-xkb-output=/var/lib/xkb &&
+make
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+mkdir -pv /etc/X11/xorg.conf.d &&
+cat >> /etc/sysconfig/createfiles << "EOF"
+/tmp/.ICE-unix dir 1777 root root
+/tmp/.X11-unix dir 1777 root root
+EOF
+ROOT_EOF
+sudo /sbin/ldconfig
+

@@ -37,3 +37,50 @@ noextract=()
 
 md5sums=('bc192d23266b9a664ca0aba4a7794c7c'
          '9a7b809a21ab7d2749bb328334c380f2')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+tar -xf ../docbook-dsssl-doc-1.79.tar.bz2 --strip-components=1
+sudo -E sh << ROOT_EOF
+install -v -m755 bin/collateindex.pl /usr/bin                      &&
+install -v -m644 bin/collateindex.pl.1 /usr/share/man/man1         &&
+install -v -d -m755 /usr/share/sgml/docbook/dsssl-stylesheets-1.79 &&
+cp -v -R * /usr/share/sgml/docbook/dsssl-stylesheets-1.79          &&
+
+install-catalog --add /etc/sgml/dsssl-docbook-stylesheets.cat \\
+    /usr/share/sgml/docbook/dsssl-stylesheets-1.79/catalog         &&
+
+install-catalog --add /etc/sgml/dsssl-docbook-stylesheets.cat \\
+    /usr/share/sgml/docbook/dsssl-stylesheets-1.79/common/catalog  &&
+
+install-catalog --add /etc/sgml/sgml-docbook.cat              \\
+    /etc/sgml/dsssl-docbook-stylesheets.cat
+ROOT_EOF
+sudo /sbin/ldconfig
+

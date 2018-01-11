@@ -35,3 +35,42 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('4e928452dfaf73851413a2d8b8c76388')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -e '/$serverargs $vtarg/ s/serverargs/: #&/' \
+    -i startx.cpp
+./configure $XORG_CONFIG --with-xinitdir=/etc/X11/app-defaults &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+ldconfig
+ROOT_EOF
+sudo /sbin/ldconfig
+

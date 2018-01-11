@@ -35,3 +35,64 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('6c27ac08df0b6c8322729e0ad981873d')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+mkdir -v build &&
+cd       build &&
+
+cmake -DCMAKE_INSTALL_PREFIX=$LXQT_PREFIX \
+      -DCMAKE_BUILD_TYPE=Release          \
+      -DPULL_TRANSLATIONS=no              \
+      ..       &&
+
+LIBRARY_PATH=$LXQT_PREFIX/lib make
+doxygen ../Doxyfile
+make -C docs/latex
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -v -m755 -d /usr/share/doc/qterminal-0.7.1/{html,pdf} &&
+cp -vr docs/html/* /usr/share/doc/qterminal-0.7.1/html
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -v -m644    docs/latex/refman.pdf \\
+                    /usr/share/doc/qterminal-0.7.1/pdf
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+if [ "\$LXQT_PREFIX" != /usr ]; then
+  ln -svf \$LXQT_PREFIX/share/applications/qterminal.desktop \\
+          /usr/share/applications
+  ln -svf \$LXQT_PREFIX/share/applications/qterminal_drop.desktop \\
+          /usr/share/applications
+fi
+ROOT_EOF
+sudo /sbin/ldconfig
+

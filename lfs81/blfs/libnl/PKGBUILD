@@ -37,3 +37,47 @@ noextract=()
 
 md5sums=('ab3ef137cad95bdda5ff0ffa5175dfa5'
          'caea892c8c09e759d9e05698d9cc692c')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr     \
+            --sysconfdir=/etc \
+            --disable-static  &&
+make
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+mkdir -vp /usr/share/doc/libnl-3.3.0 &&
+tar -xf ../libnl-doc-3.3.0.tar.gz --strip-components=1 --no-same-owner \\
+    -C  /usr/share/doc/libnl-3.3.0
+ROOT_EOF
+sudo /sbin/ldconfig
+

@@ -37,3 +37,42 @@ noextract=()
 
 md5sums=('6be14ed473cacdd68edeaa9605adc469'
          '01b01721458ee16bef6eb9464a0da175')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+patch -Np1 -i ../net-tools-CVS_20101030-remove_dups-1.patch &&
+sed -i '/#include <netinet\/ip.h>/d'  iptunnel.c &&
+
+yes "" | make config &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 update
+ROOT_EOF
+sudo /sbin/ldconfig
+

@@ -37,3 +37,46 @@ noextract=()
 
 md5sums=('84e4b9dda1e0bb5ad96f3b87f9fc1328'
          'c743034a24813ba53ed97ee7fba59e97')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+patch -p1 -i ../qupzilla-2.1.2-openssl1.1-1.patch &&
+
+export QUPZILLA_PREFIX=/usr &&
+qmake                       &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+xdg-icon-resource forceupdate --theme hicolor &&
+update-desktop-database -q
+ROOT_EOF
+sudo /sbin/ldconfig
+

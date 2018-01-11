@@ -35,3 +35,42 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('84d329d67abc3fb83fc8cb12aeaddaba')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+make
+sudo -E sh << ROOT_EOF
+make -j1 prefix=/usr install                                 &&
+mv /usr/bin/traceroute /bin                              &&
+ln -sv -f traceroute /bin/traceroute6                    &&
+ln -sv -f traceroute.8 /usr/share/man/man8/traceroute6.8 &&
+rm -fv /usr/share/man/man1/traceroute.1
+ROOT_EOF
+sudo /sbin/ldconfig
+

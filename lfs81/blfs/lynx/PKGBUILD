@@ -37,3 +37,63 @@ noextract=()
 
 md5sums=('b231c2aa34dfe7ca25681ef4e55ee7e8'
          '49b1aebf88e4d2fbc3fa75212a1202bd')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+patch -p1 -i ../lynx-2.8.8rel.2-openssl_1.1.0-1.patch
+./configure --prefix=/usr          \
+            --sysconfdir=/etc/lynx \
+            --datadir=/usr/share/doc/lynx-2.8.8rel.2 \
+            --with-zlib            \
+            --with-bzlib           \
+            --with-ssl             \
+            --with-screen=ncursesw \
+            --enable-locale-charset &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install-full &&
+chgrp -v -R root /usr/share/doc/lynx-2.8.8rel.2/lynx_doc
+ROOT_EOF
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+sed -e '/#LOCALE/     a LOCALE_CHARSET:TRUE'     \\
+    -i /etc/lynx/lynx.cfg
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+sed -e '/#DEFAULT_ED/ a DEFAULT_EDITOR:vi'       \\
+    -i /etc/lynx/lynx.cfg
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+sed -e '/#PERSIST/    a PERSISTENT_COOKIES:TRUE' \\
+    -i /etc/lynx/lynx.cfg
+ROOT_EOF
+

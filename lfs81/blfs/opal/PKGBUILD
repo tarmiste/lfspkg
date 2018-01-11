@@ -37,3 +37,57 @@ noextract=()
 
 md5sums=('6efa1b4c5e0ad6460019b4c6df0898d7'
          '9d345ae609936d7d9b878274ebc3cdf6')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -i 's| abs(| std::fabs(|g' plugins/video/common/mpi.cxx
+patch -Np1 -i ../opal-3.10.10-ffmpeg2-1.patch &&
+
+sed -e 's/CODEC_ID/AV_&/' \
+    -e 's/PIX_FMT_/AV_&/' \
+    -i plugins/video/H.263-1998/h263-1998.cxx \
+       plugins/video/common/dyna.cxx          \
+       plugins/video/H.264/h264-x264.cxx      \
+       plugins/video/MPEG4-ffmpeg/mpeg4.cxx   &&
+
+sed -e '/<< mime.PrintContents/ s/mime/(const std::string\&)&/' \
+    -i src/im/msrp.cxx  &&
+
+sed -e '/abs(/s/MPI.*)/(int)(&)/' \
+    -i ./plugins/video/common/mpi.cxx &&
+
+
+./configure --prefix=/usr &&
+CXXFLAGS=-Wno-deprecated-declarations make
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+chmod -v 644 /usr/lib/libopal_s.a
+ROOT_EOF
+sudo /sbin/ldconfig
+

@@ -35,3 +35,50 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('c3d35cd949084be53b92cc1e03485f88')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr --with-system-readline --without-guile &&
+make
+make -C gdb/doc doxy
+pushd gdb/testsuite &&
+make  site.exp      &&
+echo  "set gdb_test_timeout 120" >> site.exp &&
+runtest TRANSCRIPT=y
+popd
+sudo -E sh << ROOT_EOF
+make -j1 -C gdb install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -d /usr/share/doc/gdb-8.0 &&
+rm -rf gdb/doc/doxy/xml &&
+cp -Rv gdb/doc/doxy /usr/share/doc/gdb-8.0
+ROOT_EOF
+sudo /sbin/ldconfig
+

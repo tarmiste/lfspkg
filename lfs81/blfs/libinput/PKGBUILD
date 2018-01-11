@@ -35,3 +35,48 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('8247f0bb67052ffb272c50c3cb9c5998')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure $XORG_CONFIG            \
+            --disable-libwacom      \
+            --disable-debug-gui     \
+            --disable-tests         \
+            --disable-documentation \
+            --with-udev-dir=/lib/udev &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -v -dm755 \$XORG_PREFIX/share/doc/libinput-1.8.1 &&
+cp -rv doc/html/* \$XORG_PREFIX/share/doc/libinput-1.8.1
+ROOT_EOF
+sudo /sbin/ldconfig
+

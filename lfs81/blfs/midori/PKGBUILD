@@ -35,3 +35,58 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('fcc03ef759fce4fe9f2446d9da4a065e')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -e 's/protected Tally/public Tally/g'  \
+    -i midori/midori-notebook.vala         &&
+sed -e 's/%d other files/%u other files/g' \
+    -i extensions/transfers.vala           &&
+
+for f in transfers adblock/widgets apps history-list notes; do
+    sed -e 's/.remove (iter/.remove (ref iter/g' \
+        -i "extensions/$f.vala"
+done        &&
+
+mkdir build &&
+cd    build &&
+
+cmake -DCMAKE_INSTALL_PREFIX=/usr \
+      -DCMAKE_BUILD_TYPE=Release  \
+      -DUSE_ZEITGEIST=OFF         \
+      -DHALF_BRO_INCOM_WEBKIT2=ON \
+      -DUSE_GTK3=1                \
+      -DCMAKE_INSTALL_DOCDIR=/usr/share/doc/midori-0.5.11 \
+      ..  &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo /sbin/ldconfig
+

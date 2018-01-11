@@ -39,3 +39,51 @@ noextract=()
 md5sums=('ebecbe7488c624b06bc6a264a3a7c4ec'
          '3c42be5ea7cbf3635716abbb429cb90d'
          '6393363b47ddcbba82321110c3e07519')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+cp -v ../junit-4.11.jar \
+      ../hamcrest-core-1.3.jar lib/optional
+sudo -E sh << ROOT_EOF
+./build.sh -Ddist.dir=/opt/ant-1.10.1 dist &&
+ln -v -sfn ant-1.10.1 /opt/ant
+ROOT_EOF
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+cat > /etc/profile.d/ant.sh << EOF
+# Begin /etc/profile.d/ant.sh
+
+pathappend /opt/ant/bin
+export ANT_HOME=/opt/ant
+
+# End /etc/profile.d/ant.sh
+EOF
+ROOT_EOF
+

@@ -37,3 +37,87 @@ noextract=()
 
 md5sums=('b10a08785f92a4c07ad961f4d843c934'
          'c63bf7b0bb5f530cf3c08715db721cd3')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sudo -E sh << ROOT_EOF
+groupadd -g 70 scanner
+ROOT_EOF
+su $(whoami)
+./configure --prefix=/usr        \
+            --sysconfdir=/etc    \
+            --localstatedir=/var \
+            --with-group=scanner \
+            --with-docdir=/usr/share/doc/sane-backend-1.0.27 &&
+make
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install                                         &&
+install -m 644 -v tools/udev/libsane.rules           \\
+                  /etc/udev/rules.d/65-scanner.rules &&
+chgrp -v scanner  /var/lock/sane
+ROOT_EOF
+sed -i -e "/SANE_CAP_ALWAYS_SETTABLE/d" src/gtkglue.c &&
+./configure --prefix=/usr --mandir=/usr/share/man &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+install -v -m644 doc/sane.png xscanimage-icon-48x48-2.png \\
+    /usr/share/sane
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+ln -v -s ../../../../bin/xscanimage /usr/lib/gimp/2.0/plug-ins
+ROOT_EOF
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+cat >> /etc/sane.d/net.conf << "EOF"
+connect_timeout = 60
+<server_ip>
+EOF
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+mkdir -pv /usr/share/{applications,pixmaps}               &&
+
+cat > /usr/share/applications/xscanimage.desktop << "EOF" &&
+[Desktop Entry]
+Encoding=UTF-8
+Name=XScanImage - Scanning
+Comment=Acquire images from a scanner
+Exec=xscanimage
+Icon=xscanimage
+Terminal=false
+Type=Application
+Categories=Application;Graphics
+EOF
+
+ln -svf ../sane/xscanimage-icon-48x48-2.png /usr/share/pixmaps/xscanimage.png
+ROOT_EOF
+

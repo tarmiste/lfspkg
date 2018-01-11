@@ -35,3 +35,43 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('10f969f78a463704ae73529978148dbe')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr --disable-static &&
+make
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+chmod   -v   755 /usr/lib/lib{hogweed,nettle}.so &&
+install -v -m755 -d /usr/share/doc/nettle-3.3 &&
+install -v -m644 nettle.html /usr/share/doc/nettle-3.3
+ROOT_EOF
+sudo /sbin/ldconfig
+

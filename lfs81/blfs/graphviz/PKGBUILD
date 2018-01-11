@@ -37,3 +37,48 @@ noextract=()
 
 md5sums=('4ea6fd64603536406166600bcc296fc8'
          'a5970caef92772aee94bc8e1b61db97e')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -e '/ruby/s/1\.9/2.4/' -i configure.ac
+patch -p1 -i ../graphviz-2.40.1-qt5-1.patch
+sed -i '/LIBPOSTFIX="64"/s/64//' configure.ac &&
+
+autoreconf                &&
+./configure --prefix=/usr &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+ln -v -s /usr/share/graphviz/doc \\
+         /usr/share/doc/graphviz-2.40.1
+ROOT_EOF
+sudo /sbin/ldconfig
+

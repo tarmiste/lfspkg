@@ -39,3 +39,41 @@ noextract=()
 md5sums=('14e60919f859560f28426a685a555962'
          '5061c890c10a2dd0b601b65fb31b0a38'
          '6ba5f4180cfbd94d2a5577fc3204e275')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+patch -Np1 -i ../xcb-proto-1.12-schema-1.patch
+patch -Np1 -i ../xcb-proto-1.12-python3-1.patch
+./configure $XORG_CONFIG
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo /sbin/ldconfig
+

@@ -41,3 +41,101 @@ md5sums=('02aad0b2692968ba7ea96d6e4253b898'
          'dea0c4b34292bbf2c084384b404df1bc'
          'feeffb543c42d3a9790d4e77437b57db'
          '26f2acdf581adff2fbff496bc9b738a6')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sudo -E sh << ROOT_EOF
+groupadd -g 31 exim &&
+useradd -d /dev/null -c "Exim Daemon" -g exim -s /bin/false -u 31 exim
+ROOT_EOF
+patch -p1 -i ../exim-4.89-avoid_mem_clash-1.patch &&
+sed -e 's,^BIN_DIR.*$,BIN_DIRECTORY=/usr/sbin,'    \
+    -e 's,^CONF.*$,CONFIGURE_FILE=/etc/exim.conf,' \
+    -e 's,^EXIM_USER.*$,EXIM_USER=exim,'           \
+    -e '/SUPPORT_TLS/s,^#,,'                       \
+    -e '/USE_OPENSSL/s,^#,,'                       \
+    -e 's,^EXIM_MONITOR,#EXIM_MONITOR,' src/EDITME > Local/Makefile &&
+printf "USE_GDBM = yes\nDBMLIB = -lgdbm\n" >> Local/Makefile &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install                                      &&
+install -v -m644 doc/exim.8 /usr/share/man/man8   &&
+install -v -d -m755 /usr/share/doc/exim-4.89    &&
+install -v -m644 doc/* /usr/share/doc/exim-4.89 &&
+ln -sfv exim /usr/sbin/sendmail                   &&
+install -v -d -m750 -o exim -g exim /var/spool/exim
+ROOT_EOF
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+chmod -v a+wt /var/mail
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+cat >> /etc/aliases << "EOF"
+postmaster: root
+MAILER-DAEMON: root
+EOF
+exim -v -bi &&
+/usr/sbin/exim -bd -q15m
+ROOT_EOF
+
+[[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts
+pushd $SRC_DIR/blfs-bootscripts
+URL=http://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20170731.tar.xz
+BOOTPACKG=$(basename $URL)
+if [[ ! -f $BOOTPACKG ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PKG_DIR/$BOOTPACKG ]] ; then
+    cp $SRC_ARCHIVE/$PKG_DIR/$BOOTPACKG $BOOTPACKG
+  elif [[ -f $SRC_ARCHIVE/$BOOTPACKG ]] ; then
+    cp $SRC_ARCHIVE/$BOOTPACKG $BOOTPACKG
+  else
+    wget -T 30 -t 5 $URL
+    cp $BOOTPACKG $SRC_ARCHIVE
+  fi
+  rm -f unpacked
+fi
+
+if [[ -e unpacked ]] ; then
+  BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+  if ! [[ -d $BOOTUNPACKDIR ]]; then
+    rm unpacked
+    tar -xvf $BOOTPACKG > unpacked
+    BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+  fi
+else
+  tar -xvf $BOOTPACKG > unpacked
+  BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+fi
+cd $BOOTUNPACKDIR
+sudo -E sh << ROOT_EOF
+make -j1 install-exim
+ROOT_EOF
+
+popd

@@ -35,3 +35,73 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('b35e794140c196ff59b492b56c1e73db')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+echo '#define SYS_VIMRC_FILE  "/etc/vimrc"' >>  src/feature.h &&
+echo '#define SYS_GVIMRC_FILE "/etc/gvimrc"' >> src/feature.h &&
+
+./configure --prefix=/usr \
+            --with-features=huge \
+            --with-tlib=ncursesw &&
+make
+#make -k test || true
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+ln -snfv ../vim/vim80/doc /usr/share/doc/vim-8.0.586
+ROOT_EOF
+rsync -avzcP --delete --exclude="/dos/" --exclude="/spell/" \
+    ftp.nluug.nl::Vim/runtime/ ./runtime/
+sudo -E sh << ROOT_EOF
+make -j1 -C src installruntime &&
+vim -c ":helptags /usr/share/doc/vim-8.0.586" -c ":q"
+ROOT_EOF
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+cat > /usr/share/applications/gvim.desktop << "EOF"
+[Desktop Entry]
+Name=GVim Text Editor
+Comment=Edit text files
+Comment[pt_BR]=Edite arquivos de texto
+TryExec=gvim
+Exec=gvim -f %F
+Terminal=false
+Type=Application
+Icon=gvim.png
+Categories=Utility;TextEditor;
+StartupNotify=true
+MimeType=text/plain;
+EOF
+ROOT_EOF
+
+
+

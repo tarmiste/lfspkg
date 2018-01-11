@@ -35,3 +35,78 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('b72794996c6a3ad94634727b95f9d204')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+export LIBRARY_PATH=$XORG_PREFIX/lib
+2to3 -w data/autostart/openbox-xdg-autostart &&
+sed 's/python/python3/' -i data/autostart/openbox-xdg-autostart
+./configure --prefix=/usr     \
+            --sysconfdir=/etc \
+            --disable-static  \
+            --docdir=/usr/share/doc/openbox-3.6.1 &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo /sbin/ldconfig
+
+cp -rf /etc/xdg/openbox ~/.config
+
+
+ls -d /usr/share/themes/*/openbox-3 | sed 's#.*es/##;s#/o.*##'
+
+echo openbox > ~/.xinitrc
+
+cat > ~/.xinitrc << "EOF"
+display -backdrop -window root /path/to/beautiful/picture.jpeg
+exec openbox
+EOF
+
+cat > ~/.xinitrc << "EOF"
+# make an array which lists the pictures:
+picture_list=(~/.config/backgrounds/*)
+# create a random integer between 0 and the number of pictures:
+random_number=$(( ${RANDOM} % ${#picture_list[@]} ))
+# display the chosen picture:
+display -backdrop -window root "${picture_list[${random_number}]}"
+exec openbox
+EOF
+
+cat > ~/.xinitrc << "EOF"
+. /etc/profile
+picture_list=(~/.config/backgrounds/*)
+random_number=$(( ${RANDOM} % ${#picture_list[*]} ))
+display -backdrop -window root "${picture_list[${random_number}]}"
+numlockx
+eval $(dbus-launch --auto-syntax --exit-with-session)
+lxpanel &
+exec openbox
+EOF
+

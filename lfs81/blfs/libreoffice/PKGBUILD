@@ -41,3 +41,117 @@ md5sums=('3491becc5b7e3b1658239b8be877770c'
          'df72048ade4fe7a63a7934af65f2e5bd'
          'c3e731156d2b5594cd3e0dc8c36d7ea3'
          '18ea9867fea2fd0f9149df43ce286e30')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+tar -xf libreoffice-5.4.0.3.tar.xz --no-overwrite-dir &&
+cd libreoffice-5.4.0.3
+install -dm755 external/tarballs &&
+ln -sv ../../../libreoffice-dictionaries-5.4.0.3.tar.xz external/tarballs/ &&
+ln -sv ../../../libreoffice-help-5.4.0.3.tar.xz         external/tarballs/
+ln -sv ../../../libreoffice-translations-5.4.0.3.tar.xz external/tarballs/
+export LO_PREFIX=**EDITME<PREFIX>EDITME**
+sed -e "/gzip -f/d"   \
+    -e "s|.1.gz|.1|g" \
+    -i bin/distro-install-desktop-integration &&
+
+sed -e "/distro-install-file-lists/d" -i Makefile.in &&
+
+./autogen.sh --prefix=$LO_PREFIX         \
+             --sysconfdir=/etc           \
+             --with-vendor=BLFS          \
+             --with-lang='fr en-GB'      \
+             --with-help                 \
+             --with-myspell-dicts        \
+             --with-alloc=system         \
+             --without-junit             \
+             --without-system-dicts      \
+             --disable-dconf             \
+             --disable-odk               \
+             --enable-release-build=yes  \
+             --enable-python=system      \
+             --with-system-apr           \
+             --with-system-boost         \
+             --with-system-cairo         \
+             --with-system-clucene       \
+             --with-system-curl          \
+             --with-system-expat         \
+             --with-system-graphite      \
+             --with-system-harfbuzz      \
+             --with-system-icu           \
+             --with-system-jpeg          \
+             --with-system-lcms2         \
+             --with-system-libatomic_ops \
+             --with-system-libpng        \
+             --with-system-libxml        \
+             --with-system-neon          \
+             --with-system-nss           \
+             --with-system-odbc          \
+             --with-system-openldap      \
+             --with-system-openssl       \
+             --with-system-poppler       \
+             --with-system-postgresql    \
+             --with-system-redland       \
+             --with-system-serf          \
+             --with-system-zlib
+#make -k build-nocheck || true
+make build-nocheck
+sudo -E sh << ROOT_EOF
+make -j1 distro-pack-install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+if [ "\$LO_PREFIX" != "/usr" ]; then
+
+  # This symlink is necessary for the desktop menu entries
+  ln -svf \$LO_PREFIX/lib/libreoffice/program/soffice /usr/bin/libreoffice &&
+
+  # Icons
+  mkdir -vp /usr/share/pixmaps
+  for i in \$LO_PREFIX/share/icons/hicolor/32x32/apps/*; do
+    ln -svf \$i /usr/share/pixmaps
+  done &&
+
+  # Desktop menu entries
+  for i in \$LO_PREFIX/lib/libreoffice/share/xdg/*; do
+    ln -svf \$i /usr/share/applications/libreoffice-\$(basename \$i)
+  done &&
+
+  # Man pages
+  for i in \$LO_PREFIX/share/man/man1/*; do
+    ln -svf \$i /usr/share/man/man1/
+  done
+
+  unset i
+fi
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+update-desktop-database
+ROOT_EOF
+sudo /sbin/ldconfig
+

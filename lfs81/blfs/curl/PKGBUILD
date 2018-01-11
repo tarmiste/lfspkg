@@ -35,3 +35,52 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('ac4a59c38c47adc160ea71eace20257b')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr                           \
+            --disable-static                        \
+            --enable-threaded-resolver              \
+            --with-ca-path=/etc/ssl/certs &&
+make
+#make -k test || true
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+
+rm -rf docs/examples/.deps &&
+
+find docs \\( -name Makefile\\* \\
+          -o -name \\*.1       \\
+          -o -name \\*.3 \\)    \\
+          -exec rm {} \\;      &&
+install -v -d -m755 /usr/share/doc/curl-7.55.1 &&
+cp -v -R docs/*     /usr/share/doc/curl-7.55.1
+ROOT_EOF
+sudo /sbin/ldconfig
+

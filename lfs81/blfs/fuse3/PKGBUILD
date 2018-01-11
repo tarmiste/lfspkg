@@ -35,3 +35,66 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('20b10f24b825062c1db9a21a35157f97')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr    \
+            --disable-static \
+            --exec-prefix=/  \
+            --with-pkgconfigdir=/usr/lib/pkgconfig \
+            INIT_D_PATH=/tmp/init.d &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install                                         &&
+rm -v /lib/libfuse3.{so,la}                          &&
+ln -sfv ../../lib/libfuse3.so.3 /usr/lib/libfuse3.so &&
+
+rm -rf  /tmp/init.d &&
+
+install -v -m755 -d /usr/share/doc/fuse-3.1.1 &&
+install -v -m644    doc/{README.NFS,kernel.txt} \\
+                    /usr/share/doc/fuse-3.1.1 &&
+cp -Rv doc/html /usr/share/doc/fuse-3.1.1
+ROOT_EOF
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+cat > /etc/fuse.conf << "EOF"
+# Set the maximum number of FUSE mounts allowed to non-root users.
+# The default is 1000.
+#
+#mount_max = 1000
+
+# Allow non-root users to specify the 'allow_other' or 'allow_root'
+# mount options.
+#
+#user_allow_other
+EOF
+ROOT_EOF
+

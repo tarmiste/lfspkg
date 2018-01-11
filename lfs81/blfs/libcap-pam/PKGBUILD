@@ -35,3 +35,39 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('6666b839e5d46c2ad33fc8aa2ceb5f77')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+make -C pam_cap
+sudo -E sh << ROOT_EOF
+install -v -m755 pam_cap/pam_cap.so /lib/security &&
+install -v -m644 pam_cap/capability.conf /etc/security
+ROOT_EOF
+sudo /sbin/ldconfig
+

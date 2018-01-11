@@ -35,3 +35,40 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('9aa46bea862a82d7bdb86017e94feffc')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+make lib
+sudo -E sh << ROOT_EOF
+install -vm644 linear.h /usr/include &&
+install -vm755 liblinear.so.3 /usr/lib &&
+ln -sfv liblinear.so.3 /usr/lib/liblinear.so
+ROOT_EOF
+sudo /sbin/ldconfig
+

@@ -37,3 +37,45 @@ noextract=()
 
 md5sums=('8af94611baf20d9646c7c2c285859818'
          '412d2135fb46181b57a728f3c3e019b3')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+patch -Np1 -i ../lcms-1.19-cve_2013_4276-1.patch &&
+
+./configure --prefix=/usr --disable-static       &&
+make
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+install -v -m755 -d /usr/share/doc/lcms-1.19 &&
+install -v -m644    README.1ST doc/* \\
+                    /usr/share/doc/lcms-1.19
+ROOT_EOF
+sudo /sbin/ldconfig
+

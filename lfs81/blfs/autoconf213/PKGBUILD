@@ -37,3 +37,45 @@ noextract=()
 
 md5sums=('9de56d4a161a723228220b0f425dc711'
          '9ceaee69e62767770eb473d5242db70d')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+patch -Np1 -i ../autoconf-2.13-consolidated_fixes-1.patch &&
+mv -v autoconf.texi autoconf213.texi                      &&
+rm -v autoconf.info                                       &&
+./configure --prefix=/usr --program-suffix=2.13           &&
+make
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install                                      &&
+install -v -m644 autoconf213.info /usr/share/info &&
+install-info --info-dir=/usr/share/info autoconf213.info
+ROOT_EOF
+sudo /sbin/ldconfig
+

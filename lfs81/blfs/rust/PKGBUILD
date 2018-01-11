@@ -35,3 +35,53 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('75e779670ac79edf023497a9c37eb35d')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+cat <<EOF > config.toml
+# see src/bootstrap/config.toml.example for more possible options
+[llvm]
+targets = "X86"
+
+[build]
+# install cargo as well as rust
+extended = true
+
+[install]
+prefix = "/usr"
+docdir = "share/doc/rustc-1.19.0"
+channel = "stable"
+EOF
+./x.py build
+#make -k  || true
+sudo -E sh << ROOT_EOF
+./x.py install
+ROOT_EOF
+sudo /sbin/ldconfig
+

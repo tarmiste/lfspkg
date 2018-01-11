@@ -35,3 +35,48 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('1742a556089c36c3a89eb1b957da5a60')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr     \
+            --sysconfdir=/etc \
+            --docdir=/usr/share/doc/pm-utils-1.4.1 &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -v -m644 man/*.1 /usr/share/man/man1 &&
+install -v -m644 man/*.8 /usr/share/man/man8 &&
+ln -sv pm-action.8 /usr/share/man/man8/pm-suspend.8 &&
+ln -sv pm-action.8 /usr/share/man/man8/pm-hibernate.8 &&
+ln -sv pm-action.8 /usr/share/man/man8/pm-suspend-hybrid.8
+ROOT_EOF
+sudo /sbin/ldconfig
+

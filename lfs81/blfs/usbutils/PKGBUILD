@@ -35,3 +35,49 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('2780b6ae21264c888f8f30fb2aab1259')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -i '/^usbids/ s:usb.ids:hwdata/&:' lsusb.py &&
+
+./configure --prefix=/usr --datadir=/usr/share/hwdata &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -dm755 /usr/share/hwdata/ &&
+wget http://www.linux-usb.org/usb.ids -O /usr/share/hwdata/usb.ids
+ROOT_EOF
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+wget http://www.linux-usb.org/usb.ids -O /usr/share/hwdata/usb.ids
+ROOT_EOF
+

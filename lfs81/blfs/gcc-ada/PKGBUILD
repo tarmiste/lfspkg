@@ -39,3 +39,110 @@ noextract=()
 md5sums=('ff370482573133a7fcdd96cd2f552292'
          '226dac83d9e6490fc8542ac0934a1db0'
          '69423c7ad8d9759377d4fff71a78992d')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sudo -E sh << ROOT_EOF
+make -j1 ins-all prefix=/opt/gnat
+ROOT_EOF
+PATH_HOLD=$PATH &&
+export PATH=/opt/gnat/bin:$PATH_HOLD
+sudo -E sh << ROOT_EOF
+find /opt/gnat -name ld -exec mv -v {} {}.old \\;
+find /opt/gnat -name as -exec mv -v {} {}.old \\;
+ROOT_EOF
+sudo /sbin/ldconfig
+
+
+cd $BUILD_DIR        ##### Unpacking source
+find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
+case $PACKAGE in
+  *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
+     tar -xvf $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR=`grep '[^./]\+' unpacked | head -n1 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.tar.lz)
+     bsdtar -xvf $SRC_DIR/$PACKAGE 2> unpacked
+     UNPACKDIR=`head -n1 unpacked | cut  -d" " -f2 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.zip)
+     zipinfo -1 $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR="$(sed 's@/.*@@' unpacked | uniq )"
+     if test $(wc -w <<< $UNPACKDIR) -eq 1; then
+       unzip $SRC_DIR/$PACKAGE
+     else
+       UNPACKDIR=${PACKAGE%.zip}
+       unzip -d $UNPACKDIR $SRC_DIR/$PACKAGE
+     fi
+     ;;
+  *)
+     UNPACKDIR=$PKG_DIR-build
+     mkdir $UNPACKDIR
+     cp $SRC_DIR/$PACKAGE $UNPACKDIR
+     cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
+     ;;
+esac
+#######  Building package
+cd $UNPACKDIR
+
+case $(uname -m) in
+  x86_64)
+    sed -e '/m64=/s/lib64/lib/' \
+        -i.orig gcc/config/i386/t-linux64
+  ;;
+esac
+
+mkdir build &&
+cd    build &&
+
+../configure               \
+    --prefix=/usr          \
+    --disable-multilib     \
+    --with-system-zlib     \
+    --enable-languages=ada &&
+make
+ulimit -s 32768 &&
+make -k check
+../contrib/test_summary
+sudo -E sh << ROOT_EOF
+make -j1 install                                               &&
+mkdir -pv /usr/share/gdb/auto-load/usr/lib                 &&
+mv -v /usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib    &&
+
+chown -v -R root:root \\
+    /usr/lib/gcc/*linux-gnu/7.2.0/include{,-fixed} \\
+    /usr/lib/gcc/*linux-gnu/7.2.0/ada{lib,include}
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+rm -rf /opt/gnat
+ROOT_EOF
+export PATH=$PATH_HOLD &&
+unset PATH_HOLD
+sudo /sbin/ldconfig
+

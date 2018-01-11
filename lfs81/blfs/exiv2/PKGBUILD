@@ -35,3 +35,45 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('258d4831b30f75a01e0234065c6c2806')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr     \
+            --enable-video    \
+            --enable-webready \
+            --without-ssh     \
+            --disable-static  &&
+
+make
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+chmod -v 755 /usr/lib/libexiv2.so
+ROOT_EOF
+sudo /sbin/ldconfig
+

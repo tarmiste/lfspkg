@@ -37,3 +37,45 @@ noextract=()
 
 md5sums=('ae249165c173b1ff386ee8ad676815f5'
          'ef8fbe0c92efd9a60d7f320e211d10b2')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -i '/_PyVerify_fd/,+1d' python/types.c
+./configure --prefix=/usr --disable-static --with-history &&
+make
+tar xf ../xmlts20130923.tar.gz
+#make -k check > check.log || true
+#make -k  || true
+#make -k  || true
+#make -k  || true
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo /sbin/ldconfig
+

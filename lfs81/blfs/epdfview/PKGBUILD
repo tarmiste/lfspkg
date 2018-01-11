@@ -37,3 +37,50 @@ noextract=()
 
 md5sums=('e50285b01612169b2594fea375f53ae4'
          'f1b7c1e596c8bdd60dec43ecf38ca212')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+patch -Np1 -i ../epdfview-0.1.8-fixes-2.patch &&
+./configure --prefix=/usr &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+for size in 24 32 48; do
+  ln -svf ../../../../epdfview/pixmaps/icon_epdfview-\$size.png \\
+          /usr/share/icons/hicolor/\${size}x\${size}/apps
+done &&
+unset size &&
+
+update-desktop-database &&
+gtk-update-icon-cache -t -f --include-image-data /usr/share/icons/hicolor
+ROOT_EOF
+sudo /sbin/ldconfig
+

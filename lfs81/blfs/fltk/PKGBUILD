@@ -35,3 +35,48 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('c0e43ac259ac8c5d0f7634566e21e3f8')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -i -e '/cat./d' documentation/Makefile       &&
+
+./configure --prefix=/usr    \
+            --enable-shared  &&
+make
+make -C documentation html
+#make -k  || true
+sudo -E sh << ROOT_EOF
+make -j1 docdir=/usr/share/doc/fltk-1.3.4 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+make -j1 -C test          docdir=/usr/share/doc/fltk-1.3.4 install-linux &&
+make -j1 -C documentation docdir=/usr/share/doc/fltk-1.3.4 install-linux
+ROOT_EOF
+sudo /sbin/ldconfig
+

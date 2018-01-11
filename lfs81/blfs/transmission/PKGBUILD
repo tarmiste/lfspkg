@@ -37,3 +37,50 @@ noextract=()
 
 md5sums=('3fce404a436e3cd7fde80fb6ed61c264'
          '7627c44c7f60c4309de32275ede253a4')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+patch -Np1 -i ../transmission-2.92-openssl-1.1.0-1.patch
+./configure --prefix=/usr &&
+make
+pushd qt        &&
+  qmake qtr.pro &&
+  make          &&
+popd
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+make -j1 INSTALL_ROOT=/usr -C qt install &&
+
+install -m644 qt/transmission-qt.desktop /usr/share/applications/transmission-qt.desktop &&
+install -m644 qt/icons/transmission.png  /usr/share/pixmaps/transmission-qt.png
+ROOT_EOF
+sudo /sbin/ldconfig
+

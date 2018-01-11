@@ -35,3 +35,47 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('e348b0e1d7bd1cd82d64b91ff37e727e')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+make DEBUG=-DNDEBUG     \
+     INSTALL_USER=root  \
+     INSTALL_GROUP=root \
+     LOCAL_CONFIGURE_OPTIONS="--enable-readline"
+sudo -E sh << ROOT_EOF
+make -j1 PKG_DOC_DIR=/usr/share/doc/xfsprogs-4.12.0 install     &&
+make -j1 PKG_DOC_DIR=/usr/share/doc/xfsprogs-4.12.0 install-dev &&
+
+rm -rfv /usr/lib/libhandle.a                               &&
+rm -rfv /lib/libhandle.{a,la,so}                           &&
+ln -sfv ../../lib/libhandle.so.1 /usr/lib/libhandle.so     &&
+sed -i "s@libdir='/lib@libdir='/usr/lib@" /usr/lib/libhandle.la
+ROOT_EOF
+sudo /sbin/ldconfig
+

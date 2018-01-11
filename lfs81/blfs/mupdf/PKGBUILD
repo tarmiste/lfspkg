@@ -39,3 +39,54 @@ noextract=()
 md5sums=('ab9a6629f572225e803c4cf426bdb09c'
          '74a77ab819b5ac96aa30db968b9f5f68'
          '2405dfd2e997b2de7065134d0bb78bfa')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+rm -rf thirdparty/curl     &&
+rm -rf thirdparty/freetype &&
+rm -rf thirdparty/harfbuzz &&
+rm -rf thirdparty/jpeg     &&
+rm -rf thirdparty/libjpeg  &&
+rm -rf thirdparty/openjpeg &&
+rm -rf thirdparty/zlib     &&
+
+patch -Np1 -i ../mupdf-1.11-openjpeg-2.patch    &&
+patch -Np1 -i ../mupdf-1.11-shared_libs-1.patch &&
+
+make build=release
+sudo -E sh << ROOT_EOF
+make -j1 prefix=/usr                      \\
+     build=release                    \\
+     docdir=/usr/share/doc/mupdf-1.11 \\
+     install                          &&
+
+ln -sfv mupdf-x11-curl /usr/bin/mupdf
+ROOT_EOF
+sudo /sbin/ldconfig
+

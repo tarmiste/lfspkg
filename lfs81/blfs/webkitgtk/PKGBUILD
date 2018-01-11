@@ -35,3 +35,63 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('0e2d142a586e4ff79cf0324f4fdbf20c')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -i 's/unsigned short/char16_t/'            \
+       Source/JavaScriptCore/API/JSStringRef.h \
+       Source/WebKit2/Shared/API/c/WKString.h  &&
+
+sed -i '/stdbool.h/ a#include <uchar.h>' \
+       Source/JavaScriptCore/API/JSBase.h
+mkdir -vp build &&
+cd        build &&
+
+CFLAGS=-Wno-expansion-to-defined  \
+CXXFLAGS=-Wno-expansion-to-defined \
+cmake -DCMAKE_BUILD_TYPE=Release  \
+      -DCMAKE_INSTALL_PREFIX=/usr \
+      -DCMAKE_SKIP_RPATH=ON       \
+      -DPORT=GTK                  \
+      -DLIB_INSTALL_DIR=/usr/lib  \
+      -DUSE_LIBHYPHEN=OFF         \
+      -DENABLE_MINIBROWSER=ON     \
+      -Wno-dev .. &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+
+install -vdm755 /usr/share/gtk-doc/html/webkit{2,dom}gtk-4.0 &&
+install -vm644  ../Documentation/webkit2gtk-4.0/html/*   \\
+                /usr/share/gtk-doc/html/webkit2gtk-4.0       &&
+install -vm644  ../Documentation/webkitdomgtk-4.0/html/* \\
+                /usr/share/gtk-doc/html/webkitdomgtk-4.0
+ROOT_EOF
+sudo /sbin/ldconfig
+

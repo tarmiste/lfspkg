@@ -37,3 +37,151 @@ noextract=()
 
 md5sums=('bc55a68fdd6770215cfa7a49fe7e3c98'
          '162165aaf55bc73b6442a449e0ed26cc')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+cat > mozconfig << "EOF"
+# If you have a multicore machine, all cores will be used by default.
+# If desired, you can reduce the number of cores used, e.g. to 1, by
+# uncommenting the next line and setting a valid number of CPU cores.
+#mk_add_options MOZ_MAKE_FLAGS="-j1"
+
+# If you have installed dbus-glib, comment out this line:
+ac_add_options --disable-dbus
+
+# If you have installed dbus-glib, and you have installed (or will install)
+# wireless-tools, and you wish to use geolocation web services, comment out
+# this line
+ac_add_options --disable-necko-wifi
+
+# API Keys for geolocation APIs - necko-wifi (above) is required for MLS
+# Uncomment the following line if you wish to use Mozilla Location Service
+#ac_add_options --with-mozilla-api-keyfile=$PWD/mozilla-key
+
+# Uncomment the following line if you wish to use Google's geolocaton API
+# (needed for use with saved maps with Google Maps)
+#ac_add_options --with-google-api-keyfile=$PWD/google-key
+
+# Uncomment these lines if you have installed optional dependencies:
+#ac_add_options --enable-system-hunspell
+#ac_add_options --enable-startup-notification
+
+# Uncomment the following option if you have not installed PulseAudio
+#ac_add_options --disable-pulseaudio
+# and uncomment this if you installed alsa-lib instead of PulseAudio
+#ac_add_options --enable-alsa
+
+# If you have installed GConf, comment out this line
+ac_add_options --disable-gconf
+
+# Comment out following options if you have not installed
+# recommended dependencies:
+ac_add_options --enable-system-sqlite
+ac_add_options --with-system-libevent
+ac_add_options --with-system-libvpx
+ac_add_options --with-system-nspr
+ac_add_options --with-system-nss
+ac_add_options --with-system-icu
+
+# If you are going to apply the patch for system graphite
+# and system harfbuzz, uncomment these lines:
+#ac_add_options --with-system-graphite2
+#ac_add_options --with-system-harfbuzz
+
+# Stripping is now enabled by default.
+# Uncomment these lines if you need to run a debugger:
+#ac_add_options --disable-strip
+#ac_add_options --disable-install-strip
+
+# The BLFS editors recommend not changing anything below this line:
+ac_add_options --prefix=/usr
+ac_add_options --enable-application=browser
+
+ac_add_options --disable-crashreporter
+ac_add_options --disable-updater
+ac_add_options --disable-tests
+
+# Optimization for size is broken with gcc7
+ac_add_options --enable-optimize="-O2"
+
+ac_add_options --enable-official-branding
+ac_add_options --enable-safe-browsing
+ac_add_options --enable-url-classifier
+
+# From firefox-40, using system cairo causes firefox to crash
+# frequently when it is doing background rendering in a tab.
+#ac_add_options --enable-system-cairo
+ac_add_options --enable-system-ffi
+ac_add_options --enable-system-pixman
+
+ac_add_options --with-pthreads
+
+ac_add_options --with-system-bz2
+ac_add_options --with-system-jpeg
+ac_add_options --with-system-png
+ac_add_options --with-system-zlib
+
+mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/firefox-build-dir
+EOF
+patch -Np1 -i ../firefox-55.0.3-system_graphite2_harfbuzz-1.patch
+echo "AIzaSyDxKL42zsPjbke5O8_rPVpVrLrJ8aeE9rQ" > google-key
+echo "d2284a20-0505-4927-a809-7ffaf4d91e55" > mozilla-key
+make -f client.mk
+sudo -E sh << ROOT_EOF
+make -j1 -f client.mk install INSTALL_SDK= &&
+chown -R 0:0 /usr/lib/firefox-55.0.3   &&
+
+mkdir -pv    /usr/lib/mozilla/plugins  &&
+ln    -sfv   ../../mozilla/plugins /usr/lib/firefox-55.0.3/browser
+ROOT_EOF
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+mkdir -pv /usr/share/applications &&
+mkdir -pv /usr/share/pixmaps &&
+
+cat > /usr/share/applications/firefox.desktop << "EOF" &&
+[Desktop Entry]
+Encoding=UTF-8
+Name=Firefox Web Browser
+Comment=Browse the World Wide Web
+GenericName=Web Browser
+Exec=firefox %u
+Terminal=false
+Type=Application
+Icon=firefox
+Categories=GNOME;GTK;Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml+xml;application/vnd.mozilla.xul+xml;text/mml;x-scheme-handler/http;x-scheme-handler/https;
+StartupNotify=true
+EOF
+
+ln -sfv /usr/lib/firefox-55.0.3/browser/icons/mozicon128.png \\
+        /usr/share/pixmaps/firefox.png
+ROOT_EOF
+

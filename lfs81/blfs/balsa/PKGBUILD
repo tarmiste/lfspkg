@@ -37,3 +37,44 @@ noextract=()
 
 md5sums=('d02bc62af34c4d1b0c1f6cfb4efff8db'
          'c0cd694fe84ba5dc1aeaafe62c047182')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+patch -Np1 -i ../balsa-2.5.3-openssl-1.1.0-1.patch
+./configure --prefix=/usr            \
+            --sysconfdir=/etc        \
+            --localstatedir=/var/lib \
+            --without-html-widget    \
+            --without-libnotify      &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo /sbin/ldconfig
+

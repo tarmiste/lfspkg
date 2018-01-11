@@ -37,3 +37,89 @@ noextract=()
 
 md5sums=('7e4fd7a53b1d3c32dff642ab1a94b44d'
          'a591c8974b2f4f584d0a769d52ed6c5b')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -i '/gegl/s/2/3/' configure &&
+sed -i '70,75 d' app/core/gimpparamspecs-duplicate.c
+./configure --prefix=/usr \
+            --sysconfdir=/etc \
+            --without-gvfs &&
+make
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+gtk-update-icon-cache &&
+update-desktop-database
+ROOT_EOF
+sudo /sbin/ldconfig
+
+
+cd $BUILD_DIR        ##### Unpacking source
+find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
+case $PACKAGE in
+  *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
+     tar -xvf $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR=`grep '[^./]\+' unpacked | head -n1 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.tar.lz)
+     bsdtar -xvf $SRC_DIR/$PACKAGE 2> unpacked
+     UNPACKDIR=`head -n1 unpacked | cut  -d" " -f2 | sed 's@^\./@@;s@/.*@@'`
+     ;;
+  *.zip)
+     zipinfo -1 $SRC_DIR/$PACKAGE > unpacked
+     UNPACKDIR="$(sed 's@/.*@@' unpacked | uniq )"
+     if test $(wc -w <<< $UNPACKDIR) -eq 1; then
+       unzip $SRC_DIR/$PACKAGE
+     else
+       UNPACKDIR=${PACKAGE%.zip}
+       unzip -d $UNPACKDIR $SRC_DIR/$PACKAGE
+     fi
+     ;;
+  *)
+     UNPACKDIR=$PKG_DIR-build
+     mkdir $UNPACKDIR
+     cp $SRC_DIR/$PACKAGE $UNPACKDIR
+     cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
+     ;;
+esac
+#######  Building package
+cd $UNPACKDIR
+
+ALL_LINGUAS="ca da de el en en_GB es fr it ja ko nl nn pt_BR ru sl sv zh_CN" \
+./configure --prefix=/usr &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+chown -R root:root /usr/share/gimp/2.0/help
+ROOT_EOF
+sudo /sbin/ldconfig
+

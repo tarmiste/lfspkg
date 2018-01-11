@@ -35,3 +35,41 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('8acb3c885c87f6838704a0025e435871')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -i '/stdlib/a #include <limits.h>' transport.hxx &&
+make all rpl8 btcflash
+sudo -E sh << ROOT_EOF
+make -j1 prefix=/usr install &&
+install -v -m644 -D index.html \\
+    /usr/share/doc/dvd+rw-tools-7.1/index.html
+ROOT_EOF
+sudo /sbin/ldconfig
+

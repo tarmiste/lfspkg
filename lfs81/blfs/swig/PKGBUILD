@@ -35,3 +35,48 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('82133dfa7bba75ff9ad98a7046be687c')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -i 's/\$(PERL5_SCRIPT/-I. &/' Examples/Makefile.in &&
+sed -i 's/\$command 2/-I. &/' Examples/test-suite/perl5/run-perl-test.pl
+./configure --prefix=/usr                      \
+            --without-clisp                    \
+            --without-maximum-compile-warnings &&
+make
+#make -k check TCL_INCLUDE= GOGCC=true || true
+#PY3=1 make -k check-python-examples || true
+#PY3=1 make -k check-python-test-suite || true
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+install -v -m755 -d /usr/share/doc/swig-3.0.12 &&
+cp -v -R Doc/* /usr/share/doc/swig-3.0.12
+ROOT_EOF
+sudo /sbin/ldconfig
+

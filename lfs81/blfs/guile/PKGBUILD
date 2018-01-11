@@ -35,3 +35,60 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('d3c002bcf92dbf68f6de45803874db0f')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr    \
+            --disable-static \
+            --docdir=/usr/share/doc/guile-2.2.2 &&
+make      &&
+make html &&
+
+makeinfo --plaintext -o doc/r5rs/r5rs.txt doc/r5rs/r5rs.texi &&
+makeinfo --plaintext -o doc/ref/guile.txt doc/ref/guile.texi
+#make -k  || true
+sudo -E sh << ROOT_EOF
+make -j1 install      &&
+make -j1 install-html &&
+
+mv /usr/lib/libguile-*-gdb.scm /usr/share/gdb/auto-load/usr/lib &&
+mv /usr/share/doc/guile-2.2.2/{guile.html,ref} &&
+mv /usr/share/doc/guile-2.2.2/r5rs{.html,}     &&
+
+find examples -name "Makefile*" -delete         &&
+cp -vR examples   /usr/share/doc/guile-2.2.2   &&
+
+for DIRNAME in r5rs ref; do
+  install -v -m644  doc/\${DIRNAME}/*.txt \\
+                    /usr/share/doc/guile-2.2.2/\${DIRNAME}
+done &&
+unset DIRNAME
+ROOT_EOF
+sudo /sbin/ldconfig
+

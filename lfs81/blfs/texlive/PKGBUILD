@@ -39,3 +39,98 @@ noextract=()
 md5sums=('ba5dac09edc51c21306b665d71247810'
          '7c01f0664c7f1fff9704b0ad06fa4a5e'
          '3f5e83c08f2a4f088bdb814de8d99905')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sudo -E sh << ROOT_EOF
+cat >> /etc/ld.so.conf << EOF
+# Begin texlive 2017 addition
+
+/opt/texlive/2017/lib
+
+# End texlive 2017 addition
+EOF
+ROOT_EOF
+export TEXARCH=$(uname -m | sed -e 's/i.86/i386/' -e 's/$/-linux/') &&
+
+patch -Np1 -i ../texlive-20170524-source-gcc7-1.patch           &&
+patch -Np1 -i ../texlive-20170524-source-upstream_fixes-2.patch &&
+
+mkdir texlive-build &&
+cd texlive-build    &&
+
+../configure                                                    \
+    --prefix=/opt/texlive/2017                                  \
+    --bindir=/opt/texlive/2017/bin/$TEXARCH                     \
+    --datarootdir=/opt/texlive/2017                             \
+    --includedir=/opt/texlive/2017/include                      \
+    --infodir=/opt/texlive/2017/texmf-dist/doc/info             \
+    --libdir=/opt/texlive/2017/lib                              \
+    --mandir=/opt/texlive/2017/texmf-dist/doc/man               \
+    --disable-native-texlive-build                              \
+    --disable-static --enable-shared                            \
+    --with-system-cairo                                         \
+    --with-system-fontconfig                                    \
+    --with-system-freetype2                                     \
+    --with-system-gmp                                           \
+    --with-system-graphite2                                     \
+    --with-system-harfbuzz                                      \
+    --with-system-icu                                           \
+    --with-system-libgs                                         \
+    --with-system-libpaper                                      \
+    --with-system-libpng                                        \
+    --with-system-mpfr                                          \
+    --with-system-pixman                                        \
+    --with-system-poppler                                       \
+    --with-system-xpdf                                          \
+    --with-system-zlib                                          \
+    --with-banner-add=" - BLFS" &&
+
+make
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install-strip &&
+/sbin/ldconfig &&
+make -j1 texlinks &&
+mkdir -pv /opt/texlive/2017/tlpkg/TeXLive/ &&
+install -v -m644 ../texk/tests/TeXLive/* /opt/texlive/2017/tlpkg/TeXLive/
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+tar -xf ../../texlive-20170524-texmf.tar.xz -C /opt/texlive/2017 --strip-components=1 &&
+pushd /opt/texlive/2017 &&
+patch -Np1 -i /sources/texlive-20170524-texmf-upstream_fixes-1.patch &&
+popd
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+mktexlsr &&
+fmtutil-sys --all &&
+mtxrun --generate
+ROOT_EOF
+sudo /sbin/ldconfig
+

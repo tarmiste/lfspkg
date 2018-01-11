@@ -37,3 +37,100 @@ noextract=()
 
 md5sums=('5825332b72bae9d8793f9cba16cb13fd'
          'feeffb543c42d3a9790d4e77437b57db')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sudo -E sh << ROOT_EOF
+groupadd -g 88 unbound &&
+useradd -c "Unbound DNS resolver" -d /var/lib/unbound -u 88 \\
+        -g unbound -s /bin/false unbound
+ROOT_EOF
+./configure --prefix=/usr     \
+            --sysconfdir=/etc \
+            --disable-static  \
+            --with-pidfile=/run/unbound.pid &&
+make
+make doc
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+mv -v /usr/sbin/unbound-host /usr/bin/
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -v -m755 -d /usr/share/doc/unbound-1.6.5 &&
+install -v -m644 doc/html/* /usr/share/doc/unbound-1.6.5
+ROOT_EOF
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+echo "nameserver 127.0.0.1" > /etc/resolv.conf
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+sed -i '/request /i\\supersede domain-name-servers 127.0.0.1;' \\
+       /etc/dhcp/dhclient.conf
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+unbound-anchor
+ROOT_EOF
+
+[[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts
+pushd $SRC_DIR/blfs-bootscripts
+URL=http://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20170731.tar.xz
+BOOTPACKG=$(basename $URL)
+if [[ ! -f $BOOTPACKG ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PKG_DIR/$BOOTPACKG ]] ; then
+    cp $SRC_ARCHIVE/$PKG_DIR/$BOOTPACKG $BOOTPACKG
+  elif [[ -f $SRC_ARCHIVE/$BOOTPACKG ]] ; then
+    cp $SRC_ARCHIVE/$BOOTPACKG $BOOTPACKG
+  else
+    wget -T 30 -t 5 $URL
+    cp $BOOTPACKG $SRC_ARCHIVE
+  fi
+  rm -f unpacked
+fi
+
+if [[ -e unpacked ]] ; then
+  BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+  if ! [[ -d $BOOTUNPACKDIR ]]; then
+    rm unpacked
+    tar -xvf $BOOTPACKG > unpacked
+    BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+  fi
+else
+  tar -xvf $BOOTPACKG > unpacked
+  BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+fi
+cd $BOOTUNPACKDIR
+sudo -E sh << ROOT_EOF
+make -j1 install-unbound
+ROOT_EOF
+
+popd

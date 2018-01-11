@@ -35,3 +35,54 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('427cc4568632eea725d5169a4a50ff22')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -e 's|wand/magick_wand.h|MagickWand/MagickWand.h|' \
+    -i src/video_dec/image.c &&
+
+sed -e 's/\(xcb-shape >= 1.0\)/xcb \1/' \
+    -i m4/video_out.m4 &&
+
+./configure --prefix=/usr          \
+            --disable-vcd          \
+            --with-external-dvdnav \
+            --docdir=/usr/share/doc/xine-lib-1.2.8 &&
+make
+doxygen doc/Doxyfile
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -v -m755 -d /usr/share/doc/xine-lib-1.2.8/api &&
+install -v -m644    doc/api/* \\
+                    /usr/share/doc/xine-lib-1.2.8/api
+ROOT_EOF
+sudo /sbin/ldconfig
+

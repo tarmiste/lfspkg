@@ -35,3 +35,60 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('802179a76bded0b658f4e9ec5e1830a4')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+packagedir=libXrender-0.9.10
+  case $packagedir in
+    libICE* )
+      ./configure $XORG_CONFIG ICE_LIBS=-lpthread
+    ;;
+
+    libXfont2-[0-9]* )
+      ./configure $XORG_CONFIG --disable-devel-docs
+    ;;
+
+    libXt-[0-9]* )
+      ./configure $XORG_CONFIG \
+                  --with-appdefaultdir=/etc/X11/app-defaults
+    ;;
+
+    * )
+      ./configure $XORG_CONFIG
+    ;;
+  esac
+  make
+  #make check 2>&1 | tee ../$packagedir-make_check.log
+  
+sudo -E sh << ROOT_EOF
+ make -j1 install
+  
+ROOT_EOF
+sudo /sbin/ldconfig
+

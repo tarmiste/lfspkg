@@ -35,3 +35,47 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('bd46d1dc17a50c72004ad842829d7b1f')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr \
+            --sysconfdir=/etc \
+            --with-readline=gnu &&
+make -j1
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install_doc_dir=/usr/share/doc/slang-2.3.1   \\
+     SLSH_DOC_DIR=/usr/share/doc/slang-2.3.1/slsh \\
+     install-all &&
+
+chmod -v 755 /usr/lib/libslang.so.2.3.1 \\
+             /usr/lib/slang/v2/modules/*.so
+ROOT_EOF
+sudo /sbin/ldconfig
+

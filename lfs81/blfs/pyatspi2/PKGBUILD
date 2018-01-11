@@ -35,3 +35,50 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('db049a2306a93ef32e3d5a3412918e75')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+mkdir python2 &&
+pushd python2 &&
+../configure --prefix=/usr --with-python=/usr/bin/python &&
+make &&
+popd
+mkdir python3 &&
+pushd python3 &&
+../configure --prefix=/usr --with-python=/usr/bin/python3 &&
+make &&
+popd
+sudo -E sh << ROOT_EOF
+make -j1 -C python2 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+make -j1 -C python3 install
+ROOT_EOF
+sudo /sbin/ldconfig
+

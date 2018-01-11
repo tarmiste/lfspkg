@@ -37,3 +37,48 @@ noextract=()
 
 md5sums=('6b41b18c365c01f225bc417cf632d81c'
          '9acefe856adfb13f0efabb68c8c6c745')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+patch -Np1 -i ../docbook-utils-0.6.14-grep_fix-1.patch &&
+sed -i 's:/html::' doc/HTML/Makefile.in                &&
+
+./configure --prefix=/usr --mandir=/usr/share/man      &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 docdir=/usr/share/doc install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+for doctype in html ps dvi man pdf rtf tex texi txt
+do
+    ln -svf docbook2\$doctype /usr/bin/db2\$doctype
+done
+ROOT_EOF
+sudo /sbin/ldconfig
+

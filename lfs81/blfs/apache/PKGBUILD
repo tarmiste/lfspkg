@@ -39,3 +39,99 @@ noextract=()
 md5sums=('97b6bbfa83c866dbe20ef317e3afd108'
          'feeffb543c42d3a9790d4e77437b57db'
          'f24185eaa0cbcab3c0b07032584575d9')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sudo -E sh << ROOT_EOF
+groupadd -g 25 apache &&
+useradd -c "Apache Server" -d /srv/www -g apache \\
+        -s /bin/false -u 25 apache
+ROOT_EOF
+patch -Np1 -i ../httpd-2.4.27-blfs_layout-1.patch             &&
+
+sed '/dir.*CFG_PREFIX/s@^@#@' -i support/apxs.in              &&
+
+./configure --enable-authnz-fcgi                              \
+            --enable-layout=BLFS                              \
+            --enable-mods-shared="all cgi"                    \
+            --enable-mpms-shared=all                          \
+            --enable-suexec=shared                            \
+            --with-apr=/usr/bin/apr-1-config                  \
+            --with-apr-util=/usr/bin/apu-1-config             \
+            --with-suexec-bin=/usr/lib/httpd/suexec           \
+            --with-suexec-caller=apache                       \
+            --with-suexec-docroot=/srv/www                    \
+            --with-suexec-logfile=/var/log/httpd/suexec.log   \
+            --with-suexec-uidmin=100                          \
+            --with-suexec-userdir=public_html                 &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install  &&
+
+mv -v /usr/sbin/suexec /usr/lib/httpd/suexec &&
+chgrp apache           /usr/lib/httpd/suexec &&
+chmod 4754             /usr/lib/httpd/suexec &&
+
+chown -v -R apache:apache /srv/www
+ROOT_EOF
+sudo /sbin/ldconfig
+
+[[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts
+pushd $SRC_DIR/blfs-bootscripts
+URL=http://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20170731.tar.xz
+BOOTPACKG=$(basename $URL)
+if [[ ! -f $BOOTPACKG ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PKG_DIR/$BOOTPACKG ]] ; then
+    cp $SRC_ARCHIVE/$PKG_DIR/$BOOTPACKG $BOOTPACKG
+  elif [[ -f $SRC_ARCHIVE/$BOOTPACKG ]] ; then
+    cp $SRC_ARCHIVE/$BOOTPACKG $BOOTPACKG
+  else
+    wget -T 30 -t 5 $URL
+    cp $BOOTPACKG $SRC_ARCHIVE
+  fi
+  rm -f unpacked
+fi
+
+if [[ -e unpacked ]] ; then
+  BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+  if ! [[ -d $BOOTUNPACKDIR ]]; then
+    rm unpacked
+    tar -xvf $BOOTPACKG > unpacked
+    BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+  fi
+else
+  tar -xvf $BOOTPACKG > unpacked
+  BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+fi
+cd $BOOTUNPACKDIR
+sudo -E sh << ROOT_EOF
+make -j1 install-httpd
+ROOT_EOF
+
+popd

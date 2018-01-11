@@ -37,3 +37,47 @@ noextract=()
 
 md5sums=('7fc3cb1cf22d904d8744bd12e9c9d3dd'
          '80f7b39976eb2040bc8ea6635d48a763')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr --sysconfdir=/etc &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+tar -xf ../dconf-editor-3.22.3.tar.xz &&
+cd dconf-editor-3.22.3 &&
+
+./configure --prefix=/usr --sysconfdir=/etc &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo /sbin/ldconfig
+

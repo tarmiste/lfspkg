@@ -35,3 +35,42 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('c59018f105be8d022714b826b0be130a')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr     \
+            --sysconfdir=/etc \
+            --docdir=/usr/share/doc/asciidoc-8.6.9 &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+make -j1 docs
+ROOT_EOF
+sudo /sbin/ldconfig
+

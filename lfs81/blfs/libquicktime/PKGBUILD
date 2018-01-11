@@ -37,3 +37,48 @@ noextract=()
 
 md5sums=('81cfcebad9b7ee7e7cfbefc861d6d61b'
          '8a0f1e55e448fa13b03712d2d7cd3bd7')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+patch -Np1 -i ../libquicktime-1.2.4-ffmpeg3-1.patch &&
+
+./configure --prefix=/usr     \
+            --enable-gpl      \
+            --without-doxygen \
+            --docdir=/usr/share/doc/libquicktime-1.2.4
+make
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+
+install -v -m755 -d /usr/share/doc/libquicktime-1.2.4 &&
+install -v -m644    README doc/{*.txt,*.html,mainpage.incl} \\
+                    /usr/share/doc/libquicktime-1.2.4
+ROOT_EOF
+sudo /sbin/ldconfig
+

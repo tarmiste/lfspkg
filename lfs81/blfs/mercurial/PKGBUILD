@@ -35,3 +35,66 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('b9cbdcf0bd41a2b385b35b9fbfeb0eea')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+make build
+make doc
+rm -rf tests/tmp &&
+
+TESTFLAGS="-j**EDITME<N>EDITME** --tmpdir tmp --blacklist blacklists/failed-tests" \
+make check
+#make -k  || true
+#make -k  || true
+pushd tests  &&
+  rm -rf tmp &&
+
+  ./run-tests.py - -tmpdir tmp test-gpg.t &&
+popd
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 PREFIX=/usr install-bin
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+make -j1 PREFIX=/usr install-doc
+ROOT_EOF
+cat >> ~/.hgrc << "EOF"
+[ui]
+username = **EDITME<user_name> <user@mail>EDITME**
+EOF
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+install -v -d -m755 /etc/mercurial &&
+cat > /etc/mercurial/hgrc << "EOF"
+[web]
+cacerts = /etc/ssl/ca-bundle.crt
+EOF
+ROOT_EOF
+

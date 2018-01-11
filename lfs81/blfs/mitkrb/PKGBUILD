@@ -37,3 +37,169 @@ noextract=()
 
 md5sums=('8022f3a1cde8463e44fd35ef42731f85'
          'feeffb543c42d3a9790d4e77437b57db')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+cd src &&
+
+sed -e "s@python2.5/Python.h@& python2.7/Python.h@g" \
+    -e "s@-lpython2.5]@&,\n  AC_CHECK_LIB(python2.7,main,[PYTHON_LIB=-lpython2.7])@g" \
+    -i configure.in &&
+
+sed -e 's@\^u}@^u cols 300}@' \
+    -i tests/dejagnu/config/default.exp &&
+
+sed -e '/eq 0/{N;s/12 //}' \
+    -i plugins/kdb/db2/libdb2/test/run.test &&
+
+autoconf &&
+./configure --prefix=/usr            \
+            --sysconfdir=/etc        \
+            --localstatedir=/var/lib \
+            --with-system-et         \
+            --with-system-ss         \
+            --with-system-verto=no   \
+            --enable-dns-for-realm &&
+make
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+
+for f in gssapi_krb5 gssrpc k5crypto kadm5clnt kadm5srv \\
+         kdb5 kdb_ldap krad krb5 krb5support verto ; do
+
+    find /usr/lib -type f -name "lib\$f*.so*" -exec chmod -v 755 {} \\;    
+done          &&
+
+mv -v /usr/lib/libkrb5.so.3*        /lib &&
+mv -v /usr/lib/libk5crypto.so.3*    /lib &&
+mv -v /usr/lib/libkrb5support.so.0* /lib &&
+
+ln -v -sf ../../lib/libkrb5.so.3.3        /usr/lib/libkrb5.so        &&
+ln -v -sf ../../lib/libk5crypto.so.3.1    /usr/lib/libk5crypto.so    &&
+ln -v -sf ../../lib/libkrb5support.so.0.1 /usr/lib/libkrb5support.so &&
+
+mv -v /usr/bin/ksu /bin &&
+chmod -v 755 /bin/ksu   &&
+
+install -v -dm755 /usr/share/doc/krb5-1.15.1 &&
+cp -vfr ../doc/*  /usr/share/doc/krb5-1.15.1
+ROOT_EOF
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+cat > /etc/krb5.conf << "EOF"
+# Begin /etc/krb5.conf
+
+[libdefaults]
+    default_realm = **EDITME<EXAMPLE.ORG>EDITME**
+    encrypt = true
+
+[realms]
+    **EDITME<EXAMPLE.ORG>EDITME** = {
+        kdc = **EDITME<belgarath.example.org>EDITME**
+        admin_server = **EDITME<belgarath.example.org>EDITME**
+        dict_file = /usr/share/dict/words
+    }
+
+[domain_realm]
+    .**EDITME<example.org>EDITME** = **EDITME<EXAMPLE.ORG>EDITME**
+
+[logging]
+    kdc = SYSLOG:INFO:AUTH
+    admin_server = SYSLOG:INFO:AUTH
+    default = SYSLOG:DEBUG:DAEMON
+
+# End /etc/krb5.conf
+EOF
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+kdb5_util create -r **EDITME<EXAMPLE.ORG>EDITME** -s
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+kadmin.local
+kadmin.local: add_policy dict-only
+kadmin.local: addprinc -policy dict-only **EDITME<loginname>EDITME**
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+kadmin.local: addprinc -randkey host/**EDITME<belgarath.example.org>EDITME**
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+kadmin.local: ktadd host/**EDITME<belgarath.example.org>EDITME**
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+/usr/sbin/krb5kdc
+ROOT_EOF
+
+kinit **EDITME<loginname>EDITME**
+
+klist
+
+ktutil
+ktutil: rkt /etc/krb5.keytab
+ktutil: l
+
+[[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts
+pushd $SRC_DIR/blfs-bootscripts
+URL=http://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20170731.tar.xz
+BOOTPACKG=$(basename $URL)
+if [[ ! -f $BOOTPACKG ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PKG_DIR/$BOOTPACKG ]] ; then
+    cp $SRC_ARCHIVE/$PKG_DIR/$BOOTPACKG $BOOTPACKG
+  elif [[ -f $SRC_ARCHIVE/$BOOTPACKG ]] ; then
+    cp $SRC_ARCHIVE/$BOOTPACKG $BOOTPACKG
+  else
+    wget -T 30 -t 5 $URL
+    cp $BOOTPACKG $SRC_ARCHIVE
+  fi
+  rm -f unpacked
+fi
+
+if [[ -e unpacked ]] ; then
+  BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+  if ! [[ -d $BOOTUNPACKDIR ]]; then
+    rm unpacked
+    tar -xvf $BOOTPACKG > unpacked
+    BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+  fi
+else
+  tar -xvf $BOOTPACKG > unpacked
+  BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+fi
+cd $BOOTUNPACKDIR
+sudo -E sh << ROOT_EOF
+make -j1 install-krb5
+ROOT_EOF
+
+popd

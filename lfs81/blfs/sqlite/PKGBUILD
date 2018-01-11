@@ -37,3 +37,49 @@ noextract=()
 
 md5sums=('e262a28b73cc330e7e83520c8ce14e4d'
          'ed8f9d7dfb410853619e195af2e73250')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+unzip -q ../sqlite-doc-3200000.zip
+./configure --prefix=/usr --disable-static        \
+            CFLAGS="-g -O2 -DSQLITE_ENABLE_FTS3=1 \
+            -DSQLITE_ENABLE_COLUMN_METADATA=1     \
+            -DSQLITE_ENABLE_UNLOCK_NOTIFY=1       \
+            -DSQLITE_SECURE_DELETE=1              \
+            -DSQLITE_ENABLE_DBSTAT_VTAB=1" &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -v -m755 -d /usr/share/doc/sqlite-3.20.0 &&
+cp -v -R sqlite-doc-3200000/* /usr/share/doc/sqlite-3.20.0
+ROOT_EOF
+sudo /sbin/ldconfig
+

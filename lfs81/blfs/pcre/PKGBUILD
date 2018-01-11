@@ -35,3 +35,50 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('c160d22723b1670447341b08c58981c1')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr                     \
+            --docdir=/usr/share/doc/pcre-8.41 \
+            --enable-unicode-properties       \
+            --enable-pcre16                   \
+            --enable-pcre32                   \
+            --enable-pcregrep-libz            \
+            --enable-pcregrep-libbz2          \
+            --enable-pcretest-libreadline     \
+            --disable-static                 &&
+make
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install                     &&
+mv -v /usr/lib/libpcre.so.* /lib &&
+ln -sfv ../../lib/\$(readlink /usr/lib/libpcre.so) /usr/lib/libpcre.so
+ROOT_EOF
+sudo /sbin/ldconfig
+

@@ -35,3 +35,68 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('ff370482573133a7fcdd96cd2f552292')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+case $(uname -m) in
+  x86_64)
+    sed -e '/m64=/s/lib64/lib/' \
+        -i.orig gcc/config/i386/t-linux64
+  ;;
+esac
+
+mkdir build                                          &&
+cd    build                                          &&
+
+../configure                                         \
+    --prefix=/usr                                    \
+    --disable-multilib                               \
+    --with-system-zlib                               \
+    --enable-languages=c,c++,fortran,go,objc,obj-c++ &&
+make
+ulimit -s 32768 &&
+make -k check
+../contrib/test_summary
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+
+mkdir -pv /usr/share/gdb/auto-load/usr/lib              &&
+mv -v /usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib &&
+
+chown -v -R root:root \\
+    /usr/lib/gcc/*linux-gnu/7.2.0/include{,-fixed}
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+ln -v -sf ../usr/bin/cpp /lib          &&
+ln -v -sf gcc /usr/bin/cc              &&
+install -v -dm755 /usr/lib/bfd-plugins &&
+ln -sfv ../../libexec/gcc/\$(gcc -dumpmachine)/7.2.0/liblto_plugin.so /usr/lib/bfd-plugins/
+ROOT_EOF
+sudo /sbin/ldconfig
+

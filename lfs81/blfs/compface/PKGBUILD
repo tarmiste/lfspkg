@@ -35,3 +35,40 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('62f4f79c0861ad292ba3cf77b4c48319')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr --mandir=/usr/share/man &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+install -m755 -v xbm2xface.pl /usr/bin
+ROOT_EOF
+sudo /sbin/ldconfig
+

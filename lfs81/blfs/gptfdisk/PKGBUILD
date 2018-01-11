@@ -37,3 +37,39 @@ noextract=()
 
 md5sums=('07b625a583b66c8c5840be5923f3e3fe'
          'd21db7941c4a1992cebdf3603fe4233e')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+patch -Np1 -i ../gptfdisk-1.0.3-convenience-1.patch &&
+make POPT=1
+sudo -E sh << ROOT_EOF
+make -j1 POPT=1 install
+ROOT_EOF
+sudo /sbin/ldconfig
+

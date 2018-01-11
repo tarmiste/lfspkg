@@ -35,3 +35,46 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('5683f0ea91f9e1e0613b0f6f729980a7')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -i 's/openjpeg-2.1/openjpeg-2.2/' -i ext/openjpeg/gstopenjpeg.h &&
+
+./configure --prefix=/usr     \
+            --disable-wayland \
+            --disable-opencv  \
+            --with-package-name="GStreamer Bad Plugins 1.12.2 BLFS" \
+            --with-package-origin="http://www.linuxfromscratch.org/blfs/view/svn/" &&
+make
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo /sbin/ldconfig
+

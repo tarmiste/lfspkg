@@ -37,3 +37,66 @@ noextract=()
 
 md5sums=('e8a4d77ad4f509e81dd5e13b51636c1d'
          '833d82734deb8475a8c57e9c1b55bd86')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr            \
+            --confdir=/etc/mplayer   \
+            --enable-dynamic-plugins \
+            --enable-menu            \
+            --enable-gui             &&
+make
+make doc
+sudo -E sh << ROOT_EOF
+make -j1 install  &&
+ln -svf ../icons/hicolor/48x48/apps/mplayer.png \\
+        /usr/share/pixmaps/mplayer.png
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -v -m755 -d /usr/share/doc/mplayer-1.3.0 &&
+install -v -m644    DOCS/HTML/en/* \\
+                    /usr/share/doc/mplayer-1.3.0
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -v -m644 etc/codecs.conf /etc/mplayer
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -v -m644 etc/*.conf /etc/mplayer
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+gtk-update-icon-cache &&
+update-desktop-database
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+tar -xvf  ../Clearlooks-1.7.tar.bz2 \\
+    -C    /usr/share/mplayer/skins &&
+ln  -sfvn Clearlooks /usr/share/mplayer/skins/default
+ROOT_EOF
+sudo /sbin/ldconfig
+

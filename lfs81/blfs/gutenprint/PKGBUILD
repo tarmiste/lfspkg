@@ -35,3 +35,53 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('9789107b577d1338c1d189993ea99eef')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -i 's|$(PACKAGE)/doc|doc/$(PACKAGE)-$(VERSION)|' \
+       {,doc/,doc/developer/}Makefile.in &&
+
+./configure --prefix=/usr --disable-static &&
+
+make
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+install -v -m755 -d /usr/share/doc/gutenprint-5.2.12/api/gutenprint{,ui2} &&
+install -v -m644    doc/gutenprint/html/* \\
+                    /usr/share/doc/gutenprint-5.2.12/api/gutenprint &&
+install -v -m644    doc/gutenprintui2/html/* \\
+                    /usr/share/doc/gutenprint-5.2.12/api/gutenprintui2
+ROOT_EOF
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+/etc/rc.d/init.d/cups restart
+ROOT_EOF
+

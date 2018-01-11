@@ -35,3 +35,61 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('670b223c5d12cee40c9137be86b6c39b')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -i 's/32,/253,/' lib/Syntax.cxx &&
+sed -i 's/LITLEN          240 /LITLEN          8092/' \
+    unicode/{gensyntax.pl,unicode.syn} &&
+
+./configure --prefix=/usr                              \
+            --disable-static                           \
+            --disable-doc-build                        \
+            --enable-default-catalog=/etc/sgml/catalog \
+            --enable-http                              \
+            --enable-default-search-path=/usr/share/sgml &&
+
+make pkgdatadir=/usr/share/sgml/OpenSP-1.5.2
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 pkgdatadir=/usr/share/sgml/OpenSP-1.5.2 \\
+     docdir=/usr/share/doc/OpenSP-1.5.2      \\
+     install &&
+
+ln -v -sf onsgmls   /usr/bin/nsgmls   &&
+ln -v -sf osgmlnorm /usr/bin/sgmlnorm &&
+ln -v -sf ospam     /usr/bin/spam     &&
+ln -v -sf ospcat    /usr/bin/spcat    &&
+ln -v -sf ospent    /usr/bin/spent    &&
+ln -v -sf osx       /usr/bin/sx       &&
+ln -v -sf osx       /usr/bin/sgml2xml &&
+ln -v -sf libosp.so /usr/lib/libsp.so
+ROOT_EOF
+sudo /sbin/ldconfig
+

@@ -40,3 +40,106 @@ noextract=()
 md5sums=('df3504e95d6e88924babb3821d4210a6'
          'f409d5313b5d9aa81bb6868082fda161'
          '63bcda2c106e1a7e79afc7e9c9cb0a47')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+cat > subprojects.md5 << EOF &&
+4061c0f2dc553cf92847e4a39a03ea4e  corba.tar.bz2
+269a0fde90b9ab5ca19fa82bdb3d6485  hotspot.tar.bz2
+a1dfcd15119dd10db6e91dc2019f14e7  jaxp.tar.bz2
+16f904d990cb6a3c84ebb81bd6bea1e7  jaxws.tar.bz2
+4fb652cdd6fee5f2873b00404e9a01f3  langtools.tar.bz2
+c4a99c9c5293bb5c174366664843c8ce  jdk.tar.bz2
+c2f06cd8d6e90f3dcc57bec53f419afe  nashorn.tar.bz2
+EOF
+
+for subproject in corba hotspot jaxp jaxws langtools jdk nashorn; do
+  wget -c http://hg.openjdk.java.net/jdk8u/jdk8u/${subproject}/archive/jdk8u141-b15.tar.bz2 \
+       -O ${subproject}.tar.bz2
+done &&
+
+md5sum -c subprojects.md5 &&
+
+for subproject in corba hotspot jaxp jaxws langtools jdk nashorn; do
+  mkdir -pv ${subproject} &&
+  tar -xf ${subproject}.tar.bz2 --strip-components=1 -C ${subproject}
+done
+tar -xf ../jtreg-4.2-b08-891.tar.gz
+unset JAVA_HOME               &&
+sh ./configure                \
+   --with-update-version=141  \
+   --with-build-number=b15    \
+   --with-milestone=BLFS      \
+   --enable-unlimited-crypto  \
+   --with-zlib=system         \
+   --with-giflib=system       \
+   --with-extra-cflags="-std=c++98 -Wno-error -fno-delete-null-pointer-checks -fno-lifetime-dse" \
+   --with-extra-cxxflags="-std=c++98 -fno-delete-null-pointer-checks -fno-lifetime-dse" &&
+make DEBUG_BINARIES=true SCTP_WERROR= all  &&
+find build/*/images/j2sdk-image -iname \*.diz -delete
+
+sudo -E sh << ROOT_EOF
+cp -RT build/*/images/j2sdk-image /opt/OpenJDK-1.8.0.141 &&
+chown -R root:root /opt/OpenJDK-1.8.0.141
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+ln -v -nsf OpenJDK-1.8.0.141 /opt/jdk
+ROOT_EOF
+tar -xf ../icedtea-web-1.7.tar.gz  \
+        icedtea-web-1.7/javaws.png \
+        --strip-components=1
+sudo -E sh << ROOT_EOF
+mkdir -pv /usr/share/applications &&
+
+cat > /usr/share/applications/openjdk-8-policytool.desktop << "EOF" &&
+[Desktop Entry]
+Name=OpenJDK Java Policy Tool
+Name[pt_BR]=OpenJDK Java - Ferramenta de Política
+Comment=OpenJDK Java Policy Tool
+Comment[pt_BR]=OpenJDK Java - Ferramenta de Política
+Exec=/opt/jdk/bin/policytool
+Terminal=false
+Type=Application
+Icon=javaws
+Categories=Settings;
+EOF
+
+install -v -Dm0644 javaws.png /usr/share/pixmaps/javaws.png
+ROOT_EOF
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+ln -sfv /etc/ssl/java/cacerts /opt/jdk/jre/lib/security/cacerts
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+cd /opt/jdk
+bin/keytool -list -keystore /etc/ssl/java/cacerts
+ROOT_EOF
+

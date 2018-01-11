@@ -35,3 +35,59 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('526a1008586094a2cbb4592fd3f9ee10')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -e 's#l \(gtk-.*\).sgml#& -o \1#' \
+    -i docs/{faq,tutorial}/Makefile.in      &&
+
+./configure --prefix=/usr --sysconfdir=/etc &&
+
+make
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+gtk-query-immodules-2.0 --update-cache
+ROOT_EOF
+sudo /sbin/ldconfig
+
+cat > ~/.gtkrc-2.0 << "EOF"
+include "/usr/share/themes/**EDITMEGliderEDITME**/gtk-2.0/gtkrc"
+gtk-icon-theme-name = "**EDITMEhicolorEDITME**"
+EOF
+
+sudo -E sh << ROOT_EOF
+cat > /etc/gtk-2.0/gtkrc << "EOF"
+include "/usr/share/themes/**EDITMEClearlooksEDITME**/gtk-2.0/gtkrc"
+gtk-icon-theme-name = "**EDITMEelementaryEDITME**"
+EOF
+ROOT_EOF
+

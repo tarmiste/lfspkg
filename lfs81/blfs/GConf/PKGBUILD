@@ -35,3 +35,43 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('2b16996d0e4b112856ee5c59130e822c')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr \
+            --sysconfdir=/etc \
+            --disable-orbit \
+            --disable-static &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+ln -s gconf.xml.defaults /etc/gconf/gconf.xml.system
+ROOT_EOF
+sudo /sbin/ldconfig
+

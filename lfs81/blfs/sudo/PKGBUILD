@@ -35,3 +35,70 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('03da8e711caca6fd93e57751bfb74adc')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr              \
+            --libexecdir=/usr/lib      \
+            --with-secure-path         \
+            --with-all-insults         \
+            --with-env-editor          \
+            --docdir=/usr/share/doc/sudo-1.8.20p2 \
+            --with-passprompt="[sudo] password for %p: " &&
+make
+#env LC_ALL=C make -k check 2>&1 | tee ../make-check.log || true
+#make -k  || true
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+ln -sfv libsudo_util.so.0.0.0 /usr/lib/sudo/libsudo_util.so.0
+ROOT_EOF
+sudo /sbin/ldconfig
+
+
+sudo -E sh << ROOT_EOF
+cat > /etc/pam.d/sudo << "EOF"
+# Begin /etc/pam.d/sudo
+
+# include the default auth settings
+auth      include     system-auth
+
+# include the default account settings
+account   include     system-account
+
+# Set default environment variables for the service user
+session   required    pam_env.so
+
+# include system session defaults
+session   include     system-session
+
+# End /etc/pam.d/sudo
+EOF
+chmod 644 /etc/pam.d/sudo
+ROOT_EOF
+

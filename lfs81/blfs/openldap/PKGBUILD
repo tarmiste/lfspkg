@@ -37,3 +37,136 @@ noextract=()
 
 md5sums=('feeffb543c42d3a9790d4e77437b57db'
          '04e1222766861e465ee7b50f62b7c4a3')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+patch -Np1 -i ../openldap-2.4.45-consolidated-1.patch &&
+autoconf &&
+
+./configure --prefix=/usr     \
+            --sysconfdir=/etc \
+            --disable-static  \
+            --enable-dynamic  \
+            --disable-debug   \
+            --disable-slapd &&
+
+make depend &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+groupadd -g 83 ldap &&
+useradd  -c "OpenLDAP Daemon Owner" \\
+         -d /var/lib/openldap -u 83 \\
+         -g ldap -s /bin/false ldap
+ROOT_EOF
+patch -Np1 -i ../openldap-2.4.45-consolidated-1.patch &&
+autoconf &&
+
+./configure --prefix=/usr         \
+            --sysconfdir=/etc     \
+            --localstatedir=/var  \
+            --libexecdir=/usr/lib \
+            --disable-static      \
+            --disable-debug       \
+            --with-tls=openssl    \
+            --with-cyrus-sasl     \
+            --enable-dynamic      \
+            --enable-crypt        \
+            --enable-spasswd      \
+            --enable-slapd        \
+            --enable-modules      \
+            --enable-rlookups     \
+            --enable-backends=mod \
+            --disable-ndb         \
+            --disable-sql         \
+            --disable-shell       \
+            --disable-bdb         \
+            --disable-hdb         \
+            --enable-overlays=mod &&
+
+make depend &&
+make
+#make -k test || true
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+
+install -v -dm700 -o ldap -g ldap /var/lib/openldap     &&
+
+install -v -dm700 -o ldap -g ldap /etc/openldap/slapd.d &&
+chmod   -v    640     /etc/openldap/slapd.{conf,ldif}   &&
+chown   -v  root:ldap /etc/openldap/slapd.{conf,ldif}   &&
+
+install -v -dm755 /usr/share/doc/openldap-2.4.45 &&
+cp      -vfr      doc/{drafts,rfc,guide} \\
+                  /usr/share/doc/openldap-2.4.45
+ROOT_EOF
+sudo /sbin/ldconfig
+
+[[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts
+pushd $SRC_DIR/blfs-bootscripts
+URL=http://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20170731.tar.xz
+BOOTPACKG=$(basename $URL)
+if [[ ! -f $BOOTPACKG ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PKG_DIR/$BOOTPACKG ]] ; then
+    cp $SRC_ARCHIVE/$PKG_DIR/$BOOTPACKG $BOOTPACKG
+  elif [[ -f $SRC_ARCHIVE/$BOOTPACKG ]] ; then
+    cp $SRC_ARCHIVE/$BOOTPACKG $BOOTPACKG
+  else
+    wget -T 30 -t 5 $URL
+    cp $BOOTPACKG $SRC_ARCHIVE
+  fi
+  rm -f unpacked
+fi
+
+if [[ -e unpacked ]] ; then
+  BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+  if ! [[ -d $BOOTUNPACKDIR ]]; then
+    rm unpacked
+    tar -xvf $BOOTPACKG > unpacked
+    BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+  fi
+else
+  tar -xvf $BOOTPACKG > unpacked
+  BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+fi
+cd $BOOTUNPACKDIR
+sudo -E sh << ROOT_EOF
+make -j1 install-slapd
+ROOT_EOF
+
+popd
+sudo -E sh << ROOT_EOF
+/etc/rc.d/init.d/slapd start
+ROOT_EOF
+
+ldapsearch -x -b '' -s base '(objectclass=*)' namingContexts
+
+

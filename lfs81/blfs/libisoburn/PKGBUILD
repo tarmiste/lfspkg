@@ -35,3 +35,46 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('15d763fd698b9bc8d6fc643a3257505b')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr              \
+            --disable-static           \
+            --enable-pkg-check-modules &&
+make
+doxygen doc/doxygen.conf
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -v -dm755 /usr/share/doc/libisoburn-1.4.6 &&
+install -v -m644 doc/html/* /usr/share/doc/libisoburn-1.4.6
+ROOT_EOF
+sudo /sbin/ldconfig
+

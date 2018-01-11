@@ -35,3 +35,55 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('530db74602b558209f9ad7356a680971')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr &&
+make
+make -C doc pdf ps html &&
+makeinfo --html --no-split -o doc/gcrypt_nochunks.html doc/gcrypt.texi &&
+makeinfo --plaintext       -o doc/gcrypt.txt           doc/gcrypt.texi
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+install -v -dm755   /usr/share/doc/libgcrypt-1.8.0 &&
+install -v -m644    README doc/{README.apichanges,fips*,libgcrypt*} \\
+                    /usr/share/doc/libgcrypt-1.8.0
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -v -dm755   /usr/share/doc/libgcrypt-1.8.0/html &&
+install -v -m644 doc/gcrypt.html/* \\
+                    /usr/share/doc/libgcrypt-1.8.0/html &&
+install -v -m644 doc/gcrypt_nochunks.html \\
+                    /usr/share/doc/libgcrypt-1.8.0 &&
+install -v -m644 doc/gcrypt.{pdf,ps,dvi,txt,texi} \\
+                    /usr/share/doc/libgcrypt-1.8.0
+ROOT_EOF
+sudo /sbin/ldconfig
+

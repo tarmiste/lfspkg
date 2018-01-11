@@ -35,3 +35,47 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('2c171ced93c0e83bb09e6ccad8e3ba2b')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr --disable-static &&
+make
+#make -k check-TESTS || true
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+find doc \\( -name Makefile\\* -o -name \\*.1 \\
+         -o -name \\*.xml \\) -exec rm -v {} \\; &&
+
+install -v -dm755 /usr/share/doc/giflib-5.1.4 &&
+cp -v -R doc/* /usr/share/doc/giflib-5.1.4
+ROOT_EOF
+sudo /sbin/ldconfig
+

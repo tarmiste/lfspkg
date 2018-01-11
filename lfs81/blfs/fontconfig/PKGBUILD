@@ -35,3 +35,56 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('29105662c7d319720e0088a0ac53f494')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+rm -f src/fcobjshash.h
+./configure --prefix=/usr        \
+            --sysconfdir=/etc    \
+            --localstatedir=/var \
+            --disable-docs       \
+            --docdir=/usr/share/doc/fontconfig-2.12.4 &&
+make
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -v -dm755 \\
+        /usr/share/{man/man{3,5},doc/fontconfig-2.12.4/fontconfig-devel} &&
+install -v -m644 fc-*/*.1         /usr/share/man/man1 &&
+install -v -m644 doc/*.3          /usr/share/man/man3 &&
+install -v -m644 doc/fonts-conf.5 /usr/share/man/man5 &&
+install -v -m644 doc/fontconfig-devel/* \\
+                                  /usr/share/doc/fontconfig-2.12.4/fontconfig-devel &&
+install -v -m644 doc/*.{pdf,sgml,txt,html} \\
+                                  /usr/share/doc/fontconfig-2.12.4
+ROOT_EOF
+sudo /sbin/ldconfig
+

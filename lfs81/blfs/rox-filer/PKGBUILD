@@ -35,3 +35,108 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('0eebf05a67f7932367750ebf9faf215d')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+cd ROX-Filer                                                        &&
+sed -i 's:g_strdup(getenv("APP_DIR")):"/usr/share/rox":' src/main.c &&
+
+mkdir build                        &&
+pushd build                        &&
+  ../src/configure LIBS="-lm -ldl" &&
+  make                             &&
+popd
+sudo -E sh << ROOT_EOF
+mkdir -p /usr/share/rox                              &&
+cp -av Help Messages Options.xml ROX images style.css .DirIcon /usr/share/rox &&
+
+cp -av ../rox.1 /usr/share/man/man1                  &&
+cp -v  ROX-Filer /usr/bin/rox                        &&
+chown -Rv root:root /usr/bin/rox /usr/share/rox      &&
+
+cd /usr/share/rox/ROX/MIME                           &&
+ln -sv text-x-{diff,patch}.png                       &&
+ln -sv application-x-font-{afm,type1}.png            &&
+ln -sv application-xml{,-dtd}.png                    &&
+ln -sv application-xml{,-external-parsed-entity}.png &&
+ln -sv application-{,rdf+}xml.png                    &&
+ln -sv application-x{ml,-xbel}.png                   &&
+ln -sv application-{x-shell,java}script.png          &&
+ln -sv application-x-{bzip,xz}-compressed-tar.png    &&
+ln -sv application-x-{bzip,lzma}-compressed-tar.png  &&
+ln -sv application-x-{bzip-compressed-tar,lzo}.png   &&
+ln -sv application-x-{bzip,xz}.png                   &&
+ln -sv application-x-{gzip,lzma}.png                 &&
+ln -sv application-{msword,rtf}.png
+ROOT_EOF
+sudo /sbin/ldconfig
+
+cat > /path/to/hostname/AppRun << "HERE_DOC"
+#!/bin/bash
+
+MOUNT_PATH="${0%/*}"
+HOST=${MOUNT_PATH##*/}
+export MOUNT_PATH HOST
+sshfs -o nonempty ${HOST}:/ ${MOUNT_PATH}
+rox -x ${MOUNT_PATH}
+HERE_DOC
+
+chmod 755 /path/to/hostname/AppRun
+
+sudo -E sh << ROOT_EOF
+cat > /usr/bin/myumount << "HERE_DOC" &&
+#!/bin/bash
+sync
+if mount | grep "\${@}" | grep -q fuse
+then fusermount -u "\${@}"
+else umount "\${@}"
+fi
+HERE_DOC
+
+chmod 755 /usr/bin/myumount
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+ln -s ../rox/.DirIcon /usr/share/pixmaps/rox.png &&
+mkdir -p /usr/share/applications &&
+
+cat > /usr/share/applications/rox.desktop << "HERE_DOC"
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=Rox
+Comment=The Rox File Manager
+Icon=rox
+Exec=rox
+Categories=GTK;Utility;Application;System;Core;
+StartupNotify=true
+Terminal=false
+HERE_DOC
+ROOT_EOF
+

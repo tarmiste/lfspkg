@@ -37,3 +37,58 @@ noextract=()
 
 md5sums=('cb602e21f5fc798b88163a3aa4e03e0a'
          '84a90e648137fb77afcf8e815a910c97')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+patch -Np1 -i ../js38-38.2.1-upstream_fixes-2.patch
+cd js/src &&
+autoconf2.13 &&
+
+./configure --prefix=/usr       \
+            --with-intl-api     \
+            --with-system-zlib  \
+            --with-system-ffi   \
+            --with-system-nspr  \
+            --with-system-icu   \
+            --enable-threadsafe \
+            --enable-readline   &&
+make
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+pushd /usr/include/mozjs-38 &&
+for link in \`find . -type l\`; do
+    header=\`readlink \$link\`
+    rm -f \$link
+    cp -pv \$header \$link
+    chmod 644 \$link
+done &&
+popd
+ROOT_EOF
+sudo /sbin/ldconfig
+

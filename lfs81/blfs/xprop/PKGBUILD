@@ -35,3 +35,48 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('fae3d2fda07684027a643ca783d595cc')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+packagedir=xprop-1.2.2
+     case $packagedir in
+       luit-[0-9]* )
+         sed -i -e "/D_XOPEN/s/5/6/" configure
+       ;;
+     esac
+
+     ./configure $XORG_CONFIG
+     make
+     
+sudo -E sh << ROOT_EOF
+ make -j1 install
+  
+ROOT_EOF
+sudo /sbin/ldconfig
+

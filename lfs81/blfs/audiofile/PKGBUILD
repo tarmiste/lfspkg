@@ -35,3 +35,42 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('235dde14742317328f0109e9866a8008')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+CXXFLAGS=-std=c++98 \
+./configure --prefix=/usr --disable-static &&
+
+make
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+#make -k check || true
+sudo /sbin/ldconfig
+

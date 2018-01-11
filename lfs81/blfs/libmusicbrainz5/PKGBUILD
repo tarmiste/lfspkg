@@ -35,3 +35,47 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('4cc5556aa40ff7ab8f8cb83965535bc3')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+mkdir build &&
+cd    build &&
+
+cmake -DCMAKE_INSTALL_PREFIX=/usr .. &&
+make
+doxygen ../Doxyfile
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+rm -rf /usr/share/doc/libmusicbrainz-5.1.0 &&
+cp -vr docs/ /usr/share/doc/libmusicbrainz-5.1.0
+ROOT_EOF
+sudo /sbin/ldconfig
+

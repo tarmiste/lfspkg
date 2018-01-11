@@ -35,3 +35,47 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('bf46ccbdaccfa3186c2ab87191c8855a')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -i 's#pkgdata#doc#' doc/doc.am &&
+autoreconf -fi  &&
+./configure --prefix=/usr      \
+            --enable-cplusplus \
+            --disable-static   \
+            --docdir=/usr/share/doc/gc-7.6.0 &&
+make
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+install -v -m644 doc/gc.man /usr/share/man/man3/gc_malloc.3 &&
+ln -sfv gc_malloc.3 /usr/share/man/man3/gc.3
+ROOT_EOF
+sudo /sbin/ldconfig
+

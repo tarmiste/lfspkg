@@ -37,3 +37,63 @@ noextract=()
 
 md5sums=('54758bf842f9ea53c8b57cce4311b87e'
          '48cce4c6a8ae116c4e00ae128ba97603')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+patch -Np1 -i ../mesa-17.1.6-add_xdemos-1.patch
+GLL_DRV="i915,r600,nouveau,radeonsi,svga,swrast"
+sed -i "/pthread_stubs_possible=/s/yes/no/" configure.ac &&
+
+./autogen.sh CFLAGS='-O2' CXXFLAGS='-O2' \
+            --prefix=$XORG_PREFIX        \
+            --sysconfdir=/etc            \
+            --enable-texture-float       \
+            --enable-osmesa              \
+            --enable-xa                  \
+            --enable-glx-tls             \
+            --with-platforms="drm,x11"   \
+            --with-gallium-drivers=$GLL_DRV &&
+
+unset GLL_DRV &&
+
+make
+make -C xdemos DEMOS_PREFIX=$XORG_PREFIX
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+make -j1 -C xdemos DEMOS_PREFIX=\$XORG_PREFIX install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -v -dm755 /usr/share/doc/mesa-17.1.6 &&
+cp -rfv docs/* /usr/share/doc/mesa-17.1.6
+ROOT_EOF
+sudo /sbin/ldconfig
+

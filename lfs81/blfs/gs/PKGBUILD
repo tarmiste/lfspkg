@@ -39,3 +39,59 @@ noextract=()
 md5sums=('5f213281761d2750fcf27476c404d17f'
          '6865682b095f8c4500c54b285ff05ef6'
          '33457d3f37de7ef03d2eea05a9e6aa4f')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+rm -rf freetype lcms2 jpeg libpng
+rm -rf zlib &&
+
+./configure --prefix=/usr           \
+            --disable-compile-inits \
+            --enable-dynamic        \
+            --with-system-libtiff   &&
+make
+make so
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+make -j1 soinstall &&
+install -v -m644 base/*.h /usr/include/ghostscript &&
+ln -v -s ghostscript /usr/include/ps
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+ln -sfvn ../ghostscript/9.21/doc /usr/share/doc/ghostscript-9.21
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+tar -xvf ../**EDITME<font-tarball>EDITME** -C /usr/share/ghostscript --no-same-owner &&
+fc-cache -v /usr/share/ghostscript/fonts/
+ROOT_EOF
+gs -q -dBATCH /usr/share/ghostscript/9.21/examples/tiger.eps
+sudo /sbin/ldconfig
+

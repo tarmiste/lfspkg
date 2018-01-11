@@ -35,3 +35,63 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('7b482218757acbaeac4d4d54a3cd94e1')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure.py --bootstrap
+emacs -Q --batch -f batch-byte-compile misc/ninja-mode.el
+./configure.py &&
+./ninja ninja_test &&
+./ninja_test --gtest_filter=-SubprocessTest.SetWithLots
+sudo -E sh << ROOT_EOF
+install -vm755 ninja /usr/bin/ &&
+install -vDm644 misc/ninja.vim \\
+                /usr/share/vim/vim80/syntax/ninja.vim &&
+install -vDm644 misc/bash-completion \\
+                /usr/share/bash-completion/completions/ninja &&
+install -vDm644 misc/zsh-completion \\
+                /usr/share/zsh/site-functions/_ninja
+
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -vDm644 misc/ninja-mode.el \\
+                /usr/share/emacs/site-lisp/ninja-mode.el
+install -vDm644 misc/ninja-mode.elc \\
+                /usr/share/emacs/site-lisp/ninja-mode.elc
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+ninja manual &&
+install -vDm644 doc/manual.html /usr/share/doc/ninja-1.7.2/manual.html
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+ninja doxygen &&
+install -vDdm644 doc/doxygen/html/* /usr/share/doc/ninja-1.7.2/
+ROOT_EOF
+sudo /sbin/ldconfig
+

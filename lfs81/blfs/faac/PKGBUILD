@@ -35,3 +35,44 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('c6bdb58b06532a696759908f7fb49633')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -i -e '/obj-type/d' -e '/Long Term/d' frontend/main.c &&
+
+./configure --prefix=/usr --disable-static &&
+make
+./frontend/faac -o Front_Left.mp4 /usr/share/sounds/alsa/Front_Left.wav
+faad Front_Left.mp4
+aplay Front_Left.wav
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo /sbin/ldconfig
+

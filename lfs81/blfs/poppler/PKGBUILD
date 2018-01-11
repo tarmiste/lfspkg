@@ -37,3 +37,57 @@ noextract=()
 
 md5sums=('bc5a191741604552c90d484103229374'
          '00f8989c804de84af0ba2ea629949980')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+./configure --prefix=/usr               \
+            --sysconfdir=/etc           \
+            --disable-static            \
+            --enable-build-type=release \
+            --enable-cmyk               \
+            --enable-xpdf-headers       \
+            --with-testdatadir=$PWD/testfiles &&
+make
+#make -k  || true
+#LC_ALL=en_US.UTF-8 make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -v -m755 -d        /usr/share/doc/poppler-0.57.0 &&
+install -v -m644 README*   /usr/share/doc/poppler-0.57.0 &&
+cp -vr glib/reference/html /usr/share/doc/poppler-0.57.0
+ROOT_EOF
+tar -xf ../poppler-data-0.4.8.tar.gz &&
+cd poppler-data-0.4.8
+sudo -E sh << ROOT_EOF
+make -j1 prefix=/usr install
+ROOT_EOF
+sudo /sbin/ldconfig
+

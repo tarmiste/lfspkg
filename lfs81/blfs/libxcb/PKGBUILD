@@ -37,3 +37,46 @@ noextract=()
 
 md5sums=('28e552bd78bc1050b6b26ca1db0e5bb6'
          '5b9bbd8730c4c7d6e0876912a61d8621')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+patch -Np1 -i ../libxcb-1.12-python3-1.patch
+sed -i "s/pthread-stubs//" configure &&
+
+./configure $XORG_CONFIG      \
+            --enable-xinput   \
+            --without-doxygen \
+            --docdir='${datadir}'/doc/libxcb-1.12 &&
+make
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo /sbin/ldconfig
+

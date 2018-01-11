@@ -35,3 +35,59 @@ noextract=()
 # EDITHOOK7
 
 md5sums=('432749c0c806dbae81c8bcb70da3b5d3')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sed -i -e '/ISO 8879/d' \
+       -e 's|DTDDECL "-//OASIS//DTD DocBook V3.1//EN"|SGMLDECL|g' \
+       docbook.cat
+sudo -E sh << ROOT_EOF
+install -v -d -m755 /usr/share/sgml/docbook/sgml-dtd-3.1 &&
+chown -R root:root . &&
+install -v docbook.cat /usr/share/sgml/docbook/sgml-dtd-3.1/catalog &&
+cp -v -af *.dtd *.mod *.dcl /usr/share/sgml/docbook/sgml-dtd-3.1 &&
+
+install-catalog --add /etc/sgml/sgml-docbook-dtd-3.1.cat \\
+    /usr/share/sgml/docbook/sgml-dtd-3.1/catalog &&
+
+install-catalog --add /etc/sgml/sgml-docbook-dtd-3.1.cat \\
+    /etc/sgml/sgml-docbook.cat
+ROOT_EOF
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+cat >> /usr/share/sgml/docbook/sgml-dtd-3.1/catalog << "EOF"
+  -- Begin Single Major Version catalog changes --
+
+PUBLIC "-//Davenport//DTD DocBook V3.0//EN" "docbook.dtd"
+
+  -- End Single Major Version catalog changes --
+EOF
+ROOT_EOF
+

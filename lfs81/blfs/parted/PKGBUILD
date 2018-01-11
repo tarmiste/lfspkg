@@ -37,3 +37,58 @@ noextract=()
 
 md5sums=('0247b6a7b314f8edeb618159fa95f9cb'
          '83d297bd20a11b47a4239b101bc26ad2')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+patch -Np1 -i ../parted-3.2-devmapper-1.patch
+./configure --prefix=/usr --disable-static &&
+make &&
+
+make -C doc html                                       &&
+makeinfo --html      -o doc/html       doc/parted.texi &&
+makeinfo --plaintext -o doc/parted.txt doc/parted.texi
+texi2pdf             -o doc/parted.pdf doc/parted.texi &&
+texi2dvi             -o doc/parted.dvi doc/parted.texi &&
+dvips                -o doc/parted.ps  doc/parted.dvi
+sed -i '/t0251-gpt-unicode.sh/d' tests/Makefile
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install &&
+install -v -m755 -d /usr/share/doc/parted-3.2/html &&
+install -v -m644    doc/html/* \\
+                    /usr/share/doc/parted-3.2/html &&
+install -v -m644    doc/{FAT,API,parted.{txt,html}} \\
+                    /usr/share/doc/parted-3.2
+ROOT_EOF
+sudo -E sh << ROOT_EOF
+install -v -m644 doc/FAT doc/API doc/parted.{pdf,ps,dvi} \\
+                    /usr/share/doc/parted-3.2
+ROOT_EOF
+sudo /sbin/ldconfig
+

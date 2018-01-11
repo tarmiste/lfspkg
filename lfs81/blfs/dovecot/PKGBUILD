@@ -37,3 +37,109 @@ noextract=()
 
 md5sums=('534feae88700ddc704584e0fc8ee5bdc'
          'feeffb543c42d3a9790d4e77437b57db')
+
+# EDITHOOKPREP
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+}
+
+# EDITHOOKBLD
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+}
+
+# EDITHOOKCHK
+check() {
+	cd "$pkgname-$pkgver"
+	make -k check
+}
+
+# EDITHOOKPKG
+package() {
+	cd "$pkgname-$pkgver"
+	make -j1 DESTDIR="$pkgdir/" install
+}
+# EDITHOOKC
+#######  Building package
+cd $UNPACKDIR
+
+sudo -E sh << ROOT_EOF
+groupadd -g 42 dovecot &&
+useradd -c "Dovecot unprivileged user" -d /dev/null -u 42 \\
+        -g dovecot -s /bin/false dovecot &&
+groupadd -g 43 dovenull &&
+useradd -c "Dovecot login user" -d /dev/null -u 43 \\
+        -g dovenull -s /bin/false dovenull
+ROOT_EOF
+CFLAGS+="-I/usr/include/tirpc" \
+LDFLAGS+="-ltirpc" \
+./configure --prefix=/usr                          \
+            --sysconfdir=/etc                      \
+            --localstatedir=/var                   \
+            --docdir=/usr/share/doc/dovecot-2.2.32 \
+            --disable-static &&
+make
+#make -k check || true
+sudo -E sh << ROOT_EOF
+make -j1 install
+ROOT_EOF
+sudo /sbin/ldconfig
+
+sudo -E sh << ROOT_EOF
+cp -rv /usr/share/doc/dovecot-2.2.32/example-config/* /etc/dovecot
+ROOT_EOF
+
+sudo -E sh << ROOT_EOF
+sed -i '/^\\!include / s/^/#/' /etc/dovecot/dovecot.conf &&
+chmod -v 1777 /var/mail &&
+cat > /etc/dovecot/local.conf << "EOF"
+protocols = imap
+ssl = no
+# The next line is only needed if you have no IPv6 network interfaces
+listen = *
+mail_location = mbox:~/Mail:INBOX=/var/mail/%u
+userdb {
+  driver = passwd
+}
+passdb {
+  driver = shadow
+}
+EOF
+ROOT_EOF
+
+[[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts
+pushd $SRC_DIR/blfs-bootscripts
+URL=http://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20170731.tar.xz
+BOOTPACKG=$(basename $URL)
+if [[ ! -f $BOOTPACKG ]] ; then
+  if [[ -f $SRC_ARCHIVE/$PKG_DIR/$BOOTPACKG ]] ; then
+    cp $SRC_ARCHIVE/$PKG_DIR/$BOOTPACKG $BOOTPACKG
+  elif [[ -f $SRC_ARCHIVE/$BOOTPACKG ]] ; then
+    cp $SRC_ARCHIVE/$BOOTPACKG $BOOTPACKG
+  else
+    wget -T 30 -t 5 $URL
+    cp $BOOTPACKG $SRC_ARCHIVE
+  fi
+  rm -f unpacked
+fi
+
+if [[ -e unpacked ]] ; then
+  BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+  if ! [[ -d $BOOTUNPACKDIR ]]; then
+    rm unpacked
+    tar -xvf $BOOTPACKG > unpacked
+    BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+  fi
+else
+  tar -xvf $BOOTPACKG > unpacked
+  BOOTUNPACKDIR=`head -n1 unpacked | sed 's@^./@@;s@/.*@@'`
+fi
+cd $BOOTUNPACKDIR
+sudo -E sh << ROOT_EOF
+make -j1 install-dovecot
+ROOT_EOF
+
+popd
