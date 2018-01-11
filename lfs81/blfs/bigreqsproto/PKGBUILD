@@ -39,20 +39,17 @@ md5sums=('1a05fb01fa1d5198894c931cf925c025')
 # EDITHOOKPREP
 prepare() {
 	cd "$pkgname-$pkgver"
-	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+	./configure $XORG_CONFIG
 }
 
 # EDITHOOKBLD
 build() {
 	cd "$pkgname-$pkgver"
-	./configure --prefix=/usr
-	make
 }
 
 # EDITHOOKCHK
 check() {
 	cd "$pkgname-$pkgver"
-	make -k check
 }
 
 # EDITHOOKPKG
@@ -62,14 +59,14 @@ package() {
 }
 # EDITHOOKC
 #######  Building package
-cd $UNPACKDIR
-
-packagedir=bigreqsproto-1.1.2
-  ./configure $XORG_CONFIG
-  
-sudo -E sh << ROOT_EOF
- make -j1 install
-  
-ROOT_EOF
-sudo /sbin/ldconfig
+#cd $UNPACKDIR
+#
+#packagedir=bigreqsproto-1.1.2
+#  ./configure $XORG_CONFIG
+#  
+#sudo -E sh << ROOT_EOF
+# make -j1 install
+#  
+#ROOT_EOF
+#sudo /sbin/ldconfig
 
