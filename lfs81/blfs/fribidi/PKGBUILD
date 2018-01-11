@@ -28,7 +28,7 @@ install=
 changelog=
 # EDITHOOK5
 source=(
-    https://www.fribidi.org/download/fribidi-0.19.7.tar.bz2
+    https://ftp.osuosl.org/pub/blfs/conglomeration/fribidi/fribidi-0.19.7.tar.bz2
 )
 # EDITHOOK6
 noextract=()

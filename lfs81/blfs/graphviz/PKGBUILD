@@ -28,8 +28,8 @@ install=
 changelog=
 # EDITHOOK5
 source=(
-    http://graphviz.org/pub/graphviz/stable/SOURCES/graphviz-2.40.1.tar.gz
-graphviz-2.40.1-qt5-1.patch
+    https://ftp.osuosl.org/pub/blfs/conglomeration/graphviz/graphviz-2.40.1.tar.gz
+    graphviz-2.40.1-qt5-1.patch
 )
 # EDITHOOK6
 noextract=()

@@ -6,7 +6,8 @@
 
 BLFSTOOLSEQ=370
 pkgname=fftw
-pkgver=3.3.6-pl2
+#pkgver=3.3.6-pl2
+pkgver=3.3.6
 pkgrel=1
 # EDITHOOK2
 pkgdesc=""

@@ -28,7 +28,7 @@ install=
 changelog=
 # EDITHOOK5
 source=(
-    https://www.cpan.org/authors/id/S/SA/SADAHIRO/Unicode-Collate-1.19.tar.gz
+    https://ftp.osuosl.org/pub/blfs/conglomeration/perl-modules/Unicode-Collate-1.19.tar.gz
 )
 # EDITHOOK6
 noextract=()

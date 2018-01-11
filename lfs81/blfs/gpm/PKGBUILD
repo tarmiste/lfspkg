@@ -28,9 +28,9 @@ install=
 changelog=
 # EDITHOOK5
 source=(
-    http://www.nico.schottelius.org/software/gpm/archives/gpm-1.20.7.tar.bz2
+    https://ftp.osuosl.org/pub/blfs/conglomeration/gpm/gpm-1.20.7.tar.bz2
     http://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20170731.tar.xz
-gpm-1.20.7-glibc_2.26-1.patch
+    gpm-1.20.7-glibc_2.26-1.patch
 )
 # EDITHOOK6
 noextract=()

@@ -29,8 +29,7 @@ changelog=
 # EDITHOOK5
 source=(
     http://www.mplayerhq.hu/MPlayer/releases/MPlayer-1.3.0.tar.xz
-    https://www.mplayerhq.hu/MPlayer/skins/Clearlooks-1.7.tar.bz2
-    https://www.mplayerhq.hu/MPlayer/skins/
+    https://ftp.osuosl.org/pub/blfs/conglomeration/clearlooks/Clearlooks-1.7.tar.bz2
 )
 # EDITHOOK6
 noextract=()

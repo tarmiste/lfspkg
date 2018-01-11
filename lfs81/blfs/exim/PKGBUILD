@@ -6,7 +6,7 @@
 
 BLFSTOOLSEQ=567
 pkgname=exim
-pkgver=4.89
+pkgver=4.90
 pkgrel=1
 # EDITHOOK2
 pkgdesc=""
@@ -28,10 +28,10 @@ install=
 changelog=
 # EDITHOOK5
 source=(
-    http://mirrors-usa.go-parts.com/eximftp/exim/exim4/exim-4.89.tar.xz
+    https://ftp.osuosl.org/pub/blfs/conglomeration/exim/exim-4.90.tar.xz
     http://exim.org/docs.html
     http://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20170731.tar.xz
-exim-4.89-avoid_mem_clash-1.patch
+    exim-4.89-avoid_mem_clash-1.patch
 )
 # EDITHOOK6
 noextract=()

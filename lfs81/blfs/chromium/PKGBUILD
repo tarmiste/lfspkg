@@ -29,10 +29,10 @@ changelog=
 # EDITHOOK5
 source=(
     https://commondatastorage.googleapis.com/chromium-browser-official/chromium-60.0.3112.101.tar.xz
-    http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_60.0.3112.101-1_amd64.deb
-    http://mirror.retrosnub.co.uk/apt/google/pool/main/g/google-chrome-stable/google-chrome-stable_48.0.2564.116-1_i386.deb
-chromium-60.0.3112.101-gcc7-1.patch
-chromium-60.0.3112.101-glibc-2.26-1.patch
+    https://ftp.osuosl.org/pub/blfs/conglomeration/chromium/google-chrome-stable_48.0.2564.116-1_i386.deb
+    http://sagasl.uccuyosl.edu.ar/mirror/dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_60.0.3112.101-1_amd64.deb
+    chromium-60.0.3112.101-gcc7-1.patch
+    chromium-60.0.3112.101-glibc-2.26-1.patch
 )
 # EDITHOOK6
 noextract=()

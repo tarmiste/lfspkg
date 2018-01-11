@@ -28,7 +28,7 @@ install=
 changelog=
 # EDITHOOK5
 source=(
-    https://github.com/lxde/qtermwidget/releases/download/0.7.1/qtermwidget-0.7.1.tar.xz
+    https://ftp.osuosl.org/pub/blfs/conglomeration/qtermwidget/qtermwidget-0.7.1.tar.xz
 )
 # EDITHOOK6
 noextract=()

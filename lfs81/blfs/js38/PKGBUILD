@@ -28,8 +28,8 @@ install=
 changelog=
 # EDITHOOK5
 source=(
-    https://people.mozilla.org/~sstangl/mozjs-38.2.1.rc0.tar.bz2
-js38-38.2.1-upstream_fixes-2.patch
+    https://ftp.osuosl.org/pub/blfs/conglomeration/mozjs/mozjs-38.2.1.rc0.tar.bz2
+    js38-38.2.1-upstream_fixes-2.patch
 )
 # EDITHOOK6
 noextract=()

@@ -6,7 +6,7 @@
 
 BLFSTOOLSEQ=739
 pkgname=lxqt-kwayland
-pkgver=5.37.0 for lxqt
+pkgver=5.37.0
 pkgrel=1
 # EDITHOOK2
 pkgdesc=""

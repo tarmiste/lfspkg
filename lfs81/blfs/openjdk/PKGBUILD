@@ -26,12 +26,12 @@ backup=()
 options=()
 install=
 changelog=
+#  wget -c http://hg.openjdk.java.net/jdk8u/jdk8u/${subproject}/archive/jdk8u141-b15.tar.bz2
 # EDITHOOK5
 source=(
     http://hg.openjdk.java.net/jdk8u/jdk8u/archive/jdk8u141-b15.tar.bz2
     http://anduin.linuxfromscratch.org/BLFS/OpenJDK/OpenJDK-1.8.0.141/jtreg-4.2-b08-891.tar.gz
     http://icedtea.classpath.org/download/source/icedtea-web-1.7.tar.gz
-  wget -c http://hg.openjdk.java.net/jdk8u/jdk8u/${subproject}/archive/jdk8u141-b15.tar.bz2 \
 )
 # EDITHOOK6
 noextract=()

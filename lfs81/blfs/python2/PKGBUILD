@@ -29,7 +29,7 @@ changelog=
 # EDITHOOK5
 source=(
     https://www.python.org/ftp/python/2.7.13/Python-2.7.13.tar.xz
-    https://docs.python.org/2.7/archives/python-2.7.13-docs-html.tar.bz2
+    https://www.python.org/ftp/python/doc/2.7.13/python-2.7.13-docs-html.tar.bz2
 )
 # EDITHOOK6
 noextract=()

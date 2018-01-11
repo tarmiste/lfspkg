@@ -6,7 +6,7 @@
 
 BLFSTOOLSEQ=740
 pkgname=lxqt-libkscreen
-pkgver=5.10.5 for lxqt
+pkgver=5.10.5
 pkgrel=1
 # EDITHOOK2
 pkgdesc=""

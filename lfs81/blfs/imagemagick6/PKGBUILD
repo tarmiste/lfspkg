@@ -6,7 +6,8 @@
 
 BLFSTOOLSEQ=303
 pkgname=imagemagick6
-pkgver=6.9.9-9 libraries
+#pkgver=6.9.9-9
+pkgver=6.9.9
 pkgrel=1
 # EDITHOOK2
 pkgdesc=""
@@ -28,8 +29,8 @@ install=
 changelog=
 # EDITHOOK5
 source=(
-    https://www.imagemagick.org/download/releases/ImageMagick-6.9.9-9.tar.xz
-ImageMagick-6.9.9-9-libs_only-1.patch
+    https://ftp.osuosl.org/pub/blfs/conglomeration/ImageMagick/ImageMagick-6.9.9-9.tar.xz
+    ImageMagick-6.9.9-9-libs_only-1.patch
 )
 # EDITHOOK6
 noextract=()

@@ -6,7 +6,7 @@
 
 BLFSTOOLSEQ=254
 pkgname=libcap-pam
-pkgver=2.25 with PAM
+pkgver=2.25
 pkgrel=1
 # EDITHOOK2
 pkgdesc=""

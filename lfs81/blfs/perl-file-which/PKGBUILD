@@ -28,7 +28,7 @@ install=
 changelog=
 # EDITHOOK5
 source=(
-    https://www.cpan.org/authors/id/P/PL/PLICEASE/File-Which-1.21.tar.gz
+    https://ftp.osuosl.org/pub/blfs/conglomeration/perl-modules/File-Which-1.21.tar.gz
 )
 # EDITHOOK6
 noextract=()

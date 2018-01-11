@@ -29,8 +29,7 @@ changelog=
 # EDITHOOK5
 source=(
     https://www.wireshark.org/download/src/all-versions/wireshark-2.4.0.tar.xz
-    https://www.wireshark.org/download/docs/
-wireshark-2.4.0-lua_5_3-1.patch
+    wireshark-2.4.0-lua_5_3-1.patch
 )
 # EDITHOOK6
 noextract=()

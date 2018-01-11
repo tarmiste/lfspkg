@@ -6,7 +6,8 @@
 
 BLFSTOOLSEQ=142
 pkgname=imagemagick
-pkgver=7.0.6-10
+#pkgver=7.0.6-10
+pkgver=7.0.6
 pkgrel=1
 # EDITHOOK2
 pkgdesc=""

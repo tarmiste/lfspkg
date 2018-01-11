@@ -28,7 +28,7 @@ install=
 changelog=
 # EDITHOOK5
 source=(
-    http://www.webdav.org/neon/neon-0.30.2.tar.gz
+    https://ftp.osuosl.org/pub/blfs/conglomeration/neon/neon-0.30.2.tar.gz
 )
 # EDITHOOK6
 noextract=()

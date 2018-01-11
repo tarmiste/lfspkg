@@ -6,7 +6,8 @@
 
 BLFSTOOLSEQ=282
 pkgname=ntfs-3g
-pkgver=3g-2017.3.23
+#pkgver=3g-2017.3.23
+pkgver=2017.3.23
 pkgrel=1
 # EDITHOOK2
 pkgdesc=""

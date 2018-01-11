@@ -6,7 +6,8 @@
 
 BLFSTOOLSEQ=417
 pkgname=x264
-pkgver=20170822-2245
+#pkgver=20170822-2245
+pkgver=20170822
 pkgrel=1
 # EDITHOOK2
 pkgdesc=""

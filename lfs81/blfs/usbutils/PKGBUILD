@@ -29,8 +29,6 @@ changelog=
 # EDITHOOK5
 source=(
     https://www.kernel.org/pub/linux/utils/usb/usbutils/usbutils-008.tar.xz
-wget http://www.linux-usb.org/usb.ids -O /usr/share/hwdata/usb.ids
-wget http://www.linux-usb.org/usb.ids -O /usr/share/hwdata/usb.ids
 )
 # EDITHOOK6
 noextract=()
