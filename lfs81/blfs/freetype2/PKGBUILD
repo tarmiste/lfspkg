@@ -5,7 +5,8 @@
 #
 
 BLFSTOOLSEQ=012
-pkgname=freetype2
+#pkgname=freetype2
+pkgname=freetype
 pkgver=2.8
 pkgrel=1
 # EDITHOOK2
@@ -41,43 +42,33 @@ md5sums=('2413ac3eaf508ada019c63959ea81a92'
 # EDITHOOKPREP
 prepare() {
 	cd "$pkgname-$pkgver"
-	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+	tar -xf ../freetype-doc-2.8.tar.bz2 --strip-components=2 -C docs
+	sed -ri "s:.*(AUX_MODULES.*valid):\1:" modules.cfg
+
+	sed -r "s:.*(#.*SUBPIXEL_RENDERING) .*:\1:" \
+    	-i include/freetype/config/ftoption.h 
+
+	./configure --prefix=/usr --disable-static 
 }
 
 # EDITHOOKBLD
 build() {
 	cd "$pkgname-$pkgver"
-	./configure --prefix=/usr
 	make
 }
 
 # EDITHOOKCHK
 check() {
 	cd "$pkgname-$pkgver"
-	make -k check
 }
 
 # EDITHOOKPKG
 package() {
 	cd "$pkgname-$pkgver"
 	make -j1 DESTDIR="$pkgdir/" install
+	install -v -m755 -d ${pkgdir}/usr/share/doc/freetype-2.8 
+	cp -v -R docs/*     ${pkgdir}/usr/share/doc/freetype-2.8
 }
 # EDITHOOKC
 #######  Building package
-cd $UNPACKDIR
-
-tar -xf ../freetype-doc-2.8.tar.bz2 --strip-components=2 -C docs
-sed -ri "s:.*(AUX_MODULES.*valid):\1:" modules.cfg &&
-
-sed -r "s:.*(#.*SUBPIXEL_RENDERING) .*:\1:" \
-    -i include/freetype/config/ftoption.h  &&
-
-./configure --prefix=/usr --disable-static &&
-make
-sudo -E sh << ROOT_EOF
-make -j1 install &&
-install -v -m755 -d /usr/share/doc/freetype-2.8 &&
-cp -v -R docs/*     /usr/share/doc/freetype-2.8
-ROOT_EOF
-sudo /sbin/ldconfig
 

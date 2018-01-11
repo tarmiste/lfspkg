@@ -39,19 +39,25 @@ md5sums=('03da8e711caca6fd93e57751bfb74adc')
 # EDITHOOKPREP
 prepare() {
 	cd "$pkgname-$pkgver"
-	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+	./configure --prefix=/usr              \
+            --libexecdir=/usr/lib      \
+            --with-secure-path         \
+            --with-all-insults         \
+            --with-env-editor          \
+            --docdir=/usr/share/doc/sudo-1.8.20p2 \
+            --with-passprompt="[sudo] password for %p: " 
 }
 
 # EDITHOOKBLD
 build() {
 	cd "$pkgname-$pkgver"
-	./configure --prefix=/usr
 	make
 }
 
 # EDITHOOKCHK
 check() {
 	cd "$pkgname-$pkgver"
+	env LC_ALL=C make -k check 2>&1 | tee ../make-check.log || true
 	make -k check
 }
 
@@ -59,30 +65,9 @@ check() {
 package() {
 	cd "$pkgname-$pkgver"
 	make -j1 DESTDIR="$pkgdir/" install
-}
-# EDITHOOKC
-#######  Building package
-cd $UNPACKDIR
-
-./configure --prefix=/usr              \
-            --libexecdir=/usr/lib      \
-            --with-secure-path         \
-            --with-all-insults         \
-            --with-env-editor          \
-            --docdir=/usr/share/doc/sudo-1.8.20p2 \
-            --with-passprompt="[sudo] password for %p: " &&
-make
-#env LC_ALL=C make -k check 2>&1 | tee ../make-check.log || true
-#make -k  || true
-sudo -E sh << ROOT_EOF
-make -j1 install &&
-ln -sfv libsudo_util.so.0.0.0 /usr/lib/sudo/libsudo_util.so.0
-ROOT_EOF
-sudo /sbin/ldconfig
-
-
-sudo -E sh << ROOT_EOF
-cat > /etc/pam.d/sudo << "EOF"
+	ln -sfv libsudo_util.so.0.0.0 ${pkgdir}/usr/lib/sudo/libsudo_util.so.0
+	mkdir -pv ${pkgdir}/etc/pam.d
+cat > ${pkgdir}/etc/pam.d/sudo << "EOF"
 # Begin /etc/pam.d/sudo
 
 # include the default auth settings
@@ -99,6 +84,9 @@ session   include     system-session
 
 # End /etc/pam.d/sudo
 EOF
-chmod 644 /etc/pam.d/sudo
-ROOT_EOF
+chmod 644 ${pkgdir}/etc/pam.d/sudo
+}
+# EDITHOOKC
+#######  Building package
+
 

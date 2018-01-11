@@ -41,13 +41,13 @@ md5sums=('1b34eab440263e32cfa39d19413fad54'
 # EDITHOOKPREP
 prepare() {
 	cd "$pkgname-$pkgver"
-	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+	gzip -cd ../libpng-1.6.31-apng.patch.gz | patch -p0
+	LIBS=-lpthread ./configure --prefix=/usr --disable-static
 }
 
 # EDITHOOKBLD
 build() {
 	cd "$pkgname-$pkgver"
-	./configure --prefix=/usr
 	make
 }
 
@@ -61,19 +61,10 @@ check() {
 package() {
 	cd "$pkgname-$pkgver"
 	make -j1 DESTDIR="$pkgdir/" install
+	mkdir -pv ${pkgdir}/usr/share/doc/libpng-1.6.31
+	cp -v README libpng-manual.txt ${pkgdir}/usr/share/doc/libpng-1.6.31
 }
 # EDITHOOKC
 #######  Building package
-cd $UNPACKDIR
 
-gzip -cd ../libpng-1.6.31-apng.patch.gz | patch -p0
-LIBS=-lpthread ./configure --prefix=/usr --disable-static &&
-make
-#make -k check || true
-sudo -E sh << ROOT_EOF
-make -j1 install &&
-mkdir -v /usr/share/doc/libpng-1.6.31 &&
-cp -v README libpng-manual.txt /usr/share/doc/libpng-1.6.31
-ROOT_EOF
-sudo /sbin/ldconfig
 

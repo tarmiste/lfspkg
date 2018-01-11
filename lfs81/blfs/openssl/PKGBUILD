@@ -41,13 +41,16 @@ md5sums=('7b521dea79ab159e8ec879d2333369fa'
 # EDITHOOKPREP
 prepare() {
 	cd "$pkgname-$pkgver"
-	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+	./config --prefix=/usr         \
+         --openssldir=/etc/ssl \
+         --libdir=lib          \
+         shared                \
+         zlib-dynamic
 }
 
 # EDITHOOKBLD
 build() {
 	cd "$pkgname-$pkgver"
-	./configure --prefix=/usr
 	make
 }
 
@@ -60,24 +63,11 @@ check() {
 # EDITHOOKPKG
 package() {
 	cd "$pkgname-$pkgver"
-	make -j1 DESTDIR="$pkgdir/" install
+	sed -i 's# libcrypto.a##;s# libssl.a##;/INSTALL_LIBS/s#libcrypto.a##' Makefile
+	make -j1 MANSUFFIX=ssl DESTDIR="$pkgdir/" install
+	mkdir -pv ${pkgdir}/usr/share/doc/openssl-1.1.0f
+	mv -v ${pkgdir}/usr/share/doc/openssl{,-1.1.0f}
+	cp -vfr doc/* ${pkgdir}/usr/share/doc/openssl-1.1.0f
 }
 # EDITHOOKC
 #######  Building package
-cd $UNPACKDIR
-
-./config --prefix=/usr         \
-         --openssldir=/etc/ssl \
-         --libdir=lib          \
-         shared                \
-         zlib-dynamic &&
-make
-#make -k test || true
-sed -i 's# libcrypto.a##;s# libssl.a##;/INSTALL_LIBS/s#libcrypto.a##' Makefile
-sudo -E sh << ROOT_EOF
-make -j1 MANSUFFIX=ssl install           &&
-mv -v /usr/share/doc/openssl{,-1.1.0f} &&
-cp -vfr doc/* /usr/share/doc/openssl-1.1.0f
-ROOT_EOF
-sudo /sbin/ldconfig
-

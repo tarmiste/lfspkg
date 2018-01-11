@@ -6,7 +6,7 @@
 
 BLFSTOOLSEQ=018
 pkgname=cacerts
-pkgver=1.0.0
+pkgver=20170514
 pkgrel=1
 # EDITHOOK2
 pkgdesc=""
@@ -41,45 +41,31 @@ md5sums=('a21a04d6ff5c4645c748220dbaa9f221'
          'fb262d55709427e2e9acadf2c1298c99')
 
 # EDITHOOKPREP
-prepare() {
-	cd "$pkgname-$pkgver"
-	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
-}
+#prepare() {
+#echo none
+#}
 
 # EDITHOOKBLD
-build() {
-	cd "$pkgname-$pkgver"
-	./configure --prefix=/usr
-	make
-}
+#build() {
+#echo none
+#}
 
 # EDITHOOKCHK
-check() {
-	cd "$pkgname-$pkgver"
-	make -k check
-}
+#check() {
+#echo none
+#}
 
 # EDITHOOKPKG
-package() {
-	cd "$pkgname-$pkgver"
-	make -j1 DESTDIR="$pkgdir/" install
+package(){
+  install -vdm755 "${pkgdir}/usr/sbin"
+  install -vm755  "${srcdir}/make-ca.sh-${pkgver}" \
+                   "${pkgdir}/usr/sbin/make-ca.sh"
+  bash "${srcdir}/make-ca.sh-${pkgver}" \
+       -C "${srcdir}/certdata.txt" \
+       -D "${pkgdir}"
+  install -vdm755 "${pkgdir}/usr/share/man/man1"
+  help2man -N "${pkgdir}/usr/sbin/make-ca.sh" \
+           -o "${pkgdir}/usr/share/man/man1/make-ca.sh.1"
 }
 # EDITHOOKC
 #######  Building package
-cd $UNPACKDIR
-
-sudo -E sh << ROOT_EOF
-install -vdm755 /etc/ssl/local &&
-wget http://www.cacert.org/certs/root.crt &&
-openssl x509 -in root.crt -text -fingerprint -setalias "CAcert Class 1 root" \\
-        -addtrust serverAuth -addtrust emailProtection -addtrust codeSigning \\
-        > /etc/ssl/local/CAcert_Class_1_root.pem
-ROOT_EOF
-sudo -E sh << ROOT_EOF
-install -vm755 make-ca.sh-20170514 /usr/sbin/make-ca.sh
-ROOT_EOF
-sudo -E sh << ROOT_EOF
-/usr/sbin/make-ca.sh
-ROOT_EOF
-sudo /sbin/ldconfig
-
