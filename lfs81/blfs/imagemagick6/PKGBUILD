@@ -78,5 +78,5 @@ sudo -E sh << ROOT_EOF
 make -j1 DOCUMENTATION_PATH=/usr/share/doc/imagemagick-6.9.9 install-libs-only
 ROOT_EOF
 #make -k check || true
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

@@ -73,13 +73,13 @@ make
 #make -k check || true
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-install -v -m755 -d /usr/share/doc/gutenprint-5.2.12/api/gutenprint{,ui2} &&
+install -v -m755 -d ${pkgdir}/usr/share/doc/gutenprint-5.2.12/api/gutenprint{,ui2} &&
 install -v -m644    doc/gutenprint/html/* \\
-                    /usr/share/doc/gutenprint-5.2.12/api/gutenprint &&
+                    ${pkgdir}/usr/share/doc/gutenprint-5.2.12/api/gutenprint &&
 install -v -m644    doc/gutenprintui2/html/* \\
-                    /usr/share/doc/gutenprint-5.2.12/api/gutenprintui2
+                    ${pkgdir}/usr/share/doc/gutenprint-5.2.12/api/gutenprintui2
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
 /etc/rc.d/init.d/cups restart

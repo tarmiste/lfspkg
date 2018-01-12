@@ -76,18 +76,18 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-ln -snfv ../vim/vim80/doc /usr/share/doc/vim-8.0.586
+ln -snfv ../vim/vim80/doc ${pkgdir}/usr/share/doc/vim-8.0.586
 ROOT_EOF
 rsync -avzcP --delete --exclude="/dos/" --exclude="/spell/" \
     ftp.nluug.nl::Vim/runtime/ ./runtime/
 sudo -E sh << ROOT_EOF
 make -j1 -C src installruntime &&
-vim -c ":helptags /usr/share/doc/vim-8.0.586" -c ":q"
+vim -c ":helptags ${pkgdir}/usr/share/doc/vim-8.0.586" -c ":q"
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-cat > /usr/share/applications/gvim.desktop << "EOF"
+cat > ${pkgdir}/usr/share/applications/gvim.desktop << "EOF"
 [Desktop Entry]
 Name=GVim Text Editor
 Comment=Edit text files

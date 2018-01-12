@@ -86,17 +86,17 @@ make -k check
 sudo -E sh << ROOT_EOF
 make -j1 install &&
 
-mkdir -pv /usr/share/gdb/auto-load/usr/lib              &&
-mv -v /usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib &&
+mkdir -pv ${pkgdir}/usr/share/gdb/auto-load/usr/lib              &&
+mv -v ${pkgdir}/usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib &&
 
 chown -v -R root:root \\
-    /usr/lib/gcc/*linux-gnu/7.2.0/include{,-fixed}
+    ${pkgdir}/usr/lib/gcc/*linux-gnu/7.2.0/include{,-fixed}
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-ln -v -sf ../usr/bin/cpp /lib          &&
-ln -v -sf gcc /usr/bin/cc              &&
-install -v -dm755 /usr/lib/bfd-plugins &&
-ln -sfv ../../libexec/gcc/\$(gcc -dumpmachine)/7.2.0/liblto_plugin.so /usr/lib/bfd-plugins/
+ln -v -sf ../usr/bin/cpp ${pkgdir}/lib          &&
+ln -v -sf gcc ${pkgdir}/usr/bin/cc              &&
+install -v -dm755 ${pkgdir}/usr/lib/bfd-plugins &&
+ln -sfv ../../libexec/gcc/\$(gcc -dumpmachine)/7.2.0/liblto_plugin.so ${pkgdir}/usr/lib/bfd-plugins/
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

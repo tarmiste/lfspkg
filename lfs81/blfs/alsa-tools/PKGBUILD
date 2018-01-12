@@ -67,7 +67,7 @@ cd $UNPACKDIR
 as_root()
 {
   if   [ $EUID = 0 ];        then $*
-  elif [ -x /usr/bin/sudo ]; then sudo $*
+  elif [ -x ${pkgdir}/usr/bin/sudo ]; then sudo $*
   else                            su -c \\"$*\\"
   fi
 }
@@ -90,11 +90,11 @@ do
     ./configure --prefix=/usr
     make
     as_root make install
-    as_root /sbin/ldconfig
+    as_root ${pkgdir}/sbin/ldconfig
   popd
 
 done
 unset tool tool_dir
 exit
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

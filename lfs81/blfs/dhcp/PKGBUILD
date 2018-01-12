@@ -80,23 +80,23 @@ CFLAGS="-D_PATH_DHCLIENT_SCRIPT='\"/sbin/dhclient-script\"'         \
 make -j1
 sudo -E sh << ROOT_EOF
 make -j1 -C client install         &&
-mv -v /usr/sbin/dhclient /sbin &&
-install -v -m755 client/scripts/linux /sbin/dhclient-script
+mv -v ${pkgdir}/usr/sbin/dhclient /sbin &&
+install -v -m755 client/scripts/linux ${pkgdir}/sbin/dhclient-script
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 make -j1 -C server install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 make -j1 install                   &&
-mv -v /usr/sbin/dhclient /sbin &&
-install -v -m755 client/scripts/linux /sbin/dhclient-script
+mv -v ${pkgdir}/usr/sbin/dhclient /sbin &&
+install -v -m755 client/scripts/linux ${pkgdir}/sbin/dhclient-script
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-install -vdm755 /etc/dhcp &&
-cat > /etc/dhcp/dhclient.conf << "EOF"
-# Begin /etc/dhcp/dhclient.conf
+install -vdm755 ${pkgdir}/etc/dhcp &&
+cat > ${pkgdir}/etc/dhcp/dhclient.conf << "EOF"
+# Begin ${pkgdir}/etc/dhcp/dhclient.conf
 #
 # Basic dhclient.conf(5)
 
@@ -112,12 +112,12 @@ require subnet-mask, domain-name-servers;
 #select-timeout 5;
 #initial-interval 2;
 
-# End /etc/dhcp/dhclient.conf
+# End ${pkgdir}/etc/dhcp/dhclient.conf
 EOF
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-install -v -dm 755 /var/lib/dhclient
+install -v -dm 755 ${pkgdir}/var/lib/dhclient
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
@@ -158,7 +158,7 @@ ROOT_EOF
 
 popd
 sudo -E sh << ROOT_EOF
-cat > /etc/sysconfig/ifconfig.eth0 << "EOF"
+cat > ${pkgdir}/etc/sysconfig/ifconfig.eth0 << "EOF"
 ONBOOT="yes"
 IFACE="eth0"
 SERVICE="dhclient"
@@ -176,12 +176,12 @@ EOF
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-cat > /etc/dhcp/dhcpd.conf << "EOF"
-# Begin /etc/dhcp/dhcpd.conf
+cat > ${pkgdir}/etc/dhcp/dhcpd.conf << "EOF"
+# Begin ${pkgdir}/etc/dhcp/dhcpd.conf
 #
 # Example dhcpd.conf(5)
 
-# Use this to enble / disable dynamic dns updates globally.
+# Use this to enble ${pkgdir}/ disable dynamic dns updates globally.
 ddns-update-style none;
 
 # option definitions common to all supported networks...
@@ -197,12 +197,12 @@ subnet 10.254.239.0 netmask 255.255.255.224 {
   option routers rtr-239-0-1.example.org, rtr-239-0-2.example.org;
 }
 
-# End /etc/dhcp/dhcpd.conf
+# End ${pkgdir}/etc/dhcp/dhcpd.conf
 EOF
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-install -v -dm 755 /var/lib/dhcpd
+install -v -dm 755 ${pkgdir}/var/lib/dhcpd
 ROOT_EOF
 
 [[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts

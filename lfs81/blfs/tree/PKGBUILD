@@ -67,7 +67,7 @@ cd $UNPACKDIR
 make
 sudo -E sh << ROOT_EOF
 make -j1 MANDIR=/usr/share/man/man1 install &&
-chmod -v 644 /usr/share/man/man1/tree.1
+chmod -v 644 ${pkgdir}/usr/share/man/man1/tree.1
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

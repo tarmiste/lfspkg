@@ -75,11 +75,11 @@ PKG_CONFIG_PATH="/usr/lib/openssl-1.0/pkgconfig:$PKG_CONFIG_PATH" \
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-install -v -m644 -D doc/keymap.default /etc/w3m/keymap &&
-install -v -m644    doc/menu.default /etc/w3m/menu &&
-install -v -m755 -d /usr/share/doc/w3m-0.5.3 &&
+install -v -m644 -D doc/keymap.default ${pkgdir}/etc/w3m/keymap &&
+install -v -m644    doc/menu.default ${pkgdir}/etc/w3m/menu &&
+install -v -m755 -d ${pkgdir}/usr/share/doc/w3m-0.5.3 &&
 install -v -m644    doc/{HISTORY,READ*,keymap.*,menu.*,*.html} \\
-                    /usr/share/doc/w3m-0.5.3
+                    ${pkgdir}/usr/share/doc/w3m-0.5.3
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

@@ -80,7 +80,7 @@ sudo -E sh << ROOT_EOF
 gtk-update-icon-cache &&
 update-desktop-database
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 
 cd $BUILD_DIR        ##### Unpacking source
@@ -119,7 +119,7 @@ ALL_LINGUAS="ca da de el en en_GB es fr it ja ko nl nn pt_BR ru sl sv zh_CN" \
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-chown -R root:root /usr/share/gimp/2.0/help
+chown -R root:root ${pkgdir}/usr/share/gimp/2.0/help
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

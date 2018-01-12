@@ -77,8 +77,8 @@ ROOT_EOF
 sudo -E sh << ROOT_EOF
 for doctype in html ps dvi man pdf rtf tex texi txt
 do
-    ln -svf docbook2\$doctype /usr/bin/db2\$doctype
+    ln -svf docbook2\$doctype ${pkgdir}/usr/bin/db2\$doctype
 done
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

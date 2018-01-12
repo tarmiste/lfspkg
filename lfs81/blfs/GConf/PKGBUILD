@@ -71,7 +71,7 @@ cd $UNPACKDIR
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-ln -s gconf.xml.defaults /etc/gconf/gconf.xml.system
+ln -s gconf.xml.defaults ${pkgdir}/etc/gconf/gconf.xml.system
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

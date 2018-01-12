@@ -71,7 +71,7 @@ make
 #make -k check || true
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-cp -v doc/keybind-migration.txt /usr/share/mc
+cp -v doc/keybind-migration.txt ${pkgdir}/usr/share/mc
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

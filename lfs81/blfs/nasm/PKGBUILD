@@ -73,9 +73,9 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-install -m755 -d         /usr/share/doc/nasm-2.13.01/html  &&
-cp -v doc/html/*.html    /usr/share/doc/nasm-2.13.01/html  &&
-cp -v doc/*.{txt,ps,pdf} /usr/share/doc/nasm-2.13.01
+install -m755 -d         ${pkgdir}/usr/share/doc/nasm-2.13.01/html  &&
+cp -v doc/html/*.html    ${pkgdir}/usr/share/doc/nasm-2.13.01/html  &&
+cp -v doc/*.{txt,ps,pdf} ${pkgdir}/usr/share/doc/nasm-2.13.01
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

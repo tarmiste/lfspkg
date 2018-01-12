@@ -92,43 +92,43 @@ make
 #make -k test || true
 sudo -E sh << ROOT_EOF
 make -j1 install                                     &&
-install -v -m644 php.ini-production /etc/php.ini &&
+install -v -m644 php.ini-production ${pkgdir}/etc/php.ini &&
 
-install -v -m755 -d /usr/share/doc/php-7.1.8 &&
+install -v -m755 -d ${pkgdir}/usr/share/doc/php-7.1.8 &&
 install -v -m644    CODING_STANDARDS EXTENSIONS INSTALL NEWS README* UPGRADING* php.gif \\
-                    /usr/share/doc/php-7.1.8 &&
-ln -v -sfn          /usr/lib/php/doc/Archive_Tar/docs/Archive_Tar.txt \\
-                    /usr/share/doc/php-7.1.8 &&
-ln -v -sfn          /usr/lib/php/doc/Structures_Graph/docs \\
-                    /usr/share/doc/php-7.1.8
+                    ${pkgdir}/usr/share/doc/php-7.1.8 &&
+ln -v -sfn          ${pkgdir}/usr/lib/php/doc/Archive_Tar/docs/Archive_Tar.txt \\
+                    ${pkgdir}/usr/share/doc/php-7.1.8 &&
+ln -v -sfn          ${pkgdir}/usr/lib/php/doc/Structures_Graph/docs \\
+                    ${pkgdir}/usr/share/doc/php-7.1.8
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-if [ -f /etc/php-fpm.conf.default ]; then
-  mv -v /etc/php-fpm.conf{.default,} &&
-  mv -v /etc/php-fpm.d/www.conf{.default,}
+if [ -f ${pkgdir}/etc/php-fpm.conf.default ]; then
+  mv -v ${pkgdir}/etc/php-fpm.conf{.default,} &&
+  mv -v ${pkgdir}/etc/php-fpm.d/www.conf{.default,}
 fi
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 install -v -m644 ../php_manual_en.html.gz \\
-    /usr/share/doc/php-7.1.8 &&
-gunzip -v /usr/share/doc/php-7.1.8/php_manual_en.html.gz
+    ${pkgdir}/usr/share/doc/php-7.1.8 &&
+gunzip -v ${pkgdir}/usr/share/doc/php-7.1.8/php_manual_en.html.gz
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 tar -xvf ../php_manual_en.tar.gz \\
-    -C /usr/share/doc/php-7.1.8 --no-same-owner
+    -C ${pkgdir}/usr/share/doc/php-7.1.8 --no-same-owner
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 
 sudo -E sh << ROOT_EOF
 sed -i 's@php/includes"@&\\ninclude_path = ".:/usr/lib/php"@' \\
-    /etc/php.ini
+    ${pkgdir}/etc/php.ini
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
 sed -i -e '/proxy_module/s/^#//'      \\
        -e '/proxy_fcgi_module/s/^#//' \\
-       /etc/httpd/httpd.conf
+       ${pkgdir}/etc/httpd/httpd.conf
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF

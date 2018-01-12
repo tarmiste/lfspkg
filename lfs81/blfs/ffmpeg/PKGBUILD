@@ -102,24 +102,24 @@ unset DOCNAME
 sudo -E sh << ROOT_EOF
 make -j1 install &&
 
-install -v -m755    tools/qt-faststart /usr/bin &&
-install -v -m755 -d           /usr/share/doc/ffmpeg-3.3.3 &&
-install -v -m644    doc/*.txt /usr/share/doc/ffmpeg-3.3.3
+install -v -m755    tools/qt-faststart ${pkgdir}/usr/bin &&
+install -v -m755 -d           ${pkgdir}/usr/share/doc/ffmpeg-3.3.3 &&
+install -v -m644    doc/*.txt ${pkgdir}/usr/share/doc/ffmpeg-3.3.3
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-install -v -m644 doc/*.pdf /usr/share/doc/ffmpeg-3.3.3 &&
-install -v -m644 doc/*.ps  /usr/share/doc/ffmpeg-3.3.3
+install -v -m644 doc/*.pdf ${pkgdir}/usr/share/doc/ffmpeg-3.3.3 &&
+install -v -m644 doc/*.ps  ${pkgdir}/usr/share/doc/ffmpeg-3.3.3
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-install -v -m755 -d /usr/share/doc/ffmpeg-3.3.3/api                     &&
-cp -vr doc/doxy/html/* /usr/share/doc/ffmpeg-3.3.3/api                  &&
-find /usr/share/doc/ffmpeg-3.3.3/api -type f -exec chmod -c 0644 \\{} \\; &&
-find /usr/share/doc/ffmpeg-3.3.3/api -type d -exec chmod -c 0755 \\{} \\;
+install -v -m755 -d ${pkgdir}/usr/share/doc/ffmpeg-3.3.3/api                     &&
+cp -vr doc/doxy/html/* ${pkgdir}/usr/share/doc/ffmpeg-3.3.3/api                  &&
+find ${pkgdir}/usr/share/doc/ffmpeg-3.3.3/api -type f -exec chmod -c 0644 \\{} \\; &&
+find ${pkgdir}/usr/share/doc/ffmpeg-3.3.3/api -type d -exec chmod -c 0755 \\{} \\;
 ROOT_EOF
 make fate-rsync SAMPLES=fate-suite/
 rsync -vrltLW  --delete --timeout=60 --contimeout=60 \
       rsync://fate-suite.ffmpeg.org/fate-suite/ fate-suite/
 make fate THREADS=**EDITMENEDITME** SAMPLES=fate-suite/ | tee ../fate.log &&
 grep ^TEST ../fate.log | wc -l
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

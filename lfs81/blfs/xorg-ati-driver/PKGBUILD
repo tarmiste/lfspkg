@@ -72,5 +72,5 @@ install -v -m644 conf/10-radeon.conf \\
   \$XORG_PREFIX/share/X11/xorg.conf.d
 
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

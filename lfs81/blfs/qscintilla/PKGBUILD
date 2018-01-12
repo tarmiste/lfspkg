@@ -77,5 +77,5 @@ install -v -m755 -d \$QT5DIR/share/doc/QScintilla-2.10.1/html &&
 install -v -m644    ../doc/html-Qt4Qt5/* \\
                     \$QT5DIR/share/doc/QScintilla-2.10.1/html
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

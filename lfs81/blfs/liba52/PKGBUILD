@@ -73,9 +73,9 @@ make
 #make -k check || true
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-cp liba52/a52_internal.h /usr/include/a52dec &&
+cp liba52/a52_internal.h ${pkgdir}/usr/include/a52dec &&
 install -v -m644 -D doc/liba52.txt \\
-    /usr/share/doc/liba52-0.7.4/liba52.txt
+    ${pkgdir}/usr/share/doc/liba52-0.7.4/liba52.txt
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

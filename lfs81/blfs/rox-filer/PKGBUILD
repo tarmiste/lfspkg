@@ -73,14 +73,14 @@ pushd build                        &&
   make                             &&
 popd
 sudo -E sh << ROOT_EOF
-mkdir -p /usr/share/rox                              &&
-cp -av Help Messages Options.xml ROX images style.css .DirIcon /usr/share/rox &&
+mkdir -p ${pkgdir}/usr/share/rox                              &&
+cp -av Help Messages Options.xml ROX images style.css .DirIcon ${pkgdir}/usr/share/rox &&
 
-cp -av ../rox.1 /usr/share/man/man1                  &&
-cp -v  ROX-Filer /usr/bin/rox                        &&
-chown -Rv root:root /usr/bin/rox /usr/share/rox      &&
+cp -av ../rox.1 ${pkgdir}/usr/share/man/man1                  &&
+cp -v  ROX-Filer ${pkgdir}/usr/bin/rox                        &&
+chown -Rv root:root ${pkgdir}/usr/bin/rox /usr/share/rox      &&
 
-cd /usr/share/rox/ROX/MIME                           &&
+cd ${pkgdir}/usr/share/rox/ROX/MIME                           &&
 ln -sv text-x-{diff,patch}.png                       &&
 ln -sv application-x-font-{afm,type1}.png            &&
 ln -sv application-xml{,-dtd}.png                    &&
@@ -95,9 +95,9 @@ ln -sv application-x-{bzip,xz}.png                   &&
 ln -sv application-x-{gzip,lzma}.png                 &&
 ln -sv application-{msword,rtf}.png
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
-cat > /path/to/hostname/AppRun << "HERE_DOC"
+cat > ${pkgdir}/path/to/hostname/AppRun << "HERE_DOC"
 #!/bin/bash
 
 MOUNT_PATH="${0%/*}"
@@ -107,10 +107,10 @@ sshfs -o nonempty ${HOST}:/ ${MOUNT_PATH}
 rox -x ${MOUNT_PATH}
 HERE_DOC
 
-chmod 755 /path/to/hostname/AppRun
+chmod 755 ${pkgdir}/path/to/hostname/AppRun
 
 sudo -E sh << ROOT_EOF
-cat > /usr/bin/myumount << "HERE_DOC" &&
+cat > ${pkgdir}/usr/bin/myumount << "HERE_DOC" &&
 #!/bin/bash
 sync
 if mount | grep "\${@}" | grep -q fuse
@@ -119,14 +119,14 @@ else umount "\${@}"
 fi
 HERE_DOC
 
-chmod 755 /usr/bin/myumount
+chmod 755 ${pkgdir}/usr/bin/myumount
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-ln -s ../rox/.DirIcon /usr/share/pixmaps/rox.png &&
-mkdir -p /usr/share/applications &&
+ln -s ../rox/.DirIcon ${pkgdir}/usr/share/pixmaps/rox.png &&
+mkdir -p ${pkgdir}/usr/share/applications &&
 
-cat > /usr/share/applications/rox.desktop << "HERE_DOC"
+cat > ${pkgdir}/usr/share/applications/rox.desktop << "HERE_DOC"
 [Desktop Entry]
 Encoding=UTF-8
 Type=Application

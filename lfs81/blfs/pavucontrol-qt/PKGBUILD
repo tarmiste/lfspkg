@@ -76,10 +76,10 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-if [ "\$LXQT_PREFIX" != /usr ]; then
+if [ "\$LXQT_PREFIX" != ${pkgdir}/usr ]; then
   ln -svf \$LXQT_PREFIX/share/applications/pavucontrol-qt.desktop \\
-          /usr/share/applications
+          ${pkgdir}/usr/share/applications
 fi
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

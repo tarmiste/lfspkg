@@ -70,5 +70,5 @@ sed -i 's| liblmdb.a||' Makefile
 sudo -E sh << ROOT_EOF
 make -j1 prefix=/usr install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

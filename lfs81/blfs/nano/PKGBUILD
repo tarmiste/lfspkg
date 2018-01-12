@@ -71,8 +71,8 @@ cd $UNPACKDIR
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-install -v -m644 doc/{nano.html,sample.nanorc} /usr/share/doc/nano-2.8.7
+install -v -m644 doc/{nano.html,sample.nanorc} ${pkgdir}/usr/share/doc/nano-2.8.7
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 

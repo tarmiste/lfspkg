@@ -70,18 +70,18 @@ cd $UNPACKDIR
 make
 sudo -E sh << ROOT_EOF
 make -j1 install         &&
-rm /usr/share/xsessions/icewm.desktop
+rm ${pkgdir}/usr/share/xsessions/icewm.desktop
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 echo icewm-session > ~/.xinitrc
 
 mkdir -v ~/.icewm                                       &&
-cp -v /usr/share/icewm/keys ~/.icewm/keys               &&
-cp -v /usr/share/icewm/menu ~/.icewm/menu               &&
-cp -v /usr/share/icewm/preferences ~/.icewm/preferences &&
-cp -v /usr/share/icewm/toolbar ~/.icewm/toolbar         &&
-cp -v /usr/share/icewm/winoptions ~/.icewm/winoptions
+cp -v ${pkgdir}/usr/share/icewm/keys ~/.icewm/keys               &&
+cp -v ${pkgdir}/usr/share/icewm/menu ~/.icewm/menu               &&
+cp -v ${pkgdir}/usr/share/icewm/preferences ~/.icewm/preferences &&
+cp -v ${pkgdir}/usr/share/icewm/toolbar ~/.icewm/toolbar         &&
+cp -v ${pkgdir}/usr/share/icewm/winoptions ~/.icewm/winoptions
 
 icewm-menu-fdo >~/.icewm/menu
 

@@ -105,19 +105,19 @@ make DEBUG_BINARIES=true SCTP_WERROR= all  &&
 find build/*/images/j2sdk-image -iname \*.diz -delete
 
 sudo -E sh << ROOT_EOF
-cp -RT build/*/images/j2sdk-image /opt/OpenJDK-1.8.0.141 &&
-chown -R root:root /opt/OpenJDK-1.8.0.141
+cp -RT build/*/images/j2sdk-image ${pkgdir}/opt/OpenJDK-1.8.0.141 &&
+chown -R root:root ${pkgdir}/opt/OpenJDK-1.8.0.141
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-ln -v -nsf OpenJDK-1.8.0.141 /opt/jdk
+ln -v -nsf OpenJDK-1.8.0.141 ${pkgdir}/opt/jdk
 ROOT_EOF
 tar -xf ../icedtea-web-1.7.tar.gz  \
         icedtea-web-1.7/javaws.png \
         --strip-components=1
 sudo -E sh << ROOT_EOF
-mkdir -pv /usr/share/applications &&
+mkdir -pv ${pkgdir}/usr/share/applications &&
 
-cat > /usr/share/applications/openjdk-8-policytool.desktop << "EOF" &&
+cat > ${pkgdir}/usr/share/applications/openjdk-8-policytool.desktop << "EOF" &&
 [Desktop Entry]
 Name=OpenJDK Java Policy Tool
 Name[pt_BR]=OpenJDK Java - Ferramenta de Política
@@ -130,16 +130,16 @@ Icon=javaws
 Categories=Settings;
 EOF
 
-install -v -Dm0644 javaws.png /usr/share/pixmaps/javaws.png
+install -v -Dm0644 javaws.png ${pkgdir}/usr/share/pixmaps/javaws.png
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-ln -sfv /etc/ssl/java/cacerts /opt/jdk/jre/lib/security/cacerts
+ln -sfv ${pkgdir}/etc/ssl/java/cacerts /opt/jdk/jre/lib/security/cacerts
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-cd /opt/jdk
-bin/keytool -list -keystore /etc/ssl/java/cacerts
+cd ${pkgdir}/opt/jdk
+bin/keytool -list -keystore ${pkgdir}/etc/ssl/java/cacerts
 ROOT_EOF
 

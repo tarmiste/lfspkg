@@ -75,10 +75,10 @@ sudo -E sh << ROOT_EOF
 make -j1 docdir=/usr/share/doc/db-6.2.32 install &&
 
 chown -v -R root:root                        \\
-      /usr/bin/db_*                          \\
-      /usr/include/db{,_185,_cxx}.h          \\
-      /usr/lib/libdb*.{so,la}                \\
-      /usr/share/doc/db-6.2.32
+      ${pkgdir}/usr/bin/db_*                          \\
+      ${pkgdir}/usr/include/db{,_185,_cxx}.h          \\
+      ${pkgdir}/usr/lib/libdb*.{so,la}                \\
+      ${pkgdir}/usr/share/doc/db-6.2.32
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

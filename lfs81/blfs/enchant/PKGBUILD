@@ -69,17 +69,17 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-ln -svfn ../../lib/aspell /usr/share/enchant/aspell
+ln -svfn ../../lib/aspell ${pkgdir}/usr/share/enchant/aspell
 ROOT_EOF
 
-cat > /tmp/test-enchant.txt << "EOF"
+cat > ${pkgdir}/tmp/test-enchant.txt << "EOF"
 Tel me more abot linux
 Ther ar so many commads
 EOF
 
-enchant -d en_GB -l /tmp/test-enchant.txt &&
-enchant -d en_GB -a /tmp/test-enchant.txt
+enchant -d en_GB -l ${pkgdir}/tmp/test-enchant.txt &&
+enchant -d en_GB -a ${pkgdir}/tmp/test-enchant.txt
 

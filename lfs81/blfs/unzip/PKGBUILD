@@ -69,5 +69,5 @@ sudo -E sh << ROOT_EOF
 make -j1 prefix=/usr MANDIR=/usr/share/man/man1 \\
  -f unix/Makefile install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

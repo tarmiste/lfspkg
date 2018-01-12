@@ -73,5 +73,5 @@ ROOT_EOF
 sudo -E sh << ROOT_EOF
 make -j1 -C doc/reference install-data-local
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

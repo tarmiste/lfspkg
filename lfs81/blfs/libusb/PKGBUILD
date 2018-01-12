@@ -73,10 +73,10 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-install -v -d -m755 /usr/share/doc/libusb-1.0.21/apidocs &&
+install -v -d -m755 ${pkgdir}/usr/share/doc/libusb-1.0.21/apidocs &&
 install -v -m644    doc/html/* \\
-                    /usr/share/doc/libusb-1.0.21/apidocs
+                    ${pkgdir}/usr/share/doc/libusb-1.0.21/apidocs
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 

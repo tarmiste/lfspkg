@@ -77,18 +77,18 @@ sudo -E sh << ROOT_EOF
 make -j1 install      &&
 make -j1 install-html &&
 
-mv /usr/lib/libguile-*-gdb.scm /usr/share/gdb/auto-load/usr/lib &&
-mv /usr/share/doc/guile-2.2.2/{guile.html,ref} &&
-mv /usr/share/doc/guile-2.2.2/r5rs{.html,}     &&
+mv ${pkgdir}/usr/lib/libguile-*-gdb.scm /usr/share/gdb/auto-load/usr/lib &&
+mv ${pkgdir}/usr/share/doc/guile-2.2.2/{guile.html,ref} &&
+mv ${pkgdir}/usr/share/doc/guile-2.2.2/r5rs{.html,}     &&
 
 find examples -name "Makefile*" -delete         &&
-cp -vR examples   /usr/share/doc/guile-2.2.2   &&
+cp -vR examples   ${pkgdir}/usr/share/doc/guile-2.2.2   &&
 
 for DIRNAME in r5rs ref; do
   install -v -m644  doc/\${DIRNAME}/*.txt \\
-                    /usr/share/doc/guile-2.2.2/\${DIRNAME}
+                    ${pkgdir}/usr/share/doc/guile-2.2.2/\${DIRNAME}
 done &&
 unset DIRNAME
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

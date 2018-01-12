@@ -77,13 +77,13 @@ popd
 sudo -E sh << ROOT_EOF
 make -j1 install &&
 
-install -v -m755 -d /usr/share/doc/enscript-1.6.6 &&
+install -v -m755 -d ${pkgdir}/usr/share/doc/enscript-1.6.6 &&
 install -v -m644    README* *.txt docs/*.txt \\
-                    /usr/share/doc/enscript-1.6.6
+                    ${pkgdir}/usr/share/doc/enscript-1.6.6
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 install -v -m644 docs/*.{dvi,pdf,ps} \\
-                 /usr/share/doc/enscript-1.6.6
+                 ${pkgdir}/usr/share/doc/enscript-1.6.6
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

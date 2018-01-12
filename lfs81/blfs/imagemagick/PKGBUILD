@@ -79,5 +79,5 @@ ROOT_EOF
 #make -k check || true
 #make -k tests/validate || true
 #make -k  || true
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

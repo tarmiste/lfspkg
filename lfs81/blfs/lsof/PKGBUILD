@@ -69,8 +69,8 @@ cd lsof_4.89_src           &&
 ./Configure -n linux       &&
 make CFGL="-L./lib -ltirpc"
 sudo -E sh << ROOT_EOF
-install -v -m0755 -o root -g root lsof /usr/bin &&
-install -v lsof.8 /usr/share/man/man8
+install -v -m0755 -o root -g root lsof ${pkgdir}/usr/bin &&
+install -v lsof.8 ${pkgdir}/usr/share/man/man8
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

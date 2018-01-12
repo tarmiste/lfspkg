@@ -78,5 +78,5 @@ sudo -E sh << ROOT_EOF
 xdg-icon-resource forceupdate --theme hicolor &&
 update-desktop-database -q
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

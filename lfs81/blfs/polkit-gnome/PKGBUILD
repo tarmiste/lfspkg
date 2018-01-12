@@ -69,11 +69,11 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-mkdir -p /etc/xdg/autostart &&
-cat > /etc/xdg/autostart/polkit-gnome-authentication-agent-1.desktop << "EOF"
+mkdir -p ${pkgdir}/etc/xdg/autostart &&
+cat > ${pkgdir}/etc/xdg/autostart/polkit-gnome-authentication-agent-1.desktop << "EOF"
 [Desktop Entry]
 Name=PolicyKit Authentication Agent
 Comment=PolicyKit Authentication Agent

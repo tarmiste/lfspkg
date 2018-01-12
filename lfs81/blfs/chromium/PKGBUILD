@@ -125,29 +125,29 @@ GN_CONFIG=('google_api_key="AIzaSyDxKL42zsPjbke5O8_rPVpVrLrJ8aeE9rQ"'
 python tools/gn/bootstrap/bootstrap.py --gn-gen-args "${GN_CONFIG[*]}" &&
 out/Release/gn gen out/Release --args="${GN_CONFIG[*]}"
 mkdir -p third_party/node/linux/node-linux-x64/bin &&
-ln -s /usr/bin/node third_party/node/linux/node-linux-x64/bin/ &&
+ln -s ${pkgdir}/usr/bin/node third_party/node/linux/node-linux-x64/bin/ &&
 ninja -C out/Release chrome chrome_sandbox chromedriver widevinecdmadapter
 sudo -E sh << ROOT_EOF
 install -vDm755  out/Release/chrome \\
-                 /usr/lib/chromium/chromium                   &&
+                 ${pkgdir}/usr/lib/chromium/chromium                   &&
 install -vDm4755 out/Release/chrome_sandbox \\
-                 /usr/lib/chromium/chrome-sandbox             &&
+                 ${pkgdir}/usr/lib/chromium/chrome-sandbox             &&
 install -vDm755  out/Release/chromedriver \\
-                 /usr/lib/chromium/chromedriver               &&
-ln -svf /usr/lib/chromium/chromium /usr/bin                   &&
-ln -svf /usr/lib/chromium/chromedriver /usr/bin/              &&
+                 ${pkgdir}/usr/lib/chromium/chromedriver               &&
+ln -svf ${pkgdir}/usr/lib/chromium/chromium /usr/bin                   &&
+ln -svf ${pkgdir}/usr/lib/chromium/chromedriver /usr/bin/              &&
 
-install -vm644  out/Release/icudtl.dat /usr/lib/chromium/     &&
+install -vm644  out/Release/icudtl.dat ${pkgdir}/usr/lib/chromium/     &&
 install -vDm644 out/Release/gen/content/content_resources.pak \\
-                /usr/lib/chromium/                            &&
+                ${pkgdir}/usr/lib/chromium/                            &&
 install -vm644  out/Release/{*.pak,*.bin} \\
-                /usr/lib/chromium/                            &&
+                ${pkgdir}/usr/lib/chromium/                            &&
 
-cp -av out/Release/locales /usr/lib/chromium/                 &&
-chown -Rv root:root /usr/lib/chromium/locales                 &&
+cp -av out/Release/locales ${pkgdir}/usr/lib/chromium/                 &&
+chown -Rv root:root ${pkgdir}/usr/lib/chromium/locales                 &&
 
 install -vDm644 out/Release/chrome.1 \\
-                /usr/share/man/man1/chromium.1
+                ${pkgdir}/usr/share/man/man1/chromium.1
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 for size in 16 32; do
@@ -161,7 +161,7 @@ for size in 22 24 48 64 128 256; do
         "/usr/share/icons/hicolor/\${size}x\${size}/apps/chromium.png"
 done &&
 
-cat > /usr/share/applications/chromium.desktop << "EOF"
+cat > ${pkgdir}/usr/share/applications/chromium.desktop << "EOF"
 [Desktop Entry]
 Encoding=UTF-8
 Name=Chromium Web Browser
@@ -185,8 +185,8 @@ case $(uname -m) in
 esac
 sudo -E sh << ROOT_EOF
 tar -xf data.tar.xz                                                        &&
-install -vm755 ../out/Release/libwidevinecdmadapter.so /usr/lib/chromium/  &&
-install -vm755 opt/google/chrome/libwidevinecdm.so  /usr/lib/chromium/
+install -vm755 ../out/Release/libwidevinecdmadapter.so ${pkgdir}/usr/lib/chromium/  &&
+install -vm755 opt/google/chrome/libwidevinecdm.so  ${pkgdir}/usr/lib/chromium/
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

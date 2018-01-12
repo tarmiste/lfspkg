@@ -71,5 +71,5 @@ make test
 sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

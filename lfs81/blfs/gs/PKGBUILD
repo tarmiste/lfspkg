@@ -82,16 +82,16 @@ make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 make -j1 soinstall &&
-install -v -m644 base/*.h /usr/include/ghostscript &&
-ln -v -s ghostscript /usr/include/ps
+install -v -m644 base/*.h ${pkgdir}/usr/include/ghostscript &&
+ln -v -s ghostscript ${pkgdir}/usr/include/ps
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-ln -sfvn ../ghostscript/9.21/doc /usr/share/doc/ghostscript-9.21
+ln -sfvn ../ghostscript/9.21/doc ${pkgdir}/usr/share/doc/ghostscript-9.21
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-tar -xvf ../**EDITME<font-tarball>EDITME** -C /usr/share/ghostscript --no-same-owner &&
-fc-cache -v /usr/share/ghostscript/fonts/
+tar -xvf ../**EDITME<font-tarball>EDITME** -C ${pkgdir}/usr/share/ghostscript --no-same-owner &&
+fc-cache -v ${pkgdir}/usr/share/ghostscript/fonts/
 ROOT_EOF
-gs -q -dBATCH /usr/share/ghostscript/9.21/examples/tiger.eps
-sudo /sbin/ldconfig
+gs -q -dBATCH ${pkgdir}/usr/share/ghostscript/9.21/examples/tiger.eps
+sudo ${pkgdir}/sbin/ldconfig
 

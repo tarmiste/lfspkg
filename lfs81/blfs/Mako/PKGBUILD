@@ -71,5 +71,5 @@ sudo -E sh << ROOT_EOF
 sed -i "s:mako-render:&3:g" setup.py &&
 python3 setup.py install --optimize=1
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

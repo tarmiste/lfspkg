@@ -81,7 +81,7 @@ autoconf2.13 &&
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-pushd /usr/include/mozjs-38 &&
+pushd ${pkgdir}/usr/include/mozjs-38 &&
 for link in \`find . -type l\`; do
     header=\`readlink \$link\`
     rm -f \$link
@@ -90,5 +90,5 @@ for link in \`find . -type l\`; do
 done &&
 popd
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

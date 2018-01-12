@@ -68,11 +68,11 @@ cd $UNPACKDIR
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-chown -v -R root:root /usr/share/emacs/25.2
+chown -v -R root:root ${pkgdir}/usr/share/emacs/25.2
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-gtk-update-icon-cache -t -f --include-image-data /usr/share/icons/hicolor &&
+gtk-update-icon-cache -t -f --include-image-data ${pkgdir}/usr/share/icons/hicolor &&
 update-desktop-database
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

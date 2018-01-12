@@ -75,7 +75,7 @@ sed -e "s@python2.5/Python.h@& python2.7/Python.h@g" \
 sed -e 's@\^u}@^u cols 300}@' \
     -i tests/dejagnu/config/default.exp &&
 
-sed -e '/eq 0/{N;s/12 //}' \
+sed -e '/eq 0/{N;s/12 ${pkgdir}//}' \
     -i plugins/kdb/db2/libdb2/test/run.test &&
 
 autoconf &&
@@ -94,28 +94,28 @@ make -j1 install &&
 for f in gssapi_krb5 gssrpc k5crypto kadm5clnt kadm5srv \\
          kdb5 kdb_ldap krad krb5 krb5support verto ; do
 
-    find /usr/lib -type f -name "lib\$f*.so*" -exec chmod -v 755 {} \\;    
+    find ${pkgdir}/usr/lib -type f -name "lib\$f*.so*" -exec chmod -v 755 {} \\;    
 done          &&
 
-mv -v /usr/lib/libkrb5.so.3*        /lib &&
-mv -v /usr/lib/libk5crypto.so.3*    /lib &&
-mv -v /usr/lib/libkrb5support.so.0* /lib &&
+mv -v ${pkgdir}/usr/lib/libkrb5.so.3*        /lib &&
+mv -v ${pkgdir}/usr/lib/libk5crypto.so.3*    /lib &&
+mv -v ${pkgdir}/usr/lib/libkrb5support.so.0* /lib &&
 
-ln -v -sf ../../lib/libkrb5.so.3.3        /usr/lib/libkrb5.so        &&
-ln -v -sf ../../lib/libk5crypto.so.3.1    /usr/lib/libk5crypto.so    &&
-ln -v -sf ../../lib/libkrb5support.so.0.1 /usr/lib/libkrb5support.so &&
+ln -v -sf ../../lib/libkrb5.so.3.3        ${pkgdir}/usr/lib/libkrb5.so        &&
+ln -v -sf ../../lib/libk5crypto.so.3.1    ${pkgdir}/usr/lib/libk5crypto.so    &&
+ln -v -sf ../../lib/libkrb5support.so.0.1 ${pkgdir}/usr/lib/libkrb5support.so &&
 
-mv -v /usr/bin/ksu /bin &&
-chmod -v 755 /bin/ksu   &&
+mv -v ${pkgdir}/usr/bin/ksu /bin &&
+chmod -v 755 ${pkgdir}/bin/ksu   &&
 
-install -v -dm755 /usr/share/doc/krb5-1.15.1 &&
-cp -vfr ../doc/*  /usr/share/doc/krb5-1.15.1
+install -v -dm755 ${pkgdir}/usr/share/doc/krb5-1.15.1 &&
+cp -vfr ../doc/*  ${pkgdir}/usr/share/doc/krb5-1.15.1
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-cat > /etc/krb5.conf << "EOF"
-# Begin /etc/krb5.conf
+cat > ${pkgdir}/etc/krb5.conf << "EOF"
+# Begin ${pkgdir}/etc/krb5.conf
 
 [libdefaults]
     default_realm = **EDITME<EXAMPLE.ORG>EDITME**
@@ -125,7 +125,7 @@ cat > /etc/krb5.conf << "EOF"
     **EDITME<EXAMPLE.ORG>EDITME** = {
         kdc = **EDITME<belgarath.example.org>EDITME**
         admin_server = **EDITME<belgarath.example.org>EDITME**
-        dict_file = /usr/share/dict/words
+        dict_file = ${pkgdir}/usr/share/dict/words
     }
 
 [domain_realm]
@@ -136,7 +136,7 @@ cat > /etc/krb5.conf << "EOF"
     admin_server = SYSLOG:INFO:AUTH
     default = SYSLOG:DEBUG:DAEMON
 
-# End /etc/krb5.conf
+# End ${pkgdir}/etc/krb5.conf
 EOF
 ROOT_EOF
 
@@ -167,7 +167,7 @@ kinit **EDITME<loginname>EDITME**
 klist
 
 ktutil
-ktutil: rkt /etc/krb5.keytab
+ktutil: rkt ${pkgdir}/etc/krb5.keytab
 ktutil: l
 
 [[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts

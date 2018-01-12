@@ -105,30 +105,30 @@ qmake wpa_gui.pro &&
 make &&
 popd
 sudo -E sh << ROOT_EOF
-install -v -m755 wpa_{cli,passphrase,supplicant} /sbin/ &&
-install -v -m644 doc/docbook/wpa_supplicant.conf.5 /usr/share/man/man5/ &&
-install -v -m644 doc/docbook/wpa_{cli,passphrase,supplicant}.8 /usr/share/man/man8/
+install -v -m755 wpa_{cli,passphrase,supplicant} ${pkgdir}/sbin/ &&
+install -v -m644 doc/docbook/wpa_supplicant.conf.5 ${pkgdir}/usr/share/man/man5/ &&
+install -v -m644 doc/docbook/wpa_{cli,passphrase,supplicant}.8 ${pkgdir}/usr/share/man/man8/
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 install -v -m644 dbus/fi.{epitest.hostap.WPASupplicant,w1.wpa_supplicant1}.service \\
-                 /usr/share/dbus-1/system-services/ &&
-install -v -d -m755 /etc/dbus-1/system.d &&
+                 ${pkgdir}/usr/share/dbus-1/system-services/ &&
+install -v -d -m755 ${pkgdir}/etc/dbus-1/system.d &&
 install -v -m644 dbus/dbus-wpa_supplicant.conf \\
-                 /etc/dbus-1/system.d/wpa_supplicant.conf
+                 ${pkgdir}/etc/dbus-1/system.d/wpa_supplicant.conf
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-install -v -m755 wpa_gui-qt4/wpa_gui /usr/bin/ &&
-install -v -m644 doc/docbook/wpa_gui.8 /usr/share/man/man8/ &&
-install -v -m644 wpa_gui-qt4/wpa_gui.desktop /usr/share/applications/ &&
-install -v -m644 wpa_gui-qt4/icons/wpa_gui.svg /usr/share/pixmaps/
+install -v -m755 wpa_gui-qt4/wpa_gui ${pkgdir}/usr/bin/ &&
+install -v -m644 doc/docbook/wpa_gui.8 ${pkgdir}/usr/share/man/man8/ &&
+install -v -m644 wpa_gui-qt4/wpa_gui.desktop ${pkgdir}/usr/share/applications/ &&
+install -v -m644 wpa_gui-qt4/icons/wpa_gui.svg ${pkgdir}/usr/share/pixmaps/
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 update-desktop-database
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-wpa_passphrase **EDITMESSIDEDITME** **EDITMESECRET_PASSWORDEDITME** > /etc/sysconfig/wpa_supplicant-**EDITMEwifi0EDITME**.conf
+wpa_passphrase **EDITMESSIDEDITME** **EDITMESECRET_PASSWORDEDITME** > ${pkgdir}/etc/sysconfig/wpa_supplicant-**EDITMEwifi0EDITME**.conf
 ROOT_EOF
 
 
@@ -167,7 +167,7 @@ ROOT_EOF
 
 popd
 sudo -E sh << ROOT_EOF
-cat > /etc/sysconfig/ifconfig.**EDITMEwifi0EDITME** << "EOF"
+cat > ${pkgdir}/etc/sysconfig/ifconfig.**EDITMEwifi0EDITME** << "EOF"
 ONBOOT="yes"
 IFACE="**EDITMEwlan0EDITME**"
 SERVICE="wpa"
@@ -190,7 +190,7 @@ EOF
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-cat > /etc/sysconfig/ifconfig.**EDITMEwifi0EDITME** << "EOF"
+cat > ${pkgdir}/etc/sysconfig/ifconfig.**EDITMEwifi0EDITME** << "EOF"
 ONBOOT="yes"
 IFACE="**EDITMEwlan0EDITME**"
 SERVICE="wpa"
@@ -205,7 +205,7 @@ EOF
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-cat > /etc/sysconfig/ifconfig.**EDITMEwifi0EDITME** << "EOF"
+cat > ${pkgdir}/etc/sysconfig/ifconfig.**EDITMEwifi0EDITME** << "EOF"
 ONBOOT="yes"
 IFACE="**EDITMEwlan0EDITME**"
 SERVICE="wpa"

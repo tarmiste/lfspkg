@@ -72,24 +72,24 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
 
-install -v -m755 -d /etc/acpi/events &&
+install -v -m755 -d ${pkgdir}/etc/acpi/events &&
 
-cp -r samples /usr/share/doc/acpid-2.0.28
+cp -r samples ${pkgdir}/usr/share/doc/acpid-2.0.28
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-cat > /etc/acpi/events/lid << "EOF"
+cat > ${pkgdir}/etc/acpi/events/lid << "EOF"
 event=button/lid
 action=/etc/acpi/lid.sh
 EOF
 
-cat > /etc/acpi/lid.sh << "EOF"
+cat > ${pkgdir}/etc/acpi/lid.sh << "EOF"
 #!/bin/sh
-/bin/grep -q open /proc/acpi/button/lid/LID/state && exit 0
+/bin/grep -q open ${pkgdir}/proc/acpi/button/lid/LID/state && exit 0
 /usr/sbin/pm-suspend
 EOF
-chmod +x /etc/acpi/lid.sh
+chmod +x ${pkgdir}/etc/acpi/lid.sh
 ROOT_EOF
 
 [[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts

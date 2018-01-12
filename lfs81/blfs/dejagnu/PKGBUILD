@@ -70,9 +70,9 @@ makeinfo --plaintext       -o doc/dejagnu.txt  doc/dejagnu.texi
 #make -k check || true
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-install -v -dm755   /usr/share/doc/dejagnu-1.6 &&
+install -v -dm755   ${pkgdir}/usr/share/doc/dejagnu-1.6 &&
 install -v -m644    doc/dejagnu.{html,txt} \\
-                    /usr/share/doc/dejagnu-1.6
+                    ${pkgdir}/usr/share/doc/dejagnu-1.6
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

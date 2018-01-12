@@ -68,11 +68,11 @@ cd $UNPACKDIR
 
 sudo -E sh << ROOT_EOF
 groupadd -g 42 dovecot &&
-useradd -c "Dovecot unprivileged user" -d /dev/null -u 42 \\
-        -g dovecot -s /bin/false dovecot &&
+useradd -c "Dovecot unprivileged user" -d ${pkgdir}/dev/null -u 42 \\
+        -g dovecot -s ${pkgdir}/bin/false dovecot &&
 groupadd -g 43 dovenull &&
-useradd -c "Dovecot login user" -d /dev/null -u 43 \\
-        -g dovenull -s /bin/false dovenull
+useradd -c "Dovecot login user" -d ${pkgdir}/dev/null -u 43 \\
+        -g dovenull -s ${pkgdir}/bin/false dovenull
 ROOT_EOF
 CFLAGS+="-I/usr/include/tirpc" \
 LDFLAGS+="-ltirpc" \
@@ -86,16 +86,16 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-cp -rv /usr/share/doc/dovecot-2.2.32/example-config/* /etc/dovecot
+cp -rv ${pkgdir}/usr/share/doc/dovecot-2.2.32/example-config/* /etc/dovecot
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-sed -i '/^\\!include / s/^/#/' /etc/dovecot/dovecot.conf &&
-chmod -v 1777 /var/mail &&
-cat > /etc/dovecot/local.conf << "EOF"
+sed -i '/^\\!include ${pkgdir}/ s/^/#/' /etc/dovecot/dovecot.conf &&
+chmod -v 1777 ${pkgdir}/var/mail &&
+cat > ${pkgdir}/etc/dovecot/local.conf << "EOF"
 protocols = imap
 ssl = no
 # The next line is only needed if you have no IPv6 network interfaces

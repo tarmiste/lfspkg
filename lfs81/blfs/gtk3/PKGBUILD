@@ -78,9 +78,9 @@ sudo -E sh << ROOT_EOF
 gtk-query-immodules-3.0 --update-cache
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-glib-compile-schemas /usr/share/glib-2.0/schemas
+glib-compile-schemas ${pkgdir}/usr/share/glib-2.0/schemas
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 mkdir -vp ~/.config/gtk-3.0
 cat > ~/.config/gtk-3.0/settings.ini << "EOF"

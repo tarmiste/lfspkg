@@ -72,11 +72,11 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-install -v -d -m755 /usr/share/doc/alsa-lib-1.1.4.1/html/search &&
+install -v -d -m755 ${pkgdir}/usr/share/doc/alsa-lib-1.1.4.1/html/search &&
 install -v -m644 doc/doxygen/html/*.* \\
-                /usr/share/doc/alsa-lib-1.1.4.1/html &&
+                ${pkgdir}/usr/share/doc/alsa-lib-1.1.4.1/html &&
 install -v -m644 doc/doxygen/html/search/* \\
-                /usr/share/doc/alsa-lib-1.1.4.1/html/search
+                ${pkgdir}/usr/share/doc/alsa-lib-1.1.4.1/html/search
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

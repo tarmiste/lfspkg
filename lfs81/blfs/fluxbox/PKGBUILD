@@ -69,13 +69,13 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 echo startfluxbox > ~/.xinitrc
 
 sudo -E sh << ROOT_EOF
-mkdir -pv /usr/share/xsessions &&
-cat > /usr/share/xsessions/fluxbox.desktop << "EOF"
+mkdir -pv ${pkgdir}/usr/share/xsessions &&
+cat > ${pkgdir}/usr/share/xsessions/fluxbox.desktop << "EOF"
 [Desktop Entry]
 Encoding=UTF-8
 Name=Fluxbox
@@ -86,15 +86,15 @@ EOF
 ROOT_EOF
 
 mkdir -v ~/.fluxbox &&
-cp -v /usr/share/fluxbox/init ~/.fluxbox/init &&
-cp -v /usr/share/fluxbox/keys ~/.fluxbox/keys
+cp -v ${pkgdir}/usr/share/fluxbox/init ~/.fluxbox/init &&
+cp -v ${pkgdir}/usr/share/fluxbox/keys ~/.fluxbox/keys
 
 cd ~/.fluxbox &&
 fluxbox-generate_menu **EDITME<user_options>EDITME**
 
-cp -v /usr/share/fluxbox/menu ~/.fluxbox/menu
+cp -v ${pkgdir}/usr/share/fluxbox/menu ~/.fluxbox/menu
 
-cp /usr/share/fluxbox/styles/<theme> ~/.fluxbox/theme &&
+cp ${pkgdir}/usr/share/fluxbox/styles/<theme> ~/.fluxbox/theme &&
 
 sed -i 's,\(session.styleFile:\).*,\1 ~/.fluxbox/theme,' ~/.fluxbox/init &&
 

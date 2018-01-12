@@ -74,9 +74,9 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
 
-install -v -m755 -d /usr/share/doc/mpeg2dec-0.5.1 &&
+install -v -m755 -d ${pkgdir}/usr/share/doc/mpeg2dec-0.5.1 &&
 install -v -m644 README doc/libmpeg2.txt \\
-                    /usr/share/doc/mpeg2dec-0.5.1
+                    ${pkgdir}/usr/share/doc/mpeg2dec-0.5.1
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

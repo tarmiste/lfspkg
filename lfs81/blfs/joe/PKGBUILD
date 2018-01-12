@@ -71,10 +71,10 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
 
-install -vm 755 joe/util/{stringify,termidx,uniproc} /usr/bin &&
+install -vm 755 joe/util/{stringify,termidx,uniproc} ${pkgdir}/usr/bin &&
 
-install -vdm755 /usr/share/joe/util &&
-install -vm 644 joe/util/{*.txt,README} /usr/share/joe/util
+install -vdm755 ${pkgdir}/usr/share/joe/util &&
+install -vm 644 joe/util/{*.txt,README} ${pkgdir}/usr/share/joe/util
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

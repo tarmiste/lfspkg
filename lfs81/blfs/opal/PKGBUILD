@@ -87,7 +87,7 @@ sed -e '/abs(/s/MPI.*)/(int)(&)/' \
 CXXFLAGS=-Wno-deprecated-declarations make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-chmod -v 644 /usr/lib/libopal_s.a
+chmod -v 644 ${pkgdir}/usr/lib/libopal_s.a
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

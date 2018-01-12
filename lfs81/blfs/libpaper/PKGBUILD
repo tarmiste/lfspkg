@@ -71,9 +71,9 @@ autoreconf -fi                &&
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-mkdir -vp /etc/libpaper.d &&
+mkdir -vp ${pkgdir}/etc/libpaper.d &&
 
-cat > /usr/bin/run-parts << "EOF"
+cat > ${pkgdir}/usr/bin/run-parts << "EOF"
 #!/bin/sh
 # run-parts:  Runs all the scripts found in a directory.
 # from Slackware, by Patrick J. Volkerding with ideas borrowed
@@ -124,12 +124,12 @@ done
 exit 0
 EOF
 
-chmod -v 755 /usr/bin/run-parts
+chmod -v 755 ${pkgdir}/usr/bin/run-parts
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-cat > /etc/papersize << "EOF"
+cat > ${pkgdir}/etc/papersize << "EOF"
 a4
 EOF
 ROOT_EOF

@@ -74,9 +74,9 @@ make -j1 install &&
 
 pushd ../doc &&
   for man in man/man?/* ; do
-      install -v -D -m 644 \$man /usr/share/\$man
+      install -v -D -m 644 \$man ${pkgdir}/usr/share/\$man
   done 
 popd
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

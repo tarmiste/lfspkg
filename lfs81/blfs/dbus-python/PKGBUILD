@@ -84,5 +84,5 @@ ROOT_EOF
 sudo -E sh << ROOT_EOF
 make -j1 -C python3 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

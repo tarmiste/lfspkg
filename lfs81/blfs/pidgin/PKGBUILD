@@ -78,16 +78,16 @@ make
 #make -k check || true
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-mkdir -pv /usr/share/doc/pidgin-2.12.0 &&
-cp -v README doc/gtkrc-2.0 /usr/share/doc/pidgin-2.12.0
+mkdir -pv ${pkgdir}/usr/share/doc/pidgin-2.12.0 &&
+cp -v README doc/gtkrc-2.0 ${pkgdir}/usr/share/doc/pidgin-2.12.0
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-mkdir -pv /usr/share/doc/pidgin-2.12.0/api &&
-cp -v doc/html/* /usr/share/doc/pidgin-2.12.0/api
+mkdir -pv ${pkgdir}/usr/share/doc/pidgin-2.12.0/api &&
+cp -v doc/html/* ${pkgdir}/usr/share/doc/pidgin-2.12.0/api
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 gtk-update-icon-cache &&
 update-desktop-database
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

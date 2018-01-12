@@ -72,5 +72,5 @@ sudo -E sh << ROOT_EOF
 make -j1 install &&
 make -j1 docs
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

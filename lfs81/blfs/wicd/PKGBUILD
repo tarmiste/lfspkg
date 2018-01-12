@@ -81,7 +81,7 @@ python setup.py configure --no-install-kde     \
 sudo -E sh << ROOT_EOF
 python setup.py install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 [[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts
 pushd $SRC_DIR/blfs-bootscripts

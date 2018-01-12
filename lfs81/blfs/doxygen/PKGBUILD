@@ -79,7 +79,7 @@ cmake -DDOC_INSTALL_DIR=share/doc/doxygen-1.8.13 -Dbuild_doc=ON .. &&
 make docs
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-install -vm644 ../doc/*.1 /usr/share/man/man1
+install -vm644 ../doc/*.1 ${pkgdir}/usr/share/man/man1
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

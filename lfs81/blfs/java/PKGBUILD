@@ -67,12 +67,12 @@ package() {
 cd $UNPACKDIR
 
 sudo -E sh << ROOT_EOF
-install -vdm755 /opt/OpenJDK-1.8.0.141-bin &&
-mv -v * /opt/OpenJDK-1.8.0.141-bin         &&
-chown -R root:root /opt/OpenJDK-1.8.0.141-bin
+install -vdm755 ${pkgdir}/opt/OpenJDK-1.8.0.141-bin &&
+mv -v * ${pkgdir}/opt/OpenJDK-1.8.0.141-bin         &&
+chown -R root:root ${pkgdir}/opt/OpenJDK-1.8.0.141-bin
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-ln -sfn OpenJDK-1.8.0.141-bin /opt/jdk
+ln -sfn OpenJDK-1.8.0.141-bin ${pkgdir}/opt/jdk
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

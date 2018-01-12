@@ -81,27 +81,27 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
 
-mv -v /usr/lib/libnss_win{s,bind}.so*   /lib                       &&
-ln -v -sf ../../lib/libnss_winbind.so.2 /usr/lib/libnss_winbind.so &&
-ln -v -sf ../../lib/libnss_wins.so.2    /usr/lib/libnss_wins.so    &&
+mv -v ${pkgdir}/usr/lib/libnss_win{s,bind}.so*   /lib                       &&
+ln -v -sf ../../lib/libnss_winbind.so.2 ${pkgdir}/usr/lib/libnss_winbind.so &&
+ln -v -sf ../../lib/libnss_wins.so.2    ${pkgdir}/usr/lib/libnss_wins.so    &&
 
-install -v -m644    examples/smb.conf.default /etc/samba &&
+install -v -m644    examples/smb.conf.default ${pkgdir}/etc/samba &&
 
-mkdir -pv /etc/openldap/schema                        &&
+mkdir -pv ${pkgdir}/etc/openldap/schema                        &&
 
 install -v -m644    examples/LDAP/README              \\
-                    /etc/openldap/schema/README.LDAP  &&
+                    ${pkgdir}/etc/openldap/schema/README.LDAP  &&
 
 install -v -m644    examples/LDAP/samba*              \\
-                    /etc/openldap/schema              &&
+                    ${pkgdir}/etc/openldap/schema              &&
 
 install -v -m755    examples/LDAP/{get*,ol*} \\
-                    /etc/openldap/schema
+                    ${pkgdir}/etc/openldap/schema
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-ln -v -sf /usr/bin/smbspool /usr/lib/cups/backend/smb
+ln -v -sf ${pkgdir}/usr/bin/smbspool /usr/lib/cups/backend/smb
 ROOT_EOF
 
 
@@ -109,8 +109,8 @@ ROOT_EOF
 
 sudo -E sh << ROOT_EOF
 groupadd -g 99 nogroup &&
-useradd -c "Unprivileged Nobody" -d /dev/null -g nogroup \\
-    -s /bin/false -u 99 nobody
+useradd -c "Unprivileged Nobody" -d ${pkgdir}/dev/null -g nogroup \\
+    -s ${pkgdir}/bin/false -u 99 nobody
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF

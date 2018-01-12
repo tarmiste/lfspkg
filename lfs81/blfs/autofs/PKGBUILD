@@ -73,17 +73,17 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-mv /etc/auto.master /etc/auto.master.bak &&
-cat > /etc/auto.master << "EOF"
-# Begin /etc/auto.master
+mv ${pkgdir}/etc/auto.master /etc/auto.master.bak &&
+cat > ${pkgdir}/etc/auto.master << "EOF"
+# Begin ${pkgdir}/etc/auto.master
 
-/media/auto  /etc/auto.misc  --ghost
-#/home        /etc/auto.home
+/media/auto  ${pkgdir}/etc/auto.misc  --ghost
+#/home        ${pkgdir}/etc/auto.home
 
-# End /etc/auto.master
+# End ${pkgdir}/etc/auto.master
 EOF
 ROOT_EOF
 

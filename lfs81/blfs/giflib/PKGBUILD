@@ -74,8 +74,8 @@ sudo -E sh << ROOT_EOF
 find doc \\( -name Makefile\\* -o -name \\*.1 \\
          -o -name \\*.xml \\) -exec rm -v {} \\; &&
 
-install -v -dm755 /usr/share/doc/giflib-5.1.4 &&
-cp -v -R doc/* /usr/share/doc/giflib-5.1.4
+install -v -dm755 ${pkgdir}/usr/share/doc/giflib-5.1.4 &&
+cp -v -R doc/* ${pkgdir}/usr/share/doc/giflib-5.1.4
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

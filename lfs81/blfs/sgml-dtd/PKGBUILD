@@ -67,22 +67,22 @@ cd $UNPACKDIR
 sed -i -e '/ISO 8879/d' \
        -e '/gml/d' docbook.cat
 sudo -E sh << ROOT_EOF
-install -v -d /usr/share/sgml/docbook/sgml-dtd-4.5 &&
+install -v -d ${pkgdir}/usr/share/sgml/docbook/sgml-dtd-4.5 &&
 chown -R root:root . &&
 
-install -v docbook.cat /usr/share/sgml/docbook/sgml-dtd-4.5/catalog &&
-cp -v -af *.dtd *.mod *.dcl /usr/share/sgml/docbook/sgml-dtd-4.5 &&
+install -v docbook.cat ${pkgdir}/usr/share/sgml/docbook/sgml-dtd-4.5/catalog &&
+cp -v -af *.dtd *.mod *.dcl ${pkgdir}/usr/share/sgml/docbook/sgml-dtd-4.5 &&
 
-install-catalog --add /etc/sgml/sgml-docbook-dtd-4.5.cat \\
-    /usr/share/sgml/docbook/sgml-dtd-4.5/catalog &&
+install-catalog --add ${pkgdir}/etc/sgml/sgml-docbook-dtd-4.5.cat \\
+    ${pkgdir}/usr/share/sgml/docbook/sgml-dtd-4.5/catalog &&
 
-install-catalog --add /etc/sgml/sgml-docbook-dtd-4.5.cat \\
-    /etc/sgml/sgml-docbook.cat
+install-catalog --add ${pkgdir}/etc/sgml/sgml-docbook-dtd-4.5.cat \\
+    ${pkgdir}/etc/sgml/sgml-docbook.cat
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-cat >> /usr/share/sgml/docbook/sgml-dtd-4.5/catalog << "EOF"
+cat >> ${pkgdir}/usr/share/sgml/docbook/sgml-dtd-4.5/catalog << "EOF"
   -- Begin Single Major Version catalog changes --
 
 PUBLIC "-//OASIS//DTD DocBook V4.4//EN" "docbook.dtd"

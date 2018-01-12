@@ -77,7 +77,7 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-cat > /usr/lib/pkgconfig/mad.pc << "EOF"
+cat > ${pkgdir}/usr/lib/pkgconfig/mad.pc << "EOF"
 prefix=/usr
 exec_prefix=\${prefix}
 libdir=\${exec_prefix}/lib
@@ -91,5 +91,5 @@ Libs: -L\${libdir} -lmad
 Cflags: -I\${includedir}
 EOF
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

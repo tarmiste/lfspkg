@@ -79,8 +79,8 @@ ROOT_EOF
 sudo -E sh << ROOT_EOF
 make -j1 INSTALL_ROOT=/usr -C qt install &&
 
-install -m644 qt/transmission-qt.desktop /usr/share/applications/transmission-qt.desktop &&
-install -m644 qt/icons/transmission.png  /usr/share/pixmaps/transmission-qt.png
+install -m644 qt/transmission-qt.desktop ${pkgdir}/usr/share/applications/transmission-qt.desktop &&
+install -m644 qt/icons/transmission.png  ${pkgdir}/usr/share/pixmaps/transmission-qt.png
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

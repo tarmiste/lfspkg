@@ -77,12 +77,12 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
 
-mv -v /etc/X11/app-defaults/xinitrc.d/90-consolekit{,.sh}
+mv -v ${pkgdir}/etc/X11/app-defaults/xinitrc.d/90-consolekit{,.sh}
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-cat >> /etc/pam.d/system-session << "EOF"
+cat >> ${pkgdir}/etc/pam.d/system-session << "EOF"
 # Begin ConsoleKit addition
 
 session   optional    pam_loginuid.so
@@ -93,7 +93,7 @@ EOF
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-cat > /usr/lib/ConsoleKit/run-session.d/pam-foreground-compat.ck << "EOF"
+cat > ${pkgdir}/usr/lib/ConsoleKit/run-session.d/pam-foreground-compat.ck << "EOF"
 #!/bin/sh
 TAGDIR=/var/run/console
 
@@ -112,6 +112,6 @@ if [ "\$1" = "session_removed" ] && [ -e "\$TAGFILE" ]; then
     [ -s "\$TAGFILE" ] || rm -f "\$TAGFILE"
 fi
 EOF
-chmod -v 755 /usr/lib/ConsoleKit/run-session.d/pam-foreground-compat.ck
+chmod -v 755 ${pkgdir}/usr/lib/ConsoleKit/run-session.d/pam-foreground-compat.ck
 ROOT_EOF
 

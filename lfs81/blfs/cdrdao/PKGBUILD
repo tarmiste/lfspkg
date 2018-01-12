@@ -71,8 +71,8 @@ sed -i 's/\(char .*REMOTE\)/unsigned \1/' dao/CdrDriver.{cc,h} &&
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-install -v -m755 -d /usr/share/doc/cdrdao-1.2.3 &&
-install -v -m644 README /usr/share/doc/cdrdao-1.2.3
+install -v -m755 -d ${pkgdir}/usr/share/doc/cdrdao-1.2.3 &&
+install -v -m644 README ${pkgdir}/usr/share/doc/cdrdao-1.2.3
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

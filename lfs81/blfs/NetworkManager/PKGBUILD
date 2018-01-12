@@ -83,10 +83,10 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-cat >> /etc/NetworkManager/NetworkManager.conf << "EOF"
+cat >> ${pkgdir}/etc/NetworkManager/NetworkManager.conf << "EOF"
 [main]
 plugins=keyfile
 EOF
@@ -96,7 +96,7 @@ sudo -E sh << ROOT_EOF
 groupadd -fg 86 netdev &&
 /usr/sbin/usermod -a -G netdev **EDITME<username>EDITME**
 
-cat > /usr/share/polkit-1/rules.d/org.freedesktop.NetworkManager.rules << "EOF"
+cat > ${pkgdir}/usr/share/polkit-1/rules.d/org.freedesktop.NetworkManager.rules << "EOF"
 polkit.addRule(function(action, subject) {
     if (action.id.indexOf("org.freedesktop.NetworkManager.") == 0 && subject.isInGroup("netdev")) {
         return polkit.Result.YES;

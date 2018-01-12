@@ -76,11 +76,11 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
 
-install -v -m755 -d /usr/share/doc/wireshark-2.4.0 &&
+install -v -m755 -d ${pkgdir}/usr/share/doc/wireshark-2.4.0 &&
 install -v -m644    README{,.linux} doc/README.* doc/*.{pod,txt} \\
-                    /usr/share/doc/wireshark-2.4.0 &&
+                    ${pkgdir}/usr/share/doc/wireshark-2.4.0 &&
 
-pushd /usr/share/doc/wireshark-2.4.0 &&
+pushd ${pkgdir}/usr/share/doc/wireshark-2.4.0 &&
    for FILENAME in ../../wireshark/*.html; do
       ln -s -v -f \$FILENAME .
    done &&
@@ -89,14 +89,14 @@ unset FILENAME
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 install -v -m644 **EDITME<Downloaded_Files>EDITME** \\
-                 /usr/share/doc/wireshark-2.4.0
+                 ${pkgdir}/usr/share/doc/wireshark-2.4.0
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-chown -v root:wireshark /usr/bin/{tshark,dumpcap} &&
-chmod -v 6550 /usr/bin/{tshark,dumpcap}
+chown -v root:wireshark ${pkgdir}/usr/bin/{tshark,dumpcap} &&
+chmod -v 6550 ${pkgdir}/usr/bin/{tshark,dumpcap}
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 usermod -a -G wireshark <username>
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

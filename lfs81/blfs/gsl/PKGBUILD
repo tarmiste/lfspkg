@@ -72,8 +72,8 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-mkdir                   /usr/share/doc/gsl-2.4 &&
-cp -R doc/_build/html/* /usr/share/doc/gsl-2.4
+mkdir                   ${pkgdir}/usr/share/doc/gsl-2.4 &&
+cp -R doc/_build/html/* ${pkgdir}/usr/share/doc/gsl-2.4
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

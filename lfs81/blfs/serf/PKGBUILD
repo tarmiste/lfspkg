@@ -72,5 +72,5 @@ scons PREFIX=/usr
 sudo -E sh << ROOT_EOF
 scons PREFIX=/usr install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

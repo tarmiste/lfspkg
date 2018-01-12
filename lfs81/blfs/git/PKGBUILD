@@ -84,31 +84,31 @@ make -j1 htmldir=/usr/share/doc/git-2.14.1 install-html
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 tar -xf ../git-manpages-2.14.1.tar.xz \\
-    -C /usr/share/man --no-same-owner --no-overwrite-dir
+    -C ${pkgdir}/usr/share/man --no-same-owner --no-overwrite-dir
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-mkdir -vp   /usr/share/doc/git-2.14.1 &&
+mkdir -vp   ${pkgdir}/usr/share/doc/git-2.14.1 &&
 tar   -xf   ../git-htmldocs-2.14.1.tar.xz \\
-      -C    /usr/share/doc/git-2.14.1 --no-same-owner --no-overwrite-dir &&
+      -C    ${pkgdir}/usr/share/doc/git-2.14.1 --no-same-owner --no-overwrite-dir &&
 
-find        /usr/share/doc/git-2.14.1 -type d -exec chmod 755 {} \\; &&
-find        /usr/share/doc/git-2.14.1 -type f -exec chmod 644 {} \\;
+find        ${pkgdir}/usr/share/doc/git-2.14.1 -type d -exec chmod 755 {} \\; &&
+find        ${pkgdir}/usr/share/doc/git-2.14.1 -type f -exec chmod 644 {} \\;
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-mkdir -vp /usr/share/doc/git-2.14.1/man-pages/{html,text}         &&
-mv        /usr/share/doc/git-2.14.1/{git*.txt,man-pages/text}     &&
-mv        /usr/share/doc/git-2.14.1/{git*.,index.,man-pages/}html &&
+mkdir -vp ${pkgdir}/usr/share/doc/git-2.14.1/man-pages/{html,text}         &&
+mv        ${pkgdir}/usr/share/doc/git-2.14.1/{git*.txt,man-pages/text}     &&
+mv        ${pkgdir}/usr/share/doc/git-2.14.1/{git*.,index.,man-pages/}html &&
 
-mkdir -vp /usr/share/doc/git-2.14.1/technical/{html,text}         &&
-mv        /usr/share/doc/git-2.14.1/technical/{*.txt,text}        &&
-mv        /usr/share/doc/git-2.14.1/technical/{*.,}html           &&
+mkdir -vp ${pkgdir}/usr/share/doc/git-2.14.1/technical/{html,text}         &&
+mv        ${pkgdir}/usr/share/doc/git-2.14.1/technical/{*.txt,text}        &&
+mv        ${pkgdir}/usr/share/doc/git-2.14.1/technical/{*.,}html           &&
 
-mkdir -vp /usr/share/doc/git-2.14.1/howto/{html,text}             &&
-mv        /usr/share/doc/git-2.14.1/howto/{*.txt,text}            &&
-mv        /usr/share/doc/git-2.14.1/howto/{*.,}html               &&
+mkdir -vp ${pkgdir}/usr/share/doc/git-2.14.1/howto/{html,text}             &&
+mv        ${pkgdir}/usr/share/doc/git-2.14.1/howto/{*.txt,text}            &&
+mv        ${pkgdir}/usr/share/doc/git-2.14.1/howto/{*.,}html               &&
 
-sed -i '/^<a href=/s|howto/|&html/|' /usr/share/doc/git-2.14.1/howto-index.html &&
-sed -i '/^\\* link:/s|howto/|&html/|' /usr/share/doc/git-2.14.1/howto-index.txt
+sed -i '/^<a href=/s|howto/|&html/|' ${pkgdir}/usr/share/doc/git-2.14.1/howto-index.html &&
+sed -i '/^\\* link:/s|howto/|&html/|' ${pkgdir}/usr/share/doc/git-2.14.1/howto-index.txt
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

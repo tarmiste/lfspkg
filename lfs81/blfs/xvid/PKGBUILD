@@ -72,12 +72,12 @@ sudo -E sh << ROOT_EOF
 sed -i '/libdir.*STATIC_LIB/ s/^/#/' Makefile &&
 make -j1 install &&
 
-chmod -v 755 /usr/lib/libxvidcore.so.4.3 &&
+chmod -v 755 ${pkgdir}/usr/lib/libxvidcore.so.4.3 &&
 
-install -v -m755 -d /usr/share/doc/xvidcore-1.3.4/examples &&
-install -v -m644 ../../doc/* /usr/share/doc/xvidcore-1.3.4 &&
+install -v -m755 -d ${pkgdir}/usr/share/doc/xvidcore-1.3.4/examples &&
+install -v -m644 ../../doc/* ${pkgdir}/usr/share/doc/xvidcore-1.3.4 &&
 install -v -m644 ../../examples/* \\
-    /usr/share/doc/xvidcore-1.3.4/examples
+    ${pkgdir}/usr/share/doc/xvidcore-1.3.4/examples
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

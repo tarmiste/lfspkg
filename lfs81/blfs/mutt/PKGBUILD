@@ -68,7 +68,7 @@ sudo -E sh << ROOT_EOF
 groupadd -g 34 mail
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-chgrp -v mail /var/mail
+chgrp -v mail ${pkgdir}/var/mail
 ROOT_EOF
 cp -v doc/manual.txt{,.shipped} &&
 ./configure --prefix=/usr                           \
@@ -87,9 +87,9 @@ make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 install -v -m644 doc/manual.pdf \\
-    /usr/share/doc/mutt-1.8.3
+    ${pkgdir}/usr/share/doc/mutt-1.8.3
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
-cat /usr/share/doc/mutt-1.8.3/samples/gpg.rc >> ~/.muttrc
+cat ${pkgdir}/usr/share/doc/mutt-1.8.3/samples/gpg.rc >> ~/.muttrc
 

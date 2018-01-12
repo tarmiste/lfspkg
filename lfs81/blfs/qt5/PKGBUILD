@@ -64,12 +64,12 @@ package() {
 #######  Building package
 cd $UNPACKDIR
 
-echo "INCLUDEPATH += /usr/include/openssl-1.0" >>           \
+echo "INCLUDEPATH += ${pkgdir}/usr/include/openssl-1.0" >>           \
                      qtbase/src/network/network.pro         &&
 export OPENSSL_LIBS='-L/usr/lib/openssl-1.0 -lssl -lcrypto' &&
 
 ./configure -prefix $QT5PREFIX                          \
-            -sysconfdir /etc/xdg                        \
+            -sysconfdir ${pkgdir}/etc/xdg                        \
             -confirm-license                            \
             -opensource                                 \
             -dbus-linked                                \
@@ -90,23 +90,23 @@ ROOT_EOF
 sudo -E sh << ROOT_EOF
 QT5BINDIR=\$QT5PREFIX/bin
 
-install -v -dm755 /usr/share/pixmaps/                  &&
+install -v -dm755 ${pkgdir}/usr/share/pixmaps/                  &&
 
 install -v -Dm644 qttools/src/assistant/assistant/images/assistant-128.png \\
-                  /usr/share/pixmaps/assistant-qt5.png &&
+                  ${pkgdir}/usr/share/pixmaps/assistant-qt5.png &&
 
 install -v -Dm644 qttools/src/designer/src/designer/images/designer.png \\
-                  /usr/share/pixmaps/designer-qt5.png  &&
+                  ${pkgdir}/usr/share/pixmaps/designer-qt5.png  &&
 
 install -v -Dm644 qttools/src/linguist/linguist/images/icons/linguist-128-32.png \\
-                  /usr/share/pixmaps/linguist-qt5.png  &&
+                  ${pkgdir}/usr/share/pixmaps/linguist-qt5.png  &&
 
 install -v -Dm644 qttools/src/qdbus/qdbusviewer/images/qdbusviewer-128.png \\
-                  /usr/share/pixmaps/qdbusviewer-qt5.png &&
+                  ${pkgdir}/usr/share/pixmaps/qdbusviewer-qt5.png &&
 
-install -dm755 /usr/share/applications &&
+install -dm755 ${pkgdir}/usr/share/applications &&
 
-cat > /usr/share/applications/assistant-qt5.desktop << EOF
+cat > ${pkgdir}/usr/share/applications/assistant-qt5.desktop << EOF
 [Desktop Entry]
 Name=Qt5 Assistant
 Comment=Shows Qt5 documentation and examples
@@ -118,7 +118,7 @@ Type=Application
 Categories=Qt;Development;Documentation;
 EOF
 
-cat > /usr/share/applications/designer-qt5.desktop << EOF
+cat > ${pkgdir}/usr/share/applications/designer-qt5.desktop << EOF
 [Desktop Entry]
 Name=Qt5 Designer
 GenericName=Interface Designer
@@ -132,7 +132,7 @@ Type=Application
 Categories=Qt;Development;
 EOF
 
-cat > /usr/share/applications/linguist-qt5.desktop << EOF
+cat > ${pkgdir}/usr/share/applications/linguist-qt5.desktop << EOF
 [Desktop Entry]
 Name=Qt5 Linguist
 Comment=Add translations to Qt5 applications
@@ -145,7 +145,7 @@ Type=Application
 Categories=Qt;Development;
 EOF
 
-cat > /usr/share/applications/qdbusviewer-qt5.desktop << EOF
+cat > ${pkgdir}/usr/share/applications/qdbusviewer-qt5.desktop << EOF
 [Desktop Entry]
 Name=Qt5 QDbusViewer
 GenericName=D-Bus Debugger
@@ -160,25 +160,25 @@ EOF
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 for file in moc uic rcc qmake -j1 lconvert lrelease lupdate; do
-  ln -sfrvn \$QT5BINDIR/\$file /usr/bin/\$file-qt5
+  ln -sfrvn \$QT5BINDIR/\$file ${pkgdir}/usr/bin/\$file-qt5
 done
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-cat > /etc/profile.d/qt5.sh << "EOF"
-# Begin /etc/profile.d/qt5.sh
+cat > ${pkgdir}/etc/profile.d/qt5.sh << "EOF"
+# Begin ${pkgdir}/etc/profile.d/qt5.sh
 
 QT5DIR=/usr
 export QT5DIR
 pathappend \$QT5DIR/bin
 
-# End /etc/profile.d/qt5.sh
+# End ${pkgdir}/etc/profile.d/qt5.sh
 EOF
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-cat >> /etc/ld.so.conf << EOF
+cat >> ${pkgdir}/etc/ld.so.conf << EOF
 # Begin Qt addition
 
 /opt/qt5/lib
@@ -190,8 +190,8 @@ ldconfig
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-cat > /etc/profile.d/qt5.sh << "EOF"
-# Begin /etc/profile.d/qt5.sh
+cat > ${pkgdir}/etc/profile.d/qt5.sh << "EOF"
+# Begin ${pkgdir}/etc/profile.d/qt5.sh
 
 QT5DIR=/opt/qt5
 
@@ -200,7 +200,7 @@ pathappend \$QT5DIR/lib/pkgconfig PKG_CONFIG_PATH
 
 export QT5DIR
 
-# End /etc/profile.d/qt5.sh
+# End ${pkgdir}/etc/profile.d/qt5.sh
 EOF
 ROOT_EOF
 

@@ -136,15 +136,15 @@ export CFLAGS+=$EXTRA_FLAGS   &&
 export CXXFLAGS+=$EXTRA_FLAGS &&
 unset EXTRA_FLAGS             &&
 
-sed -e /static_assert/s/_EVENT_SIZEOF/EVENT__SIZEOF/ \
+sed -e ${pkgdir}/static_assert/s/_EVENT_SIZEOF/EVENT__SIZEOF/ \
     -i mozilla/ipc/chromium/src/base/message_pump_libevent.cc
 
 make -f client.mk
 sudo -E sh << ROOT_EOF
 make -j1  -f client.mk install INSTALL_SDK= &&
-chown -R 0:0 /usr/lib/seamonkey-2.48    &&
+chown -R 0:0 ${pkgdir}/usr/lib/seamonkey-2.48    &&
 
-cp -v \$(find -name seamonkey.1 | head -n1) /usr/share/man/man1
+cp -v \$(find -name seamonkey.1 | head -n1) ${pkgdir}/usr/share/man/man1
 ROOT_EOF
 export CFLAGS=$CFLAGS_HOLD     &&
 export CXXFLAGS=$CXXFLAGS_HOLD &&
@@ -152,12 +152,12 @@ unset CFLAGS_HOLD CXXFLAGS_HOLD
 sudo -E sh << ROOT_EOF
 make -j1 -C obj* install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-mkdir -pv /usr/share/{applications,pixmaps}              &&
+mkdir -pv ${pkgdir}/usr/share/{applications,pixmaps}              &&
 
-cat > /usr/share/applications/seamonkey.desktop << "EOF"
+cat > ${pkgdir}/usr/share/applications/seamonkey.desktop << "EOF"
 [Desktop Entry]
 Encoding=UTF-8
 Type=Application
@@ -170,7 +170,7 @@ StartupNotify=true
 Terminal=false
 EOF
 
-ln -sfv /usr/lib/seamonkey-2.48/chrome/icons/default/seamonkey.png \\
-        /usr/share/pixmaps
+ln -sfv ${pkgdir}/usr/lib/seamonkey-2.48/chrome/icons/default/seamonkey.png \\
+        ${pkgdir}/usr/share/pixmaps
 ROOT_EOF
 

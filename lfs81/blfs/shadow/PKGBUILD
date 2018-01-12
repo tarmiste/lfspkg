@@ -65,11 +65,11 @@ package() {
 cd $UNPACKDIR
 
 sed -i 's@DICTPATH.*@DICTPATH\t/lib/cracklib/pw_dict@' etc/login.defs
-sed -i 's/groups$(EXEEXT) //' src/Makefile.in &&
+sed -i 's/groups$(EXEEXT) ${pkgdir}//' src/Makefile.in &&
 
-find man -name Makefile.in -exec sed -i 's/groups\.1 / /'   {} \; &&
-find man -name Makefile.in -exec sed -i 's/getspnam\.3 / /' {} \; &&
-find man -name Makefile.in -exec sed -i 's/passwd\.5 / /'   {} \; &&
+find man -name Makefile.in -exec sed -i 's/groups\.1 ${pkgdir}/ /'   {} \; &&
+find man -name Makefile.in -exec sed -i 's/getspnam\.3 ${pkgdir}/ /' {} \; &&
+find man -name Makefile.in -exec sed -i 's/passwd\.5 ${pkgdir}/ /'   {} \; &&
 
 sed -i -e 's@#ENCRYPT_METHOD DES@ENCRYPT_METHOD SHA512@' \
        -e 's@/var/spool/mail@/var/mail@' etc/login.defs &&
@@ -80,16 +80,16 @@ sed -i 's/1000/999/' etc/useradd                           &&
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-mv -v /usr/bin/passwd /bin
+mv -v ${pkgdir}/usr/bin/passwd /bin
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-sed -i 's/yes/no/' /etc/default/useradd
+sed -i 's/yes/no/' ${pkgdir}/etc/default/useradd
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-install -v -m644 /etc/login.defs /etc/login.defs.orig &&
+install -v -m644 ${pkgdir}/etc/login.defs /etc/login.defs.orig &&
 for FUNCTION in FAIL_DELAY               \\
                 FAILLOG_ENAB             \\
                 LASTLOG_ENAB             \\
@@ -107,13 +107,13 @@ for FUNCTION in FAIL_DELAY               \\
                 CHFN_AUTH ENCRYPT_METHOD \\
                 ENVIRON_FILE
 do
-    sed -i "s/^\${FUNCTION}/# &/" /etc/login.defs
+    sed -i "s/^\${FUNCTION}/# &/" ${pkgdir}/etc/login.defs
 done
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-cat > /etc/pam.d/login << "EOF"
-# Begin /etc/pam.d/login
+cat > ${pkgdir}/etc/pam.d/login << "EOF"
+# Begin ${pkgdir}/etc/pam.d/login
 
 # Set failure delay before next prompt to 3 seconds
 auth      optional    pam_faildelay.so  delay=3000000
@@ -122,7 +122,7 @@ auth      optional    pam_faildelay.so  delay=3000000
 auth      requisite   pam_nologin.so
 
 # Check to make -j1 sure that root is allowed to login
-# Disabled by default. You will need to create /etc/securetty
+# Disabled by default. You will need to create ${pkgdir}/etc/securetty
 # file for this module to function. See man 5 securetty.
 #auth      required    pam_securetty.so
 
@@ -157,23 +157,23 @@ session   required    pam_limits.so
 session   include     system-session
 password  include     system-password
 
-# End /etc/pam.d/login
+# End ${pkgdir}/etc/pam.d/login
 EOF
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-cat > /etc/pam.d/passwd << "EOF"
-# Begin /etc/pam.d/passwd
+cat > ${pkgdir}/etc/pam.d/passwd << "EOF"
+# Begin ${pkgdir}/etc/pam.d/passwd
 
 password  include     system-password
 
-# End /etc/pam.d/passwd
+# End ${pkgdir}/etc/pam.d/passwd
 EOF
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-cat > /etc/pam.d/su << "EOF"
-# Begin /etc/pam.d/su
+cat > ${pkgdir}/etc/pam.d/su << "EOF"
+# Begin ${pkgdir}/etc/pam.d/su
 
 # always allow root
 auth      sufficient  pam_rootok.so
@@ -188,13 +188,13 @@ session   required    pam_env.so
 # include system session defaults
 session   include     system-session
 
-# End /etc/pam.d/su
+# End ${pkgdir}/etc/pam.d/su
 EOF
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-cat > /etc/pam.d/chage << "EOF"
-# Begin /etc/pam.d/chage
+cat > ${pkgdir}/etc/pam.d/chage << "EOF"
+# Begin ${pkgdir}/etc/pam.d/chage
 
 # always allow root
 auth      sufficient  pam_rootok.so
@@ -207,7 +207,7 @@ session   include     system-session
 # Always permit for authentication updates
 password  required    pam_permit.so
 
-# End /etc/pam.d/chage
+# End ${pkgdir}/etc/pam.d/chage
 EOF
 ROOT_EOF
 
@@ -215,16 +215,16 @@ sudo -E sh << ROOT_EOF
 for PROGRAM in chfn chgpasswd chpasswd chsh groupadd groupdel \\
                groupmems groupmod newusers useradd userdel usermod
 do
-    install -v -m644 /etc/pam.d/chage /etc/pam.d/\${PROGRAM}
-    sed -i "s/chage/\$PROGRAM/" /etc/pam.d/\${PROGRAM}
+    install -v -m644 ${pkgdir}/etc/pam.d/chage /etc/pam.d/\${PROGRAM}
+    sed -i "s/chage/\$PROGRAM/" ${pkgdir}/etc/pam.d/\${PROGRAM}
 done
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-[ -f /etc/login.access ] && mv -v /etc/login.access{,.NOUSE}
+[ -f ${pkgdir}/etc/login.access ] && mv -v /etc/login.access{,.NOUSE}
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-[ -f /etc/limits ] && mv -v /etc/limits{,.NOUSE}
+[ -f ${pkgdir}/etc/limits ] && mv -v /etc/limits{,.NOUSE}
 ROOT_EOF
 

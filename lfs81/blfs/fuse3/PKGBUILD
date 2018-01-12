@@ -72,20 +72,20 @@ cd $UNPACKDIR
 make
 sudo -E sh << ROOT_EOF
 make -j1 install                                         &&
-rm -v /lib/libfuse3.{so,la}                          &&
-ln -sfv ../../lib/libfuse3.so.3 /usr/lib/libfuse3.so &&
+rm -v ${pkgdir}/lib/libfuse3.{so,la}                          &&
+ln -sfv ../../lib/libfuse3.so.3 ${pkgdir}/usr/lib/libfuse3.so &&
 
-rm -rf  /tmp/init.d &&
+rm -rf  ${pkgdir}/tmp/init.d &&
 
-install -v -m755 -d /usr/share/doc/fuse-3.1.1 &&
+install -v -m755 -d ${pkgdir}/usr/share/doc/fuse-3.1.1 &&
 install -v -m644    doc/{README.NFS,kernel.txt} \\
-                    /usr/share/doc/fuse-3.1.1 &&
-cp -Rv doc/html /usr/share/doc/fuse-3.1.1
+                    ${pkgdir}/usr/share/doc/fuse-3.1.1 &&
+cp -Rv doc/html ${pkgdir}/usr/share/doc/fuse-3.1.1
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-cat > /etc/fuse.conf << "EOF"
+cat > ${pkgdir}/etc/fuse.conf << "EOF"
 # Set the maximum number of FUSE mounts allowed to non-root users.
 # The default is 1000.
 #

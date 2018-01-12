@@ -68,19 +68,19 @@ cd $UNPACKDIR
 
 tar -xf ../docbook-dsssl-doc-1.79.tar.bz2 --strip-components=1
 sudo -E sh << ROOT_EOF
-install -v -m755 bin/collateindex.pl /usr/bin                      &&
-install -v -m644 bin/collateindex.pl.1 /usr/share/man/man1         &&
-install -v -d -m755 /usr/share/sgml/docbook/dsssl-stylesheets-1.79 &&
-cp -v -R * /usr/share/sgml/docbook/dsssl-stylesheets-1.79          &&
+install -v -m755 bin/collateindex.pl ${pkgdir}/usr/bin                      &&
+install -v -m644 bin/collateindex.pl.1 ${pkgdir}/usr/share/man/man1         &&
+install -v -d -m755 ${pkgdir}/usr/share/sgml/docbook/dsssl-stylesheets-1.79 &&
+cp -v -R * ${pkgdir}/usr/share/sgml/docbook/dsssl-stylesheets-1.79          &&
 
-install-catalog --add /etc/sgml/dsssl-docbook-stylesheets.cat \\
-    /usr/share/sgml/docbook/dsssl-stylesheets-1.79/catalog         &&
+install-catalog --add ${pkgdir}/etc/sgml/dsssl-docbook-stylesheets.cat \\
+    ${pkgdir}/usr/share/sgml/docbook/dsssl-stylesheets-1.79/catalog         &&
 
-install-catalog --add /etc/sgml/dsssl-docbook-stylesheets.cat \\
-    /usr/share/sgml/docbook/dsssl-stylesheets-1.79/common/catalog  &&
+install-catalog --add ${pkgdir}/etc/sgml/dsssl-docbook-stylesheets.cat \\
+    ${pkgdir}/usr/share/sgml/docbook/dsssl-stylesheets-1.79/common/catalog  &&
 
-install-catalog --add /etc/sgml/sgml-docbook.cat              \\
-    /etc/sgml/dsssl-docbook-stylesheets.cat
+install-catalog --add ${pkgdir}/etc/sgml/sgml-docbook.cat              \\
+    ${pkgdir}/etc/sgml/dsssl-docbook-stylesheets.cat
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

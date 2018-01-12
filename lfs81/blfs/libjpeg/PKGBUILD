@@ -72,10 +72,10 @@ cd $UNPACKDIR
 make
 #make -k test || true
 sudo -E sh << ROOT_EOF
-rm -f /usr/lib/libjpeg.so*
+rm -f ${pkgdir}/usr/lib/libjpeg.so*
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

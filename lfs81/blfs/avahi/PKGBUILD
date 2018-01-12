@@ -68,8 +68,8 @@ cd $UNPACKDIR
 
 sudo -E sh << ROOT_EOF
 groupadd -fg 84 avahi &&
-useradd -c "Avahi Daemon Owner" -d /var/run/avahi-daemon -u 84 \\
-        -g avahi -s /bin/false avahi
+useradd -c "Avahi Daemon Owner" -d ${pkgdir}/var/run/avahi-daemon -u 84 \\
+        -g avahi -s ${pkgdir}/bin/false avahi
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 groupadd -fg 86 netdev
@@ -90,7 +90,7 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 [[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts
 pushd $SRC_DIR/blfs-bootscripts

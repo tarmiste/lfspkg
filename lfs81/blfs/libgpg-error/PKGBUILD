@@ -69,7 +69,7 @@ make
 #make -k check || true
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-install -v -m644 -D README /usr/share/doc/libgpg-error-1.27/README
+install -v -m644 -D README ${pkgdir}/usr/share/doc/libgpg-error-1.27/README
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

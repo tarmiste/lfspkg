@@ -73,5 +73,5 @@ ROOT_EOF
 sudo -E sh << ROOT_EOF
 gdk-pixbuf-query-loaders --update-cache
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

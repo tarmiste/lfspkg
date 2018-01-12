@@ -97,8 +97,8 @@ case \$(uname -m) in
        *) ARCH=ia32    ;;
 esac                     &&
 
-cp -v 3rdparty/ippicv/ippicv_lnx/lib/\$ARCH/libippicv.a /usr/lib &&
+cp -v 3rdparty/ippicv/ippicv_lnx/lib/\$ARCH/libippicv.a ${pkgdir}/usr/lib &&
 unset ARCH
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

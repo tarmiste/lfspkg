@@ -80,14 +80,14 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-install -v -m755 -d        /usr/share/doc/poppler-0.57.0 &&
-install -v -m644 README*   /usr/share/doc/poppler-0.57.0 &&
-cp -vr glib/reference/html /usr/share/doc/poppler-0.57.0
+install -v -m755 -d        ${pkgdir}/usr/share/doc/poppler-0.57.0 &&
+install -v -m644 README*   ${pkgdir}/usr/share/doc/poppler-0.57.0 &&
+cp -vr glib/reference/html ${pkgdir}/usr/share/doc/poppler-0.57.0
 ROOT_EOF
 tar -xf ../poppler-data-0.4.8.tar.gz &&
 cd poppler-data-0.4.8
 sudo -E sh << ROOT_EOF
 make -j1 prefix=/usr install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

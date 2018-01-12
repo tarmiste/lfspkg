@@ -75,10 +75,10 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-cat >> /etc/profile.d/lxqt.sh << "EOF"
+cat >> ${pkgdir}/etc/profile.d/lxqt.sh << "EOF"
 # Begin lxqt-qtplugin configuration
 
 export QT_QPA_PLATFORMTHEME=lxqt

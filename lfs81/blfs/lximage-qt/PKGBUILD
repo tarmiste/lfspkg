@@ -78,10 +78,10 @@ make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 ln -svf \$LXQT_PREFIX/share/applications/lximage-qt.desktop \\
-        /usr/share/applications &&
+        ${pkgdir}/usr/share/applications &&
 
 ln -svf \$LXQT_PREFIX/share/applications/lximage-qt-screenshot.desktop \\
-        /usr/share/applications
+        ${pkgdir}/usr/share/applications
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

@@ -74,5 +74,5 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 update
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

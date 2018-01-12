@@ -78,8 +78,8 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-install -vdm755 /usr/share/doc/libical-2.0.0/html &&
-cp -vr apidocs/html/* /usr/share/doc/libical-2.0.0/html
+install -vdm755 ${pkgdir}/usr/share/doc/libical-2.0.0/html &&
+cp -vr apidocs/html/* ${pkgdir}/usr/share/doc/libical-2.0.0/html
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

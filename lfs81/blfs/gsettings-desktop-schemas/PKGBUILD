@@ -72,7 +72,7 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-glib-compile-schemas /usr/share/glib-2.0/schemas
+glib-compile-schemas ${pkgdir}/usr/share/glib-2.0/schemas
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

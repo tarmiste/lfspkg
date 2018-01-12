@@ -104,10 +104,10 @@ pushd unix/xserver/hw/vnc &&
   make -j1 install &&
 popd &&
 
-[ -e /usr/bin/Xvnc ] || ln -svf \$XORG_PREFIX/bin/Xvnc /usr/bin/Xvnc
+[ -e ${pkgdir}/usr/bin/Xvnc ] || ln -svf \$XORG_PREFIX/bin/Xvnc /usr/bin/Xvnc
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-cat > /usr/share/applications/vncviewer.desktop << "EOF"
+cat > ${pkgdir}/usr/share/applications/vncviewer.desktop << "EOF"
 [Desktop Entry]
 Type=Application
 Name=TigerVNC Viewer
@@ -119,9 +119,9 @@ StartupNotify=false
 Categories=Network;RemoteAccess;
 EOF
 
-install -vm644 ../media/icons/tigervnc_24.png /usr/share/pixmaps &&
-ln -sfv tigervnc_24.png /usr/share/pixmaps/tigervnc.png
+install -vm644 ../media/icons/tigervnc_24.png ${pkgdir}/usr/share/pixmaps &&
+ln -sfv tigervnc_24.png ${pkgdir}/usr/share/pixmaps/tigervnc.png
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 

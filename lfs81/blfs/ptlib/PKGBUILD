@@ -79,7 +79,7 @@ patch -Np1 -i ../ptlib-2.10.11-bison_fixes-2.patch &&
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-chmod -v 755 /usr/lib/libpt.so.2.10.11
+chmod -v 755 ${pkgdir}/usr/lib/libpt.so.2.10.11
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

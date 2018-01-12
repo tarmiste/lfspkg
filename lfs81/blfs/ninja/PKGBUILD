@@ -70,28 +70,28 @@ emacs -Q --batch -f batch-byte-compile misc/ninja-mode.el
 ./ninja ninja_test &&
 ./ninja_test --gtest_filter=-SubprocessTest.SetWithLots
 sudo -E sh << ROOT_EOF
-install -vm755 ninja /usr/bin/ &&
+install -vm755 ninja ${pkgdir}/usr/bin/ &&
 install -vDm644 misc/ninja.vim \\
-                /usr/share/vim/vim80/syntax/ninja.vim &&
+                ${pkgdir}/usr/share/vim/vim80/syntax/ninja.vim &&
 install -vDm644 misc/bash-completion \\
-                /usr/share/bash-completion/completions/ninja &&
+                ${pkgdir}/usr/share/bash-completion/completions/ninja &&
 install -vDm644 misc/zsh-completion \\
-                /usr/share/zsh/site-functions/_ninja
+                ${pkgdir}/usr/share/zsh/site-functions/_ninja
 
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 install -vDm644 misc/ninja-mode.el \\
-                /usr/share/emacs/site-lisp/ninja-mode.el
+                ${pkgdir}/usr/share/emacs/site-lisp/ninja-mode.el
 install -vDm644 misc/ninja-mode.elc \\
-                /usr/share/emacs/site-lisp/ninja-mode.elc
+                ${pkgdir}/usr/share/emacs/site-lisp/ninja-mode.elc
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 ninja manual &&
-install -vDm644 doc/manual.html /usr/share/doc/ninja-1.7.2/manual.html
+install -vDm644 doc/manual.html ${pkgdir}/usr/share/doc/ninja-1.7.2/manual.html
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 ninja doxygen &&
-install -vDdm644 doc/doxygen/html/* /usr/share/doc/ninja-1.7.2/
+install -vDdm644 doc/doxygen/html/* ${pkgdir}/usr/share/doc/ninja-1.7.2/
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

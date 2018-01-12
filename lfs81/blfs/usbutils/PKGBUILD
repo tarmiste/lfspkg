@@ -72,12 +72,12 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-install -dm755 /usr/share/hwdata/ &&
-wget http://www.linux-usb.org/usb.ids -O /usr/share/hwdata/usb.ids
+install -dm755 ${pkgdir}/usr/share/hwdata/ &&
+wget http://www.linux-usb.org/usb.ids -O ${pkgdir}/usr/share/hwdata/usb.ids
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-wget http://www.linux-usb.org/usb.ids -O /usr/share/hwdata/usb.ids
+wget http://www.linux-usb.org/usb.ids -O ${pkgdir}/usr/share/hwdata/usb.ids
 ROOT_EOF
 

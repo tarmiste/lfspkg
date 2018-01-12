@@ -70,5 +70,5 @@ ROOT_EOF
 sudo -E sh << ROOT_EOF
 python3 setup.py install --optimize=1
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

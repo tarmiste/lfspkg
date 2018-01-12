@@ -67,25 +67,25 @@ package() {
 cd $UNPACKDIR
 
 sudo -E sh << ROOT_EOF
-install -v -d -m 0755 /usr/share/vsftpd/empty &&
-install -v -d -m 0755 /home/ftp               &&
+install -v -d -m 0755 ${pkgdir}/usr/share/vsftpd/empty &&
+install -v -d -m 0755 ${pkgdir}/home/ftp               &&
 groupadd -g 47 vsftpd                         &&
 groupadd -g 45 ftp                            &&
 
-useradd -c "vsftpd User"  -d /dev/null -g vsftpd -s /bin/false -u 47 vsftpd &&
-useradd -c anonymous_user -d /home/ftp -g ftp    -s /bin/false -u 45 ftp
+useradd -c "vsftpd User"  -d ${pkgdir}/dev/null -g vsftpd -s /bin/false -u 47 vsftpd &&
+useradd -c anonymous_user -d ${pkgdir}/home/ftp -g ftp    -s /bin/false -u 45 ftp
 ROOT_EOF
 make
 sudo -E sh << ROOT_EOF
-install -v -m 755 vsftpd        /usr/sbin/vsftpd    &&
-install -v -m 644 vsftpd.8      /usr/share/man/man8 &&
-install -v -m 644 vsftpd.conf.5 /usr/share/man/man5 &&
-install -v -m 644 vsftpd.conf   /etc
+install -v -m 755 vsftpd        ${pkgdir}/usr/sbin/vsftpd    &&
+install -v -m 644 vsftpd.8      ${pkgdir}/usr/share/man/man8 &&
+install -v -m 644 vsftpd.conf.5 ${pkgdir}/usr/share/man/man5 &&
+install -v -m 644 vsftpd.conf   ${pkgdir}/etc
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-cat >> /etc/vsftpd.conf << "EOF"
+cat >> ${pkgdir}/etc/vsftpd.conf << "EOF"
 background=YES
 listen=YES
 nopriv_user=vsftpd
@@ -94,15 +94,15 @@ EOF
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-cat >> /etc/vsftpd.conf << "EOF"
+cat >> ${pkgdir}/etc/vsftpd.conf << "EOF"
 local_enable=YES
 EOF
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-cat > /etc/pam.d/vsftpd << "EOF" &&
-# Begin /etc/pam.d/vsftpd
-auth       required     /lib/security/pam_listfile.so item=user sense=deny \\
+cat > ${pkgdir}/etc/pam.d/vsftpd << "EOF" &&
+# Begin ${pkgdir}/etc/pam.d/vsftpd
+auth       required     ${pkgdir}/lib/security/pam_listfile.so item=user sense=deny \\
                                                       file=/etc/ftpusers \\
                                                       onerr=succeed
 auth       required     pam_shells.so
@@ -111,7 +111,7 @@ account    include      system-account
 session    include      system-session
 EOF
 
-cat >> /etc/vsftpd.conf << "EOF"
+cat >> ${pkgdir}/etc/vsftpd.conf << "EOF"
 session_support=YES
 pam_service_name=vsftpd
 EOF

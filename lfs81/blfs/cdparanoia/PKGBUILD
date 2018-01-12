@@ -72,7 +72,7 @@ patch -Np1 -i ../cdparanoia-III-10.2-gcc_fixes-1.patch &&
 make -j1
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-chmod -v 755 /usr/lib/libcdda_*.so.0.10.2
+chmod -v 755 ${pkgdir}/usr/lib/libcdda_*.so.0.10.2
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

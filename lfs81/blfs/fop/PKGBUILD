@@ -104,14 +104,14 @@ mv build/javadocs .
 sed -e '/haltonfailure/s/yes/off/' \
     -i build.xml
 sudo -E sh << ROOT_EOF
-install -v -d -m755 -o root -g root          /opt/fop-2.2 &&
-cp -v  ../{KEYS,LICENSE,NOTICE,README}       /opt/fop-2.2 &&
-cp -vR build conf examples fop* javadocs lib /opt/fop-2.2 &&
-chmod a+x /opt/fop-2.2/fop                                &&
+install -v -d -m755 -o root -g root          ${pkgdir}/opt/fop-2.2 &&
+cp -v  ../{KEYS,LICENSE,NOTICE,README}       ${pkgdir}/opt/fop-2.2 &&
+cp -vR build conf examples fop* javadocs lib ${pkgdir}/opt/fop-2.2 &&
+chmod a+x ${pkgdir}/opt/fop-2.2/fop                                &&
 
-ln -v -sfn fop-2.2 /opt/fop
+ln -v -sfn fop-2.2 ${pkgdir}/opt/fop
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 cat > ~/.foprc << "EOF"
 FOP_OPTS="-Xmx**EDITME<RAM_Installed>EDITME**m"

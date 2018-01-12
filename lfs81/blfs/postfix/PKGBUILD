@@ -67,9 +67,9 @@ cd $UNPACKDIR
 sudo -E sh << ROOT_EOF
 groupadd -g 32 postfix &&
 groupadd -g 33 postdrop &&
-useradd -c "Postfix Daemon User" -d /var/spool/postfix -g postfix \\
-        -s /bin/false -u 32 postfix &&
-chown -v postfix:postfix /var/mail
+useradd -c "Postfix Daemon User" -d ${pkgdir}/var/spool/postfix -g postfix \\
+        -s ${pkgdir}/bin/false -u 32 postfix &&
+chown -v postfix:postfix ${pkgdir}/var/mail
 ROOT_EOF
 sed -i 's/.\x08//g' README_FILES/*
 make CCARGS="-DUSE_TLS -I/usr/include/openssl/                     \
@@ -84,17 +84,17 @@ sh postfix-install -non-interactive \\
    html_directory=/usr/share/doc/postfix-3.2.2/html \\
    readme_directory=/usr/share/doc/postfix-3.2.2/readme
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-cat >> /etc/aliases << "EOF"
-# Begin /etc/aliases
+cat >> ${pkgdir}/etc/aliases << "EOF"
+# Begin ${pkgdir}/etc/aliases
 
 MAILER-DAEMON:    postmaster
 postmaster:       root
 
 root:             **EDITME<LOGIN>EDITME**
-# End /etc/aliases
+# End ${pkgdir}/etc/aliases
 EOF
 ROOT_EOF
 

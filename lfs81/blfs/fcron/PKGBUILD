@@ -67,8 +67,8 @@ package() {
 cd $UNPACKDIR
 
 sudo -E sh << ROOT_EOF
-cat >> /etc/syslog.conf << "EOF"
-# Begin fcron addition to /etc/syslog.conf
+cat >> ${pkgdir}/etc/syslog.conf << "EOF"
+# Begin fcron addition to ${pkgdir}/etc/syslog.conf
 
 cron.* -/var/log/cron.log
 
@@ -80,7 +80,7 @@ sudo -E sh << ROOT_EOF
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 groupadd -g 22 fcron &&
-useradd -d /dev/null -c "Fcron User" -g fcron -s /bin/false -u 22 fcron
+useradd -d ${pkgdir}/dev/null -c "Fcron User" -g fcron -s /bin/false -u 22 fcron
 ROOT_EOF
 ./configure --prefix=/usr          \
             --sysconfdir=/etc      \
@@ -92,7 +92,7 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 [[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts
 pushd $SRC_DIR/blfs-bootscripts

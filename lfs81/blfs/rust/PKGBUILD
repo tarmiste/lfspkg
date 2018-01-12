@@ -83,5 +83,5 @@ EOF
 sudo -E sh << ROOT_EOF
 ./x.py install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

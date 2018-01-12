@@ -92,8 +92,8 @@ sudo -E sh << ROOT_EOF
 make -j1 -C xdemos DEMOS_PREFIX=\$XORG_PREFIX install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-install -v -dm755 /usr/share/doc/mesa-17.1.6 &&
-cp -rfv docs/* /usr/share/doc/mesa-17.1.6
+install -v -dm755 ${pkgdir}/usr/share/doc/mesa-17.1.6 &&
+cp -rfv docs/* ${pkgdir}/usr/share/doc/mesa-17.1.6
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

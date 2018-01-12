@@ -68,7 +68,7 @@ cd $UNPACKDIR
 
 sudo -E sh << ROOT_EOF
 groupadd -g 40 mysql &&
-useradd -c "MySQL Server" -d /srv/mysql -g mysql -s /bin/false -u 40 mysql
+useradd -c "MySQL Server" -d ${pkgdir}/srv/mysql -g mysql -s /bin/false -u 40 mysql
 ROOT_EOF
 sed -i "s@data/test@\${INSTALL_MYSQLTESTDIR}@g" sql/CMakeLists.txt &&
 sed -i '/void..coc_malloc/{s/char ./&x/; s/int/& y/}' mysys_ssl/openssl.c &&
@@ -102,26 +102,26 @@ pushd mysql-test
 popd
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-ln -sfv /usr/include/mysql/{mariadb,mysql}_version.h
+ln -sfv ${pkgdir}/usr/include/mysql/{mariadb,mysql}_version.h
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-install -v -dm 755 /etc/mysql &&
-cat > /etc/mysql/my.cnf << "EOF"
-# Begin /etc/mysql/my.cnf
+install -v -dm 755 ${pkgdir}/etc/mysql &&
+cat > ${pkgdir}/etc/mysql/my.cnf << "EOF"
+# Begin ${pkgdir}/etc/mysql/my.cnf
 
 # The following options will be passed to all MySQL clients
 [client]
 #password       = your_password
 port            = 3306
-socket          = /run/mysqld/mysqld.sock
+socket          = ${pkgdir}/run/mysqld/mysqld.sock
 
 # The MySQL server
 [mysqld]
 port            = 3306
-socket          = /run/mysqld/mysqld.sock
-datadir         = /srv/mysql
+socket          = ${pkgdir}/run/mysqld/mysqld.sock
+datadir         = ${pkgdir}/srv/mysql
 skip-external-locking
 key_buffer_size = 16M
 max_allowed_packet = 1M
@@ -140,8 +140,8 @@ server-id       = 1
 #bdb_max_lock = 10000
 
 # InnoDB tables are now used by default
-innodb_data_home_dir = /srv/mysql
-innodb_log_group_home_dir = /srv/mysql
+innodb_data_home_dir = ${pkgdir}/srv/mysql
+innodb_log_group_home_dir = ${pkgdir}/srv/mysql
 # All the innodb_xxx values below are the default ones:
 innodb_data_file_path = ibdata1:12M:autoextend
 # You can set .._buffer_pool_size up to 50 - 80 %
@@ -176,17 +176,17 @@ write_buffer = 2M
 [mysqlhotcopy]
 interactive-timeout
 
-# End /etc/mysql/my.cnf
+# End ${pkgdir}/etc/mysql/my.cnf
 EOF
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
 mysql_install_db --basedir=/usr --datadir=/srv/mysql --user=mysql &&
-chown -R mysql:mysql /srv/mysql
+chown -R mysql:mysql ${pkgdir}/srv/mysql
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-install -v -m755 -o mysql -g mysql -d /run/mysqld &&
+install -v -m755 -o mysql -g mysql -d ${pkgdir}/run/mysqld &&
 mysqld_safe --user=mysql 2>&1 >/dev/null &
 ROOT_EOF
 

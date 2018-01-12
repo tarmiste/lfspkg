@@ -68,7 +68,7 @@ cd $UNPACKDIR
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-sed -i 's/Utility;//' /usr/share/applications/gpicview.desktop
+sed -i 's/Utility;//' ${pkgdir}/usr/share/applications/gpicview.desktop
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

@@ -79,21 +79,21 @@ make -j1 install-docs
 ROOT_EOF
 make -C contrib/**EDITME<SUBDIR-NAME>EDITME** install
 sudo -E sh << ROOT_EOF
-install -v -dm700 /srv/pgsql/data &&
-install -v -dm755 /run/postgresql &&
+install -v -dm700 ${pkgdir}/srv/pgsql/data &&
+install -v -dm755 ${pkgdir}/run/postgresql &&
 
 groupadd -g 41 postgres &&
-useradd -c "PostgreSQL Server" -g postgres -d /srv/pgsql/data \\
+useradd -c "PostgreSQL Server" -g postgres -d ${pkgdir}/srv/pgsql/data \\
         -u 41 postgres &&
 
-chown -Rv postgres:postgres /srv/pgsql /run/postgresql
+chown -Rv postgres:postgres ${pkgdir}/srv/pgsql /run/postgresql
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-su - postgres -c '/usr/bin/initdb -D /srv/pgsql/data'
+su - postgres -c '/usr/bin/initdb -D ${pkgdir}/srv/pgsql/data'
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-su - postgres -c '/usr/bin/postgres -D /srv/pgsql/data > \\
-                  /srv/pgsql/data/logfile 2>&1 &'
+su - postgres -c '/usr/bin/postgres -D ${pkgdir}/srv/pgsql/data > \\
+                  ${pkgdir}/srv/pgsql/data/logfile 2>&1 &'
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 su - postgres -c '/usr/bin/createdb test' &&
@@ -108,9 +108,9 @@ echo "insert into t1 values ('Jesse', 'Ontario');" \\
 echo "select * from t1;" | (su - postgres -c '/usr/bin/psql test')
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-su - postgres -c "/usr/bin/pg_ctl stop -D /srv/pgsql/data"
+su - postgres -c "/usr/bin/pg_ctl stop -D ${pkgdir}/srv/pgsql/data"
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 [[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts
 pushd $SRC_DIR/blfs-bootscripts

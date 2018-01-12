@@ -76,20 +76,20 @@ make
 #make -k test || true
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-chmod -v 755 /usr/lib/libpython2.7.so.1.0
+chmod -v 755 ${pkgdir}/usr/lib/libpython2.7.so.1.0
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-install -v -dm755 /usr/share/doc/python-2.7.13 &&
+install -v -dm755 ${pkgdir}/usr/share/doc/python-2.7.13 &&
 
 tar --strip-components=1                     \\
     --no-same-owner                          \\
-    --directory /usr/share/doc/python-2.7.13 \\
+    --directory ${pkgdir}/usr/share/doc/python-2.7.13 \\
     -xvf ../python-2.7.13-docs-html.tar.bz2 &&
 
-find /usr/share/doc/python-2.7.13 -type d -exec chmod 0755 {} \\; &&
-find /usr/share/doc/python-2.7.13 -type f -exec chmod 0644 {} \\;
+find ${pkgdir}/usr/share/doc/python-2.7.13 -type d -exec chmod 0755 {} \\; &&
+find ${pkgdir}/usr/share/doc/python-2.7.13 -type f -exec chmod 0644 {} \\;
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
 export PYTHONDOCS=/usr/share/doc/python-2.7.13

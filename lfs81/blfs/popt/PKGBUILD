@@ -71,8 +71,8 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-install -v -m755 -d /usr/share/doc/popt-1.16 &&
-install -v -m644 doxygen/html/* /usr/share/doc/popt-1.16
+install -v -m755 -d ${pkgdir}/usr/share/doc/popt-1.16 &&
+install -v -m644 doxygen/html/* ${pkgdir}/usr/share/doc/popt-1.16
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

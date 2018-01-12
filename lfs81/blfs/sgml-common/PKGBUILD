@@ -73,11 +73,11 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 docdir=/usr/share/doc install &&
 
-install-catalog --add /etc/sgml/sgml-ent.cat \\
-    /usr/share/sgml/sgml-iso-entities-8879.1986/catalog &&
+install-catalog --add ${pkgdir}/etc/sgml/sgml-ent.cat \\
+    ${pkgdir}/usr/share/sgml/sgml-iso-entities-8879.1986/catalog &&
 
-install-catalog --add /etc/sgml/sgml-docbook.cat \\
-    /etc/sgml/sgml-ent.cat
+install-catalog --add ${pkgdir}/etc/sgml/sgml-docbook.cat \\
+    ${pkgdir}/etc/sgml/sgml-ent.cat
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

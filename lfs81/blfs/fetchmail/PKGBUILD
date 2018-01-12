@@ -72,10 +72,10 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 cat > ~/.fetchmailrc << "EOF"
-set logfile /var/log/fetchmail.log
+set logfile ${pkgdir}/var/log/fetchmail.log
 set no bouncemail
 set postmaster root
 

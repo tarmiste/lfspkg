@@ -80,12 +80,12 @@ autoreconf -fi &&
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-install -v -dm755 /usr/share/doc/cyrus-sasl-2.1.26 &&
+install -v -dm755 ${pkgdir}/usr/share/doc/cyrus-sasl-2.1.26 &&
 install -v -m644  doc/{*.{html,txt,fig},ONEWS,TODO} \\
-    saslauthd/LDAP_SASLAUTHD /usr/share/doc/cyrus-sasl-2.1.26 &&
-install -v -dm700 /var/lib/sasl
+    saslauthd/LDAP_SASLAUTHD ${pkgdir}/usr/share/doc/cyrus-sasl-2.1.26 &&
+install -v -dm700 ${pkgdir}/var/lib/sasl
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 [[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts
 pushd $SRC_DIR/blfs-bootscripts

@@ -102,10 +102,10 @@ make -j1 INSTALL_TOP=/usr                \\
      TO_LIB="liblua.so liblua.so.5.3 liblua.so.5.3.4" \\
      install &&
 
-mkdir -pv                      /usr/share/doc/lua-5.3.4 &&
-cp -v doc/*.{html,css,gif,png} /usr/share/doc/lua-5.3.4 &&
+mkdir -pv                      ${pkgdir}/usr/share/doc/lua-5.3.4 &&
+cp -v doc/*.{html,css,gif,png} ${pkgdir}/usr/share/doc/lua-5.3.4 &&
 
-install -v -m644 -D lua.pc /usr/lib/pkgconfig/lua.pc
+install -v -m644 -D lua.pc ${pkgdir}/usr/lib/pkgconfig/lua.pc
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

@@ -84,8 +84,8 @@ ROOT_EOF
 sudo -E sh << ROOT_EOF
 groupadd -g 83 ldap &&
 useradd  -c "OpenLDAP Daemon Owner" \\
-         -d /var/lib/openldap -u 83 \\
-         -g ldap -s /bin/false ldap
+         -d ${pkgdir}/var/lib/openldap -u 83 \\
+         -g ldap -s ${pkgdir}/bin/false ldap
 ROOT_EOF
 patch -Np1 -i ../openldap-2.4.45-consolidated-1.patch &&
 autoconf &&
@@ -118,17 +118,17 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
 
-install -v -dm700 -o ldap -g ldap /var/lib/openldap     &&
+install -v -dm700 -o ldap -g ldap ${pkgdir}/var/lib/openldap     &&
 
-install -v -dm700 -o ldap -g ldap /etc/openldap/slapd.d &&
-chmod   -v    640     /etc/openldap/slapd.{conf,ldif}   &&
-chown   -v  root:ldap /etc/openldap/slapd.{conf,ldif}   &&
+install -v -dm700 -o ldap -g ldap ${pkgdir}/etc/openldap/slapd.d &&
+chmod   -v    640     ${pkgdir}/etc/openldap/slapd.{conf,ldif}   &&
+chown   -v  root:ldap ${pkgdir}/etc/openldap/slapd.{conf,ldif}   &&
 
-install -v -dm755 /usr/share/doc/openldap-2.4.45 &&
+install -v -dm755 ${pkgdir}/usr/share/doc/openldap-2.4.45 &&
 cp      -vfr      doc/{drafts,rfc,guide} \\
-                  /usr/share/doc/openldap-2.4.45
+                  ${pkgdir}/usr/share/doc/openldap-2.4.45
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 [[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts
 pushd $SRC_DIR/blfs-bootscripts

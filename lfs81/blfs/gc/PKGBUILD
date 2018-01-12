@@ -74,8 +74,8 @@ make
 #make -k check || true
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-install -v -m644 doc/gc.man /usr/share/man/man3/gc_malloc.3 &&
-ln -sfv gc_malloc.3 /usr/share/man/man3/gc.3
+install -v -m644 doc/gc.man ${pkgdir}/usr/share/man/man3/gc_malloc.3 &&
+ln -sfv gc_malloc.3 ${pkgdir}/usr/share/man/man3/gc.3
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

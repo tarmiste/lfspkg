@@ -86,7 +86,7 @@ make -j1 prefix=/usr                      \\
      docdir=/usr/share/doc/mupdf-1.11 \\
      install                          &&
 
-ln -sfv mupdf-x11-curl /usr/bin/mupdf
+ln -sfv mupdf-x11-curl ${pkgdir}/usr/bin/mupdf
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

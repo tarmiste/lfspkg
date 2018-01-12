@@ -69,7 +69,7 @@ make all rpl8 btcflash
 sudo -E sh << ROOT_EOF
 make -j1 prefix=/usr install &&
 install -v -m644 -D index.html \\
-    /usr/share/doc/dvd+rw-tools-7.1/index.html
+    ${pkgdir}/usr/share/doc/dvd+rw-tools-7.1/index.html
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

@@ -155,18 +155,18 @@ echo "d2284a20-0505-4927-a809-7ffaf4d91e55" > mozilla-key
 make -f client.mk
 sudo -E sh << ROOT_EOF
 make -j1 -f client.mk install INSTALL_SDK= &&
-chown -R 0:0 /usr/lib/firefox-55.0.3   &&
+chown -R 0:0 ${pkgdir}/usr/lib/firefox-55.0.3   &&
 
-mkdir -pv    /usr/lib/mozilla/plugins  &&
-ln    -sfv   ../../mozilla/plugins /usr/lib/firefox-55.0.3/browser
+mkdir -pv    ${pkgdir}/usr/lib/mozilla/plugins  &&
+ln    -sfv   ../../mozilla/plugins ${pkgdir}/usr/lib/firefox-55.0.3/browser
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-mkdir -pv /usr/share/applications &&
-mkdir -pv /usr/share/pixmaps &&
+mkdir -pv ${pkgdir}/usr/share/applications &&
+mkdir -pv ${pkgdir}/usr/share/pixmaps &&
 
-cat > /usr/share/applications/firefox.desktop << "EOF" &&
+cat > ${pkgdir}/usr/share/applications/firefox.desktop << "EOF" &&
 [Desktop Entry]
 Encoding=UTF-8
 Name=Firefox Web Browser
@@ -181,7 +181,7 @@ MimeType=text/html;text/xml;application/xhtml+xml;application/vnd.mozilla.xul+xm
 StartupNotify=true
 EOF
 
-ln -sfv /usr/lib/firefox-55.0.3/browser/icons/mozicon128.png \\
-        /usr/share/pixmaps/firefox.png
+ln -sfv ${pkgdir}/usr/lib/firefox-55.0.3/browser/icons/mozicon128.png \\
+        ${pkgdir}/usr/share/pixmaps/firefox.png
 ROOT_EOF
 

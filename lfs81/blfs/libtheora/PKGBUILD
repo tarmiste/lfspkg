@@ -74,8 +74,8 @@ ROOT_EOF
 sudo -E sh << ROOT_EOF
 cd examples/.libs &&
 for E in *; do
-  install -v -m755 \$E /usr/bin/theora_\${E}
+  install -v -m755 \$E ${pkgdir}/usr/bin/theora_\${E}
 done
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

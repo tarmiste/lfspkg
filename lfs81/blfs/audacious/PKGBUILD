@@ -72,7 +72,7 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 
 cd $BUILD_DIR        ##### Unpacking source
@@ -115,13 +115,13 @@ sudo -E sh << ROOT_EOF
 gtk-update-icon-cache &&
 update-desktop-database
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-cp -v /usr/share/applications/audacious{,-qt}.desktop &&
+cp -v ${pkgdir}/usr/share/applications/audacious{,-qt}.desktop &&
 
 sed -e '/^Name/ s/\$/ Qt/' \\
     -e '/Exec=/ s/audacious/& --qt/' \\
-    -i /usr/share/applications/audacious-qt.desktop
+    -i ${pkgdir}/usr/share/applications/audacious-qt.desktop
 ROOT_EOF
 

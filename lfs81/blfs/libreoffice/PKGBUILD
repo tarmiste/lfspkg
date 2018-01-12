@@ -129,22 +129,22 @@ sudo -E sh << ROOT_EOF
 if [ "\$LO_PREFIX" != "/usr" ]; then
 
   # This symlink is necessary for the desktop menu entries
-  ln -svf \$LO_PREFIX/lib/libreoffice/program/soffice /usr/bin/libreoffice &&
+  ln -svf \$LO_PREFIX/lib/libreoffice/program/soffice ${pkgdir}/usr/bin/libreoffice &&
 
   # Icons
-  mkdir -vp /usr/share/pixmaps
+  mkdir -vp ${pkgdir}/usr/share/pixmaps
   for i in \$LO_PREFIX/share/icons/hicolor/32x32/apps/*; do
-    ln -svf \$i /usr/share/pixmaps
+    ln -svf \$i ${pkgdir}/usr/share/pixmaps
   done &&
 
   # Desktop menu entries
   for i in \$LO_PREFIX/lib/libreoffice/share/xdg/*; do
-    ln -svf \$i /usr/share/applications/libreoffice-\$(basename \$i)
+    ln -svf \$i ${pkgdir}/usr/share/applications/libreoffice-\$(basename \$i)
   done &&
 
   # Man pages
   for i in \$LO_PREFIX/share/man/man1/*; do
-    ln -svf \$i /usr/share/man/man1/
+    ln -svf \$i ${pkgdir}/usr/share/man/man1/
   done
 
   unset i
@@ -153,5 +153,5 @@ ROOT_EOF
 sudo -E sh << ROOT_EOF
 update-desktop-database
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

@@ -68,7 +68,7 @@ cd $UNPACKDIR
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-install -m755 -v xbm2xface.pl /usr/bin
+install -m755 -v xbm2xface.pl ${pkgdir}/usr/bin
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

@@ -66,8 +66,8 @@ cd $UNPACKDIR
 
 make -C pam_cap
 sudo -E sh << ROOT_EOF
-install -v -m755 pam_cap/pam_cap.so /lib/security &&
-install -v -m644 pam_cap/capability.conf /etc/security
+install -v -m755 pam_cap/pam_cap.so ${pkgdir}/lib/security &&
+install -v -m644 pam_cap/capability.conf ${pkgdir}/etc/security
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

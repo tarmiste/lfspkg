@@ -71,25 +71,25 @@ cd $UNPACKDIR
 make &&
 make DESTDIR=$PWD/Dest install
 sudo -E sh << ROOT_EOF
-install -vm755 Dest/lib/libfuse.so.2.9.7 /lib                  &&
-install -vm755 Dest/lib/libulockmgr.so.1.0.1 /lib                 &&
-ln -sfv ../../lib/libfuse.so.2.9.7 /usr/lib/libfuse.so         &&
-ln -sfv ../../lib/libulockmgr.so.1.0.1 /usr/lib/libulockmgr.so &&
+install -vm755 Dest/lib/libfuse.so.2.9.7 ${pkgdir}/lib                  &&
+install -vm755 Dest/lib/libulockmgr.so.1.0.1 ${pkgdir}/lib                 &&
+ln -sfv ../../lib/libfuse.so.2.9.7 ${pkgdir}/usr/lib/libfuse.so         &&
+ln -sfv ../../lib/libulockmgr.so.1.0.1 ${pkgdir}/usr/lib/libulockmgr.so &&
 
-install -vm644  Dest/lib/pkgconfig/fuse.pc /usr/lib/pkgconfig  && 
+install -vm644  Dest/lib/pkgconfig/fuse.pc ${pkgdir}/usr/lib/pkgconfig  && 
                                                          
-install -vm4755 Dest/bin/fusermount       /bin                 &&
-install -vm755  Dest/bin/ulockmgr_server  /bin                 &&
+install -vm4755 Dest/bin/fusermount       ${pkgdir}/bin                 &&
+install -vm755  Dest/bin/ulockmgr_server  ${pkgdir}/bin                 &&
 
-install -vm755  Dest/sbin/mount.fuse      /sbin                &&
+install -vm755  Dest/sbin/mount.fuse      ${pkgdir}/sbin                &&
 
-install -vdm755 /usr/include/fuse                              &&
+install -vdm755 ${pkgdir}/usr/include/fuse                              &&
 
-install -vm644  Dest/usr/include/*.h      /usr/include         &&
-install -vm644  Dest/usr/include/fuse/*.h /usr/include/fuse/   &&
+install -vm644  Dest/usr/include/*.h      ${pkgdir}/usr/include         &&
+install -vm644  Dest/usr/include/fuse/*.h ${pkgdir}/usr/include/fuse/   &&
 
-install -vm644  Dest/usr/share/man/man1/* /usr/share/man/man1  &&
+install -vm644  Dest/usr/share/man/man1/* ${pkgdir}/usr/share/man/man1  &&
 /sbin/ldconfig -v
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

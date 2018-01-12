@@ -78,8 +78,8 @@ sed -e "s@^\(TK_SRC_DIR='\).*@\1/usr/include'@" \
 sudo -E sh << ROOT_EOF
 make -j1 install &&
 make -j1 install-private-headers &&
-ln -v -sf wish8.6 /usr/bin/wish &&
-chmod -v 755 /usr/lib/libtk8.6.so
+ln -v -sf wish8.6 ${pkgdir}/usr/bin/wish &&
+chmod -v 755 ${pkgdir}/usr/lib/libtk8.6.so
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

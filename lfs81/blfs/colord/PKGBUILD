@@ -66,8 +66,8 @@ cd $UNPACKDIR
 
 sudo -E sh << ROOT_EOF
 groupadd -g 71 colord &&
-useradd -c "Color Daemon Owner" -d /var/lib/colord -u 71 \\
-        -g colord -s /bin/false colord
+useradd -c "Color Daemon Owner" -d ${pkgdir}/var/lib/colord -u 71 \\
+        -g colord -s ${pkgdir}/bin/false colord
 ROOT_EOF
 ./configure --prefix=/usr                \
             --sysconfdir=/etc            \
@@ -84,5 +84,5 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 #make -k check || true
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

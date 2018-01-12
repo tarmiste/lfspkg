@@ -75,12 +75,12 @@ ROOT_EOF
 sudo -E sh << ROOT_EOF
 for size in 24 32 48; do
   ln -svf ../../../../epdfview/pixmaps/icon_epdfview-\$size.png \\
-          /usr/share/icons/hicolor/\${size}x\${size}/apps
+          ${pkgdir}/usr/share/icons/hicolor/\${size}x\${size}/apps
 done &&
 unset size &&
 
 update-desktop-database &&
-gtk-update-icon-cache -t -f --include-image-data /usr/share/icons/hicolor
+gtk-update-icon-cache -t -f --include-image-data ${pkgdir}/usr/share/icons/hicolor
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

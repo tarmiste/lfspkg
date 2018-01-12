@@ -133,14 +133,14 @@ EOF
 make -f client.mk
 sudo -E sh << ROOT_EOF
 make -j1 -f client.mk install INSTALL_SDK= &&
-chown -R 0:0 /usr/lib/thunderbird-52.3.0
+chown -R 0:0 ${pkgdir}/usr/lib/thunderbird-52.3.0
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-mkdir -pv /usr/share/{applications,pixmaps} &&
+mkdir -pv ${pkgdir}/usr/share/{applications,pixmaps} &&
 
-cat > /usr/share/applications/thunderbird.desktop << "EOF" &&
+cat > ${pkgdir}/usr/share/applications/thunderbird.desktop << "EOF" &&
 [Desktop Entry]
 Encoding=UTF-8
 Name=Thunderbird Mail
@@ -155,7 +155,7 @@ MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rs
 StartupNotify=true
 EOF
 
-ln -sfv /usr/lib/thunderbird-52.3.0/chrome/icons/default/default256.png \\
-        /usr/share/pixmaps/thunderbird.png
+ln -sfv ${pkgdir}/usr/lib/thunderbird-52.3.0/chrome/icons/default/default256.png \\
+        ${pkgdir}/usr/share/pixmaps/thunderbird.png
 ROOT_EOF
 

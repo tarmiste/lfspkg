@@ -67,5 +67,5 @@ cd $UNPACKDIR
 sudo -E sh << ROOT_EOF
 python setup.py install --optimize=1
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

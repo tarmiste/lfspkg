@@ -78,5 +78,5 @@ sudo -E sh << ROOT_EOF
 make -j1 -C test          docdir=/usr/share/doc/fltk-1.3.4 install-linux &&
 make -j1 -C documentation docdir=/usr/share/doc/fltk-1.3.4 install-linux
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

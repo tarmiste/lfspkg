@@ -67,7 +67,7 @@ package() {
 cd $UNPACKDIR
 
 cat > pam/lxdm << "EOF"
-# Begin /etc/pam.d/lxdm
+# Begin ${pkgdir}/etc/pam.d/lxdm
 
 auth     requisite      pam_nologin.so
 auth     required       pam_env.so
@@ -80,13 +80,13 @@ password include        system-password
 session  required       pam_limits.so
 session  include        system-session
 
-# End /etc/pam.d/lxdm
+# End ${pkgdir}/etc/pam.d/lxdm
 EOF
 
 sed -i 's:sysconfig/i18n:profile.d/i18n.sh:g' data/lxdm.in &&
 sed -i 's:/etc/xprofile:/etc/profile:g' data/Xsession &&
 sed -e 's/^bg/#&/'        \
-    -e '/reset=1/ s/# //' \
+    -e '/reset=1/ s/# ${pkgdir}//' \
     -e 's/logou$/logout/' \
     -e "/arg=/a arg=$XORG_PREFIX/bin/X" \
     -i data/lxdm.conf.in
@@ -98,7 +98,7 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 [[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts
 pushd $SRC_DIR/blfs-bootscripts
@@ -143,7 +143,7 @@ init 5
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-cp -v /etc/inittab{,-orig} &&
-sed -i '/initdefault/ s/3/5/' /etc/inittab
+cp -v ${pkgdir}/etc/inittab{,-orig} &&
+sed -i '/initdefault/ s/3/5/' ${pkgdir}/etc/inittab
 ROOT_EOF
 

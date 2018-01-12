@@ -75,22 +75,22 @@ CXX="/usr/bin/g++"              \
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-chmod -v 755 /usr/lib/libpython3.6m.so &&
-chmod -v 755 /usr/lib/libpython3.so
+chmod -v 755 ${pkgdir}/usr/lib/libpython3.6m.so &&
+chmod -v 755 ${pkgdir}/usr/lib/libpython3.so
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-install -v -dm755 /usr/share/doc/python-3.6.2/html &&
+install -v -dm755 ${pkgdir}/usr/share/doc/python-3.6.2/html &&
 tar --strip-components=1 \\
     --no-same-owner \\
     --no-same-permissions \\
-    -C /usr/share/doc/python-3.6.2/html \\
+    -C ${pkgdir}/usr/share/doc/python-3.6.2/html \\
     -xvf ../python-3.6.2-docs-html.tar.bz2
 ROOT_EOF
 #make -k test || true
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-ln -svfn python-3.6.2 /usr/share/doc/python-3
+ln -svfn python-3.6.2 ${pkgdir}/usr/share/doc/python-3
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF

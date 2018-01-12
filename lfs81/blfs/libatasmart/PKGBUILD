@@ -69,5 +69,5 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 docdir=/usr/share/doc/libatasmart-0.19 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

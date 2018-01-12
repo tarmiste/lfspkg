@@ -72,7 +72,7 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 [[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts
 pushd $SRC_DIR/blfs-bootscripts
@@ -108,7 +108,7 @@ ROOT_EOF
 
 popd
 sudo -E sh << ROOT_EOF
-cat > /etc/sysconfig/ifconfig.eth0 << "EOF"
+cat > ${pkgdir}/etc/sysconfig/ifconfig.eth0 << "EOF"
 ONBOOT="yes"
 IFACE="eth0"
 SERVICE="dhcpcd"
@@ -118,7 +118,7 @@ EOF
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-cat > /etc/sysconfig/ifconfig.eth0 << "EOF"
+cat > ${pkgdir}/etc/sysconfig/ifconfig.eth0 << "EOF"
 ONBOOT="yes"
 IFACE="eth0"
 SERVICE="dhcpcd"
@@ -128,7 +128,7 @@ EOF
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-cat > /etc/resolv.conf.head << "EOF"
+cat > ${pkgdir}/etc/resolv.conf.head << "EOF"
 # OpenDNS servers
 nameserver 208.67.222.222
 nameserver 208.67.220.220

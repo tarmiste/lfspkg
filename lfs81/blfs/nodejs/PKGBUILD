@@ -73,7 +73,7 @@ PKG_CONFIG_PATH=/usr/lib/openssl-1.0/pkgconfig \
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-ln -sf node /usr/share/doc/node-8.4.0
+ln -sf node ${pkgdir}/usr/share/doc/node-8.4.0
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

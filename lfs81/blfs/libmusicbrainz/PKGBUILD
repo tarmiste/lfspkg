@@ -75,11 +75,11 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
 install -v -m644 -D docs/mb_howto.txt \\
-    /usr/share/doc/libmusicbrainz-2.1.5/mb_howto.txt
+    ${pkgdir}/usr/share/doc/libmusicbrainz-2.1.5/mb_howto.txt
 ROOT_EOF
 #make -k  || true
 sudo -E sh << ROOT_EOF
 (cd python && python setup.py install)
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

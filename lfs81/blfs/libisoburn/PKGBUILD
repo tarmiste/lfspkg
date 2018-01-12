@@ -73,8 +73,8 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-install -v -dm755 /usr/share/doc/libisoburn-1.4.6 &&
-install -v -m644 doc/html/* /usr/share/doc/libisoburn-1.4.6
+install -v -dm755 ${pkgdir}/usr/share/doc/libisoburn-1.4.6 &&
+install -v -m644 doc/html/* ${pkgdir}/usr/share/doc/libisoburn-1.4.6
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

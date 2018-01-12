@@ -72,13 +72,13 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-if [ -e /usr/lib/libnssckbi.so ]; then
-  readlink /usr/lib/libnssckbi.so ||
-  rm -v /usr/lib/libnssckbi.so    &&
-  ln -sfv ./pkcs11/p11-kit-trust.so /usr/lib/libnssckbi.so
+if [ -e ${pkgdir}/usr/lib/libnssckbi.so ]; then
+  readlink ${pkgdir}/usr/lib/libnssckbi.so ||
+  rm -v ${pkgdir}/usr/lib/libnssckbi.so    &&
+  ln -sfv ./pkcs11/p11-kit-trust.so ${pkgdir}/usr/lib/libnssckbi.so
 fi
 ROOT_EOF
 

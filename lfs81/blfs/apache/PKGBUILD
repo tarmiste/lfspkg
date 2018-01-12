@@ -70,8 +70,8 @@ cd $UNPACKDIR
 
 sudo -E sh << ROOT_EOF
 groupadd -g 25 apache &&
-useradd -c "Apache Server" -d /srv/www -g apache \\
-        -s /bin/false -u 25 apache
+useradd -c "Apache Server" -d ${pkgdir}/srv/www -g apache \\
+        -s ${pkgdir}/bin/false -u 25 apache
 ROOT_EOF
 patch -Np1 -i ../httpd-2.4.27-blfs_layout-1.patch             &&
 
@@ -94,13 +94,13 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install  &&
 
-mv -v /usr/sbin/suexec /usr/lib/httpd/suexec &&
-chgrp apache           /usr/lib/httpd/suexec &&
-chmod 4754             /usr/lib/httpd/suexec &&
+mv -v ${pkgdir}/usr/sbin/suexec /usr/lib/httpd/suexec &&
+chgrp apache           ${pkgdir}/usr/lib/httpd/suexec &&
+chmod 4754             ${pkgdir}/usr/lib/httpd/suexec &&
 
-chown -v -R apache:apache /srv/www
+chown -v -R apache:apache ${pkgdir}/srv/www
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 [[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts
 pushd $SRC_DIR/blfs-bootscripts

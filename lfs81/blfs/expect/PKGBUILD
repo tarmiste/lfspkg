@@ -73,7 +73,7 @@ make
 #make -k test || true
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-ln -svf expect5.45/libexpect5.45.so /usr/lib
+ln -svf expect5.45/libexpect5.45.so ${pkgdir}/usr/lib
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

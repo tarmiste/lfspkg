@@ -86,9 +86,9 @@ popd
 sudo -E sh << ROOT_EOF
 make -j1 install &&
 
-ln -sfv ../../lib/\$(readlink /lib/libbtrfs.so) /usr/lib/libbtrfs.so &&
-rm -v /lib/libbtrfs.{a,so} &&
-mv -v /bin/{mkfs,fsck}.btrfs /sbin
+ln -sfv ../../lib/\$(readlink ${pkgdir}/lib/libbtrfs.so) /usr/lib/libbtrfs.so &&
+rm -v ${pkgdir}/lib/libbtrfs.{a,so} &&
+mv -v ${pkgdir}/bin/{mkfs,fsck}.btrfs /sbin
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

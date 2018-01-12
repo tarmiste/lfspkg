@@ -71,10 +71,10 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
 update-desktop-database &&
-update-mime-database /usr/share/mime
+update-mime-database ${pkgdir}/usr/share/mime
 ROOT_EOF
 

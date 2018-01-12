@@ -78,21 +78,21 @@ cd tests &&
 sh regression.sh &&
 cd ..
 sudo -E sh << ROOT_EOF
-install -v -m755 -d /opt/freetts-1.2.2/{lib,docs/{audio,images}} &&
-install -v -m644 lib/*.jar /opt/freetts-1.2.2/lib                &&
+install -v -m755 -d ${pkgdir}/opt/freetts-1.2.2/{lib,docs/{audio,images}} &&
+install -v -m644 lib/*.jar ${pkgdir}/opt/freetts-1.2.2/lib                &&
 install -v -m644 *.txt RELEASE_NOTES docs/*.{pdf,html,txt,sx{w,d}} \\
-                               /opt/freetts-1.2.2/docs           &&
-install -v -m644 docs/audio/*  /opt/freetts-1.2.2/docs/audio     &&
-install -v -m644 docs/images/* /opt/freetts-1.2.2/docs/images    &&
-cp -v -R javadoc               /opt/freetts-1.2.2                &&
-ln -v -s freetts-1.2.2 /opt/freetts
+                               ${pkgdir}/opt/freetts-1.2.2/docs           &&
+install -v -m644 docs/audio/*  ${pkgdir}/opt/freetts-1.2.2/docs/audio     &&
+install -v -m644 docs/images/* ${pkgdir}/opt/freetts-1.2.2/docs/images    &&
+cp -v -R javadoc               ${pkgdir}/opt/freetts-1.2.2                &&
+ln -v -s freetts-1.2.2 ${pkgdir}/opt/freetts
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-cp -v -R bin    /opt/freetts-1.2.2        &&
+cp -v -R bin    ${pkgdir}/opt/freetts-1.2.2        &&
 install -v -m644 speech.properties \$JAVA_HOME/jre/lib &&
-cp -v -R tools  /opt/freetts-1.2.2        &&
-cp -v -R mbrola /opt/freetts-1.2.2        &&
-cp -v -R demo   /opt/freetts-1.2.2
+cp -v -R tools  ${pkgdir}/opt/freetts-1.2.2        &&
+cp -v -R mbrola ${pkgdir}/opt/freetts-1.2.2        &&
+cp -v -R demo   ${pkgdir}/opt/freetts-1.2.2
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

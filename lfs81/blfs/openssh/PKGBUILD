@@ -69,14 +69,14 @@ package() {
 cd $UNPACKDIR
 
 sudo -E sh << ROOT_EOF
-install  -v -m700 -d /var/lib/sshd &&
-chown    -v root:sys /var/lib/sshd &&
+install  -v -m700 -d ${pkgdir}/var/lib/sshd &&
+chown    -v root:sys ${pkgdir}/var/lib/sshd &&
 
 groupadd -g 50 sshd        &&
 useradd  -c 'sshd PrivSep' \\
-         -d /var/lib/sshd  \\
+         -d ${pkgdir}/var/lib/sshd  \\
          -g sshd           \\
-         -s /bin/false     \\
+         -s ${pkgdir}/bin/false     \\
          -u 50 sshd
 ROOT_EOF
 patch -Np1 -i ../openssh-7.5p1-openssl-1.1.0-1.patch &&
@@ -89,32 +89,32 @@ make
 #make -k tests || true
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-install -v -m755    contrib/ssh-copy-id /usr/bin     &&
+install -v -m755    contrib/ssh-copy-id ${pkgdir}/usr/bin     &&
 
 install -v -m644    contrib/ssh-copy-id.1 \\
-                    /usr/share/man/man1              &&
-install -v -m755 -d /usr/share/doc/openssh-7.5p1     &&
+                    ${pkgdir}/usr/share/man/man1              &&
+install -v -m755 -d ${pkgdir}/usr/share/doc/openssh-7.5p1     &&
 install -v -m644    INSTALL LICENCE OVERVIEW README* \\
-                    /usr/share/doc/openssh-7.5p1
+                    ${pkgdir}/usr/share/doc/openssh-7.5p1
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-echo "PermitRootLogin no" >> /etc/ssh/sshd_config
+echo "PermitRootLogin no" >> ${pkgdir}/etc/ssh/sshd_config
 ROOT_EOF
 
 ssh-keygen &&
 ssh-copy-id -i ~/.ssh/id_rsa.pub **EDITMEREMOTE_USERNAMEEDITME**@**EDITMEREMOTE_HOSTNAMEEDITME**
 
 sudo -E sh << ROOT_EOF
-echo "PasswordAuthentication no" >> /etc/ssh/sshd_config &&
-echo "ChallengeResponseAuthentication no" >> /etc/ssh/sshd_config
+echo "PasswordAuthentication no" >> ${pkgdir}/etc/ssh/sshd_config &&
+echo "ChallengeResponseAuthentication no" >> ${pkgdir}/etc/ssh/sshd_config
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-sed 's@d/login@d/sshd@g' /etc/pam.d/login > /etc/pam.d/sshd &&
-chmod 644 /etc/pam.d/sshd &&
-echo "UsePAM yes" >> /etc/ssh/sshd_config
+sed 's@d/login@d/sshd@g' ${pkgdir}/etc/pam.d/login > /etc/pam.d/sshd &&
+chmod 644 ${pkgdir}/etc/pam.d/sshd &&
+echo "UsePAM yes" >> ${pkgdir}/etc/ssh/sshd_config
 ROOT_EOF
 
 [[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts

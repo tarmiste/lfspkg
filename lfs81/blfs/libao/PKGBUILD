@@ -68,7 +68,7 @@ cd $UNPACKDIR
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-install -v -m644 README /usr/share/doc/libao-1.2.0
+install -v -m644 README ${pkgdir}/usr/share/doc/libao-1.2.0
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

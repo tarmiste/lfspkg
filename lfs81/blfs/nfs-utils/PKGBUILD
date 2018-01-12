@@ -70,8 +70,8 @@ cd $UNPACKDIR
 
 sudo -E sh << ROOT_EOF
 groupadd -g 99 nogroup &&
-useradd -c "Unprivileged Nobody" -d /dev/null -g nogroup \\
-    -s /bin/false -u 99 nobody
+useradd -c "Unprivileged Nobody" -d ${pkgdir}/dev/null -g nogroup \\
+    -s ${pkgdir}/bin/false -u 99 nobody
 ROOT_EOF
 sed -i '/fcntl.h/a#include <stdint.h>' support/nsm/rpc.c &&
 
@@ -84,11 +84,11 @@ sed -i '/fcntl.h/a#include <stdint.h>' support/nsm/rpc.c &&
 make
 sudo -E sh << ROOT_EOF
 make -j1 install                   &&
-chmod u+w,go+r /sbin/mount.nfs &&
-chown nobody.nogroup /var/lib/nfs
+chmod u+w,go+r ${pkgdir}/sbin/mount.nfs &&
+chown nobody.nogroup ${pkgdir}/var/lib/nfs
 ROOT_EOF
 #make -k check || true
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
 /home **EDITME192.168.0.0/24EDITME**(rw,subtree_check,anonuid=99,anongid=99)
@@ -128,7 +128,7 @@ ROOT_EOF
 
 popd
 sudo -E sh << ROOT_EOF
-cat > /etc/sysconfig/nfs-server << "EOF"
+cat > ${pkgdir}/etc/sysconfig/nfs-server << "EOF"
 PORT="2049"
 PROCESSES="8"
 KILLDELAY="10"
@@ -136,8 +136,8 @@ EOF
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-**EDITME<server-name>EDITME**:/home  /home nfs   rw,_netdev 0 0
-**EDITME<server-name>EDITME**:/usr   /usr  nfs   ro,_netdev 0 0
+**EDITME<server-name>EDITME**:/home  ${pkgdir}/home nfs   rw,_netdev 0 0
+**EDITME<server-name>EDITME**:/usr   ${pkgdir}/usr  nfs   ro,_netdev 0 0
 ROOT_EOF
 
 [[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts

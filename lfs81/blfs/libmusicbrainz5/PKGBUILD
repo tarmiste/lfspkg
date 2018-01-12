@@ -74,8 +74,8 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-rm -rf /usr/share/doc/libmusicbrainz-5.1.0 &&
-cp -vr docs/ /usr/share/doc/libmusicbrainz-5.1.0
+rm -rf ${pkgdir}/usr/share/doc/libmusicbrainz-5.1.0 &&
+cp -vr docs/ ${pkgdir}/usr/share/doc/libmusicbrainz-5.1.0
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

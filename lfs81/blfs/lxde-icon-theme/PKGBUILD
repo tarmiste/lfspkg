@@ -69,7 +69,7 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-gtk-update-icon-cache -qf /usr/share/icons/nuoveXT2
+gtk-update-icon-cache -qf ${pkgdir}/usr/share/icons/nuoveXT2
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

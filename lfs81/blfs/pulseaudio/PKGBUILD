@@ -76,11 +76,11 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-rm /etc/dbus-1/system.d/pulseaudio-system.conf
+rm ${pkgdir}/etc/dbus-1/system.d/pulseaudio-system.conf
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-sed -i '/load-module module-console-kit/s/^/#/' /etc/pulse/default.pa
+sed -i '/load-module module-console-kit/s/^/#/' ${pkgdir}/etc/pulse/default.pa
 ROOT_EOF
 

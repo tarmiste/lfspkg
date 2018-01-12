@@ -69,9 +69,9 @@ LC_ALL=en_US make
 #make -k check || true
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-install -v -m644 docs/*.{css,html} /usr/share/gtk-doc/html/gegl &&
-install -d -v -m755 /usr/share/gtk-doc/html/gegl/images &&
-install -v -m644 docs/images/*.{png,ico,svg} /usr/share/gtk-doc/html/gegl/images
+install -v -m644 docs/*.{css,html} ${pkgdir}/usr/share/gtk-doc/html/gegl &&
+install -d -v -m755 ${pkgdir}/usr/share/gtk-doc/html/gegl/images &&
+install -v -m644 docs/images/*.{png,ico,svg} ${pkgdir}/usr/share/gtk-doc/html/gegl/images
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

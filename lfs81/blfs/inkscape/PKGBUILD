@@ -79,11 +79,11 @@ cmake -DCMAKE_INSTALL_PREFIX=/usr \
 make
 sudo -E sh << ROOT_EOF
 make -j1 install                      &&
-rm -v /usr/lib/inkscape/lib*_LIB.a
+rm -v ${pkgdir}/usr/lib/inkscape/lib*_LIB.a
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 gtk-update-icon-cache &&
 update-desktop-database
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

@@ -72,11 +72,11 @@ make -j1 PREFIX=/usr        \\
      BUILD_STATIC_LIB=0 \\
      MANDIR=/usr/share/man install &&
 
-install -v -m755 -d /usr/share/doc/lm_sensors-3.4.0 &&
+install -v -m755 -d ${pkgdir}/usr/share/doc/lm_sensors-3.4.0 &&
 cp -rv              README INSTALL doc/* \\
-                    /usr/share/doc/lm_sensors-3.4.0
+                    ${pkgdir}/usr/share/doc/lm_sensors-3.4.0
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
 sensors-detect

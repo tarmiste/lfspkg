@@ -72,11 +72,11 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-cat > /etc/logrotate.conf << EOF
-# Begin of /etc/logrotate.conf
+cat > ${pkgdir}/etc/logrotate.conf << EOF
+# Begin of ${pkgdir}/etc/logrotate.conf
 
 # Rotate log files weekly
 weekly
@@ -113,36 +113,36 @@ compress
 
 # Some packages drop log rotation info in this directory
 # so we include any file in it.
-include /etc/logrotate.d
+include ${pkgdir}/etc/logrotate.d
 
-# End of /etc/logrotate.conf
+# End of ${pkgdir}/etc/logrotate.conf
 EOF
 
-chmod -v 0644 /etc/logrotate.conf
+chmod -v 0644 ${pkgdir}/etc/logrotate.conf
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
- mkdir -p /etc/logrotate.d
+ mkdir -p ${pkgdir}/etc/logrotate.d
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-cat > /etc/logrotate.d/sys.log << EOF
+cat > ${pkgdir}/etc/logrotate.d/sys.log << EOF
 /var/log/sys.log {
    # If the log file is larger than 100kb, rotate it
    size   100k
    rotate 5
    weekly
    postrotate
-      /bin/killall -HUP syslogd
+      ${pkgdir}/bin/killall -HUP syslogd
    endscript
 }
 EOF
 
-chmod -v 0644 /etc/logrotate.d/sys.log
+chmod -v 0644 ${pkgdir}/etc/logrotate.d/sys.log
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-cat > /etc/logrotate.d/example.log << EOF
+cat > ${pkgdir}/etc/logrotate.d/example.log << EOF
 file1
 file2
 file3 {
@@ -153,7 +153,7 @@ file3 {
 }
 EOF
 
-chmod -v 0644 /etc/logrotate.d/example.log
+chmod -v 0644 ${pkgdir}/etc/logrotate.d/example.log
 ROOT_EOF
 
 

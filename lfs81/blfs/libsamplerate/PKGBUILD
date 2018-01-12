@@ -70,5 +70,5 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 htmldocdir=/usr/share/doc/libsamplerate-0.1.9 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

@@ -73,7 +73,7 @@ cd $UNPACKDIR
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-chmod -v 755 /usr/lib/libexiv2.so
+chmod -v 755 ${pkgdir}/usr/lib/libexiv2.so
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

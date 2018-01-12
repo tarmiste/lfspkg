@@ -74,7 +74,7 @@ cmake -DCMAKE_INSTALL_PREFIX=/usr \
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-rm /usr/lib/libx265.a 
+rm ${pkgdir}/usr/lib/libx265.a 
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

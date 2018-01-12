@@ -67,19 +67,19 @@ cd $UNPACKDIR
 cd contrib &&
 make gnome-ssh-askpass2
 sudo -E sh << ROOT_EOF
-install -v -d -m755 /usr/libexec/openssh/contrib  &&
+install -v -d -m755 ${pkgdir}/usr/libexec/openssh/contrib  &&
 install -v -m755    gnome-ssh-askpass2 \\
-                    /usr/libexec/openssh/contrib  &&
+                    ${pkgdir}/usr/libexec/openssh/contrib  &&
 ln -sv -f contrib/gnome-ssh-askpass2 \\
-                    /usr/libexec/openssh/ssh-askpass
+                    ${pkgdir}/usr/libexec/openssh/ssh-askpass
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-cat >> /etc/sudo.conf << "EOF" &&
+cat >> ${pkgdir}/etc/sudo.conf << "EOF" &&
 # Path to askpass helper program
-Path askpass /usr/libexec/openssh/ssh-askpass
+Path askpass ${pkgdir}/usr/libexec/openssh/ssh-askpass
 EOF
-chmod -v 0644 /etc/sudo.conf
+chmod -v 0644 ${pkgdir}/etc/sudo.conf
 ROOT_EOF
 

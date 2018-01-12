@@ -78,5 +78,5 @@ sudo -E sh << ROOT_EOF
 install -v -dm755 \$XORG_PREFIX/share/doc/libinput-1.8.1 &&
 cp -rv doc/html/* \$XORG_PREFIX/share/doc/libinput-1.8.1
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

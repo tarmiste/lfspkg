@@ -72,7 +72,7 @@ cd $UNPACKDIR
 
 sudo -E sh << ROOT_EOF
 groupadd -g 31 exim &&
-useradd -d /dev/null -c "Exim Daemon" -g exim -s /bin/false -u 31 exim
+useradd -d ${pkgdir}/dev/null -c "Exim Daemon" -g exim -s /bin/false -u 31 exim
 ROOT_EOF
 patch -p1 -i ../exim-4.89-avoid_mem_clash-1.patch &&
 sed -e 's,^BIN_DIR.*$,BIN_DIRECTORY=/usr/sbin,'    \
@@ -85,20 +85,20 @@ printf "USE_GDBM = yes\nDBMLIB = -lgdbm\n" >> Local/Makefile &&
 make
 sudo -E sh << ROOT_EOF
 make -j1 install                                      &&
-install -v -m644 doc/exim.8 /usr/share/man/man8   &&
-install -v -d -m755 /usr/share/doc/exim-4.89    &&
-install -v -m644 doc/* /usr/share/doc/exim-4.89 &&
-ln -sfv exim /usr/sbin/sendmail                   &&
-install -v -d -m750 -o exim -g exim /var/spool/exim
+install -v -m644 doc/exim.8 ${pkgdir}/usr/share/man/man8   &&
+install -v -d -m755 ${pkgdir}/usr/share/doc/exim-4.89    &&
+install -v -m644 doc/* ${pkgdir}/usr/share/doc/exim-4.89 &&
+ln -sfv exim ${pkgdir}/usr/sbin/sendmail                   &&
+install -v -d -m750 -o exim -g exim ${pkgdir}/var/spool/exim
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-chmod -v a+wt /var/mail
+chmod -v a+wt ${pkgdir}/var/mail
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-cat >> /etc/aliases << "EOF"
+cat >> ${pkgdir}/etc/aliases << "EOF"
 postmaster: root
 MAILER-DAEMON: root
 EOF

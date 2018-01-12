@@ -73,9 +73,9 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-echo "export VDPAU_DRIVER=va_gl" >> /etc/profile.d/xorg.sh
+echo "export VDPAU_DRIVER=va_gl" >> ${pkgdir}/etc/profile.d/xorg.sh
 ROOT_EOF
 

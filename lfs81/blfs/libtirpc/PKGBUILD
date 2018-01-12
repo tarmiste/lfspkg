@@ -73,8 +73,8 @@ sed '/key_secret_is/s/secret/secretkey/' -i src/libtirpc.map
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-mv -v /usr/lib/libtirpc.so.* /lib &&
-ln -sfv ../../lib/libtirpc.so.3.0.0 /usr/lib/libtirpc.so
+mv -v ${pkgdir}/usr/lib/libtirpc.so.* /lib &&
+ln -sfv ../../lib/libtirpc.so.3.0.0 ${pkgdir}/usr/lib/libtirpc.so
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

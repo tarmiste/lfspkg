@@ -80,7 +80,7 @@ make
 #make -k check || true
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-rm -fv /opt/texlive/2017/texmf-dist/doc/info/asymptote.info
+rm -fv ${pkgdir}/opt/texlive/2017/texmf-dist/doc/info/asymptote.info
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

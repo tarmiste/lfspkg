@@ -76,9 +76,9 @@ sudo -E sh << ROOT_EOF
 make -j1 -C gdb install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-install -d /usr/share/doc/gdb-8.0 &&
+install -d ${pkgdir}/usr/share/doc/gdb-8.0 &&
 rm -rf gdb/doc/doxy/xml &&
-cp -Rv gdb/doc/doxy /usr/share/doc/gdb-8.0
+cp -Rv gdb/doc/doxy ${pkgdir}/usr/share/doc/gdb-8.0
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

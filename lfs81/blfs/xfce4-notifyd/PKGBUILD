@@ -70,5 +70,5 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 notify-send -i info Information "Hi ${USER}, This is a Test"
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

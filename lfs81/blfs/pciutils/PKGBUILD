@@ -73,7 +73,7 @@ make -j1 PREFIX=/usr                \\
      SHARED=yes                 \\
      install install-lib        &&
 
-chmod -v 755 /usr/lib/libpci.so
+chmod -v 755 ${pkgdir}/usr/lib/libpci.so
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

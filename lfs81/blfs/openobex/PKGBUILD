@@ -78,9 +78,9 @@ cmake -DCMAKE_INSTALL_PREFIX=/usr      \
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-if [ -d /usr/share/doc/openobex ]; then
-  mv -fv /usr/share/doc/{openobex,openobex-1.7.2}
+if [ -d ${pkgdir}/usr/share/doc/openobex ]; then
+  mv -fv ${pkgdir}/usr/share/doc/{openobex,openobex-1.7.2}
 fi
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

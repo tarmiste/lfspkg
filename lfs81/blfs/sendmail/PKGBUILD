@@ -66,10 +66,10 @@ cd $UNPACKDIR
 
 sudo -E sh << ROOT_EOF
 groupadd -g 26 smmsp                               &&
-useradd -c "Sendmail Daemon" -g smmsp -d /dev/null \\
-        -s /bin/false -u 26 smmsp                  &&
-chmod -v 1777 /var/mail                            &&
-install -v -m700 -d /var/spool/mqueue
+useradd -c "Sendmail Daemon" -g smmsp -d ${pkgdir}/dev/null \\
+        -s ${pkgdir}/bin/false -u 26 smmsp                  &&
+chmod -v 1777 ${pkgdir}/var/mail                            &&
+install -v -m700 -d ${pkgdir}/var/spool/mqueue
 ROOT_EOF
 cat >> devtools/Site/site.config.m4 << "EOF"
 APPENDDEF(`confENVDEF',`-DSTARTTLS -DSASL -DLDAPMAP')
@@ -93,48 +93,48 @@ cd ../cf/cf                     &&
 cp generic-linux.mc sendmail.mc &&
 sh Build sendmail.cf
 sudo -E sh << ROOT_EOF
-install -v -d -m755 /etc/mail &&
+install -v -d -m755 ${pkgdir}/etc/mail &&
 sh Build install-cf &&
 
 cd ../..            &&
 sh Build install    &&
 
-install -v -m644 cf/cf/{submit,sendmail}.mc /etc/mail &&
-cp -v -R cf/* /etc/mail                               &&
+install -v -m644 cf/cf/{submit,sendmail}.mc ${pkgdir}/etc/mail &&
+cp -v -R cf/* ${pkgdir}/etc/mail                               &&
 
-install -v -m755 -d /usr/share/doc/sendmail-8.15.2/{cf,sendmail} &&
+install -v -m755 -d ${pkgdir}/usr/share/doc/sendmail-8.15.2/{cf,sendmail} &&
 
 install -v -m644 CACerts FAQ KNOWNBUGS LICENSE PGPKEYS README RELEASE_NOTES \\
-        /usr/share/doc/sendmail-8.15.2 &&
+        ${pkgdir}/usr/share/doc/sendmail-8.15.2 &&
 
 install -v -m644 sendmail/{README,SECURITY,TRACEFLAGS,TUNING} \\
-        /usr/share/doc/sendmail-8.15.2/sendmail &&
+        ${pkgdir}/usr/share/doc/sendmail-8.15.2/sendmail &&
 
-install -v -m644 cf/README /usr/share/doc/sendmail-8.15.2/cf &&
+install -v -m644 cf/README ${pkgdir}/usr/share/doc/sendmail-8.15.2/cf &&
 
 for manpage in sendmail editmap mailstats makemap praliases smrsh
 do
-    install -v -m644 \$manpage/\$manpage.8 /usr/share/man/man8
+    install -v -m644 \$manpage/\$manpage.8 ${pkgdir}/usr/share/man/man8
 done &&
 
-install -v -m644 sendmail/aliases.5    /usr/share/man/man5 &&
-install -v -m644 sendmail/mailq.1      /usr/share/man/man1 &&
-install -v -m644 sendmail/newaliases.1 /usr/share/man/man1 &&
-install -v -m644 vacation/vacation.1   /usr/share/man/man1
+install -v -m644 sendmail/aliases.5    ${pkgdir}/usr/share/man/man5 &&
+install -v -m644 sendmail/mailq.1      ${pkgdir}/usr/share/man/man1 &&
+install -v -m644 sendmail/newaliases.1 ${pkgdir}/usr/share/man/man1 &&
+install -v -m644 vacation/vacation.1   ${pkgdir}/usr/share/man/man1
 ROOT_EOF
 cd doc/op                                       &&
 sed -i 's/groff/GROFF_NO_SGR=1 groff/' Makefile &&
 make op.txt op.pdf
 sudo -E sh << ROOT_EOF
-install -v -d -m755 /usr/share/doc/sendmail-8.15.2 &&
-install -v -m644 op.ps op.txt op.pdf /usr/share/doc/sendmail-8.15.2 &&
+install -v -d -m755 ${pkgdir}/usr/share/doc/sendmail-8.15.2 &&
+install -v -m644 op.ps op.txt op.pdf ${pkgdir}/usr/share/doc/sendmail-8.15.2 &&
 cd ../..
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-echo \$(hostname) > /etc/mail/local-host-names
-cat > /etc/mail/aliases << "EOF"
+echo \$(hostname) > ${pkgdir}/etc/mail/local-host-names
+cat > ${pkgdir}/etc/mail/aliases << "EOF"
 postmaster: root
 MAILER-DAEMON: root
 
@@ -143,7 +143,7 @@ newaliases
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
-cd /etc/mail &&
+cd ${pkgdir}/etc/mail &&
 m4 m4/cf.m4 sendmail.mc > sendmail.cf
 ROOT_EOF
 

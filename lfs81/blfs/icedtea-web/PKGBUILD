@@ -73,13 +73,13 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-install -v -Dm0644 itweb-settings.desktop /usr/share/applications/itweb-settings.desktop &&
-install -v -Dm0644 javaws.png /usr/share/pixmaps/javaws.png
+install -v -Dm0644 itweb-settings.desktop ${pkgdir}/usr/share/applications/itweb-settings.desktop &&
+install -v -Dm0644 javaws.png ${pkgdir}/usr/share/pixmaps/javaws.png
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-install -dm755 /usr/lib/mozilla/plugins &&
-ln -s \${JAVA_HOME}/jre/lib/IcedTeaPlugin.so /usr/lib/mozilla/plugins/
+install -dm755 ${pkgdir}/usr/lib/mozilla/plugins &&
+ln -s \${JAVA_HOME}/jre/lib/IcedTeaPlugin.so ${pkgdir}/usr/lib/mozilla/plugins/
 ROOT_EOF
 

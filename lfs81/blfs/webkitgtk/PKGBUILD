@@ -87,11 +87,11 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
 
-install -vdm755 /usr/share/gtk-doc/html/webkit{2,dom}gtk-4.0 &&
+install -vdm755 ${pkgdir}/usr/share/gtk-doc/html/webkit{2,dom}gtk-4.0 &&
 install -vm644  ../Documentation/webkit2gtk-4.0/html/*   \\
-                /usr/share/gtk-doc/html/webkit2gtk-4.0       &&
+                ${pkgdir}/usr/share/gtk-doc/html/webkit2gtk-4.0       &&
 install -vm644  ../Documentation/webkitdomgtk-4.0/html/* \\
-                /usr/share/gtk-doc/html/webkitdomgtk-4.0
+                ${pkgdir}/usr/share/gtk-doc/html/webkitdomgtk-4.0
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

@@ -64,7 +64,7 @@ package() {
 #######  Building package
 cd $UNPACKDIR
 
-sed -e '/using python/ s@;@: /usr/include/python${PYTHON_VERSION/3*/${PYTHON_VERSION}m} ;@' \
+sed -e '/using python/ s@;@: ${pkgdir}/usr/include/python${PYTHON_VERSION/3*/${PYTHON_VERSION}m} ;@' \
     -i bootstrap.sh
 ./bootstrap.sh --prefix=/usr &&
 ./b2 stage threading=multi link=shared
@@ -72,5 +72,5 @@ sed -e '/using python/ s@;@: /usr/include/python${PYTHON_VERSION/3*/${PYTHON_VER
 sudo -E sh << ROOT_EOF
 ./b2 install threading=multi link=shared
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

@@ -75,8 +75,8 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install  &&
 
-mv -v \$KF5_PREFIX/share/kde4/services/khelpcenter.desktop /usr/share/applications/ &&
+mv -v \$KF5_PREFIX/share/kde4/services/khelpcenter.desktop ${pkgdir}/usr/share/applications/ &&
 rm -rv \$KF5_PREFIX/share/kde4
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

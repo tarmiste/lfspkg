@@ -70,9 +70,9 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-update-mime-database /usr/share/mime &&
-gtk-update-icon-cache -qf /usr/share/icons/hicolor &&
+update-mime-database ${pkgdir}/usr/share/mime &&
+gtk-update-icon-cache -qf ${pkgdir}/usr/share/icons/hicolor &&
 update-desktop-database -q
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

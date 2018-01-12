@@ -72,9 +72,9 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-install -v -dm755 /usr/share/doc/libassuan-2.4.3 &&
+install -v -dm755 ${pkgdir}/usr/share/doc/libassuan-2.4.3 &&
 install -v -m644  doc/assuan.{pdf,ps,dvi} \\
-                  /usr/share/doc/libassuan-2.4.3
+                  ${pkgdir}/usr/share/doc/libassuan-2.4.3
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

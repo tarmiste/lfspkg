@@ -65,7 +65,7 @@ package() {
 cd $UNPACKDIR
 
 sed -i 's/32,/253,/' lib/Syntax.cxx &&
-sed -i 's/LITLEN          240 /LITLEN          8092/' \
+sed -i 's/LITLEN          240 ${pkgdir}/LITLEN          8092/' \
     unicode/{gensyntax.pl,unicode.syn} &&
 
 ./configure --prefix=/usr                              \
@@ -82,14 +82,14 @@ make -j1 pkgdatadir=/usr/share/sgml/OpenSP-1.5.2 \\
      docdir=/usr/share/doc/OpenSP-1.5.2      \\
      install &&
 
-ln -v -sf onsgmls   /usr/bin/nsgmls   &&
-ln -v -sf osgmlnorm /usr/bin/sgmlnorm &&
-ln -v -sf ospam     /usr/bin/spam     &&
-ln -v -sf ospcat    /usr/bin/spcat    &&
-ln -v -sf ospent    /usr/bin/spent    &&
-ln -v -sf osx       /usr/bin/sx       &&
-ln -v -sf osx       /usr/bin/sgml2xml &&
-ln -v -sf libosp.so /usr/lib/libsp.so
+ln -v -sf onsgmls   ${pkgdir}/usr/bin/nsgmls   &&
+ln -v -sf osgmlnorm ${pkgdir}/usr/bin/sgmlnorm &&
+ln -v -sf ospam     ${pkgdir}/usr/bin/spam     &&
+ln -v -sf ospcat    ${pkgdir}/usr/bin/spcat    &&
+ln -v -sf ospent    ${pkgdir}/usr/bin/spent    &&
+ln -v -sf osx       ${pkgdir}/usr/bin/sx       &&
+ln -v -sf osx       ${pkgdir}/usr/bin/sgml2xml &&
+ln -v -sf libosp.so ${pkgdir}/usr/lib/libsp.so
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

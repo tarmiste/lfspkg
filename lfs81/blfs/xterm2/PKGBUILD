@@ -76,10 +76,10 @@ sudo -E sh << ROOT_EOF
 make -j1 install &&
 make -j1 install-ti
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-cat >> /etc/X11/app-defaults/XTerm << "EOF"
+cat >> ${pkgdir}/etc/X11/app-defaults/XTerm << "EOF"
 *VT100*locale: true
 *VT100*faceName: Monospace
 *VT100*faceSize: 10

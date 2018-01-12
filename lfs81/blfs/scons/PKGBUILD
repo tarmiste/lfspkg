@@ -70,5 +70,5 @@ python setup.py install --prefix=/usr  \\
                         --optimize=1   \\
                         --install-data=/usr/share
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

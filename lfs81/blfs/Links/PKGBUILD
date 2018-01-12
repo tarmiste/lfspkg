@@ -68,9 +68,9 @@ cd $UNPACKDIR
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-install -v -d -m755 /usr/share/doc/links-2.14 &&
+install -v -d -m755 ${pkgdir}/usr/share/doc/links-2.14 &&
 install -v -m644 doc/links_cal/* KEYS BRAILLE_HOWTO \\
-    /usr/share/doc/links-2.14
+    ${pkgdir}/usr/share/doc/links-2.14
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

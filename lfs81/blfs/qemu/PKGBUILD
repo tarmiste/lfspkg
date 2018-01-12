@@ -94,16 +94,16 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-cat > /lib/udev/rules.d/65-kvm.rules << "EOF"
+cat > ${pkgdir}/lib/udev/rules.d/65-kvm.rules << "EOF"
 KERNEL=="kvm", GROUP="kvm", MODE="0660"
 EOF
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-chgrp kvm  /usr/libexec/qemu-bridge-helper &&
-chmod 4750 /usr/libexec/qemu-bridge-helper
+chgrp kvm  ${pkgdir}/usr/libexec/qemu-bridge-helper &&
+chmod 4750 ${pkgdir}/usr/libexec/qemu-bridge-helper
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-ln -sv qemu-system-\`uname -m\` /usr/bin/qemu
+ln -sv qemu-system-\`uname -m\` ${pkgdir}/usr/bin/qemu
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

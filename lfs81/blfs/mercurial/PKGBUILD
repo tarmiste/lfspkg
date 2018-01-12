@@ -88,13 +88,13 @@ cat >> ~/.hgrc << "EOF"
 [ui]
 username = **EDITME<user_name> <user@mail>EDITME**
 EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-install -v -d -m755 /etc/mercurial &&
-cat > /etc/mercurial/hgrc << "EOF"
+install -v -d -m755 ${pkgdir}/etc/mercurial &&
+cat > ${pkgdir}/etc/mercurial/hgrc << "EOF"
 [web]
-cacerts = /etc/ssl/ca-bundle.crt
+cacerts = ${pkgdir}/etc/ssl/ca-bundle.crt
 EOF
 ROOT_EOF
 

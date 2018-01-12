@@ -71,10 +71,10 @@ make
 #make -k check || true
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-mkdir -pv    /usr/share/doc/haveged-1.9.1 &&
-cp -v README /usr/share/doc/haveged-1.9.1
+mkdir -pv    ${pkgdir}/usr/share/doc/haveged-1.9.1 &&
+cp -v README ${pkgdir}/usr/share/doc/haveged-1.9.1
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 [[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts
 pushd $SRC_DIR/blfs-bootscripts

@@ -69,16 +69,16 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-cat > /etc/pam.d/xscreensaver << "EOF"
-# Begin /etc/pam.d/xscreensaver
+cat > ${pkgdir}/etc/pam.d/xscreensaver << "EOF"
+# Begin ${pkgdir}/etc/pam.d/xscreensaver
 
 auth    include system-auth
 account include system-account
 
-# End /etc/pam.d/xscreensaver
+# End ${pkgdir}/etc/pam.d/xscreensaver
 EOF
 ROOT_EOF
 

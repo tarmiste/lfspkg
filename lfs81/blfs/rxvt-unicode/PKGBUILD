@@ -69,9 +69,9 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
-cat >> /etc/X11/app-defaults/URxvt << "EOF"
+cat >> ${pkgdir}/etc/X11/app-defaults/URxvt << "EOF"
 ! Use the specified colour as the windows background colour [default white]
 URxvt*background: black
 
@@ -103,7 +103,7 @@ xrdb -merge ~/.Xresources
 urxvtd -q -f -o &
 
 sudo -E sh << ROOT_EOF
-cat > /usr/share/applications/urxvt.desktop << "EOF" &&
+cat > ${pkgdir}/usr/share/applications/urxvt.desktop << "EOF" &&
 [Desktop Entry]
 Encoding=UTF-8
 Name=Rxvt-Unicode Terminal

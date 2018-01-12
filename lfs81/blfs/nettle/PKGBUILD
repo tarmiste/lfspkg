@@ -69,9 +69,9 @@ make
 #make -k check || true
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-chmod   -v   755 /usr/lib/lib{hogweed,nettle}.so &&
-install -v -m755 -d /usr/share/doc/nettle-3.3 &&
-install -v -m644 nettle.html /usr/share/doc/nettle-3.3
+chmod   -v   755 ${pkgdir}/usr/lib/lib{hogweed,nettle}.so &&
+install -v -m755 -d ${pkgdir}/usr/share/doc/nettle-3.3 &&
+install -v -m644 nettle.html ${pkgdir}/usr/share/doc/nettle-3.3
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

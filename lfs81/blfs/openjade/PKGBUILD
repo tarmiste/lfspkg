@@ -81,27 +81,27 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install                                                   &&
 make -j1 install-man                                               &&
-ln -v -sf openjade /usr/bin/jade                               &&
-ln -v -sf libogrove.so /usr/lib/libgrove.so                    &&
-ln -v -sf libospgrove.so /usr/lib/libspgrove.so                &&
-ln -v -sf libostyle.so /usr/lib/libstyle.so                    &&
+ln -v -sf openjade ${pkgdir}/usr/bin/jade                               &&
+ln -v -sf libogrove.so ${pkgdir}/usr/lib/libgrove.so                    &&
+ln -v -sf libospgrove.so ${pkgdir}/usr/lib/libspgrove.so                &&
+ln -v -sf libostyle.so ${pkgdir}/usr/lib/libstyle.so                    &&
 
-install -v -m644 dsssl/catalog /usr/share/sgml/openjade-1.3.2/ &&
+install -v -m644 dsssl/catalog ${pkgdir}/usr/share/sgml/openjade-1.3.2/ &&
 
 install -v -m644 dsssl/*.{dtd,dsl,sgm}              \\
-    /usr/share/sgml/openjade-1.3.2                             &&
+    ${pkgdir}/usr/share/sgml/openjade-1.3.2                             &&
 
-install-catalog --add /etc/sgml/openjade-1.3.2.cat  \\
-    /usr/share/sgml/openjade-1.3.2/catalog                     &&
+install-catalog --add ${pkgdir}/etc/sgml/openjade-1.3.2.cat  \\
+    ${pkgdir}/usr/share/sgml/openjade-1.3.2/catalog                     &&
 
-install-catalog --add /etc/sgml/sgml-docbook.cat    \\
-    /etc/sgml/openjade-1.3.2.cat
+install-catalog --add ${pkgdir}/etc/sgml/sgml-docbook.cat    \\
+    ${pkgdir}/etc/sgml/openjade-1.3.2.cat
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
 echo "SYSTEM \\"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd\\" \\
     \\"/usr/share/xml/docbook/xml-dtd-4.5/docbookx.dtd\\"" >> \\
-    /usr/share/sgml/openjade-1.3.2/catalog
+    ${pkgdir}/usr/share/sgml/openjade-1.3.2/catalog
 ROOT_EOF
 

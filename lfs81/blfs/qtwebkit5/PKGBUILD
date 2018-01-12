@@ -81,5 +81,5 @@ sudo -E sh << ROOT_EOF
 find \$QT5DIR/ -name \\*.prl \\
    -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d' {} \\;
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

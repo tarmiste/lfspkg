@@ -72,23 +72,23 @@ sed -i '/word ==/s/word/*&/'                  prog/check_funs.cpp
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-ln -svfn aspell-0.60 /usr/lib/aspell &&
+ln -svfn aspell-0.60 ${pkgdir}/usr/lib/aspell &&
 
-install -v -m755 -d /usr/share/doc/aspell-0.60.6.1/aspell{,-dev}.html &&
+install -v -m755 -d ${pkgdir}/usr/share/doc/aspell-0.60.6.1/aspell{,-dev}.html &&
 
 install -v -m644 manual/aspell.html/* \\
-    /usr/share/doc/aspell-0.60.6.1/aspell.html &&
+    ${pkgdir}/usr/share/doc/aspell-0.60.6.1/aspell.html &&
 
 install -v -m644 manual/aspell-dev.html/* \\
-    /usr/share/doc/aspell-0.60.6.1/aspell-dev.html
+    ${pkgdir}/usr/share/doc/aspell-0.60.6.1/aspell-dev.html
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-install -v -m 755 scripts/ispell /usr/bin/
+install -v -m 755 scripts/ispell ${pkgdir}/usr/bin/
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-install -v -m 755 scripts/spell /usr/bin/
+install -v -m 755 scripts/spell ${pkgdir}/usr/bin/
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 ./configure &&
 make

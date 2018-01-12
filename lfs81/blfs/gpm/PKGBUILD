@@ -77,18 +77,18 @@ sudo -E sh << ROOT_EOF
 make -j1 install                                          &&
 
 install-info --dir-file=/usr/share/info/dir           \\
-             /usr/share/info/gpm.info                 &&
+             ${pkgdir}/usr/share/info/gpm.info                 &&
 
-ln -sfv libgpm.so.2.1.0 /usr/lib/libgpm.so            &&
-install -v -m644 conf/gpm-root.conf /etc              &&
+ln -sfv libgpm.so.2.1.0 ${pkgdir}/usr/lib/libgpm.so            &&
+install -v -m644 conf/gpm-root.conf ${pkgdir}/etc              &&
 
-install -v -m755 -d /usr/share/doc/gpm-1.20.7/support &&
+install -v -m755 -d ${pkgdir}/usr/share/doc/gpm-1.20.7/support &&
 install -v -m644    doc/support/*                     \\
-                    /usr/share/doc/gpm-1.20.7/support &&
+                    ${pkgdir}/usr/share/doc/gpm-1.20.7/support &&
 install -v -m644    doc/{FAQ,HACK_GPM,README*}        \\
-                    /usr/share/doc/gpm-1.20.7
+                    ${pkgdir}/usr/share/doc/gpm-1.20.7
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 [[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts
 pushd $SRC_DIR/blfs-bootscripts
@@ -124,14 +124,14 @@ ROOT_EOF
 
 popd
 sudo -E sh << ROOT_EOF
-cat > /etc/sysconfig/mouse << "EOF"
-# Begin /etc/sysconfig/mouse
+cat > ${pkgdir}/etc/sysconfig/mouse << "EOF"
+# Begin ${pkgdir}/etc/sysconfig/mouse
 
 MDEVICE="**EDITME<yourdevice>EDITME**"
 PROTOCOL="**EDITME<yourprotocol>EDITME**"
 GPMOPTS="**EDITME<additional options>EDITME**"
 
-# End /etc/sysconfig/mouse
+# End ${pkgdir}/etc/sysconfig/mouse
 EOF
 ROOT_EOF
 

@@ -80,15 +80,15 @@ sed -i '/t0251-gpt-unicode.sh/d' tests/Makefile
 #make -k check || true
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-install -v -m755 -d /usr/share/doc/parted-3.2/html &&
+install -v -m755 -d ${pkgdir}/usr/share/doc/parted-3.2/html &&
 install -v -m644    doc/html/* \\
-                    /usr/share/doc/parted-3.2/html &&
+                    ${pkgdir}/usr/share/doc/parted-3.2/html &&
 install -v -m644    doc/{FAT,API,parted.{txt,html}} \\
-                    /usr/share/doc/parted-3.2
+                    ${pkgdir}/usr/share/doc/parted-3.2
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 install -v -m644 doc/FAT doc/API doc/parted.{pdf,ps,dvi} \\
-                    /usr/share/doc/parted-3.2
+                    ${pkgdir}/usr/share/doc/parted-3.2
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

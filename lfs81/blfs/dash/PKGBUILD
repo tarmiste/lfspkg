@@ -69,10 +69,10 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-cat >> /etc/shells << "EOF"
+cat >> ${pkgdir}/etc/shells << "EOF"
 /bin/dash
 EOF
 ROOT_EOF

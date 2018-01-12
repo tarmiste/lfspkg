@@ -79,20 +79,20 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-install -v -m755 -d /usr/share/doc/qterminal-0.7.1/{html,pdf} &&
-cp -vr docs/html/* /usr/share/doc/qterminal-0.7.1/html
+install -v -m755 -d ${pkgdir}/usr/share/doc/qterminal-0.7.1/{html,pdf} &&
+cp -vr docs/html/* ${pkgdir}/usr/share/doc/qterminal-0.7.1/html
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 install -v -m644    docs/latex/refman.pdf \\
-                    /usr/share/doc/qterminal-0.7.1/pdf
+                    ${pkgdir}/usr/share/doc/qterminal-0.7.1/pdf
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-if [ "\$LXQT_PREFIX" != /usr ]; then
+if [ "\$LXQT_PREFIX" != ${pkgdir}/usr ]; then
   ln -svf \$LXQT_PREFIX/share/applications/qterminal.desktop \\
-          /usr/share/applications
+          ${pkgdir}/usr/share/applications
   ln -svf \$LXQT_PREFIX/share/applications/qterminal_drop.desktop \\
-          /usr/share/applications
+          ${pkgdir}/usr/share/applications
 fi
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

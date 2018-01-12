@@ -71,5 +71,5 @@ make GETTEXT_PACKAGE=libwnck-1
 sudo -E sh << ROOT_EOF
 make -j1 GETTEXT_PACKAGE=libwnck-1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

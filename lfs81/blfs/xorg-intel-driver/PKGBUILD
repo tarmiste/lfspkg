@@ -71,9 +71,9 @@ cd $UNPACKDIR
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-mv -v /usr/share/man/man4/intel-virtual-output.4 \\
-      /usr/share/man/man1/intel-virtual-output.1 &&
-sed -i '/\\.TH/s/4/1/' /usr/share/man/man1/intel-virtual-output.1
+mv -v ${pkgdir}/usr/share/man/man4/intel-virtual-output.4 \\
+      ${pkgdir}/usr/share/man/man1/intel-virtual-output.1 &&
+sed -i '/\\.TH/s/4/1/' ${pkgdir}/usr/share/man/man1/intel-virtual-output.1
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

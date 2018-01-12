@@ -81,11 +81,11 @@ make
 sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
-ls /usr/share/abiword-3.0/templates
+ls ${pkgdir}/usr/share/abiword-3.0/templates
 
 install -v -m750 -d ~/.AbiSuite/templates &&
-install -v -m640    /usr/share/abiword-3.0/templates/normal.awt-**EDITME<lang>EDITME** \
+install -v -m640    ${pkgdir}/usr/share/abiword-3.0/templates/normal.awt-**EDITME<lang>EDITME** \
                     ~/.AbiSuite/templates/normal.awt
 

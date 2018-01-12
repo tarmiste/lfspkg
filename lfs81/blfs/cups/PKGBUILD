@@ -67,7 +67,7 @@ package() {
 cd $UNPACKDIR
 
 sudo -E sh << ROOT_EOF
-useradd -c "Print Service User" -d /var/spool/cups -g lp -s /bin/false -u 9 lp
+useradd -c "Print Service User" -d ${pkgdir}/var/spool/cups -g lp -s /bin/false -u 9 lp
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 groupadd -g 19 lpadmin
@@ -94,26 +94,26 @@ make
 #make -k check || true
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-rm -rf /tmp/cupsinit &&
-ln -svnf ../cups/doc-2.2.4 /usr/share/doc/cups-2.2.4
+rm -rf ${pkgdir}/tmp/cupsinit &&
+ln -svnf ../cups/doc-2.2.4 ${pkgdir}/usr/share/doc/cups-2.2.4
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-echo "ServerName /var/run/cups/cups.sock" > /etc/cups/client.conf
+echo "ServerName ${pkgdir}/var/run/cups/cups.sock" > /etc/cups/client.conf
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 gtk-update-icon-cache
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-cat > /etc/pam.d/cups << "EOF"
-# Begin /etc/pam.d/cups
+cat > ${pkgdir}/etc/pam.d/cups << "EOF"
+# Begin ${pkgdir}/etc/pam.d/cups
 
 auth    include system-auth
 account include system-account
 session include system-session
 
-# End /etc/pam.d/cups
+# End ${pkgdir}/etc/pam.d/cups
 EOF
 ROOT_EOF
 

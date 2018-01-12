@@ -71,11 +71,11 @@ pushd docs  &&
 popd
 sudo -E sh << ROOT_EOF
 make -j1 install              &&
-rm -v /usr/lib/libSDL2*.a
+rm -v ${pkgdir}/usr/lib/libSDL2*.a
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-install -v -m755 -d        /usr/share/doc/SDL2-2.0.5/html &&
-cp -Rv  docs/output/html/* /usr/share/doc/SDL2-2.0.5/html
+install -v -m755 -d        ${pkgdir}/usr/share/doc/SDL2-2.0.5/html &&
+cp -Rv  docs/output/html/* ${pkgdir}/usr/share/doc/SDL2-2.0.5/html
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

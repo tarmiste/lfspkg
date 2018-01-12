@@ -70,7 +70,7 @@ cd $UNPACKDIR
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-chmod -v 0755 /usr/libexec/file-roller/isoinfo.sh
+chmod -v 0755 ${pkgdir}/usr/libexec/file-roller/isoinfo.sh
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

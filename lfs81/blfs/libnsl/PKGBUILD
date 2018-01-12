@@ -69,8 +69,8 @@ autoreconf -fi                &&
 make
 sudo -E sh << ROOT_EOF
 make -j1 install                  &&
-mv /usr/lib/libnsl.so.2* /lib &&
-ln -sfv ../../lib/libnsl.so.2.0.0 /usr/lib/libnsl.so
+mv ${pkgdir}/usr/lib/libnsl.so.2* /lib &&
+ln -sfv ../../lib/libnsl.so.2.0.0 ${pkgdir}/usr/lib/libnsl.so
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

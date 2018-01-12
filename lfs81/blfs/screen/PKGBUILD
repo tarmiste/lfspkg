@@ -75,7 +75,7 @@ sed -i -e "s%/usr/local/etc/screenrc%/etc/screenrc%" {etc,doc}/* &&
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-install -m 644 etc/etcscreenrc /etc/screenrc
+install -m 644 etc/etcscreenrc ${pkgdir}/etc/screenrc
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

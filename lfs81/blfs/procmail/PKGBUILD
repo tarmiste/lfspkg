@@ -70,5 +70,5 @@ sed -i 's/getline/get_line/' src/*.[ch] &&
 make -j1 LOCKINGTEST=/tmp MANDIR=/usr/share/man install &&
 make -j1 install-suid
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

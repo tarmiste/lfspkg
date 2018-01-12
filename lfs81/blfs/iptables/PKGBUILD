@@ -74,15 +74,15 @@ cd $UNPACKDIR
 make
 sudo -E sh << ROOT_EOF
 make -j1 install &&
-ln -sfv ../../sbin/xtables-multi /usr/bin/iptables-xml &&
+ln -sfv ../../sbin/xtables-multi ${pkgdir}/usr/bin/iptables-xml &&
 
 for file in ip4tc ip6tc ipq iptc xtables
 do
-  mv -v /usr/lib/lib\${file}.so.* /lib &&
-  ln -sfv ../../lib/\$(readlink /usr/lib/lib\${file}.so) /usr/lib/lib\${file}.so
+  mv -v ${pkgdir}/usr/lib/lib\${file}.so.* /lib &&
+  ln -sfv ../../lib/\$(readlink ${pkgdir}/usr/lib/lib\${file}.so) /usr/lib/lib\${file}.so
 done
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 [[ ! -d $SRC_DIR/blfs-bootscripts ]] && mkdir $SRC_DIR/blfs-bootscripts
 pushd $SRC_DIR/blfs-bootscripts

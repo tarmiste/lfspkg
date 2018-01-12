@@ -70,9 +70,9 @@ perl ./Build.PL &&
 ./Build
 #make -k  || true
 sudo -E sh << ROOT_EOF
-tar -xf ../biblatex-3.7.tds.tgz -C /opt/texlive/2017/texmf-dist &&
+tar -xf ../biblatex-3.7.tds.tgz -C ${pkgdir}/opt/texlive/2017/texmf-dist &&
 texhash &&
 ./Build install
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

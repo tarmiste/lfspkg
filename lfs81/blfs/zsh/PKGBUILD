@@ -82,21 +82,21 @@ sudo -E sh << ROOT_EOF
 make -j1 install                              &&
 make -j1 infodir=/usr/share/info install.info &&
 
-install -v -m755 -d                 /usr/share/doc/zsh-5.4.2/html &&
-install -v -m644 Doc/html/*         /usr/share/doc/zsh-5.4.2/html &&
-install -v -m644 Doc/zsh.{html,txt} /usr/share/doc/zsh-5.4.2
+install -v -m755 -d                 ${pkgdir}/usr/share/doc/zsh-5.4.2/html &&
+install -v -m644 Doc/html/*         ${pkgdir}/usr/share/doc/zsh-5.4.2/html &&
+install -v -m644 Doc/zsh.{html,txt} ${pkgdir}/usr/share/doc/zsh-5.4.2
 ROOT_EOF
 sudo -E sh << ROOT_EOF
 make -j1 htmldir=/usr/share/doc/zsh-5.4.2/html install.html &&
-install -v -m644 Doc/zsh.dvi /usr/share/doc/zsh-5.4.2
+install -v -m644 Doc/zsh.dvi ${pkgdir}/usr/share/doc/zsh-5.4.2
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-install -v -m644 Doc/zsh.pdf /usr/share/doc/zsh-5.4.2
+install -v -m644 Doc/zsh.pdf ${pkgdir}/usr/share/doc/zsh-5.4.2
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-cat >> /etc/shells << "EOF"
+cat >> ${pkgdir}/etc/shells << "EOF"
 /bin/zsh
 EOF
 ROOT_EOF

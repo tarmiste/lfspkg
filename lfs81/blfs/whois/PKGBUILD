@@ -70,5 +70,5 @@ make -j1 prefix=/usr install-whois
 make -j1 prefix=/usr install-mkpasswd
 make -j1 prefix=/usr install-pos
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

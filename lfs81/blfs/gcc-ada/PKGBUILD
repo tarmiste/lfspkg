@@ -74,10 +74,10 @@ ROOT_EOF
 PATH_HOLD=$PATH &&
 export PATH=/opt/gnat/bin:$PATH_HOLD
 sudo -E sh << ROOT_EOF
-find /opt/gnat -name ld -exec mv -v {} {}.old \\;
-find /opt/gnat -name as -exec mv -v {} {}.old \\;
+find ${pkgdir}/opt/gnat -name ld -exec mv -v {} {}.old \\;
+find ${pkgdir}/opt/gnat -name as -exec mv -v {} {}.old \\;
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 
 cd $BUILD_DIR        ##### Unpacking source
@@ -132,17 +132,17 @@ make -k check
 ../contrib/test_summary
 sudo -E sh << ROOT_EOF
 make -j1 install                                               &&
-mkdir -pv /usr/share/gdb/auto-load/usr/lib                 &&
-mv -v /usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib    &&
+mkdir -pv ${pkgdir}/usr/share/gdb/auto-load/usr/lib                 &&
+mv -v ${pkgdir}/usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib    &&
 
 chown -v -R root:root \\
-    /usr/lib/gcc/*linux-gnu/7.2.0/include{,-fixed} \\
-    /usr/lib/gcc/*linux-gnu/7.2.0/ada{lib,include}
+    ${pkgdir}/usr/lib/gcc/*linux-gnu/7.2.0/include{,-fixed} \\
+    ${pkgdir}/usr/lib/gcc/*linux-gnu/7.2.0/ada{lib,include}
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-rm -rf /opt/gnat
+rm -rf ${pkgdir}/opt/gnat
 ROOT_EOF
 export PATH=$PATH_HOLD &&
 unset PATH_HOLD
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

@@ -74,8 +74,8 @@ make
 #make -k check || true
 sudo -E sh << ROOT_EOF
 make -j1 install                                      &&
-install -v -m644 autoconf213.info /usr/share/info &&
+install -v -m644 autoconf213.info ${pkgdir}/usr/share/info &&
 install-info --info-dir=/usr/share/info autoconf213.info
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

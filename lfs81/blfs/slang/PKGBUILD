@@ -74,8 +74,8 @@ make -j1 install_doc_dir=/usr/share/doc/slang-2.3.1   \\
      SLSH_DOC_DIR=/usr/share/doc/slang-2.3.1/slsh \\
      install-all &&
 
-chmod -v 755 /usr/lib/libslang.so.2.3.1 \\
-             /usr/lib/slang/v2/modules/*.so
+chmod -v 755 ${pkgdir}/usr/lib/libslang.so.2.3.1 \\
+             ${pkgdir}/usr/lib/slang/v2/modules/*.so
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

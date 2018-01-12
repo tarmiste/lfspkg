@@ -69,7 +69,7 @@ package() {
 cd $UNPACKDIR
 
 sudo -E sh << ROOT_EOF
-cat >> /etc/ld.so.conf << EOF
+cat >> ${pkgdir}/etc/ld.so.conf << EOF
 # Begin texlive 2017 addition
 
 /opt/texlive/2017/lib
@@ -118,13 +118,13 @@ sudo -E sh << ROOT_EOF
 make -j1 install-strip &&
 /sbin/ldconfig &&
 make -j1 texlinks &&
-mkdir -pv /opt/texlive/2017/tlpkg/TeXLive/ &&
-install -v -m644 ../texk/tests/TeXLive/* /opt/texlive/2017/tlpkg/TeXLive/
+mkdir -pv ${pkgdir}/opt/texlive/2017/tlpkg/TeXLive/ &&
+install -v -m644 ../texk/tests/TeXLive/* ${pkgdir}/opt/texlive/2017/tlpkg/TeXLive/
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-tar -xf ../../texlive-20170524-texmf.tar.xz -C /opt/texlive/2017 --strip-components=1 &&
-pushd /opt/texlive/2017 &&
-patch -Np1 -i /sources/texlive-20170524-texmf-upstream_fixes-1.patch &&
+tar -xf ../../texlive-20170524-texmf.tar.xz -C ${pkgdir}/opt/texlive/2017 --strip-components=1 &&
+pushd ${pkgdir}/opt/texlive/2017 &&
+patch -Np1 -i ${pkgdir}/sources/texlive-20170524-texmf-upstream_fixes-1.patch &&
 popd
 ROOT_EOF
 sudo -E sh << ROOT_EOF
@@ -132,5 +132,5 @@ mktexlsr &&
 fmtutil-sys --all &&
 mtxrun --generate
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 

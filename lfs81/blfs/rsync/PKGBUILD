@@ -68,8 +68,8 @@ cd $UNPACKDIR
 
 sudo -E sh << ROOT_EOF
 groupadd -g 48 rsyncd &&
-useradd -c "rsyncd Daemon" -d /home/rsync -g rsyncd \\
-    -s /bin/false -u 48 rsyncd
+useradd -c "rsyncd Daemon" -d ${pkgdir}/home/rsync -g rsyncd \\
+    -s ${pkgdir}/bin/false -u 48 rsyncd
 ROOT_EOF
 ./configure --prefix=/usr --without-included-zlib &&
 make
@@ -78,21 +78,21 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-install -v -m755 -d          /usr/share/doc/rsync-3.1.2/api &&
-install -v -m644 dox/html/*  /usr/share/doc/rsync-3.1.2/api
+install -v -m755 -d          ${pkgdir}/usr/share/doc/rsync-3.1.2/api &&
+install -v -m644 dox/html/*  ${pkgdir}/usr/share/doc/rsync-3.1.2/api
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
-cat > /etc/rsyncd.conf << "EOF"
+cat > ${pkgdir}/etc/rsyncd.conf << "EOF"
 # This is a basic rsync configuration file
 # It exports a single module without user authentication.
 
-motd file = /home/rsync/welcome.msg
+motd file = ${pkgdir}/home/rsync/welcome.msg
 use chroot = yes
 
 [localhost]
-    path = /home/rsync
+    path = ${pkgdir}/home/rsync
     comment = Default rsync module
     read only = yes
     list = yes

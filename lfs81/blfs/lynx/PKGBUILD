@@ -78,22 +78,22 @@ patch -p1 -i ../lynx-2.8.8rel.2-openssl_1.1.0-1.patch
 make
 sudo -E sh << ROOT_EOF
 make -j1 install-full &&
-chgrp -v -R root /usr/share/doc/lynx-2.8.8rel.2/lynx_doc
+chgrp -v -R root ${pkgdir}/usr/share/doc/lynx-2.8.8rel.2/lynx_doc
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
 sudo -E sh << ROOT_EOF
 sed -e '/#LOCALE/     a LOCALE_CHARSET:TRUE'     \\
-    -i /etc/lynx/lynx.cfg
+    -i ${pkgdir}/etc/lynx/lynx.cfg
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
 sed -e '/#DEFAULT_ED/ a DEFAULT_EDITOR:vi'       \\
-    -i /etc/lynx/lynx.cfg
+    -i ${pkgdir}/etc/lynx/lynx.cfg
 ROOT_EOF
 
 sudo -E sh << ROOT_EOF
 sed -e '/#PERSIST/    a PERSISTENT_COOKIES:TRUE' \\
-    -i /etc/lynx/lynx.cfg
+    -i ${pkgdir}/etc/lynx/lynx.cfg
 ROOT_EOF
 

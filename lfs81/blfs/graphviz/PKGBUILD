@@ -77,8 +77,8 @@ sudo -E sh << ROOT_EOF
 make -j1 install
 ROOT_EOF
 sudo -E sh << ROOT_EOF
-ln -v -s /usr/share/graphviz/doc \\
-         /usr/share/doc/graphviz-2.40.1
+ln -v -s ${pkgdir}/usr/share/graphviz/doc \\
+         ${pkgdir}/usr/share/doc/graphviz-2.40.1
 ROOT_EOF
-sudo /sbin/ldconfig
+sudo ${pkgdir}/sbin/ldconfig
 
