@@ -1,0 +1,14 @@
+ls */desc |cut -f1 -d "/" - >dirs
+for i in `cat dirs`
+ do 
+   if [ `grep -c DEPENDS% $i/desc ` -ne '0' ]
+   then
+     echo $i
+     start=`grep -m 1 -n DEPENDS% $i/desc |cut -f1 -d ":" -`
+     echo $start
+     tail -n +${start} $i/desc >$i/goo
+   #then 
+   #  grep -A 2 %NAME% $i/desc >$i/name
+   #  cat $i/name
+   fi
+ done
