@@ -1,0 +1,9 @@
+%DEPENDS%
+ca-certificates
+krb5
+libssh2
+openssl
+zlib
+libpsl
+libnghttp2
+

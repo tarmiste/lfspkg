@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+gtk2
+qt5-base
+gcr
+

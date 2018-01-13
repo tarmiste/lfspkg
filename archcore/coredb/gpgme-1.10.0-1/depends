@@ -1,0 +1,4 @@
+%DEPENDS%
+libgpg-error
+gnupg>=2
+

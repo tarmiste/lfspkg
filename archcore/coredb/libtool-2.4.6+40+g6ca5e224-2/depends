@@ -1,0 +1,5 @@
+%DEPENDS%
+sh
+tar
+glibc
+

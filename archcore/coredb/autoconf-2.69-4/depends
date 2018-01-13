@@ -1,0 +1,6 @@
+%DEPENDS%
+awk
+m4
+diffutils
+sh
+

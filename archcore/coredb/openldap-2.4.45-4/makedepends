@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+libltdl
+libsasl
+e2fsprogs
+util-linux
+chrpath
+unixodbc
+

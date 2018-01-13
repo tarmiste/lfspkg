@@ -1,0 +1,6 @@
+%DEPENDS%
+openssl-1.0
+libdbus
+readline
+libnl
+

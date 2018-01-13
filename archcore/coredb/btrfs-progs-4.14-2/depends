@@ -1,0 +1,8 @@
+%DEPENDS%
+glibc
+libutil-linux
+e2fsprogs
+lzo
+zlib
+zstd
+

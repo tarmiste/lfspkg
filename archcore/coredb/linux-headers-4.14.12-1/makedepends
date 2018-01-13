@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+xmlto
+kmod
+inetutils
+bc
+libelf
+

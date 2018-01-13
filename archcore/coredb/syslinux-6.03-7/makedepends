@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+git
+python2
+nasm
+upx
+asciidoc
+lib32-glibc
+

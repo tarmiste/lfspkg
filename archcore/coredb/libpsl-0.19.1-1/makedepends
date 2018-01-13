@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+libxslt
+python
+publicsuffix-list
+gtk-doc
+

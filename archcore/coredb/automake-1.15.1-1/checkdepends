@@ -1,0 +1,8 @@
+%CHECKDEPENDS%
+dejagnu
+gcc-fortran
+java-environment
+vala
+emacs
+cscope
+

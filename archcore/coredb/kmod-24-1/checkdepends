@@ -1,0 +1,4 @@
+%CHECKDEPENDS%
+linux-headers
+libelf
+

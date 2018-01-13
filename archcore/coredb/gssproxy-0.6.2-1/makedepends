@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+popt
+libxslt
+systemd
+docbook-xsl
+doxygen
+po4a
+

@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+binutils
+libmpc
+gcc-ada
+doxygen
+lib32-glibc
+lib32-gcc-libs
+

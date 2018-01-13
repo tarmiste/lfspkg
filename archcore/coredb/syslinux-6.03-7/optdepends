@@ -1,0 +1,9 @@
+%OPTDEPENDS%
+perl-crypt-passwdmd5: For md5pass
+perl-digest-sha1: For sha1pass
+mtools: For mkdiskimage and syslinux support
+gptfdisk: For GPT support
+util-linux: For isohybrid
+efibootmgr: For EFI support
+dosfstools: For EFI support
+

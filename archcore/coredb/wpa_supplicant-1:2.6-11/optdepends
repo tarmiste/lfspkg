@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+wpa_supplicant_gui: wpa_gui program
+

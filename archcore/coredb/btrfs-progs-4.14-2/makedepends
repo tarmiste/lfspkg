@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+git
+asciidoc
+xmlto
+systemd
+

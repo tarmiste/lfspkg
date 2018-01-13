@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+gnome-keyring: key storage service (or use any other service implementing org.freedesktop.secrets)
+

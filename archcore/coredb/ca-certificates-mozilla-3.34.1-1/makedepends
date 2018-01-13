@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+perl
+python2
+xmlto
+docbook-xsl
+gyp
+

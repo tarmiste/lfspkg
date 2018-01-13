@@ -1,0 +1,5 @@
+%DEPENDS%
+libldap>=2.4.45
+libltdl
+unixodbc
+

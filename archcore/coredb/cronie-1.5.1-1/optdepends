@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+pm-utils: defer anacron on battery power
+smtp-server: send job output via email
+smtp-forwarder: forward job output to email server
+

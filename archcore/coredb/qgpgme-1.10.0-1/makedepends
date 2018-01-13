@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+libgpg-error
+gnupg
+qt5-base
+python
+swig
+

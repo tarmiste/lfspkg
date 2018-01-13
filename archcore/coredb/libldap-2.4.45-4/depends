@@ -1,0 +1,4 @@
+%DEPENDS%
+libsasl
+e2fsprogs
+

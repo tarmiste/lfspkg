@@ -1,0 +1,6 @@
+%DEPENDS%
+gcc-libs
+zlib
+bzip2
+xz
+

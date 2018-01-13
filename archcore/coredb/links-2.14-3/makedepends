@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+libtiff
+libpng
+libxt
+librsvg
+

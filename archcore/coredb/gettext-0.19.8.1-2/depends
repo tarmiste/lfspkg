@@ -1,0 +1,7 @@
+%DEPENDS%
+gcc-libs
+acl
+sh
+glib2
+libunistring
+

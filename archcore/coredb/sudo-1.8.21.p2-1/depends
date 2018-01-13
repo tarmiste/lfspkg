@@ -1,0 +1,6 @@
+%DEPENDS%
+glibc
+libgcrypt
+pam
+libldap
+

@@ -1,0 +1,12 @@
+%DEPENDS%
+npth
+libgpg-error
+libgcrypt
+libksba
+libassuan
+pinentry
+bzip2
+readline
+gnutls
+sqlite
+

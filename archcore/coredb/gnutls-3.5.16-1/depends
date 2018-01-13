@@ -1,0 +1,10 @@
+%DEPENDS%
+gcc-libs
+libtasn1
+readline
+zlib
+nettle
+p11-kit
+libidn
+libunistring
+

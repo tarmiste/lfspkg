@@ -1,0 +1,6 @@
+%DEPENDS%
+coreutils
+linux-firmware
+kmod
+mkinitcpio>=0.7
+

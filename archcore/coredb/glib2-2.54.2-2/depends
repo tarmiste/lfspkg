@@ -1,0 +1,6 @@
+%DEPENDS%
+pcre
+libffi
+libutil-linux
+zlib
+

@@ -1,0 +1,3 @@
+%DEPENDS%
+lib32-glibc>=2.26
+

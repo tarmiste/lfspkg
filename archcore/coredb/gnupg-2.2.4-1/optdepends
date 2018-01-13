@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+libldap: gpg2keys_ldap
+libusb-compat: scdaemon
+

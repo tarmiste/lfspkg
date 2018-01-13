@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+systemd
+python
+libcap-ng
+

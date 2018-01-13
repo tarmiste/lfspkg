@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+python: for gdbus-codegen and gtester-report
+libelf: gresource inspection tool
+

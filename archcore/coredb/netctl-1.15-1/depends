@@ -1,0 +1,6 @@
+%DEPENDS%
+coreutils
+iproute2
+openresolv
+systemd>=233
+

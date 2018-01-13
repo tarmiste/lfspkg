@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+systemd
+xmlto
+docbook-xsl
+python
+yelp-tools
+doxygen
+git
+autoconf-archive
+graphviz
+

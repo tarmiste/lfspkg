@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+xmlto
+docbook-xsl
+kmod
+inetutils
+bc
+libelf
+git
+

@@ -1,0 +1,14 @@
+%DEPENDS%
+awk
+mkinitcpio-busybox>=1.19.4-2
+kmod
+util-linux>=2.23
+libarchive
+coreutils
+bash
+findutils
+grep
+filesystem>=2011.10-1
+gzip
+systemd
+

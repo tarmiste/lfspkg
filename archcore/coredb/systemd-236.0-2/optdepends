@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+libmicrohttpd: remote journald capabilities
+quota-tools: kernel-level quota management
+systemd-sysvcompat: symlink package to provide sysvinit binaries
+polkit: allow administration as unprivileged user
+

@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+intltool
+docbook-xsl
+gobject-introspection
+vala
+git
+gtk-doc
+

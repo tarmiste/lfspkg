@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+gettext
+gtk-doc
+shared-mime-info
+python
+libelf
+git
+util-linux
+meson
+dbus
+

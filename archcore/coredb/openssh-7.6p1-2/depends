@@ -1,0 +1,6 @@
+%DEPENDS%
+krb5
+openssl
+libedit
+ldns
+

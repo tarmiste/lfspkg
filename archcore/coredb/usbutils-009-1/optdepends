@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+python2: for lsusb.py usage
+coreutils: for lsusb.py usage
+
