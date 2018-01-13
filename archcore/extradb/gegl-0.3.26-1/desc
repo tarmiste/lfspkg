@@ -1,0 +1,80 @@
+%FILENAME%
+gegl-0.3.26-1-x86_64.pkg.tar.xz
+
+%NAME%
+gegl
+
+%VERSION%
+0.3.26-1
+
+%DESC%
+Graph based image processing framework
+
+%CSIZE%
+1368668
+
+%ISIZE%
+6581248
+
+%MD5SUM%
+31d25c4702fa5d460a3da2600afd70e9
+
+%SHA256SUM%
+9056785c56ec89d295b10123b0ce2fee368c4d300a7fd8b572899ab2facf3c18
+
+%PGPSIG%
+iQEcBAABCAAGBQJaO3p7AAoJEJdqxvo7lPoQ2X0H/jSuvVQIsGzVvn83gCo7BjBy/z8+Lip44imr4f4woNFNoXWj1ZcmbvVhuJcnLYrc703L8qWmwq8u0gU7lKdieknRi293S2pXNezzXJlD2owyeJP6CabxI85tBUkTFOpLd2uy/QA711seZO1HGjdri9r1Lrooxane0cF2BF88PVaFdUnId6K1ubY2D4cUhRqnEEs90FOckh8vtrkFzHjmhcwUX1/3JLnG+YRGxN7lGEwQ92MTb6ZBAqz6GiDeWPFIuIz5ijSmLUmwxbb2xq2glr70zXuyu/AhdDuQwxsf1naiAraVcVZqe8/1o+3DqAIpugYQV+LpTkNt/wLDfQPATwM=
+
+%URL%
+http://www.gegl.org/
+
+%LICENSE%
+GPL3
+LGPL3
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1513847203
+
+%PACKAGER%
+Jan de Groot <jgc@archlinux.org>
+
+%DEPENDS%
+babl
+libspiro
+json-glib
+libgexiv2
+
+%OPTDEPENDS%
+libraw: raw plugin
+openexr: openexr plugin
+ffmpeg: ffmpeg plugin
+suitesparse: matting-levin plugin
+librsvg: svg plugin
+jasper: jasper plugin
+libtiff: tiff plugin
+lua: lua plugin
+lensfun: lens-correct plugin
+
+%MAKEDEPENDS%
+intltool
+ruby
+lua
+libraw
+openexr
+mesa
+glu
+ffmpeg
+librsvg
+jasper
+libtiff
+exiv2
+vala
+python2
+suitesparse
+lensfun
+gobject-introspection
+git
+

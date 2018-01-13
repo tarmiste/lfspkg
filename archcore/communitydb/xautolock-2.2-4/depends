@@ -1,0 +1,6 @@
+%DEPENDS%
+libxss
+
+%MAKEDEPENDS%
+imake
+

@@ -1,0 +1,60 @@
+%FILENAME%
+smplayer-17.11.2-2-x86_64.pkg.tar.xz
+
+%NAME%
+smplayer
+
+%VERSION%
+17.11.2-2
+
+%DESC%
+Media player with built-in codecs that can play virtually all video and audio formats
+
+%CSIZE%
+3397480
+
+%ISIZE%
+15803392
+
+%MD5SUM%
+18173b40462d5b964b5b40ab2ba42886
+
+%SHA256SUM%
+176b6eb7986aaf91d92e9d06507c6c8d64f25bb4346c1ac09174d445c4b6f333
+
+%PGPSIG%
+iQIzBAABCgAdFiEE4kC1fixGMLp2ji8m/BtUfI2BcsgFAlo2zFkACgkQ/BtUfI2BcsgIMQ/+O+ktEQvMR/XMAbSqQplbH9iNRi0mOE9qsRwhwKhOAbQONzosWe3t1EXvCn07bSPSCGPMRrzfhtb0Pu62MJc/O7t2GdoTesGhVFTQR9m6wMfd6jE85S80LHlyepc/05q9JBb5ySAuBsdjB/QCym3CJGGlSNdim0sLgYfwwVvECtAFX/DTYnDaWmJU/7UW2JtRSMyeTp636zORFd5S2Kwyid7rP9ChRX/Bj5FlAqsdFKikfnWiIbefj7jG2At5AELI8E53n1Um7aECFWZX/+XQDNahnBDh4awGIGc7+McilM1qDNEKL8lw3pENfCSPXXsz5m6tBGT2HygUJALP8L1WcekfMmux3p6CYFpsk0bARN0fhpCMvKbk3UezyNkKWv2dmnE60bYDUeup1UBdCbqKJy4A4j7jjGFvP6Ze/fwK7muTdCu+RQzD+Wc6LLxR162uEIFxC7PlyhEs/eL7gEl7LRwyaACDI8R0vVSUNArH7oIU8tYn7WWPgtffcjaJKXZgzqIc4dmolWlPd2hfkumkdrhdv8B3gsLZbQFCQCZhh7xLnsOjzfXdEEaqUPjILHs3Z/tzGiAJhguHWTvUZQ6T15npQIYCuY26FGO3fQN8Mha7l+vB+4otN7HcCmkRWS28KsWNEMO26aYnTDDwo4jJF2YVXXNmH23/aV3Wo2vqm94=
+
+%URL%
+http://www.smplayer.info/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1513540622
+
+%PACKAGER%
+Levente Polyak <anthraxx@archlinux.org>
+
+%DEPENDS%
+qt5-script
+mpv
+hicolor-icon-theme
+libx11
+zlib
+gcc-libs
+
+%OPTDEPENDS%
+smplayer-themes: icon themes collection
+smplayer-skins: skin themes collection
+smtube: browse and play youtube videos
+youtube-dl: youtube videos and streaming
+mplayer: alternative multimedia engine
+
+%MAKEDEPENDS%
+qt5-tools
+

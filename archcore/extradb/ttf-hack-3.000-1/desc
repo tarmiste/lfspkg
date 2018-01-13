@@ -1,0 +1,47 @@
+%FILENAME%
+ttf-hack-3.000-1-any.pkg.tar.xz
+
+%NAME%
+ttf-hack
+
+%VERSION%
+3.000-1
+
+%DESC%
+A hand groomed and optically balanced typeface based on Bitstream Vera Mono.
+
+%CSIZE%
+360888
+
+%ISIZE%
+1262592
+
+%MD5SUM%
+620954e73074c7309cd0305abcf0c038
+
+%SHA256SUM%
+d264da90ebea3bc1e76c3c33064dea84da141499e7d0b7a0dfe5339652360efa
+
+%PGPSIG%
+iQIzBAABCAAdFiEELjbYYgIhSC/EXLfyqRdkdZMmtEAFAlnsPxYACgkQqRdkdZMmtEASLQ/8COGEzHrBkcsrWy6N+1YA17nNOChkLvpiumV1a3pyMh3W2L3Ls6kvBM9NiUEssLholk9GKLhi/v4xDSkKK9TRA4QySJWM1qHGOKlk78ZC0cyPfHdYqKVCCgPBFeXZf7fv1FLYo8EAG2c8kS43GNZ587ead2OxpblmAzXIhWcsGa1ZfuOkTaz6Bwl26GYhs8nEBa6RkS9w8l8YZphmi63hjPc2N/i2LBx2MUvjXgw0zvCNevcW7JxBDryFk9Sf0M4kr1mhfisKTxvInOVmKtlOf/jz7NCfNtdptFNJ02iI0h2w/+DYU5EQ5OzoslnHsQAGqEH+cpGjn2Gzk6APTVKojWHpr1wGcHFt1WIOICCddU0Yf5IJ0yBjZhO/5ZHEqVMv/MgGs8/i5wiDudgXE/Op0dwSX0Gty8bSeRnZRd/Mnlal1Dt31DZsbIMg2AtVMzZrnVwnQY/EGmuHKgwku0RAavSApeOVoZ1JeZHHhS0lGWCu7lJa4qPsw7zEmafh47WeXzMWWQMboqv426cDBuHH9BiMa3vgK8QDzaW7wD1s+I/eRLloa8VIQiqWx1DjPL6b1QCWw0yfHONrK2zOk27F48QncOqiw4tDWHW3bSf2DFA9Ui8kd5tlFPHWy5YI+Sa6BSMyKpgj4e9EGK0MqTtJmFkgtuKHZjDBL9EFW+4qQR8=
+
+%URL%
+http://sourcefoundry.org/hack/
+
+%LICENSE%
+SIL Open Font License 1.1 and Bitstream Vera License
+
+%ARCH%
+any
+
+%BUILDDATE%
+1508654845
+
+%PACKAGER%
+Lukas Fleischer <lfleischer@archlinux.org>
+
+%DEPENDS%
+fontconfig
+xorg-fonts-encodings
+xorg-font-utils
+

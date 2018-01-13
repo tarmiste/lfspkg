@@ -1,0 +1,50 @@
+%FILENAME%
+wammu-0.43-1-any.pkg.tar.xz
+
+%NAME%
+wammu
+
+%VERSION%
+0.43-1
+
+%DESC%
+A wxPython-based GUI for Gammu
+
+%CSIZE%
+553568
+
+%ISIZE%
+3684352
+
+%MD5SUM%
+2fa831a8004aff679f1f5d868155c0d0
+
+%SHA256SUM%
+759476bd3b7b6eb2f6340ec7e5657a934d0c30876ea7f052668e6fa107a6fd2f
+
+%PGPSIG%
+iQIzBAABCgAdFiEEOO3RiGdWkk4SJOSVJOTNsAE8JYAFAlhr4DoACgkQJOTNsAE8JYAOcBAApKuy5YQ0MED+Hvq8fC12XKCPCGFrFJUQCUPRoyxoEF7VFPZ9FFZnewyLj52cweQGBtyv+2xTopQcd1ddBYvIYoNnhQDSvr5MDWhpBlot4ESrvOZBV9ObRZ5YD8pONjvDeugfTnM4/Go9zLDjKekruVLmD5S92tQUaIQQx07jOf21ILffREkxWgmabtk137ihqF93bWjJ8YRPNoXv5xYPKQZntfx/U3f5qbPA5GpVTNoYNwdR2HsiBfOnmc7/EbANFDQClpeqKQR/Lh2DaUAL2dEdQURQqlX7hwXQxorntP2u2bBmwx4c1UcsPBuJEHQjj8Bi0OwD12nCjZ+VRTYB5eCAI/vdDE4BvT6bH9UxOQc2YFBKkq6Fy97I02t1ed3O44ukkS4nfetscAETqt3a6ieCA7J/X2y1uZpFI4dAnyuW6yAlH2NlchTPK0Ck0GkKcLoJMkaVC4CfLpV1HwJCQHFq5UccdHy4gDCIjZNvGhe3wn4SbbCeFe76a3PeF4lNufy0J+hVx0w1n59ybQcbv/kQ09a/q3kXHaYx0Z+fcAlrFEOzjum/Y5Gf4W+zQ4dc0GbXVKUwFldXnjM2jcE56722No0tKBkCcNh88K4mRx6O8vA+jTqQg9DGdWXw9P9Fk564dAqBjKWDh+QOG1EfyFbzj/KW2NFXpyoz9VAwJyQ=
+
+%URL%
+http://wammu.eu/
+
+%LICENSE%
+GPL
+
+%ARCH%
+any
+
+%BUILDDATE%
+1483464712
+
+%PACKAGER%
+Jaroslav Lichtblau <svetlemodry@archlinux.org>
+
+%DEPENDS%
+python2-gammu
+wxpython
+
+%OPTDEPENDS%
+gnome-bluetooth: Bluetooth support
+python2-pybluez: Bluetooth support
+

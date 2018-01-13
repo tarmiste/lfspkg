@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+xmlto
+xorg-util-macros
+docbook-xsl
+

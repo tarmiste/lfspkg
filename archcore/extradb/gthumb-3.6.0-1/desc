@@ -1,0 +1,76 @@
+%FILENAME%
+gthumb-3.6.0-1-x86_64.pkg.tar.xz
+
+%NAME%
+gthumb
+
+%VERSION%
+3.6.0-1
+
+%DESC%
+Image browser and viewer for the GNOME Desktop
+
+%CSIZE%
+7605068
+
+%ISIZE%
+25133056
+
+%MD5SUM%
+d17ae348b36800a2a86a6558c8ea7af8
+
+%SHA256SUM%
+db89f9c9acb6b76df9b7bd6e8d3a43132506ec80ee6a406de92a1d5515837626
+
+%PGPSIG%
+iQEzBAABCAAdFiEEghj4iEmqxSLpTPRwpekojE+kFfoFAloTQD0ACgkQpekojE+kFfooRgf+KeI4e1AJv1snlgJygIWQ/Lb7PAxHHJDOMXi+5kj+T2KNdWWk6nDCz1kwFeAyPzmsIUgaujFJmwQcjwVNBv9v0GhaxG7zyNoFjMy162qS05gxPI9UTDikYzvvwqhJMKUNQd+Ia4kW0TbjQsiENmSC1W94wotzJKr9Y2oexAfizcMyufl6xWcdSrj2axiOS1ZDRvgJ9XJblA0lWmDGmy+O9GCsAjn94wp10m57O2OheNxHNOj/ofICdXxh+Qz7anEtQxvgNwQe4v4GwHKo+TiNngVNVcJg4y+GIMlwyq9PX7+L6T0jxxo00ToN+4JNGa2sDcmXJMfyCccsChS/Rw8xuQ==
+
+%URL%
+https://wiki.gnome.org/Apps/gthumb
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1511209995
+
+%PACKAGER%
+Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+
+%DEPENDS%
+dconf
+librsvg
+clutter-gtk
+gst-plugins-base-libs
+gsettings-desktop-schemas
+libwebp
+libsecret
+libsoup
+webkit2gtk
+json-glib
+gtk3-print-backends
+
+%OPTDEPENDS%
+libraw: read RAW files
+exiv2: metadata support
+libchamplain: map viewer
+brasero: burn discs
+liboauth: web albums
+
+%MAKEDEPENDS%
+intltool
+libchamplain
+exiv2
+itstool
+brasero
+libraw
+liboauth
+docbook-xsl
+yelp-tools
+flex
+gnome-common
+git
+

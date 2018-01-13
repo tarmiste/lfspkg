@@ -1,0 +1,43 @@
+%FILENAME%
+mythes-nl-20140818-1-any.pkg.tar.xz
+
+%NAME%
+mythes-nl
+
+%VERSION%
+20140818-1
+
+%DESC%
+Dutch thesaurus
+
+%CSIZE%
+1454368
+
+%ISIZE%
+6828032
+
+%MD5SUM%
+2d4e64cc657ca3632bc215adeb3da5a8
+
+%SHA256SUM%
+4c0950554f105469e566cb07193829e36a31eb3e2614f31de229d15830f2724d
+
+%PGPSIG%
+iQEcBAABAgAGBQJT8bxQAAoJELvkN3FIcyipHr4IANi9Hpf5JkZxxxul7IYGLdQScpQ23N+DyeoZeQkdSnnkLB5vtjI/7wBooiUAsXEjGh8S1CZDGYfLD2TFfI55RF7ykd0LmXCM9AlA64AOtyVj0zLN8tEllvJxgoCc8VOA47wWgaTEYSynsXBz+RxJ6xMpmkAAF8lnVd4SWQX7B3PtIJVM3ZmL4G8U8h60wNwglNfeqFbXLVWSIMHQ/63e0uyPIFkHy8UrEdpW4XhEjdgIEge5elpdblraLzPOCpxhzxj0Zy37JWXgScp7cPWeeE+rceSULMRcSvW8uXjdqk9UMXr7eOdjXJQA1vXlxBxsKu2HrjzQO+7cCZTF/k5uYaM=
+
+%URL%
+http://data.opentaal.org/opentaalbank/thesaurus/
+
+%LICENSE%
+BSD
+custom:Creative Commons, Attribution 3.0 Unported
+
+%ARCH%
+any
+
+%BUILDDATE%
+1408351297
+
+%PACKAGER%
+Bartłomiej Piotrowski <bpiotrowski@archlinux.org>
+

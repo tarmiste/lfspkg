@@ -1,0 +1,61 @@
+%FILENAME%
+python-pyface-5.1.0-2-any.pkg.tar.xz
+
+%NAME%
+python-pyface
+
+%BASE%
+python-pyface
+
+%VERSION%
+5.1.0-2
+
+%DESC%
+Traits-capable windowing framework
+
+%CSIZE%
+849124
+
+%ISIZE%
+5610496
+
+%MD5SUM%
+1b26937c40acacd5577909c49159a0a3
+
+%SHA256SUM%
+f62bc33e0c24c648c48fb7eb11d0c503a5aff50305850e7477dd42b6eb60a10f
+
+%PGPSIG%
+iQEzBAABCAAdFiEE82kWh9hnuBtRzgfZu+Q3cUhzKKkFAlhg4+oACgkQu+Q3cUhzKKkTwwf/STe3cpM2qiAPBAW1JdMpDAtMv/Iuc2E40HgnZ9ItT/iUCdnhfnbhw9C+ubQPJM8qwgd4ykwvZ53unojNk+GKw9cVSM/d/X+70np0WfV2fxcFARzmxd5MP3zPZyTbU8q1+rInYsd+g6paXgpwiCe8ugYSD8KSoI+CPXkGHp9vLMyNeHDdVZAdTkD8JBC31l7KBOU8QK3BFSGwIWzNude4ZPzj2x1TkWkjH8L26Pv+o9VEaK0DT7JLAxARbPpRcWolaXRepOY4ZEysLtCKnzh/YVdbarn964Ok8+J1eV2g8evfMP0tZdXYylIClAr1s+NbYNll0Y32iiYLhVmidFKW7w==
+
+%URL%
+https://github.com/enthought/pyface
+
+%LICENSE%
+BSD
+
+%ARCH%
+any
+
+%BUILDDATE%
+1482744804
+
+%PACKAGER%
+Bartłomiej Piotrowski <bpiotrowski@archlinux.org>
+
+%DEPENDS%
+python-traits
+
+%OPTDEPENDS%
+python-pyqt4: for Qt backend (or python2-pyside)
+python-pyside: for Qt backend (or python2-pyqt4)
+python-pygments: for syntax coloring in Qt backend
+python-setuptools: to locate resources inside zip and egg files
+ipython: for IPython widget
+
+%MAKEDEPENDS%
+python-setuptools
+python-traits
+python2-setuptools
+python2-traits
+

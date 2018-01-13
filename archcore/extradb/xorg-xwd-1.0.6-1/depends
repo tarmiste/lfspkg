@@ -1,0 +1,7 @@
+%DEPENDS%
+libxkbfile
+
+%MAKEDEPENDS%
+xorg-util-macros
+libxt
+

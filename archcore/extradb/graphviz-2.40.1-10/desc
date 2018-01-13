@@ -1,0 +1,78 @@
+%FILENAME%
+graphviz-2.40.1-10-x86_64.pkg.tar.xz
+
+%NAME%
+graphviz
+
+%VERSION%
+2.40.1-10
+
+%DESC%
+Graph visualization software
+
+%CSIZE%
+5598868
+
+%ISIZE%
+16287744
+
+%MD5SUM%
+7e56ab38969d7d36c01b2f014476a778
+
+%SHA256SUM%
+8c4f97129df03e429de47f2de8b6a48368452479aaeb095c778d2c75f50ca409
+
+%PGPSIG%
+iHUEABYIAB0WIQQaYNxEJF0G/vkGI9bu7uLu7i7u7gUCWjrHYAAKCRDu7uLu7i7u7mmZAQCRrgGMi4PHwldNCvHEs+Y+ZtQt2lmloZyUAtqUeJBxpAEAixEKJ3uwnRRUboOIe/XwpdMitfcYV9C8aT9rf6jU8Qs=
+
+%URL%
+http://www.graphviz.org/
+
+%LICENSE%
+CPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1513801441
+
+%PACKAGER%
+Gaetan Bisson <bisson@archlinux.org>
+
+%DEPENDS%
+libltdl
+gd
+librsvg
+libxaw
+ghostscript
+pango
+gts
+gsfonts
+
+%OPTDEPENDS%
+mono: sharp bindings
+guile: guile bindings
+lua: lua bindings
+ocaml: ocaml bindings
+perl: perl bindings
+python2: python bindings
+r: r bindings
+tcl: tcl bindings
+qt4: gvedit
+gtk2: gtk output plugin
+xterm: vimdot
+
+%MAKEDEPENDS%
+swig
+mono
+guile
+lua
+ocaml
+perl
+python2
+r
+tk
+qt4
+gtk2
+

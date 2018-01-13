@@ -1,0 +1,67 @@
+%FILENAME%
+ocrfeeder-0.8.1-2-any.pkg.tar.xz
+
+%NAME%
+ocrfeeder
+
+%VERSION%
+0.8.1-2
+
+%DESC%
+GTK+ document layout analysis and optical character recognition application
+
+%CSIZE%
+876696
+
+%ISIZE%
+3555328
+
+%MD5SUM%
+3664913ceba60058c6e28c925b9dd7b2
+
+%SHA256SUM%
+38c3186792562a89199400e747d9318272bb21f113c6c09b505da10ab19a8a46
+
+%PGPSIG%
+iQEcBAABCAAGBQJXhWYwAAoJELYdvOEJAcFjzdkH/13dCjtkdIHlnpdisBZxB/EyCtKextRkCUCx0G8xtnxGZ4BpSMlVChCrmG+9DGnjJOnxdFU9HywQb8iU5nfoVwQuGkm6Sv+2q6RdBF/QWbzimjx52SEqfjGmHkuJ3GLEoMD2vBRFRO0eBwLuZsT3FLodfosxeeB7YV7jpYf2LOjWhOwm0/d68ccpCEcFFIrCtq+/VDwfxza3M3QrtedjhNxV+I/RGav6eO9GuGtCPyUgJiVm57MX+M4ZbDQSKohbVkzO+WflbW75y3G3mCG6LCEYmvmJPHFGEcLPLSG6/A2MtVTwyi04ygpNCxSCbbU3EvacE9Vdl5Ou2eHq51UjOsA=
+
+%URL%
+https://wiki.gnome.org/Apps/OCRFeeder
+
+%LICENSE%
+GPL
+
+%ARCH%
+any
+
+%BUILDDATE%
+1468360215
+
+%PACKAGER%
+Balló György <ballogyor+arch@gmail.com>
+
+%DEPENDS%
+python2-pyenchant
+python2-gobject
+python2-lxml
+python2-pillow
+python2-reportlab
+gtk3
+goocanvas
+gtkspell3
+ghostscript
+unpaper
+sane
+iso-codes
+
+%OPTDEPENDS%
+tesseract: character recognition
+ocrad: character recognition
+gocr: character recognition
+cuneiform: character recognition
+
+%MAKEDEPENDS%
+intltool
+gnome-doc-utils
+python2-gobject2
+

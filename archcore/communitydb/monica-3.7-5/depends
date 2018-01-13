@@ -1,0 +1,7 @@
+%DEPENDS%
+fltk
+xorg-xgamma
+
+%MAKEDEPENDS%
+gendesk
+

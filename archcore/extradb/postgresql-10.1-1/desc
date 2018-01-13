@@ -1,0 +1,69 @@
+%FILENAME%
+postgresql-10.1-1-x86_64.pkg.tar.xz
+
+%NAME%
+postgresql
+
+%BASE%
+postgresql
+
+%VERSION%
+10.1-1
+
+%DESC%
+Sophisticated object-relational DBMS
+
+%CSIZE%
+6235948
+
+%ISIZE%
+27454464
+
+%MD5SUM%
+e1a3411d7005deec7051b38e4a95f3dc
+
+%SHA256SUM%
+e23ddcedc3c205430637bd5d53fc39e93e99039f4a9f54d95d39eab63ae0557f
+
+%PGPSIG%
+iQIzBAABCgAdFiEE4kC1fixGMLp2ji8m/BtUfI2BcsgFAloE8nEACgkQ/BtUfI2BcsgXKA/9GAVgIcLNLyizrny1a9B5kIsUwH29BFcWxTNntlC3pc1S+pVOw5vktElHCQqyEUKrW8Aj1zBa3nfKng3sRzZVAwgJDsCRzhx3hCL4PXluPdqWN+X5fkELOlHwNBN588pKM9Hcx0WtKRe4mnXGy3ttjGLxWu6RC756JJq61igigH+Sv4W51+nt1+t1cRVdwCs1B9/3EASi6pdhwJ9WRu0orj39wJ5Ij3BHFtFyfz194gBjpOKmg0WZU1HJloeQdrd/K1Y3GbUKRacsWtoHjKR+Z538WNG34NCADdb57CM52E2pOwDjHQ9bqKFv1iZBrUbW8wLB+J09haqrmeBD1plmGLHu69Ba51fdHK0IhCR8BI1ypHo1tjCvQ13diJvgXjdsCy/kBnEtjZ2B9g77NJBdkCFIj39EYEKuIIwO0dWwBSrxzXZd2OcRXRVJo7cVfqiXzG58dHMCHIJ2qYyHWBN4KSDV7sbw/Yt+J+N6qbTc2hJA8Y+Iujuu9B9Q2uv/uho3/jtj0i6NZ/nZwNt2uXcvAogRN3PxBRQjZCgauwKLMiBGezWxowPRMM4O3ZlbgRNvYDD1zCuq+BEsRg7htL3/6B1+i8McndP6Quc6r0vtPdokWvDwpJSN1/t92xJaxHgy9Lk0ExAT+JIYKAOzklgVdFiNeT+l+Xc2ykEUM1DXVtE=
+
+%URL%
+https://www.postgresql.org/
+
+%LICENSE%
+custom:PostgreSQL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1510273620
+
+%PACKAGER%
+Levente Polyak <anthraxx@archlinux.org>
+
+%DEPENDS%
+postgresql-libs>=10.1
+krb5
+libxml2
+readline>=6.0
+openssl>=1.0.0
+pam
+
+%OPTDEPENDS%
+python2: for PL/Python support
+perl: for PL/Perl support
+tcl: for PL/Tcl support
+postgresql-old-upgrade: upgrade from previous major version using pg_upgrade
+
+%MAKEDEPENDS%
+krb5
+libxml2
+python2
+perl
+tcl>=8.6.0
+openssl>=1.0.0
+pam
+zlib
+

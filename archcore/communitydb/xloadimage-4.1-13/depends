@@ -1,0 +1,10 @@
+%DEPENDS%
+libtiff
+libpng
+libx11
+libxext
+
+%MAKEDEPENDS%
+patch
+imake
+

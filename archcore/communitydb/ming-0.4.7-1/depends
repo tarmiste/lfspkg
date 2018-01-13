@@ -1,0 +1,11 @@
+%DEPENDS%
+freetype2
+libpng
+flex
+giflib
+
+%MAKEDEPENDS%
+bison
+pkg-config
+python2
+

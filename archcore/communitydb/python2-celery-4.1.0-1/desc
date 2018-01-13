@@ -1,0 +1,102 @@
+%FILENAME%
+python2-celery-4.1.0-1-any.pkg.tar.xz
+
+%NAME%
+python2-celery
+
+%BASE%
+python-celery
+
+%VERSION%
+4.1.0-1
+
+%DESC%
+Distributed Asynchronous Task Queue
+
+%CSIZE%
+577852
+
+%ISIZE%
+4111360
+
+%MD5SUM%
+06475f224df90965235f2de27da3918d
+
+%SHA256SUM%
+b0e0f6eb8be4c89c1035c2b0cd55f9afc9cfa691b4ef8851d46bc466b17e7259
+
+%PGPSIG%
+iQIzBAABCAAdFiEEtZcfLFwQqaCMYAMPeGxj8zDXy5IFAlmOlFwACgkQeGxj8zDXy5K65A/7BU2jygO9Qm0zZFdPC6o1kYjCMPBjke+ONUhB9avegROv1OgAILEUTb8zew+s1whiaV1lIOPROWZv0jstth80GrUmTNJxD1XfY/uO0NMWxlyXgvP6CBCqCqmxEtzKkXvGIXfVGcAgdzE0RIEXTdXgZ60RRZBMnTq0BospFcN/bJmLAYJCwcxl22KblILHah4ng1uTOhV2lRWCQWdszBwx3hzsDAeNJKQv6UgAa43yYHkYYzlpxw8638QtfFTsXtRTmCTUGGXEwmffvB+LLa5cy1XKMbIxmtuqQg8oSGz2f0biSBNyI9+TywR9eNRU+a1LgbqAJQWocN5I/UL8J6nbQ9VxHPQCmZT3GycH5+NKRIl/9uF1wiBSX5NwdEDirZ60zbNJHiQYPT1v7DioHWlCY9BsoZuYgtifkhMA9Q2IgbmXiw+1V8e0cLcFQ74EAnPgFE5EgUEv5G+4ibCP8a99+zUiShFHCQPgXUVBguJb9p9VLthD1E20JaPeg7j5nA3aJ7l2LIMNZ+toj4v7lOqL6aORp78k1OA5tPDWPUPXhXAhJKp8JR6DFhrtZ1R5Y8FSUksdy+PdRSpoNWzOWNIEm26Pf2ww5H7Ypi62wi2FpSus/5KAR/JBWKm2TWPx978SN6b4rU7WG77a6FyFlqKhpX74Kar6bwDP0OMhbNvRvjg=
+
+%URL%
+http://celeryproject.org/
+
+%LICENSE%
+BSD
+
+%ARCH%
+any
+
+%BUILDDATE%
+1502516290
+
+%PACKAGER%
+Felix Yan <felixonmars@archlinux.org>
+
+%DEPENDS%
+python2-kombu
+python2-billiard
+python2-pytz
+
+%OPTDEPENDS%
+python2-pyopenssl: for celery.security
+python2-gevent: for celery.concurrency.gevent
+python2-librabbitmq: optimized client for RabbitMQ
+python2-pymongo: for celery.backends.mongodb
+python2-msgpack: for using the msgpack serializer
+python2-pyro: for using Pyro4 message transport
+python2-redis: for celery.backends.redis
+python2-sqlalchemy: for celery.backends.database
+python2-boto: for SQS transport
+python2-yaml: for using the yaml serializer
+python2-pyzmq: for using ZeroMQ transport
+
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-kombu
+python2-kombu
+python-billiard
+python2-billiard
+python-pytz
+python2-pytz
+
+%CHECKDEPENDS%
+python-pytest-runner
+python2-pytest-runner
+python-case
+python2-case
+python-pyopenssl
+python2-pyopenssl
+python-gevent
+python2-gevent
+python2-librabbitmq
+python-pymongo
+python2-pymongo
+python-msgpack
+python2-msgpack
+python-pyro
+python2-pyro
+python-redis
+python2-redis
+python-sqlalchemy
+python2-sqlalchemy
+python-boto
+python2-boto
+python-yaml
+python2-yaml
+python-pyzmq
+python2-pyzmq
+python-eventlet
+python2-eventlet
+

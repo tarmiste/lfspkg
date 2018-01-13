@@ -1,0 +1,10 @@
+%DEPENDS%
+ibus
+libnotify
+librime>=1.1
+brise
+
+%MAKEDEPENDS%
+cmake
+git
+

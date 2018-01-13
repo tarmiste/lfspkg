@@ -1,0 +1,7 @@
+%DEPENDS%
+sdl2
+gcc-libs
+
+%MAKEDEPENDS%
+subversion
+

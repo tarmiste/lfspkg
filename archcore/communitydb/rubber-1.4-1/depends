@@ -1,0 +1,7 @@
+%DEPENDS%
+python2
+
+%MAKEDEPENDS%
+texinfo
+texlive-plainextra
+

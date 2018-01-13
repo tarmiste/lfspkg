@@ -1,0 +1,6 @@
+%DEPENDS%
+systemd
+
+%CONFLICTS%
+pcmcia-cs
+

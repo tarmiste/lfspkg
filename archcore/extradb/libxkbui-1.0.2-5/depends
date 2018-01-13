@@ -1,0 +1,7 @@
+%DEPENDS%
+libxt
+libxkbfile
+
+%MAKEDEPENDS%
+pkgconfig
+

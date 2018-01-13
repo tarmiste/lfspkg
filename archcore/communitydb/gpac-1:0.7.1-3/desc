@@ -1,0 +1,67 @@
+%FILENAME%
+gpac-1:0.7.1-3-x86_64.pkg.tar.xz
+
+%NAME%
+gpac
+
+%VERSION%
+1:0.7.1-3
+
+%DESC%
+A multimedia framework based on the MPEG-4 Systems standard
+
+%CSIZE%
+3810012
+
+%ISIZE%
+19060736
+
+%MD5SUM%
+898a60a290770fb9351754b26bb573d8
+
+%SHA256SUM%
+5a9a32bb9a587df1b4bea5a156ba12cec1884e65a8ec2955000af4c5aa587119
+
+%PGPSIG%
+iQEzBAABCAAdFiEE5JnHn1PJalTlcv7hwGCGM3xQdz4FAllnX0AACgkQwGCGM3xQdz4SDQf8Cib4J+4V40Ehj45HjhQ7qt5RCGS82DTIOwzrWl//3uAa9Ad/Ls8x3eevtR5Xh6iyWe4EmkuMTw4LKVQY6+cXU6vF9zX0YWek5c4iuVk3vLzQVgEeWsADMByBBwV7q2vVfIu7dawVaCPe3Ue70u6fE0YqN5qqfVLdKulrBNXDt3/4jvJ43vrh1ba1Lg20KTEluy0xuuLMstkZqYxUPj90cIrmyezORzbenUCnLyrl9ty4aC5iLMgVNhnVYMapbGP1JOw3q8QvH+F5uYsXPHbo8U/TQZ75d7IJUIS8hPL0NmOgKldddlFZUdzKnvDEoZUPAA3idyDJG0SCanureOr6hw==
+
+%URL%
+https://gpac.wp.imt.fr/
+
+%LICENSE%
+LGPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1499946495
+
+%PACKAGER%
+Jelle van der Waa <jelle@archlinux.org>
+
+%PROVIDES%
+libgpac.so=7-64
+
+%DEPENDS%
+ffmpeg
+glu
+libxv
+
+%OPTDEPENDS%
+jack: for jack support
+a52dec: for A52 support
+faad2: for AAC support
+libmad: for mp3 support
+sdl2: for sdl support
+
+%MAKEDEPENDS%
+git
+jack
+a52dec
+freetype2
+faad2
+libmad
+mesa
+sdl2
+

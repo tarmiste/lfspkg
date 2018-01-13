@@ -1,0 +1,11 @@
+%DEPENDS%
+libcups
+gcc-libs
+ghostscript
+
+%MAKEDEPENDS%
+libcups
+jbigkit
+krb5
+subversion
+

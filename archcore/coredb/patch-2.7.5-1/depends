@@ -1,0 +1,10 @@
+%DEPENDS%
+glibc
+attr
+
+%OPTDEPENDS%
+ed: for patch -e functionality
+
+%MAKEDEPENDS%
+ed
+

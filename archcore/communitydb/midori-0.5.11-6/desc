@@ -1,0 +1,70 @@
+%FILENAME%
+midori-0.5.11-6-x86_64.pkg.tar.xz
+
+%NAME%
+midori
+
+%VERSION%
+0.5.11-6
+
+%DESC%
+Lightweight web browser (GTK3)
+
+%CSIZE%
+1037696
+
+%ISIZE%
+4916224
+
+%MD5SUM%
+73ff67aee6b6b613397a92a893c9d07d
+
+%SHA256SUM%
+6a1aa44d5851761a49c26eed41183b7d96276eedef8dd14b0dee7672bad363dd
+
+%PGPSIG%
+iQEzBAABCAAdFiEElihV8HLHoBhGQFhk/PPIy1z5yNQFAlkPOaQACgkQ/PPIy1z5yNQu5Qf/RIu/7kEJDZTHtcVjVlJG6/a9gpnZYVOsfoMtfW0VMLfuVcFVKV02+MoYdwR1MeluMJxF2p9x8X+W4C3GaDoKNp/rUdfUb1hYugBXYBgL8mYqY+mvL/w4DChZ3u0WG0iTrz/6CscKLDHH1PR2lF2NHc3aCB8+l+5EL7qGY8bAeb6SDj7lNtHIU0WyF7h86Ma6jtDbIhJiYojzXEFuaBTQ3RPmrSO6FRvgn85UpY5zEeYI9MfYcpVdr+y37BrLF3eMt//7/J4M4kxivvoQqp55tNeop59ao0qgQoMYbc2eL5Ee1ttRzlAkQS0kbaljyB84fNEEi/fvzy8BnOZOntPv6A==
+
+%URL%
+http://www.midori-browser.org/
+
+%LICENSE%
+LGPL2.1
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1494169483
+
+%PACKAGER%
+Alexander Rødseth <rodseth@gmail.com>
+
+%REPLACES%
+midori-gtk3
+
+%CONFLICTS%
+midori-gtk2
+
+%PROVIDES%
+midori
+
+%DEPENDS%
+webkit2gtk
+libxss
+gcr
+zeitgeist
+
+%OPTDEPENDS%
+gst-plugins-base: HTML5 OGG videos support
+gst-plugins-good: HTML5 H264 and WebM videos support
+gst-libav: HTML5 H264 videos support
+aria2: download utility
+
+%MAKEDEPENDS%
+bzr
+intltool
+vala
+cmake
+ninja
+

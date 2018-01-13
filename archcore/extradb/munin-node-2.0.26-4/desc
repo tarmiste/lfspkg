@@ -1,0 +1,72 @@
+%FILENAME%
+munin-node-2.0.26-4-any.pkg.tar.xz
+
+%NAME%
+munin-node
+
+%BASE%
+munin
+
+%VERSION%
+2.0.26-4
+
+%DESC%
+A distributed monitoring/graphing tool
+
+%CSIZE%
+355888
+
+%ISIZE%
+1433600
+
+%MD5SUM%
+774beb2b7e11cdda24380dccdb73e7b6
+
+%SHA256SUM%
+c07bc56af1e039f1ac2db39bcf922a94e9725c6a37c8d94a357d35f4666c0c67
+
+%PGPSIG%
+iQEzBAABCAAdFiEEhs/8qRjPOvRxR1iAUeixSKmZnDQFAlk2pwQACgkQUeixSKmZnDQVoQgAjFAR7vnd1RL2b1gebqPDWFR5mpxW8yXQDS/iKQ87JJEpjEOekx+FJv/EvhrQfF1IyM9AHiYuRGqcJ1Zb+Z1YU+q3fpP9W58El+/NVTLqE4ET6VZgBXQx9y8CWMO5PZgfJcvvBB5A1L3mi+CDGwTEonE71EpVmpv7GnFwM0u7Tlw2PdEuoppXEUgNWHmFvEfl2Zc1MRO3BTiQ3kL0r9XOW07ccMuH6EYTJ68xQijGMfYbRruyYq14i3WlSP4xgCn92DDZlXEDCfg+r3HuUcP9HNzYTEoJkiWtvGHKbSBWXf5SClaFHY+g9Vy61fHIUZoPDn5moK9HdhcPsPQGohSJeQ==
+
+%URL%
+http://munin-monitoring.org/
+
+%LICENSE%
+GPL
+
+%ARCH%
+any
+
+%BUILDDATE%
+1496753810
+
+%PACKAGER%
+Evangelos Foutras <evangelos@foutrelis.com>
+
+%DEPENDS%
+perl
+perl-net-server
+perl-io-socket-inet6
+
+%OPTDEPENDS%
+perl-net-snmp: for SNMP plugins
+perl-net-ssleay: for SSL/TLS support
+perl-dbi: for database monitoring plugins
+python2: for some plugins
+ruby: for some plugins
+
+%MAKEDEPENDS%
+perl
+rrdtool
+perl-log-log4perl
+perl-html-template
+perl-date-manip
+perl-io-socket-inet6
+perl-net-snmp
+perl-net-ssleay
+perl-net-server
+perl-file-copy-recursive
+perl-fcgi
+perl-uri
+perl-module-build
+

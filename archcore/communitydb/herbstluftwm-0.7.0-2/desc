@@ -1,0 +1,52 @@
+%FILENAME%
+herbstluftwm-0.7.0-2-x86_64.pkg.tar.xz
+
+%NAME%
+herbstluftwm
+
+%VERSION%
+0.7.0-2
+
+%DESC%
+Manual tiling window manager for X
+
+%CSIZE%
+163280
+
+%ISIZE%
+490496
+
+%MD5SUM%
+a14f0c56a103eb44429a18e3cd5773af
+
+%SHA256SUM%
+4377b942c9dd4d45c3467a026991e05a7f967a5886cfe9aa015e30af9b212537
+
+%PGPSIG%
+iQIzBAABCAAdFiEEYEETBMCdNmKDQO7/zrFn77VyK9YFAlpTnuEACgkQzrFn77VyK9a/jQ//VJtwNvyXcqSW8OUub+ZDodkTEy0qRtqIO36Lw14gJoekbC/bTJoii65PrhYzTaHu2rnGKC7c9hnXNgi7S+vLLyL1YgbIOZCHXtq2JuxbLmTJ4ZII/hWyK0Ay9kSbRiGB/Guj3FobiwsWNU/96DlUyXs+1/OBX1FJnJasiEmdK0TaT0gjMeGDLedL/uxjeyeofDE/+tfZNxq2TD+GkDP5+vFYdXZxQGkRNrkZNJl0DrwLDxG9GVOBFDazPFf7qYOVkXkYdOewIyTc4Y8DRrcbwQzc8EWd+UmdcdtJlyMDTz8kitabLBT2Y639XWkCsyR3Z4qhuR3sfq9BG42cSOzkZqQ0z8IafSI2bAZUO5EPI3d/ngnPMsKPNhBKZkFa+XjYVKvu1omZ2Zb0Zb4BFhx+ooDyVg1kSBGrqlhsMRsZRXzwVnN0LvZSM2S6pamdrPWou0zlJyDmDkvowX9wZIC9Z0Mq+CCQJewuNx3ROfIbwbyNr/fWxNY1/p000KhGCdZh8na3gJST+lXOcOqcLWacdwTOeBy6ieYAZL7Cm1oEw7HDQfM9SuyV/sT2dmqzmP2PIAr6Ooacze/czqqPDYmm9zkq6RAPEdc/V9FCigcO1fLX4Cn3fNPQumTuXGy2BdHxSdbc1N10CH8IWKCJoUr600rQBpo7DzkMer66Q6qCG6o=
+
+%URL%
+http://herbstluftwm.org
+
+%LICENSE%
+BSD
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1515428984
+
+%PACKAGER%
+Eli Schwartz <eschwartz@archlinux.org>
+
+%DEPENDS%
+glib2
+libxinerama
+
+%OPTDEPENDS%
+xorg-xsetroot: to set wallpaper color in default autostart
+xterm: used as the terminal in default autostart
+dzen2: used in the default panel.sh
+dmenu: used in some example scripts
+

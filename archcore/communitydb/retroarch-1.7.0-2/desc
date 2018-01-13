@@ -1,0 +1,84 @@
+%FILENAME%
+retroarch-1.7.0-2-x86_64.pkg.tar.xz
+
+%NAME%
+retroarch
+
+%VERSION%
+1.7.0-2
+
+%DESC%
+Reference frontend for the libretro API
+
+%GROUPS%
+libretro
+
+%CSIZE%
+1907768
+
+%ISIZE%
+6324224
+
+%MD5SUM%
+db608aaa2a3a034036626cfae4792851
+
+%SHA256SUM%
+a87f3f006992084ac4370351d4363ca196f4f9086657b683595c76bb65ad5dab
+
+%PGPSIG%
+iQEzBAABCAAdFiEElDfdOBWnqRaePTlGr/XZUJi8b/UFAlpJSsUACgkQr/XZUJi8b/ViIAf+NCm8t/RdRfSK2xRFKJ4h7lME8PLdBGilOYf20fBnm34liRXMwE6ty2bn3TI/XBFCZ5AOGa9Qr+A1X5LvcSWrYlCKN/EDCFD4+hSEdSlqyhXzkpmfIHXdrlIAm77uJo/wmwgvO41meRoh9oe2RamFBn7//AujM1pK11Vq+27netbU7ybhS/Blw3lVRztDgrJLW+92m6Y3bjLCLNlpnmwgLdEV1JlBY0Nx3VQ2qcUEVdbYGtCnBIF9F+PMFjeyPWXcDmCBJ7QGdO92SvYTRcHhNTXgaSCVtVFA37vUKjShYwey6cK6zMiq1WtP/eo1shXkO3z7Q2cIV3YeBm15XAiTjw==
+
+%URL%
+http://www.libretro.com/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1514752624
+
+%PACKAGER%
+Maxime Gauduin <alucryd@archlinux.org>
+
+%DEPENDS%
+alsa-lib
+gcc-libs
+glibc
+libdrm
+libgl
+libpulse
+libusb
+libx11
+libxcb
+libxext
+libxinerama
+libxkbcommon
+libxv
+libxxf86vm
+mesa
+openal
+sdl2
+wayland
+zlib
+libass.so=9-64
+libavcodec.so=57-64
+libavformat.so=57-64
+libavutil.so=55-64
+libfreetype.so=6-64
+libswresample.so=2-64
+libswscale.so=4-64
+libudev.so=1-64
+
+%OPTDEPENDS%
+libretro-overlays: Collection of overlays
+libretro-shaders: Collection of shaders
+python: retroarch-cg2glsl
+retroarch-assets-xmb: XMB menu assets
+retroarch-autoconfig-udev: udev joypad autoconfig
+
+%MAKEDEPENDS%
+vulkan-icd-loader
+

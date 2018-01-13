@@ -1,0 +1,91 @@
+%FILENAME%
+cairo-dock-plug-ins-3.4.1-10-x86_64.pkg.tar.xz
+
+%NAME%
+cairo-dock-plug-ins
+
+%VERSION%
+3.4.1-10
+
+%DESC%
+Plugins for Cairo-Dock
+
+%CSIZE%
+3750980
+
+%ISIZE%
+10725376
+
+%MD5SUM%
+b77fda3650b97a0332b38f92e0455518
+
+%SHA256SUM%
+7f1bd7afce79d92ab954afb764d18b362535d32cd0c08bce51b56d12d0c604ce
+
+%PGPSIG%
+iQEzBAABCAAdFiEEhs/8qRjPOvRxR1iAUeixSKmZnDQFAlpMgcQACgkQUeixSKmZnDQLIQgAlhJM6sp2qRIMhNhXTffwcP7i+8+KjoyByayBi1vQa4KFhL9PsnjhebSdluOBKo/udO40E95RBU71fsMbYbOiQ1oKww6ysDB9fyHoLhUFUFW+vfutFs6petsgOvTqmLiGkf/excP+iGTtdSPPd1+RHbKPX+yAWHY++tUxrE2Vr2flDZs6b5rmFx0tKQKgii2QoI/o6kyayclByke+UoVltVVWM37dxkgZzPUh8TsYWZwkUnQtar9B+LfvhiKf7QsEr2Z4/G1pQU2gsvweBhDtDvGcX9qseWugx77kkzUOur+ZMRbXQNsvLxNtGTMrxADzfiMJgUL7Jwe2h3Q78Z9z/Q==
+
+%URL%
+http://glx-dock.org
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1514963375
+
+%PACKAGER%
+Evangelos Foutras <evangelos@foutrelis.com>
+
+%REPLACES%
+cairo-dock-plugins
+
+%DEPENDS%
+cairo-dock
+
+%OPTDEPENDS%
+alsa-lib: Sound Control, Sound Effects applets
+dbus-sharp-glib: Mono API
+fftw: Impulse applet
+gnome-menus: Applications Menu applet
+gtk-sharp-3: Mono API
+gvfs: GVFS integration
+libetpan: Mail applet
+libexif: Slider applet
+libical: Clock applet
+libpulse: Impulse applet
+libxklavier: Keyboard Indicator applet
+lm_sensors: System Monitor applet
+python: Python 3 API
+python2: Python 2 API
+ruby: Ruby API
+upower: Power Manager applet
+vte3: Terminal applet
+wireless_tools: Wifi applet
+zeitgeist: Recent Events applet
+
+%MAKEDEPENDS%
+alsa-lib
+cmake
+dbus-sharp-glib
+fftw
+gnome-menus
+gtk-sharp-3
+gvfs
+libetpan
+libexif
+libical
+libpulse
+libxklavier
+lm_sensors
+python
+python2
+ruby
+upower
+vala
+vte3
+zeitgeist
+

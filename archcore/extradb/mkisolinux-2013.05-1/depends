@@ -1,0 +1,6 @@
+%DEPENDS%
+mkinitcpio
+cdrkit
+syslinux
+pciutils
+

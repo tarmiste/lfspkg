@@ -1,0 +1,42 @@
+%FILENAME%
+warsow-data-2.1.0-1-any.pkg.tar.xz
+
+%NAME%
+warsow-data
+
+%VERSION%
+2.1.0-1
+
+%DESC%
+a free online multiplayer competitive FPS based on the Qfusion engine (data files)
+
+%CSIZE%
+446711332
+
+%ISIZE%
+454909952
+
+%MD5SUM%
+d335f1070e6b68dd84eb17b71f987a52
+
+%SHA256SUM%
+948e2f5c87fd0ea9b85be7974008681dc3f538c171495e4ff95753c96d2ebd1f
+
+%PGPSIG%
+iQIcBAABCAAGBQJW+Y2kAAoJEDnkuHfmLrkV1cYP/RiljhxMK/s1S/fwXKF56PQtCmOdJnJ+15GGdmSKz/49DK23UNLl9bacxLFWunCf/FmiVUsPvSt4w+cYkMm4oqCNQX32sgs3FDKZcvxWmiF9ZF/EJfdz+33mHKvucT5kngdMblgNIdv/yLXcZFeNmxrePonsopE9mmH1MWlgCNMuGACNdR1sXL0nZdrdh0W2HZrkslZw5W6baLjUIjP07TfjB8pKvvOYLFVOoQwTBqmlxQuuobFdDyOSow30KADVtY7Shym8FS2tx8M9+3Ltf/b0y9yleVZLTZgp4s2m4X2vHL5/Lya9u/fB2eYYM/93z79HD5cAPBxLMiZ18xXEBjqgPesGBq1loSBsVCqDe91dTmMfr+GjXCVHXuOufb1GjB5YgOxgaAWwNmjWHzIDdLfDmnVTPpIPo5wqwEG8WOQ0+N7Kw9LQYMB1UEVeu9ehWOmcb8XlS+P0GRYNRZQjLNQJmvteogRonNNUi1kIvHLqJpQ5S0IAaYLrXDFZ0ULlbbCESFGyTXiFQR+hFsMn1n+2b97KWa/K6gxFYduZye9TR0Btg5rgTpkUPEeYA2xq3bmmputpXKBhaWp1KthKhPatF2S/fqms6SnRGbRAEGUS7W6AzL18kE04oABY3UcVHfco7NXBD+BahzJnxX/Su7zFYeKgp2Y9o4BE5+CyKKIy
+
+%URL%
+http://www.warsow.net/
+
+%LICENSE%
+custom:Warsow Content License
+
+%ARCH%
+any
+
+%BUILDDATE%
+1459195090
+
+%PACKAGER%
+Sven-Hendrik Haase <sh@lutzhaase.com>
+

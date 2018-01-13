@@ -1,0 +1,14 @@
+%DEPENDS%
+gpm
+slang
+sdl
+libxxf86vm
+libsndfile
+
+%MAKEDEPENDS%
+git
+xorg-mkfontdir
+xorg-bdftopcf
+gendesk
+imagemagick
+

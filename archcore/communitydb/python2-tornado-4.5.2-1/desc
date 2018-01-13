@@ -1,0 +1,72 @@
+%FILENAME%
+python2-tornado-4.5.2-1-x86_64.pkg.tar.xz
+
+%NAME%
+python2-tornado
+
+%BASE%
+python-tornado
+
+%VERSION%
+4.5.2-1
+
+%DESC%
+open source version of the scalable, non-blocking web server and tools
+
+%CSIZE%
+578868
+
+%ISIZE%
+4793344
+
+%MD5SUM%
+0a6d3547fbf59bfa545db7c66c8d8afd
+
+%SHA256SUM%
+1b40fa2155b79785612608c2b8b59de2bfbb1f47bafa20c1e7734172e328debd
+
+%PGPSIG%
+iQIzBAABCAAdFiEEtZcfLFwQqaCMYAMPeGxj8zDXy5IFAlmjTq8ACgkQeGxj8zDXy5L/7A//bBQ81dZiupmXxiPEiMsArLhYG1tl5SYlXPFX08Gzlin08wEk6WK1QFuf8n6vQeC6qLFTnN+nG83AknCRNSQRPT0b8KH8UgOvRl1zr+nmEKB3U/WDUf4GliCyTaiXqtwLT3VsvO6FHYDx2sjJomOa9989AsUzu9+qsaC/9eQ+cOK4HZt9Z9+Yd2XSvkNY9l8jv0+1L4UsNf4HP/+F7T5I6SxB6Zmbs1Nu/Xo21dKnniTmffm17ek+3KsKCDOYdHvhlzNh264LmimqACTvObCkvVX6kz3ugDKTYNmfClj898sTRfK97A+bDllUbMUCFIZG56KRYsBkUJp6jlQ1lYFCSVYFu+Lyg9Y+XgIkeyM/yof0NPPJqlMDJeToEiRtWosCAKMr1C6bvmrd0iAR+Z4/HZ7BfYSH9xnJyryOaONHmuMB61S8fABc3530BVW2gQmK+Zab1pcp1agW9H98qj8FQF3AYJF3wJcTk888qZE275XDcZ1mIU9jglE0sdtzb3pRWN+ERbL7NWamtt+w5j0H3uB1pY1kNj7kMSnPbSn2cbi7tzx0eU275nqBDUe7Rtt/9+GVQXaeTCyJM5df5M4o+6i1kNMlu7y9DayBsUrqBMazcnsagfZpw/ohqJuhZzri/e+RULbO1vQqUXECcbpJLy5HyP6olGs8spzjuzPEnP0=
+
+%URL%
+http://www.tornadoweb.org/
+
+%LICENSE%
+Apache
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1503873538
+
+%PACKAGER%
+Felix Yan <felixonmars@archlinux.org>
+
+%DEPENDS%
+python2-singledispatch
+python2-backports-abc
+
+%OPTDEPENDS%
+python2-futures: recommended thread pool and for tornado.netutil.ThreadedResolver
+python2-monotonic: enable support for a monotonic clock
+python2-pycurl: for tornado.curl_httpclient
+python2-twisted: for tornado.platform.twisted
+
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+
+%CHECKDEPENDS%
+python-pycurl
+python2-pycurl
+python-mock
+python2-mock
+python-twisted
+python2-twisted
+python2-futures
+python2-singledispatch
+python2-backports-abc
+python2-trollius
+python2-monotonic
+

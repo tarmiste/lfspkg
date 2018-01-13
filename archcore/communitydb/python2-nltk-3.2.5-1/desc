@@ -1,0 +1,57 @@
+%FILENAME%
+python2-nltk-3.2.5-1-any.pkg.tar.xz
+
+%NAME%
+python2-nltk
+
+%BASE%
+python-nltk
+
+%VERSION%
+3.2.5-1
+
+%DESC%
+Natural language processing in Python
+
+%CSIZE%
+1749444
+
+%ISIZE%
+14022656
+
+%MD5SUM%
+4cc632f1176a9ab6c98e6a2b457d259a
+
+%SHA256SUM%
+aaa497d55029f6291ac17ac75f5616037be79a8b9c8e6a8d4533fb72f8ee02cd
+
+%PGPSIG%
+iQEzBAABCAAdFiEE5JnHn1PJalTlcv7hwGCGM3xQdz4FAlnOlc4ACgkQwGCGM3xQdz4QFwgAr/7XZ/0BYFprOT2PUheG3i5PLUK4SSqNFLu+oxFi+KFuOnEWYvSng5TvzECq4aSNOsSpA4okP2H6HEuIbhvm3CGJv2R2OWL2BIU6OVkyVPOorl01odDfzTRxwKD1CJzcLMFSfufJPlQ5h2bSk6zkY944piUloA+znA9BRNJDP0eIsIiBC8XmPaDCLudgDkZeqldGWgGYAQxNMxxV7TrY5P4URrLEsUQKnMDWPAYUDu8Ew9x0WYKcMq3cIU6kXiWvL5OqOZM4tmp12SZLhCrYFruomKRCEhpLRKP+Oek8woiFw7M/QXF4Kvf2QvjSgAZfTVsMrY18566AujcPEsMY2g==
+
+%URL%
+http://www.nltk.org/
+
+%LICENSE%
+APACHE
+
+%ARCH%
+any
+
+%BUILDDATE%
+1506710321
+
+%PACKAGER%
+Jelle van der Waa <jelle@archlinux.org>
+
+%DEPENDS%
+python2-yaml
+
+%OPTDEPENDS%
+nltk-data: test data
+python2-numpy: used for calculations
+python2-matplotlib: used for plotting
+
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+

@@ -1,0 +1,55 @@
+%FILENAME%
+picard-1.4.2.git.20171126-1-x86_64.pkg.tar.xz
+
+%NAME%
+picard
+
+%VERSION%
+1.4.2.git.20171126-1
+
+%DESC%
+Official MusicBrainz tagger
+
+%CSIZE%
+1306592
+
+%ISIZE%
+6137856
+
+%MD5SUM%
+1894650c908ba7ea5470cf50ca2077ac
+
+%SHA256SUM%
+561564a51ebcaefaf7355ce390f063d66e6713dd94033eb8cc12440500aca855
+
+%PGPSIG%
+iHUEABYIAB0WIQQaYNxEJF0G/vkGI9bu7uLu7i7u7gUCWhqkKwAKCRDu7uLu7i7u7n6uAP48B5PxdwRHWSKn1bslvXJGlcKVRFgOM07J5kkD+nnHrQD/ZnOs+gsBpNrpMiMBlkx21AG1DQiTdcunA4XZWSG0/w0=
+
+%URL%
+http://picard.musicbrainz.org/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1511695108
+
+%PACKAGER%
+Gaetan Bisson <bisson@archlinux.org>
+
+%DEPENDS%
+python-pyqt5
+python-mutagen
+
+%OPTDEPENDS%
+chromaprint: fingerprinting
+python-discid: cd lookup
+
+%MAKEDEPENDS%
+python-discid
+git
+python-setuptools
+

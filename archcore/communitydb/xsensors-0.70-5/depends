@@ -1,0 +1,8 @@
+%DEPENDS%
+gtk2
+lm_sensors
+
+%MAKEDEPENDS%
+imagemagick
+gendesk
+

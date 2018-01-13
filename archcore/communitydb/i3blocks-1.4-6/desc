@@ -1,0 +1,54 @@
+%FILENAME%
+i3blocks-1.4-6-x86_64.pkg.tar.xz
+
+%NAME%
+i3blocks
+
+%VERSION%
+1.4-6
+
+%DESC%
+Define blocks for your i3bar status line
+
+%GROUPS%
+i3
+
+%CSIZE%
+26444
+
+%ISIZE%
+100352
+
+%MD5SUM%
+fcfd5cffe9d45e0733c4726fb936aa2f
+
+%SHA256SUM%
+166f646b90a1b9e72d466359e7f96c51fe17c5c1d412df88d82741a094f687b3
+
+%PGPSIG%
+iQIzBAABCgAdFiEEba97gI+d8lE5YgAA0hRh49/iBg0FAlmJ7tIACgkQ0hRh49/iBg2lkhAAvX8rK5p31GNQCMhBUMN1ZbPS0RGW8vD+0ZI3itjSjndbJ20HjYBEmmHaXbKzPZ3mR/k3Bq8JxxTSVxIeGN4hGQRFUapREBMpVD/PYoxFdK1BG3FBre9fCCeikyIzIbiajJeemVX6JSt8qSdcWGl9LkfGmqTc28ZDoFCYcCHhyHRHbuLaCtuai6R8vXPMVq4H08fMsX6Dve3K+tDQu4VdgxAaOGinddof7GDVT8YGVK43in7LEm/49RXiahVmxKUJpeP2wQD5mY17DA0EWnYxUsbXmRY5gmNWvG0fpyxEJQFZsk4+A3IgUAUobYFl1DyOib/Ryaibqrt0kgzBLiC2aUGHRzV1grk21pasulL/SwlbRz0Ec+TlVdHppMB6c839fZj5ixiJaEDQLKrKO0CmZoV67TwQt3VZHNlX/0IRiRikky8Odt7XGK0Q9WKGA/zxS0qk20L9Fe4EcHIlZ8vRj2HNs7zpvij//TgZxujv489Zj1BFc+DLD75/6WxmQnOnf/sapquJqmT4WAxDVriGLgM2k/TdT6D9MsQf73GQjMRDRSo6dMLLOomITmO3YrhrXed7t1OxUNiLPZhFfM/A+f67gYsUFyMEg56AK2DsE7MKp3so/gLglf/mvaifFMUGKdBAWd/aAL8kw6o6QJJ/hpQbAL4bG8DhMgM2gkSGje4=
+
+%URL%
+https://github.com/vivien/i3blocks
+
+%LICENSE%
+GPL3
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1502211684
+
+%PACKAGER%
+Christian Rebischke <Chris.Rebischke@archlinux.org>
+
+%OPTDEPENDS%
+acpi: For battery script
+bc: For bandwidth script
+lm_sensors: For temperature script
+openvpn: For openvpn script
+playerctl: For mediaplayer script
+alsa-utils: For volume script
+sysstat: For cpu_usage script
+

@@ -1,0 +1,79 @@
+%FILENAME%
+empathy-3.25.90+33+g1453dc4e7-1-x86_64.pkg.tar.xz
+
+%NAME%
+empathy
+
+%VERSION%
+3.25.90+33+g1453dc4e7-1
+
+%DESC%
+A GNOME instant messaging client using the Telepathy framework
+
+%GROUPS%
+gnome
+
+%CSIZE%
+3513524
+
+%ISIZE%
+14935040
+
+%MD5SUM%
+1d6900fd7963c6a3f24a57bd1265e863
+
+%SHA256SUM%
+2696bc7726fb7bc54ac300ada1b3ed8814df158dd88a616daa6f6343e1f39bb2
+
+%PGPSIG%
+iQEcBAABCAAGBQJaFYfIAAoJEJdqxvo7lPoQ5nQIAI3Rez+ZZDLHhMLHTLouXAkeipou0WWQZmeJ7/805FoIA/6DPAoRb9F4Xy4xPKiGSe2ORDeMeT9wzU5nW2IUoDK7GHdOXaBwYKa1A6Y5cKapN7UfwyD1pErgPFzkASlnsFjGTrBVJWUA8BXluIoieMc3lEZy3KVGNty4h5ROim07ngAKQbkPAS9SO/jbPNGxnfco39Rly3PmHh3NOwMHDTGFuLRmw4Erzi7ldtbzCYpVH7S/cBi5xuIHTn/Ni+rBadowrbIfOx4WaCJ7MyqoffSUzIGzHodQqJanlaRRzLxT0EI/SVwh/wGijSIjN75i+joMKfdWzqawszXn/sKkHWk=
+
+%URL%
+https://wiki.gnome.org/Apps/Empathy
+
+%LICENSE%
+GPL2
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1511359904
+
+%PACKAGER%
+Jan de Groot <jgc@archlinux.org>
+
+%DEPENDS%
+clutter-gst
+clutter-gtk
+folks
+gcr
+iso-codes
+libcanberra
+libpulse
+webkit2gtk
+telepathy-farstream
+telepathy-glib
+telepathy-logger
+telepathy-mission-control
+geoclue2
+geocode-glib
+cheese
+libchamplain
+libgudev
+
+%OPTDEPENDS%
+telepathy-gabble: XMPP/Jabber support
+telepathy-idle: IRC support
+telepathy-salut: Link-local XMPP support
+telepathy-rakia: SIP support
+telepathy-haze: libpurple support
+
+%MAKEDEPENDS%
+intltool
+itstool
+docbook-xsl
+python
+gnome-common
+git
+

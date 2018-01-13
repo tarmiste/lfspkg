@@ -1,0 +1,67 @@
+%FILENAME%
+gloobus-preview-0.4.5.335-3-x86_64.pkg.tar.xz
+
+%NAME%
+gloobus-preview
+
+%VERSION%
+0.4.5.335-3
+
+%DESC%
+GNOME application designed to enable a full screen preview of any kind of file
+
+%CSIZE%
+186012
+
+%ISIZE%
+735232
+
+%MD5SUM%
+c406e6e70381da1dd157bf5dad98b7fa
+
+%SHA256SUM%
+a53b8c649be9e523c4ef997853f9bb7d9928a054d7092a28f8609cc5b5bb04d1
+
+%PGPSIG%
+iQEzBAABCAAdFiEEzgvecadZqH8j8PfYth284QkBwWMFAlnjrWUACgkQth284QkBwWPZTgf9GbAwcjern5cMx/dXp/jS2MJKutZNgfLepcnZK7joHRX2Jle/DM25bf4xQnbz4AiRzVdBJXUKzvtRKgojRLGCtyXr71vFflhTVKEKWik0IGhwySZq1yhsSvwSKnyPxJVDjV5Wbdbcw7v5wNZYxcGgvY7/K+mXUvpqh1G6I02RHstyqF3mf4xhCKjFXCJgUhvw6+nG4WSYqoLrAdUJba8Fci3ZjcmSx4en8i7TTthmEZfcW5qdlNUpHRCD/TyB73iTR+rzGIgMj2S0InyQUMHz3NvJ3lKhOdK4VNb84pOcE/1K4NevzJsBazLsJXLviWbscpLXFXhs8jyLhbpVdgtA7Q==
+
+%URL%
+http://gloobus.net/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1508092630
+
+%PACKAGER%
+Balló György <ballogyor+arch@gmail.com>
+
+%DEPENDS%
+gst-plugins-base
+gtksourceview3
+poppler-glib
+python-dbus
+python-gobject
+
+%OPTDEPENDS%
+djvulibre: Preview DjVu documents
+gst-libav: Extra media codecs
+gst-plugins-bad: Extra media codecs
+gst-plugins-good: Extra media codecs
+gst-plugins-ugly: Extra media codecs
+imagemagick: Support for more image formats
+libgxps: Preview XPS documents
+libspectre: Preview PostScript documents
+unoconv: Preview LibreOffice compatible documents
+
+%MAKEDEPENDS%
+boost
+bzr
+djvulibre
+libgxps
+libspectre
+

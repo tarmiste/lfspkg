@@ -1,0 +1,9 @@
+%DEPENDS%
+qt5-systems
+mlite
+
+%MAKEDEPENDS%
+git
+qt5-tools
+python2
+

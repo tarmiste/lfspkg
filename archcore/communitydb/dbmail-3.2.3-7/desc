@@ -1,0 +1,65 @@
+%FILENAME%
+dbmail-3.2.3-7-x86_64.pkg.tar.xz
+
+%NAME%
+dbmail
+
+%VERSION%
+3.2.3-7
+
+%DESC%
+Fast and scalable sql based mail services
+
+%CSIZE%
+336256
+
+%ISIZE%
+1437696
+
+%MD5SUM%
+95864e989d93cbe87da651517ae78443
+
+%SHA256SUM%
+261f2dc80d93ce785f54d1557cbe3eb14f5f525227f3bf79907b477f4ee12c98
+
+%PGPSIG%
+iQJGBAABCAAwFiEEPlGL8lJv0Zeeiq5JZcEQwepDP8cFAlk/teQSHGFyY2hAc2VyZ2VqLnBwLnJ1AAoJEGXBEMHqQz/HE2MP/A0V8AKi2Hv8N4mJf/5sEjTdA00jquwfckxyWcm4gRziUyV57BUo2rDtwiWsbAtpSxKC+wOJrq4mypFWSQr9Wv9IcWzEOnC9XG52OFOMU4VXwEG3W7DGsHrIfGMP5nq5GYrBdG0f+B0CLyuzlwX8tLQgaMBkNa3mV4imqh2iznoSegQ/TlM9pFeElCNJm6H6j43Z2mkTzP84vMePqnNOpv3a93vyKoc6pJ57qJE0eMDe7mqEv57epTeqk9u1cFcC+1RixQpftCPSBpbhEVCDC+9ZiD7qjTrs5novCcz6SrICW36wMqqSocTWM3Xk7YUnKz4kwhx14z8Cixb88+tDwJLte6QORg+Bgy+1rKYcc//YZkVmWxDSTXncTsFXTv4AXJbLQxo/0mLbiDCQUwHiqwJ7a1MXqOM3nKCzO/D5m3halBJxeSO85ML+qhoBBOKWFHqHBnLODExbAQfVK3mmoxGXDG1eWTaSJs2qqEh3ltrSVdaOP5FtgVoYkA2ojq+eUJQzfLWDQEE5EEAuVAanohkTq4hoonhay4RW4ViRr1llxjGiK1pmVc+pwPBeiP2vDXmirDTMqljaZaMfZk3uVD/xQaIdI6dgicob3xuVzj9XXngEiGZSKsja0G3kWuBNQIaC4ZU79ds+0WR1Xz1XgdZ0+quxVrnaw411KnLzMx1f
+
+%URL%
+http://www.dbmail.org
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1497347492
+
+%PACKAGER%
+Sergej Pupykin <pupykin.s+arch@gmail.com>
+
+%DEPENDS%
+gmime
+libzdb
+mhash
+libevent
+
+%OPTDEPENDS%
+libldap: for LDAP authentication
+libsieve: for dbmail-sieve
+python2-mysql2pgsql: migrate from MySQL to PostreSQL
+
+%MAKEDEPENDS%
+asciidoc
+xmlto
+docbook-xsl
+docbook-xml
+postgresql-libs>=8.4.1
+sqlite
+libmariadbclient
+libldap>=2.4.18
+libsieve
+git
+

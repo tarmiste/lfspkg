@@ -1,0 +1,56 @@
+%FILENAME%
+bashburn-3.1.0-3-any.pkg.tar.xz
+
+%NAME%
+bashburn
+
+%VERSION%
+3.1.0-3
+
+%DESC%
+CD burning shell script
+
+%CSIZE%
+60404
+
+%ISIZE%
+266240
+
+%MD5SUM%
+9ff877ba6e07f32024eb22bf108c9789
+
+%SHA256SUM%
+c3e3b7eec6fbd57a1caed20b45248cadaf3a53fa250a9b46c092fdef823c129f
+
+%PGPSIG%
+iQIzBAABCgAdFiEEOO3RiGdWkk4SJOSVJOTNsAE8JYAFAlkCT0kACgkQJOTNsAE8JYCymw//UnaEwGOz/S87P8U0l8gAM8PqsYKMQ6P078RWPmCKtcKlDDlnBRskTyTFV1A8ijFRtnfDbuXqQc1iY3Fr7PoUdLpyj55encRPVFAt1iEhlPkoA/L0Q1EUmgEcbksXTnGUYNe64Frbch4zP83u2EJOAxvU3Eoov+OAIfoA9IgN/2jPwKXdpMaXbFVG9ddc529ZWAXUURJXuJlup6E+tGRtBkIXc/8reeEk9FAIWU7epqh21QqmnFdQiUm93k89IdxPeNSNULTFQbCNW0vKerPIYfxuDiYSW3eSeBw/kXBJcvryusYjPa/QSlUtMue6sHkRs12mJZ7ygr8npEou0F2tf15L4mdq9vEtGoECxG6QTYOJMeNnsI/bF27FLZDo923kgY1ae8hIceBi7T/4OU5G2biuI88PUDmmQ2J/iS+r4IL0SKkzF4Bn+GJ8zbmCxsqoWy6YenxT4Rl619zVCJAncK2z4ZfaF3aVdmfm6v9yCdglRZ8WRqwXb9EtplFJFYraUEXDFIc3ZixjQRPwSv7MRwkhQS7Xzb2wzKfuMbTLca7tI/Y+7/lcWe7rU8pcOF2NIUX4EP51RzKtw26CreZX6TT5b9yV3fSxCgTHH0gEvPD1ST5qz95D075a1+Z0DJrBvaee3FzrtVYSV1H5vbEUEzi50+4o9UAFWp6XNkFB0Nw=
+
+%URL%
+http://bashburn.dose.se/
+
+%LICENSE%
+GPL2
+
+%ARCH%
+any
+
+%BUILDDATE%
+1493323549
+
+%PACKAGER%
+Jaroslav Lichtblau <svetlemodry@archlinux.org>
+
+%DEPENDS%
+bash
+cdrdao
+cdrkit
+
+%OPTDEPENDS%
+dvd+rw-tools: support for burning DVDs
+cdparanoia: Ripping audio CDs
+vorbis-tools: Vorbis-Support
+flac: Flac-Support
+normalize: Normalize audio
+mpg123: MP3-Support
+sudo: For missing permissions
+

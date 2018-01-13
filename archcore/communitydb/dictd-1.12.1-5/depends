@@ -1,0 +1,11 @@
+%DEPENDS%
+sh
+zlib
+libmaa
+
+%OPTDEPENDS%
+xclip: for dict_lookup
+
+%MAKEDEPENDS%
+flex
+

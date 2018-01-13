@@ -1,0 +1,10 @@
+%DEPENDS%
+glibc
+perl
+
+%PROVIDES%
+mythes
+
+%MAKEDEPENDS%
+hunspell
+

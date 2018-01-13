@@ -1,0 +1,62 @@
+%FILENAME%
+gnokii-0.6.31-15-x86_64.pkg.tar.xz
+
+%NAME%
+gnokii
+
+%VERSION%
+0.6.31-15
+
+%DESC%
+Tools and user space driver for use with mobile phones
+
+%CSIZE%
+654056
+
+%ISIZE%
+2513920
+
+%MD5SUM%
+eb98653a52e30dc0d98ec9d88c4ec438
+
+%SHA256SUM%
+87b3dbde5caf9b6a7e1f518154dcdda78bdd861c828cad8e56c3cc6c02d694e6
+
+%PGPSIG%
+iQEzBAABCAAdFiEEzgvecadZqH8j8PfYth284QkBwWMFAloVitoACgkQth284QkBwWOy9Af/WW1S6D4nmf4TkSotIjmg4IxDahbCwxF1jn3FxoLhRhEuetXmyTG9YhVUHPzq2rflGZzas2yr6tY0SqGvjuy1hYJC4N3Rkb26RauCaq6o4loG38EGcq+n1PQ/HTRnQilvHBUDNiawcbrtsamYBr2lAmC6mo1NEbeh9hq9aj7XhFURVAFzkeEkpasnij4ZQgTistIYH9HdPeXK7ZebyW6pJ7wWGi2rzTc8C0VSDAO/tYqZogD+wec3lmsgHjqbKhbk2ys2faT4KZYINHl+Ez0uj4TRbzUMqP3g7e5wcEsPPHt0FbpHX8zXb/U27APUAUopAEgyovk9nMn222W1b3dwag==
+
+%URL%
+http://www.gnokii.org/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1511361179
+
+%PACKAGER%
+Balló György <ballogyor+arch@gmail.com>
+
+%DEPENDS%
+libusb-compat
+libxpm
+bluez-libs
+libical
+sqlite
+systemd
+
+%OPTDEPENDS%
+dialog: sendsms tool
+gtk2: xgnokii GUI
+libmariadbclient: smsd mysql backend
+postgresql-libs: smsd postgresql backend
+
+%MAKEDEPENDS%
+gtk2
+libmariadbclient
+postgresql-libs
+intltool
+

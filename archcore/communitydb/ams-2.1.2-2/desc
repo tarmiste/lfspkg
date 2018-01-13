@@ -1,0 +1,65 @@
+%FILENAME%
+ams-2.1.2-2-x86_64.pkg.tar.xz
+
+%NAME%
+ams
+
+%VERSION%
+2.1.2-2
+
+%DESC%
+A real-time modular synthesizer and effect processor
+
+%CSIZE%
+338896
+
+%ISIZE%
+1607680
+
+%MD5SUM%
+5e4edab305f31ab93cdab65c37fb269f
+
+%SHA256SUM%
+8d6f4e9c7da6f46667c99a6df72d69342d0564139b045980e80a0d7999153609
+
+%PGPSIG%
+iQIzBAABCAAdFiEEkb2IFf4AQPp/9daHVMKPT/WhqUkFAloh8NUACgkQVMKPT/WhqUknERAAj4bJ6h6zDgXEg+DKopy49QEQ9An1EMwjNIGbaFCrCiVzK8b7dLaEiPEWXwEnZVb1J83RGuQc/km6KXWjJ0Hm/0bVtt3h3bwPVeOl8+F8Bb6GFGhg5gD3xkc207Aov9rEMYh6nVMzQRmIlInbvXqVfWTWbjlZokej8zdVjOZfU3C5e/vMMbZS76PFjLbQVuQyZRlcnp84EsgYL3kXWP5YDTGiVd9Tg/Q5qdunqFgoDSpouQCc3IFqikpUbpHDWfDJhK0Uaku2CsqmDjBzNzvj1I+gRzDsWg4qn6954UiJxMZrq9sK2zCzRwC4Pv68wBQIVWrXXODFCwogYLaMOxtsSQCq8AhfoOlpID95VEuJIZkFcdjJIWkNavjd3KdsROnJ3r5qGEwzMDiUXXY5hYyCX+i5oOpAI1Oc0k2DlYzbRHgDV+oN2ITJnZnio+Gi6xT2F5mrjacsHCr0TvTR2OWmgZ/ghH4Cg+F4i94kgUmIyOsmaQ+NEIdXMLlHF3f6jxO6zG1RkuCFKOwAK8WT8ON7hWFvCq2xR2jIdyLGy5I8di96lz2SEIVoNf0c14PGOxAKAw71xC6Er/2NmZyXIZWF+5PR6Wa7vl6X+VwONFoIHdXEvhdWxSZ55mjTNfTS9uzAVCdEO1g3zmLDQd3J6eft+9leBvQLuA+/OeiVpeWbxVI=
+
+%URL%
+http://alsamodular.sourceforge.net/
+
+%LICENSE%
+GPL2
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1512173283
+
+%PACKAGER%
+David Runge <dave@sleepmap.de>
+
+%DEPENDS%
+qt4
+fftw
+jack
+ladspa
+liblo
+zita-alsa-pcmi
+
+%OPTDEPENDS%
+amb-plugins: ambisonic plugins
+mcp-plugins: phaser, chorus and moog vcf plugins
+rev-plugins: zita-rev1 based reverb plugins
+swh-plugins: Steve Harris plugins
+vco-plugins: oscillator plugins
+fil-plugins: equaliser plugins
+tap-plugins: toms audio plugins
+wah-plugins: wah audio plugins
+g2reverb: greverb based plugins
+cmt: Computer Music Toolkit plugins
+blop: bandlimited oscillator plugins
+pvoc: phase-vocoding plugins
+caps: the C* audio plugins
+

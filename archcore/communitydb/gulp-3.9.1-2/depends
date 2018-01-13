@@ -1,0 +1,7 @@
+%DEPENDS%
+nodejs
+semver
+
+%MAKEDEPENDS%
+npm
+

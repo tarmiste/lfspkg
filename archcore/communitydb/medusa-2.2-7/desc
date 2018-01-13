@@ -1,0 +1,59 @@
+%FILENAME%
+medusa-2.2-7-x86_64.pkg.tar.xz
+
+%NAME%
+medusa
+
+%VERSION%
+2.2-7
+
+%DESC%
+Speedy, massively parallel and modular login brute-forcer for network
+
+%CSIZE%
+169120
+
+%ISIZE%
+824320
+
+%MD5SUM%
+4c09d8b95ac7a99c10e37c0e87ec9cd8
+
+%SHA256SUM%
+cc4f8262a2fbc1e8bea2cac5acd0f219d49e0d16a7bd42536e9478ed67ee9ed4
+
+%PGPSIG%
+iQIzBAABCgAdFiEE4kC1fixGMLp2ji8m/BtUfI2BcsgFAllvuXcACgkQ/BtUfI2Bcsgakg//T9vkxmfdjMONXHjsyUxL1aOxoJeXY+wH4ElriNytPbjIGHbXyjnRpLzAYbS9PldnwYUzXq4qAFdKzLfvs5lPMvHVF9y6r5kW6hTzYsqOUIILhtlCd+IVx+LsFAYR73m+ED9UejGqN5hrlF6b3irpk7Q8LPp5pE6clRFUA6+Xpzk4bMF/PhukB7nMGKdMLIOhq2cEfwpwn6esXjuMGv1UMwUdYVGVj2ngiLx+1QEdtiLPFpGEC/w+mZoJ4mFdCI8jJqz6HmzyLdg3dwarPDf2sI81tA7bM2b227DXlttX1kCao/woM6w6v22k1I69mALYJD3GnkLfAPprkeOuho8gybFleAvZW6t9z5AqV4qwP1Lwnc5yMq4oZq9/lpF5lNhySdKZK+hg8SOM+QC9M1sQgEYj0ai5Vl3W5R8MhGp5okfCuadNGGMQeP8SSryTFk9BIAaZkWOxescns5nhujqyyylT77MPN/l04yopyNK0MdszX74JJTGoh5jHewHZCPkPwDKMk0I81h0yY4pRLw0J4/LAJHYe84QlN4Vr+OWpk6CyTX7JzalLz6XlT1Ok8yQP6+dcZql1Fk71MMh8a7Viw0KIFVWKfWFBOB835RZVWvoATYBnoRR2trmzgTsGDHbdzXT1Bc/vMFIhiU1FdIv8sz2ug8jnBpUzmw4EwkMMp4k=
+
+%URL%
+http://www.foofus.net/jmk/medusa/medusa.html
+
+%LICENSE%
+GPL2
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1500493818
+
+%PACKAGER%
+Levente Polyak <anthraxx@archlinux.org>
+
+%DEPENDS%
+openssl
+
+%OPTDEPENDS%
+openssl: HTTP, MSSQL, SMBNT and SSL-based connection support
+libssh2: SSH support
+postgresql-libs: PostgreSQL support
+afpfs-ng: AFP support
+subversion: Subversion support
+
+%MAKEDEPENDS%
+libssh2
+libpqxx
+afpfs-ng
+subversion
+freerdp
+

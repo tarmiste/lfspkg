@@ -1,0 +1,7 @@
+%DEPENDS%
+dmxproto
+libxext
+
+%MAKEDEPENDS%
+xorg-util-macros
+

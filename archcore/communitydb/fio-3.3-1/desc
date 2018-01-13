@@ -1,0 +1,57 @@
+%FILENAME%
+fio-3.3-1-x86_64.pkg.tar.xz
+
+%NAME%
+fio
+
+%VERSION%
+3.3-1
+
+%DESC%
+Scriptable I/O tool for storage benchmarks and drive testing
+
+%CSIZE%
+577768
+
+%ISIZE%
+3552256
+
+%MD5SUM%
+9e9e745330421eacf491020aa009a4aa
+
+%SHA256SUM%
+8111eaea8d7769e5e71f3d3198c7f9cdec0c73743651eed99a1ae55123268222
+
+%PGPSIG%
+iQIzBAABCAAdFiEEjhmSFnRl21+wRVV8sChU7XU+Dx8FAlpVCcQACgkQsChU7XU+Dx8TNRAAqHRL7F+bHlLQm8qFr9DjazUGWx5lEL1oN0AdzYDAb4GDE64YTzgeDjrBGJmwMHCOCQgJQUC7cNmgljeO7Qo2CXU5oDN1W095gAM+w6TulLF/3TApVJMN4bkEsXdD4uQbz+PfQRdh7yzRZAZfWS+of8rHSk/ZB/+5Ag5tDZDpacb7+iv7q6ypBiauQKIEFiUhMxigIHoIR7hAAY74RHMsR+Gpmgobanait+vL7teVhCvZWAJ09U9kcUDla/4kwnmf6QgzJO7WiB25Pltcbcq5E5P0YXTRSmEKDmXWz91LMrL5v+jYJ7bTgqeiWZ6kaKFYe3bFeccXjuhQRVeNv/VldFNNaDLcdjws4gCg/nKgo9bThqB8lIFpg9w4fDDjN+MbpKDLi6E+0jyN90Jwo2gGbkYeF3omFCVJDF42hhsg5Y3nokalRuXc8QSWc05qLjWfOnaF1fIVQI2aB1dhaGlqTV2jidK5msI1KYY4tfVKqBa03HGe0/xrgtX751WHdFOWEZj+/UKrmfukAlAJTIipLMvBpcQkKMtQTiN5kOn1wyPyPhRmP1YGzj+lZVIXCcKMzxLqwVzSGxGprlO0pPFFSnI6YrAhdZ31bJZxnPeXOFCL08lgLrHZYchvVupubO49OWhIQz6B8gO1dKqINdR0sOHItohfkciIwmE5gL2DKw4=
+
+%URL%
+https://github.com/axboe/fio
+
+%LICENSE%
+GPL2
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1515522397
+
+%PACKAGER%
+Anatol Pomozov <anatol.pomzov@gmail.com>
+
+%DEPENDS%
+bash
+libaio
+python2
+numactl
+glusterfs
+ceph
+
+%OPTDEPENDS%
+gtk2: for gfio - fio GUI frontend
+gnuplot: generating plots using fio_generate_plots
+
+%MAKEDEPENDS%
+gtk2
+

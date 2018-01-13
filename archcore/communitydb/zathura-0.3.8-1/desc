@@ -1,0 +1,60 @@
+%FILENAME%
+zathura-0.3.8-1-x86_64.pkg.tar.xz
+
+%NAME%
+zathura
+
+%VERSION%
+0.3.8-1
+
+%DESC%
+Minimalistic document viewer
+
+%CSIZE%
+140588
+
+%ISIZE%
+712704
+
+%MD5SUM%
+207d51fd0c609448cc309365c8db2a6e
+
+%SHA256SUM%
+2cc00130fd03ca22ff2107d977f0d6ebc7948d041323c68b741d87e0a4ce248e
+
+%PGPSIG%
+iQTHBAABCgCxFiEE5VD//9SF4mShcX4wkBwcMg6w1F0FAlo/thlfFIAAAAAALgAoaXNzdWVyLWZwckBub3RhdGlvbnMub3BlbnBncC5maWZ0aGhvcnNlbWFuLm5ldEU1NTBGRkZGRDQ4NUUyNjRBMTcxN0UzMDkwMUMxQzMyMEVCMEQ0NUQzFIAAAAAAFQAVcGthLWFkZHJlc3NAZ251cGcub3Jnam9oYW5uZXNAa3lyaWFzaXMuY29tAAoJEJAcHDIOsNRd0+YgAKNqI8L7X8IM8SzrX+esbPqO5u9Uddb3UK3ah3HP/j6ene9znpmGn/gRqi4F1N0/Aqvasrm1h9YO0+lEtK8scvOpfsZVZaR/dY4VlqgDD4GSnFTSrq52JJcBJ+e8Q6BrXdVMe02JWMeB6Wyokg/EiVAkVsL6hFVDdU81TnM5KebtTBq5zFMdv/okZJ7Ta+/EEPg/wS6NYIymtMihmWffDQgR47JDpI1RV1tLNZidx3fudq6Peqm9dJOOFKrpBdvuRqgaUfE89LKM6XBpBIbPVUS22zXUOwaAaF39w+4oF6DUN5MUI6xeW6guysvn4BaRkDEAZ/vOyvR/h0M1WVa1i4J19PcvC9ZTEmJEOEFg/IRHkcl+38qXqaC2G2w7mjR3FbblUBIEdP3d+DxHa5kyRLkKAlz6KMxB2X/F6u3UxW+A3ut4chpmopLgICof3SkvT0HjcayXVFlb2ZhCEsdPzGPelGzk1vkGamr0buaiai/yboXUu8noumLo1ffvM+g+2SDrXeRPbdTczBJciw/mqvTMUWuKLnxmW5PYFdF+bMOL4d04W//Q2C/v7xqG6lejpnTjNayIAku4/655GngLoq65f9YLm3HvUHYPDoOoGRGObpFtQwLsGRiEejut6tHihA4q2GMvbVf4DoTHICuXRrhP+ftpLCKnM3thCjG6lCdxO8EPpWtKXHxPkAopqRL98G+/kzJxiwM/Rt/WAOhxGeA6QyYwbP+pUtKE57KcY5EpxSjToSBAxdpidJZQD9dAmPUrifSzo5oia6TbP9kjBxjG9e11FDcPmldckNe4lJBDzjHdeTYZRXbVPpsUQhVOR0DaZG8lIQ8rMhPv0XkkJuJYZuDvN6iSXaPcbgMJE+XvVF+x/qw1L/T6c5vXIiYhEovcfSuLe68N56mkx+au4LRT57ARw4Eoxm9PvkGnlW2BTn/hGMh4yfgndlVe6efYi2oNE7HXsvH5vACDKirWqZO1nbYmJnMPG70vuZiOMRQmdIVilrs5quHwmBKKAS7hz9u4V2Rh5rWULJj1/X6862VJ7S9sX2tVtxgSYLCWEgqG9OqRaLxDqBWWKZGXR1urIj112bNHOvHUYQi1t1ShlFxYrDuMUL9YsBkCw4cfb+yv2O8NWGfnkoMmAagyPwVP7jKmPBn6BUs8uok3Xxx1fAUQ/b15zIVjdxswPXwTfjkAGp81VwM/TZV3H7x3ddAKzaBpeNcoMm5Bsf1fYVAOlKOXaCTYYVTiykBI93ETNcU3biCXSrHezVpHEww7FJOnYVzuL7Wc2Og76gZtMSpPSMGETBwvsoX3M6a2EZtQD3d1RII7B4FQsSWz5R17dfKapULHaXvDPq3xTYhNKjvbB8o=
+
+%URL%
+http://pwmt.org/projects/zathura/
+
+%LICENSE%
+custom
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1514124793
+
+%PACKAGER%
+Johannes Löthberg <johannes@kyriasis.com>
+
+%DEPENDS%
+girara>=0.2.7
+sqlite
+desktop-file-utils
+file
+libsynctex
+
+%OPTDEPENDS%
+zathura-djvu: DjVu support
+zathura-pdf-poppler: PDF support using Poppler
+zathura-pdf-mupdf: PDF support using MuPDF
+zathura-ps: PostScript support
+zathura-cb: Comic book support
+
+%MAKEDEPENDS%
+python2-docutils
+texlive-bin
+

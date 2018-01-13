@@ -1,0 +1,18 @@
+%DEPENDS%
+python2
+python2-markdown
+
+%CONFLICTS%
+cheetah
+python-cheetah
+
+%PROVIDES%
+cheetah
+python-cheetah
+
+%OPTDEPENDS%
+python2-pygments: for the CodeHighlighter filter
+
+%MAKEDEPENDS%
+python2-distribute
+

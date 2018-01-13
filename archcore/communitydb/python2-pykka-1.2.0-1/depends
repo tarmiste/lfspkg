@@ -1,0 +1,12 @@
+%DEPENDS%
+python2
+
+%CONFLICTS%
+python2-pykka-git
+
+%PROVIDES%
+python2-pykka
+
+%OPTDEPENDS%
+python2-gevent: Use gevent based actors from pykka.gevent
+

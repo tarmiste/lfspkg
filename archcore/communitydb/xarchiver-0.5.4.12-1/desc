@@ -1,0 +1,72 @@
+%FILENAME%
+xarchiver-0.5.4.12-1-x86_64.pkg.tar.xz
+
+%NAME%
+xarchiver
+
+%BASE%
+xarchiver
+
+%VERSION%
+0.5.4.12-1
+
+%DESC%
+GTK+ frontend to various command line archivers
+
+%CSIZE%
+497716
+
+%ISIZE%
+1480704
+
+%MD5SUM%
+9b47b53b447e755a8b755cb49ceae9c4
+
+%SHA256SUM%
+434d03aaa33dad1dd6516ebfc1b37bdffa216a60309b3c6ec7b756f621da12c3
+
+%PGPSIG%
+iQEzBAABCAAdFiEEzgvecadZqH8j8PfYth284QkBwWMFAlnkjQgACgkQth284QkBwWOTNgf9FVHjVXCBqO/f4QaZIyjB0Bxqk4Op89xQUAMfn71Bp8Mm3fEwtVkU/AIXgNXKW0VpyUyUQhKU/nzmhVywm0Fa5qziH05fa9tlif6s6LCzWrwPFUtiEAuSEbiz2iVehbvBje6d06n/lL081ESCn35m+TISItQoKWd4zVBIB9yBf3LxwF6npiwCQBkn8Y/tHJ7dA2QwYwoqRLZ3RkXmqET6MTwb61iwXW2jRF64UhbShuAh8gQNOzOOc5+hOpld5EeB6nYEq9kRxuJLywqSQuTCvm84miH0cZpZjxwARgtMb3ZzT7A1Xc+Ntq2srLDtiJSM/ifhVz+xWVJ7zlzWckaWvQ==
+
+%URL%
+https://github.com/ib/xarchiver
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1508150460
+
+%PACKAGER%
+Balló György <ballogyor+arch@gmail.com>
+
+%DEPENDS%
+gtk3
+
+%OPTDEPENDS%
+arj: ARJ support
+binutils: deb support
+bzip2: bzip2 support
+cpio: RPM support
+gzip: gzip support
+lha: LHA support
+lrzip: lrzip support
+lz4: LZ4 support
+lzip: lzip support
+lzop: LZOP support
+p7zip: 7z support
+tar: tar support
+unarj: ARJ support
+unrar: RAR support
+unzip: ZIP support
+xz: xz support
+zip: ZIP support
+
+%MAKEDEPENDS%
+docbook-xsl
+intltool
+xmlto
+

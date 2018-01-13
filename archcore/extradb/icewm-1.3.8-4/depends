@@ -1,0 +1,10 @@
+%DEPENDS%
+libxrandr
+libxft
+libsm
+libxinerama
+gdk-pixbuf2
+
+%MAKEDEPENDS%
+xorg-mkfontdir
+

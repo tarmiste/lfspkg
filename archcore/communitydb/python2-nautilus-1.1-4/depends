@@ -1,0 +1,7 @@
+%DEPENDS%
+nautilus
+python2-gobject
+
+%PROVIDES%
+python-nautilus
+

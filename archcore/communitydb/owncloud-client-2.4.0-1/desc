@@ -1,0 +1,59 @@
+%FILENAME%
+owncloud-client-2.4.0-1-x86_64.pkg.tar.xz
+
+%NAME%
+owncloud-client
+
+%VERSION%
+2.4.0-1
+
+%DESC%
+ownCloud client based on mirall
+
+%CSIZE%
+1938216
+
+%ISIZE%
+7512064
+
+%MD5SUM%
+2bc4ff1cbb96552c38fa0de419a82ccc
+
+%SHA256SUM%
+761c80e17680e6563c021cc987a7e17a363b8f69c66a20befa6c225bb28f4efd
+
+%PGPSIG%
+iQEzBAABCAAdFiEEFRnVq6Zb9vwrc8dWek52CV2KUuQFAlo8LxwACgkQek52CV2KUuS9cgf/eQFQ2AAuZjg4kFC1JmDv4bykMwSJKNPVlbObsNUfno9Kw6kw37gD8yJrgK92bB0F8fpJxVf1nipX9ws+0thg+NHhpZ8r4OgTXMwJqBriMi75IVRzuhKLvYw7qf02gIoyYhLcaJcI/Yw7prM2eKPDd7AlFc/EJMSYJHCccG2qTupNyN8Wl5d505ZKFcN9H6g9+VB26zNjy24qmn2g+Sk64VZa59xP1i9VqvtXR9w5j+MKjukzL+XvzhDW7rE/8QOJQ5WK3NRFraXHMZxVGZANJKncKDxCGLV8rfW5EPXUVfqIqgmGU7ZPniVqV0bN3eDA79EXuP2iYKP+mtsc0VBgKw==
+
+%URL%
+http://owncloud.org/
+
+%LICENSE%
+GPL2
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1513893587
+
+%PACKAGER%
+Antonio Rojas <arojas@archlinux.org>
+
+%DEPENDS%
+qtkeychain
+qt5-webkit
+hicolor-icon-theme
+
+%OPTDEPENDS%
+python2-nautilus: integration with Nautilus
+nemo-python: integration with Nemo
+python2-caja: integration with Caja
+
+%MAKEDEPENDS%
+extra-cmake-modules
+python-sphinx
+qt5-tools
+doxygen
+kio
+

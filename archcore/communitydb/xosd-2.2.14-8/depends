@@ -1,0 +1,5 @@
+%DEPENDS%
+libxt
+libxinerama
+sh
+

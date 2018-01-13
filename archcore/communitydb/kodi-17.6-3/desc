@@ -1,0 +1,148 @@
+%FILENAME%
+kodi-17.6-3-x86_64.pkg.tar.xz
+
+%NAME%
+kodi
+
+%BASE%
+kodi
+
+%VERSION%
+17.6-3
+
+%DESC%
+A software media player and entertainment hub for digital media
+
+%CSIZE%
+33370172
+
+%ISIZE%
+81426432
+
+%MD5SUM%
+437ac44d6d07daf0ee04313db6028638
+
+%SHA256SUM%
+751445eba41aaaaa7d424eccdb28da519db0b2cadd26df7b12de00d8b128e0f8
+
+%PGPSIG%
+iQIzBAABCAAdFiEE2yJ3vNUAqjglYQvd2zIzknlsoGcFAlpRK9UACgkQ2zIzknlsoGdRWxAAlHaCXu0xWinJbnOmbdohuTyz0EdZ68XXHHfxZr7IoAtRnbtSCxqRDU9D0uQjOUPN5nlKwTp75j59agIwhXF6eSSOaw0FEeik464jAplr4CtXixdEBgTohHH300M9KH4+U5NUMdt8C09AunJTuEMnJpCkAs7q7VctGOA3brBQ13G5KxAIGto7epWPHLJ1D5cjK0IVd7fD3Sf+uN8pvOUIc33pUArfa/8qFEXMAO8xtUzDJyomxneQBWXmXWteHd6t1NRbAuValNWXw3hKZxzaWUguDfNri0nG4GuZH++BNX2uoaK5SLY+dMOW69aASn6qUQHmWWbO/sq3gO9CfcAE2jXcK6naz3w623grQKgptXDdm6KONoaC7GO/ZSFMEUv14IpJCpnJiJLXTirkNET5Z3F9MicApegBMGScjhBxtiXnmz0YSNrOOKS3NiBqSFXzY3ryGO+jcEPmK5bUgdExGMRQt85dKkBMOICFTzW/iPZUXmhfbnfmAU+T7kGNpr9LhM1rZk8xmDZXkubrWQJ0X2l3JWvJfuL2GcHvL61Q6tgsU3It+AA6iqxgMNKM/srp6heut2VTEUbqGVNBK+DIOSPWWB8nZmFk8/aB6MTY16LmsLnt5EQ1MA/J6x+XJ55D32dm2sYZXWAVrH+sJncG6Jat67St4CO1GXTNi8K74gc=
+
+%URL%
+http://kodi.tv
+
+%LICENSE%
+GPL2
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1515268980
+
+%PACKAGER%
+BlackEagle <ike DOT devolder AT gmail DOT com>
+
+%REPLACES%
+xbmc
+
+%CONFLICTS%
+xbmc
+
+%PROVIDES%
+xbmc
+
+%DEPENDS%
+bluez-libs
+desktop-file-utils
+freetype2
+fribidi
+glew
+hicolor-icon-theme
+libass
+libcdio
+libjpeg-turbo
+libmariadbclient
+libmicrohttpd
+libpulse
+libssh
+libva
+libvdpau
+libxrandr
+libxslt
+lzo
+mesa
+python2-pillow
+python2-simplejson
+smbclient
+speex
+taglib
+tinyxml
+xorg-xdpyinfo
+yajl
+
+%OPTDEPENDS%
+afpfs-ng: Apple shares support
+bluez: Blutooth support
+python2-pybluez: Bluetooth support
+libnfs: NFS shares support
+libplist: AirPlay support
+libcec: Pulse-Eight USB-CEC adapter support
+lirc: Remote controller support
+lsb-release: log distro information in crashlog
+pulseaudio: PulseAudio support
+shairplay: AirPlay support
+unrar: Archives support
+unzip: Archives support
+upower: Display battery level
+
+%MAKEDEPENDS%
+afpfs-ng
+bluez-libs
+boost
+cmake
+curl
+doxygen
+glew
+gperf
+hicolor-icon-theme
+jasper
+java-runtime
+libaacs
+libass
+libbluray
+libcdio
+libcec
+libgl
+libmariadbclient
+libmicrohttpd
+libmodplug
+libmpeg2
+libnfs
+libplist
+libpulse
+libssh
+libva
+libvdpau
+libxrandr
+libxslt
+lzo
+mesa
+nasm
+nss-mdns
+python2-pillow
+python2-pybluez
+python2-simplejson
+rtmpdump
+shairplay
+smbclient
+speex
+swig
+taglib
+tinyxml
+unzip
+upower
+yajl
+zip
+git
+

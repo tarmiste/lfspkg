@@ -1,0 +1,12 @@
+%DEPENDS%
+libpng
+libogg
+python2
+
+%OPTDEPENDS%
+wxpython: for KateDJ
+liboggz: for KateDJ
+
+%MAKEDEPENDS%
+pkg-config
+

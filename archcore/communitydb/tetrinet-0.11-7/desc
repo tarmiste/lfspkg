@@ -1,0 +1,42 @@
+%FILENAME%
+tetrinet-0.11-7-x86_64.pkg.tar.xz
+
+%NAME%
+tetrinet
+
+%VERSION%
+0.11-7
+
+%DESC%
+Multiplayer online Tetris game for up to six people
+
+%CSIZE%
+44088
+
+%ISIZE%
+128000
+
+%MD5SUM%
+998ac5bc44d08b2b2cded3cff6af22d3
+
+%SHA256SUM%
+f5af06ea2965a9768085196d5644407582574fe1fd550581fbf6d7d00b8282df
+
+%PGPSIG%
+iQEcBAABCAAGBQJV7G8LAAoJEFHosUipmZw0An4H/jNksX2j+BPO0DbSmQVsPgAjQYXq9hDBOH7D5NOkeM5vPtyJ6cJhhYw3DUYFbeI6k5eQJjYNRokbOrWKonTex6oxxb+sdVaJzSxiTu0+D9hJh8gmH48av2F0EHZBeWGSNFp+QtMACesCqQO1SWohEdOGR3y4oWXD8vcbaxa29JDjyxu13lPpxnZpxehyirwGrblrX2cNE3q4znWKVAkk9oVfuXl7xOX3ZYtzAOMs7vOIEI6MV8pVLWF5bOcbobfdgvVQBJT9grSThyO2yQ/kVWevOK2BwSVKv1isFn4eJ1dyzb65iuk7678EZnPkFd9s2yjbprV9xw0ynL46l+1gjwA=
+
+%URL%
+http://tetrinet.or.cz/
+
+%LICENSE%
+Public domain
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1441558278
+
+%PACKAGER%
+Evangelos Foutras <evangelos@foutrelis.com>
+

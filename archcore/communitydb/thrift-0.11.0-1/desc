@@ -1,0 +1,57 @@
+%FILENAME%
+thrift-0.11.0-1-x86_64.pkg.tar.xz
+
+%NAME%
+thrift
+
+%VERSION%
+0.11.0-1
+
+%DESC%
+Scalable cross-language services framework for IPC/RPC
+
+%CSIZE%
+1728160
+
+%ISIZE%
+6800384
+
+%MD5SUM%
+55f60f27740be5c9e0d8a9d7035307ae
+
+%SHA256SUM%
+e46151871e12c8481b6d8db39682034c73003f9ec50b7a5df536e385d2017036
+
+%PGPSIG%
+iQIzBAABCAAdFiEEjhmSFnRl21+wRVV8sChU7XU+Dx8FAloyvIoACgkQsChU7XU+Dx/Xrw//bXR5C1RG5WNAqwHDFymiH8FPv8dXnA2zzwwuTDbYv8xSM8eMqRE4RATCP6V+5oIyPS2R4PrhvHOqT2IU9M1Y7Vch7lOGAMRY8FtGB5LdGjLd4ZSi2ShyRyp6J75TEC/aRmoWiSJ1XLx6YPHpbazVOMoo9ZEeKPEgVrbVq0bqrSyCufNS8j2BE2OEfZxbvvdhm87kabFQW3/0uBGv0iiJnPH5CnHL+iIyEd2xyUcXxLG6OKVRZupGk8TYIdKi1KzrVCfk7jx/mC2OopVOC8aKvoM2J7f7raH70sBDRosuTEs2AfoU4rjHJ7477MzH042DFyppGfgZLOb1t8S4kP5cFyeVaTI5M1P7Ygc8slrQnFIOLyex6A4S1QCyMc4/mBGvXIn/n0umZNKqfHsb7Lc6Svs7HsWQIIs3rAfdcOUC2d8OrkNM2FcRKZ5VxuGh955iVwHrOxdyHQKBApfcti7QgvCOFvPUuXa49JUUGzPpmc+qDr9dO+gGLcSQG/s4DSn2H4qvLtS6ne1PVx+i4WgnYNwAz9oSbXffAHx36pSpfihCehxf/0hv1g7itZo7lmtY0kXL/m1Lq0YU8DEtN8oXlsBqj2ykym5VzHCHrodgiSvuLpaZF4wkEyp9JsohqGRS4C9ldJmKyOistVxD8eRoTh/DcRs7XnVTvwkgQcAZpW4=
+
+%URL%
+http://thrift.apache.org/
+
+%LICENSE%
+APACHE
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1513274441
+
+%PACKAGER%
+Anatol Pomozov <anatol.pomzov@gmail.com>
+
+%DEPENDS%
+gcc-libs
+openssl
+
+%OPTDEPENDS%
+qt4: TQTcpServer (Qt4) support
+qt5-base: TQTcpServer (Qt5) support
+
+%MAKEDEPENDS%
+qt4
+qt5-base
+boost
+libevent
+emacs-nox
+

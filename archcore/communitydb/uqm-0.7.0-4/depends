@@ -1,0 +1,15 @@
+%DEPENDS%
+libmikmod
+libvorbis
+sdl_image
+libgl
+glu
+
+%OPTDEPENDS%
+uqm-sound: For extra music and conversation audio
+
+%MAKEDEPENDS%
+imagemagick
+mesa
+namcap
+

@@ -1,0 +1,17 @@
+%DEPENDS%
+curl
+freetype2
+libgl
+libjpeg
+libvorbis
+libxxf86dga
+libxxf86vm
+libgl
+sdl
+openal
+alienarena-data
+
+%MAKEDEPENDS%
+gendesk
+mesa
+

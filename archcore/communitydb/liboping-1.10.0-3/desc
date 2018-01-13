@@ -1,0 +1,52 @@
+%FILENAME%
+liboping-1.10.0-3-x86_64.pkg.tar.xz
+
+%NAME%
+liboping
+
+%VERSION%
+1.10.0-3
+
+%DESC%
+C library to generate ICMP echo requests, better known as "ping packets"
+
+%CSIZE%
+71472
+
+%ISIZE%
+151552
+
+%MD5SUM%
+43d86482ee2a328c558f8eff54912af3
+
+%SHA256SUM%
+526c7723585dc9b8e65abd18e584e54b5b2dae5f6283e15acbd655e66f3131ed
+
+%PGPSIG%
+iQEzBAABCAAdFiEEhs/8qRjPOvRxR1iAUeixSKmZnDQFAlmhZXgACgkQUeixSKmZnDTdugf+Lf11UHd5I7JEzCkShkH34+umNnWkBDdiLKk0gMaUyhkpsEnDalAMNnosrgQF8Lr1R3V6U7ioR3LzMYLukVClWmQQsZrujWyw3fcbt7csC5MsHw+4KR3PflCkEG8LO22rl6j/yiCITBUuZOubrUvZsCbj06+e2/7F0l6zd/LQU9cvvoCHvWupPnBs+NNBFU4tCQjvJ6smrU692eZ8+AqrditY1S/3PZnt7SeqMasXxFyRWiKRfUALCVmKLqIKYsmkMx4FOAWbFOaOO2GP1m8nU9W6DYiAQ5WjhLOZLrruwfDOQoFf9V+206b85P9vYkZMpWE8nhh6ecwxPbINdkqf8g==
+
+%URL%
+https://noping.cc/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1503749486
+
+%PACKAGER%
+Evangelos Foutras <evangelos@foutrelis.com>
+
+%DEPENDS%
+libcap
+
+%OPTDEPENDS%
+perl: perl bindings
+ncurses: noping CLI tool
+
+%MAKEDEPENDS%
+ncurses
+

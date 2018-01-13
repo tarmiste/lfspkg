@@ -1,0 +1,7 @@
+%DEPENDS%
+pygtk
+smbclient
+
+%OPTDEPENDS%
+gksu: mount/unmount Samba shares
+

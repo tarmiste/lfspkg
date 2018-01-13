@@ -1,0 +1,8 @@
+%DEPENDS%
+gnunet
+glade
+adns
+
+%MAKEDEPENDS%
+pkgconfig
+

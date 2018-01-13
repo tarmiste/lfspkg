@@ -1,0 +1,120 @@
+%FILENAME%
+python2-matplotlib-2.1.1-1-x86_64.pkg.tar.xz
+
+%NAME%
+python2-matplotlib
+
+%BASE%
+python-matplotlib
+
+%VERSION%
+2.1.1-1
+
+%DESC%
+A python plotting library, making publication quality plots
+
+%CSIZE%
+6506440
+
+%ISIZE%
+26987520
+
+%MD5SUM%
+bde4634a2e2435ace41894033276d9ca
+
+%SHA256SUM%
+54f9528816c3c9fa91599486eff563483059027916461443671212ee9c9fcef9
+
+%PGPSIG%
+iQIzBAABCAAdFiEEtZcfLFwQqaCMYAMPeGxj8zDXy5IFAlovi/IACgkQeGxj8zDXy5LvuA/+NakJQ7ZTXGqrH+u7C73XXPJ0kn3H60gMCGMdlgOLZBiTBTJeS9b+GzckaLjYGX3roXzJEl99YVNaZFLsH4QbpxlPuKSp3whDzFPGqGtoYMwnhS8bngWMST1DVAPQM/5fWoEZ74kuqp1p7V8tobtZXTtRFvagVa/4vU7507Vb6J/VwhyNzaS/5a5/uuI7E9JU19f0T1w1ufquthcL80DdsnKY/yEW5UG796H1cwfOgsgg0ag4p4rbVJiAg5JskwP2eyQYZDyr4rvl9dzbg9KwxuuSRvhstcpNnvpMbxHtpgcDWCxptaBlmi1cPZR3YeUteWym6vGA2F1CYHg1gXOr8IrKYIVcgZlvEWddxXveZYp7+XqaXPKZ90xAmMfs8AgdLjkZoOtSwLAjZCul4qlyKmw6IShdyqOplfDdQ8hippBRCwiUbL2xYbrqUN5IcxV/yrBzfRVYLsj9J0cVsUts23xhGr3wSKpzygZ2bB+qL6i7ZknxN7aYm3mfQwagvjd6vGfkiMoOOo992RHsVGQLC4upucdmOBRnvc9VWUKC7BDeVCbr3I/xchy/h83e9i06KmHwlfP+w18tqW0RbkHUx5CdQXh6FKUI9g8N86kfWgY9rHvhEtHHFbquDDNKYbrnygwDQ/QzLtVGNYx851YPmyUaC6C+Uq4yfFu/ExDARV4=
+
+%URL%
+http://matplotlib.org
+
+%LICENSE%
+custom
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1513065390
+
+%PACKAGER%
+Felix Yan <felixonmars@archlinux.org>
+
+%DEPENDS%
+python2-pytz
+python2-numpy
+python2-pyqt5
+python2-dateutil
+python2-pyparsing
+python2-cycler
+libxkbcommon-x11
+python2-backports.functools_lru_cache
+
+%OPTDEPENDS%
+pygtk: for GTK/GTKAgg/GTKCairo backend
+python2-cairo: for GTKCairo/GTK3Cairo backend
+python2-cairocffi: for GTKCairo/GTK3Cairo backend (alternative to python2-cairo)
+python2-pyqt4: for Qt4Agg backend
+tk: used by the TkAgg backend
+ghostscript: usetex dependencies
+texlive-bin: usetex dependencies
+python2-tornado: for webagg backend
+python2-gobject: for GTK3Agg/GTK3Cairo backend
+wxpython: for WX/WXAgg backend
+python2-pillow: for reading/saving .jpg/bmp/tiff files
+
+%MAKEDEPENDS%
+python2-pytz
+python2-numpy
+python2-pyqt4
+python-pytz
+python-numpy
+python-pyqt4
+tk
+python-cairocffi
+python2-cairocffi
+python-dateutil
+python2-dateutil
+python-gobject
+python2-gobject
+python-pyparsing
+python2-pyparsing
+pygtk
+python-six
+ghostscript
+texlive-bin
+python-tornado
+python2-tornado
+gtk3
+wxpython
+python-pyqt5
+python2-pyqt5
+libxkbcommon-x11
+python-pillow
+python2-pillow
+python-setuptools
+python2-setuptools
+python-cycler
+python2-cycler
+python2-backports.functools_lru_cache
+
+%CHECKDEPENDS%
+python-pytest-xdist
+python2-pytest-xdist
+python-pytest-runner
+python2-pytest-runner
+python2-mock
+xorg-server-xvfb
+texlive-core
+texlive-latexextra
+imagemagick
+ffmpeg
+mencoder
+inkscape
+python-pandas
+python2-pandas
+ttf-freefont
+

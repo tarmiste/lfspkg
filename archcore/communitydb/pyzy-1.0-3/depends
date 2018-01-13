@@ -1,0 +1,11 @@
+%DEPENDS%
+glib2
+sqlite
+util-linux
+
+%MAKEDEPENDS%
+git
+doxygen
+gnome-common
+python2
+

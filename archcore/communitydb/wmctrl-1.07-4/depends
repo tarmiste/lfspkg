@@ -1,0 +1,4 @@
+%DEPENDS%
+libxmu
+glib2
+

@@ -1,0 +1,60 @@
+%FILENAME%
+dns-lexicon-2.1.16-1-any.pkg.tar.xz
+
+%NAME%
+dns-lexicon
+
+%VERSION%
+2.1.16-1
+
+%DESC%
+Manipulate DNS records on various DNS providers in a standardized/agnostic way
+
+%CSIZE%
+69420
+
+%ISIZE%
+463872
+
+%MD5SUM%
+a49a853e3e917f4abde3521c1cad6db3
+
+%SHA256SUM%
+45fadce938846dc4d21ca6f9736053b94a0b8dfecd3e0688aec95bb0d46dfbb5
+
+%PGPSIG%
+iQIzBAABCAAdFiEEtZcfLFwQqaCMYAMPeGxj8zDXy5IFAlosT7sACgkQeGxj8zDXy5LAQBAAubldIxN/JcJVhbbkwofO50myvEyo5SglOG/GBMpDZ+kU0VNygkuUCPZ8a2QeuKJ0SkH9D+4EG9JBxIWnI/8CoQChySyONJTylyPSp2giMTbYiH884rwBWWKq7kLSpgX11Bwjd5gjk2pECKCFmZopbDTA4NMtYzbzxoUtuX8LIfoiLQsuoTJWRVp5foD9XAiDGEfA4vys69URon9ekEfgFrgiPx9GNKYit3h6PMsyjg6HT93q6+a8rJaFObBR9+3Nn0qZFIrckdnfyxUDkGKR497n8Txq2KdcQLGcKh1UJBTutY0h7qxZHJUHGtSQZB17sBrGwEKpCE+X991B9DR5xm1beZ5To/TEYhtUDyh0ahG0AjYV9PsKcCUiy2VX40viKz4syCAr3lick+WNHmbA4d/+JMIwCNNjhYthXnqkajgfRQYUvbxwBDH/wN1+qshOfPBqzcvnJoE9mGHFKbcFYMYYcQEJtXjuFGL42g6T2tGVosFt71YFjrdnCIn4dJllkm3Svoc1fZPwFEg37l0kETCa+p/Qc97a2Hmi3+JmAXbPoQPWvzAptYJT+oIpHg7DyI0OFtmecYppouszPOweJXmPtaPot29jFj/UMwohw1fDXOT1n7I1v+yGnZeg1SsmdiX24d1/2WbQKXImlt8XhpRS7iA89FSS5pAKWSRgxGU=
+
+%URL%
+https://github.com/AnalogJ/lexicon
+
+%LICENSE%
+MIT
+
+%ARCH%
+any
+
+%BUILDDATE%
+1512853413
+
+%PACKAGER%
+Felix Yan <felixonmars@archlinux.org>
+
+%DEPENDS%
+python-future
+python-requests
+python-setuptools
+python-tldextract
+
+%OPTDEPENDS%
+python-softlayer: for SoftLayer support
+python-boto3: for Route53 support
+python-babel: for DNS Made Easy support
+
+%CHECKDEPENDS%
+python-pytest-runner
+python-vcrpy
+python-softlayer
+python-boto3
+python-babel
+

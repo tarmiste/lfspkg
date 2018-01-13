@@ -1,0 +1,58 @@
+%FILENAME%
+pwndbg-2017.09.26-1-any.pkg.tar.xz
+
+%NAME%
+pwndbg
+
+%VERSION%
+2017.09.26-1
+
+%DESC%
+Makes debugging with GDB suck less
+
+%CSIZE%
+397240
+
+%ISIZE%
+3986432
+
+%MD5SUM%
+aaeb729bc580e33eb6b4c4726b0392cd
+
+%SHA256SUM%
+a021e5128225b19f4da7c2fc7ef402031578c2d53862b11f1a8ba81d3f440855
+
+%PGPSIG%
+iQIzBAABCgAdFiEE4kC1fixGMLp2ji8m/BtUfI2BcsgFAlnKlEwACgkQ/BtUfI2BcsgVeg/9ExnXOrg3TEmBjpmhshXuQ7GsRCgufoXYemItti8PPkZ96JvcXTBVbVB2pRnFV+SCAowwDhhj9B4pYP9NWOODQ8AXk3LrOjPmk8hZU1Dq5s6mT/qnvBvXqKgfuhQSyJhgcF8wILHsq8oIESYui+C+2lhw89Q2aHwjGmnN41FFkal7XoWYJsjNCSeXHQu8bzMaDYo8o2aUm68M7fFvbAZhm3E7F38mLU55NDY4IYHk0Kzh6J/N3FJOMeAtZ19z8daSdDec4L57cJUQdUaJWloA3/ZFdjQcKPigzooR74mmZzAeEluS2Sv+71xxonxhjASGLKHMQo/o1LZ0RBrG2QtywI9FqvJ0Z23OrnglTXVRrNFklB2/uXp8sbq2rfo38dde6Xc88w9ass4HqM7694EOaLMzaf4zwp6/ByzwZxOHo0DyzD5d50KIPZzJmg8KBk6UrcuHjW1y+oiXEVb2ZaYreMWRQcav0+iXdGCyULZoe+qErhYzmCXDGG5Tdg7x5Ysk3hvvuK7DMq1a9Gm7VuIkZLpJO4U0iXjtfbqAUp/HshNRomlkF0uVQmwMR5/FEtaBqaBm39vhwIO+E9yP9bxEo08KemTUlZJc9bO6cBm4dZlxS4tJ4KvEXIjPUMTOcCDwoFl17oNcXBjCYzJvNQutoQiSSN/MQJjRmZJA1EqHRLQ=
+
+%URL%
+https://github.com/pwndbg/pwndbg
+
+%LICENSE%
+MIT
+
+%ARCH%
+any
+
+%BUILDDATE%
+1506448453
+
+%PACKAGER%
+Levente Polyak <anthraxx@archlinux.org>
+
+%DEPENDS%
+python-capstone
+python-unicorn
+python-pycparser
+python-psutil
+python-ptrace
+python-pyelftools
+python-six
+python-future
+
+%OPTDEPENDS%
+checksec: checksec command support
+ropper: ropper command support
+ropgadget: ropgadget command support
+radare2: radare2 command support
+

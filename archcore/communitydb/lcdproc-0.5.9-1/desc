@@ -1,0 +1,52 @@
+%FILENAME%
+lcdproc-0.5.9-1-x86_64.pkg.tar.xz
+
+%NAME%
+lcdproc
+
+%VERSION%
+0.5.9-1
+
+%DESC%
+Utility to drive one or more LCD (and LCD-like) devices
+
+%CSIZE%
+312628
+
+%ISIZE%
+1357824
+
+%MD5SUM%
+078d82d43cbf80d526acd5436b1d989f
+
+%SHA256SUM%
+5ab0a3e7039c88718ce787934fb800aca26da1b6eefc2881b950060e5a8e0c8b
+
+%PGPSIG%
+iQIzBAABCAAdFiEE2yJ3vNUAqjglYQvd2zIzknlsoGcFAllvn48ACgkQ2zIzknlsoGc66Q/7BZbKFdZ32KcnQeBRKnpHOZvJMeLYyKOebwQLonhdxmBfPTgy9XJ4Qnqs1MjgrhaGBvHPghWcnwGMn7RQ9GXvaCZevZBOG7fOfMntQ/3q6ngiAJwUY4M3G5G+M+GanNItA7+xEoYTFmSS+X6J+Sgvy90wiKrnlqMa4wVFlRQUnZMD0g0RUEIlICQLh4glFLGho7rmF/F25O1C+hJp1KxT093wLjW8+89DWhfBM9znG99VnO7wMyGIiBjytoVPfIMVtwC49vQDGvq2AOX9kcN0mqlQoeacL1en6SDDWl54B2ciNQLAsam2VqmOID+CnRB6e14qY+YiWRtCj6P+wnn1g77cU7Sx1RNpc/PspI9tUShAe9HlxKifbrsncr7Frjw+4AEXH1KlwCY/mFTk+KW6EZYR6ZOOlrp/PEWuIDQcT1OHhzx7JcSNa9ReCdoCw21I/gAGDfe3/1tQ6+dgWdu1bfj4f+utw7GgJoCCS2PfYbpfAXaD3VwaubrrO6vGEBHoU1u/XAaLVjFOihqRS1Q6GdBb1NjqGddFD8ik2kWUU7FpwvAZa0dw3HAeswZgWN1gWKPPmA6gC6gO8Se9/0ZxF3M+nPedSFmFbWBcZZyBuKsB+9xscpDUXY6NuEX8wFQNmNYP2mxUFPT2HTLR++9MDN0ym/xFGhnLyTdXtKrUkW8=
+
+%URL%
+http://lcdproc.omnipotent.net/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1500487555
+
+%PACKAGER%
+BlackEagle <ike DOT devolder AT gmail DOT com>
+
+%DEPENDS%
+libftdi-compat
+
+%OPTDEPENDS%
+perl: needed for some lcdproc tools
+g15daemon: needed if you want g15 support
+
+%MAKEDEPENDS%
+g15daemon
+

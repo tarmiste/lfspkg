@@ -1,0 +1,63 @@
+%FILENAME%
+cantata-2.2.0-2-x86_64.pkg.tar.xz
+
+%NAME%
+cantata
+
+%VERSION%
+2.2.0-2
+
+%DESC%
+Qt5 client for the music player daemon (MPD)
+
+%CSIZE%
+2669848
+
+%ISIZE%
+10561536
+
+%MD5SUM%
+12951acb77063cf134dc71a20d243d7d
+
+%SHA256SUM%
+80438fbf3b3bc55746c7ee855cf0c5e788c32f64e35efe5bb9455d81eecb1318
+
+%PGPSIG%
+iQEzBAABCAAdFiEEFRnVq6Zb9vwrc8dWek52CV2KUuQFAlo06t8ACgkQek52CV2KUuSZOgf8DtbWtnYKO/NqrJfRMyl4CnCMs+AWBXnhhk2yf0q49+FawQlMCpSns1q1KGaC9AZgVZRFPB9alkRKYStXq4q8DPmYehT/qoBNyL3Al9qeaUyX8r8c2hM2vrRy4gbQD7ObBMedfAehza09FIfGPUgv2ugHDRaai5AjfVdyencQT2Deknqpmr71N2tABgt/dBbQxfxIZkH/soMQqcdJkysWL4VwEOlHdlWJX5AoENNhtEEbKAKBT8/XYJdOPZhRg5uSioI4CSab2NNgvsbHLRNGhbYEnhTvWzYErceekGG75cpG393RhwXQpOu+kAncg/TNwD/hic7mWKhvmBQpfk9B9Q==
+
+%URL%
+https://github.com/CDrummond/cantata
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1513417374
+
+%PACKAGER%
+Antonio Rojas <arojas@archlinux.org>
+
+%DEPENDS%
+qt5-svg
+libmtp
+libmusicbrainz5
+mpg123
+vlc
+taglib-extras
+media-player-info
+libcdio-paranoia
+udisks2
+
+%OPTDEPENDS%
+perl-uri: dynamic playlist
+mpd: playback
+ffmpeg: ReplayGain support
+
+%MAKEDEPENDS%
+cmake
+qt5-tools
+ffmpeg
+

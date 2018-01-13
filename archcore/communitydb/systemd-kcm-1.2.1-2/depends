@@ -1,0 +1,10 @@
+%DEPENDS%
+kio
+
+%CONFLICTS%
+kcmsystemd
+
+%MAKEDEPENDS%
+extra-cmake-modules
+python
+

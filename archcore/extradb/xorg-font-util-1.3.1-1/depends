@@ -1,0 +1,9 @@
+%CONFLICTS%
+font-util
+
+%PROVIDES%
+font-util
+
+%MAKEDEPENDS%
+xorg-util-macros
+

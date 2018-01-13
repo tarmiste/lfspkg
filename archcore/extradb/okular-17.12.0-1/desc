@@ -1,0 +1,87 @@
+%FILENAME%
+okular-17.12.0-1-x86_64.pkg.tar.xz
+
+%NAME%
+okular
+
+%VERSION%
+17.12.0-1
+
+%DESC%
+Document Viewer
+
+%GROUPS%
+kde-applications
+kdegraphics
+
+%CSIZE%
+5624664
+
+%ISIZE%
+15497216
+
+%MD5SUM%
+4fdd84746e5a674d172437f070d5f9d1
+
+%SHA256SUM%
+9ff03b1675ce8f4d973d85c3d1b3d4209079a905d706a27dd875cbac5175b4ae
+
+%PGPSIG%
+iQEzBAABCAAdFiEEFRnVq6Zb9vwrc8dWek52CV2KUuQFAloybCcACgkQek52CV2KUuQYuAf9G+mXEpp+BK1eysH23ewn7d7Ivzc2tfxDvGRy8lexsi4ckdzwciojCsqpKlInLmmRKBK22RK0WtZvqExZjv8UMetbLX5lCB46yoJxyTLFZmNNU0tLqN05P0laNbK+7+X/C05xsUCCBJV8w/eErf/1C+Dh0VyGhpSmQk9L7uMycuOqYvr6zswHYXmXs4X9bqUAqpTw6ZE3PrR1z8Silaw4afNx5aUVf4Pq5258loGBBQKwJDOkK20OUjjRx9ziOgAj7JfPghVXmXCZSCJAE1AEydYrmym88MWZOFZVdvW1PG7ZTXR7u/EGjIN0Fu4dNvDDG6lWJqzqCwCzCCCcIv2coQ==
+
+%URL%
+https://kde.org/applications/graphics/okular/
+
+%LICENSE%
+GPL
+LGPL
+FDL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1512942399
+
+%PACKAGER%
+Antonio Rojas <arojas@archlinux.org>
+
+%REPLACES%
+kdegraphics-okular
+
+%CONFLICTS%
+kdegraphics-okular
+
+%DEPENDS%
+djvulibre
+libspectre
+libkexiv2
+poppler-qt5
+qca-qt5
+kpty
+kactivities
+threadweaver
+kjs
+kparts
+purpose
+
+%OPTDEPENDS%
+ebook-tools: mobi and epub support
+discount: markdown support
+kdegraphics-mobipocket: mobi support
+kirigami2: mobile UI
+libzip: CHM support
+khtml: CHM support
+chmlib: CHM support
+calligra: ODT and ODP support
+
+%MAKEDEPENDS%
+extra-cmake-modules
+ebook-tools
+kdegraphics-mobipocket
+kdoctools
+khtml
+python
+chmlib
+discount
+

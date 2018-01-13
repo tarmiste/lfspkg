@@ -1,0 +1,52 @@
+%FILENAME%
+lynis-2.5.7-1-any.pkg.tar.xz
+
+%NAME%
+lynis
+
+%VERSION%
+2.5.7-1
+
+%DESC%
+Security and system auditing tool to harden Unix/Linux systems
+
+%CSIZE%
+202540
+
+%ISIZE%
+1393664
+
+%MD5SUM%
+a5310c49e2b0570090e6aedb25d0140e
+
+%SHA256SUM%
+361e9ce76a83c38da6a725df299deefdbcac51937a7229d084129e26c80ead24
+
+%PGPSIG%
+iQIzBAABCgAdFiEE4kC1fixGMLp2ji8m/BtUfI2BcsgFAln6HxwACgkQ/BtUfI2BcsgccQ//fQEMMM9iep6Ngv1HBOGHo7AqOqpgmMEbqo2n6CY6e6txOWJyKtcXbupB38nvbaoCZt6Zjp4AWf6BaV/+JGy40M9hXistLG08b22KkVpJBVlCuaiEy94v3ER5IaBZUKRZvAiEIpTJpQ6t/7qnuL9mORvzdUDT74EILtHd0dWIHm9FE3ouLV6mEsjlgXvlQXSCD0Qw85d6WIyOdqUK183Wuh1WkPF95yDCMteN6g/xjtB5rriBGHu6oY2TlPulOxiTTuKq81UpPlkZTqC147QYSSOA/b47SmpWNjNgKS4ixD+sAlaekg8DeD5otlopT75+nGO3bkV60kKelXZ52ulVd7N8ICEyaCp0nW/Dwuhk+fpDyd1TfZTmNjqyrfSf4TP8nSy7bndlRsIaLlf3oxNac5sCYGnIYd1vAMF6njYH/dFsGU2weANLBysRD5zCB32DJ8sNpUNrgh0DAUOfVTBf/MgBvP0c6u6txs9/chppDZgb7J+5WWmyMalyKdC8OC1j05BWY4w5L9tnjDrgpicZ4X8KxSnjdjqX1VkXjRwGNXqKABWGs9vNPnitVHA+L4mneO8cX2R60UVMUnrukW4vJ3DbgqDZa/b2mHN7+BJIQrU2kq0NGTbnOJD6oSW0NG4nmLDOsgYZBErjaDmzHBaF6M8wFoqJslztqGwK0iihCgk=
+
+%URL%
+https://cisofy.com/lynis/
+
+%LICENSE%
+GPL3
+
+%ARCH%
+any
+
+%BUILDDATE%
+1509564178
+
+%PACKAGER%
+Levente Polyak <anthraxx@archlinux.org>
+
+%DEPENDS%
+sh
+awk
+
+%OPTDEPENDS%
+net-tools: networking tests
+bind-tools: nameserver tests
+iptables: firewall tests
+bash-completion: completion for bash
+

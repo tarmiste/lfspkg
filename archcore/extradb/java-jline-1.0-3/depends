@@ -1,0 +1,9 @@
+%DEPENDS%
+java-runtime-headless
+
+%MAKEDEPENDS%
+maven
+
+%CHECKDEPENDS%
+maven
+

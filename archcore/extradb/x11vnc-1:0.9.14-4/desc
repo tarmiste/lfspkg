@@ -1,0 +1,58 @@
+%FILENAME%
+x11vnc-1:0.9.14-4-x86_64.pkg.tar.xz
+
+%NAME%
+x11vnc
+
+%VERSION%
+1:0.9.14-4
+
+%DESC%
+VNC server for real X displays
+
+%CSIZE%
+664164
+
+%ISIZE%
+1817600
+
+%MD5SUM%
+0c8ae71f75be4b4cf1a3ed70facf1935
+
+%SHA256SUM%
+82a6831fff55db5681e8da208f3f6f5523b4b1268f5a91cdae9d32d32b3a9378
+
+%PGPSIG%
+iHUEABYIAB0WIQQaYNxEJF0G/vkGI9bu7uLu7i7u7gUCWijb5QAKCRDu7uLu7i7u7ttWAQCIHvBRR2ra1KVa8B7Xj8xRXoxUFG15+gAPJB2vuRGAwgD9EiTC29ztgkJRsOQyvMUrQsfXzY6aWgjGlpKu7BK0uwg=
+
+%URL%
+https://github.com/LibVNC/x11vnc
+
+%LICENSE%
+GPL2
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1512627112
+
+%PACKAGER%
+Gaetan Bisson <bisson@archlinux.org>
+
+%DEPENDS%
+libvncserver
+openssl
+libjpeg
+libxtst
+libxinerama
+libxdamage
+libxrandr
+avahi
+xorg-xdpyinfo
+
+%OPTDEPENDS%
+tk: GUI support
+net-tools: -auth guess
+xf86-video-dummy: Xdummy script
+

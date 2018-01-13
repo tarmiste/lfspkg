@@ -1,0 +1,8 @@
+%DEPENDS%
+qt5-declarative
+kwayland
+karchive
+
+%MAKEDEPENDS%
+git
+

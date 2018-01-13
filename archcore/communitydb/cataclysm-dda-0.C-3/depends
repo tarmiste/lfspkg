@@ -1,0 +1,16 @@
+%DEPENDS%
+ncurses
+lua
+
+%OPTDEPENDS%
+sdl2_image: for tiles
+sdl2_ttf: for tiles
+freetype2: for tiles
+sdl2_mixer: for tiles
+
+%MAKEDEPENDS%
+sdl2_image
+sdl2_ttf
+sdl2_mixer
+freetype2
+

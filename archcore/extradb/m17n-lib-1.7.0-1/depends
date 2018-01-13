@@ -1,0 +1,11 @@
+%DEPENDS%
+libxft
+m17n-db
+fribidi
+libxml2
+gd
+libotf
+
+%OPTDEPENDS%
+anthy: to use the anthy input method
+

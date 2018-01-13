@@ -1,0 +1,67 @@
+%FILENAME%
+aisleriot-3.22.4-1-x86_64.pkg.tar.xz
+
+%NAME%
+aisleriot
+
+%VERSION%
+3.22.4-1
+
+%DESC%
+A collection of patience games written in guile scheme
+
+%GROUPS%
+gnome-extra
+
+%CSIZE%
+5989292
+
+%ISIZE%
+21235712
+
+%MD5SUM%
+2029360182cb7511a05ebe021117b0d7
+
+%SHA256SUM%
+a3cf4d1a1f554488fbaa3fa1070351ef65938774a1e90f6e3dfc94bcd2a67bc4
+
+%PGPSIG%
+iQEzBAABCAAdFiEEghj4iEmqxSLpTPRwpekojE+kFfoFAln3rpEACgkQpekojE+kFfp+mQgAlxKTeh45H169eKVk70p/bI0j097bhYpiLbGCXjV3SmoLMXAzw0HXz8PUR+Fh5NPnfgXouxKCeWWa5Fl8zQcKpihGbvpLiHdiZ8jJAvtO3qZLXFo57pw3S2KGPdLFdXvsGvlAbANXKskifTv8AibDpG7AEHyTLvOwolt4FoWPV+lyBJcf+H2800qySRkZBApUlOtnNfPW23cYXcw2sEkgiDXRnCNX6yZtJWt8Q75vUR1dyr267Zsjk2EWAgz2RrF7CVGc8lvgQerKiyORdjc+iBsr/oQBKaq30RW+0dencE2xBW1WiQK28iQHKR01LF0AGBpBf++gy9Lk9RqE7vsyiQ==
+
+%URL%
+https://wiki.gnome.org/Apps/Aisleriot
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1509403768
+
+%PACKAGER%
+Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+
+%DEPENDS%
+guile
+gtk3
+librsvg
+libcanberra
+gconf
+dconf
+
+%OPTDEPENDS%
+libkdegames: KDE card sets
+pysolfc: PySol card sets
+pysolfc-cardsets: PySol card sets
+
+%MAKEDEPENDS%
+intltool
+itstool
+docbook-xsl
+yelp-tools
+appdata-tools
+gnome-common
+git
+

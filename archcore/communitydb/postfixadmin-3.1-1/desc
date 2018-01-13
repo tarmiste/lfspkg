@@ -1,0 +1,49 @@
+%FILENAME%
+postfixadmin-3.1-1-any.pkg.tar.xz
+
+%NAME%
+postfixadmin
+
+%VERSION%
+3.1-1
+
+%DESC%
+A web based interface used to manage mailboxes, virtual domains and aliases created for Postfix
+
+%CSIZE%
+1057504
+
+%ISIZE%
+3973120
+
+%MD5SUM%
+10e2be395cade6a513828f5c2ae92bb7
+
+%SHA256SUM%
+d2db509f7860b8cbc55eb1ef2ecf348fef26262cfa44a4e7b8a4f9bcd5f7cb03
+
+%PGPSIG%
+iQIzBAABCAAdFiEEj8FaBklQqZ3RvRTdOeS4d+YuuRUFAllRedQACgkQOeS4d+YuuRU87A//Xt/jWBeZ+OltR2tM+x/mndu1uFtWkfIKPvbszNU8isc76cW0gmjotc1tj+33X9pI9S/uBk2GEzVjdIPwqmP+W5Wj6r3revCu7bZw1eBz6brtpwomAULzLPAkQW0yzCMsd3mgWOEs0TIEKHePhayKPyEPYraG/yVBbwx8/YYmmVmT53L7wJ1iNBnbqSMCEGqiv62g0Pq3jPzloxd6WEYocW7d2bATb1c+LP6jYuRAHKD7UbP4xQ8HrCZ5DYo/ysLR54PFEnFbVlMl+lb+oS2qxaz1hReJVgrJhRgWQ7VWGKfoZ1d4LqmeGFVgGExAsq93K6ityk5WGq//jOJrd8P2BMLNw4i0iyv2HEwzUdPrCGdVhIw9MHJWu/cAcUulnsJM/ZX7SDJodVwEVINcbtPOKrfkTko7Vj+c2Fr4bqyBEhxXITdup957h/q/3OeyaXuDXFlly8+fIuT8RVi54p6CFuVP5QL/qjGUsGcIY06CqV3ZVQfGGgIqhdm03ni+75QnMYfSp8v0t6ShsgeBp8My8Ep4BEiskgsWY/gf2LqwKQsFP8OHbstLtp0gsWe/wMtvjRBpf5XNuZdwIXuqTU+S8xEG2/FW+8tCt3Qc+uHvTJvEuUzL+GdZHeQCupgDndHXDNyJvf5W3ZoFwom4HU5e67k0yHTvbmlXjNldmHf7oHg=
+
+%URL%
+http://postfixadmin.sourceforge.net/
+
+%LICENSE%
+GPL
+
+%ARCH%
+any
+
+%BUILDDATE%
+1498511810
+
+%PACKAGER%
+Sven-Hendrik Haase <sh@lutzhaase.com>
+
+%DEPENDS%
+php
+
+%OPTDEPENDS%
+mariadb: MySQL server
+postgresql: PostgreSQL server
+

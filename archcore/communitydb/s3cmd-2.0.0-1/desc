@@ -1,0 +1,53 @@
+%FILENAME%
+s3cmd-2.0.0-1-any.pkg.tar.xz
+
+%NAME%
+s3cmd
+
+%VERSION%
+2.0.0-1
+
+%DESC%
+A command line client for Amazon S3
+
+%CSIZE%
+159812
+
+%ISIZE%
+730112
+
+%MD5SUM%
+134eacd53c9d876d2f7dec659e3b6e26
+
+%SHA256SUM%
+397fe4ae012f55475999036cbc39313cc2f33528482fec2690edb7b1a7892bdb
+
+%PGPSIG%
+iQIzBAABCAAdFiEEj8FaBklQqZ3RvRTdOeS4d+YuuRUFAllU17wACgkQOeS4d+YuuRX9/A/6A8raOKFZculzw+6Z7ej0VAefrssvih7FxZyIXArLm03vIP+9h2A0NHhQdqdbG1i2855ssssFNO4goGP7VLQff6dMx5rw6O1PBUjSynlZb4BUH1PJf6Ubyg4/VeykuwV8fjeSxN3Zdc/NqJjPpPF8420IrVWg66Y6fMNrid/IDKJxUoURRTIEPmEHfJLDzVoME4cHGpxJPt0aR9CiBVQ5Hwm85QGHXnCkct5pIQbvO3b4iBErJvtpcEUUERXTmmnXBedRzNyfxMC1bexyutsi+1B3+fcwLVkbO2WxRx0ebS+oRJRpuAR88dxBQrjSBFpB9C6ifXOKBoDOOv4wIUF7VB9BgzWmsz3h5T3J0txpQVNk5JCWH8Ce3fNBBYLXUX2Pk10mXFZsy7A9ktNVAo7DkyohVz6r5Tb/IO85z1jOQ1r3TXz9EpCSjJUZsgLTR4dQAZqo2S/oleK7nnG+bVFIzVyxg/RQXXD+sEeJqwn7vWAEcD+OGzQv9RZ6taz3nojtAutRP2OgMTTzsKrQe32giZeKf/r7cofQx8ktJuxd+lCMTulnDGRY5IQQPMKEPScP3dJrMQ4Sd0RNnUI6y7oBbcSOK/BRDQa+jsip5hxFtXHFzpL1DtrI9gvYIZo4zxWaBARAajL+OCV8Q8wJAWphCnQtCuUy23QtdECiubvdmZc=
+
+%URL%
+http://s3tools.org/s3cmd
+
+%LICENSE%
+GPL
+
+%ARCH%
+any
+
+%BUILDDATE%
+1498732462
+
+%PACKAGER%
+Sven-Hendrik Haase <sh@lutzhaase.com>
+
+%DEPENDS%
+python2
+python2-dateutil
+
+%OPTDEPENDS%
+gnupg: encrypted file storage
+python2-magic: determine mimetype based on contents
+
+%MAKEDEPENDS%
+python2-setuptools
+

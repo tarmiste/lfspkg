@@ -1,0 +1,42 @@
+%FILENAME%
+unclutter-8-10-x86_64.pkg.tar.xz
+
+%NAME%
+unclutter
+
+%VERSION%
+8-10
+
+%DESC%
+A small program for hiding the mouse cursor
+
+%CSIZE%
+8568
+
+%ISIZE%
+49152
+
+%MD5SUM%
+3f284679f995d6524b726d11d67d8a5e
+
+%SHA256SUM%
+d85d94ac836b39bc940f86a06133be1df64f05ee60fec83c14876467906aa9e5
+
+%PGPSIG%
+iQIcBAABAgAGBQJSoI5+AAoJEGXBEMHqQz/HY4IQAJIqi+t+8063b98z6N9rNJz814TuyclBbkPmiqrgJAuFqXWJwgp2NpcI//5Ahemmxf5vV1rYnqyCwqDiVDMpkBI2Xo/XTn3watKsKjv40U2SPaFlGEzSymaLgB+f1zgLsFUY3MkzAhUl2rJA73nMNZULpUU7J0BQUX+a44cJT2hoWEN7FXfvh+FBK3fuRZdQLGeqS9TV9Vay++iQ+kEclnmjx89JNo2ijh6LevFBIOgZ20l3hi8D/mTQoEcaOVycHZ4Z1n/v1oqt6vZ855E7fq7vuAtdyL9VPrrBzldx+I2mfwE0R43Nq8oturnrucn0eQc3O9XapevT7agYLqtRso9N3kGCpg8HxDbbCwl2ggDd+aXvAZ7YhfMv4/4XhRBaBykQGOmiWAvGAk5LK/5I+h1+trwgsDu9/QgRhxTDHMKrQIEJYg94E2sPulaty+YPdi7OYg85T9iaTCN3oLGP9gJucquHTOl50Wt980iolOYTO5zsVWDcpW2vAs0F2RpiikKN2x3M+EY9kBb/Sj2Ap6oqvTNhJvDgVqswiCKF0PITYGuhkfXkOsM8y86QVzFZrqaGmoUM7veb9/mLnL0CaTslMMIEFfcF2jJGq2UnNsoCk4qV3wlym39YwFYaz0gnrIr4y7OizhE4GCRz9/HGMtfFnMCS0ktlc8Y5u2o1cKHw
+
+%URL%
+http://ftp.x.org/contrib/utilities/unclutter-8.README
+
+%LICENSE%
+Public Domain
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1386253878
+
+%PACKAGER%
+Sergej Pupykin <pupykin.s+arch@gmail.com>
+

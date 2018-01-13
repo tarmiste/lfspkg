@@ -1,0 +1,8 @@
+%DEPENDS%
+popt
+zlib
+bzip2
+
+%PROVIDES%
+librsync.so=2-64
+

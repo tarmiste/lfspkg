@@ -1,0 +1,68 @@
+%FILENAME%
+graphicsmagick-1.3.27-2-x86_64.pkg.tar.xz
+
+%NAME%
+graphicsmagick
+
+%VERSION%
+1.3.27-2
+
+%DESC%
+Image processing system
+
+%CSIZE%
+2298532
+
+%ISIZE%
+13150208
+
+%MD5SUM%
+2b8b9a74def682c9e47798fdf5445464
+
+%SHA256SUM%
+e71b1f6dc49fd3ca1523a9495ddb19bf005b511a2e2991b7229901b070b741ef
+
+%PGPSIG%
+iHUEABYIAB0WIQQaYNxEJF0G/vkGI9bu7uLu7i7u7gUCWjhN9gAKCRDu7uLu7i7u7kYqAQDevGXb3ARUcgKaBsrqZtOzrYSYT+lTaY2FPEP7lVwY+gEA5NLoTBKotKr4LYqBM2ETHVXVCXUaEzOc84qW0Lq6Og4=
+
+%URL%
+http://www.graphicsmagick.org/
+
+%LICENSE%
+MIT
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1513637696
+
+%PACKAGER%
+Gaetan Bisson <bisson@archlinux.org>
+
+%DEPENDS%
+freetype2
+libxext
+libsm
+lcms2
+libltdl
+bzip2
+xz
+
+%OPTDEPENDS%
+jasper: jp2 module
+libpng: png module
+libwmf: wmf module
+libxml2: msl, svg, url modules
+libtiff: ps2, ps3, tiff modules
+ghostscript: pdf, ps modules
+
+%MAKEDEPENDS%
+perl
+jasper
+libpng
+libwmf
+libxml2
+libtiff
+libwebp
+

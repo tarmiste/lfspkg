@@ -1,0 +1,57 @@
+%FILENAME%
+gnome-subtitles-1.3-4-x86_64.pkg.tar.xz
+
+%NAME%
+gnome-subtitles
+
+%VERSION%
+1.3-4
+
+%DESC%
+Video subtitle editor for GNOME
+
+%CSIZE%
+312300
+
+%ISIZE%
+1822720
+
+%MD5SUM%
+829b6f270a33dd2e2910c10e41249a15
+
+%SHA256SUM%
+d89b178acde43ef0b7c9bbde3ffae6321441f5680efaa7ac9e8111d86e8d25b9
+
+%PGPSIG%
+iQEzBAABCAAdFiEEzgvecadZqH8j8PfYth284QkBwWMFAlpOhDgACgkQth284QkBwWPm/gf7BcwhFT3/rEawFMpYzxYyG+SBFZqlfcICeoDy23GrTYPdapPOgNTdhJOSN3a5S9t1mFEO7q521SBHxQueoU+6bYXFCci0ut6QLyKsUzlDFSCGFxjw5kZihnWhJsPmwRAxI87n+CWzyDcRVcP047aMPIhAzMWFdUxnxeU5zfzB7fVei7WFlIJoicciEeomkvwhUw7BQs2ZvHrIvAuYkUhxoz5XGE4iOhGhYZA9qYulydgK26mR7myKxBHrhYTbJRir38YTxjxffmG2TZ9QEaHAk5T7LuTl2RVkGyH1JB3xB+KNiHRWsNmbHi0URbo2/Z6A/pqgjoKRkZsxKzdFxeZSqA==
+
+%URL%
+http://www.gnomesubtitles.org/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1515094967
+
+%PACKAGER%
+Balló György <ballogyor+arch@gmail.com>
+
+%DEPENDS%
+gst-plugins-base
+gconf-sharp
+gtkspell
+
+%OPTDEPENDS%
+gst-plugins-good: Extra media codecs
+gst-plugins-bad: Extra media codecs
+gst-plugins-ugly: Extra media codecs
+gst-libav: Extra media codecs
+
+%MAKEDEPENDS%
+intltool
+gnome-doc-utils
+

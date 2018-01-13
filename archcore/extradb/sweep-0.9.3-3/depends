@@ -1,0 +1,8 @@
+%DEPENDS%
+gtk2
+libsamplerate
+libmad
+libvorbis
+alsa-lib
+speex
+

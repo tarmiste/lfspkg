@@ -1,0 +1,62 @@
+%FILENAME%
+asymptote-2.41-2-x86_64.pkg.tar.xz
+
+%NAME%
+asymptote
+
+%VERSION%
+2.41-2
+
+%DESC%
+A vector graphics language (like metapost)
+
+%CSIZE%
+3078900
+
+%ISIZE%
+8770560
+
+%MD5SUM%
+0c08cab597257a9b05f28bc3e35a7440
+
+%SHA256SUM%
+5a7f2b02334264a057e12fce08868b9314e2d4f844e8e13766e8a76301ea1c32
+
+%PGPSIG%
+iQEyBAABCAAdFiEEFRnVq6Zb9vwrc8dWek52CV2KUuQFAlmYSuoACgkQek52CV2KUuSdSQf49kUVPdyKqc4cbGWebwbX0SlIeS34j5ce9QqhkBs/0+iS/b2IJnHHUInS4aCWwI2JB6ZiA2e2P6m5sCHtFes0b5LoL8OMBx8zmx0MN+p3lc5wA4mjcYL3yjBgBU9jCTdkfzZl9tg7WIIIrVQBXNEXB/GKn2xPSWdqDlU1WVmv9y/mbyc4V9lnwi2BuIjdgIKLUzZyllqOPMYqw7vQaFajf/BHjQs7mcQ6vZykCvSwLK48YeFDQQ9AvfUV/yp7UC8mrFiI2p8Zl0THbetR2kYh5z+zCO2sACpqJ7kOPUDUPGS6dgX42W7darvcHAtHLfB2UpoXrYiaZo0EI1kmcgTl
+
+%URL%
+http://asymptote.sourceforge.net/
+
+%LICENSE%
+GPL3
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1503152434
+
+%PACKAGER%
+Antonio Rojas <arojas@archlinux.org>
+
+%DEPENDS%
+texlive-core
+gc
+freeglut
+glu
+gsl
+fftw
+libsigsegv
+
+%OPTDEPENDS%
+python2: for the xasy GUI
+python2-pillow: for the xasy GUI
+tix: for the xasy GUI
+
+%MAKEDEPENDS%
+ghostscript
+imagemagick
+mesa
+texlive-plainextra
+

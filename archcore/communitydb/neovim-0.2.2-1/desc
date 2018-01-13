@@ -1,0 +1,63 @@
+%FILENAME%
+neovim-0.2.2-1-x86_64.pkg.tar.xz
+
+%NAME%
+neovim
+
+%VERSION%
+0.2.2-1
+
+%DESC%
+Fork of Vim aiming to improve user experience, plugins, and GUIs
+
+%CSIZE%
+4294460
+
+%ISIZE%
+19013632
+
+%MD5SUM%
+086a780f5c0f2df86bc1ad397dc486cc
+
+%SHA256SUM%
+995fd6965e908f8bb5a478e70cc2c098f3907983a3894e4a646566ba19089169
+
+%PGPSIG%
+iQIzBAABCAAdFiEEj8FaBklQqZ3RvRTdOeS4d+YuuRUFAloR4KMACgkQOeS4d+YuuRWI/hAAxu5lhzgE9bW7dbsf8bIslw2zEXGsMmEpLt/CoXoYT84BSnZQ8ppx6PVRkkhszkG02994+HNewiJHStvR/ZQHqnFVeXHed8ws85ms1fU+xrJKtVhmJDReLJhYbwOQEPGWXAVFLECIizEWYXJPkQiBlDLsUA0kYkhKAPKRuY9j2JGQd3ClS1FMKOnHn8YQ/55OHbws+hQJa3VPea6sZjcSpJiP3GYWAgv9G9mH3Dpq3wY7JQgEbyUUpe88Inr8zx3ECNcFy22B/8c/pvIq8tp/D7X34yDDjG6l1jSQkXWYtKHT12Y3XHGdyHkR6FYXpxXliZ7G6A8WthUB29HxFiNJjXCyTUcHoTWbr6ujWWekkFmd1Vb25lU8qbaD/L6EpGlOtuh8RhWaAxTXlRXsbPflsGzqEZrZIkFfkIZ80YES7iW7zD+MxHhcs418ONtLrleWn85SsyMdOo0fD8Vz9Rw0F7/w64PzqgsImGA1Q2KOGl8hDNu9/5CABfvS+btvLMQgv6C810OK57xch9wlgibinDfUGL22CSR2ViLjDuklaWTb8z+a90aqajqP0bMV2MlP/B/l/mZOIY1teNeBAwc0pWPzegZSikwZ+VzZkBAq+kUtlIvIcTAbvm2MKgLyH6zGx6KvqROr+cTiWs+q2K87paid1BEJlbJeWXpwG28UeWw=
+
+%URL%
+https://neovim.io
+
+%LICENSE%
+custom:neovim
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1511120973
+
+%PACKAGER%
+Sven-Hendrik Haase <sh@lutzhaase.com>
+
+%DEPENDS%
+jemalloc
+libtermkey
+libuv
+msgpack-c
+unibilium
+libvterm
+luajit
+
+%OPTDEPENDS%
+python2-neovim: for Python 2 plugin support (see :help python)
+python-neovim: for Python 3 plugin support (see :help python)
+xclip: for clipboard support (or xsel) (see :help clipboard)
+xsel: for clipboard support (or xclip) (see :help clipboard)
+
+%MAKEDEPENDS%
+cmake
+lua51-mpack
+lua51-lpeg
+gperf
+

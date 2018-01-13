@@ -1,0 +1,45 @@
+%FILENAME%
+jad-1.5.8e-7-x86_64.pkg.tar.xz
+
+%NAME%
+jad
+
+%VERSION%
+1.5.8e-7
+
+%DESC%
+Java decompiler
+
+%CSIZE%
+323828
+
+%ISIZE%
+969728
+
+%MD5SUM%
+e55ca3e5ac645337835022b314987535
+
+%SHA256SUM%
+d5effe236bb1d2607abf73f4a3a15e71fa8895a44b591376ba317c9294566a3f
+
+%PGPSIG%
+iQEzBAABCAAdFiEElihV8HLHoBhGQFhk/PPIy1z5yNQFAlnJYsMACgkQ/PPIy1z5yNRPJgf+IGaARX1n0/aBkLiBJAZNRLBikY8E5op89P9NUp0NohkRInYpMJHqFEl3gX+s3Ur7/p08itK7Yhi5ZQTQfECAhJjkCS99F07/DX8y1G7oxMVys8BJOzvgrNi7IFqMhZ+r9fwqH9nI8sxR9n445AUZ8/U7KmfzPua6dyD6GdEzJV42FvWuY3e6dq7JofJu54ncrJ6AGO/BbD6w/n42/WRdqwJ4CD96LqOxjpZTRglIdqaYPmMKtCWXme9KU46bf+rCVcnr3InzzCcQRyO7AHF2IgeTsKkyJmv0NeIfUglf39tK8UFa3ExNgzIjDTIpBpPHD/Ae7CPX1U/R/aYqR+nisQ==
+
+%URL%
+https://varaneckas.com/jad
+
+%LICENSE%
+custom
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1506370097
+
+%PACKAGER%
+Alexander Rødseth <rodseth@gmail.com>
+
+%OPTDEPENDS%
+vim-jad: open class files directly in vim and see the decompiled source code
+

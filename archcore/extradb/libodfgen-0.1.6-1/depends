@@ -1,0 +1,11 @@
+%DEPENDS%
+libwpd
+zlib
+librevenge
+
+%MAKEDEPENDS%
+boost
+libwpg
+libetonyek
+doxygen
+

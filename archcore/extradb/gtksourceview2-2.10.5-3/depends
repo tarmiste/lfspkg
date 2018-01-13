@@ -1,0 +1,8 @@
+%DEPENDS%
+gtk2>=2.22.0
+libxml2>=2.7.7
+
+%MAKEDEPENDS%
+intltool
+pkg-config
+

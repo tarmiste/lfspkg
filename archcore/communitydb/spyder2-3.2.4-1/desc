@@ -1,0 +1,87 @@
+%FILENAME%
+spyder2-3.2.4-1-any.pkg.tar.xz
+
+%NAME%
+spyder2
+
+%BASE%
+spyder
+
+%VERSION%
+3.2.4-1
+
+%DESC%
+Scientific PYthon Development EnviRonment providing MATLAB-like features for Python 2.x series.
+
+%CSIZE%
+2110328
+
+%ISIZE%
+12460032
+
+%MD5SUM%
+deb41fd56c2041f84f2defa8c67c07b4
+
+%SHA256SUM%
+4d362e51536eacc3df55c41ab206a1fb3a8d79aefde9dc327cca3ef09f37a017
+
+%PGPSIG%
+iF0EABEKAB0WIQTFIYRkNtdaMpR5Wye0NgIEslDw0wUCWhHYdQAKCRC0NgIEslDw0wgRAJ9DxB13iCwZlx6tDbY9jsCqofQ79QCfSoDga5VNwPv/RADpU6gCnXGmQqw=
+
+%URL%
+https://github.com/spyder-ide/spyder/
+
+%LICENSE%
+MIT
+
+%ARCH%
+any
+
+%BUILDDATE%
+1511118856
+
+%PACKAGER%
+Fabio Castelli (Muflone) <muflone@archlinux.org>
+
+%REPLACES%
+spyder
+
+%CONFLICTS%
+spyder
+
+%PROVIDES%
+spyder
+
+%DEPENDS%
+python2-pyqt5
+qt5-webkit
+python2-qtconsole
+python2-qtpy
+python2-qtawesome
+python2-pyflakes
+python2-pyzmq
+python2-pygments
+python2-psutil
+python2-pickleshare
+python2-rope
+python2-jedi
+python2-pylint
+python2-pycodestyle
+python2-sphinx
+icu
+gtk-update-icon-cache
+
+%OPTDEPENDS%
+python2-numpy: N-dimensional arrays
+python2-scipy: signal/image processing
+python2-h5py: HDF5 support
+python2-matplotlib: interactive 2D/3D data plotting
+python2-sympy: symbolic mathematics for the IPython console
+python2-pandas: view and edit DataFrames and Series in the Variable Explorer
+
+%MAKEDEPENDS%
+python2-setuptools
+python-setuptools
+python-sphinx
+python2-sphinx
+

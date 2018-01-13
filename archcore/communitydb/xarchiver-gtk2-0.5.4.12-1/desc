@@ -1,0 +1,75 @@
+%FILENAME%
+xarchiver-gtk2-0.5.4.12-1-x86_64.pkg.tar.xz
+
+%NAME%
+xarchiver-gtk2
+
+%BASE%
+xarchiver
+
+%VERSION%
+0.5.4.12-1
+
+%DESC%
+GTK+ frontend to various command line archivers (GTK+ 2 version)
+
+%CSIZE%
+497816
+
+%ISIZE%
+1480704
+
+%MD5SUM%
+ad1980559600a19dba285edd50eddefb
+
+%SHA256SUM%
+54b17f6185793670e15c9d9f0a65acfcb2feaf0e380524ae58386a4e4fe3d4b2
+
+%PGPSIG%
+iQEzBAABCAAdFiEEzgvecadZqH8j8PfYth284QkBwWMFAlnkjQ0ACgkQth284QkBwWMS4QgAj3Q2DxMTjf9qTENPLfFaITp34Z6vvmcAPmAttSxx4TMLm5Xl+KYJm3pKgC8z94ZOq9RO1cLlM8dWiKKcVeAoFomDHUDYGzB8BSSf6AjZwmtP07IDCCZBXK5Won9ixdFXdtL9m44gUqgtUN8MgrfLaLUo6SYU4dH12rzEdlXq8JPtP1F9uonFuXi0wL4mvM+y9WJAZw4z1H/JX2oU7zXgEEJJOUtftMFkwjEEDEPeQKCOlvZ0npP+tL+GHXQ87C57a8DU+jMvK92focJctva8SHJzGXlTj6qPIZNSIbQ5zk4miNDRzgI6PkXbGgM158EMw57ifR3I/3ATTkjcL8ZlrQ==
+
+%URL%
+https://github.com/ib/xarchiver
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1508150462
+
+%PACKAGER%
+Balló György <ballogyor+arch@gmail.com>
+
+%CONFLICTS%
+xarchiver
+
+%DEPENDS%
+gtk2
+
+%OPTDEPENDS%
+arj: ARJ support
+binutils: deb support
+bzip2: bzip2 support
+cpio: RPM support
+gzip: gzip support
+lha: LHA support
+lrzip: lrzip support
+lz4: LZ4 support
+lzip: lzip support
+lzop: LZOP support
+p7zip: 7z support
+tar: tar support
+unarj: ARJ support
+unrar: RAR support
+unzip: ZIP support
+xz: xz support
+zip: ZIP support
+
+%MAKEDEPENDS%
+docbook-xsl
+intltool
+xmlto
+

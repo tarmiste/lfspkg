@@ -1,0 +1,6 @@
+%DEPENDS%
+libusb>=1.0
+
+%MAKEDEPENDS%
+cmake
+

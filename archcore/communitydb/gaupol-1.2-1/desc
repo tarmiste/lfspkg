@@ -1,0 +1,66 @@
+%FILENAME%
+gaupol-1.2-1-any.pkg.tar.xz
+
+%NAME%
+gaupol
+
+%VERSION%
+1.2-1
+
+%DESC%
+Editor for text-based subtitles
+
+%CSIZE%
+457288
+
+%ISIZE%
+3421184
+
+%MD5SUM%
+ff34a7149291da2ad68f6459bc04f715
+
+%SHA256SUM%
+c12e63f4926d8a5b0157eac7d37bf4b809b02653aa49276860206bff291c5b9f
+
+%PGPSIG%
+iQEzBAABCAAdFiEEhs/8qRjPOvRxR1iAUeixSKmZnDQFAlj9gkQACgkQUeixSKmZnDSacQf/bit0g8NyXwZlqkbV1bAU0hiCat4gXSmUKQHfKj6KfYMWY+051uAqU9lMydbwmzL3zxwz4wPiKKx+6x5DNM4H8luA6C+HYjHMJ0Y9izxNI0lOeV/vRuS3/iQ6yNTV1m/1eJctMkaTH5E6vD3nPVQGbtqafNfaspx6RxyNivtZpnjLoezcHdL4KdRi6U3gVhWyLyLUMJIWRYoJEf1BYAMFPhTBoJfQRygVzKAF8axyC8zfnntmpHYXh2LQQIeX4m6T4BA7dCiOZECOrfIxd+d3cQTUra0hWLVPYV8g2w4e3g7gA4iqPTnFiMZ7iLJt566udJFkF9pD603nNyYTR3szCA==
+
+%URL%
+http://otsaloma.io/gaupol/
+
+%LICENSE%
+GPL
+
+%ARCH%
+any
+
+%BUILDDATE%
+1493008926
+
+%PACKAGER%
+Evangelos Foutras <evangelos@foutrelis.com>
+
+%DEPENDS%
+python-gobject
+gtk3
+gst-plugins-base
+gst-plugins-good
+iso-codes
+python-cairo
+python-pyenchant
+python-chardet
+gtkspell3
+desktop-file-utils
+hicolor-icon-theme
+
+%OPTDEPENDS%
+mpv: subtitle preview
+vlc: subtitle preview
+mplayer: subtitle preview
+gst-plugins-bad: extra media codecs
+gst-plugins-ugly: extra media codecs
+gst-libav: extra media codecs
+
+%MAKEDEPENDS%
+intltool
+

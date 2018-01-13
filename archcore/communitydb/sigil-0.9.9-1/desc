@@ -1,0 +1,64 @@
+%FILENAME%
+sigil-0.9.9-1-x86_64.pkg.tar.xz
+
+%NAME%
+sigil
+
+%VERSION%
+0.9.9-1
+
+%DESC%
+WYSIWYG ebook editor
+
+%CSIZE%
+3354280
+
+%ISIZE%
+15435776
+
+%MD5SUM%
+89bac151e202b3efc45183667395fa99
+
+%SHA256SUM%
+a720f268b4b210e3866fd0e4bbe5a35c583cde186e04a4bd1dfd9d9b944a8899
+
+%PGPSIG%
+iQIzBAABCAAdFiEEYEETBMCdNmKDQO7/zrFn77VyK9YFAlpT/LQACgkQzrFn77VyK9buDRAAjN57VkcO9N1fL8OUoufXU5YTaImtg9pYzeiyzodYZg2yBSMqO7StUdkdLtzEsJhud5dEjwngyVv8/sGOC3BVULX6j3IzcsUXiaq+dtZVrrU0+aUjxn4EULVLFoP7l8eKmyiPYtqpbaL/Ulz27LhJSE9pKe/8wf18os/y3q5ePFbsWiunu9dM9dvSVc6mxyYM3ytFM7wEDXWcisOsjdgJhEP7Ba3vaszQJPht3hhcZRAFLSWye5zO9hx9rJVRl7CHBum0XCQda5syGly28tP/PG88FYC1yN1Lum6GEjvMEDRzqBfS6DLu1XSTQWT7MtxJQy1bN/C6SGq0ZvZDy8pvK028KDTxbAQlQCBFma5aa0cYlXZuUQ8rlFGM9NIiZuX4cReEWVBBiY6djMZnY1MyoIFeOkaip7TGmjIecbrKhzgPKkCJ7ghQb3vi8kcoqisOmHHSva14fFzA3MdZb/SBAc7fLNtyjNEGLnBwo5LsMJiWBo0pZMp2T7hdXfyD2PCLynTsb9POrWQEtsjwGkh6tSzp+GfOQ5K0J3ieSi67T166/Vt7w9m8hMV+iaZmzmzYG62FJY98W6WJU/TxR2QYJmDSlrjFAGMz9X9G9jfmdOE4aj42oVotboIoQIKApSRG3GOIFvc/FcBRIYCxOWZd+FtzTaFKKfHxeacbwCfMbeY=
+
+%URL%
+https://sigil-ebook.com/
+
+%LICENSE%
+GPL3
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1515453354
+
+%PACKAGER%
+Eli Schwartz <eschwartz@archlinux.org>
+
+%DEPENDS%
+hicolor-icon-theme
+hunspell
+minizip
+python-lxml
+qt5-webkit
+
+%OPTDEPENDS%
+hunspell-en: for English dictionary support
+hyphen-en: for English hyphenation support in plugins
+python-html5lib: recommended for plugins
+python-chardet: recommended for plugins
+python-cssselect: recommended for plugins
+python-cssutils: recommended for plugins
+python-pillow: recommended for plugins
+python-regex: recommended for plugins
+
+%MAKEDEPENDS%
+qt5-tools
+qt5-svg
+cmake
+

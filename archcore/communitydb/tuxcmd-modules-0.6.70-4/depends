@@ -1,0 +1,9 @@
+%DEPENDS%
+tuxcmd
+
+%OPTDEPENDS%
+gvfs: for gvfs module
+
+%MAKEDEPENDS%
+sharutils
+

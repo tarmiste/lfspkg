@@ -1,0 +1,6 @@
+%DEPENDS%
+gtk2
+
+%MAKEDEPENDS%
+pkgconfig
+

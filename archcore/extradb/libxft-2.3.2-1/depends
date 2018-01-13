@@ -1,0 +1,7 @@
+%DEPENDS%
+fontconfig
+libxrender
+
+%MAKEDEPENDS%
+pkgconfig
+

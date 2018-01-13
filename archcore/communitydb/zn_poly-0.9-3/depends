@@ -1,0 +1,6 @@
+%DEPENDS%
+gmp
+
+%MAKEDEPENDS%
+python2
+

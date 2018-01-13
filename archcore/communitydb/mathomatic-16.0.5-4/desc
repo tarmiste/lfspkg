@@ -1,0 +1,55 @@
+%FILENAME%
+mathomatic-16.0.5-4-x86_64.pkg.tar.xz
+
+%NAME%
+mathomatic
+
+%VERSION%
+16.0.5-4
+
+%DESC%
+General purpose Computer Algebra System written in C
+
+%CSIZE%
+262668
+
+%ISIZE%
+813056
+
+%MD5SUM%
+5198eb857766afce48625986f46a7853
+
+%SHA256SUM%
+34642c09212d75ee5f1a5fd88047b030d843bf77563aa73d4f99c7592c0592db
+
+%PGPSIG%
+iQEcBAABCAAGBQJYH4oIAAoJELvkN3FIcyipRQEIAIiiU3+1u9qTOTYDUq/p7wanIiMtVZV+GtT8eh22q0z3GsJbPfqyvXsIVzfdDJMFa2eWZCrfdvwyoDKuZvsIcWOC5UJ8wZFS9l/QWdI3jK0uPlIWx935g/Q2roQHtmtwLHyo1KmwlFgnfZ4mQb/bFjPxJzpgrBc1qex5A4kPzHzRXw++QBeIsWD5a89FgH4WthtfUB1LzL8jQ+/s0cgSMVbw7e5bIlLGR5kxfhbQHAsESqg84l0vh5jka0xCB9iO7g6+U8hT3T3/T5rNnKGHuU67Oi6x8enZsFPZ6yTr1l91cDNuwGoQ57o+w27TkvtIFoyPUzQYWkAkHuYo8yo/qW8=
+
+%URL%
+http://mathomatic.orgserve.de/math/
+
+%LICENSE%
+LGPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1478461952
+
+%PACKAGER%
+Bartłomiej Piotrowski <bpiotrowski@archlinux.org>
+
+%DEPENDS%
+readline
+
+%OPTDEPENDS%
+python2: for running /usr/share/doc/mathomatic/factorial/factorial
+bash: for running a test script
+m4: for complex operations using the matho script
+rlwrap: for readline editing
+gnuplot: for plotting
+
+%MAKEDEPENDS%
+time
+

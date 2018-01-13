@@ -1,0 +1,12 @@
+%DEPENDS%
+python2
+freetype2
+sdl
+libpng
+mpg123
+libogg
+libvorbis
+
+%MAKEDEPENDS%
+cmake
+

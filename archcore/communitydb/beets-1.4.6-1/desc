@@ -1,0 +1,70 @@
+%FILENAME%
+beets-1.4.6-1-any.pkg.tar.xz
+
+%NAME%
+beets
+
+%VERSION%
+1.4.6-1
+
+%DESC%
+Flexible music library manager and tagger
+
+%CSIZE%
+637216
+
+%ISIZE%
+3569664
+
+%MD5SUM%
+f7570141c3e274350d927303f77d5150
+
+%SHA256SUM%
+2b1a1a04406d7d77eea261a024e4833634105bafb21440b17006e48d1e2986a6
+
+%PGPSIG%
+iQEzBAABCAAdFiEElDfdOBWnqRaePTlGr/XZUJi8b/UFAlo84jgACgkQr/XZUJi8b/VzJAf9HqEglX7AkPgA+niwrUmoMarv9k/Y7szslzsXeKCXmX491pU0+JzwVL+U87fUOpkeSsR1k08+WWdjj2eSUs62QGMcAdrEc1uKPvmwLTk9KdlDoy+w6j5k+fVAbmRskdJHCEndDXePgNg6G1mAp6y7BemIlbEcx4b2NpHqNE54OetQ2skPHGmY8FR90jJ8axNExUcc/cVEe5zn+CXmHERxCT9A30MdqLz9ypzJqrWLuQ01tpmQUv37eMqSI+oLNNexyIHpuMmR0hkuWO8ry0xgslyRP6gqzd2n0Ln4NTZgDXeKHef3CYjFDqNFoTM+/MwUh0tLLrwiOJWF6so+3RHIVQ==
+
+%URL%
+http://beets.radbox.org/
+
+%LICENSE%
+MIT
+
+%ARCH%
+any
+
+%BUILDDATE%
+1513939481
+
+%PACKAGER%
+Maxime Gauduin <alucryd@archlinux.org>
+
+%DEPENDS%
+python-jellyfish
+python-munkres
+python-musicbrainzngs
+python-mutagen
+python-setuptools
+python-six
+python-unidecode
+python-yaml
+
+%OPTDEPENDS%
+bash-completion: Bash completion
+bs1770gain: ReplayGain plugin
+gst-plugins-bad: Chromaprint/Acoustid, BPD, ReplayGain plugins
+gst-plugins-good: Chromaprint/Acoustid, BPD, ReplayGain plugins
+gst-plugins-ugly: Chromaprint/Acoustid, BPD, ReplayGain plugins
+gst-libav: Chromaprint/Acoustid, BPD, ReplayGain plugins
+gst-python: Chromaprint/Acoustid, BPD, ReplayGain plugins
+imagemagick: Thumbnails plugin
+python-beautifulsoup4: Lyrics plugin
+python-flask: Web plugin
+python-gobject: ReplayGain plugin
+python-mpd2: MPDStats plugin
+python-pyacoustid: Chromaprint/Acoustid plugin
+python-pylast: LastGenre plugin
+python-requests: Chromaprint/Acoustid, BPD, FetchArt plugins
+python-xdg: Thumbnails plugin
+

@@ -1,0 +1,7 @@
+%DEPENDS%
+libxcb>=1.7
+
+%MAKEDEPENDS%
+gperf
+xorg-util-macros
+

@@ -1,0 +1,57 @@
+%FILENAME%
+gpsd-3.16-4-x86_64.pkg.tar.xz
+
+%NAME%
+gpsd
+
+%VERSION%
+3.16-4
+
+%DESC%
+GPS daemon and library to support USB/serial GPS devices
+
+%CSIZE%
+517808
+
+%ISIZE%
+3107840
+
+%MD5SUM%
+b0bf70c89f82611b3b7283315460ee8a
+
+%SHA256SUM%
+32ea8e609952af288569b6566e9ed241febe782e19aa1e7c2c44aff0708da757
+
+%PGPSIG%
+iQIzBAABCgAdFiEE4kC1fixGMLp2ji8m/BtUfI2BcsgFAlmDWC0ACgkQ/BtUfI2BcshCnA//bMHkPQWHvGcyAug/GG/rJL6CuF+w0k6YUBufI9E1bZJ/1IRGkoGCfOhcssbqEslOICYdCHxUVc1Qu6a7eujL8MnRBtAgmM6FRkuo+NmNyEW4dUSYHU+ofuePYnO5u10jUGrfFVWI/dFY2g7Jr/4L/jmXFLwLr4E8D+BZe4i+MEiJuXLSIRA+hC/pFqbZGYpXZ5XfYmo8qiMeLnpXcaovY7cz1xJLTa3NpJ4YyMoVdu8APIqGSKYB3aOgkUiOPHlC252exaWNV7H3Vb4m/1DDbicGBCGyiR5wb4133ZplRT5bKbUCDW5bQUqV/Z3JPRqKrZ1SrXnHzAuW9MnMhDJYATOXmKHVuhbYidQNN0dqKN9XQoUoJXoL68NPdoBm772juIMl3CPLv+5WDBIRS6m87oo6/cY42NPxigx8DkoNPNdn+VlPC0fFGz3hoon4koPwzRHeOnx5FYy/wRxt9mO7Uws2T9+Cyvf2z3MGHTu42Ov1eZ2x6E0tcFobZ/nBiY5toDrQVrxmPkE2674BmYuZWhWG7bC8vea5PPKWP7TkQS9wF5jabOILqInwKjDX2RXPtfglzlT2h5CtYXVWioEiN6xlweO+46sFppeYNjNRwVnL7jEGqAvqkOmnZ3JdHTDbq67lUojEPH8Vqi94/Ic8s6uLmzPz6Uoetac2soFZCPg=
+
+%URL%
+http://catb.org/gpsd/
+
+%LICENSE%
+BSD
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1501779832
+
+%PACKAGER%
+Levente Polyak <anthraxx@archlinux.org>
+
+%DEPENDS%
+python2
+libusb
+bluez-libs
+desktop-file-utils
+
+%OPTDEPENDS%
+php: generate a PHP status page for your GPS
+php-gd: image support for the PHP status page
+pygtk: GUI frontends
+
+%MAKEDEPENDS%
+scons
+docbook-xsl
+

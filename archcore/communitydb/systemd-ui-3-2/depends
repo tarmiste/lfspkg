@@ -1,0 +1,10 @@
+%DEPENDS%
+gtk3
+libgee
+libnotify
+
+%MAKEDEPENDS%
+vala
+docbook-xsl
+libxslt
+

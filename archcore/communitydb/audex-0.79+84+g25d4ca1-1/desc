@@ -1,0 +1,57 @@
+%FILENAME%
+audex-0.79+84+g25d4ca1-1-x86_64.pkg.tar.xz
+
+%NAME%
+audex
+
+%VERSION%
+0.79+84+g25d4ca1-1
+
+%DESC%
+A CDDA extraction tool with a ftp upload function for KDE
+
+%CSIZE%
+331572
+
+%ISIZE%
+1177600
+
+%MD5SUM%
+ce42aa64c2422ff9902f6fd2aea19e16
+
+%SHA256SUM%
+e3fc63fad3fd7fe9569ecfc733c88ae0733e69d323db67e86af1484fe17930d4
+
+%PGPSIG%
+iQEzBAABCAAdFiEEFRnVq6Zb9vwrc8dWek52CV2KUuQFAlo6sSkACgkQek52CV2KUuSkkwf/YXQoOUdjK2CelM7JHO1TGglDIz0GMHDphVa5f/N2gZNLwSnFlrW1Mx5G8Ib12MDNCLJRclUA/46Tm9E1QXXf6apfcqBM5fkIXCBoXMGSQmanlEslSgtovWGXFmcUUUDifoVQRMQawyKbUmyjfiVaONmbXnMojW9aGwAvDDjUtikCBwuUHeKplN2BOMcPLN549Gqk8eT1S7v9dPf4Ih9rKReAmnp3+LZ+nROc2MOW04/YohvFpt4vxpVegCcu9KUCYUjauBLLsIs59RUliNoFUKHfVCt3994rBDylfBu6hgSUare310W73NT18xzkOD3Y4ewIID19uqFmzRNa7rZONA==
+
+%URL%
+http://kde-apps.org/content/show.php?content=77125
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1513795756
+
+%PACKAGER%
+Antonio Rojas <arojas@archlinux.org>
+
+%DEPENDS%
+libkcddb
+hicolor-icon-theme
+kcmutils
+
+%OPTDEPENDS%
+vorbis-tools: OGG encoder
+faac: MP4/M4A/AAC encoder
+flac: FLAC encoder
+lame: MP3 encoder
+
+%MAKEDEPENDS%
+extra-cmake-modules
+git
+

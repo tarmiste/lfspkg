@@ -1,0 +1,42 @@
+%FILENAME%
+sage-data-combinatorial_designs-20140630-2-any.pkg.tar.xz
+
+%NAME%
+sage-data-combinatorial_designs
+
+%VERSION%
+20140630-2
+
+%DESC%
+Data for Combinatorial Designs
+
+%CSIZE%
+9416
+
+%ISIZE%
+31744
+
+%MD5SUM%
+a74a5fd374656cca3d0408e9490dcbf7
+
+%SHA256SUM%
+b7fd7c8fc38ababf975d33ed95215fadc0d64ed3170a1427cd20f863e8c100a5
+
+%PGPSIG%
+iQEcBAABCAAGBQJYCy47AAoJEHpOdgldilLkrTkH+we43wdF3m+Cpw2649N34m+sqZIfAOiolq3fRfHsKq7vjlKJ6Y+L/uJSvZB0dXetoBXNR+CAtPAxui1d8UZdIjB1x9trany+tni8UxqSaN52ihdfzEFepJ/Nhx2B/xtILXLcpz6uupgORCrkMhHqP3Pk0PUnfebBoCGj7/bnTOMfskcff3R/ZJ/R8whb1cIKejE005PH58OYMiwRC0cGaIp5wQoEBepf4Aem2YA5ZjZDtgwWrPVI8IE81j/8lRgVqtt/bcc8OZ8+fOPTnJlBSTzpzuMipB/yK1u0/4ZPNR3JOpD/Tqi0nMN7nYsQwqGGKlICF4ORBOXWZmw9WufBQCo=
+
+%URL%
+http://www.sagemath.org
+
+%LICENSE%
+custom:public domain
+
+%ARCH%
+any
+
+%BUILDDATE%
+1477127702
+
+%PACKAGER%
+Antonio Rojas <arojas@archlinux.org>
+

@@ -1,0 +1,6 @@
+%CONFLICTS%
+grub-theme-deepin
+
+%MAKEDEPENDS%
+git
+

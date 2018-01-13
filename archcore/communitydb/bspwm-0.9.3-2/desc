@@ -1,0 +1,54 @@
+%FILENAME%
+bspwm-0.9.3-2-x86_64.pkg.tar.xz
+
+%NAME%
+bspwm
+
+%VERSION%
+0.9.3-2
+
+%DESC%
+Tiling window manager based on binary space partitioning
+
+%CSIZE%
+87944
+
+%ISIZE%
+210944
+
+%MD5SUM%
+657e7960897cedb211213960768834c7
+
+%SHA256SUM%
+7c04ffebf98da81ca48412e49439accf5c68a7824f3fb2d32f563ef988ba276b
+
+%PGPSIG%
+iQEzBAABCAAdFiEElihV8HLHoBhGQFhk/PPIy1z5yNQFAln26+0ACgkQ/PPIy1z5yNRAPAf+MWgdiwRmug+TbMgHF3XeOI5VMpqM72MjkgDmjxblb/h2VBPHK/HogRQ0/eXPpW3iED1C/bw7fw3X81F//iZyRdx8pV4f4fmcYpjz01bXLE0ffM4N3hGUnNuTW4hppacIRwD6saZoyD0BPknEeOj4kq51lIwescSaqMrJ7CG/F9/cnGUd9ThR3S6HS5ixG7aGP7/ePq/QiYZtY1yyPfQF8c1sMn+tEuWsQHrS8JmSgEg72Rk+CY2lLEyXosH3Pt18Mrvcop2akRCvyPhoFye3BXOirHGe9/jhTkXJAiUabbkehFL4tOqIOoFRlsWAxylw6yMOdSRA8FUftmBaQqr8sw==
+
+%URL%
+https://github.com/baskerville/bspwm
+
+%LICENSE%
+custom:BSD
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1509354429
+
+%PACKAGER%
+Alexander Rødseth <rodseth@gmail.com>
+
+%DEPENDS%
+xcb-util
+xcb-util-wm
+xcb-util-keysyms
+
+%OPTDEPENDS%
+sxhkd: to define keyboard and pointer bindings
+xdo: for the example panel
+
+%MAKEDEPENDS%
+git
+

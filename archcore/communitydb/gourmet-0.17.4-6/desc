@@ -1,0 +1,59 @@
+%FILENAME%
+gourmet-0.17.4-6-any.pkg.tar.xz
+
+%NAME%
+gourmet
+
+%VERSION%
+0.17.4-6
+
+%DESC%
+A simple but powerful recipe-managing application
+
+%CSIZE%
+2666968
+
+%ISIZE%
+12923904
+
+%MD5SUM%
+c53f0d3b27dcc9484184aaa6c9ce06ad
+
+%SHA256SUM%
+ddec88755d345f11bc95fa92895f8d041861fcefa627fbfbea740a8dc9bea17e
+
+%PGPSIG%
+iQEzBAABCAAdFiEEzgvecadZqH8j8PfYth284QkBwWMFAllO2WkACgkQth284QkBwWMt1gf/fMfDS0lb8d2wNxNh6WDXoWqk2p7Dg8095hcZvFS1oAU6uMg9+rFIQGDiKQiy+QuSjycBh6MqGvaipCdW7UVaxoqqezI/3UlmbCvhndlpfDVE5qVH++aZXySPq4MhuBOUAOgXZv933cD6VgKvXauZ7/JMa0xY2bRp7jXb4gDTyQoaCL8iA4SK6g/ReVQahFfSsxgxnpgrXcu7HW83iZxLkzK/wNlDAgVlo74jPW0uAuGJP+kB6NZSwt6fId7yc7OWSlqo4oLiUolMQIAyMSgqMjRDlfr3/sel9wNxooSP0y1isi9BL0GnS25XcTcZNF27sJFRm3A7D1acFMWBHtmTNg==
+
+%URL%
+http://thinkle.github.io/gourmet/
+
+%LICENSE%
+GPL
+
+%ARCH%
+any
+
+%BUILDDATE%
+1498339643
+
+%PACKAGER%
+Balló György <ballogyor+arch@gmail.com>
+
+%DEPENDS%
+pygtk
+python2-elib-intl
+python2-pillow
+python2-sqlalchemy
+
+%OPTDEPENDS%
+ipython2: Python Shell plugin
+pyrtf: RTF support
+python2-beautifulsoup4: Webpage import plugin
+python2-gtkspell: Spell Checking plugin
+python2-poppler: Printing and PDF Export plugin
+python2-reportlab: Printing and PDF Export plugin
+
+%MAKEDEPENDS%
+python2-distutils-extra
+

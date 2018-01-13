@@ -1,0 +1,55 @@
+%FILENAME%
+galera-25.3.21-1-x86_64.pkg.tar.xz
+
+%NAME%
+galera
+
+%VERSION%
+25.3.21-1
+
+%DESC%
+write set replication (WSREP) provider for MariaDB cluster
+
+%CSIZE%
+1208596
+
+%ISIZE%
+4860928
+
+%MD5SUM%
+b54e4827fc0b7eda731ab116714e9c16
+
+%SHA256SUM%
+a19b835a43850c51b75ed81f1f007620b87196b3bba4327f181d594637083e53
+
+%PGPSIG%
+iQFCBAABCAAsFiEEAv0cepNOYUVFhJ8ZpiNAdEmOnO4FAllbfK0OHGFyY2hAZXdvcm0uZGUACgkQpiNAdEmOnO7q7Af/dnUbne1LfeIESScVobXl24lWYYrYxtAbXWLJZew1MOro7X+yYYAY2eLGyx/bIDpYZSrf6vLBJDdcz30RSM78UI+SUGsLBcg67g/IzwZW995BU5mdjLIPjtgrRnNeMRVlW+A9fQ9LtncHg2Keo7+iOuZW/B6SQAbTD+cFigUq86ufsRIYnSLEUCCOxCLdnYChpuJqKUqTWfg39rgAOY6DyqrdhkwACkIRPLzqXELgyhswk/gxGNJTPK7i4OljPOSHB013vorogF/grzzB0/hssRP8dUDL+QOs92z3FVENz65PSYy7Dq+F32JUhilzPu9mpIAH1p2NhdKl90lb7aDUyQ==
+
+%URL%
+http://www.codership.com/
+
+%LICENSE%
+GPL2
+custom:OpenSSL Linking Exception
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1499167439
+
+%PACKAGER%
+Christian Hesse <arch@eworm.de>
+
+%DEPENDS%
+mariadb
+openssl
+
+%OPTDEPENDS%
+rsync: transfer database state to a newly joined node with rsync
+
+%MAKEDEPENDS%
+asio
+check
+scons
+

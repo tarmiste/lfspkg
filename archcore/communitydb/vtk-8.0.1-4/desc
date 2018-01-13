@@ -1,0 +1,95 @@
+%FILENAME%
+vtk-8.0.1-4-x86_64.pkg.tar.xz
+
+%NAME%
+vtk
+
+%VERSION%
+8.0.1-4
+
+%DESC%
+A software system for 3D computer graphics, image processing, and visualization
+
+%CSIZE%
+37198216
+
+%ISIZE%
+212429824
+
+%MD5SUM%
+9bee239af43d153a3040308eb0df6171
+
+%SHA256SUM%
+7e0861fb3cd2854fab52fac83d4e3f76d7c24cd4d9137a4ee1256bf1313ce6a1
+
+%PGPSIG%
+iQIzBAABCAAdFiEEd5zSlCYpt/oEq48XLokBIzE2HwEFAlo7oY8ACgkQLokBIzE2HwGBDw//UlOtvmkmEiTAwtAauv68tkEsX3omFrlsfv0EmtRiTY8pbOh+nLu+Lb5F9SNDAiDQL7Ono58dVsk+xHpFhTwqkCsfFMNzrZlhXlzXB6AW5YpsyaQmqtgz5npOukI02ok6hTmcrnzP3bCYAVi5tdJSG6gOUK9Hi1yRDigZNBxnlRg+V0bLegm92Vwj3GHk3uez/xbxbq9g5/SyJh3s0jvJ2grEnYG0ZXLQfNyoDTfbL39z9du/L2HiC66Z1K2InVg9UJd228B4vXEKtkSCRggIEW5xitALtpEjbaGSAUK25Mel9dfFN/Csuwr14QASC5FdxMTpHCpRm8zVEYmUUvV+OSgstIa6rxI7MROALHIzAPOSw2SLqv1BQsztdbBLa1/z9ELWVf523B9ueCxz8aeOZXiMa6ojJgsTwjtPkBaX7fEd+5Rzs+ZjSq1iyDKVU9PYyOgAEEoWnAT2kEYYleUlCwf54+8XFSRp6FyeXSUYHgP2lM2XDCEZzKoHo4lmmb71msvm9ZJJ8lfTqxxNufG3/naqYcQMMG9BhtfbVhXWEve994LB+8Xi/oYvR3pi1KBVEB3X4EO/ehxaTYpCH4Vy9O8GuDdgJeMprggQiRZqS6f+0JDGWJNuGDaS+x+mJInP+m3Kx953RWzdbLpCJyeDxrUnspCMWndCU6MlhCUGnu0=
+
+%URL%
+http://www.vtk.org/
+
+%LICENSE%
+BSD
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1513857170
+
+%PACKAGER%
+Evgeniy Alekseev <arcanis@archlinux.org>
+
+%DEPENDS%
+gcc-libs
+
+%OPTDEPENDS%
+python2: python bindings
+java-runtime: java bindings
+tk: tcl bindings
+gnuplot: plotting tools
+graphviz: drawing tools
+python2-matplotlib: for Matplotlib rendering
+python2-twisted: for vtkWeb
+python2-autobahn: for vtkWeb
+python2-mpi4py: OpenMPI python support
+openmpi: OpenMPI support
+qt5-x11extras
+qt5-webkit: WebKit support
+ffmpeg
+gdal
+glew
+hdf5
+jsoncpp
+libharu
+mariadb
+proj
+unixodbc
+
+%MAKEDEPENDS%
+boost
+cmake
+doxygen
+ffmpeg
+gdal
+glew
+gnuplot
+hdf5
+java-environment
+jsoncpp
+libharu
+mariadb
+openmpi
+proj
+python2-autobahn
+python2-matplotlib
+python2-mpi4py
+python2-twisted
+qt5-base
+qt5-tools
+qt5-webkit
+qt5-x11extras
+tk
+unixodbc
+wget
+

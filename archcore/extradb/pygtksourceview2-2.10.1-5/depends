@@ -1,0 +1,8 @@
+%DEPENDS%
+gtksourceview2>=2.10.0
+pygtk>=2.17.0
+
+%MAKEDEPENDS%
+intltool
+pkg-config
+

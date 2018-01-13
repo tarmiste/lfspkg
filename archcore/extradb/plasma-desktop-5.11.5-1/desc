@@ -1,0 +1,80 @@
+%FILENAME%
+plasma-desktop-5.11.5-1-x86_64.pkg.tar.xz
+
+%NAME%
+plasma-desktop
+
+%BASE%
+plasma-desktop
+
+%VERSION%
+5.11.5-1
+
+%DESC%
+KDE Plasma Desktop
+
+%GROUPS%
+plasma
+
+%CSIZE%
+10410196
+
+%ISIZE%
+37052416
+
+%MD5SUM%
+1ecccf56c6c845d75b90e49aa449d92d
+
+%SHA256SUM%
+be2ab6a3bd819d83b695c670936ced98d358c989e34ea256d15fff82bac41923
+
+%PGPSIG%
+iQEzBAABCAAdFiEEFRnVq6Zb9vwrc8dWek52CV2KUuQFAlpL4zsACgkQek52CV2KUuSRNggAoBo+eO1Se7Z89zKm1Gaji9w10Jz4CFZIv9Fh8aeK4WFX7Y1J08Rauzy3XPQP+wzqAmpLowO5DFfHbTCqawYdbeBtI/Yd0hT5TW6sKTFeya4CmWqdNqv1UV8SYQ53OyPstIGowLMbBds/XFIC5YAczZ4wvLKDJgoq2QoAq8Xdxj6mnfTYkRKLmmdKpPX+s5imkjKdgYt6GghbnaFXdgFiIpL38IOp+TuiO4Ujq4n5k9VlkjGLDuRY0F8dmYLcb5RURA1wbw57O1YoR0G1MVofYxRk6f7xGtmNFwvLt4zje8RfdKiGOeEPeROvYiqDIsWSBQpp89p+6/veONQNx19bcQ==
+
+%URL%
+https://www.kde.org/workspaces/plasmadesktop/
+
+%LICENSE%
+LGPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1514918739
+
+%PACKAGER%
+Antonio Rojas <arojas@archlinux.org>
+
+%DEPENDS%
+polkit-kde-agent
+libcanberra
+libxkbfile
+kmenuedit
+appstream-qt
+systemsettings
+ksysguard
+kpeople
+baloo
+qt5-graphicaleffects
+knetattach
+
+%OPTDEPENDS%
+plasma-nm: Network manager applet
+powerdevil: power management
+ibus: kimpanel IBUS support
+scim: kimpanel SCIM support
+discover: manage applications installation from the launcher
+
+%MAKEDEPENDS%
+extra-cmake-modules
+kdoctools
+boost
+xf86-input-evdev
+xf86-input-synaptics
+xorg-server-devel
+libibus
+scim
+python
+kdesignerplugin
+

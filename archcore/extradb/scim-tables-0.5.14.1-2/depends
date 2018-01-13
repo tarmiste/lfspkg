@@ -1,0 +1,6 @@
+%DEPENDS%
+scim
+
+%MAKEDEPENDS%
+intltool
+

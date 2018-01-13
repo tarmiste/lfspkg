@@ -1,0 +1,63 @@
+%FILENAME%
+filemanager-actions-3.4-2-x86_64.pkg.tar.xz
+
+%NAME%
+filemanager-actions
+
+%VERSION%
+3.4-2
+
+%DESC%
+File-manager extension which offers user configurable context menu actions
+
+%CSIZE%
+2825284
+
+%ISIZE%
+12508160
+
+%MD5SUM%
+2336c337a14e366f3c48b834aeb1b4c0
+
+%SHA256SUM%
+19c96dc8057956f31900fd01f56025fab4e854ae947ec08fb9918d15e7fa6a32
+
+%PGPSIG%
+iQEcBAABCAAGBQJZzNU5AAoJEJdqxvo7lPoQLAkIALgxhI32Ru0UKozERIaF2v+A0Xg709UGIkTp4iE8/X4OL8EW9oz3lYWUYvwFbSxGdpw5IX//BzfljbG/ZOm7ZBylqya134mnjJyRlIDUSVE30XN/39m7oe/TcvQ4wztgnlI1o06r94aeaTKvVWFDCHr9JafvhzItPuE8kZatOQHBRA7ykoSnUvJR9eCGGN/MmlY21VvkFCN40amPyrCoaKPSZleBSb40RVGAvOKCU+oy83m7RWGt3f1e1owQJ1WKJKcmzVoAVBAJVD8eK0HFVN43e9q8RculSU87xwbUlbceAjtkj/JwhqrL4u1/Tw81JSEtOd/ROdHpgCOOnmn+TxU=
+
+%URL%
+https://git.gnome.org/browse/filemanager-actions
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1506596078
+
+%PACKAGER%
+Jan de Groot <jgc@archlinux.org>
+
+%REPLACES%
+caja-actions
+caja-actions-gtk3
+nautilus-actions
+
+%DEPENDS%
+gtk3
+libgtop
+
+%OPTDEPENDS%
+caja: supported file manager
+nautilus: supported file manager
+nemo: supported file manager
+
+%MAKEDEPENDS%
+gnome-doc-utils
+intltool
+caja
+libnautilus-extension
+nemo
+

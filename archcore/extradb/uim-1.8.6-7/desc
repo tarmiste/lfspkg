@@ -1,0 +1,60 @@
+%FILENAME%
+uim-1.8.6-7-x86_64.pkg.tar.xz
+
+%NAME%
+uim
+
+%VERSION%
+1.8.6-7
+
+%DESC%
+Multilingual input method library
+
+%CSIZE%
+2653108
+
+%ISIZE%
+12576768
+
+%MD5SUM%
+d068307fe748db2e8c69dd54d8e26662
+
+%SHA256SUM%
+06fdd9f07fe46e653c7bb5f2b34340ff43b262c57b8fdd90a1efd4fd7afba9e2
+
+%PGPSIG%
+iF4EABEIAAYFAld5Q2kACgkQ5i+FMQDw0PAmSQD+Nwrl3OBgUXVhka3Mu1ughQy0szCdMcraEulUAAMi6U4A/1m9+YjrNkfRPveBHTTdmfmuooES76rT+F7LXMnlYjuv
+
+%URL%
+https://github.com/uim/uim/wiki
+
+%LICENSE%
+custom:BSD
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1467564721
+
+%PACKAGER%
+Gaetan Bisson <bisson@archlinux.org>
+
+%DEPENDS%
+libxft
+libedit
+m17n-lib
+
+%OPTDEPENDS%
+qt4: immodule and helper applications
+gtk2: immodule and helper applications
+gtk3: immodule and helper applications
+
+%MAKEDEPENDS%
+intltool
+gettext
+gtk2
+gtk3
+qt4
+anthy
+

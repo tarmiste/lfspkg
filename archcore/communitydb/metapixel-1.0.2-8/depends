@@ -1,0 +1,11 @@
+%DEPENDS%
+giflib
+libjpeg
+libpng
+perl
+glib2
+
+%MAKEDEPENDS%
+git
+docbook-xsl
+

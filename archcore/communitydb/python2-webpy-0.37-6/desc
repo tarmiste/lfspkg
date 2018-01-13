@@ -1,0 +1,42 @@
+%FILENAME%
+python2-webpy-0.37-6-any.pkg.tar.xz
+
+%NAME%
+python2-webpy
+
+%VERSION%
+0.37-6
+
+%DESC%
+Simple but powerful web framework for python
+
+%CSIZE%
+160712
+
+%ISIZE%
+1107968
+
+%MD5SUM%
+52ce3b770b88c1d7dcad455f14b17037
+
+%SHA256SUM%
+042fe4ea59cd88247b61d5987c06f1fbaa78c3925aa2afe23d8ce7139faca42a
+
+%PGPSIG%
+iQEcBAABAgAGBQJUBJ+8AAoJEPzzyMtc+cjUH5cH/1JWoGnrdX7kj1Xiu/we1nS4IQfj3zI8TpGIMlWhN0t7gv+breZV1xBax6UGt/gwl9RGSil0PaE04C+MMgODJH+z3axMtSPF5qeKk4JZj8L91wOl0sT+muQ1uH9S6vM1i9Z+In3k7lHpfde+F1eZttbX+rx5CWtbTlwIv9NZ9VMRV0Ny8I2bRITnApeLGiSvVLpU6YBwDE0GgyuNX+vPdPEvr3iAysIKI4FvmY24u9JPWwtQeNWbJwheUAjdNzkeAp0Iu0CRB9NbrFWzK8a6iDjvaHHk9FpXULJGbcVC5GxQg87ZaXn/+0Kru/DXloJsVF+M9MpE5gHnEHhO7iBzWOU=
+
+%URL%
+http://webpy.org/
+
+%LICENSE%
+custom:public domain
+
+%ARCH%
+any
+
+%BUILDDATE%
+1409589016
+
+%PACKAGER%
+Alexander Rødseth <rodseth@gmail.com>
+

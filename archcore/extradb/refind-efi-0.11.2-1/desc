@@ -1,0 +1,57 @@
+%FILENAME%
+refind-efi-0.11.2-1-x86_64.pkg.tar.xz
+
+%NAME%
+refind-efi
+
+%VERSION%
+0.11.2-1
+
+%DESC%
+Rod Smith's fork of rEFIt UEFI Boot Manager - Built with GNU-EFI libs
+
+%CSIZE%
+3808396
+
+%ISIZE%
+5479424
+
+%MD5SUM%
+55b4490d55f2708a37d56901701ac911
+
+%SHA256SUM%
+e61b8f6319524619208f4a124d3aa88502ccea40b225389c889fe1eaabbe651e
+
+%PGPSIG%
+iQEzBAABCAAdFiEEW34/txt/EDKaHAOrdx32Yn7faB8FAloZMp8ACgkQdx32Yn7faB+KLAgAqogDQQQwTEc6/NB4Szq++GjbtYE+GVjy1pGXtgNUCNG+LnRzEM4+cxkhPUISbC2cFVjOmlqyBtMY31UVqSvswhEqaGu14q2evYH2WT36O2uZF/gHMK9uwU6W8INfGoFBNz4bxqpRSMDdexK8PiYN+PnFjJ2zhVTLEgyliAnqCClVt8SshTA1kDaLDq5TPV3+7tWdgAfy6jP0ogjmvoDVCgvU3oKDwkyj9yZPSy+WJlfKGxOwo1WV0bnhCy5TIWyF4oXg38q7UK/cWyfVFjs5a/KODz44xvDFbVdwr/B4p1KiVkq7VaitIgJDMkfXmf4VHl8VrANsNDFvoEay5LrIeg==
+
+%URL%
+http://www.rodsbooks.com/refind/index.html
+
+%LICENSE%
+GPL3
+custom
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1511600764
+
+%PACKAGER%
+Tobias Powalowski <tpowa@archlinux.org>
+
+%DEPENDS%
+bash
+dosfstools
+efibootmgr
+
+%OPTDEPENDS%
+mactel-boot: For bless command in Apple Mac systems
+imagemagick: For refind-mkfont script
+python: For refind-mkdefault script
+
+%MAKEDEPENDS%
+gnu-efi-libs
+git
+

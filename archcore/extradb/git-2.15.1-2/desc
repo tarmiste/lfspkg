@@ -1,0 +1,80 @@
+%FILENAME%
+git-2.15.1-2-x86_64.pkg.tar.xz
+
+%NAME%
+git
+
+%VERSION%
+2.15.1-2
+
+%DESC%
+the fast distributed version control system
+
+%CSIZE%
+5628300
+
+%ISIZE%
+36183040
+
+%MD5SUM%
+064f7d87c6f0d3aea1d10aed89ff7634
+
+%SHA256SUM%
+32391c072b9eecdb6f14a0d9e993d24e8b4f1b5d754eccf64e773959d3574221
+
+%PGPSIG%
+iQFCBAABCAAsFiEEAv0cepNOYUVFhJ8ZpiNAdEmOnO4FAlow+TAOHGFyY2hAZXdvcm0uZGUACgkQpiNAdEmOnO7heggAvZAjsvgsJf04I7cykIF/8F1Mm1ZNHZkI8xygeION/+tYpxgzi4DNPSSwu/guzwV26ZxtVwtydge97Ohh9mUYf90brVYzxIrHL4P2W3ZQa4pjdvVts0DxjtqGV/1sj1edptKuhmOWFBMgunV9GUgNmJNE9HjmqJPU7bNjJv6xP0j2pEj3S1/7z65so9ORi1nAD70JS5MzTQ6Go4KxFHG8Btu2NPB4yaLHQmi7/Vr1LpnQPo4hJHFLGNPLhPMXiLVn66OePA/L/JEsECjD0X2OBPEW46JMSdkG5C4ZPb8l/NDmwHbI7sjmqsvqjAZaRwPE6che0//pnkFOubV0SMLh3A==
+
+%URL%
+http://git-scm.com/
+
+%LICENSE%
+GPL2
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1513158508
+
+%PACKAGER%
+Christian Hesse <arch@eworm.de>
+
+%REPLACES%
+git-core
+
+%PROVIDES%
+git-core
+
+%DEPENDS%
+curl
+expat>=2.0
+perl-error
+perl>=5.14.0
+openssl
+pcre2
+grep
+shadow
+
+%OPTDEPENDS%
+tk: gitk and git gui
+perl-libwww: git svn
+perl-term-readkey: git svn
+perl-mime-tools: git send-email
+perl-net-smtp-ssl: git send-email TLS support
+perl-authen-sasl: git send-email TLS support
+perl-mediawiki-api: git mediawiki support
+perl-datetime-format-iso8601: git mediawiki support
+perl-lwp-protocol-https: git mediawiki https support
+perl-cgi: gitweb (web interface) support
+python2: various helper scripts
+subversion: git svn
+gnome-keyring: GNOME keyring credential helper
+
+%MAKEDEPENDS%
+python2
+emacs
+libgnome-keyring
+xmlto
+asciidoc
+

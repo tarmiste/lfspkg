@@ -1,0 +1,9 @@
+%DEPENDS%
+libxmu
+libx11
+libxcursor
+
+%MAKEDEPENDS%
+xorg-util-macros
+xbitmaps
+

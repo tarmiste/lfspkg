@@ -1,0 +1,62 @@
+%FILENAME%
+texmacs-1.99.6-1-x86_64.pkg.tar.xz
+
+%NAME%
+texmacs
+
+%VERSION%
+1.99.6-1
+
+%DESC%
+Free scientific text editor, inspired by TeX and GNU Emacs. WYSIWYG editor TeX-fonts and CAS-interface (Giac, GTybalt, Macaulay 2, Maxima, Octave, Pari, Qcl, R and Yacas) in one.
+
+%CSIZE%
+23679288
+
+%ISIZE%
+63448064
+
+%MD5SUM%
+826c8aead280269ea00f0223d107a6c5
+
+%SHA256SUM%
+3b4a795b69c42fca9c0bbd58c04aadd388e7f2cf8bb9453e2992936e603b1238
+
+%PGPSIG%
+iQEzBAABCAAdFiEEFRnVq6Zb9vwrc8dWek52CV2KUuQFAlo9TA8ACgkQek52CV2KUuS9Ewf9FVovthbP1qUR6Wyi4J2rdgK0Mq3wWN+/TOunCbMwNzktN6eMoPTxQ7qHE5tCh66GTBei9i2HgtZhW+lnQa1ogHH/VpsUfogc160CRDukLnznSllm41qIelq0T7zmQY20Dv1+ao2fSm/UtPcHNlLM23fNKTjhkgyOql5KsaSVK8UU2snYchHNkBefXU6o3RytVS5KCrwR8bGvbdpecMB8U5MT1htCInEy3jsQjbbT39bOJwR8nh4go9c1PKtx2kk7rN/NhbR0X0uDNwErEorPwTc4aCGW9w4lk604Lcjlv41A+mBBTmKnUaP/78hi6hq3sqGMCdUZ84yrL3M65IKlEQ==
+
+%URL%
+http://www.texmacs.org/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1513946596
+
+%PACKAGER%
+Antonio Rojas <arojas@archlinux.org>
+
+%DEPENDS%
+perl
+guile1.8
+texlive-core
+python2
+libxext
+freetype2
+qt5-base
+
+%OPTDEPENDS%
+transfig: convert images using fig2ps
+gawk: conversion of some files
+ghostscript: rendering ps files
+imagemagick: convert images
+aspell: spell checking
+
+%MAKEDEPENDS%
+ghostscript
+cmake
+

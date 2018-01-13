@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+tk: for tkremind
+tcllib: for tkremind
+tcl: for cm2rem.tcl
+

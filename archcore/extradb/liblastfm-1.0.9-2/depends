@@ -1,0 +1,8 @@
+%DEPENDS%
+qt4
+fftw
+libsamplerate
+
+%MAKEDEPENDS%
+cmake
+

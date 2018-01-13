@@ -1,0 +1,15 @@
+%DEPENDS%
+libao
+jack
+
+%OPTDEPENDS%
+gtk2: for using the GTK+ interface
+tk: for using the Tk interface
+xaw3d: for using the Xaw interface
+
+%MAKEDEPENDS%
+xaw3d
+gtk2
+tk
+libxaw
+

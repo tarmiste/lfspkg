@@ -1,0 +1,8 @@
+%DEPENDS%
+python2
+librsync
+
+%OPTDEPENDS%
+pylibacl: access control list support
+pyxattr: extended attribute support
+

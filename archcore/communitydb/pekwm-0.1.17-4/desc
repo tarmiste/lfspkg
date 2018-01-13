@@ -1,0 +1,57 @@
+%FILENAME%
+pekwm-0.1.17-4-x86_64.pkg.tar.xz
+
+%NAME%
+pekwm
+
+%VERSION%
+0.1.17-4
+
+%DESC%
+Tabbed X11 window manager
+
+%CSIZE%
+266708
+
+%ISIZE%
+814080
+
+%MD5SUM%
+22326e8c66c502a223ed4323725e01a7
+
+%SHA256SUM%
+8388f4615c0ef1c60d09c522a8f3bc1476422faf594b161f67fef396a74dfe4a
+
+%PGPSIG%
+iQEzBAABCAAdFiEElihV8HLHoBhGQFhk/PPIy1z5yNQFAlmW2v4ACgkQ/PPIy1z5yNSMcgf/SepUhn4Uo5Bo3zTi00EDwOG0IILJp/o2zwfRUWMEQyPxFa2iQjxKFPynk/Q/CmplPCtR2ws14veKymMibBgPhUM+s17pylkGPFKCDHO/nPPXLdJWWYa0WMg7+Cwhx2771xdQnYzoX5aX3g4eVm18mKlo/90aQHCnnWTmRI/3WJf50wkoj7vJ4zdlaC5Jy9onZQ29QfMtFw5VEVyWskD7ungHF1JPQWw8jnsDUhfeaUshHIBV2DCFDeD6ZWz/+DWYhbR5pXwc+S+4pOPapbzmewaBnvYGbeqangpC9tqu57+/uOTBDI9OhKEknxzJrEwkVjjYeAonSQpJPAhW5ONXgg==
+
+%URL%
+https://pekwm.org/projects/pekwm
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1503058653
+
+%PACKAGER%
+Alexander Rødseth <rodseth@gmail.com>
+
+%DEPENDS%
+libjpeg
+libxft
+libxinerama
+libxpm
+libxrandr
+
+%OPTDEPENDS%
+lxappearance: feature-rich GTK+ theme switcher
+nitrogen: background browser and setter
+tint2: basic, good-looking task manager
+
+%MAKEDEPENDS%
+gendesk
+

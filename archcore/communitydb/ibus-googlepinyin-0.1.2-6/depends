@@ -1,0 +1,12 @@
+%DEPENDS%
+libgooglepinyin
+ibus
+iso-codes
+pygtk
+
+%OPTDEPENDS%
+opencc: for simplified chinese translation to tranditional chinese
+
+%MAKEDEPENDS%
+cmake
+

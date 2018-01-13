@@ -1,0 +1,71 @@
+%FILENAME%
+gnome-music-3.26.1-1-x86_64.pkg.tar.xz
+
+%NAME%
+gnome-music
+
+%VERSION%
+3.26.1-1
+
+%DESC%
+Music player and management application
+
+%GROUPS%
+gnome-extra
+
+%CSIZE%
+465304
+
+%ISIZE%
+2200576
+
+%MD5SUM%
+748d6c4f014081a8967b976cc9310a9d
+
+%SHA256SUM%
+81bd0e7a6fd0adade1f164d7c7d1ef33c5985e76bd02339c00cf89de0527a545
+
+%PGPSIG%
+iQEzBAABCAAdFiEEghj4iEmqxSLpTPRwpekojE+kFfoFAlnTyrUACgkQpekojE+kFfoHzQf/ZlnQcKBRe2U0x8QLsZruIDr1Ks0pDmkO7WzFKKikZg2eyUn8TRBCFHtk4kBf7o1PC29m6jsX2WkyhipU8x3nrXgTbdS6EXVJGj2aGhUYqZqbAZaKVwxY5529/Q+PP4FDVNAOLtddEyQuc7nSPFrwL0QlgVnvw2QJxSIrrccd4XaVRouWMsu08xduqFZtuLTm88rzjyZ5pwTO4xh9MiFoJVHq0VcwM5yx8v35s+SQKsgF3gOomfhAhUHfVw0EiBamGGxgzhk+zMjXyKzGiOkq+UhB8IZbBaXqCX6yM9wM+C9B+e8KYLaXv/O+oRCHps4C95LRhAHf/RZ05KrxNSrOiQ==
+
+%URL%
+https://wiki.gnome.org/Apps/Music
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1507051132
+
+%PACKAGER%
+Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+
+%DEPENDS%
+grilo
+grilo-plugins
+tracker-miners
+libdmapsharing
+libmediaart
+gtk3
+gvfs
+python-gobject
+python-cairo
+gst-plugins-base
+python-requests
+
+%OPTDEPENDS%
+gst-plugins-good: Extra media codecs
+gst-plugins-ugly: Extra media codecs
+gst-plugins-bad: Extra media codecs
+gst-libav: Extra media codecs
+
+%MAKEDEPENDS%
+intltool
+itstool
+gobject-introspection
+gnome-common
+git
+

@@ -1,0 +1,76 @@
+%FILENAME%
+python2-pillow-4.3.0-1-x86_64.pkg.tar.xz
+
+%NAME%
+python2-pillow
+
+%BASE%
+python-pillow
+
+%VERSION%
+4.3.0-1
+
+%DESC%
+Python Imaging Library (PIL) fork. Python2 version.
+
+%CSIZE%
+507428
+
+%ISIZE%
+2040832
+
+%MD5SUM%
+7566f1bb0f9d1fbc0451e9c8a90c2984
+
+%SHA256SUM%
+4c96eadd530f3b6900d36b8a852a2359d04c30ea5c963bfca0b61ee203409f88
+
+%PGPSIG%
+iQEzBAABCAAdFiEESMOx8w3dD+Z+UW0WOW4+JbqxQsEFAlnTZlMACgkQOW4+JbqxQsF8iQf/UJWSIlBv49lgjbQXmfjLqgQ3Yntpjg4LSf0x8n30HRC3WRfWOEv7xqRYi4TdFG9t/w3Egh4EQTAJL31zMEuJH9duX7au2BSJWC2IVhYNvT0vfBtX22sxsJdBr7GlG85CLoCjG69a1szZbPoLNPQ80uUWOiA17LqAd5imV1bh1g2xsmeKadtAavWysoi4SxYtAyXDsi59duNEYLCYZOAuygD119o4JwfNE5Zpn78mIr9ZX2HXc7DmllQCccB3FlB8t7iQd2ignIF+OrLzPjwkzhW8cfxy7uXMDW8w78izfUBUZv1KKh1t7CiO7005UkGXJV2Y7pEEa5OSTHZmmq3+gQ==
+
+%URL%
+http://python-pillow.github.io/
+
+%LICENSE%
+BSD
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1507027608
+
+%PACKAGER%
+Kyle Keen <keenerd@gmail.com>
+
+%CONFLICTS%
+python-imaging
+python2-imaging
+
+%PROVIDES%
+python-imaging
+python2-imaging
+
+%DEPENDS%
+python2
+lcms2
+libwebp
+openjpeg2
+python2-olefile
+
+%OPTDEPENDS%
+tk: for the ImageTK module
+sane: for the Sane module
+python2-pyqt5: for the ImageQt module
+python2-pyqt4: for the ImageQt module
+python2-pyside: for the ImageQt module
+
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+lcms2
+libwebp
+openjpeg2
+tk
+sane
+

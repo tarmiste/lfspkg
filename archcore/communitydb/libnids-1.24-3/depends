@@ -1,0 +1,8 @@
+%DEPENDS%
+libnet
+libpcap
+glib2
+
+%MAKEDEPENDS%
+pkgconfig
+

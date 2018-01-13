@@ -1,0 +1,63 @@
+%FILENAME%
+deluge-1.3.15+14+gb8e5ebe82-1-any.pkg.tar.xz
+
+%NAME%
+deluge
+
+%VERSION%
+1.3.15+14+gb8e5ebe82-1
+
+%DESC%
+A BitTorrent client with multiple user interfaces in a client/server model
+
+%CSIZE%
+2369604
+
+%ISIZE%
+12867584
+
+%MD5SUM%
+74b37bdfe3d4775eea9c9b1e1416e6c6
+
+%SHA256SUM%
+fdbcf8af5822b055912a4473aa87f123653852638e34d05b90809544417f9f89
+
+%PGPSIG%
+iQEzBAABCAAdFiEEghj4iEmqxSLpTPRwpekojE+kFfoFAlo0hy8ACgkQpekojE+kFfoA6Qf9E3PHNpKIOwBxBiwejQx7P6rUzJj4cS3l4sLkalhwQT9TWOeaUtnMSSLnm3rVFhY+TpDa/wJYmj2bYQyx9OTzFpXU9dXJ3AkRl1A3BhRAmg3dlcqZ218IZcHSF7jc/ehKH3+J6u+yyUwXCYnvT4y8mY+PGHQ66FKlQHlDdUTDqmq6UtHeNmE1hktl48InddYg2H3KPLrZxw7NPI1VUkko37E+0AX6riFiNCyp0qAe6PUZXyDjx/oClwyKH8WyaaANUt/OOYcH1eZaiMEv9UedYyXktogT3eDfv1K5sKlGXgVvOh0/cQuMgIgRtRJEmg6y7S7xWjPBbJ7vetgi8dAr2g==
+
+%URL%
+http://deluge-torrent.org/
+
+%LICENSE%
+GPL3
+
+%ARCH%
+any
+
+%BUILDDATE%
+1513391711
+
+%PACKAGER%
+Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+
+%DEPENDS%
+python2-xdg
+libtorrent-rasterbar
+python2-twisted
+python2-pyopenssl
+python2-chardet
+python2-setuptools
+
+%OPTDEPENDS%
+python2-notify: libnotify notifications
+pygtk: needed for gtk ui
+librsvg: needed for gtk ui
+python2-mako: needed for web ui
+
+%MAKEDEPENDS%
+intltool
+pygtk
+librsvg
+python2-mako
+git
+

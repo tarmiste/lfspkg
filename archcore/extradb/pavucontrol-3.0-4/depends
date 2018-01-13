@@ -1,0 +1,13 @@
+%DEPENDS%
+libcanberra-pulse
+gtkmm3
+libsigc++
+
+%OPTDEPENDS%
+pulseaudio: Audio backend
+
+%MAKEDEPENDS%
+intltool
+lynx
+git
+

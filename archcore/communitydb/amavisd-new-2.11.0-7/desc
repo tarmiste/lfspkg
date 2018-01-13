@@ -1,0 +1,68 @@
+%FILENAME%
+amavisd-new-2.11.0-7-any.pkg.tar.xz
+
+%NAME%
+amavisd-new
+
+%VERSION%
+2.11.0-7
+
+%DESC%
+High-performance interface between mailer (MTA) and content checkers
+
+%CSIZE%
+384124
+
+%ISIZE%
+2070528
+
+%MD5SUM%
+d33cc83914658c7dfd911b1179426e40
+
+%SHA256SUM%
+ee496484651c795180bca55f27a95612c0d39a267dac467122c0019b6c06b9ff
+
+%PGPSIG%
+iQJJBAABCgAzFiEEBR6tamFVOJ1p2gLl63Y7Tp24h6YFAloa1wcVHGZveHh4MEBhcmNobGludXgub3JnAAoJEOt2O06duIemnBMQAL+meONyO8mNLt3wDtPBBZiTawMYtt9kVx+8amUjxr5LYRPdw7Jo89ERUlr6SjjOLGNv4ThC0+P5rNncH9b504/BjUiekyBXEnb1GCsxF9+jhZRq7TJ4sGmJSVU3nM53Udxxn7ASoLPBLSRZggplR+DaomvzC+qTBuv+YQrvuC9/YxBypCgqehds5e/tWNgqpSMwzXA6FEqRqjEq0OS32b47GSW5AO2jkeifz0WrojlcUoM7fJDwphbEDH5g0ynwoaIjSpnRLGpJVNtQ0lJ0ABXWtkfCvh6c8OZu0LoJnGrryRpMwt5Gru6wDP6/JHJWtKNfUtmakL9mSPYlpKkMJP6XgAEXVseSrTnlPBAHiTxoXWUAy8gz+hejziP9VXyb+0BzgRxL1h9ZTJcF713e/2hG8oiJUW3C8C5cae8JW0qvntLoxKuqFU4HKer8SF8Cs0lMQIKEyuGVrl5cuI2cZ0SpRfvTIMt0FSI8e7Ws8RarH5ADgNczwdN5GL/OBRq8iwpWo2MP7FV8oA/qVjYba6ngBGOTnNWtD2YGm9RTJ8tcY9oDyKm6Gxcktx9aN3Y2TZN/VtyXAFP1ahwv30ntoRYG46bZ8gx7Uo4SCDXN0pnpP8UWdoV7IeocaGzKH75KM1G3eTvE0mOqVjT9MqXaWCbWz6zqkbwqJuzoTAiBV8tr
+
+%URL%
+https://www.ijs.si/software/amavisd/
+
+%LICENSE%
+GPL
+
+%ARCH%
+any
+
+%BUILDDATE%
+1511708382
+
+%PACKAGER%
+Thore Bödecker <foxxx0@archlinux.org>
+
+%DEPENDS%
+perl>=5.8.2
+perl-archive-zip>=1.14
+perl-convert-tnef
+perl-convert-uulib>=1.4-5
+perl-mime-tools
+perl-mailtools>=1.58
+perl-net-libidn
+perl-net-server>=0.88
+perl-io-socket-inet6
+perl-io-stringy
+perl-unix-syslog>=1.1-4
+perl-mail-dkim>=0.31
+perl-berkeleydb>=0.42
+bzip2
+gzip
+
+%OPTDEPENDS%
+arj: Decoder for: .arj .exe
+lrzip: Decoder for: .lrz
+lz4: Decoder for: .lz4
+lzo: Decoder for: .lzo
+p7zip: Decoder for: .7z
+unrar: Decoder for: .rar
+rpmextract: Decoder for: .rpm
+

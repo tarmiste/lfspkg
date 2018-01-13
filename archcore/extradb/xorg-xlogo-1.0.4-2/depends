@@ -1,0 +1,13 @@
+%DEPENDS%
+libsm
+libxaw
+libxmu
+libxt
+libxext
+libx11
+libxrender
+libxft
+
+%MAKEDEPENDS%
+xorg-util-macros
+

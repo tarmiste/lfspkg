@@ -1,0 +1,7 @@
+%DEPENDS%
+libxcb
+
+%MAKEDEPENDS%
+xorg-util-macros
+libx11
+

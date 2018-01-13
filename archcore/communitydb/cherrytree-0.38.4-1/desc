@@ -1,0 +1,50 @@
+%FILENAME%
+cherrytree-0.38.4-1-any.pkg.tar.xz
+
+%NAME%
+cherrytree
+
+%VERSION%
+0.38.4-1
+
+%DESC%
+Hierarchical note taking application featuring rich text and syntax highlighting
+
+%CSIZE%
+714060
+
+%ISIZE%
+2788352
+
+%MD5SUM%
+cb4f19d9ffea1ac3cc1e7483095a5ad4
+
+%SHA256SUM%
+b13b46ccbf1b6d63467381dece4316191d5ea6bfdfad19eb2b547fd750d03f46
+
+%PGPSIG%
+iQEzBAABCAAdFiEEzgvecadZqH8j8PfYth284QkBwWMFAlpOkFMACgkQth284QkBwWNdWwf+I21s6spbTzDKlBFlJvwIY9zLIJ1Ho68fd+DEaUht0j852C187Ppq9LvrE26xBr5YgKUJev4dKovdunRSMBIfQv7/53ogoxvktVBXWaWEee9Ge8jJXILdIOw/kfZWbcEK7jj1CP3CxF3Kc+HYW7BGSFq106hoWGPYKFO3tfVNUPMmBR5B/8g3B1puQMSFV4sb/IHFRQtscHTv6oe3BsyccG9nUHCdVnYQBKbtt7vVbNYrf8/zCTgfdEMBfKS28TBxoOj2dPLZfjarkgfguJFOj/Owd8kaMCi5A0Y2J718DJY5jcfjGtS2f4b529NXilNWUnAFU07xQEbuU0yFZ9K+nw==
+
+%URL%
+http://www.giuspen.com/cherrytree/
+
+%LICENSE%
+GPL3
+
+%ARCH%
+any
+
+%BUILDDATE%
+1515098179
+
+%PACKAGER%
+Balló György <ballogyor+arch@gmail.com>
+
+%DEPENDS%
+pygtksourceview2
+python2-dbus
+
+%OPTDEPENDS%
+python2-pyenchant: for spell checking support
+p7zip: for password protection support
+

@@ -1,0 +1,11 @@
+%DEPENDS%
+sdl2
+physfs
+libgl
+
+%MAKEDEPENDS%
+cmake
+boost
+mesa
+zip
+

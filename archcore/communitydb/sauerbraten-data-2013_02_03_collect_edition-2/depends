@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+sdl_mixer
+sdl_image
+glu
+mesa-libgl
+

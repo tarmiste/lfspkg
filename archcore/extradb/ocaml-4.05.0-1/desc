@@ -1,0 +1,58 @@
+%FILENAME%
+ocaml-4.05.0-1-x86_64.pkg.tar.xz
+
+%NAME%
+ocaml
+
+%BASE%
+ocaml
+
+%VERSION%
+4.05.0-1
+
+%DESC%
+A functional language with OO extensions
+
+%CSIZE%
+50836172
+
+%ISIZE%
+228816896
+
+%MD5SUM%
+4c12251ce225441201cea840b32acf98
+
+%SHA256SUM%
+8cb5eb004ea08ab92e17a44561ae67ed153e48859870a719007ed56e844f99b5
+
+%PGPSIG%
+iF0EABECAB0WIQQ1W9uX7Uck5rOkUOej2VYqWJh0qwUCWWmvpAAKCRCj2VYqWJh0qxAzAKCRl9Pk2pTCwgbW7x7jVUu0dTmJXQCeOALn4bOO3VmlXYfrk/fHYoRsDBY=
+
+%URL%
+http://caml.inria.fr/
+
+%LICENSE%
+LGPL2.1
+custom: QPL-1.0
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1500055979
+
+%PACKAGER%
+Juergen Hoetzel <juergen@archlinux.org>
+
+%DEPENDS%
+gdbm
+
+%OPTDEPENDS%
+ncurses: advanced ncurses features
+tk: advanced tk features
+
+%MAKEDEPENDS%
+tk>=8.6.0
+ncurses>=5.6-7
+libx11
+

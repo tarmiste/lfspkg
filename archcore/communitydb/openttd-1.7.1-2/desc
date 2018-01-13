@@ -1,0 +1,56 @@
+%FILENAME%
+openttd-1.7.1-2-x86_64.pkg.tar.xz
+
+%NAME%
+openttd
+
+%VERSION%
+1.7.1-2
+
+%DESC%
+An engine for running Transport Tycoon Deluxe.
+
+%CSIZE%
+4576640
+
+%ISIZE%
+16816128
+
+%MD5SUM%
+49fe85fbb1079852b99405ea55119cff
+
+%SHA256SUM%
+7c58caa3464aecd3f2f3220c8cffc94aaeb11d2471d166ede8122dd2778c5f17
+
+%PGPSIG%
+iQEzBAABCAAdFiEEhs/8qRjPOvRxR1iAUeixSKmZnDQFAloITmQACgkQUeixSKmZnDSDBgf/eQCnU1YMQJLaJlAFQiOJPXKhem1Vjc7ctJdKdMrcoBOW9/+wo4akqZZVUz2VQhMGw0cbbP66W6WBVePY6ugdZQaGqiLPmY+89G7OSelpT2fiw0jxzZAzhAn1QgnOGyycdT+LB16QZlAu0rnIl/2hJ+dTTVWSSjB+fJE3Y16Y2Yc2j0lcPPJtfsoMZ1OKiImoBvyYVxMANbAuk5FHVFILM1AF9l27SvVCl7fN5Adr37SlsS0nFGF+e0KDFvmB7QHaxIDPn8szzTQEHR2ChvhsOkTGveSaIDIigYRRw8977VQMPMYpr7L2nOd7HTI/WF2mW23ijDRQmP+WPBrQRxk8zQ==
+
+%URL%
+http://www.openttd.org
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1510493763
+
+%PACKAGER%
+Evangelos Foutras <evangelos@foutrelis.com>
+
+%DEPENDS%
+libpng
+sdl
+icu
+fontconfig
+lzo
+hicolor-icon-theme
+desktop-file-utils
+xz
+
+%OPTDEPENDS%
+openttd-opengfx: free graphics
+openttd-opensfx: free soundset
+

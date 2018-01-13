@@ -1,0 +1,86 @@
+%FILENAME%
+libmagick6-6.9.9.33-1-x86_64.pkg.tar.xz
+
+%NAME%
+libmagick6
+
+%BASE%
+imagemagick6
+
+%VERSION%
+6.9.9.33-1
+
+%DESC%
+An image viewing/manipulation program (version 6; library)
+
+%CSIZE%
+2212016
+
+%ISIZE%
+9414656
+
+%MD5SUM%
+b9e16e54bb7867ff8bb1b1959aedaa58
+
+%SHA256SUM%
+2a42385fcc46e84744269318a0cf3b672facb3812759eebf21d878b09236644e
+
+%PGPSIG%
+iQEzBAABCAAdFiEEFRnVq6Zb9vwrc8dWek52CV2KUuQFAlpR3yQACgkQek52CV2KUuQagAf5AdJE5H1Ohd9ikJ1vkWZS6tJpPZ76YmYbJiNrIXkXlxs70hEInORyCluaJ5UWfnA9yQf3yV3Vi1HyHgYqPFsIiARdvaugERAUN+uqtiCCzg7UcXblyHsn91AfbPFDzmygVUINf21LzzQPBg5jOZyyQ00MJVc8DUWAZjeiJdgYuK6M9e3QNtJk0E014osL/B9tviAxwcClzmaI+abGbjCqWZ1HQNr9bf8i6HcWFd74OschYpajXOLYQnA1mknnme/NhEB1HvpmgkAuxNHenvN9Z8Ms62D4F+fJRB3LqsNk6QDU4kymNFDYR6Ei2Rczf93WhXj3q/h1Dop5E+7S5TVeTg==
+
+%URL%
+https://legacy.imagemagick.org/
+
+%LICENSE%
+custom
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1515314938
+
+%PACKAGER%
+Antonio Rojas <arojas@archlinux.org>
+
+%DEPENDS%
+libltdl
+lcms2
+fontconfig
+libxext
+liblqr
+libraqm
+libpng
+
+%OPTDEPENDS%
+ghostscript: PS/PDF support
+libraw: DNG support
+librsvg: SVG support
+libwebp: WEBP support
+libwmf: WMF support
+libxml2: Magick Scripting Language
+ocl-icd: OpenCL support
+openexr: OpenEXR support
+openjpeg2: JPEG2000 support
+pango: Text rendering
+
+%MAKEDEPENDS%
+ghostscript
+openexr
+libwmf
+librsvg
+libxml2
+openjpeg2
+libraw
+opencl-headers
+libwebp
+chrpath
+ocl-icd
+glu
+ghostpcl
+ghostxps
+
+%CHECKDEPENDS%
+gsfonts
+ttf-dejavu
+

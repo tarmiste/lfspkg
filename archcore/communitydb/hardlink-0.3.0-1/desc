@@ -1,0 +1,42 @@
+%FILENAME%
+hardlink-0.3.0-1-x86_64.pkg.tar.xz
+
+%NAME%
+hardlink
+
+%VERSION%
+0.3.0-1
+
+%DESC%
+Replace file copies using hardlinks
+
+%CSIZE%
+11472
+
+%ISIZE%
+26624
+
+%MD5SUM%
+606102b0c24cbf6abb6308ded74f9431
+
+%SHA256SUM%
+761bb1b792b93950023951bb6a3f22d70d550389ff6b4a8f796654c66adfcb66
+
+%PGPSIG%
+iQIYBAABAgAGBQJUJJZsAAoJEDjc7r44eh7uEY0P32phBd0aXQ3JfIZbLpCPHIjXcM0FQqZS2Teu6w8tcMac/ycThZNx7D8hsPxLqn9qRJs2BcLDAvquOFOzylNJdF3zQQTzCx+Ct8O2pnqnCAr6HI4dWih7AmV5rYEw5pl2+zb4XCZpxqofsNaQtskd9dFg9ZkhGd1Ja8EXBWsf9SqcqcSiQf3KjIjkj65wrii4FaAMCiYbb9J0CzRMVzJmKPsJdHOz0BNSLS2mgdzK/sdWSyxm75A8pD9sOkxsm3eryumm4NJZvsdh4/BjK/gycVW7FFmSSSXlWNoSt9XYeA4sZnH0f+wak7whxtyK9nbtTaL1CwSpYrW/Lr2oDRudKXK7sLFUiKm5KeKfaGMGGXgZW2ZropXjp3XsUZIXzbb+OTza6/WpcB8nMgRLElyuAlyqfAGGwVHSIaJJp92EOqm3e3xE6oC/09w9Kza0LliaNUlASOER1leTkAjaL1dqeMznXvIy9g7vtBTwVECugnJsFIgN0C5VNzTGzJb/ya1mGi5KYlYJp+AZpVTU5jc2VEVjqmO2m8JRFKgOdllKF1yKuX2uP/YVZFyYTSxsXwKQ+v4rTr5/v99t7N2veIA4g5Kgc9/gLNGpNyaXss+cli6EcSIqtQyA8zEwfwmkDhsP3/iNmMAkVMAk/XbG2CrLUjKM7aDbDuBBpdQARDI=
+
+%URL%
+http://jak-linux.org/projects/hardlink/
+
+%LICENSE%
+custom: MIT
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1411683932
+
+%PACKAGER%
+Sébastien Luttringer <seblu@seblu.net>
+

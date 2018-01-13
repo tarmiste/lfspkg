@@ -1,0 +1,81 @@
+%FILENAME%
+texlive-core-2017.45811-1-any.pkg.tar.xz
+
+%NAME%
+texlive-core
+
+%VERSION%
+2017.45811-1
+
+%DESC%
+TeX Live core distribution
+
+%GROUPS%
+texlive-most
+
+%CSIZE%
+145247904
+
+%ISIZE%
+389262336
+
+%MD5SUM%
+9bc13749272bb313f9ce75c4607dec48
+
+%SHA256SUM%
+93fe42f94284935ad006bc447f2925bf5d3a10bab14429caceaeef595607853b
+
+%PGPSIG%
+iQIzBAABCAAdFiEEROpirNvIG2oNH9JnIGy8iS0Uk9IFAloMvvIACgkQIGy8iS0Uk9KS7A//eNNVUMrUgt0tSqYU4kJqU/RA8IXlzLuaw/HJ3BWEUqFrLwtk+oEkI9EFf5yaZHl7LmK6p0qmT7GOb1Kq7mOg/4052l8eJQOsCWEVuI7P4gnA+HVkqoXh0Jwd44cmxlfQ0GPmNjSMeGfvhuaOF6LyPbzbgvsY+CtS1GaX//p+YD06g1ahkMClNPwSnOIsoRVgLRxqcXgKayMifkXOuftPZ8Rj0TMdSssezy1uElV73pFelcFLw13BYS2l0Wd6advnJZtoqb8gnicVYtKww3aNv/iE8Z2GGkiRkdkLw990UWK7rdxEOP23HtK0xCFvdI262Lrn/QvQkxU2LTsdnDfFjolHCf//QFRIYXRsV15EcFkIw6X57WsqOSutppWuw6vUunJUkjQyEqp61itRD64ZU/c0hnhEKCWxCftTkDbFMadTiIRduD6xAwswAf1hYPsGPR/86bGSHC5JefKcutL8nkZUZAGPxSkbxBLCf9MbcHUwulWczecFPO06iH6hNA8KsxIQM0tYC2SuDWfQ97JGNCHE6meD4Tk7JX+AJ5Imx+TOzOrz1Oo/fBvnNcCTHhECFmnzd1lswT/nsbY+3WqZ1mwAm77M+rJqV6wqbfjtwoJiuzziVxWrjpa+x1px5mdsprqPUMQU/croLRKmVxfprFUV6g/q+pSKD5GD6igoI+A=
+
+%URL%
+http://tug.org/texlive/
+
+%LICENSE%
+GPL
+
+%ARCH%
+any
+
+%BUILDDATE%
+1510784554
+
+%PACKAGER%
+Rémy Oudompheng <remy@archlinux.org>
+
+%REPLACES%
+tetex
+texlive-latex3
+pdfjam
+texlive-genericextra
+texlive-plainextra
+
+%CONFLICTS%
+tetex
+texlive-latex3
+pdfjam
+texlive-genericextra
+texlive-plainextra
+
+%PROVIDES%
+tetex
+texlive-latex3
+pdfjam
+texlive-genericextra
+texlive-plainextra
+
+%DEPENDS%
+texlive-bin
+perl
+
+%OPTDEPENDS%
+dialog: for texconfig
+ghostscript: for epstopdf, epspdf and other ConTeXt tools
+java-runtime: for utilities like arara
+perl-tk: for texdoctk
+psutils: to manipulate the output of dvips
+python: for pythontex
+python2: for dviasm
+ruby: for old ConTeXT MkII and epspdf
+t1utils: can be useful when installing Type1 fonts
+

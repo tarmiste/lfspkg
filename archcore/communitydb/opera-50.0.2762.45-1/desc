@@ -1,0 +1,61 @@
+%FILENAME%
+opera-50.0.2762.45-1-x86_64.pkg.tar.xz
+
+%NAME%
+opera
+
+%VERSION%
+50.0.2762.45-1
+
+%DESC%
+A fast and secure web browser
+
+%CSIZE%
+52019104
+
+%ISIZE%
+179924992
+
+%MD5SUM%
+b7fbab668adfcd65096380154aa22455
+
+%SHA256SUM%
+805acfdc8d4fc075685810dc3746d1b76dfd8e06e8efc2e9e99b24d8d856b785
+
+%PGPSIG%
+iQIzBAABCAAdFiEE2yJ3vNUAqjglYQvd2zIzknlsoGcFAlpN6wcACgkQ2zIzknlsoGeV5A//fPUFimQLJ668NocWxNDfQ6Epa68zz9cxmZ6nSNgD/JeYtzzOf8ntxcScKYfLRbwPDufQZQi9NbVLGJ+WMH63Npf5i2OiSd43t4Itz5dTEyyDH4mKoHVr4X3vazrtjYstGcL5zeI4fwfSIpGHX/eEna3H/lSpzL1MfF++dm8WP04DIyXQzvQMhA/PC5VoSgPdZnvs7K6+ccWAUKqSzslGviyVl60cJu6LL372ZN8p1AJ5Qdneo4Kr2HePDmRszV21CjTSYgvs9Y7uV8gWp6Dq/B/hvegxnA9M0R9c797tTGIaduYGTAptusJQRhfFpfldzy21dFbnS9+kXFNze8SFxPZ+pUDyUg71htm7R7YKaHYb1TYVbNCEZU9K87xdOHXheN7uy/CaLY5gmeMK1UuSjK4J2v8asrRiyytSLBQVjE+DShEZH1Lsw+C3U7cH9J8YmkqLvKFEdUPyaNi3QTVe5Uw+Rq+kQIAvhno+C+z85KWk8y28vrVAQ6a1oAAj/dPkQL+UHmNKZ+18vRUNf3zwLKQUjX2ORcW7InKbccqjMYDjHI9pBJwwgz2m6BBoTM1a92vacktCMYJLs7VsrzHCh8brO21JRHEqq08KoZbDFDhQZiGMLJaVCPKexut/PYLaXKdHrgzomjk+v4I7xJG686eeUSBXS5K4ejn98Hx3Hh8=
+
+%URL%
+http://www.opera.com/
+
+%LICENSE%
+custom:opera
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1515055734
+
+%PACKAGER%
+BlackEagle <ike DOT devolder AT gmail DOT com>
+
+%DEPENDS%
+gtk3
+alsa-lib
+libnotify
+gconf
+curl
+nss
+libcups
+libxss
+ttf-font
+desktop-file-utils
+shared-mime-info
+hicolor-icon-theme
+
+%OPTDEPENDS%
+opera-ffmpeg-codecs: playback of proprietary video/audio (AUR)
+pepper-flash: flash support
+upower: opera battery save
+

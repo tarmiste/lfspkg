@@ -1,0 +1,56 @@
+%FILENAME%
+mldonkey-3.1.6-1-x86_64.pkg.tar.xz
+
+%NAME%
+mldonkey
+
+%VERSION%
+3.1.6-1
+
+%DESC%
+A multi-network P2P client
+
+%CSIZE%
+4205152
+
+%ISIZE%
+22138880
+
+%MD5SUM%
+ab015a78b571910c9558f2ab97f82c52
+
+%SHA256SUM%
+3db27308d4a68d0e4f813d175650ac4d96b8afde39f65781876f57cb379abf71
+
+%PGPSIG%
+iQIzBAABCAAdFiEEjhmSFnRl21+wRVV8sChU7XU+Dx8FAliI+okACgkQsChU7XU+Dx/bXQ//R9aZkjzU7u+AVlsn86rLAJCnksJkH1rb6TizcT5gqHAxqVoczwH5YpL7LPmZrGGkFPSf+3dx/83sUJn3oDlsY7e/e7AAkcbabgW+J6QIB9eFAAT0BKmyzpyFtnWEbbEKW2VB5+1W6gSVN8RXmtFYsttOa76pJHsOENUNbReshP6SVJYpFPshs4ZB4yN3QbNPnbXarIIxaf6BZjn+/Q4iv0HipNttJ6Ir5PSkEdCf08ROZzHBlE4BdP6JJa9vk4Mb+94vGTQFdj61ycDWXPBkGV1wfC++gvvdVt16eZdzyyZ+E9LNaRFMKm8fHjAizsiQerghUDfgwYiZ86HYflY7oNqdxXvHfd9Rhyoj2vClRVoBjkJ205+eqfISewtCtt7uq715sXD/0qV1ziA/t04AQPNXqsrto1UcVA6511xAj0AcgPoy2AGj1IoTArnAjROJZdSEJRRSmA2QE/vHNAtq7c5b9BPDcRNJGxI9+L/EMsOqhupzh8Xk7JXUdkdCLkdiTbmaJ+nTjooPjBfPgHIphoZqhhh22NIwGvgXet5uW4itSIC/EiigMGjIEn6S+kQ6GwdTC58JD6X/W5Rq//mM1QZjigSEjdlOn70uXasL0tLVAe57P0QME5JL3RdDIRbBWpjBSLVPnYtW5F7GANFQwTPw4MIft4yCx07fyUBtz4k=
+
+%URL%
+http://mldonkey.sourceforge.net/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1485371590
+
+%PACKAGER%
+Anatol Pomozov <anatol.pomozov@gmail.com>
+
+%DEPENDS%
+file
+gd
+miniupnpc
+libnatpmp
+
+%OPTDEPENDS%
+librsvg: GUI support
+gtk2: GUI support
+
+%MAKEDEPENDS%
+gtk2
+librsvg
+

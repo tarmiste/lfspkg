@@ -1,0 +1,9 @@
+%DEPENDS%
+glibc
+
+%PROVIDES%
+libxvidcore.so=4-64
+
+%MAKEDEPENDS%
+nasm
+

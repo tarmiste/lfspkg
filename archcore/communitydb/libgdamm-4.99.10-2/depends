@@ -1,0 +1,11 @@
+%DEPENDS%
+libgda
+glibmm
+libsigc++
+
+%MAKEDEPENDS%
+libgda
+libsigc++
+glibmm
+glibmm-docs
+

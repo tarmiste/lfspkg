@@ -1,0 +1,53 @@
+%FILENAME%
+etckeeper-1.18.7-1-any.pkg.tar.xz
+
+%NAME%
+etckeeper
+
+%VERSION%
+1.18.7-1
+
+%DESC%
+collection of tools to let /etc be stored in a git, hg or bzr repository
+
+%CSIZE%
+20376
+
+%ISIZE%
+39936
+
+%MD5SUM%
+d670139236ee99f79b56ccb60bceaf1f
+
+%SHA256SUM%
+1faba3f416a8ff5333f988d246d4d11219e0bf1fb6e3c499beae5cad79dcd63b
+
+%PGPSIG%
+iQFCBAABCAAsFiEEAv0cepNOYUVFhJ8ZpiNAdEmOnO4FAlk5nCEOHGFyY2hAZXdvcm0uZGUACgkQpiNAdEmOnO4SaQf/bF1LhUe/+PN2isPDl7lTxO89tr8xOqhUllWm/E3mhngj4RlkozclImEMzcyzRuX87z89IUEqLjCAuxldfkM+S46bD5snzD2EqSBAyjMud2fNV7iDhpeK4sXRWAcDmmnEouVmP2vrCMaAJRsfqoT6XwjdXRwVbVmmghTz+oVh273LOaH+grbOPibRtvHokBdaiREw+3y4ErJ9uAAbSv6fq2XhEd8VfhgKMJOb7lNav+UHHguUKmivkF5/WUBywYwRqMyTvm9Tf5nIbAUg9/j+gVgNcDnHZx+n9ZGwjfm2U188K8qe9xLbv/2/2YRKnNSQgAWT3cR8yeKfUuMMhcU5EQ==
+
+%URL%
+https://etckeeper.branchable.com/
+
+%LICENSE%
+GPL2
+
+%ARCH%
+any
+
+%BUILDDATE%
+1496947653
+
+%PACKAGER%
+Christian Hesse <arch@eworm.de>
+
+%DEPENDS%
+git
+
+%OPTDEPENDS%
+mercurial: use mercurial for version control
+bzr: use bazaar for version control
+
+%MAKEDEPENDS%
+mercurial
+bzr
+

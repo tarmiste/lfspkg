@@ -1,0 +1,7 @@
+%DEPENDS%
+ncurses
+
+%MAKEDEPENDS%
+patch
+swig
+

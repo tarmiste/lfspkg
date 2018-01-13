@@ -1,0 +1,58 @@
+%FILENAME%
+python-django-extensions-1.9.7-1-any.pkg.tar.xz
+
+%NAME%
+python-django-extensions
+
+%BASE%
+python-django-extensions
+
+%VERSION%
+1.9.7-1
+
+%DESC%
+A collection of custom extensions for the Django Framework
+
+%CSIZE%
+252804
+
+%ISIZE%
+1762304
+
+%MD5SUM%
+eb942b8140461348429f77e76f162ee1
+
+%SHA256SUM%
+461d5510cf1830a37f47dc85457a41b797c31710ea4a802870e1154a09feebd5
+
+%PGPSIG%
+iQEzBAABCAAdFiEElDfdOBWnqRaePTlGr/XZUJi8b/UFAln7LKMACgkQr/XZUJi8b/WwwggAmGXbxtbqH3+fxomU6AF0VPJjrgINfFEZVYNqQ9KzA2Xudw7nPY622J7xQWgd4v6k2RnjP0wFkZWcODsRm8XwixRUDo6sxfS7I4LKgB5dX9ucfi5SqXjk0Hw0Y1hQBDEyJe7c4XIhX2RKiwInDxJwKF7aKG7iqhepylGSX1pMj3P2l1h6bTmDbybQXmla9foPgdbSCqkPGIDU8xKKyySP2IvQxZbhkEgjiN6MDWmXfQ0tdeIoYOC29Nihnumlfa6TvHC2n1E1eMvOz8CNZvvxN6OAMfAsS/ZmGItFrP0LJPtlW4YHcb+eI7/qGD8IXG7bcR75dPoHoJ53PE4VwsWlfg==
+
+%URL%
+http://github.com/django-extensions/django-extensions
+
+%LICENSE%
+MIT
+
+%ARCH%
+any
+
+%BUILDDATE%
+1509633103
+
+%PACKAGER%
+Maxime Gauduin <alucryd@archlinux.org>
+
+%DEPENDS%
+python-django
+python-six
+
+%OPTDEPENDS%
+graphviz: graph_models extension
+python-werkzeug: runserver_plus extension
+ipython: shell_plus extension
+
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+

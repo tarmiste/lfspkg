@@ -1,0 +1,13 @@
+%DEPENDS%
+sdl
+freealut
+libjpeg
+libvorbis
+glu
+freetype2
+libxinerama
+
+%MAKEDEPENDS%
+cmake
+mesa
+

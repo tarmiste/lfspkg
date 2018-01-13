@@ -1,0 +1,63 @@
+%FILENAME%
+compton-0.1_beta2.5-10-x86_64.pkg.tar.xz
+
+%NAME%
+compton
+
+%VERSION%
+0.1_beta2.5-10
+
+%DESC%
+X compositor that may fix tearing issues
+
+%CSIZE%
+99984
+
+%ISIZE%
+250880
+
+%MD5SUM%
+f70ce051b8b5600c3294918df6ba5be8
+
+%SHA256SUM%
+c2eceab572e49dd8b3ade63419b0e3231f92ce7758d975a5327fd2580a05c053
+
+%PGPSIG%
+iQEzBAABCAAdFiEEFRnVq6Zb9vwrc8dWek52CV2KUuQFAloWdZkACgkQek52CV2KUuSeZQf/frRSbRogKvLA1UKHV5sL0qZUWjvJQugYMhU6w36M2LXyO+nUEi58WTDJ6ZN+q8XaNZbZ4QWyE3DstEZJ+MReO6/wshOEO23P4i0yZaVQq0CMgynHKcIe21B5z8k6q10qkfF1IXLiD9Z9QXji57+OrwYfET3Wt7T9HHY2zDTyBmvMmBNKpo3D2Jugy/6PeOq5yZHoJA/R+nhDqVn5O5UOcWfrSnc7sNA3Byo1RkGizaR6U3AaYpEXEIQt7iPPU94Jh6m2e+4TR1UICjEDa9x2X/C0E/0G4tpzWfdkzLhF3BpUWBm8o7NE/26aPwtW6HRGYKFP4Ah4ksseskE3CtoPww==
+
+%URL%
+https://github.com/chjj/compton
+
+%LICENSE%
+MIT
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1511421195
+
+%PACKAGER%
+Antonio Rojas <arojas@archlinux.org>
+
+%DEPENDS%
+hicolor-icon-theme
+libconfig
+libdbus
+libgl
+libxcomposite
+libxinerama
+libxrandr
+
+%OPTDEPENDS%
+dbus: To control compton via D-Bus
+xorg-xwininfo: For compton-trans
+xorg-xprop: For compton-trans
+
+%MAKEDEPENDS%
+asciidoc
+cmake
+git
+mesa
+setconf
+

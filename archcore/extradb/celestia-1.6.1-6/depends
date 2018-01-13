@@ -1,0 +1,11 @@
+%DEPENDS%
+gtk2
+libtheora
+lua51
+gtkglext
+glut
+libxmu
+glu
+libjpeg
+mesa
+

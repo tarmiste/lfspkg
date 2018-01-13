@@ -1,0 +1,65 @@
+%FILENAME%
+kpmcore-3.3.0-1-x86_64.pkg.tar.xz
+
+%NAME%
+kpmcore
+
+%VERSION%
+3.3.0-1
+
+%DESC%
+Library for managing partitions
+
+%CSIZE%
+543472
+
+%ISIZE%
+3447808
+
+%MD5SUM%
+b0cb0f9c13c4b6d76dac4612ab5ee433
+
+%SHA256SUM%
+1d2a3ccc08221e8ab7baefe28c1ef19452fbe38a1b23a8fb56682f8fe21b452d
+
+%PGPSIG%
+iQEzBAABCAAdFiEEFRnVq6Zb9vwrc8dWek52CV2KUuQFAloze9UACgkQek52CV2KUuQJSAf/We2s4dpsVc1CXSMfQgeWxJjLH0KNykW2Z1YPwze0XW+Cve/o2PYTuHHAL4CZvioxujyIrPrQRYmGdGnJnwltlBsU9/npun3AaEJ57rd4U/MGa+Sk0hRwZE6TeQGVhiKzrD35cCPLBRqoii5EiTuFWkYdyGmPb7XgF3V+VOUmq6Pz7wXky9seto3PEPXw4sKk7mWZzvkWbfSywo3CZv1TrtTfiIoV5steYNSc3WnwY92gYRc37nBAGF0AyOCW9h3FV8yj0gTbC0GiYN76970XRqH5DppwVsF5Ih41p5tY0OK+hc99jJFvhKa+D0moB/ra5ZzBPJchtlUAblUtuh3t6Q==
+
+%URL%
+http://kde.org/applications/system/kdepartitionmanager/
+
+%LICENSE%
+GPL2
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1513323390
+
+%PACKAGER%
+Antonio Rojas <arojas@archlinux.org>
+
+%DEPENDS%
+parted
+libatasmart
+kwidgetsaddons
+kcoreaddons
+ki18n
+
+%OPTDEPENDS%
+e2fsprogs: ext2/3/4 support
+xfsprogs: XFS support
+jfsutils: JFS support
+reiserfsprogs: Reiser support
+ntfs-3g: NTFS support
+dosfstools: FAT32 support
+f2fs-tools: F2FS support
+exfat-utils: exFAT support
+nilfs-utils: nilfs support
+udftools: UDF support
+
+%MAKEDEPENDS%
+extra-cmake-modules
+python
+

@@ -1,0 +1,6 @@
+%DEPENDS%
+xcb-util
+
+%MAKEDEPENDS%
+xorg-util-macros
+

@@ -1,0 +1,7 @@
+%DEPENDS%
+libxaw
+
+%MAKEDEPENDS%
+imake
+xbitmaps
+

@@ -1,0 +1,63 @@
+%FILENAME%
+luarocks5.1-2.4.2-1-any.pkg.tar.xz
+
+%NAME%
+luarocks5.1
+
+%BASE%
+luarocks
+
+%VERSION%
+2.4.2-1
+
+%DESC%
+Deployment and management system for Lua 5.1 modules
+
+%CSIZE%
+97548
+
+%ISIZE%
+549888
+
+%MD5SUM%
+beb66436fc19fdba421055e49b4c472a
+
+%SHA256SUM%
+a4cba198858523eba3beda8892a42519bd901300cc133c1a0ec68c49517e8387
+
+%PGPSIG%
+iQIzBAABCAAdFiEEjhmSFnRl21+wRVV8sChU7XU+Dx8FAlhB/tMACgkQsChU7XU+Dx8aHw//Wk4fUatJ/HBh1+qgWaUaUxpizxUOTwfdfvbWC+zPCsNT6vNa1uyCtXpx1n0RsYgy23q46QwSQucgUlE+RfORoWbeTqTLCbV6lFfSoXxkpV8ykGABTOpsduDGRVg9RQCjSR4fC+mQNY8nXoaDLGrLGO/1dIdmJLWuqB06wKu7FbZUIIIfuDhKaojEP6i6x58pyQUm70U91aJ5QztSPy74Wn6XzX7JQVpBUkqOZuUOPOGsLvORoiAhvst7qdlAnjWWPHMjI2UOc4RuQza28LaojaB2NnwIVhowUX/EuIguNvDFg4HbtoxhPtm5pES+AamXH8Dl7r7b3gORNi6FA4zCLeLZtpw+zeZuLd8TSow0HgUkhhbQ9FkgsDuNWsT8fYEw8LEhqmletOLvwpv86XGvO/42JEDDqf1pSfykTsxjA5dysfz5epbDrJ2kmNvPtKX2Q4FJxXbNX77JA2+WTetkaa7Lxio3yL3H+g44ZhdXCFGUYUlgRmaeazTl5wNbz76KIgxUdB5+Z1KBph4v+QIzOvsm2DsP7MZ+r2B7Jbexnk2e2ykoZ/gWAkX0Vh/twCjH5dnGYZRvnnPYh35f3XCGJl8xV3mpZ3WfBJ+cPmJFGMjbcAy6uUAAOfhPJbRq/sc9d5scfEuLsrP4nzTUcHPacLm2h1ezYNeFVTeQNsovzCk=
+
+%URL%
+http://luarocks.org/
+
+%LICENSE%
+custom
+
+%ARCH%
+any
+
+%BUILDDATE%
+1480720058
+
+%PACKAGER%
+Anatol Pomozov <anatol.pomozov@gmail.com>
+
+%DEPENDS%
+unzip
+zip
+curl
+lua51
+
+%OPTDEPENDS%
+cvs: for fetching sources from CVS repositories
+git: for fetching sources from git repositories
+mercurial: for fetching sources from mercurial repositories
+cmake: for building rocks that use the cmake build system
+lua51-sec: HTTPS support
+
+%MAKEDEPENDS%
+lua
+lua51
+lua52
+

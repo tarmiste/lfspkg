@@ -1,0 +1,13 @@
+%DEPENDS%
+python2-wstools
+python2-defusedxml
+
+%CONFLICTS%
+python-soappy<=0.12.0-10
+
+%OPTDEPENDS%
+python2-m2crypto: for support for server-side SSL
+
+%MAKEDEPENDS%
+python2-setuptools
+

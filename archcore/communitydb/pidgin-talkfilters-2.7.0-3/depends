@@ -1,0 +1,10 @@
+%DEPENDS%
+libpurple
+talkfilters
+
+%MAKEDEPENDS%
+intltool
+gettext
+python2
+pidgin
+

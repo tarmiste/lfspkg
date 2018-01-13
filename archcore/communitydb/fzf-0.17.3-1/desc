@@ -1,0 +1,55 @@
+%FILENAME%
+fzf-0.17.3-1-x86_64.pkg.tar.xz
+
+%NAME%
+fzf
+
+%VERSION%
+0.17.3-1
+
+%DESC%
+Command-line fuzzy finder
+
+%CSIZE%
+803044
+
+%ISIZE%
+3194880
+
+%MD5SUM%
+33d8213561d94dccc3d340c34663bbe9
+
+%SHA256SUM%
+ddbeddbb8d650fd6dde83f2a80f6c01571bd64d69c216099a0ae4c5f879551a2
+
+%PGPSIG%
+iQJJBAABCgAzFiEEBR6tamFVOJ1p2gLl63Y7Tp24h6YFAloobeQVHGZveHh4MEBhcmNobGludXgub3JnAAoJEOt2O06duIemOEoP/3phbF3UWGwGGfmkkLu3i3GlHw92jakc9aCDvf6KoYrJlwxrkyhwcCISM3/q7kP5iDmPj3ulSQ7MAibR3qbxk0Vv0dRTzsGaPXDE7dl5B+C+G+5C/+uSFbMYf+1EK1vdDuW7ZMxlR1EOfP1E4HYwlZDsM26pFHpEr+WY9cMqlaUrkG9nOAtnWJg/ene8v1htSt7ON3vh7hoKkpLXaJ/8ncAUuzhW7ASe4BzEvJhTGf3dMXyJVwqb/wlaT66ENrTgkcE6LduPGGhdeXiU9IION/t4CeS84b9osin3aAtInaJkELuot0dNCcI0nijd07dP6yuYvxWAaT2iktzSNWtlMueA7z8SzD4qlcXukgyx6OTA4aviAWYAmo/eM8rnVhCPZHYZSq29IXsM2mjUOBRIjfx0jEgLnafOR3uoWAbZ8v9W9rgeMhToZTb1C9tJpt93ZUXWnMblOF+qvzoxw/qY/0VHNbL1ujX8je7C3Eg9BYN4D/+yQJBxkwnFoIEbTGmskagjaNQ/QauhlcyyqFnX0aXZPHpbgPjVCTVK2W6ABL5n3NTLFsXpv0ipveEdXDRSt3SR7CE1Uhhh0IBuC+QWcCuBT+f36H+vkbaVNHSrZ7kMm/GhTvj97iAFeaBB0m2z9mJlBZV7i08l368iJVkXmL+1BWnOOSvv3/otV/5F63ZI
+
+%URL%
+https://github.com/junegunn/fzf
+
+%LICENSE%
+MIT
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1512598850
+
+%PACKAGER%
+Thore Bödecker <foxxx0@archlinux.org>
+
+%DEPENDS%
+bash
+
+%OPTDEPENDS%
+fish: fish keybindings
+tmux: fzf-tmux script for launching fzf in a tmux pane
+vim: plugin
+zsh: zsh keybindings
+
+%MAKEDEPENDS%
+git
+go-pie
+

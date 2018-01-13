@@ -1,0 +1,6 @@
+%DEPENDS%
+plasma-maliit-framework
+
+%MAKEDEPENDS%
+git
+

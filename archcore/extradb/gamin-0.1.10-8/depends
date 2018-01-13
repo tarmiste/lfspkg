@@ -1,0 +1,15 @@
+%DEPENDS%
+glib2
+
+%CONFLICTS%
+fam
+
+%PROVIDES%
+fam
+
+%OPTDEPENDS%
+python2: for the python module
+
+%MAKEDEPENDS%
+python2
+

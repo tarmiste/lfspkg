@@ -1,0 +1,53 @@
+%FILENAME%
+txt2tags-2.6-5-any.pkg.tar.xz
+
+%NAME%
+txt2tags
+
+%VERSION%
+2.6-5
+
+%DESC%
+A text formatting and conversion tool.
+
+%CSIZE%
+140048
+
+%ISIZE%
+448512
+
+%MD5SUM%
+afb4d6c28005fd941ede948c8dc3dba2
+
+%SHA256SUM%
+d4aec459325fa2ef999ba932c3eb0538333d1f399116e1f6fddd70c74f733778
+
+%PGPSIG%
+iQEzBAABCAAdFiEEbqPz87kIJjKpy+kx1ToERbR6DasFAlpAKjwACgkQ1ToERbR6Dau9LQf8CRnTHxW1q3Z74+V46DnBNLQQSu5hfQAtuc+i9AaP6jDml3H1RR/j/baWBrLu/nbIjok1J7Yrceug/NTMS17GEg4+BvOChpJMUsQYP+0vEyud4agUhQZz+PL+y2Y6ol02rdNU/XbYgr+GzQILCX7CDEs77mJRQ1WjuatZ2aSyb9QCYGv54OHYvAnpIOkf2ZWk5h+C18pG655+JYhrxO6YLJufVzx2zRe4qIDqHU1dA/OR7MU98pvE/QXLzkQry0dzD3HA+VGo0hG1CC1FY3eXQRn4UC+nHPOz6yRA7XuyViSz9rniGhHdkRAAvXvxTGDrvfDYanfF4qnZLYwqWi6AXQ==
+
+%URL%
+http://www.txt2tags.org
+
+%LICENSE%
+GPL
+
+%ARCH%
+any
+
+%BUILDDATE%
+1514154327
+
+%PACKAGER%
+Connor Behan <connor.behan@gmail.com>
+
+%DEPENDS%
+python2
+
+%OPTDEPENDS%
+ruby: for running t2tmake.rb
+sh: for running html-update.sh
+vim: for using the vim-files
+
+%MAKEDEPENDS%
+gettext
+

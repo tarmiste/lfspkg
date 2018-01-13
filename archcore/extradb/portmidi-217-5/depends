@@ -1,0 +1,10 @@
+%DEPENDS%
+alsa-lib
+
+%OPTDEPENDS%
+java-runtime: for using pmdefaults
+
+%MAKEDEPENDS%
+cmake
+java-environment
+

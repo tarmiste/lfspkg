@@ -1,0 +1,55 @@
+%FILENAME%
+i2c-tools-4.0-1-x86_64.pkg.tar.xz
+
+%NAME%
+i2c-tools
+
+%VERSION%
+4.0-1
+
+%DESC%
+Heterogeneous set of I2C tools for Linux that used to be part of lm-sensors
+
+%CSIZE%
+80224
+
+%ISIZE%
+340992
+
+%MD5SUM%
+18f717c2ca259eb216f5bb9109cd688c
+
+%SHA256SUM%
+304e1442bb0588a9ce7fa5b6189090a901db9e0f17809a2cbbed88a520206d72
+
+%PGPSIG%
+iQEzBAABCAAdFiEE5JnHn1PJalTlcv7hwGCGM3xQdz4FAln45qUACgkQwGCGM3xQdz510gf+J/4H3qkyNUbB/MPoKeghXraMlWrYNkXT0YTJfuqTjudqvIpFYSB6hVwixz890J1LOJKoT8Rl3Ft/xdznMSz/huIWjA9gkMMnFjILSIgHnOl+DEXCfeHklegRMMMBeu0cdHkbdUPTilEhhbPU24VZ44NumAG8qLpBDzOSjnksRVtwLlif5vTD5Q3sSbWBNS+J5jdHV0KZ9VbAH0F2JQMte1zC6X4Nv/veh8Oi2zSKktU2n+23QPxPGhOSQEuDTse9T+r7UhjRPC2yonKxLM4d9NT/yReIabvaRwshX3UfqJGmrqZ7NBtF5hZUQt05zMfmBDAlpa8kv6gTDFiqq/ulTg==
+
+%URL%
+http://www.lm-sensors.org/wiki/I2CTools
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1509484185
+
+%PACKAGER%
+Jelle van der Waa <jelle@archlinux.org>
+
+%DEPENDS%
+perl
+
+%OPTDEPENDS%
+read-edid: for decode-edid script
+python: for smbus module
+python2: for smbus module
+
+%MAKEDEPENDS%
+python2
+python
+git
+

@@ -1,0 +1,63 @@
+%FILENAME%
+gnumeric-1.12.37-1-x86_64.pkg.tar.xz
+
+%NAME%
+gnumeric
+
+%VERSION%
+1.12.37-1
+
+%DESC%
+A GNOME Spreadsheet Program
+
+%CSIZE%
+13197560
+
+%ISIZE%
+44174336
+
+%MD5SUM%
+9adc4e335adc3ec6ecca5ca089114494
+
+%SHA256SUM%
+68c499e23404e6c0dbcdf4c2121a64a372e0760c9d19f87bcf5253c99beb72ea
+
+%PGPSIG%
+iQEzBAABCAAdFiEEqEuNxzq4MgZ75Uw8l2rG+juU+hAFAloke8EACgkQl2rG+juU+hA/5wf+PCG/gWuAIE9tqwaupwXxgIpOwz/aVVeDxnKVyhUKkwILRxIRdQWZT9KwTjmCS7pvXVkgATCGnDnGtkmyAuTBlEzuXOAzo8FtKHN3bargy9BvG7PjQhMKO+NU15vJZ9yUtd4erDiOXjL+7r1sm5N02tRkUitjEZlyHR66w4wYltst9U19tBO93Obf/tIa5cyFzFks3GrZL8gIzdX3TEQFxH0EQVqvLl3ytxrnjLNjsacCLMKXwEajC+JcKHA2FZQ80QnNl++4RTD4/ZQxc6rAwngeO6I2tLmw4M+Y46MDbU2SHzyBkLEDjDtjjOxQZNCD1+i7InYfG/QUsN81asPUyw==
+
+%URL%
+http://www.gnome.org/projects/gnumeric/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1512340390
+
+%PACKAGER%
+Jan de Groot <jgc@archlinux.org>
+
+%DEPENDS%
+goffice
+
+%OPTDEPENDS%
+python2-gobject: for python plugin support
+perl: for perl plugin support
+psiconv: for Psion 5 file support
+yelp: for viewing the help manual
+
+%MAKEDEPENDS%
+intltool
+psiconv
+pygobject-devel
+docbook-xml
+gobject-introspection
+python2-gobject
+gtk-doc
+autoconf-archive
+git
+yelp-tools
+

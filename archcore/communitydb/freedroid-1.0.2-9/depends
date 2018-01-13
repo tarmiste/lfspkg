@@ -1,0 +1,5 @@
+%DEPENDS%
+glibc
+sdl_image
+sdl_mixer
+

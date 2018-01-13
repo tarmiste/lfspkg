@@ -1,0 +1,11 @@
+%DEPENDS%
+gtk2
+startup-notification
+libxres
+
+%MAKEDEPENDS%
+libxt
+intltool
+gobject-introspection
+python2
+

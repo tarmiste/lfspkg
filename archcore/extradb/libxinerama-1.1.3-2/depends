@@ -1,0 +1,7 @@
+%DEPENDS%
+libxext
+xineramaproto
+
+%MAKEDEPENDS%
+xorg-util-macros
+

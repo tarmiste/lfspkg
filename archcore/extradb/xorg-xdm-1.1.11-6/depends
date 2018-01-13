@@ -1,0 +1,14 @@
+%DEPENDS%
+pam
+libxaw
+libxinerama
+xorg-xrdb
+xorg-sessreg
+libxft
+systemd
+
+%MAKEDEPENDS%
+pkgconfig
+xorg-util-macros
+xtrans
+

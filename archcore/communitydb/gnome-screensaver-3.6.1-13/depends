@@ -1,0 +1,12 @@
+%DEPENDS%
+dbus-glib
+libgnomekbd
+gnome-desktop
+
+%OPTDEPENDS%
+gnome-backgrounds: default background
+
+%MAKEDEPENDS%
+intltool
+gnome-common
+

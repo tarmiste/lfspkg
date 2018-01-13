@@ -1,0 +1,60 @@
+%FILENAME%
+blueman-2.0.5-1-x86_64.pkg.tar.xz
+
+%NAME%
+blueman
+
+%VERSION%
+2.0.5-1
+
+%DESC%
+GTK+ Bluetooth Manager
+
+%CSIZE%
+1867976
+
+%ISIZE%
+5547008
+
+%MD5SUM%
+4b24ed341783e8506d6efbb77d961945
+
+%SHA256SUM%
+25e62da668f894819755e437becd573cc5dc83252275bbd095338f11fb1eeb4b
+
+%PGPSIG%
+iQEzBAABCAAdFiEEzgvecadZqH8j8PfYth284QkBwWMFAlnjYUcACgkQth284QkBwWOJrwf+Idu885Gw/fBGMMBOdy9xT+lxmLLAKLUA2OAAUSLf78vFLLpoBwpk7AOF6aHVL+zLIak2zXOS/0hFpL2lGIB+ou7XAQWjP9bRbPF/TfcQswJoS+Wkfhy+34vj42Ibr2E4GbgHiKFZyK5l0d9APww1xVbwHbI4XxfmTfLA6YFEPdfMdpeJtM4hTE1BB7XygNo7XTJPFJAdyn8yA/WOVy0pkXBzfVfdL2OCRnozwiCSsiLNkAF2y8PJiybAK5qs95CBzww3uLiz4Wmu4xMA2FBkr3caMxzVsVt695y8OC6WDeBTi9v213WWtJMAS4hFkYVrQgkIpWAdIQK19+rJIA7JXA==
+
+%URL%
+https://github.com/blueman-project/blueman
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1508073688
+
+%PACKAGER%
+Balló György <ballogyor+arch@gmail.com>
+
+%DEPENDS%
+bluez
+bluez-libs
+gtk3
+libnotify
+python-cairo
+python-dbus
+python-gobject
+
+%OPTDEPENDS%
+dnsmasq: Network Access Point (NAP) support
+networkmanager: Dial Up Networking (DUN) and Personal Area Networking (PAN) support
+pulseaudio-bluetooth: audio devices support
+
+%MAKEDEPENDS%
+cython
+intltool
+

@@ -1,0 +1,51 @@
+%FILENAME%
+epydoc-3.0.1-4-any.pkg.tar.xz
+
+%NAME%
+epydoc
+
+%VERSION%
+3.0.1-4
+
+%DESC%
+Tool for generating API documentation for Python modules, based on their docstrings
+
+%CSIZE%
+372880
+
+%ISIZE%
+2609152
+
+%MD5SUM%
+d0c83b0191878fc6b6a2f56825152c1b
+
+%SHA256SUM%
+c01dc707a5ef04f0e0244fdab3a5ec8eb928f65db8b224b5cfb80721bccc0ed7
+
+%PGPSIG%
+iQEzBAABCAAdFiEElihV8HLHoBhGQFhk/PPIy1z5yNQFAlmtKM0ACgkQ/PPIy1z5yNR4xggAkuMB2PQp24a3PVtYsPACNZgfwYuxjPMyRwtKkNRVPQpbwkVrb1cMZBmfGZsEpKf3zboBlqkS4ZGbl+g8Xfsxovbe+M46vsJremC5YEbksC16fwU8tZBK2bMGBMU8/j/bp1wbgcQLsOldah8PiMm8OjQ2stA2cXh5E6CXeA2plxgCwCssJomZodTuVZcueGvw6ss+JvuEjTwMI54TDTSH7x6rxXxZOhCmqp8qUq7tCHs0AHRlmKHB8jnMd5Y2SLjjp3+CsfaruTQdh5CFIA4UrA8A9Xi5N9RMSLZbiq4xWGnhxFEXt2YcHu6Xjcxb2ZbFcuVj/QbWaoqzgS2i0DroHg==
+
+%URL%
+https://epydoc.sourceforge.net/
+
+%LICENSE%
+MIT
+
+%ARCH%
+any
+
+%BUILDDATE%
+1504520320
+
+%PACKAGER%
+Alexander Rødseth <rodseth@gmail.com>
+
+%DEPENDS%
+python2
+docutils
+
+%OPTDEPENDS%
+tk: needed for epydocgui
+texlive-bin: needed for PDF conversion
+graphviz: needed for graph generation
+

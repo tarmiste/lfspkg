@@ -1,0 +1,4 @@
+%DEPENDS%
+libvdpau
+libx11
+

@@ -1,0 +1,68 @@
+%FILENAME%
+phonon-qt5-gstreamer-4.9.0-3-x86_64.pkg.tar.xz
+
+%NAME%
+phonon-qt5-gstreamer
+
+%BASE%
+phonon-gstreamer
+
+%VERSION%
+4.9.0-3
+
+%DESC%
+Phonon GStreamer backend for Qt5
+
+%CSIZE%
+129116
+
+%ISIZE%
+438272
+
+%MD5SUM%
+8d2cc6b6382ee2c08367e9d32446fc36
+
+%SHA256SUM%
+c08e8453be74c921da20d40934cd747a9a317fb9bf1a485fc1c069fc4ebff7a4
+
+%PGPSIG%
+iQEzBAABCAAdFiEEFRnVq6Zb9vwrc8dWek52CV2KUuQFAlku64YACgkQek52CV2KUuTg2Af+Ke4Kv/qm1RCyOXD/ekMJvaoZe/5pDPn/WUz2HIAEVF5zAv1aGvyXTbePJVv9Zr0+bmgTZBIhNEIU4TZcVr5OjgHDG70eOkAP9WEzvYO8ZdcJ1p8qsJrNzXGMM7Y+qupqC3ShS34AMnV23PYVCOS3crFURSBnh1Xd7csqimt2d5y2s+6osH+9EoF4iJCGXWpRbYMCTd1oMEY5dfp2J93fLuSzlTuaLUsFl+yiMFrmLxRpgTCiFtKXBxxN+SwNcO9B2a7jj2/JWs4mAPT1DkGja9xpfkrUthX6KB2ZAztAeb9DB6VUeQbNmbmxX/tImFlmchrS4FoWxfvIYVoaxUYsrA==
+
+%URL%
+http://phonon.kde.org/
+
+%LICENSE%
+LGPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1496246183
+
+%PACKAGER%
+Antonio Rojas <arojas@archlinux.org>
+
+%PROVIDES%
+phonon-qt5-backend
+
+%DEPENDS%
+gst-plugins-base
+qt5-x11extras
+phonon-qt5
+
+%OPTDEPENDS%
+pulseaudio: PulseAudio support
+gst-plugins-good: PulseAudio support and good codecs
+gst-plugins-bad: additional codecs
+gst-plugins-ugly: additional codecs
+gst-libav: libav codec
+
+%MAKEDEPENDS%
+gst-plugins-base
+extra-cmake-modules
+automoc4
+phonon-qt4
+phonon-qt5
+qt5-x11extras
+

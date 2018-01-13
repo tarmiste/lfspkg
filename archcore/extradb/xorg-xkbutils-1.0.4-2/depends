@@ -1,0 +1,10 @@
+%DEPENDS%
+libxaw
+libxt
+libx11
+
+%MAKEDEPENDS%
+xorg-util-macros
+xproto
+inputproto
+

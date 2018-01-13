@@ -1,0 +1,6 @@
+%DEPENDS%
+man-db
+
+%MAKEDEPENDS%
+xz
+

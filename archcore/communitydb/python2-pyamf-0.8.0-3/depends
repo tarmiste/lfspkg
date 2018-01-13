@@ -1,0 +1,16 @@
+%DEPENDS%
+python2-defusedxml
+
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-defusedxml
+python2-defusedxml
+
+%CHECKDEPENDS%
+python2-django
+python2-sqlalchemy
+python2-twisted
+python2-lxml
+python2-pillow
+

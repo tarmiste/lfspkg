@@ -1,0 +1,74 @@
+%FILENAME%
+monitoring-plugins-2.2-2-x86_64.pkg.tar.xz
+
+%NAME%
+monitoring-plugins
+
+%VERSION%
+2.2-2
+
+%DESC%
+Plugins for Icinga, Naemon, Nagios, Shinken, Sensu and other monitoring applications
+
+%CSIZE%
+397164
+
+%ISIZE%
+2660352
+
+%MD5SUM%
+3113a0f91e3ba6adeb85f6fb4e6f0d98
+
+%SHA256SUM%
+62395f9bc9cff79e0a795cc3e4ff2d6b561539bdea31addc5aef5fa075f74162
+
+%PGPSIG%
+iQEzBAABCAAdFiEEh0L3U157OUobBIFjMyycQPQNIHIFAljH+l8ACgkQMyycQPQNIHI8Vgf/WWs5oQJu3a8vWA13l+CxeT+TDtqg3Ip/xpCW+O0xnJ8hlfShSwGLf269vVPDGasvUU9M07pJJS21AyOz/UvwERER2HbBfcgXTcTqAx0pf1fJaX1rRYFi4gpZBYak+g7P3ZIg4dWSljCxF6HsGixs9nzX4Sl0DVHExksYl6Xk/mKrUdwoXPlKrJfahhWIfwm8HUGzRqyFp2ruqQzkJva4HbdWnu6UGAc5ehF3FBgKm9J1O49pPNz5Bzf+3YlbFbCoaRqKt4ClRVL3T3W2hXsgXfrrtqnZiuW/QQUFe2MUByCiADhXjhxDwyHWp0bNIqo1at2L0nw/+a8cVYtZ6GT61Q==
+
+%URL%
+http://www.monitoring-plugins.org
+
+%LICENSE%
+GPL3
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1489500711
+
+%PACKAGER%
+Jonathan Steel <jsteel@archlinux.org>
+
+%REPLACES%
+nagios-plugins
+
+%CONFLICTS%
+nagios-plugins
+
+%PROVIDES%
+nagios-plugins
+
+%OPTDEPENDS%
+net-snmp: for SNMP checking
+postgresql-libs: for check_pgsql
+libmariadbclient: for check_mysql_query and check_mysql
+libdbi: for check_dbi
+libldap: for check_ldap
+
+%MAKEDEPENDS%
+net-snmp
+postgresql-libs
+libdbi
+libmariadbclient
+procps-ng
+iputils
+fping
+dnsutils
+rpcbind
+smbclient
+openssh
+inetutils
+postfix
+perl-net-snmp
+

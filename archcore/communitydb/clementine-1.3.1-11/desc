@@ -1,0 +1,81 @@
+%FILENAME%
+clementine-1.3.1-11-x86_64.pkg.tar.xz
+
+%NAME%
+clementine
+
+%VERSION%
+1.3.1-11
+
+%DESC%
+A modern music player and library organizer
+
+%CSIZE%
+5522028
+
+%ISIZE%
+21984256
+
+%MD5SUM%
+35539b631143af753e3141acd27f3bb6
+
+%SHA256SUM%
+ea3ebbe31a2ffb994d8daadd65af392194dc151c079b79188aec53157027839f
+
+%PGPSIG%
+iQEzBAABCAAdFiEElDfdOBWnqRaePTlGr/XZUJi8b/UFAlou9jcACgkQr/XZUJi8b/UUEggAmD1pHPA6ssttF4l+IoNewKstJiC5sfL9xMV4AwdokzuvRS4F9B0+/vKoRgyyjLXy9lMZJEyAEZMJnBAn4QgCm1aOoGVOqQF4cUyTHpoxjtFiduJtjxHQMNPgIbkDmdJALICoqg99LKN1aXLwUYqXyOHh6rNneOkpKnouKpplYcQitb3DoFxXaREQXGiAYJr+3Wqd320+fkxnF7SUwMHh/W4mJs1xtBCTI6iJ1hqrUIxMOHIsR1UmKyz+hd2A8dHFQqH9pLU4qD55wqjIX+1JP/FeHpLW25aujX2qgSzy2C4iQ91kYe4LFSV/ov0ELkgGiBmlApPx0/kDfv9DgL3jPA==
+
+%URL%
+http://www.clementine-player.org/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1513026391
+
+%PACKAGER%
+Maxime Gauduin <alucryd@archlinux.org>
+
+%DEPENDS%
+chromaprint
+crypto++
+fftw
+gcc-libs
+glew
+glib2
+glibc
+gst-plugins-base-libs
+gstreamer
+libcdio
+libechonest
+libgl
+libgpod
+liblastfm
+libmtp
+libpulse
+libx11
+protobuf
+qjson
+qt4
+sqlite
+taglib
+zlib
+
+%OPTDEPENDS%
+gst-plugins-base: "Base" plugin libraries
+gst-plugins-good: "Good" plugin libraries
+gst-plugins-bad: "Bad" plugin libraries
+gst-plugins-ugly: "Ugly" plugin libraries
+gst-libav: Libav plugin
+gvfs: Various devices support
+
+%MAKEDEPENDS%
+boost
+cmake
+mesa
+sparsehash
+

@@ -1,0 +1,11 @@
+%DEPENDS%
+liblo>=0.28
+jack
+
+%OPTDEPENDS%
+qt4: example plugins
+
+%MAKEDEPENDS%
+ladspa
+qt4
+

@@ -1,0 +1,63 @@
+%FILENAME%
+ecasound-2.9.1-10-x86_64.pkg.tar.xz
+
+%NAME%
+ecasound
+
+%VERSION%
+2.9.1-10
+
+%DESC%
+Command-line multitrack audio processor
+
+%CSIZE%
+1109780
+
+%ISIZE%
+7630848
+
+%MD5SUM%
+75907a689a583ea0d490c1025faac233
+
+%SHA256SUM%
+ad1baab1946381a003ac7ee4a1ef5e8ee37b46ed89f4be4e6bc00707f9bf9fa6
+
+%PGPSIG%
+iQEzBAABCAAdFiEEhs/8qRjPOvRxR1iAUeixSKmZnDQFAlpMiLEACgkQUeixSKmZnDTsNQf/YE/Yit/V4wfN66BSjdqIxNn1RbJ7c7nu3uwjOjPHmw+Apmk3Y6xmsHINjIXRCisJ+T5D9xmjP7x/Cmoq3KPoE7RFRCCJPFeYx2HggiIeAN1edlBIuZXQWt2hdpDz4GiQUYjJjtEq4hssygSyhJtN4Q57P79jZKaDppIvjfQFeMNl838UzKVI6p4S8bXefboA3hXtNKSM/R78ueYtAIkzHebRCvGoXY4ymkzJ+sUA7898XAuDuuLupXEsrrsI8Ip4r4RrbTN0NMAmgOpIj0OvnBmx14ajc7j8CxWUJtjGC13k7IeXI0A84LafHmDEZ/pG+so3II+RCq+ay4HzkhrsuQ==
+
+%URL%
+https://ecasound.seul.org/ecasound/
+
+%LICENSE%
+GPL
+LGPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1514965152
+
+%PACKAGER%
+Evangelos Foutras <evangelos@foutrelis.com>
+
+%DEPENDS%
+audiofile
+liblo>=0.28
+lilv
+
+%OPTDEPENDS%
+python2: ecamonitor, ECI API
+ruby: ECI API
+mpg123: MP3 decoding
+lame: MP3 encoding
+vorbis-tools: Ogg Vorbis decoding/encoding
+faad2: AAC decoding
+faac: AAC encoding
+timidity++: MIDI file input
+libmikmod: tracker module
+
+%MAKEDEPENDS%
+python2
+ruby
+

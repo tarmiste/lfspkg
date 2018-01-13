@@ -1,0 +1,50 @@
+%FILENAME%
+netcdf-4.5.0-1-x86_64.pkg.tar.xz
+
+%NAME%
+netcdf
+
+%VERSION%
+4.5.0-1
+
+%DESC%
+network Common Data Form interface for array-oriented data access and corresponding library
+
+%CSIZE%
+538980
+
+%ISIZE%
+1751040
+
+%MD5SUM%
+5d7cc8049371aee506afb631c860f134
+
+%SHA256SUM%
+4dbde9029cdf73f8de04347590b532478062c6277a477cf084343f9fdc2d330c
+
+%PGPSIG%
+iQEzBAABCgAdFiEEado014/g79WWrG0EnYk+xNqvkSkFAlnzuFQACgkQnYk+xNqvkSmRjwf/U0noykuOAR+YjjvLJim1f2QkQZBZ6bn4fvZFEKhjd2k5LZ3tqiZlY91uo2fP5Ob9Bc7zcUVqWX4X3rlf4fyoKmIWIr9av4H2BtpSGw/55TWUIlCcdXdHBXd31AyLkSN6qKMXKu5zFc7Ug0Z+9cV8Gt8btAVwvjtHnUbQMFPEmjHfpyRVu8s4Up7A7CP8pjVprkJbZ/XwWvkXMS5ZYgSDF0TD60V5QtOIFUy2jmeRH579lctwy4JsihRfBodMQKXjUhfiJ2471D2KBbX3xInaEyYDOjkTa6o47chWFt8vzEz94YkwX7N7FWNRcqAtI5tcodvUyBYjZbw8gcdvhc1j3g==
+
+%URL%
+https://www.unidata.ucar.edu/software/netcdf/
+
+%LICENSE%
+custom
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1509143163
+
+%PACKAGER%
+Bruno Pagani <archange@archlinux.org>
+
+%DEPENDS%
+hdf5
+curl
+
+%OPTDEPENDS%
+netcdf-fortran: fortran bindings
+netcdf-cxx: c++ bindings
+

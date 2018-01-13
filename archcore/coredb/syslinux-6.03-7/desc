@@ -1,0 +1,59 @@
+%FILENAME%
+syslinux-6.03-7-x86_64.pkg.tar.xz
+
+%NAME%
+syslinux
+
+%VERSION%
+6.03-7
+
+%DESC%
+Collection of boot loaders that boot from FAT, ext2/3/4 and btrfs filesystems, from CDs and via PXE
+
+%CSIZE%
+1534920
+
+%ISIZE%
+4839424
+
+%MD5SUM%
+cb842cb7ea43b555acc2cf0d32f50b96
+
+%SHA256SUM%
+a9d1a7266a41b1437e119500acc202d033d83994e2ce44012300f00f7478c580
+
+%PGPSIG%
+iQIzBAABCAAdFiEEjhmSFnRl21+wRVV8sChU7XU+Dx8FAli0ZYkACgkQsChU7XU+Dx9W0RAAo/cNL8mQB9rpTgdw5JXFSuv5ksobcDSsHsTvmM93xSASCPMs8AqyAK01D6hjUA4O+j3yZocg85MDzbvoBYl8ePT7sgMs1YGaO5bKsSPUydrGb3HCgsTChXRa88QoUcqixl9uTKyhURUt2o58nYkc3/A+xEQr2XAeX2P1sCB+C5oesL8aHdXfiqK11903Z26i3nP4dhNpSbSxuR2Xjnp4f0kNkqd+IetWSzCmeeR89U0A79xtS9vPwQaKF7QUBpBWjE56jG5DNKDGJwOan3uRrQen82I6ygTE4jpuk8w3nnVHu+A4hkBJWMfseB+2c3oVfhEw5GDjSCEHq5UhZj0vA6LfGiRj5dVw0MyzDT1O0xplCjEPRpQHx3y56+gT7ELbQ0L+48z/ilHi899Vc3XDCWmp6TbHgNQNOSNnoVWM11Rqeyz8hfYPiBHOmOYO/iVJ91GOaIWeyLlbI/eo71zuaq1rwzE4X/XoSekz0JwxXFsJp1qmoFTS1UxUt/fWVLxtK134nzSjc2VBenlulTgu98oUZHMIdt9X3wqe9X02c/azestgIXXIc7kSTwIZeMILQzEslvfHJOjP2dBE9wTWUMZ8rrh1HaulYjO/9uS+Ad8sVi853vdThG7Y8iIkdQh5Dqcs8WrMs12bsazDx2qrCh/2KIWJD53QugIpXYJ8Lyk=
+
+%URL%
+http://www.syslinux.org/
+
+%LICENSE%
+GPL2
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1488216730
+
+%PACKAGER%
+Anatol Pomozov <anatol.pomozov@gmail.com>
+
+%OPTDEPENDS%
+perl-crypt-passwdmd5: For md5pass
+perl-digest-sha1: For sha1pass
+mtools: For mkdiskimage and syslinux support
+gptfdisk: For GPT support
+util-linux: For isohybrid
+efibootmgr: For EFI support
+dosfstools: For EFI support
+
+%MAKEDEPENDS%
+git
+python2
+nasm
+upx
+asciidoc
+lib32-glibc
+

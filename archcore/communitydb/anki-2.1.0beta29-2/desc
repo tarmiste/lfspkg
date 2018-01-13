@@ -1,0 +1,56 @@
+%FILENAME%
+anki-2.1.0beta29-2-any.pkg.tar.xz
+
+%NAME%
+anki
+
+%VERSION%
+2.1.0beta29-2
+
+%DESC%
+Helps you remember facts (like words/phrases in a foreign language) efficiently
+
+%CSIZE%
+2277488
+
+%ISIZE%
+13493248
+
+%MD5SUM%
+f814219bd9e1d1e49a2fd350536c96d7
+
+%SHA256SUM%
+f4ec1a03f883bfcf43eb56b0c3030b3ff0e0f9c9ab035a08fb68f3fb98ac0a4d
+
+%PGPSIG%
+iQTHBAABCgCxFiEE5VD//9SF4mShcX4wkBwcMg6w1F0FAlpBJaBfFIAAAAAALgAoaXNzdWVyLWZwckBub3RhdGlvbnMub3BlbnBncC5maWZ0aGhvcnNlbWFuLm5ldEU1NTBGRkZGRDQ4NUUyNjRBMTcxN0UzMDkwMUMxQzMyMEVCMEQ0NUQzFIAAAAAAFQAVcGthLWFkZHJlc3NAZ251cGcub3Jnam9oYW5uZXNAa3lyaWFzaXMuY29tAAoJEJAcHDIOsNRdb20f/AoPwHZbS7o+xHwrXAG+rePo97Sr/QOOp6V2yj72LbFp6gg/OB6HjjuWtmt3vWJ64yB7ADO1LkvALeeovK5gJfAWVwfgxhbymGCxR/f66YNKebQafQjhRdueT8fjKDav4ZO+N/xMI3PdCZ/JAQ6BkyQst+gK+ZjwCLb5F5d9g7hWBEpCW9/roWBqJWbmXY3YKfE8MYt3Fc5uUaWQlo6MbK4GYgqijSrMKdR/cU56XCNep4NyyuKt7Pe4s2AOU0LHEK+pasVhntOY4eZP6AGkY25inueQM0qpiz33n5GWRA/WZPTu/EWcrtDanzn9zdQyGztTl65ObBfYZKJREDqa9i24miecoiHEQWEXd6lZHFdDW0zX/h/6HS9QgRM37SoHhgfh8h+uWm7RrTeLkDcZlg0TaG9TOJ8PbvxP05BZC7CrI9dMkVo1sGQDSYWfYPmODFfNJM0tJd6ibvwoQHef05ViGWyiasNy5I8XcV7HAsL9hHc+f2RYoXh2bFH2Urw+iNn5hHN5pl5JMDdCbb/pA2AxqgRphMYKBOL5GRyKaEcztemlPFALQdSU5qAMEFDF4keSOBXENkb0zwEj3dGZCsznVXuiYUesQQtnKyzSPsSE6BPi3zVYJLOgVBy45vtdbpCZgCK2on90Ep5tJRbQyGEW0QEtQ0MgQCzmlTgEi89yNyd911N8g2ToaV4Rl8Zj4XTzFDnBEU3WvmdWdPN1PfJN4wquasUP8ZkUhyHMbNu+AlPWNSTJHj4yvrDohOwrD2MA4yhxptE71DXN4yxEJjdNlQIGfILRMoOqeY5HYug0qoXDLH/TPdwpP9fx4PKSpYbHjHD3exundRyjbTcWbcIe8q3TyO8pjJuc9jhB0Mt1qbYG23sVUqTQRQ6Jvd4YFCQGkkH5iHDl9oyCzUcsJFOnRK7ym2TIBbE+kcIssom8lvig6vIaN4OQRBvjujPkCEcGs8W2vLFahRczK1KA3U7OYGI6bzpJfyKt4YXE8AoACTyDVSdVkG9wHVPiz2Vrv43AvbEE64QcqWohQE5qBYZu01KiWng+vH72s2mRmS7SsUlRLEEDKdW0bcZ/wF/qa/xX6geF/NcNpImBT3BNhPxbxA/DMJY+moUDacD1WWaJvmQHf7w9kgTabwvfg3AN1qq7qavqgsysFXVaWJfPsOkYSfmemrSWoSoo2Go5nsFbzW/hKRzZ+SSyH3Xg91j2M89Sz7wYOcxUrzAy2bORdnrgGj1HTVVDZiZv7LGKGB+jOPSBqwEMrvGthXkukLVk7Ghr+8NHhhLP6in+6I1z98XS39Hlp7kaKNJZNw0//nvXiOxGAbUAdkDbv7bZ77CIdvdsVRBqTdj/Kx8FK0W1Oss=
+
+%URL%
+https://ankisrs.net/
+
+%LICENSE%
+AGPL3
+
+%ARCH%
+any
+
+%BUILDDATE%
+1514218728
+
+%PACKAGER%
+Johannes Löthberg <johannes@kyriasis.com>
+
+%DEPENDS%
+qt5-webengine
+python-beautifulsoup4
+python-pyaudio
+python-pyqt5
+python-requests
+python-send2trash
+python-decorator
+python-markdown
+
+%OPTDEPENDS%
+lame: record sound
+mplayer: play sound
+

@@ -1,0 +1,59 @@
+%FILENAME%
+liferea-1.12.1-1-x86_64.pkg.tar.xz
+
+%NAME%
+liferea
+
+%VERSION%
+1.12.1-1
+
+%DESC%
+A desktop news aggregator for online news feeds and weblogs
+
+%CSIZE%
+849280
+
+%ISIZE%
+3233792
+
+%MD5SUM%
+0fa9d10cb824f56af3224ac4893f262e
+
+%SHA256SUM%
+f5d28933061a90813c37b781f7badd8cb1cc2b7b902f39f66ab692234f3e1666
+
+%PGPSIG%
+iQEzBAABCAAdFiEEFRnVq6Zb9vwrc8dWek52CV2KUuQFAlpMEW4ACgkQek52CV2KUuTiOwf/ZBgO7m5N1LwQ3I+2+8IQwE0Wx+8SbjyKemQvqOxqDEAcqZyZm9AEhG6FyscGJp9rNU54P2WdP4Uq0UjjROmPLh9Pr4FGIhZbQ9Yce06xn36V5cgXrAp32RG88K3TA9MqXQkDT8hAjVGsPztRfQqKnPglEUEcHX45XhpxE0aa58nepd/MXqr1n1EPWMZ9JInEos+aQ1HyotYDaAjMYfakcN/L2eey+odwzRdAhaMsYIJKNxh1a026f/w1c9iDcnPg7rJs4dDmfozUuQulwwNXtiK7NXnJ6udDqorbas92kREvghwaZhFN0oKCOdTWSGu2c5hRHijrkiKu93CX+CJNZw==
+
+%URL%
+http://liferea.sourceforge.net/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1514934596
+
+%PACKAGER%
+Antonio Rojas <arojas@archlinux.org>
+
+%DEPENDS%
+webkit2gtk
+libpeas
+python-gobject
+
+%OPTDEPENDS%
+gnome-keyring: for keyring plugin support
+libgnome-keyring: for keyring plugin support
+python-cairo: for the tray icon plugin
+gst-plugins-base: for media player plugin support
+gst-plugins-good: for media player plugin support
+gst-plugins-bad: for media player plugin support
+
+%MAKEDEPENDS%
+intltool
+gobject-introspection
+

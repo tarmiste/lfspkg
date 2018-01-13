@@ -1,0 +1,53 @@
+%FILENAME%
+sugar-artwork-0.112-1-x86_64.pkg.tar.xz
+
+%NAME%
+sugar-artwork
+
+%VERSION%
+0.112-1
+
+%DESC%
+Sugar icons and themes
+
+%CSIZE%
+115608
+
+%ISIZE%
+1266688
+
+%MD5SUM%
+e7b15a83ae43d88824bd9bb3c2de0931
+
+%SHA256SUM%
+021b06bec663bdccb73e95dd883ada40e40c03ac05a23eddfb720b9117f0b9a5
+
+%PGPSIG%
+iQEzBAABCAAdFiEEzgvecadZqH8j8PfYth284QkBwWMFAlnjodcACgkQth284QkBwWPUMAgArmA+DMJw0mVMGNqKL9FAc60CVI6JCODnsAfonia+Y37LMdaj5I4L+p4wEFdgk7yBsxI84TegKobRPg5kHuVUd/r+y59pvYY+R9a5ss00rkUagu2NQiB0JL8mVspuX/HKKLIQyCWSev9593RS9mZpF0o2zFtTjSygzVnPq24BQ7WQ9EguH6r2Yyv3lZz5ZEVSZhy9Z8ykM85hi6zpPV1QWSETKp8zl9snsjbaOp8fIWHw6UBWe8FpyzxX2CUE8E+IxhL5czaXB6gfVWlTaok5E+SnEO4+ACRJUPcBrPwvrFZ+/ELmGVPQJBz+dgpXb1/7KJc58seo2by4RqcNApb1/w==
+
+%URL%
+https://sugarlabs.org/
+
+%LICENSE%
+LGPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1508090285
+
+%PACKAGER%
+Balló György <ballogyor+arch@gmail.com>
+
+%OPTDEPENDS%
+gtk2: GTK+ 2 theme
+gtk3: GTK+ 3 theme
+
+%MAKEDEPENDS%
+gtk2
+gtk3
+icon-naming-utils
+icon-slicer
+python2
+

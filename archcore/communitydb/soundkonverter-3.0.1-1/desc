@@ -1,0 +1,74 @@
+%FILENAME%
+soundkonverter-3.0.1-1-x86_64.pkg.tar.xz
+
+%NAME%
+soundkonverter
+
+%VERSION%
+3.0.1-1
+
+%DESC%
+Front-end to various audio converters
+
+%CSIZE%
+790856
+
+%ISIZE%
+4273152
+
+%MD5SUM%
+6af9804c8607bad1b0e008dcecbca1c1
+
+%SHA256SUM%
+164d9b2fee0cde3536fd7e3cb0cb300ae025c21bce0dd3dfc5e7b36b95b2d250
+
+%PGPSIG%
+iQEzBAABCAAdFiEEdrQZLpAsClJkLGPCc7jtUvHTV8EFAlnRBnoACgkQc7jtUvHTV8EvJwf9EKhUtfcDVkLdZi1JfL7QP5KDHLkSRZH7RZdVsyOZJcMYID5CxJrUi11a/paJPckWyMj3i0mqk87aBwD4u2AjoYwUlJn/uV6s6Hu2PDN7R0H0F/PEpSY7Id1ibPiae66I/yYGLrHmTRORroMV02ARcRI19UZci3hS68qP4k3XzwEFuGnxnu4MDysukm+InpQlsZ5KFhBX5eaOCVbjSoHwbtzNl7wPNpc9ab1N1TfAthanq8I3snujEAmxuWVIVKvBLrYwASgYbCZJaT9hofcyaUV6jGXStNqcjFj5e6iyxHNFOyClAlQpMUWRtDn/T7qdKkW2RI2E3bKbaqhy3u+jag==
+
+%URL%
+http://www.kde-apps.org/content/show.php?content=29024
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1506869759
+
+%PACKAGER%
+Lukas Jirkovsky <l.jirkovsky@gmail.com>
+
+%DEPENDS%
+hicolor-icon-theme
+kdelibs4support
+libkcddb
+taglib
+
+%OPTDEPENDS%
+cdrkit: cdda2wav backend
+faac: faac backend
+faad2: faad backend
+ffmpeg: ffmpeg backend
+flac: flac backend
+fluidsynth: flouidsynth backend
+lame: lame backend
+mac: mac backend
+mplayer: mplayer backend
+mp3gain: mp3gain backend
+opus-tools: opus backend
+speex: speexenc, speexdec backends
+timidity++: midi backend
+twolame: twolame backend
+vorbisgain: vorbisgain backend
+vorbis-tools: vorbis tools backend
+wavpack: wavpack backend
+sox: sox plugin (change sample rate, various effects)
+
+%MAKEDEPENDS%
+cmake
+extra-cmake-modules
+kdesignerplugin
+kdoctools
+

@@ -1,0 +1,53 @@
+%FILENAME%
+mps-youtube-0.2.7.1-2-any.pkg.tar.xz
+
+%NAME%
+mps-youtube
+
+%VERSION%
+0.2.7.1-2
+
+%DESC%
+Terminal based YouTube jukebox with playlist management
+
+%CSIZE%
+117164
+
+%ISIZE%
+547840
+
+%MD5SUM%
+6576b1c5b625fb69ce737037088bcf86
+
+%SHA256SUM%
+1010c229db6cd2c71d8ef81a0282d2b5c724f8f13656b3ca82243767ac3bb19c
+
+%PGPSIG%
+iQEzBAABCAAdFiEE82kWh9hnuBtRzgfZu+Q3cUhzKKkFAlhg6O0ACgkQu+Q3cUhzKKl/lAf+Nz866qTKHonMXQYSRrmVr7KwCtwcUqhiDaETfhoxyY+IXUPbPLPRc71AQW2L0YCkbh/sO50CnY9oKNcHbUZhUJhKOEfE3z+5AXPeGCeZX3AyEna1nZVbV+WqqzE5JLXwhKkPpZiK75SjxA8nohui2uh1Q1q1HcB4TIFVqHn0ut7lxTwnliYnNUkkHenTBeoUpIXJJk1PRjepdBvASYu9NidfMA3b+4kWkjMp884oBYrXa0f/ukBDHUmJbgJFmF8wa2idWH+Oytim4DZ2IMZAbosKEhsKwXPVZShtgERt1LUSdawnyLsUbOjQx/6g71pagPchQb7zbBeZWvVjYsQ1qQ==
+
+%URL%
+https://github.com/np1/mps-youtube
+
+%LICENSE%
+GPL3
+
+%ARCH%
+any
+
+%BUILDDATE%
+1482746082
+
+%PACKAGER%
+Bartłomiej Piotrowski <bpiotrowski@archlinux.org>
+
+%DEPENDS%
+python
+python-setuptools
+python-pafy
+
+%OPTDEPENDS%
+mpv: Alternative to mplayer for playback
+mplayer: Alternative to mpv for playback
+ffmpeg: for transcoding downloaded content
+python-pyperclip: for copying content to the clipboard
+

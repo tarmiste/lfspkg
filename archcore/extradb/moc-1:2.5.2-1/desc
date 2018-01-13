@@ -1,0 +1,68 @@
+%FILENAME%
+moc-1:2.5.2-1-x86_64.pkg.tar.xz
+
+%NAME%
+moc
+
+%VERSION%
+1:2.5.2-1
+
+%DESC%
+An ncurses console audio player designed to be powerful and easy to use
+
+%CSIZE%
+194236
+
+%ISIZE%
+580608
+
+%MD5SUM%
+8e07b652ec242178bd7b96c6229ffaa8
+
+%SHA256SUM%
+bc06d3deb8eea10b09d7451746202dbc1503644dd9149f5a27db857c0aabbc18
+
+%PGPSIG%
+iQEzBAABCAAdFiEEFRnVq6Zb9vwrc8dWek52CV2KUuQFAlhpkdgACgkQek52CV2KUuTFOQgAklFTfSifOfIMacffSUTSjK1l5w2R5FesKbxqTONaJ75gbR3lC92LPjN/UPOyDa/hAgWpR2S4+2IjNvFuGDMZT7OZ8lwuoNAaUx2HblrFlJ+H5m60Jg8mW4/b7OzRHf06animHapHE5ztzF7GxUFiXhgaKumkx6VoaHQWOio/F56e4xLYZdaSnDYr9XTnv+DL4TzWl5SNfQZxRwXXyhub1I9C3E4ay7GBEp9nnzDtb3/wJtgZXzGMd4YjoFx3Rua8+wSR3Ps6Uka9oBj0tVWO3lnnlGGcXB8eDfcT4OVlYNlmnYqxwQDVVCg8JK9GmFQRPmiRBh73LSBGQKbtZ7V3wQ==
+
+%URL%
+http://moc.daper.net/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1483313277
+
+%PACKAGER%
+Antonio Rojas <arojas@archlinux.org>
+
+%DEPENDS%
+libmad
+libid3tag
+jack
+curl
+libltdl
+file
+
+%OPTDEPENDS%
+speex: for using the speex plugin
+ffmpeg: for using the ffmpeg plugin
+taglib: for using the musepack plugin
+libmpcdec: for using the musepack plugin
+wavpack: for using the wavpack plugin
+faad2: for using the aac plugin
+libmodplug: for using the modplug plugin
+
+%MAKEDEPENDS%
+speex
+ffmpeg
+taglib
+libmpcdec
+wavpack
+libmodplug
+faad2
+

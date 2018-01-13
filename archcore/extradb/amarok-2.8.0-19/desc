@@ -1,0 +1,71 @@
+%FILENAME%
+amarok-2.8.0-19-x86_64.pkg.tar.xz
+
+%NAME%
+amarok
+
+%VERSION%
+2.8.0-19
+
+%DESC%
+The powerful music player for KDE
+
+%CSIZE%
+34912056
+
+%ISIZE%
+61302784
+
+%MD5SUM%
+ce58ebe8c6bae87d042efe467607d793
+
+%SHA256SUM%
+1cf9abcec4bf1bdae15f68fcefb38115da7628546e518c74e53e073e3b8cbdcc
+
+%PGPSIG%
+iQEzBAABCAAdFiEEFRnVq6Zb9vwrc8dWek52CV2KUuQFAlo9jhQACgkQek52CV2KUuTMHwf/Z26JyFgTQm2jgh/3fnTEJmidEQU5nr2GtsYC7ycoJY2m392XsOepS8Qwy+/13M359HB1hlXXp8dzkqmQfWkv+ZG1uF8Wi2Dsy3TaFZOlsHCckgB4uxC7pH1+ByHU8vCt3hTk33whlAbD5hCumBfAbhGGGyVD0+9/iseiLcTnGDOoL+JtrB/a4v8/8LpuyM6W4Kro9HrKrg8p20dS+e3jic0bU9Dk7s3b5ghihKZ5yToYWCJxxRk16o3fzSNiQq87gpWG0s7YSTUT1V68ygQTHi8cJ+GUcQcOkQP5aTab9ZnPEKXrcIiScX70S5Ss53Z7aQerFmJX2ZAilKEN66ZzdA==
+
+%URL%
+http://amarok.kde.org/
+
+%LICENSE%
+GPL2
+LGPL2.1
+FDL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1513983241
+
+%PACKAGER%
+Antonio Rojas <arojas@archlinux.org>
+
+%DEPENDS%
+kdebase-runtime
+mariadb
+taglib-extras
+liblastfm
+ffmpeg
+libofa
+qjson
+qtscriptgenerator
+
+%OPTDEPENDS%
+libgpod: support for Apple iPod audio devices
+libmtp: support for portable media devices
+loudmouth: backend needed by mp3tunes for syncing
+ifuse: support for Apple iPod Touch and iPhone
+libmygpo-qt: gpodder.net Internet Service
+gst-libav: MP3 codecs
+
+%MAKEDEPENDS%
+automoc4
+cmake
+libgpod
+libmtp
+loudmouth
+libmygpo-qt
+qca-qt4
+

@@ -1,0 +1,54 @@
+%FILENAME%
+puddletag-1.2.0-1-any.pkg.tar.xz
+
+%NAME%
+puddletag
+
+%VERSION%
+1.2.0-1
+
+%DESC%
+A tag editor for GNU/Linux
+
+%CSIZE%
+1086128
+
+%ISIZE%
+5568512
+
+%MD5SUM%
+028849f0d75c72fc9033db864eb8675d
+
+%SHA256SUM%
+22f14c0db961116de15db5900f39652eb459036a2472b2b7a95d9ad0b146b17b
+
+%PGPSIG%
+iQEzBAABCAAdFiEElDfdOBWnqRaePTlGr/XZUJi8b/UFAlg9RdEACgkQr/XZUJi8b/UtjQf/Tqmy2nGaCduEPvOGRBj6z1QljtV7BivhD9AjdyEmrH6xwhtJLcDyaKqmnA+vlcfDbaQTTgqm0n76n0p8byEfCOg/87azkHluBjIzjr00t/gabQxl4S6UQTVLUJSDdBWl/C8xbH1cLmY23pUQECbnwZg395v3ds0YQmZKzk3ZOkKdxPxyZDchzd9x3U1IbSGLFipMYgUjVmj5jTM/gN7+G3DTLl1JgOMa2vEvwcjEi5KFBtsRLilogphyDcFpomLPWnGQnQGoqC8VPY1Fv/+B1RK7d1wqKUtmRYvv/e1n+ykTv8GoOgWgrVZe+6/PZ5rJq05nV5SDVhYELy125YMnhg==
+
+%URL%
+http://puddletag.sourceforge.net
+
+%LICENSE%
+GPL
+
+%ARCH%
+any
+
+%BUILDDATE%
+1480409489
+
+%PACKAGER%
+Maxime Gauduin <alucryd@archlinux.org>
+
+%DEPENDS%
+chromaprint
+mutagen
+python2-configobj
+python2-musicbrainz2
+python2-pyparsing
+python2-pyqt4
+
+%OPTDEPENDS%
+python2-pillow: FLAC cover art
+quodlibet: QuodLibet library support
+

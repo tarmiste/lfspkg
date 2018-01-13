@@ -1,0 +1,68 @@
+%FILENAME%
+ktorrent-5.1.0-2-x86_64.pkg.tar.xz
+
+%NAME%
+ktorrent
+
+%VERSION%
+5.1.0-2
+
+%DESC%
+A powerful BitTorrent client for KDE
+
+%CSIZE%
+2588580
+
+%ISIZE%
+12329984
+
+%MD5SUM%
+61ef1c089901fa267e498c2ee0f03c5c
+
+%SHA256SUM%
+f24e684bb21f71e28e84ff7abdb7052a3604a4c4bbb6ea2ca614e2a93f056350
+
+%PGPSIG%
+iQEzBAABCAAdFiEEFRnVq6Zb9vwrc8dWek52CV2KUuQFAlmp658ACgkQek52CV2KUuTdagf+K38WbOPlLy2muaR/cSL6nD/tNdWCpMRYNxTUX/zy640FKnuNxLhHVzOH+fzmvLpbEcLd360uDXaAUYWTCBwpWrqIyZa0J+sBX8h7pt9sn0cEe1BGZIlju/heD+b6sDR8lOheIE49ulsegyYTZ0O+aTggZcgBB9GIt9pVn1Bw+V+ka1gmwG6Qak2ix0zHGC6Db/QGirIJt4oJ/qK8NcWNG8LATrIHpYGuxY3xDOEStHWutE8m1LF7T6oCmvQjMtwuX6sul8egEFIp0NSy7PzoeYY+vGgJ0bBNr07gNNkZ8BheZVZhIwzhpA0PEgvThpP9CJL+vXwCS1lzhxwI807J6w==
+
+%URL%
+https://www.kde.org/applications/internet/ktorrent/
+
+%LICENSE%
+GPL2
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1504307771
+
+%PACKAGER%
+Antonio Rojas <arojas@archlinux.org>
+
+%DEPENDS%
+libktorrent
+kcmutils
+knotifyconfig
+kross
+
+%OPTDEPENDS%
+plasma-workspace: shutdown plugin
+kdnssd: zeroconf plugin
+taglib: mediaplayer plugin
+kde-syndication: syndication plugin
+kdewebkit: search plugin, syndication plugin
+kplotting: statistics plugin
+
+%MAKEDEPENDS%
+extra-cmake-modules
+python
+kdoctools
+boost
+plasma-workspace
+kdnssd
+taglib
+kde-syndication
+kplotting
+kdewebkit
+

@@ -1,0 +1,88 @@
+%FILENAME%
+python2-kombu-4.1.0-1-any.pkg.tar.xz
+
+%NAME%
+python2-kombu
+
+%BASE%
+python-kombu
+
+%VERSION%
+4.1.0-1
+
+%DESC%
+A messaging library for Python
+
+%CSIZE%
+256956
+
+%ISIZE%
+1921024
+
+%MD5SUM%
+a6fc21e57681d1cb74bb67a1c31aa17e
+
+%SHA256SUM%
+9d9e34006b29159c87182291a3f9b42f38f94a58e5854229a1765ba08101feb1
+
+%PGPSIG%
+iQIzBAABCAAdFiEEtZcfLFwQqaCMYAMPeGxj8zDXy5IFAlly554ACgkQeGxj8zDXy5JQUhAAjGrwu1J5QiJtI89+qMzYgoJWwTo6ffw5lkm3U9aO+PwQ0PDjPC+oKlDUfcVd+qBZZfNBlfCdhIeyGKiDnsu+rp8js8tDstixaamdjlgO1CtNHrpJvA/WXb5Qvy8w03VoJWAkWCsipGksPTsFPjcJyM4vy0epbgJ1xF9/n3NypjtJKM32YClwJdHi0iteC3EriRs6lk99j8BM9uVoKBfCmi5+FgNFk8XJ4Fj378bgrEVw1Y0C0128hYPMhUkbm4eElhJPTEwV8i3J/2639pQRXHopqnRaBsR54EO+LaEiH/4I+/sQwMu9WTkFyGd6uDXekgy3/NyFM1aWf+DJn0FOUkNkUo9+pmr7TxXGWAiKfwAxeja7GFRQLuYyTolUuV8ClrQEP754urtzQFGXEVI+4SlAtMvqD9yR7BEPXz4KVF76CVovzW3DgVC3gg0m5s+Krgu/Pp9maDhgdCNY4UGXHBszrZZ1Ta8ZOmIoSRoq4fHERo8QF+JgIYtQjT7qNjjVpvviM5OkjWCcGyTUTj9N1z/YBBlYh7pG8vcvaiJlL7p6QUXOSSvVWZKkTswiBOFiLIZ+QdPyLFK7ypRWbFfQkkQor2kZCc85h5wQqxhTrL+iXbqUEAH+aSa5jHrYEjD7sKl+kdcyoBqe+zlBTlFh3aZj4p0DNQuPUVKCBppnpI4=
+
+%URL%
+http://kombu.readthedocs.org/
+
+%LICENSE%
+BSD
+
+%ARCH%
+any
+
+%BUILDDATE%
+1500702609
+
+%PACKAGER%
+Felix Yan <felixonmars@archlinux.org>
+
+%DEPENDS%
+python2-amqp
+
+%OPTDEPENDS%
+python2-pymongo: for MongoDB support
+python2-msgpack: for MessagePack support
+python2-pyro: for Pyro support
+python2-redis: for Redis support
+python2-sqlalchemy: for SQLAlchemy support
+python2-pycurl: for Amazon SQS support
+python2-yaml: for YAML support
+python2-librabbitmq: C optimization for AMQP transport
+
+%MAKEDEPENDS%
+python-amqp
+python2-amqp
+python-setuptools
+python2-setuptools
+
+%CHECKDEPENDS%
+python-pytest-runner
+python2-pytest-runner
+python-redis
+python2-redis
+python-yaml
+python2-yaml
+python-msgpack
+python2-msgpack
+python-pycurl
+python2-pycurl
+python-case
+python2-case
+python-pymongo
+python2-pymongo
+python-pytz
+python2-pytz
+python-sqlalchemy
+python2-sqlalchemy
+python-pyro
+python2-pyro
+python2-librabbitmq
+python-boto3
+

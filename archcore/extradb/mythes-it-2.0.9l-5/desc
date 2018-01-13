@@ -1,0 +1,45 @@
+%FILENAME%
+mythes-it-2.0.9l-5-any.pkg.tar.xz
+
+%NAME%
+mythes-it
+
+%VERSION%
+2.0.9l-5
+
+%DESC%
+Italian thesaurus
+
+%CSIZE%
+661608
+
+%ISIZE%
+2771968
+
+%MD5SUM%
+232568328a8d722f3cf10690feac3054
+
+%SHA256SUM%
+892769df771543a3df7d83a08bb906d4708c22a748bdeeaae57cd2f9a3e1c949
+
+%PGPSIG%
+iQEzBAABCAAdFiEE82kWh9hnuBtRzgfZu+Q3cUhzKKkFAloNVsgACgkQu+Q3cUhzKKkOJgf/ZF6l2slmlBMjrNkJqotRVl0sJCvW9MkVYeErBqZNsjGSAw8PN5XxrC5dAwCBvWh217LHInZpoI1UJUo+XUcpM/eGzBrgRfUj3hQU5u+3X7cR3xcmb3IlQGm5sH2fgDlh8wBgrnVrlXhduHfZELZbQHDWH4D3gNxGKf38KAjmFeKD9VWdaUZnCso5s4l8SWIgCU1zLBKNvgKHqCuCGPGmfP463ZEUt853HyUQhKtcfdP+efgLGnxw7maC5C+2vIxWJpZsVbYNTPNbSOlGPJWjrtHuFagLVbKUr31T7jbrnDFIkel/WRDb7+izG7gp9EI3AdBiLdDPXAF7+oJlnV0DVQ==
+
+%URL%
+http://sourceforge.net/projects/linguistico/
+
+%LICENSE%
+GPL3
+
+%ARCH%
+any
+
+%BUILDDATE%
+1510823511
+
+%PACKAGER%
+Bartlomiej Piotrowski <bpiotrowski@archlinux.org>
+
+%OPTDEPENDS%
+libmythes: offers thesaurus library functions
+

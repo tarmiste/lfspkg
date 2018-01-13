@@ -1,0 +1,11 @@
+%DEPENDS%
+gtk2>=2.16.0
+libxml2>=2.7.3
+
+%OPTDEPENDS%
+python2: libglade-convert script
+
+%MAKEDEPENDS%
+python2
+pkgconfig
+

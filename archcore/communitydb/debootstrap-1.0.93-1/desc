@@ -1,0 +1,51 @@
+%FILENAME%
+debootstrap-1.0.93-1-any.pkg.tar.xz
+
+%NAME%
+debootstrap
+
+%VERSION%
+1.0.93-1
+
+%DESC%
+Bootstrap a basic Debian system
+
+%CSIZE%
+29852
+
+%ISIZE%
+171008
+
+%MD5SUM%
+cbb0a74e1b4847247fba485b104d7d6e
+
+%SHA256SUM%
+3521b35698a5e3ad6aefc79c70734a3303da614965eefc8085a11094364dcb4d
+
+%PGPSIG%
+iQIzBAABCAAdFiEEtZcfLFwQqaCMYAMPeGxj8zDXy5IFAloqKYQACgkQeGxj8zDXy5LFcQ//cMj/CNuwxEw6sqv3Ya2Tn3vFNQ4Y3+z7L3NmPrZ0OQh2EKyyE/DzISb4IfuJRKuUwcx+uZEPOuKy8faDOYpbhCPMR6Fp/97Qv/v9XbfSNpHA2eMLUrm1K+Wz8LwMUp+jkFxnSVKC2/DMQ1w4scgb/5+e972TQG4t/SOiKtD2rzTBmV54p+XJEIDmfTDXjd5gWMyeRqXDjEsgXtUwa7N9joVcGgAa/eW7+2o3lydBQWmuMT6fV+qnZNLsw10TT/LLZt2XNRBCwGqpRhqCTg7/pV4OgA7VEs+ueKQQ60BUtReiz1JY+GvneQ5Zmuhx+/v8gMpwNiUFpxCrHSDnP2CGKGgVR0/2DuYnATFqqZewqMrAIWugzhD3x31kE9aY6qJiVgwlMFerNxaddKomwLhMe4Qx7ygv02KCdgIxJsi7Ab0GCwnIMy6udTSaDPnpyt0nTCXWghZvJ5PDqmZefMuLnb5RhZNlLB5Iq1qRJ5RZx6XbFJ/JBC6Df5VHTFtEV/rjN+Tmh4n1CXtuphilIBFRcSBH2Ivl2VVdliTOg4nONNnQtu78EvH6Cz7HOkyxPC4qjJHRVixNqGR9GRDQe4RACC4qtM+HVZnmRNaaD5el1Ap0kUssBcl0l/L+qUwJLOBAH6/84BIXVzYjVV/oBp+BxwS1SV7rGuaIvdh5GSa3eWM=
+
+%URL%
+https://tracker.debian.org/pkg/debootstrap
+
+%LICENSE%
+GPL
+
+%ARCH%
+any
+
+%BUILDDATE%
+1512712555
+
+%PACKAGER%
+Felix Yan <felixonmars@archlinux.org>
+
+%DEPENDS%
+wget
+binutils
+
+%OPTDEPENDS%
+gnupg: check release signatures
+debian-archive-keyring: check release signatures for Debian
+ubuntu-keyring: check release signatures for Ubuntu
+

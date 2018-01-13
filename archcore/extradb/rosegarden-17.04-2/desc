@@ -1,0 +1,65 @@
+%FILENAME%
+rosegarden-17.04-2-x86_64.pkg.tar.xz
+
+%NAME%
+rosegarden
+
+%VERSION%
+17.04-2
+
+%DESC%
+MIDI/audio sequencer and notation editor
+
+%CSIZE%
+7675576
+
+%ISIZE%
+14994432
+
+%MD5SUM%
+a056a7326ee7abf4ee5342dfae8688cc
+
+%SHA256SUM%
+3dc70052fbe6d9708851583549e05caf38fef4b793f26366d6edb3c7eb7093fe
+
+%PGPSIG%
+iQEzBAABCAAdFiEEFRnVq6Zb9vwrc8dWek52CV2KUuQFAlllD0gACgkQek52CV2KUuSxKQf+KzBhuwLkLWEsYnbcmtftuWCAdMYgxMbCNDyMI/p61AxRzDX3el0+ddoyGHlku5csCDJLLVWFGgO/oCtyLm+2p+TFggKmrCZR2TGa0SXb/SNN29WLOQV7OEJYEYEw1R81PxSftOkBgn9jadglFpUpVYPnJTz7y/pWvyYaI5FmeNlemGaWQJvvAUB7JHifEKx00aFODXSy6IQcMOTih8Shwn+KKofhEQGtkUkikkdh67DPYxR6SOPpJcejXcmdJNimU3Wvczj0zW9+ZagKhVG03haWWQQl9l++TtQPFoKoqtLv2fY1XPxbowchLbU4DDvdozw4uG2J0zKWNGtf0XhUpg==
+
+%URL%
+http://www.rosegardenmusic.com/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1499794978
+
+%PACKAGER%
+Antonio Rojas <arojas@archlinux.org>
+
+%DEPENDS%
+liblrdf
+dssi
+fftw
+lirc
+hicolor-icon-theme
+qt5-base
+shared-mime-info
+liblo>=0.28
+
+%OPTDEPENDS%
+lilypond: notation display
+cups: printing support
+okular: print preview, or any other PDF viewer
+timidity++: MIDI playback, or any other softsynth
+flac
+wavpack
+
+%MAKEDEPENDS%
+imake
+cmake
+qt5-tools
+

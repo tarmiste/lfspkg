@@ -1,0 +1,60 @@
+%FILENAME%
+smtube-17.5.0-2-x86_64.pkg.tar.xz
+
+%NAME%
+smtube
+
+%VERSION%
+17.5.0-2
+
+%DESC%
+A small youtube browser
+
+%CSIZE%
+277140
+
+%ISIZE%
+844800
+
+%MD5SUM%
+10db712f558a8342d65ef04f56f76df7
+
+%SHA256SUM%
+c57a760e94f60fb15e950ce63e4f30f98d57ec9032a4f4aef4792c4c847aa28d
+
+%PGPSIG%
+iQIzBAABCAAdFiEEkb2IFf4AQPp/9daHVMKPT/WhqUkFAlomiKMACgkQVMKPT/WhqUlWkg/8C3DsjcS6vr/u/HLSj4HA4cDyikwFjJtueBAay6utN8a9AA71tFTfxFBS6otsCVEhyD8Emc41IDmK6nr9DzJ+ag9/TEAYbSPL/y5MskfGGh7QsAX0L9ifY9dkoupiaFQ8ayh9Q5X4DyFPwFPLIIuAoPZLmmmvNmkDkipZ6y708xYV/1CrN9ni4yKBb5qb72+5yUSRa74MCI6ShH9nk/owd3LkorTAyD9LtZkihK/zMn8dr8lXNotc7w6eEE6er4MFXt3X+bTY1oT21AfV2G3iq9X8WgkDkCtlPv5nrFp60HZGvuKSQcwezj/7YDDdCZ1kNOOzVC/VwWthSXS1wH5KqvtdHwDDYHowmEirb2xg6h+HTKKOCVjbarwKmiwKMnbkHdcptTa9iy6unZ3vGOxdHe/A5B4WJIVEOdboLh1hUHAhTOXFDPVI+gk0tCXRe+K3U6SMQ9iTAjiwQzR/Y+/I4TWoQe5WeHday3xZhZmBdTqHzf+nmeakjbn3uEzgf6PP052cAk024y8ctV1t+OF7iqS9aSFKh6njKrrR2HC0wYrNo5/OE1vXL5Ybe61l9hj3qk9+EaXiBqzQKezSb37zPEynr/103cQt1f/xsd+AoA2c8KpIutUSdS3bm/QhVeAs1x8yblvy2SvJVkkPT45yBpHh1AcVjgrwh6WdmuL6Aww=
+
+%URL%
+https://www.smtube.org/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1512474504
+
+%PACKAGER%
+David Runge <dave@sleepmap.de>
+
+%DEPENDS%
+qt5-script
+qt5-webkit
+hicolor-icon-theme
+
+%OPTDEPENDS%
+mplayer: play videos with MPlayer
+smplayer: play videos with SMPlayer
+gnome-mplayer: play videos with GNOME MPlayer
+dragon: play videos with Dragon Player
+totem: play videos with Totem
+vlc: play videos with VLC
+mpv: play videos with MPV
+youtube-dl: download videos
+
+%MAKEDEPENDS%
+qt5-tools
+

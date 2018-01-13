@@ -1,0 +1,6 @@
+%DEPENDS%
+python-dnspython
+
+%MAKEDEPENDS%
+git
+

@@ -1,0 +1,5 @@
+%DEPENDS%
+libtiff
+python2
+lcms
+

@@ -1,0 +1,68 @@
+%FILENAME%
+gegl02-0.2.0-7-x86_64.pkg.tar.xz
+
+%NAME%
+gegl02
+
+%VERSION%
+0.2.0-7
+
+%DESC%
+Graph based image processing framework (v0.2)
+
+%CSIZE%
+445976
+
+%ISIZE%
+2603008
+
+%MD5SUM%
+e6659f143922c7c01f86e34a32502ad5
+
+%SHA256SUM%
+2ea8fcf02411f691df3d39620adf8f4e108849f6586e3b2a75043c3f0a037a54
+
+%PGPSIG%
+iQEzBAABCAAdFiEEhs/8qRjPOvRxR1iAUeixSKmZnDQFAlhctugACgkQUeixSKmZnDRJqQf+M/Z+DWK91+HZRb+2k9JVGx9HMshRjEQRaGbNsV46ofwsjikTf5SRRqsCKTQAHw1eJbPg6zqX1Ntww8BeDoTwsXIcEXeNjPEuRuXjvoweK/CHqhMSW7qwtyvQkEY+s9cNfyd3F1dptnl2E8HFjPSV6heosKbHwB+0HXbqEMXqilcbrtWBAFWLC1qbOO/kC/qtviB5YBaOPCjrt9bRcfD1xu4FjSrE96qCgu6RqUU0BISt8VN8r6PFLPq1ZneGBaFNz7qVyHZmqAd9mHRA4N2LDApMFh1xEjF1EpJaPNBgr9reknlUw3OpKD2jHp7/SbUcBPASPjLgxqmmIe5244gBCw==
+
+%URL%
+http://www.gegl.org/
+
+%LICENSE%
+GPL3
+LGPL3
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1482470773
+
+%PACKAGER%
+Evangelos Foutras <evangelos@foutrelis.com>
+
+%DEPENDS%
+babl
+libspiro
+
+%OPTDEPENDS%
+libopenraw: openraw plugin
+openexr: openexr plugin
+ffmpeg: ffmpeg plugin
+librsvg: svg plugin
+jasper: jasper plugin
+
+%MAKEDEPENDS%
+intltool
+ruby
+lua
+libopenraw
+openexr
+mesa
+glu
+ffmpeg
+librsvg
+jasper
+exiv2
+vala
+

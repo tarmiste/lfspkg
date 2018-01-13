@@ -1,0 +1,53 @@
+%FILENAME%
+percona-toolkit-3.0.6-1-any.pkg.tar.xz
+
+%NAME%
+percona-toolkit
+
+%VERSION%
+3.0.6-1
+
+%DESC%
+Collection of advanced command-line tools to perform a variety of MySQL and system tasks.
+
+%CSIZE%
+888240
+
+%ISIZE%
+7609344
+
+%MD5SUM%
+1ae6f00785cd44faa18f190d359ed6e2
+
+%SHA256SUM%
+17e5a2cdcaad9091b2e9ea5f8ae7224132e656e0720523a133879c155f033eec
+
+%PGPSIG%
+iH4EABECAD4WIQQsEYxiDwLbmsHQ+fqU3SOT2i7kIwUCWk+oAiAcbWFzc2ltaWxpYW5vLnRvcnJvbWVvQGdtYWlsLmNvbQAKCRCU3SOT2i7kI4WtAJ4t4ArjNpw8o7ceu1lJLlddQkmhtQCglMY2XChl1BsE57JRm2cg/LZ8NWg=
+
+%URL%
+https://www.percona.com/software/database-tools/percona-toolkit
+
+%LICENSE%
+GPL
+
+%ARCH%
+any
+
+%BUILDDATE%
+1515169483
+
+%PACKAGER%
+Massimiliano Torromeo <mtorromeo.torromeo@gmail.com>
+
+%DEPENDS%
+perl-term-readkey
+
+%OPTDEPENDS%
+perl-dbd-mysql: MySQL connections
+perl-dbi: MySQL connections
+
+%MAKEDEPENDS%
+perl-dbd-mysql
+perl-dbi
+

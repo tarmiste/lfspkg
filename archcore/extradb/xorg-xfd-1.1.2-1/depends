@@ -1,0 +1,10 @@
+%DEPENDS%
+libxaw
+fontconfig
+libxft
+libxrender
+libxmu
+
+%MAKEDEPENDS%
+xorg-util-macros
+

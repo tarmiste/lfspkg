@@ -1,0 +1,14 @@
+%DEPENDS%
+libx11
+libxext
+libxtst
+libxxf86vm
+libxxf86dga
+libxrender
+libxcomposite
+libxinerama
+libdmx
+
+%MAKEDEPENDS%
+xorg-util-macros
+

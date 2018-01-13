@@ -1,0 +1,7 @@
+%DEPENDS%
+libxmu
+libxpm
+
+%MAKEDEPENDS%
+xorg-util-macros
+

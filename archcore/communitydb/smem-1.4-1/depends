@@ -1,0 +1,6 @@
+%DEPENDS%
+python2
+
+%OPTDEPENDS%
+python2-matplotlib: for chart generation
+

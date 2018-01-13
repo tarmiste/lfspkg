@@ -1,0 +1,10 @@
+%DEPENDS%
+java-runtime
+java-resolver
+
+%CONFLICTS%
+java-xerces2
+
+%PROVIDES%
+java-xerces2=2.11.0
+

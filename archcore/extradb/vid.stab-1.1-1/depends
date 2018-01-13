@@ -1,0 +1,11 @@
+%DEPENDS%
+gcc-libs
+glibc
+
+%PROVIDES%
+libvidstab.so=1.1-64
+
+%MAKEDEPENDS%
+cmake
+git
+

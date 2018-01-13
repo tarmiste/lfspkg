@@ -1,0 +1,7 @@
+%DEPENDS%
+polkit
+gtk3
+
+%MAKEDEPENDS%
+intltool
+

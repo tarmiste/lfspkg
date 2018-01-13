@@ -1,0 +1,6 @@
+%DEPENDS%
+libxt
+
+%MAKEDEPENDS%
+imake
+

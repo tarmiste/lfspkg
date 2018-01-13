@@ -1,0 +1,10 @@
+%DEPENDS%
+ibus
+libkkc
+libkkc-data
+skk-jisyo
+
+%MAKEDEPENDS%
+vala
+intltool
+

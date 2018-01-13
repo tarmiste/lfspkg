@@ -1,0 +1,76 @@
+%FILENAME%
+gnuradio-3.7.11-5-x86_64.pkg.tar.xz
+
+%NAME%
+gnuradio
+
+%BASE%
+gnuradio
+
+%VERSION%
+3.7.11-5
+
+%DESC%
+General purpose DSP and SDR toolkit. With drivers for usrp and fcd.
+
+%CSIZE%
+12470260
+
+%ISIZE%
+135007232
+
+%MD5SUM%
+a4c2055bbc4a57d8e43206aba17707ff
+
+%SHA256SUM%
+54354ad2f9c42b3c98e5faff17c8759e0213de70312a6c59ef51e346f99edfab
+
+%PGPSIG%
+iQEzBAABCAAdFiEESMOx8w3dD+Z+UW0WOW4+JbqxQsEFAlpJg64ACgkQOW4+JbqxQsGSuQf/X6dR7pmLpR1jJmYWwb9cA54ni4iFW/Ml0qaLQBoDVRqYX0Kcd0YT1f8GgsMvCRUjH2UIaFp6zaD7nSh7b6DEFs4Nn5O86eVyqy32dSDeCwl34ZJGsPvRrZGz3LsJS8By38QFv0vy7Qaw/fy8EZKYiEUCVScAbL/M2IO3jNKLTIuhStGkUvZYYn80H46mvX/MZpeve6oI1owgSkcqqYTQ6PBllvW6flakFbmr54H9LvmH7uE1+7+ANP88u0K+spIvI0OhQHpaayWgcE2UykE2wfZBDqhx3ZDmB0gN8WETKq46vv/4D9dVcWh1QQvpNLrQxaoHhumOCO4l7fnkjcCWjA==
+
+%URL%
+http://gnuradio.org
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1514768656
+
+%PACKAGER%
+Kyle Keen <keenerd@gmail.com>
+
+%DEPENDS%
+fftw
+python2-numpy
+cppunit
+gsl
+blas
+boost-libs>=1.53
+libusbx
+portaudio
+libuhd
+zeromq
+libvolk
+
+%OPTDEPENDS%
+boost: gr_modtool
+swig: gr_modtool
+cmake: gr_modtool
+pkgconfig: libuhd
+
+%MAKEDEPENDS%
+boost
+cmake
+python2-lxml
+python2-cheetah
+glu
+swig
+pygtk
+wxpython
+python2-pyqwt
+qwtplot3d
+

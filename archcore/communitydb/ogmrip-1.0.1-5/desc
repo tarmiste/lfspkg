@@ -1,0 +1,77 @@
+%FILENAME%
+ogmrip-1.0.1-5-x86_64.pkg.tar.xz
+
+%NAME%
+ogmrip
+
+%VERSION%
+1.0.1-5
+
+%DESC%
+Libraries and GTK2 interface for DVD ripping using mencoder
+
+%CSIZE%
+521772
+
+%ISIZE%
+4206592
+
+%MD5SUM%
+b8ecf9884515acc9721b4a96452bb750
+
+%SHA256SUM%
+2fba99b302c709799228196cf84ed37450dde4c28fd80a1e14f71382870032a7
+
+%PGPSIG%
+iQEcBAABCAAGBQJaFozUAAoJEJdqxvo7lPoQ9a4IAI4avkn+Zm4LJmE5eWRy9SOyzO/XzxC69Pbd5kLEp5742vtBn8MkibLMIX31KChB6TzSpQVjUF22Q0QZRkkiDqar2BmLzAXX3diyiEnIQzhs2JkB2NSphLpH7532EhRSR7v6HyV1v4FHHwLDUQFO/kbzRo2Jk1XWVyN7GW5Ouk0KvVd25xCRfV9iueppmwwR3A6nnb1xZQUf+NjGSHHbFbH+y53HgTLiQBlAPhQdSxz2pDbzN2c47TzgPMI6AIVMRjBXOpPbDs6Yix96m9LyhXYtPV7ETbsM3ubl9BHImiHuFk7no7Wo5t5JsmZ6a+9ehU7/wLvibQfmcLs4GQtQRfE=
+
+%URL%
+http://ogmrip.sourceforge.net/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1511427018
+
+%PACKAGER%
+Jan de Groot <jgc@archlinux.org>
+
+%DEPENDS%
+libdvdread>=4.1.3
+mplayer
+mencoder
+enca
+pkg-config
+gconf
+libglade
+libnotify
+enchant
+
+%OPTDEPENDS%
+faac: support for the AAC audio codec
+lame: support for the MP3 audio codec
+libtheora: decode and encode Ogg Theora files
+ogmtools: support for the Ogg Media container
+gpac: support for the MP4 container
+vorbis-tools: support for the Ogg Vorbis audio codec
+gocr: support for the SRT subtitle format
+ocrad: support for the SRT subtitle format
+tesseract: support for the SRT subtitle format
+
+%MAKEDEPENDS%
+patch
+intltool
+perl-xml-parser
+faac
+lame
+libtheora
+ogmtools
+gpac
+vorbis-tools
+tesseract
+python
+

@@ -1,0 +1,8 @@
+%DEPENDS%
+wvstreams
+ppp
+gcc-libs
+
+%MAKEDEPENDS%
+lockdev
+

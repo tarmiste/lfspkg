@@ -1,0 +1,6 @@
+%DEPENDS%
+python2
+
+%MAKEDEPENDS%
+python2-distribute
+

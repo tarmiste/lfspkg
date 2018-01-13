@@ -1,0 +1,57 @@
+%FILENAME%
+python2-biopython-1.70-1-x86_64.pkg.tar.xz
+
+%NAME%
+python2-biopython
+
+%BASE%
+python-biopython
+
+%VERSION%
+1.70-1
+
+%DESC%
+Freely available Python tools for computational molecular biology
+
+%CSIZE%
+1948900
+
+%ISIZE%
+12962816
+
+%MD5SUM%
+9c011d3632294de497f705876cb1ad1b
+
+%SHA256SUM%
+2343519bf8975c8042fe7e861b76f1ac0a7a51ef918227ebabf9dff87d553344
+
+%PGPSIG%
+iQIzBAABCAAdFiEEd5zSlCYpt/oEq48XLokBIzE2HwEFAllnaTUACgkQLokBIzE2HwEsGhAA2eAlMuKuN9MfcTIA21ChtS1OJiqDoC3A6DNvT2dEl4966Tgf2LHoDRwZNLforCVvyK9sFd3WvQe6XUgOk7zk3ICspcrXTwHlSoqvTAY+mMnT94O/L2yW53wtS5QllreOuBHKiSiZtjKu/TpwdJVGjqx1CvB8QSyZFys+0XFY1EmCsJrn7lphoWypem3CUMNrUkMUBLwIblwlB9O1XMaPCzEy0VDLXMFlZbU9TCVzyPnn5hAZk6YdLjYDpXp3K24ja4zOzeKRikPuY4L2uak+lpTNHxzJtkRu2GiemF/i54XZbOJbcemQj0nYiwCy9qy9GmX1KYkTzHwACOzue8cCkKTKzqwcdZu5ZRNrH/tGlzuut6BE1ZICeJnH6218Wb0WjY9hWD8/tqrp7Z6VQjR9t7zn5f5wAA91CFoC2H3P8/ZULXRqTuilhubJm4rKYcnEc2T8KcnKElips3Te3SwQhIC7JpU6nSfwl57XOiMRtFiCNyvWSrTxXql2j6TWTW7vWAtvCsumyqBsmjx8wPbEKnra8DpXLwx4JqY8x1shO6bftsAAlV8gw9SVkCsTuGonTqOr0CVUUHKSSUh3hChic91+yppy3jn8i4222Odx22UAkLs2EAAe/Iz2paIrFzmSAqh+2p2IfibDfOBnnDHVFpgFywqV1xBPgZ3+DLmqUJs=
+
+%URL%
+http://www.biopython.org
+
+%LICENSE%
+custom
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1499948559
+
+%PACKAGER%
+Evgeniy Alekseev <arcanis@archlinux.org>
+
+%DEPENDS%
+python2-numpy
+
+%OPTDEPENDS%
+python2-reportlab: for pdf graphics code
+python2-mysql-connector: for BioSQL module
+mysql-python: for BioSQL module
+
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+

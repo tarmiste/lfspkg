@@ -1,0 +1,67 @@
+%FILENAME%
+dolphin-17.12.0-1-x86_64.pkg.tar.xz
+
+%NAME%
+dolphin
+
+%VERSION%
+17.12.0-1
+
+%DESC%
+KDE File Manager
+
+%GROUPS%
+kde-applications
+kdebase
+
+%CSIZE%
+3732952
+
+%ISIZE%
+8843264
+
+%MD5SUM%
+39658cc3ca41ec568f468d2858600a8a
+
+%SHA256SUM%
+5f37099b803452daac82ca5229b73981d2b192f6bc093261bc77f004f38d0f06
+
+%PGPSIG%
+iQEzBAABCAAdFiEEFRnVq6Zb9vwrc8dWek52CV2KUuQFAloyX3IACgkQek52CV2KUuRQtwf+JIXsG99LlaX/Wo+BAM6b1iip3Am5t2jEmPt3G1aM5KofczZb6ZY7pRwj+hNaETuz5JfUpzu6SMv699232AehEHrs3BkM+IHZAg9OaZQamjyNtFXTOSkbV1umv2bPLr5FZ4vVUnwdvHWAKZMz5D8uk61SjEl9T/H3Q4MaJB+TVH0RPxupbzZ173vdj0+wJ1ZA81YLIce/kW0SVAbVl03BgWGwmMLjWP8o9rnrtdAdy0ojpbAZu4WSH/I6LVs/tvD2nDdF6G17m4AaGBuhi2tX+32pGYcUYpbhAp6ED2/tG5gjbngUCj+mbJ4Y4bPwfaKER+kG3D/xg/1T3QF2jQtdsA==
+
+%URL%
+https://kde.org/applications/system/dolphin/
+
+%LICENSE%
+LGPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1512939660
+
+%PACKAGER%
+Antonio Rojas <arojas@archlinux.org>
+
+%DEPENDS%
+baloo-widgets
+knewstuff
+kio-extras
+kuiserver
+kcmutils
+kparts
+kinit
+
+%OPTDEPENDS%
+kde-cli-tools: for editing file type options
+ffmpegthumbs: video thumbnails
+ruby: installing new service menus from KDE Store
+kdegraphics-thumbnailers: PDF and PS thumbnails
+konsole: terminal panel
+
+%MAKEDEPENDS%
+extra-cmake-modules
+kdoctools
+python
+

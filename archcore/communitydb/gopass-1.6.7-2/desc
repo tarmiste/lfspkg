@@ -1,0 +1,54 @@
+%FILENAME%
+gopass-1.6.7-2-x86_64.pkg.tar.xz
+
+%NAME%
+gopass
+
+%VERSION%
+1.6.7-2
+
+%DESC%
+The slightly more awesome standard unix password manager for teams.
+
+%CSIZE%
+2804048
+
+%ISIZE%
+11019264
+
+%MD5SUM%
+afe634314b5464f85e7e1e55a7855199
+
+%SHA256SUM%
+0c8ad14491654b8c58cb66b6a8de667a2927e17926f66d0b9038c5ff7488df20
+
+%PGPSIG%
+iQIzBAABCAAdFiEEwQA0ZnZjToDJQPuenAL/QZ/svhYFAlpNh8MACgkQnAL/QZ/svhb94BAAgTWT5VYhWg6jWvUElUIzWNSt/pfRPrM5O6vHus0l0hDkZkdPBWsPcI0eovICtIkhkdV5zxNxxeTmk34ufUdHFZ3xP1GSU5LAodfgXtAX/uDqXikCVd519g45NqZV9YPXplVDSUKa7gY3ylQSdSUU+D/K55tNZqAclT7EvbV9+QDpw77/jIDcKOaJFcPhemTxG+93L78DH8YoHeT+jv6BVI36LP8xF+axzzRAQNErgaabFXGZI+jRqTD0hXBAZaLPGdsRNsNbsRUYV7zeVR+b6qZ+M+nNuojRjj/IRG3v9cqlj9VpXBDPpxcu09cCIpJXTE0tf+vOIQrfdCSednGQSCOLZ7PwmuurmxIcooqegfs8L18RGFxANt/TPOI0PhXerRy64lFW4Njf9Zrn5r4e4pDcDXU1FJHNP9/gbkl0kR1f9Zu6vrT9aMyYypMtfpr3WFrkplEg5QC+9Zs8N7Sy57z+t6US0fDWDdwfTB1xjnBqj9ks1GhU7+d4tkYMk6XNXIEctqv4WPcixcbxh9HKD8cRSybqWLGlfM1vA2xrGyYKuugwQ+xYpc8mICuXlZs8l+u9kuzOyIM3iLOm57HnK6YEwCEnFiu7D2HfGqdOi3uKU1gdNr3GnaZsBjlOe8Rx071R2LZqxwT9vbZiyUdz3nas+8REGgZS0HID35z4yH8=
+
+%URL%
+https://github.com/justwatchcom/gopass
+
+%LICENSE%
+MIT
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1515030385
+
+%PACKAGER%
+Morten Linderud <foxboron@archlinux.org>
+
+%DEPENDS%
+gnupg
+git
+
+%OPTDEPENDS%
+xdotool: for typing passwords selected by dmenu
+xsel: clipboard support
+xclip: clipboard support
+
+%MAKEDEPENDS%
+go-pie
+

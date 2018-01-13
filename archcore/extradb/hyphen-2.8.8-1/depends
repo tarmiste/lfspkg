@@ -1,0 +1,8 @@
+%DEPENDS%
+glibc
+perl
+
+%MAKEDEPENDS%
+glibc
+perl
+

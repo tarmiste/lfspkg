@@ -1,0 +1,67 @@
+%FILENAME%
+notmuch-0.25.2-2-x86_64.pkg.tar.xz
+
+%NAME%
+notmuch
+
+%BASE%
+notmuch
+
+%VERSION%
+0.25.2-2
+
+%DESC%
+Notmuch is not much of an email program
+
+%CSIZE%
+237768
+
+%ISIZE%
+1253376
+
+%MD5SUM%
+b9313415da8eb7439c41041a4d369c1b
+
+%SHA256SUM%
+1d4738d1e9370ef5699897d405a037b5b4304ee0ada955d4a4b83ea7cc803fa4
+
+%PGPSIG%
+iQEzBAABCAAdFiEEhs/8qRjPOvRxR1iAUeixSKmZnDQFAlpMg/wACgkQUeixSKmZnDTx1Af9E4g9hRumQsVxWgPaVFKTLKVYVD9dbh6TUMByVDE2SytHjrClqm/E1lH0HXzGCoyqcnLnOLZqonwbaP1fVwqa1QE75P5GsmgPjddN1N9s303Oa6BAkh6Dt+vDrWKatlyhYfmVJMeMLhACjH9STRf/p6l4qd6JUTHvpgQpZGjmgMoF0/81dFlyubuDgsPhkp7a3PnTRN/ypN0siQfuYyGsgQ1nKvtQ0N76JFtSQrLSgCJo38AXMaHKF4zzYfyn1V7lSz/NEJoCiGCAHd9FGsUnss1coRRTG09HUWffCGYOgozk0tEJMpFPbTmw4zPaZE6aoifOIQWRnA897a5mK7fDcw==
+
+%URL%
+http://notmuchmail.org/
+
+%LICENSE%
+GPL3
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1514963948
+
+%PACKAGER%
+Evangelos Foutras <evangelos@foutrelis.com>
+
+%DEPENDS%
+notmuch-runtime
+
+%OPTDEPENDS%
+emacs: for using the emacs interface
+vim: for using the vim interface
+python2: for using the python2 bindings
+ruby: for using the ruby bindings
+gnupg: for email encryption
+
+%MAKEDEPENDS%
+python2
+python
+python-sphinx
+emacs
+gnupg
+ruby
+pkgconfig
+xapian-core
+gmime
+talloc
+

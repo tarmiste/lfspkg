@@ -1,0 +1,61 @@
+%FILENAME%
+alsa-tools-1.1.5-1-x86_64.pkg.tar.xz
+
+%NAME%
+alsa-tools
+
+%VERSION%
+1.1.5-1
+
+%DESC%
+Advanced tools for certain sound cards
+
+%CSIZE%
+320296
+
+%ISIZE%
+1428480
+
+%MD5SUM%
+d9d6e7fc587a04824ff40461b799854c
+
+%SHA256SUM%
+428430e186ab83ebc9cd6bd71e58b4c0bb6ed23901022acc4c73b06113c447f1
+
+%PGPSIG%
+iQIzBAABCAAdFiEEjhmSFnRl21+wRVV8sChU7XU+Dx8FAloqzvgACgkQsChU7XU+Dx+w2Q//U2SuuQ/mmIXjkH117AVzyVO6mvYmSSaLPJ1NKisDHBBV4HG7mZKHKRQWDgU7c9b8/artqg8BWqHPgaR7skO/tCYTIyDzbIUWhI5LA1gEfI00ZrB47MVidefKmEKIe/wY3GRx7zCZE6FU9w7a+M7NO48Sbewn+rcZfSrakTKnXF6tSnZoCsobB2j2JfJOHI9k16erdamh5g48xsMmwJ8O2xIg0XxpIVPryIbEkG1C10miRsQ9K2rQt8mwQjA/0kYCO3q4r/Z9RjO7MTcIb2I7/pUr5yps29PEC+tyihQQRpeAjWd/RouvwXxx2/wQAV86camFArYfs4ambaSpg2QP1gZYqtst2BpN274SMfUP2ItuezZJB5Tq60zQn4OdU4pW4EJddDO5gxqgcMff+D5NjD0fac0Q+dDpnl2sedwpWoBPKzhfCicps1NXnG0k1G7f4BnWEbbWryEWZ3WA8JdACmSBVFIPGEhVs0dLK2cLx5SBzi6Cj8EWK5F17BPZxUR3mxb3dO8+yZqC/3ufOOWvSkf91KFDNtW1rXL5FnuBhzX8NwJ8R0TyH2i6PkVQfwHHZyhXOo0R0IrUCyFEhJZOK0soU/7dZZbr870rIdYTKXm3XNLexHkGrXmNjT9+DFe2XSPpGdtxCwFaSYIQqmgfC8rg1Fr+Bfu7QSnuDh8HGd4=
+
+%URL%
+http://alsa-project.org/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1512754873
+
+%PACKAGER%
+Anatol Pomozov <anatol.pomzov@gmail.com>
+
+%PROVIDES%
+alsa-tools-emu10k1
+alsa-tools-ice1712
+
+%DEPENDS%
+gcc-libs
+alsa-lib
+
+%OPTDEPENDS%
+fltk: hdspconf, hdspmixer
+gtk2: other GUI tools
+gtk3: hdajackretask
+bash: couple of tools
+
+%MAKEDEPENDS%
+fltk
+gtk2
+gtk3
+

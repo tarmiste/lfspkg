@@ -1,0 +1,53 @@
+%FILENAME%
+archey3-0.5-7-any.pkg.tar.xz
+
+%NAME%
+archey3
+
+%VERSION%
+0.5-7
+
+%DESC%
+Output a logo and various system information
+
+%CSIZE%
+10568
+
+%ISIZE%
+30720
+
+%MD5SUM%
+15ab873b324465137e236ce0f27e01b6
+
+%SHA256SUM%
+b5a2617ff6855d50eb81978dff6b26ff7dc45d60cb238c0a1f3158519de5231a
+
+%PGPSIG%
+iQEzBAABCAAdFiEE82kWh9hnuBtRzgfZu+Q3cUhzKKkFAlhgB6AACgkQu+Q3cUhzKKlkDgf8C62yXcM+rnkZbQepzK02knj1G1GnF01L0p3o/49SO4ywmU+biNkw8eNu3pA7RPuv1REQC4NMx6qz/7drWhd1Yzbl3yo9cXCH4c2D/SbYbbFFl/u4ssCNa7pO1BBsV0mKX/aW7fe2frWpkGCkT4Oupf78pWhch9+xTR3AjqfXzgkNOdsts8cYOz3K7EDojNDyuT5FtVKEaSXyNhga28zOo2D47k/FU0e7FQsixMxQNdxyRyUcJzrHu0bw7h6IIeePVGAlgbxSNhM1lQpoCj0kUA79qnJQ4r9cSY4BtQolWABP+X41yKkj697UWROucfncuWrd/YXU+bSMtKtNXrj6DQ==
+
+%URL%
+https://lclarkmichalek.github.io/archey3/
+
+%LICENSE%
+GPL
+
+%ARCH%
+any
+
+%BUILDDATE%
+1482688413
+
+%PACKAGER%
+Bartłomiej Piotrowski <bpiotrowski@archlinux.org>
+
+%DEPENDS%
+python
+
+%OPTDEPENDS%
+imagemagick: for default screenshot command
+python-logbook: alternative logging system
+
+%MAKEDEPENDS%
+git
+python-distribute
+

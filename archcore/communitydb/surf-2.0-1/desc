@@ -1,0 +1,55 @@
+%FILENAME%
+surf-2.0-1-x86_64.pkg.tar.xz
+
+%NAME%
+surf
+
+%VERSION%
+2.0-1
+
+%DESC%
+A simple web browser based on WebKit/GTK+.
+
+%CSIZE%
+19408
+
+%ISIZE%
+48128
+
+%MD5SUM%
+5a086c2845ac32741bcd6d92dffb4ae8
+
+%SHA256SUM%
+b1497e4a5472f24520e251278ee7c39abf1656c93f0a3419acac9c0f54aeeb0b
+
+%PGPSIG%
+iQIzBAABCAAdFiEELjbYYgIhSC/EXLfyqRdkdZMmtEAFAljfprUACgkQqRdkdZMmtEAkaRAAjZ5RLWUdV1dV1TYnqWNEvvXhYULc9EPR6cH/ugfOp6oIYvCm+C3b7JGo9Lieg/2t4iT+AXHQXWBmZCbf9iELzTAPx2uttE1jfqSJe5p7A7JALlVaz3TaTlz2UE9iagDDZt6RNg2RNo2FB2csx0fPcUB/xl9fksfbrwgyL/G55ls95nPHgbG0IHMF13WU1uCjmFcaPQQoUDPe3eNi6e0NQO9hzNqZqpoClNcHfu3iIFUc0agCpTcJrfeshKUeMjSOo/K/cEPOPfnYt38yW/x2XRiiuaQBmcHlr8d3ofzUoBum7G7yKzcw1XB0oIWugikIBxgn1mZi7Xo7B3TeWwuX9WfmT/eNa6uKOLzrZ0Q9GhRE46tEYNUaXAaKjtAi5EG0z3kEyFN+/XZy4wFRZwCLmrLN+u5TxzKpMb+1BaH/hk5+LlPjRBzBu9hBEW3zF1b5W2c0+b8tW3PI+PGuP65uPDVKPnZQ4G2rN+wDz/G2YKQbz7WIkeAVpV0HrrPbgbJI5YoZpOWiN/G0aVntRdWCW/FwKlG2MeBAD63IYmPZde60N0rQAiYYNH180JlPdVF2DjqRm5/TpL3ZZVeAgOr+yU/VrcapIyRXSrlIFyG76VA+P/iHQKL3Sp4p8V85LkqBl1Cz0AqgVe24iC7ll5qmOusux7zS1oM6dPCQQ7+lMFU=
+
+%URL%
+http://surf.suckless.org/
+
+%LICENSE%
+MIT
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1491052176
+
+%PACKAGER%
+Lukas Fleischer <lfleischer@archlinux.org>
+
+%DEPENDS%
+webkit2gtk
+xorg-xprop
+
+%OPTDEPENDS%
+dmenu: URL-bar
+ca-certificates: SSL verification
+xterm: default download handler
+curl: default download handler
+
+%MAKEDEPENDS%
+git
+

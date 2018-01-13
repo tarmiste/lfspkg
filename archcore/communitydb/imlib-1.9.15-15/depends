@@ -1,0 +1,9 @@
+%DEPENDS%
+giflib
+libpng
+libtiff
+libxext
+
+%MAKEDEPENDS%
+libxt
+

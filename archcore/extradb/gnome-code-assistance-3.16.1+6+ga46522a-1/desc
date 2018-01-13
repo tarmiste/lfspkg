@@ -1,0 +1,72 @@
+%FILENAME%
+gnome-code-assistance-3.16.1+6+ga46522a-1-x86_64.pkg.tar.xz
+
+%NAME%
+gnome-code-assistance
+
+%VERSION%
+3.16.1+6+ga46522a-1
+
+%DESC%
+Code assistance services for GNOME
+
+%GROUPS%
+gnome-extra
+
+%CSIZE%
+1918316
+
+%ISIZE%
+8951808
+
+%MD5SUM%
+a9450d239c5a300e0c9717ccb1ef32ee
+
+%SHA256SUM%
+8507402e45f92b352287a2028f61ace39269d60aa4f5cdbe9a155b755b1e6624
+
+%PGPSIG%
+iQEzBAABCAAdFiEEghj4iEmqxSLpTPRwpekojE+kFfoFAlnn4DYACgkQpekojE+kFfrGkwf+MbvlJxTURBaRDGnPhwLSiwVVT/ANxovWxlMxO+kMeQgQXcQAV7qAc+3dueR2cbbK/nddKMpZ2HFsuqHeT9x/NBGAFOrAkQIoj8MxKv0F2xh+atdPhwLOxiyJ8pUOytU9AAsargvvCwIg7XuoU/oCa+aKNZ9yI8H2AROYCAiUvKnJVPq/if/m8fMvH/tlTCV7Ll9Ic6jtqxMdKooi44Iw9NYHXHY9fGaD/qlyPXrASGT/vboHarVZlEwfJW5fVil0zbnd1V/o6CxWczOUP9SBAg01i3ZKEnWoFWbnFZVTuAHZHmDzl/S5VFE/g0PjsVwMQ+975c5XT9HAsuOwBIBMRw==
+
+%URL%
+https://wiki.gnome.org/Projects/CodeAssistance
+
+%LICENSE%
+GPL3
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1508365545
+
+%PACKAGER%
+Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+
+%DEPENDS%
+python-dbus
+python-gobject
+
+%OPTDEPENDS%
+clang: Assistance for C and C++
+ruby-dbus: Assistance for Ruby and CSS
+gjs: Assistance for JavaScript
+vala: Assistance for Vala
+libgee: Assistance for Vala
+go: Assistance for Go
+python-pylint: Assistance for Python
+
+%MAKEDEPENDS%
+intltool
+gobject-introspection
+llvm
+clang
+ruby-dbus
+gjs
+vala
+libgee
+go-pie
+python-pylint
+gnome-common
+git
+

@@ -1,0 +1,57 @@
+%FILENAME%
+lxqt-session-0.12.0-1-x86_64.pkg.tar.xz
+
+%NAME%
+lxqt-session
+
+%VERSION%
+0.12.0-1
+
+%DESC%
+The LXQt session manager
+
+%GROUPS%
+lxqt
+
+%CSIZE%
+142724
+
+%ISIZE%
+622592
+
+%MD5SUM%
+f9a71e476714f28856385ac3fffa5595
+
+%SHA256SUM%
+5ddcec2fafc2cec88f30d1ab5010e14fddb7df008491ac7c8e289219feeec2c4
+
+%PGPSIG%
+iQIzBAABCAAdFiEEFpcExvtJDGiSx/I8N+CvH9pI83MFAlnr5K0ACgkQN+CvH9pI83NNNRAAo2IMEvL39Pdk9gDIQBwuAieMOH23ZV0XBSf2HbL40l7k1nFvaUnhRKCRSlf8wPyB3NHpyGUV6HnbE+GmcPMuXoPsO4BF6/VdFfknMnVdd67utobzP9fepCTtkoeJ3/rIQwvg+jmvktEIBpLu23BWKAbLiw+5VJt4YVMhXCTI078/ML2aJp7SjniPUW52W/cxx8GlqIh947upHJS4iBP4NVuTMnLPZgEZKNU3OdWRvKeo+FE9IPGj2RuTG9+REZGYkMVVJ5Iu4VoXLDB4kVCM3PpVTEJN2YeYGouRaKFCx2T9RrAIPRbLWIZG5kgROZTKazjiTsTxh8XgxMIIgDLpYB59uKeEOM0ao7+PIeGXe1oUxiLptoY2QJEYhgg3M6sQZ8I0Amx1+n9MLu07neTNBWLpx3RepRj2jMrB9oKMYwCvvNVkclA1HqdroepZaV21lzl7wTAc7iNCThC4d1L5fWnb3P69k1BsAwluSR8yQZaLqkcifyBxYuBqhX4T4AzwvWOAtkO9NjTr1cY630fe2Gvbu/rLouJFhtNGRMHFaCFuejzVLyUNvpac5F9X/sM77piVXXZjVYJDDvJ38iaCMn87UUB9s7oi2tO9tfrkDIHnMZOCb8DeCdJfjLsm6lAAEIqWnClEAGRIf8/OVZfzMno4dac89IJwQbpaNNgG3NM=
+
+%URL%
+http://lxqt.org
+
+%LICENSE%
+LGPL2.1
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1508631717
+
+%PACKAGER%
+Jerome Leclanche <jerome@leclan.ch>
+
+%DEPENDS%
+liblxqt
+xdg-user-dirs
+
+%OPTDEPENDS%
+breeze-icons: Default icon theme
+oxygen-icons: Alternative icon theme
+sddm: The recommended display manager
+
+%MAKEDEPENDS%
+lxqt-build-tools
+

@@ -1,0 +1,79 @@
+%FILENAME%
+gimp-2.8.22-1-x86_64.pkg.tar.xz
+
+%NAME%
+gimp
+
+%VERSION%
+2.8.22-1
+
+%DESC%
+GNU Image Manipulation Program
+
+%CSIZE%
+12701180
+
+%ISIZE%
+69998592
+
+%MD5SUM%
+7eda25074cb7f248d6d0210a76349743
+
+%SHA256SUM%
+eeab72bb08562881b583fad2d8a6f9baa3c2f8687ff329b63a2b683b54182ecd
+
+%PGPSIG%
+iQFCBAABCAAsFiEEAv0cepNOYUVFhJ8ZpiNAdEmOnO4FAllDgE8OHGFyY2hAZXdvcm0uZGUACgkQpiNAdEmOnO4J3AgApuW38kKKEvDDa9yha9BMJPgIjcb8fMN3DlZGh/bTGFpWb4I3nI5RvS8A6KrDGxiuVJ2GDRFJJLLLuFTHCrwgxRszWtDTwBtgati/Z3G4ECWXEEDOULFHAelotm6GwvYzshnz1QfL2kJPYfLdwpvDWZljNAeOYMcUBID40JtotLA89WBZL2J0WeC53mPct7MbDOJZkuoTbGHTy7FexBnsEpDYJQ7CDmJ48Z05ofRUIqAgrtUKhki7So3AymReJIMieYGBvxwRu9dYq3cppKbisH62AwudU9WGRD7Yu/ofNyDbqqcM9neFhF7extkoYCEW/ce0GnGLptviKulFv59FFQ==
+
+%URL%
+http://www.gimp.org/
+
+%LICENSE%
+GPL
+LGPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1497595848
+
+%PACKAGER%
+Christian Hesse <arch@eworm.de>
+
+%CONFLICTS%
+gimp-devel
+
+%DEPENDS%
+pygtk
+lcms
+libxpm
+libwmf
+libxmu
+librsvg
+libmng
+dbus-glib
+libexif
+gegl02
+jasper
+desktop-file-utils
+hicolor-icon-theme
+babl
+openexr
+libgudev
+
+%OPTDEPENDS%
+gutenprint: for sophisticated printing only as gimp has built-in cups print support
+poppler-glib: for pdf support
+alsa-lib: for MIDI event controller module
+curl: for URI support
+ghostscript: for postscript support
+
+%MAKEDEPENDS%
+intltool
+poppler-glib
+alsa-lib
+iso-codes
+curl
+ghostscript
+

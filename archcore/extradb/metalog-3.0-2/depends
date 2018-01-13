@@ -1,0 +1,6 @@
+%DEPENDS%
+pcre
+
+%PROVIDES%
+logger
+

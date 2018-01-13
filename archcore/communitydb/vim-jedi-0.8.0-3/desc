@@ -1,0 +1,54 @@
+%FILENAME%
+vim-jedi-0.8.0-3-any.pkg.tar.xz
+
+%NAME%
+vim-jedi
+
+%VERSION%
+0.8.0-3
+
+%DESC%
+Vim plugin for jedi, an awesome Python autocompletion.
+
+%GROUPS%
+vim-plugins
+
+%CSIZE%
+22456
+
+%ISIZE%
+73728
+
+%MD5SUM%
+6073902ab1531f890a6f7a4d7bf82589
+
+%SHA256SUM%
+69f6ba0d33f4ebbf874564a796ae24eb781bcbaf6afacf958e29e52e7fdf1333
+
+%PGPSIG%
+iQIzBAABCAAdFiEELjbYYgIhSC/EXLfyqRdkdZMmtEAFAlh6D9kACgkQqRdkdZMmtEAbxBAArabZa2MHu2IvipGQr7CGZ4WCc8mypxlDBM3FtsLCPAuktsIPTarc5Vn1+HZA268/tGZ9xDvIZTElHmgbyQQKj6yfPDmbs5Cj6Sp0FP4jl5XGQooE+lWIpLc1vcx2dLjX0SQcvpCGR+hEXjdUwjFnQKQqU5aFG9N2DUOnRb1grTfGKCszLdX8bJbquBlgj3ZVcU2f3MJ1GWlKYXBBVl/y6POFdUX7noN9HqBQ5Uo936lZS0Z7hzDeGMYPNxmLtQ6WEtLGU6kmDl02UI5C+4grt0QnCQWfruu7TZoLXqRMBD9F6mmgOOFYoVDqdiYf27kAWGsWXLsZySAEQoGNaOqjImt9B/BAOz6WHwXkm7i9vEyFiN1TKL4zSoqCoezEcuimwNK1tGAZbP4rPPagJ5ETDBUlHw7RDeIE6cjLtzqe1MdRb8cjwsO93EvvPsnJNttQyzMF1hDinD/jEzsTiGMr9Z9+s0IKSi3Z8oEZHvEjn0kAhuHGpUNMtJn7fmxx1fGP+OJb9Io3v/9gsVpmxQjJHzMjpjtbMLUdeja/+Vbp4duf5jEliqBQxRNx4AdSM22K89UzvvrYQO0SX2Ip2OFxlglqgKUYgGDBNABIJ570weAb+SeSNdHO2FKM0G3ExHMrsxRvLknDyykW3u9W/L0kV3TBCXFvybTTHHRuxiJtDro=
+
+%URL%
+https://github.com/davidhalter/jedi-vim
+
+%LICENSE%
+MIT
+
+%ARCH%
+any
+
+%BUILDDATE%
+1484394379
+
+%PACKAGER%
+Lukas Fleischer <lfleischer@archlinux.org>
+
+%DEPENDS%
+vim
+python-jedi
+python
+
+%OPTDEPENDS%
+vim-supertab: for tab completion
+python2-jedi: for Python 2 support
+

@@ -1,0 +1,75 @@
+%FILENAME%
+jre8-openjdk-8.u144-1-x86_64.pkg.tar.xz
+
+%NAME%
+jre8-openjdk
+
+%BASE%
+java8-openjdk
+
+%VERSION%
+8.u144-1
+
+%DESC%
+OpenJDK Java 8 full runtime environment
+
+%CSIZE%
+169188
+
+%ISIZE%
+405504
+
+%MD5SUM%
+46d5aed84fb0fb4acca560f4a57f7b87
+
+%SHA256SUM%
+5c8e43f8a28cfd50ba755e2e7f57eaca5595072a78b805cafba89c60cd78ac23
+
+%PGPSIG%
+iHUEABEIAB0WIQRNkTrs2Bcm2abHTwraZCbdIVs3rQUCWXuhxAAKCRDaZCbdIVs3rej9AP4i7sL9mV12HjG5pkt0WwFJKHyzGS0qX6W7uF4HCFbG6QD+OuBTVc79QsKkXxM0fJa8/QBMyIquAqzPSFWvm9LgM5U=
+
+%URL%
+http://openjdk.java.net/
+
+%LICENSE%
+custom
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1501272712
+
+%PACKAGER%
+Guillaume ALAUX <guillaume@archlinux.org>
+
+%REPLACES%
+jre8-openjdk-wm
+
+%PROVIDES%
+java-runtime=8
+java-runtime-openjdk=8
+
+%DEPENDS%
+jre8-openjdk-headless=8.u144-1
+xdg-utils
+hicolor-icon-theme
+
+%OPTDEPENDS%
+icedtea-web: web browser plugin + Java Web Start
+alsa-lib: for basic sound support
+gtk2: for the Gtk+ look and feel - desktop usage
+java-openjfx: for JavaFX GUI components support
+
+%MAKEDEPENDS%
+jdk7-openjdk
+ccache
+cpio
+unzip
+zip
+libxrender
+libxtst
+fontconfig
+libcups
+alsa-lib
+

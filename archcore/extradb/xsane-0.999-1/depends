@@ -1,0 +1,18 @@
+%DEPENDS%
+gtk2
+lcms
+sane
+zlib
+libjpeg
+
+%OPTDEPENDS%
+xsane-gimp: for gimp plugin support
+
+%MAKEDEPENDS%
+gtk2
+lcms
+sane
+zlib
+libjpeg
+gimp
+

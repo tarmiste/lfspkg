@@ -1,0 +1,60 @@
+%FILENAME%
+python-powerline-2.6-1-x86_64.pkg.tar.xz
+
+%NAME%
+python-powerline
+
+%BASE%
+powerline
+
+%VERSION%
+2.6-1
+
+%DESC%
+python library for powerline
+
+%CSIZE%
+323564
+
+%ISIZE%
+1782784
+
+%MD5SUM%
+6cffb8451c244ad6137cf922ddc331f7
+
+%SHA256SUM%
+17e3d8059e6413b4a4ffe2d8fb1fd31bcd68103310dd171dcd064b1e709b80b4
+
+%PGPSIG%
+iQFIBAABCAAyFiEESx3lRagB1FSb/T/vkMs9YsE9R5YFAlkSk3IUHGZhcnNlZXJmY0BnbWFpbC5jb20ACgkQkMs9YsE9R5aOBwgAkKgmICFDRtgLFSGLYX8pXI00q5ITnQ0dy23vTHBf4lZ3Qa+XzfQfSLKKFchGeKcytwKebJHQbJMTgB88VncSU3brOJ2h7eypIllDsa83CIA/Tc1CLiKuvqroxUhIpwQCeJT6nwUDvjAVXKp9ol9kv287QBdIR4khSwU2yEVvt+EWbJKio19avxA1eSxKCaAwyluoVQg/FVLRlXIEO+KYPrEh6/Yc+g9/BFX4nEGxMN7ijzAudcwULCgTrPWUrSCYtBOoTeQUAlt/TJyBi1vtDK7m4AUPMKV9CVYAnrmHGFwB4NHPvk88mSG0Pb3Hc3o2LlZ9+LKYjDBaMHdokNYFsA==
+
+%URL%
+https://github.com/powerline/powerline
+
+%LICENSE%
+MIT
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1494389318
+
+%PACKAGER%
+Jiachen Yang <farseerfc@gmail.com>
+
+%DEPENDS%
+python>=3.2
+powerline-common
+
+%OPTDEPENDS%
+python-psutil: improved system information
+python-pygit2: improved git support
+powerline-vim: vim plugin
+powerline-fonts: patched fonts for powerline
+
+%MAKEDEPENDS%
+python2-setuptools
+python-setuptools
+python-sphinx
+

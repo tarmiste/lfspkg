@@ -1,0 +1,53 @@
+%FILENAME%
+mu-0.9.18-1-x86_64.pkg.tar.xz
+
+%NAME%
+mu
+
+%VERSION%
+0.9.18-1
+
+%DESC%
+Maildir indexer/searcher and Emacs client (mu4e)
+
+%CSIZE%
+354876
+
+%ISIZE%
+1230848
+
+%MD5SUM%
+0214ef5d40982bf41cbab938d385d33b
+
+%SHA256SUM%
+fce75eceea2dafcfe3284172d0f834f8126e907077af9657c9c03e92c5634385
+
+%PGPSIG%
+iQEzBAABCAAdFiEEUPM+LlsMPZAEJKvom9z0l6S7zH8FAllxGjoACgkQm9z0l6S7zH82qggAgLt6AT9GoU+YgTFsPRH5hkyh9s/AoMHVsVY/UtCVvyJFCxqjJkXN5AARXaC1Jv0ZtaJLRzBauaExxQTyj/MJLgB15JcMIG6ycR55WJVB1fdrZH1W18LHXiK8BAQ8HDKuVHa3uooB/qjWdaqL210VECc92sFk647smqK10w/BUb4Fs5/Q0ckPB02DLdNycc2SL13D0sSdpMQ6GCN2OAnOGjsg76dUT+s6qfKHblbYqrmzqBFNR6yYRRyVph6+lK91FLn65osLX/qsD0fXVJ+GvnPgSgwew1/lE36HM4VNWNvd2Ocr1X4FuJDI+INZL2cJNiiXhOVnQTwqrApSHDPgBA==
+
+%URL%
+http://www.djcbsoftware.nl/code/mu
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1500582603
+
+%PACKAGER%
+Pierre Neidhardt <ambrevar@gmail.com>
+
+%DEPENDS%
+gmime
+xapian-core
+
+%OPTDEPENDS%
+guile: guile support
+emacs: mu4e support
+
+%MAKEDEPENDS%
+emacs
+

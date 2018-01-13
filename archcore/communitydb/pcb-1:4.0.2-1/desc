@@ -1,0 +1,56 @@
+%FILENAME%
+pcb-1:4.0.2-1-x86_64.pkg.tar.xz
+
+%NAME%
+pcb
+
+%VERSION%
+1:4.0.2-1
+
+%DESC%
+Interactive printed circuit board editor
+
+%CSIZE%
+2102408
+
+%ISIZE%
+8865792
+
+%MD5SUM%
+a00f227cd6eb14ac65abc939bbe738e0
+
+%SHA256SUM%
+a91cd7f6aa06bc4b002d5351615003ce1a843cce67552898a692745d8076cdf1
+
+%PGPSIG%
+iQEzBAABCAAdFiEESMOx8w3dD+Z+UW0WOW4+JbqxQsEFAloE9IEACgkQOW4+JbqxQsGyXwf+KKuoVSGINRYD/A3CTfZfGqtGNChcAA19Ya6GFCMWdtugToQuKPCKU/gEwFlFWhKOzqt6BsrjC7QafRaMLVJm9elLbUuZdi9WS1mL9UKfZNK5tXJ4kVjjRuBmreiGGAz9AJqjaKNn0eg78oUpgvVOV3UlS1jbdRHROQvm0iZCCD+x9JLZzj2ghxqVKZ/p5ipRJHBB+c/oJiqYEJG6maGoo7pfEZ/5vJ5LXx0V5yuFyVuCMsfvhiMEs68EyiwOX+fi1/1Sxw4TFw2YOJ+Ul0Lh0+6OOWc6oXzMr9OVKxuI4hcK1xn8siO6/jStGJ7v9NxHmzrYTkdlwyRVASVZYSPaHQ==
+
+%URL%
+http://pcb.geda-project.org/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1510275169
+
+%PACKAGER%
+Kyle Keen <keenerd@gmail.com>
+
+%DEPENDS%
+gtkglext
+gd
+
+%OPTDEPENDS%
+tk: additional tools
+tcl: additional tools
+perl: additional tools
+desktop-file-utils: desktop integration
+
+%MAKEDEPENDS%
+intltool
+tk
+

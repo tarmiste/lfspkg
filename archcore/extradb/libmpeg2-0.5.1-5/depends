@@ -1,0 +1,14 @@
+%DEPENDS%
+glibc
+
+%PROVIDES%
+mpeg2dec
+
+%OPTDEPENDS%
+sdl: required for mpeg2dec
+libxv: required for mpeg2dec
+
+%MAKEDEPENDS%
+sdl
+libxv
+

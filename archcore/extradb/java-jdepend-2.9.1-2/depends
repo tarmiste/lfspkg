@@ -1,0 +1,9 @@
+%DEPENDS%
+java-runtime-headless
+
+%MAKEDEPENDS%
+apache-ant
+
+%CHECKDEPENDS%
+apache-ant
+

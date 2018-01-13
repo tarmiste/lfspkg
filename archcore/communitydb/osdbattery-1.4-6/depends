@@ -1,0 +1,6 @@
+%DEPENDS%
+xosd
+
+%MAKEDEPENDS%
+patch
+

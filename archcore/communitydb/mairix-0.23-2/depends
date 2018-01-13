@@ -1,0 +1,8 @@
+%DEPENDS%
+bzip2
+zlib
+
+%MAKEDEPENDS%
+flex
+bison
+

@@ -1,0 +1,6 @@
+%DEPENDS%
+pygtk
+
+%PROVIDES%
+rox-lib2
+

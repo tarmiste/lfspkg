@@ -1,0 +1,8 @@
+%DEPENDS%
+java-runtime
+linuxsampler
+
+%MAKEDEPENDS%
+java-environment
+apache-ant
+

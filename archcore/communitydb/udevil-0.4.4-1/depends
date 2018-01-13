@@ -1,0 +1,20 @@
+%DEPENDS%
+udev
+glib2
+
+%PROVIDES%
+devmon
+
+%OPTDEPENDS%
+davfs2: mount WebDAV shares
+nfs-utils: mount nfs shares
+sshfs: mount sftp shares
+curlftpfs: mount ftp shares
+cifs-utils: mount samba shares
+zenity: devmon popups
+udisks2: devmon mount without suid udevil
+
+%MAKEDEPENDS%
+intltool
+gettext
+

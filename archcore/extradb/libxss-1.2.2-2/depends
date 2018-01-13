@@ -1,0 +1,7 @@
+%DEPENDS%
+libxext
+scrnsaverproto
+
+%MAKEDEPENDS%
+xorg-util-macros
+

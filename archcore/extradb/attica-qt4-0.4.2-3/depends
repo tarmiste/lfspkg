@@ -1,0 +1,12 @@
+%DEPENDS%
+qt4
+
+%CONFLICTS%
+attica
+
+%PROVIDES%
+attica
+
+%MAKEDEPENDS%
+cmake
+

@@ -1,0 +1,8 @@
+%DEPENDS%
+linuxsampler>=2
+gtkmm
+
+%MAKEDEPENDS%
+intltool
+libxslt
+

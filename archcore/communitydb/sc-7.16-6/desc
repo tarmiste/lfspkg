@@ -1,0 +1,42 @@
+%FILENAME%
+sc-7.16-6-x86_64.pkg.tar.xz
+
+%NAME%
+sc
+
+%VERSION%
+7.16-6
+
+%DESC%
+Ncurses-based spreadsheet program
+
+%CSIZE%
+160476
+
+%ISIZE%
+368640
+
+%MD5SUM%
+3f9cc10324b0e6d5918cbd71eb94ce1e
+
+%SHA256SUM%
+cea1b4dd70a969e1333fd76a25287b84cb5e60389f6375fdad44397253f34af2
+
+%PGPSIG%
+iQEcBAABCAAGBQJV7HvyAAoJEFHosUipmZw03eEH/29aDupgutyh6FhtlNJhTzxbn6nG7Tyx6uVRLw98LfhqbZJVKYNx4ydSrkQh2BI6tQnLuid6H3WGXF3QEq9zrJZgADdT7s2TosFkM7nXAyLfXvynX4vdxCZKnuQcuFsbftCggnJS9iKjePxRBIMnPSTPeacaBEdFfMR5U7tGf6EelHDj+Ok9bicq7W3rpxf57WYEjEj51+h99siHvzXVWG8bNqTHvOpCbYtch2lugPllh8myAeCKLqXDtxbmv2n2Rex7vfuuEahcsJXZjO+CapGH9KVjs9IBD5ME76R1YpLeFYJ8CfrcYhOnV0WwuBUJE2p7QtySGyJPuyy7qvCOT+I=
+
+%URL%
+http://ibiblio.org/pub/linux/apps/financial/spreadsheet/!INDEX.html
+
+%LICENSE%
+Public Domain
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1441561581
+
+%PACKAGER%
+Evangelos Foutras <evangelos@foutrelis.com>
+

@@ -1,0 +1,83 @@
+%FILENAME%
+python2-eventlet-0.21.0-1-any.pkg.tar.xz
+
+%NAME%
+python2-eventlet
+
+%BASE%
+python-eventlet
+
+%VERSION%
+0.21.0-1
+
+%DESC%
+Highly concurrent networking library
+
+%CSIZE%
+515392
+
+%ISIZE%
+3629056
+
+%MD5SUM%
+a8eaa3ccda7d76a0e3b2107151e2b95d
+
+%SHA256SUM%
+7dd92aea76418ca4a70eaa56a8a8fb6b3a478cfa729ca12f0b734bedb015f665
+
+%PGPSIG%
+iQIzBAABCgAdFiEE4kC1fixGMLp2ji8m/BtUfI2BcsgFAlm/xsYACgkQ/BtUfI2Bcsgx0w/6Ay2+dn1PiXPgnmsgPSBuHWyJAqLFL+uFb9AqeavtvZkzxKWyHWsYChOa8AlVWi38QgReERz182TtJuH8+uSuMSC9y5ChARsQlDKEJ76lOGGp4AKdyaiT8NfSsxr9FgCB9I2Ln1w2Bw/99ROfFxWDa3Ha71D76rR27mK31nZAcL/VqegvgsBTSKOofU0T4KcfULoC+Av7F3Fpdb+dyLF4MAB7ZB4nIZKzU+McPp1ua9SonADjqEQnS6AvXRIAxEozeKCH8SNPeeEU4VeaRS21n81tT+0vDGhFNzPcQZwYxD5D53JSYp9Qtme6WjMFy6+C1pXvW+6GWT61NIHHH75lOZmHq+NBjFdyfsPKS4RtiPU3J6CLjyUgcsOvy45WV2Q03kCtKXQ/WRnwc1LXkRD4/A5vr5woTDfV4GbtS48l4akR/wkzW9VO4Omd+kkDPcEslOKwPNvhGsLj3Ndu0rGy4MZYeihyshQbBQEWbomwnRMmpJcbyCqjGW81I82tI+I1AhQSRwPE9BwVnBZ0WcERwv0I9UunXkApqKLxxOi/EzlUO/X1FP8ny6zrk3dfLQN/D9FCYS9EV7nAGmmjt5mUez4LL5G2PjjnkBdpGHLuoZB4W32DKJs7sdcewwGHnPoRnMGk9o20kvxp66WDSzPvyTS9Tgmordf3S7hYXODvkmU=
+
+%URL%
+http://eventlet.net
+
+%LICENSE%
+MIT
+
+%ARCH%
+any
+
+%BUILDDATE%
+1505740166
+
+%PACKAGER%
+Levente Polyak <anthraxx@archlinux.org>
+
+%DEPENDS%
+python2
+python2-greenlet
+python2-subprocess32
+
+%OPTDEPENDS%
+python2-psycopg2: non-blocking PostgreSQL support
+python2-pyopenssl: non-blocking SSL support
+python2-httplib2: non-blocking HTTP support
+python2-pyzmq: non-blocking ZeroMQ support
+python2-dnspython: non-blocking DNS support
+
+%MAKEDEPENDS%
+python2-pip
+python-greenlet
+python-setuptools
+python-sphinx
+python2-greenlet
+python2-setuptools
+python2-sphinx
+python2-subprocess32
+
+%CHECKDEPENDS%
+python-psycopg2
+python-nose
+python-pyopenssl
+python-httplib2
+python-mock
+python-pyzmq
+python-dnspython
+python2-psycopg2
+python2-nose
+python2-pyopenssl
+python2-httplib2
+python2-mock
+python2-pyzmq
+python2-dnspython
+

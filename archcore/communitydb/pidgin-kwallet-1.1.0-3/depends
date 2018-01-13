@@ -1,0 +1,7 @@
+%DEPENDS%
+pidgin
+kdelibs
+
+%MAKEDEPENDS%
+cmake
+

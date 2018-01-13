@@ -1,0 +1,108 @@
+%FILENAME%
+python-twisted-17.9.0-1-x86_64.pkg.tar.xz
+
+%NAME%
+python-twisted
+
+%BASE%
+twisted
+
+%VERSION%
+17.9.0-1
+
+%DESC%
+Asynchronous networking framework written in Python
+
+%CSIZE%
+4464544
+
+%ISIZE%
+35816448
+
+%MD5SUM%
+4bf1ce8a55f6dc8c79abe2d666b077b0
+
+%SHA256SUM%
+62ace3f45e4f0dee62dc9114df6a3377f7f3a7e068b269bad5a942391fff982d
+
+%PGPSIG%
+iQIzBAABCAAdFiEEtZcfLFwQqaCMYAMPeGxj8zDXy5IFAlnHehQACgkQeGxj8zDXy5KN2Q//ZGitTe6soAmoVPcOVNTQM0tIvrAxCY/2391573MDuGelL/j1UH19jh95/yRfb3Jhq2nnXJtMIKrY/pETyLgKjMlPgTWY6c14Up5wQ4BTsAWs48eP/DXBPRYTAVPnOUEpnEAdPOkPpv4VDovlVBE7+e9CeKhnJ6Hbg4rCsKy0QDhpnzlZj2a7xXJRTrPb5nfkoLfX0zOr/pYwAhUCu9QCYaw0rx31dcjwE1CJG9IHJQPdEvUG5r6Ou78v3XV3Kyk4LRxEwcoZC/OHmZqxxX4lle9pmfcIR7hrKoUTMqTCxHrOyMKbXXja9FBvDw/pXiTm0BWiSsH3hrADJMKukOJyeZjR3L55Qv73Lhq9helcQNvcnt/O+x42Ro0Y3ra+UsPwezBXnCPXz8JJsmncT6DgUso5HwdljCbA0vN8nUPbvIxgpyt54R6ASXfb+aAkab55KPA0emuoHd3qe/n5QzEFtehYH7fo4Qv6kcVnB5kjbtkOoSwJprCzTxaLR5m7a9TXzDZh3liaS0eqB/l0BPl/04TVomWCsF+Q1ubwK5K6GBavLqxO4C4lX/gp6RIhFSRQVq9ccBXN4aHLZqAAiZxYKiwwCEZ64KGMyt/p99sRWEy0upqqMjITOwJhXaHtFJxb0foDEwvpw6n7FpkhW0vRSV4wiprXAtZ1cG6l1yKdr1E=
+
+%URL%
+http://twistedmatrix.com/
+
+%LICENSE%
+MIT
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1506243432
+
+%PACKAGER%
+Felix Yan <felixonmars@archlinux.org>
+
+%DEPENDS%
+python-zope-interface
+python-incremental
+python-constantly
+python-automat
+python-hyperlink
+
+%OPTDEPENDS%
+python-pyopenssl: for TLS client hostname verification
+python-service-identity: for TLS client hostname verification
+python-idna: for TLS client hostname verification
+python-cryptography: for using conch
+python-pyasn1: for using conch
+python-appdirs: for using conch
+python-h2: for http2 support
+python-priority: for http2 support
+python-pyserial: for serial support
+tk: for using tkconch
+
+%MAKEDEPENDS%
+python-zope-interface
+python2-zope-interface
+python-setuptools
+python2-setuptools
+python-service-identity
+python2-service-identity
+python-incremental
+python2-incremental
+python-constantly
+python2-constantly
+python-automat
+python2-automat
+python-hyperlink
+python2-hyperlink
+
+%CHECKDEPENDS%
+subversion
+python2-sphinx
+pygtk
+xorg-server-xvfb
+tk
+openssh
+gtk3
+python-gobject
+python2-gobject
+python-gobject2
+python2-gobject2
+python2-soappy
+python-subunit
+python2-subunit
+python-h2
+python2-h2
+python-priority
+python2-priority
+python-crypto
+python2-crypto
+python-cryptography
+python2-cryptography
+python-idna
+python2-idna
+python-pyserial
+python2-pyserial
+

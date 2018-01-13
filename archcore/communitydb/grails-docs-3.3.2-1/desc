@@ -1,0 +1,56 @@
+%FILENAME%
+grails-docs-3.3.2-1-any.pkg.tar.xz
+
+%NAME%
+grails-docs
+
+%BASE%
+grails
+
+%VERSION%
+3.3.2-1
+
+%DESC%
+Documentation for Grails
+
+%CSIZE%
+3545140
+
+%ISIZE%
+50692096
+
+%MD5SUM%
+811cf301ef160f834e2b10d6a1ebd5fa
+
+%SHA256SUM%
+cb9ba819c1ba253837e24ef9049156f3bbe2fdcdaf8fd36d14f5bac06b5e5964
+
+%PGPSIG%
+iQIzBAABCgAdFiEE4kC1fixGMLp2ji8m/BtUfI2BcsgFAlobV2YACgkQ/BtUfI2Bcsg2hQ//aQa8uN6Pve8OyJY37g4kRIg6WadbMJxjDDaVg6CE+1f6JVii2KnLqa5CA9PFjzN3NJJZi37xbRKijP/e4ZGwq5++DxXw6dHR6LX4qxPgyKsdCwWA+j+k4bfyXgQkya+nU8bphEY1SBYW7dB+98/8rjPYQdSwATJ8tLrPLpgXx95QJ3LQvIBJ6xf/km9+jH8sY6yjBGOXx3PP+REQ/7kiEtDdPL3Uq2CxQNOdBvOe7P9BoAF3UOXenxxGMkxaQ0YXMMsQEn/FiCP5Z8yxepOrf1vJpqDigHUpYLth3RGn7W/wjbJoNWYHDRlilP0mW55pT1fpO35BR02/FUMUvrdbxPWU8v7nEBaLB8CAIFyM+HuRmepNg6ZlPZmTtK+0QgTpwf3crssBscWGb9aMFvKtope1t713RkBjuK3PwMxjR7mHsiqXPt3O4iTZUokT9kTFUQrVIRZp7afb5KkJ3FFS5DXTOjTyzpZVXqRcT9rtMFX1Zhg0jgGyUn+qDTlzy1S42ZiryD511LbhIdIGo7Irz2aXGXy81nitz9Ww4B93cb9v/Gks/tYCp1z36OZONP8YNXinuPymdFmdPjxgMEuAWpdH2e3I2IdARU31nyZMIFMrL/NRW04UMsLucc/fiYJjyp6P59sgwf+F1QioBB86TXRnWMpE8rxbe5baBvxqt+0=
+
+%URL%
+http://grails.org/
+
+%LICENSE%
+Apache
+
+%ARCH%
+any
+
+%BUILDDATE%
+1511741251
+
+%PACKAGER%
+Levente Polyak <anthraxx@archlinux.org>
+
+%OPTDEPENDS%
+groovy: the groovy programming language
+grails-docs: documentation for grails
+
+%MAKEDEPENDS%
+apache-ant
+unzip
+setconf
+junit
+java-environment
+

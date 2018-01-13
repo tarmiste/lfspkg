@@ -1,0 +1,54 @@
+%FILENAME%
+ncmpc-0.29-1-x86_64.pkg.tar.xz
+
+%NAME%
+ncmpc
+
+%VERSION%
+0.29-1
+
+%DESC%
+Fully featured MPD client using ncurses
+
+%CSIZE%
+134992
+
+%ISIZE%
+495616
+
+%MD5SUM%
+41ff70b4c051d351153ea88fe8cd2849
+
+%SHA256SUM%
+627b4d69663c40e89a0c23c8c6e1ed40390617cdce67d4824c025139c76a78f3
+
+%PGPSIG%
+iHUEABYIAB0WIQQaYNxEJF0G/vkGI9bu7uLu7i7u7gUCWirozQAKCRDu7uLu7i7u7i2yAP9d/umWZIGeN+M/O6WfSTCnqtGntGLtcUMQcpWnC3TBVwD+KoVyX/ncvXdmms/kRhP/bbxpyLWxWNC7ycFdKXRpmAc=
+
+%URL%
+https://www.musicpd.org/clients/ncmpc/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1512761230
+
+%PACKAGER%
+Gaetan Bisson <bisson@archlinux.org>
+
+%DEPENDS%
+ncurses
+glib2
+libmpdclient=2.11
+
+%OPTDEPENDS%
+python2: to enable lyrics plugin
+ruby: to enable lyrics plugin
+
+%MAKEDEPENDS%
+meson
+

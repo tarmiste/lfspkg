@@ -1,0 +1,62 @@
+%FILENAME%
+telepathy-kde-accounts-kcm-17.12.0-1-x86_64.pkg.tar.xz
+
+%NAME%
+telepathy-kde-accounts-kcm
+
+%VERSION%
+17.12.0-1
+
+%DESC%
+KCM Module for configuring Telepathy Instant Messaging Accounts
+
+%GROUPS%
+kde-applications
+kdenetwork
+telepathy-kde
+
+%CSIZE%
+338472
+
+%ISIZE%
+2132992
+
+%MD5SUM%
+ca4c6dfbd72f2d5d47be855abee25a42
+
+%SHA256SUM%
+e8a80ce129dc1c273f2f16d99e131d92bbe0035d2cc4cc6573d8321b68aff9c0
+
+%PGPSIG%
+iQEzBAABCAAdFiEEFRnVq6Zb9vwrc8dWek52CV2KUuQFAloybVgACgkQek52CV2KUuSrKAf/fub6YRa16tAgZFdPKFZQBxhVU/IYkcJaX0rlLo06TY7Mj2gxgBr3iTU84hkmcmgNAZfG11ZNNBJWDr8wrrPGRDGWxgkdn1CYSFY9pTl04m1vcuiBnXkq4mZHMSPQEHIwMzAEGktj8hBYFmbU4/16WO3hNi/RHeD5KKz7FsfrpHoiIUYxgeaQdzRce7vSWsVNHP18iaBF7HWo68jvN1739GZ9uIf854Qt7ziyNU/d9VYB542u4E+wj4C18g8lKtc/QwwIZaHLLris4j1yhA9ROobAw8OEo3j6UQJKoXdVv9wPg/YyHPAZJGQtO+zVMVGGFz97eHIlSu266VGP8PbYBg==
+
+%URL%
+https://community.kde.org/Real-Time_Communication_and_Collaboration
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1512943071
+
+%PACKAGER%
+Antonio Rojas <arojas@archlinux.org>
+
+%DEPENDS%
+telepathy-qt
+kaccounts-providers
+
+%OPTDEPENDS%
+telepathy-gabble: XMPP/Jabber accounts support
+telepathy-haze: account types supported by Pidgin/libpurple
+telepathy-morse: Telegram accounts support
+telepathy-salut: link-local XMPP account support
+
+%MAKEDEPENDS%
+extra-cmake-modules
+intltool
+python
+

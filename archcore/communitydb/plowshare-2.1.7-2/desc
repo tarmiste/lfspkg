@@ -1,0 +1,57 @@
+%FILENAME%
+plowshare-2.1.7-2-any.pkg.tar.xz
+
+%NAME%
+plowshare
+
+%VERSION%
+2.1.7-2
+
+%DESC%
+Command-line downloader and uploader for Rapidshare, Mediafire and other file sharing websites.
+
+%CSIZE%
+81100
+
+%ISIZE%
+290816
+
+%MD5SUM%
+a2cb87f2b4ef0626c46afcaf7773a757
+
+%SHA256SUM%
+402c68674e76b805bd6fb5dd32266af17597545b43ea4c31c794384ac6463599
+
+%PGPSIG%
+iQIzBAABCAAdFiEEkb2IFf4AQPp/9daHVMKPT/WhqUkFAlol2RcACgkQVMKPT/WhqUnEow/7Bx1Z91hkxB3CVjm71EPehx+xbg44OBfDT7P6zBbBY5znBZeikMGrKWik+87IbFbyQU1TVwLaw9dFS4ra2klq/aZt+45Rp69H6emXW3hjAOphqED19gNVtiV95U64BzHNAZB6H9DiuU6DDRkAVDF1wytz13uxEolIrDQ8An+h+89BLEKlD+GIKeZ/Fw7NoRTxZpnSFYvP3jslaEoWlIv8atNgNpglYin60LnNQHo0Shd7x9QNwHKGd3q/yxTxkA0pR/SRMn9/1fQ3YgoyF/XeRrjFB96fTQEE5gcslVRJFGszoLKeCyGPChdclFycTddJoOLAKMRRF/gOZPRsvJk7ux2r/oTsrQLVunSVGjpXaLBeQ7nigUnOV6oRijmvO3bbPxFANncSbZ2rve6oN/3JW+jIFCaeKHRibN6dUYh0p/31VuSCuDj9zJjeL1+O0h9t4kS10dWLh46eBto2QW7X3mMgBUgdD+RO2lWtgY3qSCTskAe5IYR5IrHOqcOQ0Ab2onEpnKcmccEAdeqIvL4/qFxf70eGv6WC1KmkiqRybWLWjTO+twY1ZkXLOtuXh2xzoWMfc21fxEAcB7j9kJoytjaS4kr9VA82VurImhgU/5VqmmkwbXVmHomS1fwaBWSy6vhRk17mGrg1wXggCRcDsd4re9Yot0S4Ey72bMSKU+0=
+
+%URL%
+https://github.com/mcrapet/plowshare
+
+%LICENSE%
+GPL3
+
+%ARCH%
+any
+
+%BUILDDATE%
+1512429534
+
+%PACKAGER%
+David Runge <dave@sleepmap.de>
+
+%DEPENDS%
+curl
+recode
+js
+git
+
+%OPTDEPENDS%
+bash-completion: enable bash auto completion
+imagemagick: X11 picture viewer for captchas
+sxiv: X11 picture viewer for captchas
+feh: X11 picture viewer for captchas
+qiv: X11 picture viewer for captchas
+fbida: framebuffer picture viewer for captchas
+libcaca: framebuffer ascii picture viewer for captchas
+

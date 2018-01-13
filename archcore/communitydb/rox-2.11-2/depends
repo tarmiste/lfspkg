@@ -1,0 +1,9 @@
+%DEPENDS%
+sh
+libsm
+gtk2
+
+%MAKEDEPENDS%
+librsvg
+python2
+

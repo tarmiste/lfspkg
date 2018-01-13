@@ -1,0 +1,78 @@
+%FILENAME%
+cmus-2.7.1-8-x86_64.pkg.tar.xz
+
+%NAME%
+cmus
+
+%VERSION%
+2.7.1-8
+
+%DESC%
+Feature-rich ncurses-based music player
+
+%CSIZE%
+210112
+
+%ISIZE%
+641024
+
+%MD5SUM%
+e670029ac4c80fd951e0db1740b74ccb
+
+%SHA256SUM%
+95753f0c6bb4629f09f312c4c19ab1471836ebb66430fab704edecab49834701
+
+%PGPSIG%
+iQEcBAABCAAGBQJW3adyAAoJEJdqxvo7lPoQLBEH/3/GPm4Oj+UBjkG286tqCYV+3ftEFpg9VMQnDXLZclRBVZBMYE0KsruOYeZEW3pAnP+GjjB7dl41tyX7GQddYYI60rouxaLTWUvfCR47dtSvbc03MjX91uylpltl4lmHgPsFVEv9TpJ1Vw7+EXlMMDEnaS2qc/2YUIrSSg7o3a+ouFmhcEpdYvauUSAPdcyn0jd3kTyPx22tmCkA+e6YQDXMJCl/2KtuSpRD1EJtJADsOp6Dud+jEQJhpfF7nSQ6WyjH9dG92kEAV/biU9qLgCVfaIWamOOvIO8UmZvZoRx+1LjXJo6VG+NDOcVoIEPPw6MLED0xHiQrK0sJe5NI6z0=
+
+%URL%
+https://cmus.github.io/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1457366824
+
+%PACKAGER%
+Jan de Groot <jgc@archlinux.org>
+
+%DEPENDS%
+ncurses
+libcue
+libdiscid
+
+%OPTDEPENDS%
+alsa-lib: for ALSA output plugin support
+libao: for AO output plugin support
+libpulse: for PulseAudio output plugin support
+faad2: for AAC input plugin support
+ffmpeg: for ffmpeg input plugin support
+flac: for flac input plugin support
+libmad: for mp3 input plugin support
+libmodplug: for modplug input plugin support
+libmp4v2: for mp4 input plugin support
+libmpcdec: for musepack input plugin support
+libvorbis: for vorbis input plugin support
+libcdio-paranoia: for cdio support
+opusfile: for opus input plugin support
+wavpack: for wavpack input plugin support
+
+%MAKEDEPENDS%
+faad2
+ffmpeg
+flac
+libao
+libcdio-paranoia
+libmad
+libmodplug
+libmp4v2
+libmpcdec
+libpulse
+libvorbis
+opusfile
+wavpack
+

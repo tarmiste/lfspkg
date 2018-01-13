@@ -1,0 +1,61 @@
+%FILENAME%
+sway-0.15.1-2-x86_64.pkg.tar.xz
+
+%NAME%
+sway
+
+%VERSION%
+0.15.1-2
+
+%DESC%
+i3 compatible window manager for Wayland
+
+%CSIZE%
+5029528
+
+%ISIZE%
+5680128
+
+%MD5SUM%
+c61b0b0189b457362dad0f98a21c9d44
+
+%SHA256SUM%
+c0d92ce8398b49ff543477bda1c15965cb0f84b66c4a4d5bd5f6bbac94bf8540
+
+%PGPSIG%
+iQFCBAABCAAsFiEEAv0cepNOYUVFhJ8ZpiNAdEmOnO4FAlpFYrQOHGFyY2hAZXdvcm0uZGUACgkQpiNAdEmOnO7MSwf/akVL0paw9H5vqPyWlhySIvH6uqVtEb3SvMgThz2bCZ7CXHf+Uz6rE+kfIMR0V/fR7v5OeZjTjrnMgc/fH6O4QQNN6vU4k/1pzf2Jb3kdqSptrrU8jM5FPv9dXOcjiu04nIijj2O3cOHSoSJXJW4R4YqxiKgTWKUIdnAGQsZ+GTKviob74cnjR6SGwZ0yGKZoPrsbHz8DApLhoBYKA7rWiVSZ7iCxq2sn+XlUQyAO58hqC9iHc23LZXuCGSPMuaI8o3qVatF09iNVB5vfxJzisKvLbR8Uv/OCFY9lJICfgZTS9R1GPIIGSNYj9vFrtnaWgUdZz0QCk3bD6HQLjnOviA==
+
+%URL%
+http://swaywm.org
+
+%LICENSE%
+MIT
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1514496657
+
+%PACKAGER%
+Christian Hesse <arch@eworm.de>
+
+%DEPENDS%
+wlc
+xorg-server-xwayland
+json-c
+pango
+wayland
+gdk-pixbuf2
+
+%OPTDEPENDS%
+rxvt-unicode: Default terminal emulator.
+dmenu: Default for launching applications.
+imagemagick: For taking screenshots.
+ffmpeg: For recording screencasts.
+i3status: To display system information with a bar.
+
+%MAKEDEPENDS%
+cmake
+asciidoc
+

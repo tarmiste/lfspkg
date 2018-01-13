@@ -1,0 +1,14 @@
+%DEPENDS%
+sh
+awk
+grep
+coreutils
+sed
+e2fsprogs
+
+%OPTDEPENDS%
+cryptsetup: for encrypt mkinitcpio config support
+dmraid: for dmraid mkinitcpio config support
+lvm2: for lvm2 mkinitcpio config support
+mdadm: for raid mkinitcpio config support
+

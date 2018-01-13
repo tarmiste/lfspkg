@@ -1,0 +1,72 @@
+%FILENAME%
+python2-keyrings-alt-1:2.3-1-any.pkg.tar.xz
+
+%NAME%
+python2-keyrings-alt
+
+%BASE%
+python-keyrings-alt
+
+%VERSION%
+1:2.3-1
+
+%DESC%
+Alternate keyring implementations
+
+%CSIZE%
+31800
+
+%ISIZE%
+178176
+
+%MD5SUM%
+d7998819553c9a8a36fe290fc50da06e
+
+%SHA256SUM%
+9ed4d8b77682cf7f44f2517e4f9d9c0b906d8b9ecbb9d13efde790ce522733a1
+
+%PGPSIG%
+iQIzBAABCAAdFiEEtZcfLFwQqaCMYAMPeGxj8zDXy5IFAlmpdmkACgkQeGxj8zDXy5KeVw/+LYg59jKA/OHdXsjGvWsOwYegLierHp+F/XRCOKmNL/R0Sp8XymMmaUtIsXcKN0ZzMB1NvKXZywltHl56Fmjmk1+Xvlc36frqbehLGp70YPPCZZTE997tqKa0tJ5eZdz6R6ebGaU7edZJMgxURqc6Qjb/dGuCYh9RrCzFcWd2upvPLof5s7XPrPYP1XdFxghREWSCoEvY4QXwFTyqQ+CJXrDeP0MvknXyH7G1cF8zdykUCQwvxlqnt6TJNIVKAmFQG1zMbPeFeKsGS0kiiopewyGrQRd4S+RTTynhS8PiOh/QKArMOXY3OWHZSJhyWJsgeBrDiZsrKguzfWIkVqXOl3ndR8SwrH5+sCES1L5wER6radt/WGVfvH8vfB3dYpJzFHpNsKSPWTxXQvsU64DFU4L/6sAkK3waq+2eWVsU+rtQkWZuFOrR287I8Xt2x3NhcdS2Vkm7I+arfi+2qOGqwrCg93vA0g64a5inhTDxdRXgH8xG+jbWRuSBbVNImwGNU+Q1boUA60pgqct1MOC4W88+GcI2OM70v4tPzGdUf2X4H5kNp2zp++VTD8ypQ0CYZMqGGulSrb5VY3vr3jyRcby8GGh72DHAHBu7sVutRvTMDj555LaMi0oV/oC+zINAUMeDcMMTLSqwuD/Q+eLG7WxO/7v2dI3ez8pJA5iE6co=
+
+%URL%
+http://pypi.python.org/pypi/keyrings.alt
+
+%LICENSE%
+MIT
+
+%ARCH%
+any
+
+%BUILDDATE%
+1504277455
+
+%PACKAGER%
+Felix Yan <felixonmars@archlinux.org>
+
+%DEPENDS%
+python2-keyring
+
+%OPTDEPENDS%
+libgnome-keyring: GNOME Integration
+python2-gobject: GNOME Integration
+python2-fs
+python2-gdata: Google Docs Integration
+python2-crypto: Encrypted file storage
+
+%MAKEDEPENDS%
+python-setuptools_scm
+python2-setuptools_scm
+python-keyring
+python2-keyring
+
+%CHECKDEPENDS%
+python-pytest-runner
+python2-pytest-runner
+python2-backports.unittest_mock
+python-crypto
+python2-crypto
+libgnome-keyring
+python-gobject
+python2-gobject
+python2-gdata
+

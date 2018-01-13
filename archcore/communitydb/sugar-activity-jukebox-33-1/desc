@@ -1,0 +1,55 @@
+%FILENAME%
+sugar-activity-jukebox-33-1-any.pkg.tar.xz
+
+%NAME%
+sugar-activity-jukebox
+
+%VERSION%
+33-1
+
+%DESC%
+Media player for Sugar
+
+%GROUPS%
+sugar-fructose
+
+%CSIZE%
+75856
+
+%ISIZE%
+457728
+
+%MD5SUM%
+1f7d5e4c1a81079905a16a2019f86e84
+
+%SHA256SUM%
+ce4b9acee7cdfb6c2dd0154fd830b1d673b67509124803a0b5a18bc5e55de06f
+
+%PGPSIG%
+iQEzBAABCAAdFiEEzgvecadZqH8j8PfYth284QkBwWMFAllFQZEACgkQth284QkBwWMq0wf+OlvkLqSskkwQX3kEQNscqITff5A5+gLAS8ZYh2poAYNoE8YT6lUJX9HgAtaH8dMGXrwv8fsIcOcTVmUDz9A3N+SDu6Srr/W8d128l8BgFerBpL5v2+jKX5dt32edBEvmJNgLjJMQKdg098P/KGLkTo9GGbRA9xX1eMDD3M1w+aTFWxICcdlBialYVx5QlrNEaQIkpuzSyT5ya7sRUOyQV3DRU3/p0c9McN0YmpaCDnmihQdLuAVfKM5Zy9dDVflu2LDBYCQgtVOcbDkl5uo+6F2hcge4ceeQoKnWE1zxmHTlUvySOeLj2nzn/9wZzZkDuVTkIjAh4p8kxTGDCpvamg==
+
+%URL%
+https://wiki.sugarlabs.org/go/Activities/Jukebox
+
+%LICENSE%
+GPL
+
+%ARCH%
+any
+
+%BUILDDATE%
+1497710982
+
+%PACKAGER%
+Balló György <ballogyor+arch@gmail.com>
+
+%DEPENDS%
+sugar-toolkit-gtk3
+gst-plugins-base
+
+%OPTDEPENDS%
+gst-plugins-good: Extra media codecs
+gst-plugins-bad: Extra media codecs
+gst-plugins-ugly: Extra media codecs
+gst-libav: Extra media codecs
+

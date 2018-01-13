@@ -1,0 +1,61 @@
+%FILENAME%
+connman-1.35-2-x86_64.pkg.tar.xz
+
+%NAME%
+connman
+
+%VERSION%
+1.35-2
+
+%DESC%
+Intel's modular network connection manager
+
+%CSIZE%
+447256
+
+%ISIZE%
+1627136
+
+%MD5SUM%
+d7895581b4fbc68df13a58a1651b74ec
+
+%SHA256SUM%
+308325aa27282d9c1e80c8c370044af0a300d4c2841bd53633c2f78311ebf638
+
+%PGPSIG%
+iQIzBAABCgAdFiEEba97gI+d8lE5YgAA0hRh49/iBg0FAloVY8oACgkQ0hRh49/iBg2Nvg//f5yn2Qc3GdWXMZVlrG5qxtjZvkj+Jle2DfwDgwlY+C5QxnjicQYUAuYIfSYLcqEDiFYbx6idIHzWVd2Isoelo7hkVCWoTX3CQVeOpEws83jfTIaUTIuqhpEJby5VWVH9IomwlCmMFijwVcD48L4e7JJ6dr3yaEnIAXmSCpPlONmZeADZLkmBz/nsgolp9PgGn5Bl+ytHl0ADsSSpG6Xow0Np9DPf8msteiEquaazS6WLm4ALgBIiSprrBAbliOnOwhaknw+IkmG0hWLZ2Lcg37WRjVIrZSI70pJfLdF0ylR0C13Lnw1EgPfziPmZ7OvKZMbsDhzUfKF737RvFOCWUmuxsOWhbcvchFRV7efl+o3RrHC8NxOPEHBVc6fVcF/htEZc0ADkqH50tKDdzGXpwKrgsTT/cTyoyJUO+uiXj7zK/dEcTqQMe+yX1Su7Y4RmSj6VvqltycMlssZo6c1Qy46i1qrPlR8Zv6R1IJMoGzhwJa1CT7eLNi6VnhtBEw5bvstzFTltjfaWVUUyQHL9C3Esnkty0x+mzzoqDk38LZQcvseG5u/aBjwbRSMV2CpchJt+FOTnSUD890FCtil3A3qe62xpecfzqjpvnqMJIkdGa5dKwyfZaOysQCocw3U/eg48gYOPExIkUNb4en16xZarntYqP9+Htb5wiHRWQfQ=
+
+%URL%
+https://01.org/connman
+
+%LICENSE%
+GPL2
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1511351139
+
+%PACKAGER%
+Christian Rebischke <Chris.Rebischke@archlinux.org>
+
+%DEPENDS%
+dbus
+iptables
+gnutls
+glib2
+
+%OPTDEPENDS%
+bluez: Support for Bluetooth devices
+wpa_supplicant: for WiFi devices
+pptpclient: for ppp support
+openvpn: for VPN Support
+
+%MAKEDEPENDS%
+bluez
+wpa_supplicant
+openconnect
+openvpn
+ppp
+

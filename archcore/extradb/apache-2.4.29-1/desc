@@ -1,0 +1,58 @@
+%FILENAME%
+apache-2.4.29-1-x86_64.pkg.tar.xz
+
+%NAME%
+apache
+
+%VERSION%
+2.4.29-1
+
+%DESC%
+A high performance Unix-based HTTP server
+
+%CSIZE%
+1471108
+
+%ISIZE%
+5690368
+
+%MD5SUM%
+20adf38e620d87d303bce526fdd4d46d
+
+%SHA256SUM%
+25ed2659dd78accf1e6d3999a3148926eff8a2c819ab2c300e9353fde3a87f25
+
+%PGPSIG%
+iQIzBAABCAAdFiEEjhmSFnRl21+wRVV8sChU7XU+Dx8FAlnrpEQACgkQsChU7XU+Dx8xtg/6Aw8sLSrqy1KjsrucSKNa+iLBeMcsLw3zWWH2JPczq53LbuTeRn7kXF7HFmB61UeHPe60nxICOnglc0Ibv6tYztezwx9pmqAfACbACv5XWveE2RpA6SS9wJ02ubvNY06yRsX6ioj94R3cczD0/ev0oAkFPv9yje1q9MK0A6hCypT4FkgWQp6Oza8LJ6KQMEdLxkTOuz75OBslCSYAapnKyRqq7K7ioGOwVBqn3Im8g2HxImugir+L/0Ld7sTz1phd6bcKteRWUVsePCkiRg5bI2Nus7ji0dfKyxS3VmJs8y0F9wjL5Q7lYqSVZXMrGchQGRIyWYr9wZtl3cDbwZqUMazFMcJXR4gh8s46Zh0Cit189rHkBhospoXbNzuahFIyj6OL0GYFmhNstRyfImfhrM+eTc0zO8FcHoCbkRpcH1/UAjRz4IuMBbdm53TNhsU5t+mkteIFIceSz/zP48bFYFoI8bY5ZRIlUG3BaIhM5sJ2t/Df1l0N0ZgPn0wYsgzfpKxGKeGiHBJsUeizT4Ie5FX26aN1dCscAO0oInLLqBtQQu/kVR/IAeaKeYv1hqtvD/XTCD3ZNmfM6X187jSRCRIw9317YX7z4v5lUuILJoC62lkTsP+tAdzLYLBhrnZ9XKaKhir880gUDq/D3gVtjKU4PRECKrfwmmbehcdpY/M=
+
+%URL%
+http://www.apache.org/dist/httpd
+
+%LICENSE%
+APACHE
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1508615131
+
+%PACKAGER%
+Anatol Pomozov <anatol.pomozov@gmail.com>
+
+%DEPENDS%
+zlib
+apr-util
+pcre
+libnghttp2
+openssl
+
+%OPTDEPENDS%
+lua: for mod_lua module
+libxml2: for mod_proxy_html, mod_xml2enc modules
+lynx: apachectl status
+
+%MAKEDEPENDS%
+libxml2
+lua
+

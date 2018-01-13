@@ -1,0 +1,76 @@
+%FILENAME%
+powerdns-4.0.5-3-x86_64.pkg.tar.xz
+
+%NAME%
+powerdns
+
+%VERSION%
+4.0.5-3
+
+%DESC%
+Authoritative DNS server
+
+%CSIZE%
+2799252
+
+%ISIZE%
+19247104
+
+%MD5SUM%
+6a1c28bb8254aabf06ea31cce0bab10d
+
+%SHA256SUM%
+2a62fa6665cd88082feb90d05fa0c319cb70c2ffb8ef33cb35cb268769c5ca6e
+
+%PGPSIG%
+iQIzBAABCAAdFiEEtZcfLFwQqaCMYAMPeGxj8zDXy5IFAlpEqCQACgkQeGxj8zDXy5KJZQ//fEPHkRAj9M2NyZ+zDtchplft3VXWUnSGKhN3pi/qDRRGZQT/KbStBjlADZO2Mffr8m/WLwSG+qivw/qlGLuNc44ilvj9B4/7DOIW3QHQoMFydj+oKTS/FZODjwmUueu/JTjIgt6RPLMgbu7rDy4LNbS0w2IxgYxd7AE/Z0EU0VqbpbYw4Db8gI/CVzPhxo0QPZeNACGHHsXM3XAbJPO/z01g2qAzT2FLlMQowZd0XXfGAP37cl6qwFHlwgHakvbfFQ/UTrUz9PhfELmZFS1aNInm9x3ds04jEfLcxfRVs+2H/QTZXA/JdW8QUGN4gPSLCNwAw5hfKkD4SJh2hY7aRRMw7A94pJllRyuFhH//O2Q2ogvtSAngghgemkP0/qrEh6bdBf+BBoytaOud/W5SyUYsFWp4z9AVzBngDR0h0mHLoM6r+M7Ujz3cPA62GW0jcqGSeInhRduykGtmS84OpV9EhHzlKS/PwB4fCRncjbKDTh7iy6sLWLUZ8F79vw4BjJytiBGR3tbfhO1ceq4DXLpZ3TWQfis/L8gSnXTwe9YheEldMRJxFN17VWX1EH7fNtMti9J4G4kPQRARbM6NH1ye3sYohDfClm/zh7o6mcI3XRGcCrD7gGT5Z+9JAabzmuOkUV/Al65yQcI93I9dcCe+pQKasHS9LcMH2AahWhU=
+
+%URL%
+http://www.powerdns.com/
+
+%LICENSE%
+GPL2
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1514448902
+
+%PACKAGER%
+Felix Yan <felixonmars@archlinux.org>
+
+%CONFLICTS%
+pdns
+
+%PROVIDES%
+pdns
+
+%DEPENDS%
+boost-libs
+libsodium
+systemd
+lua
+openssl
+protobuf
+sqlite
+
+%OPTDEPENDS%
+libmariadbclient: MariaDB/MySQL backend
+postgresql-libs: PostgreSQL backend
+libldap: LDAP backend
+geoip: GeoIP backend
+yaml-cpp: GeoIP backend
+
+%MAKEDEPENDS%
+boost
+setconf
+libmariadbclient
+postgresql-libs
+lua
+libldap
+sqlite
+geoip
+yaml-cpp
+pkg-config
+

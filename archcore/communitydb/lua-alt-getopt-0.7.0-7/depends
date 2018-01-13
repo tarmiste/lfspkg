@@ -1,0 +1,9 @@
+%DEPENDS%
+lua
+
+%MAKEDEPENDS%
+bmake
+lua
+lua51
+lua52
+

@@ -1,0 +1,52 @@
+%FILENAME%
+fetchmail-6.3.26-6-x86_64.pkg.tar.xz
+
+%NAME%
+fetchmail
+
+%VERSION%
+6.3.26-6
+
+%DESC%
+A remote-mail retrieval utility
+
+%CSIZE%
+435916
+
+%ISIZE%
+2153472
+
+%MD5SUM%
+a0fc9d81ba3535aa8e91ba48f9d8b913
+
+%SHA256SUM%
+ae3a8f40a895db24f45ba58bde2c3da58cc1e61eefd6674135ff4a884d144633
+
+%PGPSIG%
+iQEzBAABCAAdFiEEqEuNxzq4MgZ75Uw8l2rG+juU+hAFAljEfVwACgkQl2rG+juU+hBxBAf+IXqEHaYFiHg5IidmlsFIMdML0rYT+TfhuViHMoTpp8SAjdx/6d+QidMEF4eoGM2qg0G44wiW6QlpTyOHBM+Bj5/zUWXEQ/wjC7PNnUi1nkk8nz0jGWdiVWyvSgJ/ZKxQc0dwJgcf+pB+GFk1VULbqRgYSkzfrpY1X91Q6ISDNYTUjmMofrctpqIVFNFwEXjkxAJk1AAM2D0cH/Eth6Ke1nPsqGX+tZOIBzCcm+AFzJKjgVu5VJ3luzuGbCkFNz1k9mJVFxIopAD7mfxw+QVJjFyDcFxTdNsxoI5wXvO+h7wqpdegWBQtzDJrjG/ZMrZdL3ZynXnf481Tk4U6QHj1DA==
+
+%URL%
+http://www.fetchmail.info
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1489272144
+
+%PACKAGER%
+Jan de Groot <jgc@archlinux.org>
+
+%DEPENDS%
+openssl
+
+%OPTDEPENDS%
+tk: for using fetchmailconf
+python2: for using fetchmailconf
+
+%MAKEDEPENDS%
+python2
+

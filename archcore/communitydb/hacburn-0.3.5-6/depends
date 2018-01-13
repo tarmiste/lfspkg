@@ -1,0 +1,12 @@
+%DEPENDS%
+gtk2-perl
+glib-perl
+cdrkit
+mpg123
+vorbis-tools
+gtk2
+xorg-server
+perl
+cddb_get
+lame
+

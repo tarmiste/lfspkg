@@ -1,0 +1,63 @@
+%FILENAME%
+cinepaint-1:1.0.4-5-x86_64.pkg.tar.xz
+
+%NAME%
+cinepaint
+
+%VERSION%
+1:1.0.4-5
+
+%DESC%
+Sophisticated graphics manipulation programm supporting > 8bit pictures
+
+%CSIZE%
+3933996
+
+%ISIZE%
+14587904
+
+%MD5SUM%
+41de8f9eeb6d51002aa99a3a5f6293ab
+
+%SHA256SUM%
+a0a118b72046fe4f91c310daca8db926103fb6fda26daa961e13c0cfe1dca35c
+
+%PGPSIG%
+iQEcBAABCAAGBQJXIcszAAoJEKYjQHRJjpzu4LUH/j+qtxTHVbbdPZ3zyuVAY2bqS41HSO7hWP4CXOKpkmRL9vypGYf4C+LoKUk+JYxrzO+nn3HaFRpQpyzGmQN5hgb5Y4fCcwqXmOVK/YroZaFWAFN/bSPfQpAvxaad/PLPYwsDMI50H0+mz3ew60b1b0p8LX2/T1Mjlsok5w19UCA7nLkro5Ok3K6PwN5Zf7Yxjps8Mhu3ta6tK6kruf9e7lA8ftwCflQhgo0heN9OqCNmxzgVsIMbYcK4xCBfoUYjPByJTJNSDbKdYoN9r7s/675lxQb+SLZXJhvy/fL2cxIIIHWq5h4Bk7G4fl41k4UDRj39As7qsV17uICoPsj+m/Q=
+
+%URL%
+http://www.cinepaint.org
+
+%LICENSE%
+LGPL
+GPL
+MIT
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1461831425
+
+%PACKAGER%
+Christian Hesse <arch@eworm.de>
+
+%DEPENDS%
+gtk2
+openexr
+lcms
+libxpm
+fltk
+ftgl
+libxxf86vm
+
+%OPTDEPENDS%
+python2: for python plug-ins
+gutenprint: for print plug-ins
+ghostscript: for pdf plug-ins
+
+%MAKEDEPENDS%
+python2
+gutenprint>=5.2.9
+optipng
+

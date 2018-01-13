@@ -1,0 +1,102 @@
+%FILENAME%
+collectd-5.8.0-3-x86_64.pkg.tar.xz
+
+%NAME%
+collectd
+
+%VERSION%
+5.8.0-3
+
+%DESC%
+Daemon which collects system performance statistics periodically
+
+%CSIZE%
+775616
+
+%ISIZE%
+2894848
+
+%MD5SUM%
+3276f51a336cd9514d36d790d98e2f93
+
+%SHA256SUM%
+5a2eb67eb388cb6ef33debc0d293fe967664e46e3e74a21d73bee24315bf5584
+
+%PGPSIG%
+iHUEABYIAB0WIQQaYNxEJF0G/vkGI9bu7uLu7i7u7gUCWlMQ1gAKCRDu7uLu7i7u7m46AQDksB7Qq4u0JwveENcnVQoWod96KewNlFpEg0zTWJj/nwEA469KVdAx3QH+P19FmXg+K0x8eyle8L4bmO+cbM9i4gs=
+
+%URL%
+https://collectd.org/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1515393119
+
+%PACKAGER%
+Gaetan Bisson <bisson@archlinux.org>
+
+%DEPENDS%
+libltdl
+iptables
+
+%OPTDEPENDS%
+curl: apache, ascent, curl, nginx, and write_http plugins
+libdbi: dbi plugin
+libesmtp: notify_email plugin
+libgcrypt: encryption and authentication for network plugin
+libmemcached: memcachec plugin
+libmariadbclient: mysql plugin
+libsystemd: UdevNameAttr option
+iproute2: netlink plugin
+net-snmp: snmp plugin
+libnotify: notify_desktop plugin
+openipmi: ipmi plugin
+liboping: ping plugin
+libpcap: dns plugin
+perl: perl plugin
+postgresql-libs: postgresql plugin
+python2: python plugin
+rrdtool: rrdtool and rrdcached plugins
+lm_sensors: lm_sensors and sensors plugins
+libvirt: libvirt plugin
+libxml2: ascent and libvirt plugins
+yajl: curl_json plugin
+libatasmart: smart plugin
+lvm2: lvm plugin
+protobuf-c: write_riemann plugin
+mosquitto: MQTT plugin
+libmicrohttpd: prometheus plugin
+
+%MAKEDEPENDS%
+curl
+libdbi
+libesmtp
+libgcrypt
+libmemcached
+libmariadbclient
+libsystemd
+iproute2
+net-snmp
+libnotify
+openipmi
+liboping
+libpcap
+perl
+postgresql-libs
+python2
+rrdtool
+lm_sensors
+libvirt
+libxml2
+yajl
+libatasmart
+lvm2
+protobuf-c
+mosquitto
+libmicrohttpd
+

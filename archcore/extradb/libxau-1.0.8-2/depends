@@ -1,0 +1,7 @@
+%DEPENDS%
+glibc
+xproto>=7.0.18
+
+%MAKEDEPENDS%
+pkgconfig
+

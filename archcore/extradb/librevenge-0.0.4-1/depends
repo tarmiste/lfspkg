@@ -1,0 +1,8 @@
+%DEPENDS%
+boost-libs
+
+%MAKEDEPENDS%
+boost
+doxygen
+cppunit
+

@@ -1,0 +1,132 @@
+%FILENAME%
+diffoscope-88-1-x86_64.pkg.tar.xz
+
+%NAME%
+diffoscope
+
+%VERSION%
+88-1
+
+%DESC%
+Tool for in-depth comparison of files, archives, and directories
+
+%CSIZE%
+194920
+
+%ISIZE%
+1185792
+
+%MD5SUM%
+466b049171016ac6c91057a42a64caf3
+
+%SHA256SUM%
+324824ae84cdb8181ffbff39d1b6b2a660c5fe7b896e232bf6f5e22d00026b2a
+
+%PGPSIG%
+iQIzBAABCgAdFiEE4kC1fixGMLp2ji8m/BtUfI2BcsgFAln/lG4ACgkQ/BtUfI2Bcsh59g/+MG85CUzl4DehLaSY5FPqVaEvwLbbowFVbKrP+7x80GaKgzWkh4o0yg0AMFuJD+N+X5n1EBI0nGxy9F/pVbB0Bv7Ew1wuFiiX4X319G98gCYKBCCJYPvhfhWROwou1G4kqsP/XocEZx5ShLara2d7DD8Qr3/0ulMYgkap2WFUIgJ1M5wLAMJTsrTvsY8D0sci7VYF9zrX8shumw6o0tyBdQmnJtHaVIMraCsK8xJObtpzwwQBGDwmouxAnS7TUIrP6KgBYN28T0lnZtWbQEc+nCL5PCn1NzyxSzU/EG+Vq7U3nYoYDp5chZMPmAx1cPUFDZ8QPlzrl/zgihBpw2CPFZ8Bcme8GB5IGDny6ddKWQ6F4uhTGMMc3/7URi7bpgSgy01ovY11dqc9fMBvbK8w0cXf3mPqtb2JOgvEbMGrg4gdFI5PhUvHK9GaEYYvGFonO7fltJAHwr0QrYiKi7VWGTcHCzQO0aTjrZmPR5aoecgQhLeTcEo3p+7Bo+x9zmSkS7psREcgkl9j/n2BDwQMTFbrciyHuDCP05Gd2WZMKDC2HJSPsSjSdb9Z+y45pu0wo3agHt8ssVGzUU+C9SG20syGP+Ray0x/LEXRjMIRu41Z6Q9/RxIqFSogs8TzDR/NRbPUXa67upNUpSTNuggEEti1vusRSdVcBMRH7Ys9CMk=
+
+%URL%
+https://diffoscope.org/
+
+%LICENSE%
+GPL3
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1509921876
+
+%PACKAGER%
+Levente Polyak <anthraxx@archlinux.org>
+
+%DEPENDS%
+python-magic
+python-libarchive-c
+python-setuptools
+python-distro
+python-defusedxml
+
+%OPTDEPENDS%
+acl: access control list utilities support
+binutils: binary utilities support
+binwalk: binwalk support
+bzip2: bzip2 utilities support
+cdrtools: ISO utilities support
+colord: ICC profiles support
+cpio: cpio archive support
+diffutils: diff utilities support
+docx2txt: docx comparing support
+dtc: device tree comparing support
+e2fsprogs: Ext2/3/4 filesystem utilities support
+enjarify: Android dex file support
+imagemagick: ImageMagick identify support
+fpc: Free Pascal utilities support
+java-environment: java utilities support
+libcaca: image compare support
+llvm: LLVM bitcode files support
+odt2txt: odt comparing support
+fontforge: bitmap font utilities support
+gettext: GNU internationalization utilities support
+ghc: haskell utilities support
+giflib: gifbuild utilities support
+gnupg: GNU privacy guard support
+mono: mono support
+openssh: OpenSSH key comparing support
+poppler: PDF utilities support
+r: R language support
+sqlite: SQLite support
+squashfs-tools: squashfs filesystem support
+python-argcomplete: completion support
+python-jsbeautifier: javascript beautifier support
+python-progressbar: show progressbar support
+tcpdump: pcap matching support
+tlsh: fuzzy matching supprt
+unzip: zip utilities support
+gzip: gzip utilities support
+tar: tar utilities support
+vim: Vi IMproved (xxd) utilities support
+xz: XZ and LZMA utilities support
+
+%CHECKDEPENDS%
+python-pytest
+python-jsbeautifier
+acl
+binutils
+bzip2
+cdrtools
+cpio
+diffutils
+e2fsprogs
+enjarify
+imagemagick
+java-environment>=8
+fontforge
+gettext
+ghc
+gnupg
+mono
+mono-tools
+poppler
+sqlite
+squashfs-tools
+tlsh
+unzip
+gzip
+tar
+tcpdump
+vim
+xz
+llvm
+colord
+fpc
+openssh
+odt2txt
+docx2txt
+r
+dtc
+giflib
+python-progressbar
+binwalk
+python-argcomplete
+

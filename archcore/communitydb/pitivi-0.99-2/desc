@@ -1,0 +1,67 @@
+%FILENAME%
+pitivi-0.99-2-x86_64.pkg.tar.xz
+
+%NAME%
+pitivi
+
+%VERSION%
+0.99-2
+
+%DESC%
+Editor for audio/video projects using the GStreamer framework
+
+%CSIZE%
+3495664
+
+%ISIZE%
+9239552
+
+%MD5SUM%
+da9d539472b7e2aa7247ef7c4a81fcf8
+
+%SHA256SUM%
+065380b6ec74aac0185cf7e2fd623f870fb6ad2b13bfd53fe404e2cdf6c05010
+
+%PGPSIG%
+iQEzBAABCAAdFiEEFRnVq6Zb9vwrc8dWek52CV2KUuQFAlogXHcACgkQek52CV2KUuRUygf/VgEwCsvVAHVGgsxlJe1FcDAY00QVQv9x5iGS4TzTqfiVkGnZocgR1OmaXwkpLieJAtet4X9aasgrTL/a2McyKjNA8ek2w2urCL7pIVQymLZdS9/2kGOVxis6lAMcydRrrzFl5r3MkA8tFGxPY4SvpiAb2jmLnvCua2G4BsqsIECL0o2yIgKyG+iav+6dHklAs2TQegK4E9K+fZ20K1Qh3nYOZQXNnQkKMYdzdy2hYhQ5+dQL9pysvXRzv6he9Qvvg4k4EAb5XhYEmebeD/P98XpWaZRMbZALLZ6w5C98XkACxMiQ8iO/ySq/JgxflYZMk/dixqOx+wlhRkOtmH3hCw==
+
+%URL%
+http://www.pitivi.org/
+
+%LICENSE%
+LGPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1512070138
+
+%PACKAGER%
+Antonio Rojas <arojas@archlinux.org>
+
+%DEPENDS%
+gtk3
+gst-editing-services
+gst-plugins-good
+gst-python
+libnotify
+python-gobject
+python-numpy
+python-cairo
+python-matplotlib
+gst-plugins-bad
+python-dbus
+gst-transcoder
+gsound
+
+%OPTDEPENDS%
+frei0r-plugins: additional video effects, clip transformation feature
+gst-libav: additional multimedia codecs
+gst-plugins-ugly: additional multimedia codecs
+
+%MAKEDEPENDS%
+intltool
+itstool
+meson
+

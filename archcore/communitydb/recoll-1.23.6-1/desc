@@ -1,0 +1,70 @@
+%FILENAME%
+recoll-1.23.6-1-x86_64.pkg.tar.xz
+
+%NAME%
+recoll
+
+%VERSION%
+1.23.6-1
+
+%DESC%
+Full text search tool based on Xapian backend
+
+%CSIZE%
+1727052
+
+%ISIZE%
+6326272
+
+%MD5SUM%
+5d0b3532cc004cde8b76501e22a4c04e
+
+%SHA256SUM%
+ca0f7f9f32cba674b0d4ab67f294dff8a378b3d9577c62c3e6f407a85d8f8510
+
+%PGPSIG%
+iQJGBAABCAAwFiEEPlGL8lJv0Zeeiq5JZcEQwepDP8cFAlpTfSwSHGFyY2hAc2VyZ2VqLnBwLnJ1AAoJEGXBEMHqQz/Hcc0P/jLXe/U4V8pn4FPMlxFjCaxwz3Efr752MAqXE6bLwwdvr0zb6NXpF5gDjssVAw9qYHTEXbrPVRN2Ck9n5c5KoohVYdwKbyqNWx2T35ygA0WD/2/VYexeKd9AoJZGJPH1FtMSu/gNDONev9KYwAFlDrZKp2WhziK03ObCJrNe3rB9DPbly8DeOOL6KeH6h0VTO5l7jQdzluLDLsE7XbQCOuzJ1U1PFfGId1KmXqMisjLAVz2puIT8urDGivIFrfh3s0OOwhrLfYbvCMFRy4A0olRQRbzKO2c8e3NVrDG7gCe9hGTp8CjwehuilDqPKrA2syWk+hhlE/gmnM9qN0cycdATWmc2kdkR16Me/jr1MI5cjcxA/G38+DaNmTSi2McosSozvadDeLVQy0fRpzWoBw0Fbix0VVmmRrba8PxslKcSIbWbqgkmIVRKpOu4SNX9KpEalOgIMoB9Ok9IxFUyV46Y1naHufRCCBg0aWcynl0hpjCmH03vfB/67yxJssfyEtm9EPF9sXx9tHHryGgKcAYUmXm1BRELtTaiwiUudtY4vecXkpvW4BLZaqh5HBtH2M6MSP+fCHd1qR+yhlZwhtCjfknZ8G4/UPRzyHXvWlLxqIDtSTnWmUEslSK/tM81hc57T6+ESMfyx4y9Zv9xX7Cm7mQj2WoWuQm09fBt7wGZ
+
+%URL%
+http://www.lesbonscomptes.com/recoll/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1515419663
+
+%PACKAGER%
+Sergej Pupykin <pupykin.s+arch@gmail.com>
+
+%DEPENDS%
+xapian-core>=1.0.15-1
+qt5-base
+openssl
+hicolor-icon-theme
+qt5-webkit
+
+%OPTDEPENDS%
+libxslt: for XML based formats (fb2,etc)
+unzip: for the OpenOffice.org documents
+poppler: for pdf
+pstotext: for postscipt
+antiword: for msword
+catdoc: for ms excel and powerpoint
+unrtf: for RTF
+untex: for dvi support with dvips
+djvulibre: for djvu
+id3lib: for mp3 tags support with id3info
+python2: for using some filters
+mutagen: Audio metadata
+python2-pychm: CHM files
+perl-image-exiftool: EXIF data from raw files
+python-lxml: indexing spreadsheets
+aspell-en: English stemming support
+
+%MAKEDEPENDS%
+python
+

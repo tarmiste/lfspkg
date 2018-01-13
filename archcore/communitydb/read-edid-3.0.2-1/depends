@@ -1,0 +1,6 @@
+%DEPENDS%
+libx86>=0.99
+
+%MAKEDEPENDS%
+cmake
+

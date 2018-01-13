@@ -1,0 +1,75 @@
+%FILENAME%
+kdenlive-17.12.0-1-x86_64.pkg.tar.xz
+
+%NAME%
+kdenlive
+
+%VERSION%
+17.12.0-1
+
+%DESC%
+A non-linear video editor for Linux using the MLT video framework
+
+%GROUPS%
+kde-applications
+kdemultimedia
+
+%CSIZE%
+10250356
+
+%ISIZE%
+62394368
+
+%MD5SUM%
+5221227ae96224f4588528c26ae95758
+
+%SHA256SUM%
+6cad8ea372aef0303b0532dd5689e361f3cdb4e0e7aaebe5ac1de12ec021d671
+
+%PGPSIG%
+iQEzBAABCAAdFiEEFRnVq6Zb9vwrc8dWek52CV2KUuQFAloybMMACgkQek52CV2KUuT1/AgAo1S6nqO1Nm+UWcPE9XhYqLjLBx+VV8+xzcjZScXwmACGXx9Cnytdkg5ptwtTSha+TfKcwkqQdRJcEF6zaFO2hE0iIHU/siDeCkDsI76rqpL7sLtWFted2krD2uLUpe4GV0z2yCKjAFq7r1SXkP+mqP40n0gknFavXfqtDGK2xHW8ICbJWuUfo4eYFhMukLN/0hiaXaDyBGZvKUWQ7Rb+2xygWw7Ba4K7dlDjzpxlaPfHuVOEMiP3V76vnTeJK3CttIu4DTCKNjUQ1aIfSHvoXWzmIlDTsoNVd7518Imcq7bRo0E48CGR3JshIePYMDcvGROudSUuz+Y6taTE8/mWUQ==
+
+%URL%
+https://www.kdenlive.org/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1512942715
+
+%PACKAGER%
+Antonio Rojas <arojas@archlinux.org>
+
+%DEPENDS%
+knewstuff
+knotifyconfig
+kded
+kfilemetadata
+qt5-webkit
+mlt
+glu
+sdl_image
+hicolor-icon-theme
+qt5-quickcontrols
+
+%OPTDEPENDS%
+ffmpeg: for FFmpeg plugin
+cdrtools: for creation of DVD ISO images
+dvdauthor: for creation of DVD
+dvgrab: for firewire capture
+libdv: for webcam capture (if FFmpeg is not installed)
+recordmydesktop: for screen capture
+xine-ui: for DVD preview
+vlc: for DVD preview
+plasma-desktop: theme configuration
+
+%MAKEDEPENDS%
+extra-cmake-modules
+kdoctools
+v4l-utils
+python
+

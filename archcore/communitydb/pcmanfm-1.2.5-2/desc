@@ -1,0 +1,56 @@
+%FILENAME%
+pcmanfm-1.2.5-2-x86_64.pkg.tar.xz
+
+%NAME%
+pcmanfm
+
+%VERSION%
+1.2.5-2
+
+%DESC%
+Extremely fast and lightweight file manager
+
+%GROUPS%
+lxde
+
+%CSIZE%
+265808
+
+%ISIZE%
+1373184
+
+%MD5SUM%
+e09f2308b585dd1ed44594ead7dc641c
+
+%SHA256SUM%
+57cca22d1cfc9e66c97fc0a86d3493aa659b406f1b6a1074868f7b34ab5d57f8
+
+%PGPSIG%
+iQEzBAABCAAdFiEEzgvecadZqH8j8PfYth284QkBwWMFAllGRagACgkQth284QkBwWP5owgAq9XHjbd9UI/5fNX6uCkKaQRs2dB9IETmEGOHAv6sGk5is0dwFc9plkqHE6RXoaodYSdu0sMd2jULPZZ7do/ie2M5cfMD4ISkQUGXoyBwI21iL6md9PcnSMgloTFL6MdUbRNfsEBzDO54/aiUA4GfmbeTdl4FpjZXSDRpm6IcIqrX8excYCFhTnnZfuO8WAymsmYpi4rKvCpn6Isj2sEPN0qGW0htdcVsbfLTEucYCbgac1mdY5Uy4f0jADtPerAoC3uNpaxpsYtALwVTIMEs0LVW/pLjKSyF0Hv7sMNc4cdH6oEA7M/G/z4pp3Kb2/AKSaf7pgiuRAjQziRj/mRP0g==
+
+%URL%
+http://pcmanfm.sourceforge.net/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1497777517
+
+%PACKAGER%
+Balló György <ballogyor+arch@gmail.com>
+
+%DEPENDS%
+libfm-gtk2
+lxmenu-data
+
+%OPTDEPENDS%
+gvfs: for trash support, mounting with udisks and remote filesystems
+xarchiver: archive management
+
+%MAKEDEPENDS%
+intltool
+

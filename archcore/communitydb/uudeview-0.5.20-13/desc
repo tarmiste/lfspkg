@@ -1,0 +1,45 @@
+%FILENAME%
+uudeview-0.5.20-13-x86_64.pkg.tar.xz
+
+%NAME%
+uudeview
+
+%VERSION%
+0.5.20-13
+
+%DESC%
+UUDeview helps transmitting & receiving binary files using mail or newsgroups. Includes library files.
+
+%CSIZE%
+126492
+
+%ISIZE%
+820224
+
+%MD5SUM%
+a6c1cef27cc9afd0b1017b9cb668633b
+
+%SHA256SUM%
+41cd504d80361814f686a43609131f64dcbd45f496e453acf30f72b54c069a4a
+
+%PGPSIG%
+iQJGBAABCAAwFiEEPlGL8lJv0Zeeiq5JZcEQwepDP8cFAlljqL0SHGFyY2hAc2VyZ2VqLnBwLnJ1AAoJEGXBEMHqQz/H+M4QAKWjY+PmGpy/qb+iiFKEGEOme2V4CxvMcYo4G3m31tBrW7+bHNBGy9WYpvrWld8gSfw4uc/aEhfjqRc8Vh4gJXJM03ofraksl/9WjNdRlneS3dC5ENPrabh4RYVV5REsHzWvnTYE/XLK+TwrSrEn4Mtf2FsvMCTXXcNXQP9AVPAuA4hXmxZQM/qeR66PNrp7IXQ33eX4Ol0OMP6SIWln7gG5WG0jvldsM9Xgcn1VVxxZ7KX72A47l3Ulr41QsRW0xcpiIRS/PgIHphm9PtvpAUOKqIOl/ZFr3VXfTIrwU5uxWgQBpZh5Hp9puXc8GO4wp4n3JB/MJhLQ4kwh8ZZWkOq5QP+DQtPyV1Ndz2ULRdfO4YSkthyxq0ZA1lZ3GAdr8bdepMInLeCiUkl0Hu46m22QBlH/bZCHskwTe4OiNeVt8hFNwaQiBjwCBkBOGRFhB28gDKjzBbJ7R+iccglTAqsFisixrL8EbaalkOh9ol9sFjzOuTX0HjhVSg1QJI8QvLVIczGhyer6UNMBOXe6U2YhrMQjliS7Om/kluIg/sisxAUx3GqVcqKZjRphrTBMCzSf1OxMU+F7IUFS6+BYRGxqg6qDQpxQTzCgmur4d1aVPkP4nHTzZcFA5JxhqtgQir6Bj5EmxdWadpDoMNR4a5+5ZuOPnFjA2VNg9wiy2vaE
+
+%URL%
+http://www.fpx.de/fp/Software/UUDeview/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1499703054
+
+%PACKAGER%
+Sergej Pupykin <pupykin.s+arch@gmail.com>
+
+%OPTDEPENDS%
+tk: for GUI
+

@@ -1,0 +1,68 @@
+%FILENAME%
+pycharm-community-edition-2017.3.2-1-x86_64.pkg.tar.xz
+
+%NAME%
+pycharm-community-edition
+
+%VERSION%
+2017.3.2-1
+
+%DESC%
+Python IDE for Professional Developers
+
+%CSIZE%
+119610916
+
+%ISIZE%
+284510208
+
+%MD5SUM%
+aedbf132021ac1bf91205fbb4701f002
+
+%SHA256SUM%
+4e792c329d6936aacef6c3cdac333adfbb4fee0ce5cc8ad50e6419793498bff7
+
+%PGPSIG%
+iQEzBAABCAAdFiEElDfdOBWnqRaePTlGr/XZUJi8b/UFAlpFFDsACgkQr/XZUJi8b/Xk4gf+NYc1Tr0TkUZ7A5ZfK/ZX1EOiWBzrsOYsDKDPbo2lDSKAel8Z3vd/ocw2SL0/gqvjN+tNTfn7M4O7QI6VH2vvXk99qApILMj9AEoOl6pjKiuEOkK0d09Mm6X8glETvXHq4Wu9ZGRlLaJYvURA9YDH0Zu+IGMEiJ1Lin+OAH4xJU+2EivxSvZ5d8XVsb9+UWu36bpZBKuCgiOFrwmSWWsB8n66eWFIMi/NM9tWGGtaflcSbDI6Nt7yFylZUroRoIGGY/vywTYyCtNSXwLJW+QD4byxWtnR7AicRjUovElB5voTq5jAzd+NUN8WCo/207M2kGCKwjWtJymLKoSZIfV+tQ==
+
+%URL%
+http://www.jetbrains.com/pycharm/
+
+%LICENSE%
+Apache
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1514476129
+
+%PACKAGER%
+Maxime Gauduin <alucryd@archlinux.org>
+
+%CONFLICTS%
+pycharm
+pycharm-community
+pycharm-professional
+
+%PROVIDES%
+pycharm
+
+%DEPENDS%
+gcc-libs
+giflib
+glibc
+java-runtime=8
+sh
+ttf-font
+
+%OPTDEPENDS%
+ipython2: IPython integration for Python 2
+ipython: IPython integration for Python 3
+python2: Python 2 support
+python: Python 3 support
+
+%MAKEDEPENDS%
+python2-setuptools
+python-setuptools
+

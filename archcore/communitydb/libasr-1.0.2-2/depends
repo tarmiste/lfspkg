@@ -1,0 +1,7 @@
+%DEPENDS%
+libevent
+openssl
+
+%PROVIDES%
+libasr
+

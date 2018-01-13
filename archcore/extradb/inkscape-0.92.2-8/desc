@@ -1,0 +1,72 @@
+%FILENAME%
+inkscape-0.92.2-8-x86_64.pkg.tar.xz
+
+%NAME%
+inkscape
+
+%VERSION%
+0.92.2-8
+
+%DESC%
+Professional vector graphics editor
+
+%CSIZE%
+20365780
+
+%ISIZE%
+140745728
+
+%MD5SUM%
+553582cea05a53e75536b96f693424c0
+
+%SHA256SUM%
+fbb2bc50066ef2ae611cdfe151cb0bfec3a71ec8e74ddf4fc4c9dc7d1e911721
+
+%PGPSIG%
+iHUEABYIAB0WIQQaYNxEJF0G/vkGI9bu7uLu7i7u7gUCWlQzUAAKCRDu7uLu7i7u7vt5AQDV901N/Ga8D6namH4VhwQwCNfGJzD/i56sd4xYyFim2AD/brFDnxAWyp3O2J4SWITc4OfHA/otVeZEp41GiUPTBgw=
+
+%URL%
+https://inkscape.org/
+
+%LICENSE%
+GPL
+LGPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1515465596
+
+%PACKAGER%
+Gaetan Bisson <bisson@archlinux.org>
+
+%DEPENDS%
+gc
+gsl
+gtkmm
+gtkspell
+libmagick6
+libxslt
+poppler-glib
+popt
+potrace
+ttf-dejavu
+python2
+libcdr
+desktop-file-utils
+hicolor-icon-theme
+
+%OPTDEPENDS%
+gvfs: import clip art
+pstoedit: latex formulas
+python2-scour: optimized SVG output
+texlive-core: latex formulas
+python2-numpy: some extensions
+python2-lxml: some extensions and filters
+
+%MAKEDEPENDS%
+boost
+intltool
+python
+

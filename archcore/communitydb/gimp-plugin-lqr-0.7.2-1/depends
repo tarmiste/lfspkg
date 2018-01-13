@@ -1,0 +1,7 @@
+%DEPENDS%
+gimp
+liblqr
+
+%MAKEDEPENDS%
+intltool
+

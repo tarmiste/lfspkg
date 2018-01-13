@@ -1,0 +1,10 @@
+%DEPENDS%
+glibc
+libsasl
+libevent
+
+%MAKEDEPENDS%
+perl
+memcached
+python-sphinx
+

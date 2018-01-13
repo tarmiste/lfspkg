@@ -1,0 +1,7 @@
+%DEPENDS%
+zlib
+
+%MAKEDEPENDS%
+pkgconfig
+xproto>=7.0.18
+

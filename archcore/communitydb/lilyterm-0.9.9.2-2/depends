@@ -1,0 +1,8 @@
+%DEPENDS%
+vte
+
+%MAKEDEPENDS%
+gettext
+intltool
+pkgconfig>=0.16
+

@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+pkgconfig
+xorg-xcursorgen
+xorg-util-macros
+

@@ -1,0 +1,86 @@
+%FILENAME%
+libmagick-7.0.7.21-1-x86_64.pkg.tar.xz
+
+%NAME%
+libmagick
+
+%BASE%
+imagemagick
+
+%VERSION%
+7.0.7.21-1
+
+%DESC%
+An image viewing/manipulation program (library)
+
+%CSIZE%
+2243696
+
+%ISIZE%
+9491456
+
+%MD5SUM%
+79b04d8767cf345909275ea64d208b4f
+
+%SHA256SUM%
+38871cd3d49e929605e5fd724c4021f06a13f716aadd177b65afc77bb6374684
+
+%PGPSIG%
+iQEzBAABCAAdFiEEFRnVq6Zb9vwrc8dWek52CV2KUuQFAlpR3foACgkQek52CV2KUuT3ggf+N/kQQGXZAYfuEIpSIo27e0VzVqfQaXpLlp30H5fkuPMFrqxkzzw070dRf8pV1Z4xp0bgEhOwoEXr9085M45MILa3Gpw+WmhROQiG14dKvoAVJcIbkHfx+anTJi8H1+zXvICzsf56w26IpUcXf+3Pv1PZHRlGkPgR6jjEwQEguroH/zq3FwEiaA61R5vRklJGSS3LQOKJ7frTfqlOy2bgLicDxz8V5/jPEgpmBsAduuVn/AvL/Fu09sIEi59H3Sr0oSKMC4iyjKCD2qVsHiMrx8oS6+K/RjKOJQ90hgEYdESlxAUuX+Qy1kt6WkVuLpgPPpu4WaVnXadGzBAND6Qw7Q==
+
+%URL%
+https://www.imagemagick.org/
+
+%LICENSE%
+custom
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1515314565
+
+%PACKAGER%
+Antonio Rojas <arojas@archlinux.org>
+
+%DEPENDS%
+libltdl
+lcms2
+fontconfig
+libxext
+liblqr
+libraqm
+libpng
+
+%OPTDEPENDS%
+ghostscript: PS/PDF support
+libraw: DNG support
+librsvg: SVG support
+libwebp: WEBP support
+libwmf: WMF support
+libxml2: Magick Scripting Language
+ocl-icd: OpenCL support
+openexr: OpenEXR support
+openjpeg2: JPEG2000 support
+pango: Text rendering
+
+%MAKEDEPENDS%
+ghostscript
+openexr
+libwmf
+librsvg
+libxml2
+openjpeg2
+libraw
+opencl-headers
+libwebp
+chrpath
+ocl-icd
+glu
+ghostpcl
+ghostxps
+
+%CHECKDEPENDS%
+gsfonts
+ttf-dejavu
+

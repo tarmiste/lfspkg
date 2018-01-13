@@ -1,0 +1,13 @@
+%DEPENDS%
+perl
+diffutils
+gawk
+
+%OPTDEPENDS%
+wdiff: for block diffs
+abi-compliance-checker: for check ABI
+abi-dumper: for check ABI
+
+%MAKEDEPENDS%
+git
+

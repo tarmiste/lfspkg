@@ -1,0 +1,66 @@
+%FILENAME%
+python-pillow-4.3.0-1-x86_64.pkg.tar.xz
+
+%NAME%
+python-pillow
+
+%BASE%
+python-pillow
+
+%VERSION%
+4.3.0-1
+
+%DESC%
+Python Imaging Library (PIL) fork. Python3 version.
+
+%CSIZE%
+504980
+
+%ISIZE%
+1918976
+
+%MD5SUM%
+d2bb74ff6a6464a7f786033ad06330e3
+
+%SHA256SUM%
+40ffb7a064210a549c45af80cd62856038f94e5fcfbdf37bdc285365e94daeff
+
+%PGPSIG%
+iQEzBAABCAAdFiEESMOx8w3dD+Z+UW0WOW4+JbqxQsEFAlnTZlEACgkQOW4+JbqxQsGVQwf9EjWJYWT7xxLsI1usQrJNqaW5LJzKvoN8a1zkh0W5FdNBZHf5IkdNLeuxLGSf6j83aVrJYVEWKPojRVcDeAfBOuXeqmHCzwMVjRvBOP5A/fNcEwYCz13RXj87uL/2BrOKGhngbI42KVMY+Z79X6iepregDyTRsR+1/nYoP59nLe7qnvZDdxeL509JRTrTqU+E9EWXlQC5vyZHL17PIaP5ZcJaCD/+QmPOnGRJIwxnG16eG/5+g5ps1gVOonOx7YmlXifu4WMLb+OdJ39RB2gheJMooXHOmq2itBvv2P/IAJQh8JaSvErU0gsCWLJUS5r6N3G7Uw6eNFUnPE5wHKOliA==
+
+%URL%
+http://python-pillow.github.io/
+
+%LICENSE%
+BSD
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1507027602
+
+%PACKAGER%
+Kyle Keen <keenerd@gmail.com>
+
+%DEPENDS%
+python
+lcms2
+libwebp
+openjpeg2
+python-olefile
+
+%OPTDEPENDS%
+tk: for the ImageTK module
+sane: for the Sane module
+python-pyqt4: for the ImageQt module
+
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+lcms2
+libwebp
+openjpeg2
+tk
+sane
+

@@ -1,0 +1,9 @@
+%DEPENDS%
+glibc
+krb5
+libgssglue
+
+%MAKEDEPENDS%
+pkg-config
+autoconf
+

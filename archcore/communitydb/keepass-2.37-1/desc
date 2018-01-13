@@ -1,0 +1,56 @@
+%FILENAME%
+keepass-2.37-1-any.pkg.tar.xz
+
+%NAME%
+keepass
+
+%VERSION%
+2.37-1
+
+%DESC%
+A easy-to-use password manager for Windows, Linux, Mac OS X and mobile devices.
+
+%CSIZE%
+1333220
+
+%ISIZE%
+3179520
+
+%MD5SUM%
+331c20b0f3dfeae2f5a8e2d3d3e91014
+
+%SHA256SUM%
+85fb6abc2b94ff4dacabe755e67b658e27e0d97a59dc7b814ebc82ba8aaf51b9
+
+%PGPSIG%
+iQIzBAABCAAdFiEE7MrITBugimzI5j+78i+x14p3rqsFAlnfl9YACgkQ8i+x14p3rqvuvxAAsMZZJGjR2ADI5M2fZNdCnn8VAPwtd8xKImZyz7dVcTmEHE294ZzOyVyD8sbSueE0Dyg5iuFOUfwB/LnRAb3QDjXjGyeEIIXa2jWzWSyeKg7lG47suYnOR7WQYJ38uScQOKOr3eQx/N8zjKbOHq+sgkCLsaqIKo1KZN7+GFyTl/cZrlJNnWLLNFhdTFlbUx6eYCXTmQDF3/WQKx64J60FTTg7QRMvaaEyvQuOgwxadO+oKjd1I4kFpQ2sPQZ6ZOVB7aoVM0ONUnytSuHoMMjzEPzGYOlFoR+HRfyfz2mY1WMuiNgqQK7NxC9sZZjRloWjTvOAcY0a42Hg4W687m4d6inVHWkMBOKbtChVgwTazMNR76j4jQ8mPttfnS84+Yl00BqFlvOupXCvdexYg2o4I6FkbndnR3uPK567t5EJzHwpA4OfIJvANXdZgKroYgSo/o44Ia2cVehE6+eF7tKWV2UqZ0rQadJNG/C/yutB7yC6NvQMtmU2vpG5PL7vXcWpSd0AlWoglAPtboEIQKN5Fei0t7xmn7azzXhfxqdERIjaI0TVW9c+64NaS9CBBUCcICG3VNqdXp27HsSUTrRmganpGn6kfeYXM1iVZhJM4CBbNTVRBDP4MmJH0tAe0PeB3PR88bmjo2TorTW5eAdo12QUBa25X1VxpTzg80Ujx2o=
+
+%URL%
+http://keepass.info/
+
+%LICENSE%
+GPL
+
+%ARCH%
+any
+
+%BUILDDATE%
+1507825107
+
+%PACKAGER%
+Giancarlo Razzolini <grazzolini@archlinux.org>
+
+%DEPENDS%
+mono
+desktop-file-utils
+xdg-utils
+shared-mime-info
+gtk-update-icon-cache
+
+%OPTDEPENDS%
+xdotool: if you want to use auto-type
+xsel: clipboard operations in order to work around Mono clipboard bugs
+
+%MAKEDEPENDS%
+icoutils
+

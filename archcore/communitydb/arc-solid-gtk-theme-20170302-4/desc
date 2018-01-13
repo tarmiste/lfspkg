@@ -1,0 +1,56 @@
+%FILENAME%
+arc-solid-gtk-theme-20170302-4-any.pkg.tar.xz
+
+%NAME%
+arc-solid-gtk-theme
+
+%BASE%
+arc-gtk-theme
+
+%VERSION%
+20170302-4
+
+%DESC%
+A flat theme for GTK 3, GTK 2 and Gnome-Shell (without transparency)
+
+%CSIZE%
+351320
+
+%ISIZE%
+4158464
+
+%MD5SUM%
+4d454342feb59707f20e6349dc1a6b19
+
+%SHA256SUM%
+5765d3430b61f15e5aa2005bf319370446ac4b747d2351ee52f06bc94a5c177a
+
+%PGPSIG%
+iQEzBAABCgAdFiEEado014/g79WWrG0EnYk+xNqvkSkFAllct5oACgkQnYk+xNqvkSl5+wf/c4A5WMo4ZsVklFl9vxU0Y+oMquSYhxvZT1jQ/A8cjwjUE79+BcETYfcXLelcQpEFpmj4gpG6/3Gc3BX5to7M7vUEAtEgvLr8XrAOACeHEU4nQGUCr81gdHvDkOMN5r/ZZa/jW8SrRb7bH1iOxT57TVPqa4oh49BBvwxQHaZgiE05wXUXF8n6NUkcdHq1L2rONcoC8QE9HL228GNj4u5QrJUTmslNEh+hOhmevBLQXonCFhoUZLRxQYIMgvjdIpqQB7wvJ06cVxMfz1oq8ZNKPby7txKMOKe/RS+fFSt1PWAv1FQEO1xBj2p5VYnh8cZf5r9cmxwBDf1LD9u48D9V/Q==
+
+%URL%
+https://github.com/horst3180/arc-theme
+
+%LICENSE%
+GPL3
+
+%ARCH%
+any
+
+%BUILDDATE%
+1499248452
+
+%PACKAGER%
+Bruno Pagani <archange@archlinux.org>
+
+%REPLACES%
+gtk-theme-arc-solid
+
+%OPTDEPENDS%
+arc-icon-theme: recommended icon theme
+gtk-engine-murrine: for gtk2 themes
+gnome-themes-standard: for gtk2 themes
+
+%MAKEDEPENDS%
+gtk3
+

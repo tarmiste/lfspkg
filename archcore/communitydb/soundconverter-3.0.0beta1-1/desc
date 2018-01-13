@@ -1,0 +1,58 @@
+%FILENAME%
+soundconverter-3.0.0beta1-1-any.pkg.tar.xz
+
+%NAME%
+soundconverter
+
+%VERSION%
+3.0.0beta1-1
+
+%DESC%
+A simple sound converter application for GNOME
+
+%CSIZE%
+139428
+
+%ISIZE%
+832512
+
+%MD5SUM%
+9d8d3fc1589bf01f5fe644342c127df6
+
+%SHA256SUM%
+35b3fd34a0bf9f3e6b2e2c5aaf3f1db84c46c5f0d8902a05145c2b6f1b192532
+
+%PGPSIG%
+iQEzBAABCAAdFiEEzgvecadZqH8j8PfYth284QkBwWMFAllJX3kACgkQth284QkBwWOGWAgAieqfBmPHoKPRaO2mgMoEPfIQGmC0pjUi9/BaZKkeLVO2FVdizJqSbm5EVv4yO0rzVMAELPtL8Mvx7iOoV/4kB1o85bb99lFXLl8+tzTVzxOXTr83XX9a0Mr9XMtaSoJtSKoZ2WstL7JGf/jGml/KIZpCsxi1pbO/kqY2sp6XpbEmFTyUopGgIdfsaVYkWLiVlscNP/FZcmXywlrw9x+9CEBdmCxSP+ACX5fqJNnxTOp3G/phd5S6sa7zgclUWX5m95uXOnFCInoags1mCte8C2GZEPKZ8g308BaC1RKcKmcfdKrVQDV2ZeMEopZ5Ms7ZAWE0Li+TQFh0MawKO5QFkQ==
+
+%URL%
+http://soundconverter.org/
+
+%LICENSE%
+GPL3
+
+%ARCH%
+any
+
+%BUILDDATE%
+1497980772
+
+%PACKAGER%
+Balló György <ballogyor+arch@gmail.com>
+
+%DEPENDS%
+gconf
+gst-plugins-base
+gst-plugins-good
+gtk3
+libnotify
+python-gobject
+
+%OPTDEPENDS%
+gst-plugins-ugly: Extra media codecs
+gst-plugins-bad: Extra media codecs
+gst-libav: Extra media codecs
+
+%MAKEDEPENDS%
+intltool
+

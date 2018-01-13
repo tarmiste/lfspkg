@@ -1,0 +1,52 @@
+%FILENAME%
+jedit-5.4.0-5-any.pkg.tar.xz
+
+%NAME%
+jedit
+
+%VERSION%
+5.4.0-5
+
+%DESC%
+Editor for programmers
+
+%CSIZE%
+3067100
+
+%ISIZE%
+30560256
+
+%MD5SUM%
+2dc42471e53fe765ac9ed368dc85d086
+
+%SHA256SUM%
+333d53b0273c77c4456518193d459f3e5bca9f65e32820fdb23f31e5b3624dd4
+
+%PGPSIG%
+iQEzBAABCAAdFiEElihV8HLHoBhGQFhk/PPIy1z5yNQFAlnSEqAACgkQ/PPIy1z5yNTD6gf/auaMhbUAdrDw0Cld1R5c07vjRe7Rdb6gTT+KLZs7FD8W1xFZf8Ea77zfERK+ef3M70mAYwcW+lo/75LZDoAmOaAYorXQO2UywVRBNIsLGTY9Ukm1g2E+RW+U9wGRTGO9URLVCyuf55EvGTvV64jtRIumK3I8Ih4vwH27JrxbzVlsMFOlHvC/WObjyhhVsM828kKN1xp5cwBqOfk5FgVKxjacb9wel8sG0WuhGjlJCt+UA9K1MC9kLO9ft/2mexG+EOrM08EqovCRvKIEABvjxjwmB9R7tLd1x3ZSW9y1BHOmR7H4sbnrXUpLD39h9II/3cqJ3hEwwFjfSaJNRYozMQ==
+
+%URL%
+http://jedit.org/
+
+%LICENSE%
+GPL
+
+%ARCH%
+any
+
+%BUILDDATE%
+1506939486
+
+%PACKAGER%
+Alexander Rødseth <rodseth@gmail.com>
+
+%DEPENDS%
+java-runtime>=8
+
+%OPTDEPENDS%
+java-environment: for java development
+noto-fonts: usable font
+
+%MAKEDEPENDS%
+gendesk
+

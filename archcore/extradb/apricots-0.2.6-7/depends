@@ -1,0 +1,6 @@
+%DEPENDS%
+gcc-libs
+openal
+sdl
+freealut
+

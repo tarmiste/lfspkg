@@ -1,0 +1,58 @@
+%FILENAME%
+cgit-1.1-3-x86_64.pkg.tar.xz
+
+%NAME%
+cgit
+
+%VERSION%
+1.1-3
+
+%DESC%
+A web interface for git written in plain C
+
+%CSIZE%
+508396
+
+%ISIZE%
+1201152
+
+%MD5SUM%
+3a6cac32998861da8d8bc86400c608b5
+
+%SHA256SUM%
+5149f6462a55c48028ba24f3aee4c1e26cb2db40b121eefae8c94ee5fec61a1e
+
+%PGPSIG%
+iQIzBAABCAAdFiEELjbYYgIhSC/EXLfyqRdkdZMmtEAFAll5bgAACgkQqRdkdZMmtEAI3BAAsAiBATO8Nu9y8UYytW1yKobioWK3YgL6mP3iRt4/s/pPjGSVKYWXdEpsa279SjrdnAeWU2F/2vMwTdZvx4Hh+Gy0EfVJw81a81ZfkLO09HEky6NXaDKpeYVAwfKG2aCP1hOekn2kkzt9BQK7IK8Zr9ZoUiHL0lwIMZB4zfsARmVjjhflaW5MA7OmcVZ6F50NZnFDIFdJqz4J4QJjwMpZTFq4jeWX1I2/SR8YmmXEjGGZ5bqm1xgwcUnYsx/4GgRIivNIsYhYwPtM49MTHMtAd8KEPuh57KS6AUq/ClEwD1uFGL5jv6xSh2nwncmeuAHCvq13Wf4rL/8wEKjRk0K2GOrj8bjN7RrXp0k5JEb7vDKAgOffWte1yOtMJXM6g9QgG2r0Y4S4Bfu1OkRKfrw/drLALzx2rYAo8996/6J1U52V/mNa8OipS0ZBMwngLbVnLqVnD5ezEL4B/jYmeG7GIHhz0bBxOi2gmNK+MCq1Z3chpM4gQcea6B1Cq+6IqTXnShtPD0OmFFpXbRf5oLEg0MuYthCARCSMwntj9h5uHYZP09s67Pdo9J/ezG8tEBPXwSJavZQ4TWFI71H0lQaScODpeXooteX2vcPePUKMa8Q2TRgu7fImK/h/0pQmm8LwE88PxJPtAlcuTO2wpOJE5yxu4AqMRAdDV9+7Qh1zRmA=
+
+%URL%
+http://git.zx2c4.com/cgit/
+
+%LICENSE%
+GPL2
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1501130214
+
+%PACKAGER%
+Lukas Fleischer <lfleischer@archlinux.org>
+
+%DEPENDS%
+openssl
+luajit
+
+%OPTDEPENDS%
+groff: about page using man page syntax
+python-pygments: syntax highlighting support
+python-docutils: about page formatted with reStructuredText
+python-markdown: about page formatted with markdown
+mime-types: serve file with correct content-type header
+
+%MAKEDEPENDS%
+zlib
+curl
+asciidoc
+

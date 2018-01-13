@@ -1,0 +1,66 @@
+%FILENAME%
+python2-pyperclip-1.6.0-1-any.pkg.tar.xz
+
+%NAME%
+python2-pyperclip
+
+%BASE%
+python-pyperclip
+
+%VERSION%
+1.6.0-1
+
+%DESC%
+A cross-platform clipboard module for Python
+
+%CSIZE%
+15236
+
+%ISIZE%
+65536
+
+%MD5SUM%
+1f4dad6bf5dbdf1174ea2f6a59d66b3c
+
+%SHA256SUM%
+fbefb92b3c20eac6f5098b54534d569271ecac7647a562d18a7edec2f8cf544d
+
+%PGPSIG%
+iQIzBAABCAAdFiEEtZcfLFwQqaCMYAMPeGxj8zDXy5IFAloOHlgACgkQeGxj8zDXy5Lzmg//ZmYWLPOmmRNjmgqzwO9L2bUiZZlgL45ORyYJOAq+TzQQCyKRUhWp7eic2+aYHqDPf3oEmGQetBxqKldSppV9W8v5cpTR+TbAEtXoWOjRcMYfRcxBByl0caOxki8ykCm4+d2dQR73eDzpHFazSV3GbN2S0cQq5B3MWZacagpjVacaPfcNi9vCkT46aVJj95mB6xbaKgvnWLAvC5f4Ip88ypSZNxH/0PFwjsfqWI+Guf8cgn+V92jLhf44KcXpwVI7JJGPG6EpSI6CnmjtQB4m8QUwdAQ0gSJDnPEL3ndvTrHIS2L6X49tsobDnQ6qAVZY9e1ZCF2nDrK+UEv486+zhmA7PfsxykNmm98yCSgMPF06nfMz++6uw+4HqpJHNE8jMP3HXGeTrUsjBcyLD2Z40zOF4VS8/Lz7uKD48t8Hjc9nlPlOhFYgL+qfpJV6N9eoHt5rrgqPWcfEwxUGXVUwht+3d0pTFkxdbHM/y21zqB3a+SMUXmJmOKLrn0oMAKGTHIKvPGrUDQq/QSkKjUFVebmBe8iuIFqnVuxE4LvavaUVt790GK1cT0JCoCGGmqCesZ8fp9xrzbG3t7RDmW4X7yAJktaqVz3Ktl+Oseka1lxSfj7zYnGdKIqNOQjfGcRpj3HpSlbUJx7vGVbRaRssFQA8MPrvTGG/3cTbLDlgsS4=
+
+%URL%
+https://github.com/asweigart/pyperclip
+
+%LICENSE%
+BSD
+
+%ARCH%
+any
+
+%BUILDDATE%
+1510874690
+
+%PACKAGER%
+Felix Yan <felixonmars@archlinux.org>
+
+%DEPENDS%
+python2
+
+%OPTDEPENDS%
+xclip: xclip backend
+xsel: xsel backend
+python2-pyqt4: qt backend
+plasma-workspace: klipper backend
+pygtk: gtk backend
+
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+
+%CHECKDEPENDS%
+xorg-server-xvfb
+python-pytest
+python2-pytest
+xsel
+xclip
+

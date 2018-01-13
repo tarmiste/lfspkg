@@ -1,0 +1,7 @@
+%DEPENDS%
+fftw
+ladspa
+
+%MAKEDEPENDS%
+libxml2
+

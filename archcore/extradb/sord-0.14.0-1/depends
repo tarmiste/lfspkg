@@ -1,0 +1,7 @@
+%DEPENDS%
+serd>=0.22.0
+pcre
+
+%MAKEDEPENDS%
+python2
+

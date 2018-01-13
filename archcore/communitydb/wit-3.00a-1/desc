@@ -1,0 +1,53 @@
+%FILENAME%
+wit-3.00a-1-x86_64.pkg.tar.xz
+
+%NAME%
+wit
+
+%VERSION%
+3.00a-1
+
+%DESC%
+Wiimms ISO Tools
+
+%CSIZE%
+990036
+
+%ISIZE%
+10295296
+
+%MD5SUM%
+7ff0eaee3ef247b0f12e144724831503
+
+%SHA256SUM%
+ae2efe633cd973457e852b7eedaa38c561e1be7b2190ea12cb2c6753bb51f6bb
+
+%PGPSIG%
+iQEzBAABCAAdFiEElDfdOBWnqRaePTlGr/XZUJi8b/UFAlndC+4ACgkQr/XZUJi8b/XSiAf/ZHtw7dgeACH6aNv8Vke05HE78aDqdg3XNX3YYlErzRponm6XBf1jBqMINDyalOdkqf7csEWFJYXLp79qnz7r0zcbKTG/xaOLsaW8S9IEpYG5XfwuEEmDHP2A5Ty78LkT9AEfDPQogAwSrpbZXXt6fettl8X4Z/SeRb/m3WXrnrQ+IWM6qRjM4HpB4aw/O2fXSQSNA1kB8I1g27oEaTYaRYV1bcw6Q9DgOqqOkptegfWx/eYFnvzMx7XngH57kjE42jrjEG+s4ATFVtZ6x6qntyMCpHeA3AY08hFyib4aVxt841v4dmi7V5G/9O8+/n75wHpyyz86DnSx1ucmxQHr0g==
+
+%URL%
+http://wit.wiimm.de
+
+%LICENSE%
+GPL2
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1507658696
+
+%PACKAGER%
+Maxime Gauduin <alucryd@archlinux.org>
+
+%DEPENDS%
+fuse2
+zlib
+
+%OPTDEPENDS%
+bash: Update titles lists
+wget: Update titles lists
+
+%MAKEDEPENDS%
+subversion
+

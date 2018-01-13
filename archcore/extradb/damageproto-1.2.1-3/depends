@@ -1,0 +1,7 @@
+%DEPENDS%
+xproto
+fixesproto
+
+%MAKEDEPENDS%
+xorg-util-macros
+

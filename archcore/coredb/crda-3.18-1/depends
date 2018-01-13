@@ -1,0 +1,10 @@
+%DEPENDS%
+wireless-regdb
+libnl
+libgcrypt
+systemd
+iw
+
+%MAKEDEPENDS%
+python2-m2crypto
+

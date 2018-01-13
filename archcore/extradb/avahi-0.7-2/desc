@@ -1,0 +1,76 @@
+%FILENAME%
+avahi-0.7-2-x86_64.pkg.tar.xz
+
+%NAME%
+avahi
+
+%VERSION%
+0.7-2
+
+%DESC%
+Service Discovery for Linux using mDNS/DNS-SD -- compatible with Bonjour
+
+%CSIZE%
+429852
+
+%ISIZE%
+1952768
+
+%MD5SUM%
+f8db69db1484b97257d9a9ca4b14bbdc
+
+%SHA256SUM%
+625edf82d639d199ec89adc1298e979f3fc7c4b12598a5f9ab1cc12b369f07f0
+
+%PGPSIG%
+iQEzBAABCAAdFiEEghj4iEmqxSLpTPRwpekojE+kFfoFAlo0gs8ACgkQpekojE+kFfq1MQf9EmZHcogm5R9d2R2aC80tCNE8JM/ER+kMEluO887oZGRRufjRSOiYfo+QXouKa8u8e9nQwFdZwsekQHKsp+pBqmNL1p+kYX+xk7w12O8RKGqRqhf7Opgr2yAyWKT+TByvV+VEwA/fGP4SE0IvoIzCxmZbLL2G2bfZ6vaGzhaHSW5DcziXsD621U2iwCAURLquoyzUlaIHmw5Ltb5vQHVs37ZqZo91C5+4bEl+IATF7qOLBBxFJVek3nlCrRzZUm/+Y0z1E10hAqPfpmflxjqwxDa1+EUW/idIOfKSlo97MJz/o/8AHHdN1OnLJJbaGvkbLa/qOZAkgermB/1X1Ia2uw==
+
+%URL%
+https://github.com/lathiat/avahi
+
+%LICENSE%
+LGPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1513390670
+
+%PACKAGER%
+Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+
+%DEPENDS%
+expat
+libdaemon
+glib2
+libcap
+gdbm
+dbus
+
+%OPTDEPENDS%
+gtk3: avahi-discover, avahi-discover-standalone, bshell, bssh, bvnc
+gtk2: gtk2 bindings
+qt4: qt4 bindings
+pygtk: avahi-bookmarks
+python2-twisted: avahi-bookmarks
+mono: mono bindings
+nss-mdns: NSS support for mDNS
+python-gobject: avahi-discover
+python-dbus: avahi-discover
+
+%MAKEDEPENDS%
+git
+qt4
+pygtk
+mono
+intltool
+gtk-sharp-2
+gobject-introspection
+gtk3
+xmltoman
+python-dbus
+python-gobject
+doxygen
+graphviz
+

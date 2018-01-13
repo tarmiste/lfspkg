@@ -1,0 +1,45 @@
+%FILENAME%
+hyphen-it-20071127-4-any.pkg.tar.xz
+
+%NAME%
+hyphen-it
+
+%VERSION%
+20071127-4
+
+%DESC%
+Italian hyphenation rules
+
+%CSIZE%
+3148
+
+%ISIZE%
+3072
+
+%MD5SUM%
+d5389450542decf18556d7c33c918606
+
+%SHA256SUM%
+39b23cf2f51540dfcd7f79fad406c738e8134235165e4ff94f325fbc1d2d71aa
+
+%PGPSIG%
+iQEzBAABCAAdFiEE82kWh9hnuBtRzgfZu+Q3cUhzKKkFAloNVu0ACgkQu+Q3cUhzKKmJWAgArFJznnPMLv8HD1ER7sSSUYgJQ18ClNLn2lRVnkuRbTouQhItUbrxMnj1g/yhk56skOe/lDfldGVpYMJzr6jMpxSxQ+gbrf/JaqdX13jlZJHuzlYWqIk7+5ip7M37O7R7/ZLJL6wquCQMG7EHQ6v9yA6xh8q0DHoVrFAuffrNgj4Z4SnjJPDoMPMbZQNWeYxuAdemieyDZscwmf0Azq4YthTesdTHITWIGS5xj/i1FSIiJkXFxtttLeWfAkPhOfxL8qRjtVC3HOmtvFgYdyV6YstAZODaTKopJt8ZZv8C/BFtZ3LnSvc20kwOWcePFNXVXaMXJCmFHa1/EOMQSotRXg==
+
+%URL%
+http://wiki.services.openoffice.org/wiki/Dictionaries
+
+%LICENSE%
+LGPL
+
+%ARCH%
+any
+
+%BUILDDATE%
+1510823504
+
+%PACKAGER%
+Bartłomiej Piotrowski <bpiotrowski@archlinux.org>
+
+%OPTDEPENDS%
+hyphen: offers hyphenation library functions
+

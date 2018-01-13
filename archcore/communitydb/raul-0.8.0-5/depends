@@ -1,0 +1,7 @@
+%DEPENDS%
+glib2
+
+%MAKEDEPENDS%
+boost
+python2
+

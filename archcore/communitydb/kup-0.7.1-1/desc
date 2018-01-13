@@ -1,0 +1,56 @@
+%FILENAME%
+kup-0.7.1-1-x86_64.pkg.tar.xz
+
+%NAME%
+kup
+
+%VERSION%
+0.7.1-1
+
+%DESC%
+A KDE bup backup software for helping people to keep up-to-date backups
+
+%CSIZE%
+565004
+
+%ISIZE%
+2009088
+
+%MD5SUM%
+da10ff6ad5f1124b2da7c0d57b9127f7
+
+%SHA256SUM%
+126851b31647f447dd8302bb2ec0f2a6b89218bd14fcd0a15e028ca5ab99ae8c
+
+%PGPSIG%
+iQEzBAABCAAdFiEEFRnVq6Zb9vwrc8dWek52CV2KUuQFAlpPfm8ACgkQek52CV2KUuRb9Af8DsWexV0R0Kv23qM+/WzA/R+5iEpBrSACh20Hgo2RJBLZRN1vS9LQzMNPuZcC3MelWZbgFZSW9s/jdRKa8myIEWhXud45qqgHCnJ0m03H3HrfbBTDyHoEdb5sGV/lQAfsQsCst4huF0qgCBak9/4PUXKYP2G4OlbXfUmIp4rRj9yIMLjG6UjL525Osa/JKrdxkHL8TGV9yOm5qaAWRReVNUhrIMn8QvVKXL/YhgG3OyRblftXJQhKr+H8/JchlTnsSSm88iUr+fAtgG3USBrUsHh4+3YGabZFQH02kiJHmSLMC5GM64plC/lMVrYMysJJE1ZzXF2flPM7JMvgolr94Q==
+
+%URL%
+https://www.linux-apps.com/p/1127689/
+
+%LICENSE%
+GPL2
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1515159098
+
+%PACKAGER%
+Antonio Rojas <arojas@archlinux.org>
+
+%DEPENDS%
+kidletime
+kinit
+hicolor-icon-theme
+
+%OPTDEPENDS%
+bup: support for incremental backups
+rsync: support for synced backups
+
+%MAKEDEPENDS%
+extra-cmake-modules
+python
+plasma-framework
+

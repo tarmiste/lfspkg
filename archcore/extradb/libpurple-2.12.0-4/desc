@@ -1,0 +1,77 @@
+%FILENAME%
+libpurple-2.12.0-4-x86_64.pkg.tar.xz
+
+%NAME%
+libpurple
+
+%BASE%
+pidgin
+
+%VERSION%
+2.12.0-4
+
+%DESC%
+IM library extracted from Pidgin
+
+%CSIZE%
+5331172
+
+%ISIZE%
+32503808
+
+%MD5SUM%
+6f74f0992cb85a4071bd87a4fc388e58
+
+%SHA256SUM%
+249c703f09235d53def40ac509bb9cf9d0db433a5081abfdda0fa929011fd23f
+
+%PGPSIG%
+iQIzBAABCAAdFiEEtZcfLFwQqaCMYAMPeGxj8zDXy5IFAlmhixUACgkQeGxj8zDXy5JHyw/9ETCzuy4sHsThWiXRTzNFE+ph/c7AHognVjy8XBM4+gpLr4jDXzRQUNTakLbecp09Dkwos39M+8d75qK4aOPJovDeFOXMhBxTZZ3tOLXrRlat5Qstx7KC25nHz998NxO0Hyvu+UqUWsBSKwUxGOMLha52GC2KmCsozbq4if9TvTo5+ua0vvBGM+wa7s4ec1wcEpoCYO+vwnnBl8w6ePIiGa7iuJkbq6eoQboPPY73DCI89JkNpFIvEFeXmdhvN6V2oBqc3l27sKeekdI6WqYETD+K4zmp2vMxzpEJG+jo2cixlVvIUzoSIacxrRu8+cy3P1Qe+Ayssg73pRutIEHb34mKN6qliC8bmLcN68uzZMcNsXlS3iYfjz2v2G8OUebVFTipRAPxfPUoqZq4m9M9VsE0Q92UMjcKe/7AG/t269QcMmj1C2EuzwOYijITsR1LhJnZ3vtX1D+/J9tgRldm4MQzlyQuauZNmXLfXZpXfM3wSXFJkYHMfM4vO8vYwm/B8XE0vRf0CJYgQjEFpu7C40GSa02KOC6ZBtR1Sa50kUHE7jLUc+HcJk0MuxAZkcRJIohm7TTTUwb7oy6T1LZiWp5BpjSmPbWiFw5lB7/APsmuf9K67dEzv9BWkwVa4bHJtgHFUtg1WXsT5eivmlCTw5SZ3ln+WZWg2CEDQ0OZUS8=
+
+%URL%
+http://pidgin.im/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1503759070
+
+%PACKAGER%
+Felix Yan <felixonmars@archlinux.org>
+
+%DEPENDS%
+farstream
+libsasl
+libidn
+libgadu
+dbus-glib
+nss
+
+%OPTDEPENDS%
+avahi: Bonjour protocol support
+ca-certificates: SSL CA certificates
+python-dbus: for purple-remote and purple-url-handler
+tk: Tcl/Tk scripting support
+
+%MAKEDEPENDS%
+startup-notification
+gtkspell
+libxss
+nss
+libsasl
+libsm
+libidn
+libgadu
+python
+hicolor-icon-theme
+farstream
+avahi
+tk
+ca-certificates
+intltool
+networkmanager
+

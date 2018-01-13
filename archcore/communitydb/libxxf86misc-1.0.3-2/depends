@@ -1,0 +1,7 @@
+%DEPENDS%
+libxext
+xf86miscproto
+
+%MAKEDEPENDS%
+xorg-util-macros
+

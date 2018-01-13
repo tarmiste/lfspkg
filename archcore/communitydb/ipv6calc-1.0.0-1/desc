@@ -1,0 +1,54 @@
+%FILENAME%
+ipv6calc-1.0.0-1-x86_64.pkg.tar.xz
+
+%NAME%
+ipv6calc
+
+%VERSION%
+1.0.0-1
+
+%DESC%
+Small utility to manipulate, convert and calculate (more than) IPv6 addresses
+
+%CSIZE%
+821556
+
+%ISIZE%
+4048896
+
+%MD5SUM%
+bba20f99d1858fd7452adae0ca71c7d0
+
+%SHA256SUM%
+1b9d255606bc6b74638ec60cbc5ffe9f804ecf43329e15b600185d52afbd582e
+
+%PGPSIG%
+iQIzBAABCAAdFiEEjVflzZuxNlVFbt5QvgHsIqBOLkYFAllZBqcACgkQvgHsIqBOLkYQXBAAiBMfWz4x6fl0jbnDqRkGiB921RuV3fmdpOzt5rUFM7vg8Jo7OL/8e+hnaraLM4SAD0cxitBSqM+NzSFALL4kt1gO+WNWFmpsV/tpdGgv2LpdFSmghfBxRJC3Q+R4Uano0g2t1AXnuD5ZVecFnSPTjmnU6H7EHdS1UVzt3932gu+ILpPhXQ+3VpWvHUk9NHk++a40+PbPVu/dUBp9lEfUBz+W3AAYjekdqccdwjDX74otcZRNg+p4jcr7xUx3mRuDsHbrwcIN3gZmhVglacW1z5oBHH53P4sF6j89il+fX5KfnMBV5PIBBOCyKEeCIo3LjfTMWb1rO7Po6IW+KuQ0ltBiV+HbCtZFU6ZdLArQZqkCbZE/CzDGiqkmFYDflZIHhxdVj3qfbsXf8VXpk0ewaUmfjMfA6/1sbmavg7hz4gcODjHFsCZJc5VDJ36n5gxdFf/hyq+gq2cLahMQ5fTCjScleHA4Dzt9d7qNcwNxEuREtJq7jD478Vn58GJ3j4kKEfuUYWPuuLKlWiHuuVM6D0BpvsAqSae3w4dCVHRXZ9PwHz+AAR/xXeWPzoFXrz8lDiKUA4Lybwg2YJGRU8HIhAh4vc89VSlhM4jQf8KA60Pr9o6QiOHu/k5rurhf5NBqPtZk4wm9i4c5wh9Xt1SN5zpQlETrdR6gPXAR7shvm8Y=
+
+%URL%
+https://www.deepspace6.net/projects/ipv6calc.html
+
+%LICENSE%
+GPL2
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1499006401
+
+%PACKAGER%
+Baptiste Jonglez <archlinux@bitsofnetworks.org>
+
+%OPTDEPENDS%
+geoip: for country GeoIP support
+geoip-database-extra: for city-level GeoIP support
+
+%MAKEDEPENDS%
+geoip
+
+%CHECKDEPENDS%
+perl-digest-sha1
+perl-uri
+perl-html-parser
+

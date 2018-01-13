@@ -1,0 +1,8 @@
+%DEPENDS%
+java-runtime-headless
+
+%MAKEDEPENDS%
+apache-ant
+java-activation-gnu
+java-inetlib
+

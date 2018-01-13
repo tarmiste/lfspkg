@@ -1,0 +1,10 @@
+%DEPENDS%
+glibc
+
+%OPTDEPENDS%
+libdvdcss: for decoding encrypted DVDs
+
+%MAKEDEPENDS%
+libdvdcss
+git
+

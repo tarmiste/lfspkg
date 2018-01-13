@@ -1,0 +1,50 @@
+%FILENAME%
+nzbget-19.1-1-x86_64.pkg.tar.xz
+
+%NAME%
+nzbget
+
+%VERSION%
+19.1-1
+
+%DESC%
+Download from Usenet using .nzb files
+
+%CSIZE%
+948604
+
+%ISIZE%
+3569664
+
+%MD5SUM%
+9dce18ca933512ef442016fd01f10423
+
+%SHA256SUM%
+c237789df6a24af959777f94c472b656d2824eb9e5ee90e24437c5b3525a888a
+
+%PGPSIG%
+iQIzBAABCgAdFiEEOO3RiGdWkk4SJOSVJOTNsAE8JYAFAllpM1UACgkQJOTNsAE8JYCDZQ//Qg3zwiQpHkzx5svrIBCP+LoJBfZBFYQNRlWUSqa5H0YsnJhOigtPv4l70+9g9WOjcMCvc5K6FCO/6ycXg5VVK3+zLVZFi/xMX3o6TukqsFvqQz1iRGLR80syoiT6FOY/H7DEj9wiHSzIDYeYML95T80GVgrlxI7xg6HriNeQdHUC2/7yY94oyzQrrjddL7pOaxI0HOs4Z4MIAvJuMLA1XxKQIQujvF/TixmaSIX8H5MbR/IKtwmgzQlTxO2yZqJ3Orq9WOFDjbhsuEM16zncrKDtz3yCqCy05S/Xm6OkLN7NzYasxwHbXtE4HGLT+VKSn+Fd//qBfT7NdxvBp0iR9TFNr7l/Hl846VdAhoNjK6+aqYzpmEpZDyQ4tk2lhY481RO+bKzLhMYYX7YFmhrYx+QIs2qHmnV0P5CdQlzQ1s/fvAIvPAQcWUHykM8d+SBJb3VRe3iE3jXlxvMKwazutkuvPSz1YzyYXqmIY5uqPxGIkWjq9OmwYyJ6E+r54mQh74FbziayUtlYSFN9ijZv+NlXtoS5Bq04R/5UkUJFy7ljT8GIxqFHly4OVmoRV72JrRDCoGpsZokanBDdrmpVUQ5Ka0GIUFj1Xoc5G+iKNQ6JmizWFkLsR7fqk3VUAN4HuAP6L/EN8dhSOFVuNIXdDTaYS+CNPdWFxIfKYWBWYFQ=
+
+%URL%
+http://nzbget.net/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1500066390
+
+%PACKAGER%
+Jaroslav Lichtblau <svetlemodry@archlinux.org>
+
+%DEPENDS%
+libxml2
+
+%OPTDEPENDS%
+python: to run included scripts
+unrar: unpacking archives
+p7zip: unpacking archives
+

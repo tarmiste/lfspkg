@@ -1,0 +1,14 @@
+%DEPENDS%
+lua51
+expat
+
+%CONFLICTS%
+luaexpat
+
+%MAKEDEPENDS%
+gcc
+lua
+lua51
+lua52
+expat
+

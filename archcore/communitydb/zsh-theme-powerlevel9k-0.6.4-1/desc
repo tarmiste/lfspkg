@@ -1,0 +1,54 @@
+%FILENAME%
+zsh-theme-powerlevel9k-0.6.4-1-any.pkg.tar.xz
+
+%NAME%
+zsh-theme-powerlevel9k
+
+%VERSION%
+0.6.4-1
+
+%DESC%
+Powerlevel9k theme for zsh
+
+%CSIZE%
+34128
+
+%ISIZE%
+164864
+
+%MD5SUM%
+1a4d9e06554632330541c086febf43d5
+
+%SHA256SUM%
+3d4c812c5968e267e1deb8169e8dfb54c43a9898311716c8031519655fc30606
+
+%PGPSIG%
+iQIzBAABCgAdFiEEba97gI+d8lE5YgAA0hRh49/iBg0FAlmm5w0ACgkQ0hRh49/iBg2nyQ//eQeOJZ+DPcjEzetzWbWu8hA4MM+eEZzL0MpnJ8zPlzFBGy/mdQg+qCPQ/e05wbzgUYDAA+6xGy+nYb2YQzW1FROCqUP1rw9p2KjNkuIurGBMLjijXAgtGGO+JVneOr8E+6V9OBZDmwEfNtK3VSqY1zWrYheCi03trptGh0vB2up0vTKSrlVYRokSNMAOsbx6RWBVSBYIkXR29Doseh0iQhp3SWzNT1ym7w97i/6ZNljUIEyWtSfwalwwFayicRipp4KaYXUc1VjGSd50TFKAXEPNeO3KcJEfcyp97c3vjB3vv5DqlwZawE32137izyT/A5om/0moiX/MBDybLiq/0RGu/jhqRnyBeUNNS6Dm6sOv/rPWjZLkdT+gR1gvFlpyG9aC1ixIavA90i2qMsPp2+7aCaLlY+PRodasIR1BkpuTov1TnmsFfBjeJlIb3jJjWQRixMavCdo93iGuAJYIWUpg+jLImyfK93j+cGLv4KlEuJME642C1onPmLBtR5PCUXEyFS9WQD0v8d4P7fTVzeW1KZj1fqMRVQ28ZE6D1tfK1YXK5NotWsxBuJOcaFHMCACEr0G8Og3Ih5rZ9ffU0CBnAmZEg3vDsh/4dOC7DZ7fRwKIf8kTP+u5xDkOHsLngKsnfvyLlU8UhL9slPhUmAq4wPCOWysKtldWzK7YTrU=
+
+%URL%
+https://github.com/bhilburn/powerlevel9k
+
+%LICENSE%
+mit
+
+%ARCH%
+any
+
+%BUILDDATE%
+1504110304
+
+%PACKAGER%
+Christian Rebischke <Chris.Rebischke@archlinux.org>
+
+%DEPENDS%
+zsh
+
+%OPTDEPENDS%
+powerline-fonts: powerline fonts integration
+awesome-terminal-fonts: icon package
+acpi: battery monitoring
+git: status of repository
+mercurial: status of repository
+systemd: virtualization detection
+openssh: ssh detection
+

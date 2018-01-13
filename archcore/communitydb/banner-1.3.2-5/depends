@@ -1,0 +1,10 @@
+%DEPENDS%
+glibc
+
+%CONFLICTS%
+sysvbanner
+
+%MAKEDEPENDS%
+shhmsg
+shhopt
+

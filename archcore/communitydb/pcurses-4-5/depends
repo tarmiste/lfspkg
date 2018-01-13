@@ -1,0 +1,9 @@
+%DEPENDS%
+ncurses
+pacman>=4.1.2
+
+%MAKEDEPENDS%
+boost
+cmake
+git
+

@@ -1,0 +1,58 @@
+%FILENAME%
+muine-0.8.11-4-x86_64.pkg.tar.xz
+
+%NAME%
+muine
+
+%VERSION%
+0.8.11-4
+
+%DESC%
+A music player written in C Sharp
+
+%CSIZE%
+231316
+
+%ISIZE%
+1042432
+
+%MD5SUM%
+699cfef7ba085de8cf11844238fe3bd9
+
+%SHA256SUM%
+48b145267563cd9590e5ab5684249da7b9ceeb6a4be91b521603837950d5b964
+
+%PGPSIG%
+iQEzBAABCAAdFiEEzgvecadZqH8j8PfYth284QkBwWMFAllOo30ACgkQth284QkBwWN9uwgAul8kMel8U6e7Ck9cUwIvlsv0SRHRWqBsTpPTJG0OJBOEucV0Nxd1BqON12ddtaYxxfPTkoHaAJuUMOCE8uo/D8feDW1BD5KNLgUo40jNxOI7ZJK3qiog50WtLBkRUpXL5VBhAXZi+qjjmYaEtZLMQx8218efZJnA+vDbBrgzONZEIourQioAw05IsDA9Hq/DWGm+vgRAjiiaYmBTb76qITfRqyN2s3XyeWjcJp2nXbU/PvQQzVJmqgcbWLIBbUkr9oYZkjEQpyHs6R53dnGs1iMrlYWSM7izkngcuAXpBMob0t9rQd/tm045DOQuCEFSOFg+Z9X/7Qk0lsIPP22iZA==
+
+%URL%
+http://muine.gooeylinux.org/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1498325628
+
+%PACKAGER%
+Balló György <ballogyor+arch@gmail.com>
+
+%DEPENDS%
+gst-plugins-base
+gconf-sharp
+taglib-sharp
+notify-sharp
+
+%OPTDEPENDS%
+gst-plugins-bad: Extra media codecs
+gst-plugins-good: Extra media codecs
+gst-plugins-ugly: Extra media codecs
+gst-libav: Extra media codecs
+
+%MAKEDEPENDS%
+intltool
+gnome-common
+

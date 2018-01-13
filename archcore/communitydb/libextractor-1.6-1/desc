@@ -1,0 +1,65 @@
+%FILENAME%
+libextractor-1.6-1-x86_64.pkg.tar.xz
+
+%NAME%
+libextractor
+
+%VERSION%
+1.6-1
+
+%DESC%
+A library used to extract meta-data from files of arbitrary type
+
+%CSIZE%
+160244
+
+%ISIZE%
+836608
+
+%MD5SUM%
+b45ead77a337e74c777040728189de2f
+
+%SHA256SUM%
+dc2048c3cc2a8061f93d402bf8986eb10c78706657c81d431aa0d9d854b56699
+
+%PGPSIG%
+iQJGBAABCAAwFiEEPlGL8lJv0Zeeiq5JZcEQwepDP8cFAlnzOfwSHGFyY2hAc2VyZ2VqLnBwLnJ1AAoJEGXBEMHqQz/HMBIP/3Ehrvuucg95ayQJQGdtBecB95VehpTAni4U0rEQWUIxvjZNT9Kxjem1QWCqMU9yEI7ZDhyG+INBogeZJbuD16L6GIFnVBRz/1nkMWw8oTo6N8CLJC0yFZ8FZGlw4zYv+WMof65eBiQ74YXIZzFJBRStdHIzhyv3aHDQoqtlGwW5cSLB0KKMVysvYEJwymWuX+I/I8wjS2cszz4DCAss61JsXWPvQKw/sINyBgwoRHIZlbSNgPJ6SxUKZFy0Lbw4H3RopOc2aXGPnvmQEYeNpv3J8R4TNPPnTK2pqdEvA1FNwlwD7cIfYeBqV4JmxMgQ2hw83fU0ZZCurOhxfT8Y3fpwiq0wa7pA3m4FRknWvhgWpLiLa8iSFIjsmbY1htdXmae3XOMeoB/zTSxcoWOvvEHXJxDogFbY9GnErzKuELKrRacVnAg/A/BDShlow+nHIVnGTs/7euZsd4XUMuMeiL/nmhwfqTmdLbIqMM4CUmsfVKjXl2pfjGVNMz3rOLbB9gdL5gAfzfw4UzNzRxFK9OSnBgkh2hbIJhAmXxQnZ3Fls7xOkJLk7qkEZ/l5u7QRi97oPPPhOUFHpJ1m+DWX3k1+JoMkrrrmhafpD+GXEN9DOAEeQSMYds83iQ9zX+zQc5mUy0FNiEMpSELv8AQNHNNPsuDkjNpRIXyy8wU/QoWT
+
+%URL%
+http://gnunet.org/libextractor/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1509111507
+
+%PACKAGER%
+Sergej Pupykin <pupykin.s+arch@gmail.com>
+
+%DEPENDS%
+libltdl
+
+%OPTDEPENDS%
+flac: flac support
+poppler: pdf support
+exiv2: metadata support
+qt: the Qt GUI interface/thumbnails
+gtk2: gtk2 GUI interface/thumbnails
+libgsf: (optional) for ODF support
+libmpeg2: mpeg support
+libvorbis: ogg/vorbis support
+
+%MAKEDEPENDS%
+flac
+poppler
+exiv2
+qt4
+libvorbis
+gtk2
+libgsf
+libmpeg2
+

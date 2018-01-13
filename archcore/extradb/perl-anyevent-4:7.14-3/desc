@@ -1,0 +1,60 @@
+%FILENAME%
+perl-anyevent-4:7.14-3-any.pkg.tar.xz
+
+%NAME%
+perl-anyevent
+
+%VERSION%
+4:7.14-3
+
+%DESC%
+The DBI of event loop programming
+
+%CSIZE%
+345280
+
+%ISIZE%
+775168
+
+%MD5SUM%
+1b83689699f6cfbc858246045c386a10
+
+%SHA256SUM%
+96a178bf4b29b708feea7a3be88b68856e50cfc17e3cec13b4eae8d429811acb
+
+%PGPSIG%
+iQIzBAABCAAdFiEEtZcfLFwQqaCMYAMPeGxj8zDXy5IFAlmhhPEACgkQeGxj8zDXy5KWlg/9GOsFbz5MiprvhYjLvL2WBoKUP4K1zuGtSR2adPzlKDe3bqZ/pzJDBzs5ADQKkABuJBISSStXj7QeqwRij8BXP1w9gV+dJlhkEpLZgwOqPQitlA9hODfK6ppgUV4tvuaUGci/0E45kcn9acKpqs6oDFYYHBBsvu4nxorYXZhZOsZ6fs9bPRjN1z0UU27OxgCLLQNFu+y7QcWhVVoS/xS9mjoTOCNU614Tpb/TAOVItuLTGKLNsJsKnHJ7nsBAll6e8QFwuFVXboKIDRpVEhtldnyvo5INruIM7DKRPuCuS9tBDxRC9gD74Hys2vG9BuvyubvYA4sDRE8byk+k1C8uivrYF5iM6Iq2GcW1x8Jcm2WZ6jadjjWTIVm4qz2Sqa3Q9tGksrhjwzOVZuVkr9Y09E9gZDbaKgFwjtlfgczOPGd6dnB0CzJ+ij6Cn2bj3zYTwwvohYGbQ/QesJtvoPtFcBdChvfJ4OSB8ZPxYzpzgP5JqIrXPkFdH6Vl+/JQ9ltp5wd2vBpTD/e4+1kdLBGmEM0UOeVyURSN8uzCg9Odojgt7u1cUZz/9COFFkL+ydUAx4f+dh4TAA/rFdu+n2mfcMf8i8dSBmuuWXwAoo4jWeCe2Lk9+ska12vj9VIX2Tm86Uqpwi/lNr7T6PJ0Jnfgd96SWzbpWHuyooVmQyPef9U=
+
+%URL%
+https://metacpan.org/release/AnyEvent
+
+%LICENSE%
+PerlArtistic
+GPL
+
+%ARCH%
+any
+
+%BUILDDATE%
+1503757537
+
+%PACKAGER%
+Felix Yan <felixonmars@archlinux.org>
+
+%DEPENDS%
+perl
+
+%OPTDEPENDS%
+perl-async-interrupt: for fast signal handling
+perl-ev: for the recommended EV event loop backend
+perl-guard: to speed up guards
+perl-json: send or receive JSON with AnyEvent::Handle
+perl-json-xs: send or receive JSON with AnyEvent::Handle
+perl-net-ssleay: TLS/SSL connections with AnyEvent::Handle
+
+%CHECKDEPENDS%
+glib-perl
+perl-async-interrupt
+perl-ev
+perl-net-ssleay
+

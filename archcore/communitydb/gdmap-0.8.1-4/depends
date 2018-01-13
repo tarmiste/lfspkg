@@ -1,0 +1,9 @@
+%DEPENDS%
+gtk2
+glib2
+libxml2
+
+%MAKEDEPENDS%
+gettext
+intltool
+

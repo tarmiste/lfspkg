@@ -1,0 +1,54 @@
+%FILENAME%
+mtools-4.0.18-4-x86_64.pkg.tar.xz
+
+%NAME%
+mtools
+
+%VERSION%
+4.0.18-4
+
+%DESC%
+A collection of utilities to access MS-DOS disks
+
+%CSIZE%
+183372
+
+%ISIZE%
+359424
+
+%MD5SUM%
+bc27ac8632797ceed17ae723271f553f
+
+%SHA256SUM%
+650d13db38306dd9671f5091ef41f36ebc1fa70dca47a849052f5ce2584278f6
+
+%PGPSIG%
+iQEzBAABCAAdFiEE5JnHn1PJalTlcv7hwGCGM3xQdz4FAllKRfsACgkQwGCGM3xQdz4bZwgAnJX063uLQZPHM71N2ZsRyIpn8RjTEYasmmWaty9fgL4D54JcPi+e8TNJPxde3xkfbZQ4lCNEKf4+btI7xgFtD2O321VqqAUk/udau/zjh1Piq6a7skW9tfDSxhAawoKq+3URNRm+z1M+PhVGd1+kA2tSq8E9IMZqcfKzdI/LMygaCPGS/0EdYS0jE8h71B5H2JBdSpVHmP+4I32Fh6sMcYA+iDngmEtRQ98zknuUaiVmzGKtDc9XY1pq3URnaRvmbPuI1cBLyphEAu5GOjdangppTxPJTY3YnJPqfDYTPGGZxPq9csGLTQlnKUKsGruHwb9eICFP42wOK9I6XG1MSQ==
+
+%URL%
+https://www.gnu.org/software/mtools/
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1498039708
+
+%PACKAGER%
+Jelle van der Waa <jelle@vdwaa.nl>
+
+%DEPENDS%
+sh
+
+%OPTDEPENDS%
+libx11: required by floppyd
+libsm: required by floppyd
+
+%MAKEDEPENDS%
+texinfo
+libx11
+libsm
+

@@ -1,0 +1,4 @@
+%DEPENDS%
+python2-pygments
+python2-setuptools
+

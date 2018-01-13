@@ -1,0 +1,65 @@
+%FILENAME%
+enlightenment-0.21.9-1-x86_64.pkg.tar.xz
+
+%NAME%
+enlightenment
+
+%VERSION%
+0.21.9-1
+
+%DESC%
+Enlightenment window manager
+
+%CSIZE%
+23837812
+
+%ISIZE%
+33168384
+
+%MD5SUM%
+98302580674e98ea25f1b83203ee864c
+
+%SHA256SUM%
+d1532f3ce08b35dd456453d1eea6987f85265872b99673b35a1ce81ac529f404
+
+%PGPSIG%
+iQEzBAABCAAdFiEE6oTqAIZvUfsQzRmuQmmRzYQG//MFAlmofJYACgkQQmmRzYQG//Nuhgf/VrjYe4R1dER5m4ngrtOjakjY0PT0qBqZBQwwcZtquilJiEyKSPK9iucWbpGUtqcWTTC+jVvi01GppSEahXdR+rOmrQbbmtSTH/cIYW1WQLwGvlrxVPybu9Qca2d+eyiAdoYWsMJuhp5YWR04HzFrU7pk3YtQce687x9QrQqbzu0J8KLATC5l3NjNTDbZIbp1B7126HErOImBRB2iGduKw+DKldAmArBUhfHHoKyTJzql+yTdqu6YYeg69JISLe1X4fasY55r1Z0ZVJuaKwfsyBVSpNf7Or2yBQDRYE3sT++H3AjlfIWw6I0lC2euihPhuYKjKYJ7HGR+PHNrXtf3Ag==
+
+%URL%
+http://www.enlightenment.org
+
+%LICENSE%
+BSD
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1504210829
+
+%PACKAGER%
+Ronald van Haren <ronald@archlinux.org>
+
+%PROVIDES%
+notification-daemon
+
+%DEPENDS%
+efl
+xcb-util-keysyms
+hicolor-icon-theme
+pixman
+mesa
+desktop-file-utils
+udisks2
+ttf-font
+bluez-libs
+
+%OPTDEPENDS%
+connman: network module
+acpid: power events on laptop lid close
+geoip-database: geolocation module
+xorg-server-xwayland: xwayland support
+
+%MAKEDEPENDS%
+xorg-server-xwayland
+

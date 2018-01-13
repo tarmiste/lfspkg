@@ -1,0 +1,7 @@
+%DEPENDS%
+python2
+x-server
+python2-xlib
+imlib2
+libxft
+

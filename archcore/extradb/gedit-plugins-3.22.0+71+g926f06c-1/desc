@@ -1,0 +1,63 @@
+%FILENAME%
+gedit-plugins-3.22.0+71+g926f06c-1-x86_64.pkg.tar.xz
+
+%NAME%
+gedit-plugins
+
+%VERSION%
+3.22.0+71+g926f06c-1
+
+%DESC%
+Collection of plugins for the gedit Text Editor
+
+%CSIZE%
+625420
+
+%ISIZE%
+4264960
+
+%MD5SUM%
+b2e3ebc147b653b4deb3204559900357
+
+%SHA256SUM%
+5619085a2e522e43367fc85e0d17d8e86ff52a300a1f746fcaa5a6681035d97e
+
+%PGPSIG%
+iQEzBAABCAAdFiEEghj4iEmqxSLpTPRwpekojE+kFfoFAlnNyNQACgkQpekojE+kFfqo1gf8DKdKaH8ZXZykNQgjP3hSXGmJVBlsquZRPkWcUjT9gIRJspYjN1Q4KQs3D2NMAJTnmLl9FSp63/LkmuyEWBo6D1B3Bfvh4WCqTH6p/kSQ2QY0x2g3Osn/PqdTfC1HJBHmpHoxp/ZvO/sn3CmK7HonsFQ983+ElsJK5DgtW8gIIXWhhjE5k7nwOl8q7nnlmFkgW/PTzBwx+pya5lA41jLYqYu6CE4j3Vh1XLUibszjT82oFGWoxn3GEPL6oLp3rb4E1nINcifILlpqW04i4HtjfeQj8iKAfycvPuxEuBlDVEEJZW5f4v8njAIdAh3daxvrXbb1mlJKbfvNKkMxb2mI2A==
+
+%URL%
+https://wiki.gnome.org/Apps/Gedit/ShippedPlugins
+
+%LICENSE%
+GPL
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1506658378
+
+%PACKAGER%
+Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+
+%DEPENDS%
+gedit
+python-dbus
+python-cairo
+
+%OPTDEPENDS%
+gucharmap: for charmap plugin
+vte3: for embedded terminal
+libgit2-glib: for git plugin
+
+%MAKEDEPENDS%
+intltool
+vte3
+libgit2-glib
+itstool
+gucharmap
+gobject-introspection
+vala
+yelp-tools
+git
+

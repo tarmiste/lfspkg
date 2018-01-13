@@ -1,0 +1,55 @@
+%FILENAME%
+perl-net-dns-1.14-1-any.pkg.tar.xz
+
+%NAME%
+perl-net-dns
+
+%VERSION%
+1.14-1
+
+%DESC%
+Perl Module: Interface to the DNS resolver
+
+%CSIZE%
+316572
+
+%ISIZE%
+788480
+
+%MD5SUM%
+96bf196d9431b87bcfaf88b9e0af8957
+
+%SHA256SUM%
+350bf5d8069d8f58040342add78b394e59f278c32cfb100b2cfbd54ebbcd7e9b
+
+%PGPSIG%
+iQIzBAABCAAdFiEEtZcfLFwQqaCMYAMPeGxj8zDXy5IFAlo4i/AACgkQeGxj8zDXy5KknQ//W5O84Na0hTmBRXfNe+T4MunlZdW/zIe/x5DQ8nQ3FDvBAPbZoJGDWaMklMMEYrDZ+u5sy9Wd+voH8oxep6plpbDkiDmcJgy3BQIIxT3GOiImcDN5vIr0yrWladoRGRTsygYkdpqXeClIMoITa8FltBVLtTFamaaD7Q82zkV9C6WDOaKoA90QpwFDb2lyHSRY9sR662FxDPjmAsBvyW2IDaB9LPSz696aHGIl5PB/DCt8fBRFxtvt/pG7L3aJ/7/LEw1cZVyJQ/Xgk9wEO8y8K5/ZwbGv1onLJIpZBytmGYZtRE7Idi4mRPPfdMpcDzSBLg2HdmeEDyJRQ1RGS9svnlA3DT4d01f569MIojz7Jyvp1mfD7b/m7KS68eTGUyYOJZebRLAHTX02BLuVzDr1RqTIrjKDXNzI/i+wt6s2U5wnsMkK8vNLlC8bsy5nWjWWP2ERH5Z5FJ2hKFpVzaTSE/Crmig/RQtbu4X7rCl4qZKwCQcu7mlOZ1vJ0ONahqEweywn34YLYF8BrrkvExLgUy7aCVZ3C2zYfGfl7b+dPjUG4jq4FaR2ZgG48nwxtZ71IgLOX0yAh/m/2q+tsKKLXOqqR+n2FcPFIJxReWWgxZMpHm72MVpscDyaD9S5PgBQT5krq9zDsoI2Jcr9oNP5Ceid0PzePWmtionJ8vFEPrQ=
+
+%URL%
+http://search.cpan.org/dist/Net-DNS/
+
+%LICENSE%
+PerlArtistic
+
+%ARCH%
+any
+
+%BUILDDATE%
+1513655248
+
+%PACKAGER%
+Felix Yan <felixonmars@archlinux.org>
+
+%DEPENDS%
+perl-digest-hmac
+perl-net-ip
+
+%OPTDEPENDS%
+perl-io-socket-inet6: IPv6 support
+perl-socket6: IPv6 support
+
+%CHECKDEPENDS%
+perl-test-pod
+perl-mime-base32
+perl-net-dns-sec
+

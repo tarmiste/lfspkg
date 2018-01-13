@@ -1,0 +1,56 @@
+%FILENAME%
+libgsignon-glib-2.4.1-1-x86_64.pkg.tar.xz
+
+%NAME%
+libgsignon-glib
+
+%VERSION%
+2.4.1-1
+
+%DESC%
+gSSO client library
+
+%CSIZE%
+62080
+
+%ISIZE%
+400384
+
+%MD5SUM%
+42452f723b0f2fc7e25ca3795e0815ba
+
+%SHA256SUM%
+92fa3a580c577c0fee6804dcf2b528eb3cfeafdf8a828f688b027a7756a78eb6
+
+%PGPSIG%
+iQEcBAABCAAGBQJXra6hAAoJEK/12VCYvG/1HpwIAJEAuvfpASfH7jpufahN2tL4MVBkTliIXFJs0Ar/LqVZ9FfYj60qbR5ooprAy7SztygJPijhka1SGv/fJs/IaWBVOwNHqmsuqHq8jI/k6Mz6+dxxjljWhl+u7lJupVmVqvS/LQNzWvHidMOpbjvBK999umItfFPh67ZUvoZhw696DXxZdDeStDFZ7Xi15RgGd4EaJYHQsjDqvGowoGN307aqOccyX98R5hHP0TLroiZu0krl2YgranUztHXH2fw6Z9kgB6q2Bld7SMujjSj1dhfHAme38nCCFl2d5TThSRh9rJg4JlJLcc06gG3mL96RKG6QyLDthaHkxyi7jKO1vFg=
+
+%URL%
+https://01.org/gsso
+
+%LICENSE%
+LGPL2.1
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1471000147
+
+%PACKAGER%
+Maxime Gauduin <alucryd@archlinux.org>
+
+%DEPENDS%
+glib2
+glibc
+
+%OPTDEPENDS%
+python: Python bindings
+vala: Vala bindings
+
+%MAKEDEPENDS%
+git
+gobject-introspection
+gtk-doc
+vala
+

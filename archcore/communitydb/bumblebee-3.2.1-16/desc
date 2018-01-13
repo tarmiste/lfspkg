@@ -1,0 +1,59 @@
+%FILENAME%
+bumblebee-3.2.1-16-x86_64.pkg.tar.xz
+
+%NAME%
+bumblebee
+
+%VERSION%
+3.2.1-16
+
+%DESC%
+NVIDIA Optimus support for Linux through VirtualGL
+
+%CSIZE%
+41644
+
+%ISIZE%
+122880
+
+%MD5SUM%
+fd17afff919f5b8a789cf2e737c02de3
+
+%SHA256SUM%
+a4e0fb17f3ca3860b5e2d598e70042421019542e643e6bf6ab7bec48c44e9daf
+
+%PGPSIG%
+iQIzBAABCAAdFiEEj8FaBklQqZ3RvRTdOeS4d+YuuRUFAlpHLIAACgkQOeS4d+YuuRXJcBAA0HQVjpW5A/eYTNUU/P2Q759ug9yQfNSaez4AFR1pXPo+04gRW2dFt+bfQh5f+TzLt4z330p9/gy3Vl2/bXu9YEZbellVNfwqJf4uJPtPbsrAT87ADHHyOc52ZqiKNZWbt/0V873xKJ6QtlcROTsfwfYlEDJSFQs6csFMaHERBHXXQvBz3vaJLDfl7sw1Xy1BfFwAw7+CRgISwIgyo4I7M1oq5w9UHH0ClR9b6obZ8dtAL5E/PKWOXHxuMe6RVmLffxSMu572NXLqH2m50GiZAFJVITZNTLI0ZB4TBm0p1hm51zkYolt5IFYye829KUr3YEZ6uI3oGUGKSbLgxWsqO2mhV/pndHUD64vV/awitkgmnWXip322izoR/8AQpilNboGeXFtavShYCvRClTKPyiSqn9LS2QGKlrQHTJqFMwThEV9T7brHjwzm18kDUvilaa4JLb27E0Cw3bP4bKlMg3KkNC7KN6o45aFlrEX9vUuaGsQHJfQZYq5NzwL90tDfw19qR07YfzDr9j2a8rwwfYwdgktBOkZg2iQfPikK+LoQ7wsF/q7gLEyvGNhVsXhyvLXVSaqeiQJNDhFDhzqe/NgCXPuxUQyU399rZKFCP6yr9DBlMXmS3OmGbQ4GUI4zEnyKIY04L46eRKJBK8myA30F7jkMPZz37Dg3KqVIxS0=
+
+%URL%
+http://www.bumblebee-project.org
+
+%LICENSE%
+GPL3
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1514613764
+
+%PACKAGER%
+Sven-Hendrik Haase <sh@lutzhaase.com>
+
+%DEPENDS%
+virtualgl
+glib2
+mesa-libgl
+
+%OPTDEPENDS%
+bbswitch: switch on/off discrete card
+nvidia: NVIDIA kernel driver
+nvidia-340xx: NVIDIA kernel driver for older devices
+nvidia-304xx: NVIDIA kernel driver for even older devices
+primus: faster back-end for optirun
+lib32-virtualgl: run 32bit applications with optirun
+lib32-primus: faster back-end for optirun
+
+%MAKEDEPENDS%
+help2man
+

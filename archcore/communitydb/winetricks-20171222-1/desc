@@ -1,0 +1,52 @@
+%FILENAME%
+winetricks-20171222-1-any.pkg.tar.xz
+
+%NAME%
+winetricks
+
+%VERSION%
+20171222-1
+
+%DESC%
+Script to install various redistributable runtime libraries in Wine.
+
+%CSIZE%
+138544
+
+%ISIZE%
+749568
+
+%MD5SUM%
+29494fbf0172517d72d9e7663e94ebb8
+
+%SHA256SUM%
+3b556eade0ea5729a1bcfcaa5397525efbc3a6e3dbfcfc16d5ad6434ec765d85
+
+%PGPSIG%
+iQIzBAABCAAdFiEEtZcfLFwQqaCMYAMPeGxj8zDXy5IFAlo81YcACgkQeGxj8zDXy5KnqBAAsNOalbkFu44slQBxG1pWoLs0gFr9fPhazaJCWfbpJIseDeUkvcBotRnMFrmxlzjX30MaGPPr1hc9wifrTwfnxqoIYIJrjfrffA965NggPMsMxyNzr7EWLH2jffyIYBDEcbv2kxQeFXPZ2rfUUpVkknx8bI2eYAmZzPzrRD2B5pMdWrvCA8+ibIAxf+Uj3pRjZPtuYp50l7q8AWPfUj9anUfhVKQJDSJ8+U30csehR0rvwZ0BFQeMI0IFY44dYtYSEb0GlWPbz5W4hTPlD4eZL3hntCENgacMYzYVy7vxeHBFlwqMoFf86lqtcReXiDg+mSWtvK5Lymkjj9Kym4e6ViUTH5v1AJCkGMTrsDqPp7L0hp/2/XVNhwPsSqxM31+kpP0gYHMKnjaFy0+W5Xo+q6+vi8iXXQyrjkaz9dZEq4FfKVwZygyaO64O9oUFOZNTVqI1ogQtFV5raHSW80L6DbT0qXx8DLfvfKWikOqLHUCMLWy9Ogl0TSzfR41C/i5ODzTfSFly8TFbAsLgC2J87+3QLBceK5F0xqvOfrymEgHMVvtA38/rBL9UQdvnLFCR8259Q4a0CDvnH8Ior/Q5Kl/dBGmW82lQ0QWDMPJuwN2rKhFwKKe85wzGMBH97bkHZ6WxTyzah6qCU7xINz+Z6jqZPIBOflD8JW5BMZ40IhA=
+
+%URL%
+http://wiki.winehq.org/winetricks
+
+%LICENSE%
+LGPL
+
+%ARCH%
+any
+
+%BUILDDATE%
+1513936236
+
+%PACKAGER%
+Felix Yan <felixonmars@archlinux.org>
+
+%DEPENDS%
+wine
+cabextract
+unzip
+xorg-xmessage
+
+%OPTDEPENDS%
+zenity: GUI for GNOME desktop
+kdialog: GUI for KDE desktop
+

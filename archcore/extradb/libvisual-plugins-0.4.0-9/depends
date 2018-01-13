@@ -1,0 +1,10 @@
+%DEPENDS%
+libvisual
+gtk2
+glu
+alsa-lib
+jack
+
+%MAKEDEPENDS%
+mesa
+

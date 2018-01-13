@@ -1,0 +1,65 @@
+%FILENAME%
+mediawiki-1.30.0-1-any.pkg.tar.xz
+
+%NAME%
+mediawiki
+
+%BASE%
+mediawiki
+
+%VERSION%
+1.30.0-1
+
+%DESC%
+MediaWiki engine
+
+%CSIZE%
+31467664
+
+%ISIZE%
+164904960
+
+%MD5SUM%
+1db025a12dc27de631544da57f482d4d
+
+%SHA256SUM%
+5f8e2c6b465600548534032c456d5a5ab2ef6b7cb7261feacb1d87b649989181
+
+%PGPSIG%
+iQJGBAABCAAwFiEEPlGL8lJv0Zeeiq5JZcEQwepDP8cFAlo45ioSHGFyY2hAc2VyZ2VqLnBwLnJ1AAoJEGXBEMHqQz/Ha+EQAKVZT6Nl6HctKL4iC+/QMXDLk2PHp/797oIsMClnWfCcX8IDVXsRrD9vhK9rSvDiw9akccfsi6dTBv8DWztotjUiBjtBU98XP2u2NRdWGUJd40+6xtfVuG4h2/J+GvJksuQDOublKzBSF8RPociVf+xjirhL4dBZyU5YhC58g4e0+JZGAMlOadVhwY54EO0i7G4JimaBSDVQbQSAFQj86pqiIOtZBrfMw7tTRknTNHAntPyjQd6fiTXXkyok7DWv6HUDlV/NOxL4W7XjMFtco+WvbHyRLuKNVQCp0HcWaAQO+BSRPuz585oW8zVIwksBzIStSto5NJ/0hlN3PhR1SVrhcu7ZmH9gLLJZ+P+B8O2cPzXoVo/NlBp/sAKJmZCU6pvDYV8YDBf71DvyaxY95X3Kp9I+O0iy2mAKKf+S3pBYpH0qkwc6Blh04KLtZ2kJ89WvdtAsHaGaRcUbXMGhQgfHQO298cLSh9MKAEhzJ9TWPE9pf+y6QHLjldC08Av/BxzS/hSjs9YMO/5EAFy9ct53hySpwWwRLHsoM6Hh5T8TPkBry3bIhsZZfb0MR9JAqVdTi5pubXTwWhWVmd/IVwqVuIhegMx2iLRTx1NgqTFBGKhMdxCEOp/0OGkmyykACWQaUODtkCOcpH5dPDO2spMOWFtgRTq4aSnlQmgWyolA
+
+%URL%
+http://www.mediawiki.org/wiki/MediaWiki
+
+%LICENSE%
+GPL
+
+%ARCH%
+any
+
+%BUILDDATE%
+1513678148
+
+%PACKAGER%
+Sergej Pupykin <pupykin.s+arch@gmail.com>
+
+%DEPENDS%
+php
+
+%OPTDEPENDS%
+texvc: for math rendering
+python2
+pcre: for regular expressions support
+php-intl: to handle Unicode normalization
+php-pgsql: for PostgreSQL database support
+php-sqlite: for sqlite database support
+php-apc: for cache support
+php-xcache: for cache support
+memcached: for cache support
+php-gd: for thumbnails rendering
+imagemagick: for thumbnails rendering
+smtp-forwarder: for mail sending
+
+%MAKEDEPENDS%
+git
+

@@ -1,0 +1,42 @@
+%FILENAME%
+libmilter-8.15.2-1-x86_64.pkg.tar.xz
+
+%NAME%
+libmilter
+
+%VERSION%
+8.15.2-1
+
+%DESC%
+Implementation of the sendmail Mail Filter API
+
+%CSIZE%
+33648
+
+%ISIZE%
+136192
+
+%MD5SUM%
+b4440b402b4feb62e534a454d560063b
+
+%SHA256SUM%
+23ce1f43ed1cd393480ca60ae98ba6ec3c3b4d9f5cb49a4fca4e73c60c6d8e56
+
+%PGPSIG%
+iHUEABEIAB0WIQRaIlfRn/fh4OQVlozmL4UxAPDQ8AUCWWRXrgAKCRDmL4UxAPDQ8MnqAP4sWz8UXwoo7+zYLc/f3yZOjsAdhocgYJPi4pLrseE+KgEA2D+lQ1lwVK8RvYdgutYsRYfxV9JCaXeyaY/VsV/Xy8Y=
+
+%URL%
+https://www.proofpoint.com/us/sendmail-open-source
+
+%LICENSE%
+custom:Sendmail open source license
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1499747083
+
+%PACKAGER%
+Gaetan Bisson <bisson@archlinux.org>
+

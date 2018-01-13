@@ -1,0 +1,62 @@
+%FILENAME%
+alure-1.2-5-x86_64.pkg.tar.xz
+
+%NAME%
+alure
+
+%VERSION%
+1.2-5
+
+%DESC%
+Utility library to help manage common tasks with OpenAL applications.
+
+%CSIZE%
+97796
+
+%ISIZE%
+728064
+
+%MD5SUM%
+fcf3a4d20ea2dd801d511ae2ffc70ed9
+
+%SHA256SUM%
+2f24f30bb80ea8de0ee8b3af97ba3f8afab702308b52238c32d66fde7ee14286
+
+%PGPSIG%
+iQEzBAABCAAdFiEE5JnHn1PJalTlcv7hwGCGM3xQdz4FAlll1ckACgkQwGCGM3xQdz76OQf8Dr9TCb0ZEjwjn3I3QFqzraN0Qgys7ewN3auUyLVNOe+FgBI9LBDxEy4G06NAOodpMzayvTVP//Lh8Q9ZbI7uYMXfMiUFs5XpadiA6Vt87uGzbrQyLcv7tz1ls/zdgkjpq40jbZFbgf2qyl/dGQXanj+k5KkOHfDV6QF3qwG4QF6e7EfLiV45vWuwAKoGutft9V94KJaCFzJk3pbmUm6B5DSk30FIACeFaZSChRvGDlrGKHDfhULrWa/Z+rumey06KBnZb5aU93v5Atzkscy4zBtXao9tYAC/8eQVH1l26CJz+ktyirW4tR9I44Dc3LQ2UylpGOsnC5vzbdVH8IAGJg==
+
+%URL%
+http://kcat.strangesoft.net/alure.html
+
+%LICENSE%
+MIT
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1499845732
+
+%PACKAGER%
+Jelle van der Waa <jelle@archlinux.org>
+
+%DEPENDS%
+openal
+
+%OPTDEPENDS%
+libsndfile: for uncompressed audio support
+libvorbis: for OGG Vorbis support
+flac: for FLAC support
+mpg123: for MPEG support
+dumb: for IT, XM, S3M and MOD support
+fluidsynth: for SoundFont 2 support
+
+%MAKEDEPENDS%
+cmake
+libsndfile
+libvorbis
+flac
+mpg123
+dumb
+fluidsynth
+

@@ -1,0 +1,56 @@
+%FILENAME%
+afl-utils-1.33a-1-any.pkg.tar.xz
+
+%NAME%
+afl-utils
+
+%VERSION%
+1.33a-1
+
+%DESC%
+Utilities for automated crash sample processing/analysis, easy afl-fuzz job management and corpus optimization
+
+%CSIZE%
+60744
+
+%ISIZE%
+360448
+
+%MD5SUM%
+4bd11035d45b0ecf5784bf85728d9df3
+
+%SHA256SUM%
+4fcae92be1e90935addbf91d46f95b613a31fc545b35aa0e61647c908dbe7ca7
+
+%PGPSIG%
+iQIzBAABCgAdFiEE4kC1fixGMLp2ji8m/BtUfI2BcsgFAlmDNswACgkQ/BtUfI2BcsiP1RAAqfVRgsKp6I5CwG4rDCnuK52w7ftqoqxmc4WMmk3VW/y4JzeRF8S36rWEfkPsZeRPbmON/Hr4Zb2Q2VbGDkK57Q8d4XpJs43zl5u4BSKHHom2KMrrzjWRySftH4V2SuqnS4heLiiZhQkcEC0B8PmJ+0yHVeuujuUpJAs9Kz4fA0xGCNZnWrykU3wxsmUaPE1dUiXPy95+9iQuldXzo8QF9aFvgIUk64NYq8Qz/AcZWXOAKbUMe43v/aQO7hIhsRfWDNlElnyWGu7XR4a9+A0xFJrArDFINuJY0oE9PWnKAJJQH2WppnVvLSx0Zm+DKqVSd3isxUaeZTQ/jEIT0U3aFtrpqrgFQd6oRhFifH0nv0OFrrQrHC88iQKAEfBWaMTyfi2jmY5kGNqO3tiGUFueYuKeSHsDpWdjomcvS3SbUQLhZ+lcIXo4VOeRZoTLjlpkfzCW80DwN3cca1nDUMd6KkL/M1pkd7NgdJbzoVd/uS7wpsOp3rYVmDKklarb8oxmXL0oNHtkjDCWZddXt6l5+VY8wb1q2Kt0RR8qhmBMEfLk+tz/HfAAZl2bn/0sz8zD4iekPOs7lIjIUu71mVKuMqOoB7JcPpjcvOiV/F2ZXFkMcACHNoFoSRquH7flYnR7vcjAThK8NWcJe3hrVMaAIZ20pxIWpGMr2oE2Dq7wb1s=
+
+%URL%
+https://github.com/rc0r/afl-utils
+
+%LICENSE%
+Apache
+
+%ARCH%
+any
+
+%BUILDDATE%
+1501771460
+
+%PACKAGER%
+Levente Polyak <anthraxx@archlinux.org>
+
+%DEPENDS%
+afl
+coreutils
+python
+rsync
+
+%OPTDEPENDS%
+sqlite: database support
+screen: interactive/screen mode support
+gdb: gdb script execution support
+
+%MAKEDEPENDS%
+python-setuptools
+

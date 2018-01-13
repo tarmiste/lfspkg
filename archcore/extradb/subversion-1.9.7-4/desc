@@ -1,0 +1,69 @@
+%FILENAME%
+subversion-1.9.7-4-x86_64.pkg.tar.xz
+
+%NAME%
+subversion
+
+%VERSION%
+1.9.7-4
+
+%DESC%
+A Modern Concurrent Version Control System
+
+%CSIZE%
+6748360
+
+%ISIZE%
+36224000
+
+%MD5SUM%
+9e0501f3f7cc1758c9eed79592590790
+
+%SHA256SUM%
+6ddbc3f62c03a3fef0f07b3d41c8751c6e34b4f00053668c863b99bfc8a6414a
+
+%PGPSIG%
+iQEzBAABCAAdFiEEhs/8qRjPOvRxR1iAUeixSKmZnDQFAlpMi7QACgkQUeixSKmZnDT8LQgAk7FdxhqyWP/7bqyg0kEpgGeFU40axyZu4lSxXmdJ9Q/QJT1KJ8SEUcqe4gqk9mvtz3yGMGilHkd6aGypuAxyqFidkd7l4hvhqbr/yOJO7Fe+uTmFwbskRece82XNAyfwLMJDzNW2XYnLeV+qsaLpwd1Rl97/a4TkBircF8f3byGrG1ePH7LHQgfabgOHKOi6mmiiKNHTy4sw13IOXPUNgMyrt+oaNcSdqADFCB9uaSf8M3tkfcGBDx+ld1zN8ds7xlPavmV+cdo0+kjCmaKAte7epHaXtfYEpwYANrrAZfHv7vTspVv/HqSUvO8ErpoJT5hwjAH0SyyfRisdOiLfVg==
+
+%URL%
+http://subversion.apache.org/
+
+%LICENSE%
+APACHE
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1514965914
+
+%PACKAGER%
+Evangelos Foutras <evangelos@foutrelis.com>
+
+%PROVIDES%
+svn
+
+%DEPENDS%
+sqlite
+file
+serf
+systemd
+
+%OPTDEPENDS%
+libgnome-keyring: for GNOME Keyring for auth credentials
+kdebase-runtime: for KWallet for auth credentials
+bash-completion: for svn bash completion
+python2: for some hook scripts
+java-environment: for Java support
+ruby: for some hook scripts
+
+%MAKEDEPENDS%
+apache
+python2
+perl
+swig
+java-environment
+libgnome-keyring
+kdelibs
+ruby
+

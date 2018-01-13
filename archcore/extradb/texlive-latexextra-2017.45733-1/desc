@@ -1,0 +1,54 @@
+%FILENAME%
+texlive-latexextra-2017.45733-1-any.pkg.tar.xz
+
+%NAME%
+texlive-latexextra
+
+%VERSION%
+2017.45733-1
+
+%DESC%
+TeX Live - Large collection of add-on packages for LaTeX
+
+%GROUPS%
+texlive-most
+
+%CSIZE%
+10978844
+
+%ISIZE%
+46968832
+
+%MD5SUM%
+dfd18ab850bfe796e96c235e5ab9b581
+
+%SHA256SUM%
+fa16d086c20bc02881378ab1fd95ab23034542de8b964a5e021e8ceca7f4ea8a
+
+%PGPSIG%
+iQIzBAABCAAdFiEEROpirNvIG2oNH9JnIGy8iS0Uk9IFAloG5ygACgkQIGy8iS0Uk9LV5A//QaG2b1OpxOgCKhXjb0NIXcz6cCHIgWiiKIpLy/AdwAMisFyKJ2wFyAJA7RC4lFjbMsDYNWRgHCZU28iKlJBs9yccZL928AtJWBx+EzDuPAGzZC45AsB2q8IDh//Bk0Vq+hBe988HskGenhoOqd22Pef2I+2bVqL+IZuRM3Dk+lNazk4x+v28p2qGRU4JpAhxHC3vCrJshS1LNPPUYTVfqKWwXVNXCXAhc3JJrndU6fpAeNteWeKZslhC0jQRAR+sNANjoWi7/APZINWyDJUpkD2lle7ryY+Xhe1lt2AMfEH00ddbjB8E1lD/zielNG2QAb7lHUG5/d9Xo4EZVSfFM+7Gx/ZD3kH/1kCwf8M4wUh/d6/XAYLxvWolSj+LEFbKMRMtRkS7ViKZwaEm8cpq4w9KnwFuvGrPknzsUs+LAtvBEIIZSLovNz4UTJQhFCmmDwboxv/im9/kyZ3CUtJqIfqkwiirsy4Nkjj3vC+TsQI+OINy2alZVqlNBW7rRVtGU1G/tVRr/fY73fjRPs+8IY8tx7t8ivUmzkpplkK/QDDZUcORtiZXyH4kXBX89i9Ams23G3oyVhWgdATP2jhOaEO90WYvF0Dooi3MD7PoYFXakM5tUpRMV8KRAYRJU/4wcqsOBir/Iue7TuPU4oBB5Za6U5jHat2WeUnsKRh/IlA=
+
+%URL%
+http://tug.org/texlive/
+
+%LICENSE%
+GPL
+
+%ARCH%
+any
+
+%BUILDDATE%
+1510399423
+
+%PACKAGER%
+Rémy Oudompheng <remy@archlinux.org>
+
+%DEPENDS%
+texlive-core
+perl-file-which
+
+%OPTDEPENDS%
+texlive-genericextra: to use the calctab package
+texlive-pictures: to use the package overpic
+java-environment: to use pdfannotextractor
+

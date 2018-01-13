@@ -1,0 +1,59 @@
+%FILENAME%
+libinput-1.9.4-1-x86_64.pkg.tar.xz
+
+%NAME%
+libinput
+
+%VERSION%
+1.9.4-1
+
+%DESC%
+Input device management and event handling library
+
+%CSIZE%
+495904
+
+%ISIZE%
+5222400
+
+%MD5SUM%
+17ff0b6d2a99f9e4131363faedde5905
+
+%SHA256SUM%
+8bd1650fd7a974236cde54b299b9f7132bb74ef8b9ee8b42499b7d4e41a3f3e0
+
+%PGPSIG%
+iQEzBAABCAAdFiEErcih/MFeAdRTEEGelGV6sg8qCSsFAloy1FkACgkQlGV6sg8qCSuLLwgAoP+qg8YCzcfRUgkVjsP+gc9RaTLyiai7BJZW676rgYy1uQR5KHG80fM18clATgopkjuFlVcNOw8DibRF6uezX3kf2cqsslx9Z73kxa+Y+eZqzVqmJ096p7rtwlG8PwmNTF37tzy2CqAl1JdOamlVSudLCmLmcHiXIPP4vU3lccCojkPb0QKBzvAD1QzUl10cd7j9FOdK+zlwQ5yNl5fIAP0PCLC4CJc/xbepvKz8msPxH/k8UTLPUlYSp64EsVD3kDF1WxjFX7PsrQKEYVsVrm9jdisOZ0GDtaCzkqjzlA6uqU5CtS6h8N9SPXU0SWF+mhwar08T3DrbJFoC4QxGVw==
+
+%URL%
+https://www.freedesktop.org/wiki/Software/libinput/
+
+%LICENSE%
+custom:X11
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1513280520
+
+%PACKAGER%
+Andreas Radke <andyrtr@archlinux.org>
+
+%DEPENDS%
+mtdev
+systemd
+libevdev
+libwacom
+
+%OPTDEPENDS%
+gtk3: libinput debug-gui
+python-pyudev: libinput measure
+python-evdev: libinput measure
+
+%MAKEDEPENDS%
+doxygen
+graphviz
+gtk3
+meson
+

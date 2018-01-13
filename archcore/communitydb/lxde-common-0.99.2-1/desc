@@ -1,0 +1,53 @@
+%FILENAME%
+lxde-common-0.99.2-1-any.pkg.tar.xz
+
+%NAME%
+lxde-common
+
+%VERSION%
+0.99.2-1
+
+%DESC%
+Common files of the LXDE Desktop
+
+%GROUPS%
+lxde
+lxde-gtk3
+
+%CSIZE%
+812492
+
+%ISIZE%
+927744
+
+%MD5SUM%
+6e5e1278298d5869e6d712f83c59d232
+
+%SHA256SUM%
+ac6c262b63be2276d53520432c8e6a866dc366d39d5d17018af0ad8fa99982e9
+
+%PGPSIG%
+iQEzBAABCAAdFiEEzgvecadZqH8j8PfYth284QkBwWMFAlhIMNYACgkQth284QkBwWMstAf/Xv6GdF8P48sDXUkE2krNEWeQf56DrqyY2Z5zpVlgS7GQbckRhfXWhtjIYIR7r7jc5EdLeme8OiynSfLniAw1nT0tu1p6AJDfUIjivdUPYWiUR53u5HndEu2nMdtxaAu8I6iqxN4xQ2QuLe6C0/4jEKrKO6B3bVP4myvSsDamThWlmLjoYSaexZvcXzIkvUmOcmr4FzHhkUYTGPU8ZL3mzcAfHhxqpZrF/KdWDMuQi9Dpm7S49AH8N63RUHNsafRTiDEd8qDyu0KPqyt1Bn09oTLg42tNSvmVdqAA/GfX7LJdIkQ0X8PRrJzM+XCmkRHcA5XSvvNOvlDqyl3Qgx8G/g==
+
+%URL%
+http://lxde.org/
+
+%LICENSE%
+GPL2
+
+%ARCH%
+any
+
+%BUILDDATE%
+1481126064
+
+%PACKAGER%
+Balló György <ballogyor+arch@gmail.com>
+
+%OPTDEPENDS%
+gnome-themes-standard: default GTK+ theme
+lxde-icon-theme: default icon theme
+
+%MAKEDEPENDS%
+intltool
+
