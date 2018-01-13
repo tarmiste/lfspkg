@@ -39,47 +39,39 @@ md5sums=('0fa414975f8cd6d30e126c28327c1f7c')
 # EDITHOOKPREP
 prepare() {
 	cd "$pkgname-$pkgver"
-	patch -p1 -i "$srcdir/$pkgname-$pkgver.patch"
+	mkdir -v build
+	cd       build
+	cmake -G "Unix Makefiles"         \
+      	-DCMAKE_BUILD_TYPE=Release  \
+      	-DCMAKE_INSTALL_PREFIX=/usr \
+      	-Wno-dev .. 
 }
 
 # EDITHOOKBLD
 build() {
 	cd "$pkgname-$pkgver"
-	./configure --prefix=/usr
+	cd       build
 	make
+	# making docs requires extra packages installed...
+	#cmake -DDOC_INSTALL_DIR=share/doc/doxygen-1.8.13 -Dbuild_doc=ON ..
+	#make docs
 }
 
 # EDITHOOKCHK
 check() {
 	cd "$pkgname-$pkgver"
-	make -k check
+	cd       build
+	#make -k check
 }
 
 # EDITHOOKPKG
 package() {
 	cd "$pkgname-$pkgver"
+	cd       build
 	make -j1 DESTDIR="$pkgdir/" install
+	mkdir -pv ${pkgdir}/usr/share/man/man1
+	install -vm644 ../doc/*.1 ${pkgdir}/usr/share/man/man1
 }
 # EDITHOOKC
 #######  Building package
-cd $UNPACKDIR
-
-mkdir -v build &&
-cd       build &&
-
-cmake -G "Unix Makefiles"         \
-      -DCMAKE_BUILD_TYPE=Release  \
-      -DCMAKE_INSTALL_PREFIX=/usr \
-      -Wno-dev .. &&
-
-make
-#make -k tests || true
-cmake -DDOC_INSTALL_DIR=share/doc/doxygen-1.8.13 -Dbuild_doc=ON .. &&
-
-make docs
-sudo -E sh << ROOT_EOF
-make -j1 install &&
-install -vm644 ../doc/*.1 ${pkgdir}/usr/share/man/man1
-ROOT_EOF
-sudo ${pkgdir}/sbin/ldconfig
 

@@ -64,8 +64,8 @@ package(){
        -C "${srcdir}/certdata.txt" \
        -D "${pkgdir}"
   install -vdm755 "${pkgdir}/usr/share/man/man1"
-  help2man -N "${pkgdir}/usr/sbin/make-ca.sh" \
-           -o "${pkgdir}/usr/share/man/man1/make-ca.sh.1"
+  #help2man -N "${pkgdir}/usr/sbin/make-ca.sh" \
+  #         -o "${pkgdir}/usr/share/man/man1/make-ca.sh.1"
 }
 # EDITHOOKC
 #######  Building package
