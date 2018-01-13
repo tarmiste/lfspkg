@@ -1,0 +1,92 @@
+# $Id: PKGBUILD 312047 2017-12-10 14:22:08Z bpiotrowski $
+# Maintainer: Bartłomiej Piotrowski <bpiotrowski@archlinux.org>
+
+pkgbase=go
+pkgname=(go go-pie)
+epoch=2
+pkgver=1.9.2
+pkgrel=3
+arch=(x86_64)
+url='http://golang.org/'
+license=(BSD)
+makedepends=(git go)
+source=(https://storage.googleapis.com/golang/go$pkgver.src.tar.gz
+        default-buildmode-pie.patch)
+sha256sums=('665f184bf8ac89986cfd5a4460736976f60b57df6b320ad71ad4cef53bb143dc'
+            'fd0055504e4175c1f444816636dfb53fc0ddee991fa2696bb64b087130bba96d')
+
+export GOOS=linux
+case "$CARCH" in
+  x86_64) export GOARCH=amd64 ;;
+  i686) export GOARCH=386 GO386=387 ;;
+esac
+export GOROOT_FINAL=/usr/lib/go
+export GOROOT_BOOTSTRAP=/usr/lib/go
+
+prepare() {
+  cp -r $pkgbase ${pkgbase}-pie
+
+  cd ${pkgbase}-pie
+  patch -p1 -i "$srcdir"/default-buildmode-pie.patch
+}
+
+build() {
+  export GOPATH="$srcdir/"
+
+  for _pkgname in ${pkgname[@]}; do
+    export GOROOT="$srcdir/$_pkgname"
+    export GOBIN="$GOROOT/bin"
+
+    cd "$srcdir/$_pkgname/src"
+    ./make.bash --no-clean
+
+    PATH="$GOBIN:$PATH" go install -buildmode=shared std
+    PATH="$GOBIN:$PATH" go install -race std
+  done
+}
+
+check() {
+  # Run test suite only for unpatched Go as it expects non-PIE ldBuildmode
+  export GOROOT="$srcdir/$pkgbase"
+  export GOBIN="$GOROOT/bin"
+  export PATH="$srcdir/$pkgbase/bin:$PATH"
+  export GO_TEST_TIMEOUT_SCALE=2
+
+  cd $pkgbase/src
+  ./run.bash --no-rebuild -v -v -v -k 
+}
+
+_package() {
+  options=(!strip staticlibs)
+  cd "$srcdir/$1"
+
+  install -d "$pkgdir/usr/bin" "$pkgdir/usr/lib/go" "$pkgdir/usr/share/doc/go"
+  cp -a bin pkg src lib misc "$pkgdir/usr/lib/go"
+  cp -r doc/* "$pkgdir/usr/share/doc/go"
+
+  ln -sf /usr/lib/go/bin/go "$pkgdir/usr/bin/go"
+  ln -sf /usr/lib/go/bin/gofmt "$pkgdir/usr/bin/gofmt"
+  ln -sf /usr/share/doc/go "$pkgdir/usr/lib/go/doc"
+
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/go/LICENSE"
+  install -Dm644 VERSION "$pkgdir/usr/lib/go/VERSION"
+
+  rm -rf "$pkgdir/usr/lib/go/pkg/bootstrap"
+  rm -rf "$pkgdir/usr/lib/go/pkg/tool/*/api"
+}
+
+package_go() {
+  pkgdesc='Core compiler tools for the Go programming language'
+  provides=(go-pie)
+  conflicts=(go-pie)
+
+  _package $pkgname
+}
+
+package_go-pie() {
+  pkgdesc='Core compiler tools for the Go programming language (with PIE enabled by default)'
+  provides=(go)
+  conflicts=(go)
+
+  _package $pkgname
+}
