@@ -1,0 +1,1 @@
+for i in `cat dirs`; do if [ `grep -c %MAKEDEPENDS% $i/goo` -ne '0' ]; then end=`grep -m 1 -n "^$" $i/goo |cut -f1 -d ":" -`; echo ===== $i $end; head --lines=${end} $i/goo >$i/makedepends; end=`expr $end + 1`; tail -n+${end} $i/goo >ngoo; mv ngoo $i/goo; fi; done
