@@ -1,0 +1,74 @@
+pkgname=gcc
+pkgver=7.2.0
+pkgrel=1
+pkgdesc="The GNU Compiler Collection"
+arch=('x86_64')
+url="http://gcc.gnu.org"
+license=('GPL' 'LGPL' 'FDL' 'custom')
+source=(${pkgname}-${pkgver}.tar.xz)
+
+prepare() {
+    cd "${pkgname}-${pkgver}"
+    sed -e '/m64=/s/lib64/lib/' -i.orig gcc/config/i386/t-linux64
+}
+
+build() {
+    cd "${pkgname}-${pkgver}"
+
+    mkdir -v build
+    cd build
+
+    SED=sed
+    ../configure --prefix=/usr            \
+      --libdir=/usr/lib \
+      --libexecdir=/usr/lib \
+      --mandir=/usr/share/man \
+      --infodir=/usr/share/info \
+      		--enable-languages=c,c++,fortran,go,lto,objc,obj-c++ \
+		--disable-multilib       \
+		--disable-bootstrap      \
+      	--disable-werror \
+      --enable-shared \
+      --enable-threads=posix \
+      --enable-__cxa_atexit \
+      --disable-libunwind-exceptions \
+      --enable-clocale=gnu \
+      --disable-libstdcxx-pch \
+      --disable-libssp \
+      --enable-gnu-unique-object \
+      --enable-linker-build-id \
+      --enable-lto \
+      --enable-plugin \
+      --enable-install-libiberty \
+      --with-linker-hash-style=gnu \
+      --enable-gnu-indirect-function \
+      --enable-checking=release \
+      --enable-default-pie \
+      --enable-default-ssp \
+		--with-system-zlib
+    make
+}
+
+check() {
+    cd "${pkgname}-${pkgver}/build"
+    make -k check 2>&1 | tee ${pkgname}-${pkgver}-check-log
+    ../contrib/test_summary | tee ${pkgname}-${pkgver}-test-summary
+}
+
+package() {
+    cd "${pkgname}-${pkgver}/build"
+
+    make DESTDIR=${pkgdir} install
+
+    install -vdm755 ${pkgdir}/lib
+    ln -sv ../usr/bin/cpp ${pkgdir}/lib
+
+    ln -sv gcc ${pkgdir}/usr/bin/cc
+
+    install -vdm755 ${pkgdir}/usr/lib/bfd-plugins
+    ln -sfv ../../libexec/gcc/$(${pkgdir}/usr/bin/gcc -dumpmachine)/${pkgver}/liblto_plugin.so \
+       ${pkgdir}/usr/lib/bfd-plugins/
+
+    install -vdm755 ${pkgdir}/usr/share/gdb/auto-load/usr/lib
+    mv -v ${pkgdir}/usr/lib/*gdb.py ${pkgdir}/usr/share/gdb/auto-load/usr/lib
+}
