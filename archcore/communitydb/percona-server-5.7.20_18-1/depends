@@ -1,0 +1,10 @@
+%DEPENDS%
+libaio
+systemd-tools
+pam
+jemalloc
+numactl
+lz4
+zstd
+openssl
+

@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+ghc
+haskell-hspec
+haskell-wai-extra
+haskell-persistent-sqlite
+haskell-text
+

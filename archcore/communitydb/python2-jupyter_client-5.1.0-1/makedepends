@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python2-ipykernel
+python2-traitlets
+python2-pyzmq
+python2-jupyter_core
+

@@ -1,0 +1,4 @@
+%DEPENDS%
+wxgtk3
+webkit2gtk
+

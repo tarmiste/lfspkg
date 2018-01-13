@@ -1,0 +1,9 @@
+%DEPENDS%
+python-gobject
+python-xdg
+python-pexpect
+python-cairo
+python-ptyprocess
+gtk3
+xdg-utils
+

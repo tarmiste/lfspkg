@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+perl-curses-ui
+perl-poe
+

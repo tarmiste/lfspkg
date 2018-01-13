@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+libxaw
+openmpi
+givaro
+mpfi
+normaliz
+polymake
+boost
+c-xsc
+

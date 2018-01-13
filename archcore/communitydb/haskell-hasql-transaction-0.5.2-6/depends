@@ -1,0 +1,9 @@
+%DEPENDS%
+ghc-libs
+haskell-base-prelude
+haskell-bytestring-tree-builder
+haskell-contravariant
+haskell-contravariant-extras
+haskell-hasql
+haskell-mtl
+

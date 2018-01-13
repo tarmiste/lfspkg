@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+bazel
+python-numpy
+gcc6
+cuda
+nvidia-utils
+cudnn
+python-pip
+python-wheel
+python-setuptools
+

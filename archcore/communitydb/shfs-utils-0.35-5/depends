@@ -1,7 +1,0 @@
-%DEPENDS%
-glibc
-openssh
-
-%MAKEDEPENDS%
-patch
-

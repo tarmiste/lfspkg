@@ -1,0 +1,7 @@
+%DEPENDS%
+ghc-libs
+haskell-blaze-builder
+haskell-mtl
+haskell-text
+haskell-utf8-string
+

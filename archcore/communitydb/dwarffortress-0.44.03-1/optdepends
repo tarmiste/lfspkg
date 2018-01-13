@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+nvidia-utils: If you have nvidia graphics
+alsa-lib: for alsa sound
+libpulse: for pulse sound
+

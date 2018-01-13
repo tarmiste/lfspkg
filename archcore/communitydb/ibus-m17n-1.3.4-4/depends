@@ -1,6 +1,0 @@
-%DEPENDS%
-python2-pyenchant
-ibus
-m17n-db
-m17n-lib
-

@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+sdl
+sdl_sound
+sdl_mixer
+

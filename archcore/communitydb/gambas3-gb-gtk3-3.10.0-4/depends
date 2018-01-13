@@ -1,0 +1,4 @@
+%DEPENDS%
+gambas3-gb-image
+gtk3
+

@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+pkg-config
+perl-xml-parser
+intltool
+gcc-objc
+

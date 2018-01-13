@@ -1,0 +1,10 @@
+%DEPENDS%
+libmagick6
+ffmpeg
+libx264
+libopenshot-audio
+python
+jsoncpp
+qt5-multimedia
+zeromq
+

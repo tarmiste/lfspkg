@@ -1,0 +1,9 @@
+%DEPENDS%
+glib2
+libsndfile
+libsamplerate
+zlib
+bzip2
+xz
+shared-mime-info
+

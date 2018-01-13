@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+boost
+libxml2
+

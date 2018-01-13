@@ -1,0 +1,12 @@
+%CHECKDEPENDS%
+python-mock
+python2-mock
+python-testrepository
+python2-testrepository
+python-scripttest
+python2-scripttest
+python-ibm-db-sa
+python2-ibm-db-sa
+mysql-python
+python2-psycopg2
+

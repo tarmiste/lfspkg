@@ -1,0 +1,14 @@
+%DEPENDS%
+ghc-libs
+haskell-attoparsec
+haskell-blaze-builder
+haskell-text
+haskell-blaze-markup
+haskell-conduit
+haskell-conduit-extra
+haskell-data-default-class
+haskell-monad-control
+haskell-resourcet
+haskell-blaze-html
+haskell-xml-types
+

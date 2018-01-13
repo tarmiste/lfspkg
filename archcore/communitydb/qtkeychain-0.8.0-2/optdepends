@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+kwallet: kwallet backend
+libgnome-keyring: GNOME keyring backend
+libsecret: libsecret backend
+

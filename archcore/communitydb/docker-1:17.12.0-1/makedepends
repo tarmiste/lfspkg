@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+git
+go-pie
+btrfs-progs
+cmake
+systemd
+

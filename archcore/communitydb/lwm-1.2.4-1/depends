@@ -1,8 +1,0 @@
-%DEPENDS%
-xorg-server
-libxext
-libsm
-
-%MAKEDEPENDS%
-imake
-

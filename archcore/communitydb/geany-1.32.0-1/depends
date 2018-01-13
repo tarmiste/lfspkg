@@ -1,0 +1,5 @@
+%DEPENDS%
+desktop-file-utils
+gtk2
+hicolor-icon-theme
+

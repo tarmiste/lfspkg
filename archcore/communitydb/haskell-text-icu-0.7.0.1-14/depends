@@ -1,0 +1,5 @@
+%DEPENDS%
+icu
+ghc
+haskell-text
+

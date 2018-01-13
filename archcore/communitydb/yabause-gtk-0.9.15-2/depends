@@ -1,0 +1,7 @@
+%DEPENDS%
+freeglut
+glew
+gtkglext
+openal
+sdl2
+

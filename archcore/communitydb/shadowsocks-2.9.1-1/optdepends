@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+libsodium: For salsa20 and chacha20 support
+

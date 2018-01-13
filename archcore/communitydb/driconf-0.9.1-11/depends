@@ -1,6 +1,0 @@
-%DEPENDS%
-pygtk
-expat
-xorg-xdriinfo
-mesa-demos
-

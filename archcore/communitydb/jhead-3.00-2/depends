@@ -1,6 +1,0 @@
-%DEPENDS%
-glibc
-
-%OPTDEPENDS%
-libjpeg: to up-right images according to rotation tag
-

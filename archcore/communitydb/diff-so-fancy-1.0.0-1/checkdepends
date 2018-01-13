@@ -1,0 +1,4 @@
+%CHECKDEPENDS%
+bash-bats-assert
+bash-bats-support
+

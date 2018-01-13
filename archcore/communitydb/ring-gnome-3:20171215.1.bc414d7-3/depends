@@ -1,0 +1,16 @@
+%DEPENDS%
+libringclient
+ring-daemon
+gtk3
+dconf
+clutter
+clutter-gtk
+webkit2gtk
+qrencode
+qt5-base
+gtk-update-icon-cache
+desktop-file-utils
+evolution-data-server
+libnotify
+libnm-glib
+

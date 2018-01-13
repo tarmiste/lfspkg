@@ -1,0 +1,7 @@
+%DEPENDS%
+e2fsprogs
+glib2
+gpm
+libssh2
+slang
+

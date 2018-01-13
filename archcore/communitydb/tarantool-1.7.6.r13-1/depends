@@ -1,0 +1,10 @@
+%DEPENDS%
+readline
+ncurses
+zlib
+libyaml
+openssl
+libunwind
+curl
+icu
+

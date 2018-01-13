@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+gd: for CGI
+gconf: for frontend
+gtk2: for frontend
+

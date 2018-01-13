@@ -1,0 +1,13 @@
+%DEPENDS%
+opencl-icd-loader
+opencl-headers
+mesa
+boost-libs
+python
+python-numpy
+python-mako
+python-pytools
+pyopencl-headers
+python-setuptools
+python-cffi
+

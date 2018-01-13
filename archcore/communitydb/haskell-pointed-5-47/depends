@@ -1,0 +1,13 @@
+%DEPENDS%
+ghc-libs
+haskell-comonad
+haskell-data-default-class
+haskell-hashable
+haskell-kan-extensions
+haskell-semigroupoids
+haskell-semigroups
+haskell-stm
+haskell-tagged
+haskell-transformers-compat
+haskell-unordered-containers
+

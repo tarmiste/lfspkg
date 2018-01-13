@@ -1,0 +1,7 @@
+%DEPENDS%
+zlib
+pam
+xplc
+openssl-1.0
+readline
+

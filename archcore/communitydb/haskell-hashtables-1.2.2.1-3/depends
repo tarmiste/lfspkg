@@ -1,0 +1,7 @@
+%DEPENDS%
+ghc-libs
+sh
+haskell-hashable
+haskell-primitive
+haskell-vector
+

@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+python-amqp
+python2-amqp
+python-setuptools
+python2-setuptools
+

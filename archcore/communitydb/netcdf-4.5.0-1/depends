@@ -1,0 +1,4 @@
+%DEPENDS%
+hdf5
+curl
+

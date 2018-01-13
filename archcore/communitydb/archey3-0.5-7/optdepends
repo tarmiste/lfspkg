@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+imagemagick: for default screenshot command
+python-logbook: alternative logging system
+

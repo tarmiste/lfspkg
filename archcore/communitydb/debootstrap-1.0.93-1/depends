@@ -1,0 +1,4 @@
+%DEPENDS%
+wget
+binutils
+

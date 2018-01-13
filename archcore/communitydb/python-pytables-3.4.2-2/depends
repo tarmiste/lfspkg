@@ -1,0 +1,6 @@
+%DEPENDS%
+lzo
+hdf5
+python-numexpr
+blosc
+

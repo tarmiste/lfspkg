@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+checksec: checksec command support
+ropper: ropper command support
+ropgadget: ropgadget command support
+radare2: radare2 command support
+

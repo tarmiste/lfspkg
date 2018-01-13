@@ -1,0 +1,9 @@
+%DEPENDS%
+libiec61883
+libavc1394
+dbus-c++
+libxml++
+jack
+libsigc++
+libconfig
+

@@ -1,0 +1,5 @@
+%DEPENDS%
+glib2
+libxslt
+osinfo-db
+

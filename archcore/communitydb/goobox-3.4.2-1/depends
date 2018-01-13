@@ -1,0 +1,8 @@
+%DEPENDS%
+gst-plugins-base
+brasero
+libmusicbrainz5
+libdiscid
+libcoverart
+libnotify
+

@@ -1,0 +1,10 @@
+%DEPENDS%
+libpng
+sdl
+icu
+fontconfig
+lzo
+hicolor-icon-theme
+desktop-file-utils
+xz
+

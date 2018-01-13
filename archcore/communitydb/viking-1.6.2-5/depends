@@ -1,0 +1,8 @@
+%DEPENDS%
+curl
+file
+gpsd
+gtk2
+libgexiv2
+mapnik
+

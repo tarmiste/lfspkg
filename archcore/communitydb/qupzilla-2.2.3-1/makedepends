@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+qt5-tools
+kwallet
+libgnome-keyring
+

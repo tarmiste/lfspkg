@@ -1,0 +1,12 @@
+%MAKEDEPENDS%
+python2
+python
+python-sphinx
+emacs
+gnupg
+ruby
+pkgconfig
+xapian-core
+gmime
+talloc
+

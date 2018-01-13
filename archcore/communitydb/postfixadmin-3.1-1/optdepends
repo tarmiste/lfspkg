@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+mariadb: MySQL server
+postgresql: PostgreSQL server
+

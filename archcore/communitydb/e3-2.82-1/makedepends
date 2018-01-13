@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+setconf
+nasm
+yasm
+

@@ -1,0 +1,10 @@
+%CHECKDEPENDS%
+python-pytest-runner
+python2-pytest-runner
+python-flexmock
+python2-flexmock
+python-pytest-cov
+python2-pytest-cov
+python-six
+python2-six
+

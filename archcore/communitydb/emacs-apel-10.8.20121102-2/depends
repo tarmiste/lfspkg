@@ -1,6 +1,0 @@
-%DEPENDS%
-emacs
-
-%MAKEDEPENDS%
-git
-

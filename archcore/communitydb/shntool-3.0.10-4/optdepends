@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+mac: support for ape format
+flac: support for flac format
+wavpack: support for wv format
+

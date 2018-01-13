@@ -1,0 +1,6 @@
+%DEPENDS%
+python-crypto
+python-six
+python-ecdsa
+python-future
+

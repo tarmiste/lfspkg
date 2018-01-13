@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+sxhkd: to define keyboard and pointer bindings
+xdo: for the example panel
+

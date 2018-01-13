@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+python-nose: for IPython's test suite
+

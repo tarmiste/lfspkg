@@ -1,0 +1,8 @@
+%OPTDEPENDS%
+python2-pyqt4: for Qt backend (or python2-pyside)
+python2-pyside: for Qt backend (or python2-pyqt4)
+python2-pygments: for syntax coloring in Qt backend
+python2-setuptools: to locate resources inside zip and egg files
+ipython2: for IPython widget
+wxpython: for wx backend
+

@@ -1,8 +1,0 @@
-%DEPENDS%
-sdl
-libgl
-libpng
-
-%MAKEDEPENDS%
-mesa
-

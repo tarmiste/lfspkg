@@ -1,0 +1,6 @@
+%CHECKDEPENDS%
+python-flask-babel
+python-nose
+python2-flask-babel
+python2-nose
+

@@ -1,0 +1,5 @@
+%DEPENDS%
+sfml
+glu
+freetype2
+

@@ -1,0 +1,11 @@
+%DEPENDS%
+ghc-libs
+haskell-cryptonite
+haskell-data-default-class
+haskell-network
+haskell-streaming-commons
+haskell-tls
+haskell-tls-session-manager
+haskell-wai
+haskell-warp
+

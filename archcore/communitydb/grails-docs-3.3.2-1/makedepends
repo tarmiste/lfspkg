@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+apache-ant
+unzip
+setconf
+junit
+java-environment
+

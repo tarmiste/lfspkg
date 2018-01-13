@@ -1,0 +1,6 @@
+%DEPENDS%
+gcc
+popt
+avahi
+dbus
+

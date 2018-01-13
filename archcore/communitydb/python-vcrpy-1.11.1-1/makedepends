@@ -1,0 +1,13 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-yaml
+python2-yaml
+python-wrapt
+python2-wrapt
+python-six
+python2-six
+python-yarl
+python2-contextlib2
+python2-mock
+

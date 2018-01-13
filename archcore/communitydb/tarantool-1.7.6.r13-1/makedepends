@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+git
+cmake
+systemd
+

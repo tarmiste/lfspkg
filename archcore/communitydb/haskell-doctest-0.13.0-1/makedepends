@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+ghc
+haskell-hunit
+haskell-hspec
+haskell-quickcheck
+haskell-stringbuilder
+haskell-silently
+haskell-setenv
+haskell-with-location
+haskell-mockery
+

@@ -1,0 +1,4 @@
+%DEPENDS%
+python2-twisted
+python2-pyopenssl
+

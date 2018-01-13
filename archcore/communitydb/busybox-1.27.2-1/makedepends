@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+make
+gcc
+sed
+ncurses
+musl
+kernel-headers-musl
+

@@ -1,0 +1,9 @@
+%OPTDEPENDS%
+arj: Decoder for: .arj .exe
+lrzip: Decoder for: .lrz
+lz4: Decoder for: .lz4
+lzo: Decoder for: .lzo
+p7zip: Decoder for: .7z
+unrar: Decoder for: .rar
+rpmextract: Decoder for: .rpm
+

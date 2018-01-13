@@ -1,0 +1,8 @@
+%CHECKDEPENDS%
+python-fixtures
+python2-fixtures
+python-hypothesis
+python2-hypothesis
+python-testscenarios
+python2-testscenarios
+

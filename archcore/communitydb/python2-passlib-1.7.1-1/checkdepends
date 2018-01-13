@@ -1,0 +1,13 @@
+%CHECKDEPENDS%
+python-nose
+python2-nose
+python-bcrypt
+python2-bcrypt
+python-django
+python2-django
+python2-m2crypto
+python-fastpbkdf2
+python2-fastpbkdf2
+python-scrypt
+python2-scrypt
+

@@ -1,8 +1,0 @@
-%DEPENDS%
-net-tools
-pygtk
-wireless_tools
-
-%OPTDEPENDS%
-polkit: needed if you launch wifi-radar from menu
-

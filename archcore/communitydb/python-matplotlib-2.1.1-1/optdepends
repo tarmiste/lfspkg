@@ -1,0 +1,10 @@
+%OPTDEPENDS%
+python-gobject: for GTK3Agg/GTK3Cairo backend
+python-cairocffi: for GTK3Agg/GTK3Cairo backend
+python-pyqt4: for Qt4Agg backend
+tk: used by the TkAgg backend
+ghostscript: usetex dependencies
+texlive-bin: usetex dependencies
+python-tornado: for webagg backend
+python-pillow: for reading/saving .jpg/bmp/tiff files
+

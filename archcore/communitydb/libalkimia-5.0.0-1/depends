@@ -1,8 +1,0 @@
-%DEPENDS%
-kdelibs
-
-%MAKEDEPENDS%
-cmake
-automoc4
-doxygen
-

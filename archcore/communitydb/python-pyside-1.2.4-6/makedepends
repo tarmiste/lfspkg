@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+python
+python2
+qt4>=4.8
+python-shiboken>=1.2.4
+python2-shiboken>=1.2.4
+cmake
+phonon
+

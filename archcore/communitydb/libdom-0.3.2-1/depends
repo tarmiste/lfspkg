@@ -1,0 +1,6 @@
+%DEPENDS%
+expat
+libhubbub>=0.3.4
+libparserutils>=0.2.3
+libwapcaplet>=0.4.0
+

@@ -1,0 +1,5 @@
+%DEPENDS%
+deepin-qt5integration
+deepin-qt-dbus-factory
+polkit-qt5
+

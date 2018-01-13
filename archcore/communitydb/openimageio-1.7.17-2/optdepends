@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+qt4: iv image viewer
+python2: bindings support
+

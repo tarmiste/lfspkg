@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+pygmentize: syntax-highlight code snippets
+

@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+boost
+libevent
+qt5-base
+qt5-tools
+qrencode
+miniupnpc
+protobuf
+zeromq
+

@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-autoconf
-automake
-libtool
-gcc
-libxaw
-

@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+llvm
+clang
+cmake
+python
+ocl-icd
+

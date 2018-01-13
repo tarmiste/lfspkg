@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+git
+gnupg
+libxslt
+docbook-xsl
+lynx
+

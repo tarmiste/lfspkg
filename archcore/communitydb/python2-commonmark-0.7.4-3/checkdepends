@@ -1,0 +1,4 @@
+%CHECKDEPENDS%
+python-hypothesis
+python2-hypothesis
+

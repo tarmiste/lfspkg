@@ -1,0 +1,7 @@
+%DEPENDS%
+yajl
+curl
+libxml2
+pcre
+geoip
+

@@ -1,0 +1,15 @@
+%MAKEDEPENDS%
+cmake
+graphviz
+doxygen
+opencl-headers
+glfw
+glew
+boost
+git
+python
+ocl-icd
+gcc6
+cuda
+nvidia-utils
+

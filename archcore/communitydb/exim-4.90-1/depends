@@ -1,0 +1,8 @@
+%DEPENDS%
+gdbm
+pcre
+pam
+openssl
+libldap
+sqlite
+

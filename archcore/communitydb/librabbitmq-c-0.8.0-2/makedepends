@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+cmake
+docbook-xsl
+doxygen
+xmlto
+

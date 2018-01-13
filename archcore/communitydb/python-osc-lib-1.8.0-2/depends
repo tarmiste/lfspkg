@@ -1,0 +1,13 @@
+%DEPENDS%
+python-six
+python-pbr
+python-babel
+python-cliff
+python-keystoneauth1
+python-os-client-config
+python-oslo-i18n
+python-oslo-utils
+python-stevedore
+python-simplejson
+python-openstacksdk
+

@@ -1,0 +1,4 @@
+%DEPENDS%
+libappindicator-gtk2
+python2
+

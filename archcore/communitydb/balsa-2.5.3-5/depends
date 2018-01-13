@@ -1,0 +1,10 @@
+%DEPENDS%
+gmime
+webkit2gtk
+libesmtp
+libnotify
+gpgme
+gtksourceview3
+gspell
+desktop-file-utils
+

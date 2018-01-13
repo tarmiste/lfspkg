@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+rpcbind: NFS
+glib2: qemu-block
+

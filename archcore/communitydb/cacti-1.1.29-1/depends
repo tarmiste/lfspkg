@@ -1,0 +1,8 @@
+%DEPENDS%
+rrdtool
+mariadb
+php
+php-gd
+net-snmp
+xorg-fonts-100dpi
+

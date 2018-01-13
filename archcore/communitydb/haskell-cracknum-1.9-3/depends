@@ -1,0 +1,6 @@
+%DEPENDS%
+ghc-libs
+haskell-ieee754
+haskell-data-binary-ieee754
+haskell-floatinghex
+

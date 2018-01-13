@@ -1,0 +1,7 @@
+%DEPENDS%
+python
+python-gobject
+gtk3
+python-pillow
+glibc
+

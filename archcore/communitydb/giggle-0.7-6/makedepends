@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+intltool
+itstool
+gnome-common
+yelp-tools
+

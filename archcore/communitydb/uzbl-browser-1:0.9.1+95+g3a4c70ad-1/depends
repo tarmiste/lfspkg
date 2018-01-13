@@ -1,0 +1,10 @@
+%DEPENDS%
+uzbl-core
+socat
+zenity
+xclip
+dmenu
+python2
+python-setuptools
+python-six
+

@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+python-lxml: lxml treebuilder
+python-genshi: genshi treewalker
+

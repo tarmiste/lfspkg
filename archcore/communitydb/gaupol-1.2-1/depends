@@ -1,0 +1,13 @@
+%DEPENDS%
+python-gobject
+gtk3
+gst-plugins-base
+gst-plugins-good
+iso-codes
+python-cairo
+python-pyenchant
+python-chardet
+gtkspell3
+desktop-file-utils
+hicolor-icon-theme
+

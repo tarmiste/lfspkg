@@ -1,0 +1,6 @@
+%DEPENDS%
+erlang
+desktop-file-utils
+erlang-sdl
+erlang-cl
+

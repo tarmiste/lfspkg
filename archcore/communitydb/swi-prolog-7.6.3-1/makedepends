@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+libjpeg
+libxft
+libxinerama
+libxpm
+unixodbc
+

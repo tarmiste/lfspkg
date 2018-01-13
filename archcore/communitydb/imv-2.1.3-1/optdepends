@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+cmocka: for running unit tests
+

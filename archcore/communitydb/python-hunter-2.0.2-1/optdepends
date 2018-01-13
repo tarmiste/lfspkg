@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+python-manhole: for remote support
+gdb: for remote support
+

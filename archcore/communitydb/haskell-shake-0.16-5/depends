@@ -1,0 +1,11 @@
+%DEPENDS%
+ghc-libs
+haskell-extra
+haskell-hashable
+haskell-js-flot
+haskell-js-jquery
+haskell-primitive
+haskell-random
+haskell-unordered-containers
+haskell-utf8-string
+

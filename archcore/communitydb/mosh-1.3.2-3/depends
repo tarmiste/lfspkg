@@ -1,0 +1,5 @@
+%DEPENDS%
+libutempter
+perl-io-tty
+protobuf
+

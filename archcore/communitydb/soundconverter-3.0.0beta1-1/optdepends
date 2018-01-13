@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+gst-plugins-ugly: Extra media codecs
+gst-plugins-bad: Extra media codecs
+gst-libav: Extra media codecs
+

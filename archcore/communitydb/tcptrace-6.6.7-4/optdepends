@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+tcpdump: for generating dumps
+gnuplot: for plotting graphs
+xplot: for plotting graphs
+

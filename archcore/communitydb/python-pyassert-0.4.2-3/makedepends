@@ -1,0 +1,16 @@
+%MAKEDEPENDS%
+python-pybuilder
+python2-pybuilder
+python-mockito
+python2-mockito
+python-coverage
+python2-coverage
+python-six
+python2-six
+git
+python-unittest-xml-reporting
+python2-unittest-xml-reporting
+flake8
+python2-flake8
+pychecker
+

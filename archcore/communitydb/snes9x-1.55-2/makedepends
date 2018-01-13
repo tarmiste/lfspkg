@@ -1,0 +1,12 @@
+%MAKEDEPENDS%
+intltool
+nasm
+mesa
+libpulse
+libpng
+sdl
+gtk2
+libxv
+adwaita-icon-theme
+minizip
+

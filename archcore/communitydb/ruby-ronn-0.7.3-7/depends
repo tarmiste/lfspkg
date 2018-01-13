@@ -1,0 +1,6 @@
+%DEPENDS%
+ruby
+ruby-hpricot
+ruby-rdiscount
+ruby-mustache
+

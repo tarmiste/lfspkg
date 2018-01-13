@@ -1,0 +1,14 @@
+%MAKEDEPENDS%
+asciidoc
+source-highlight
+cmake
+pkg-config
+perl
+python2
+lua
+tcl
+ruby
+aspell
+guile2.0
+asciidoctor
+

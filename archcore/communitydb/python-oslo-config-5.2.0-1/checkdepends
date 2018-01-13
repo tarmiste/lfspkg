@@ -1,0 +1,6 @@
+%CHECKDEPENDS%
+python-oslotest
+python2-oslotest
+python-sphinx
+python2-sphinx
+

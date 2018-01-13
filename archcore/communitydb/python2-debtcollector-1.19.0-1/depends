@@ -1,0 +1,7 @@
+%DEPENDS%
+python2-six
+python2-pbr
+python2-babel
+python2-wrapt
+python2-funcsigs
+

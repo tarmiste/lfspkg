@@ -1,0 +1,6 @@
+%DEPENDS%
+dbus
+vhba-module
+libao
+libmirage>=3.1.0
+

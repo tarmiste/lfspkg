@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+perl-test-exception
+perl-test-fatal
+perl-module-build
+perl-module-build-xsutil
+perl-test-requires
+perl-test-leaktrace
+perl-test-output
+perl-test-deep
+perl-io-string
+

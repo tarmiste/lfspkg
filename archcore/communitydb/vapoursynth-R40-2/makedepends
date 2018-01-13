@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+cython
+python-sphinx
+nasm
+

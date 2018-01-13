@@ -1,0 +1,4 @@
+%DEPENDS%
+gtk2
+fcitx>=4.2.9.5
+

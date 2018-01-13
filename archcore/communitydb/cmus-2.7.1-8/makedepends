@@ -1,0 +1,15 @@
+%MAKEDEPENDS%
+faad2
+ffmpeg
+flac
+libao
+libcdio-paranoia
+libmad
+libmodplug
+libmp4v2
+libmpcdec
+libpulse
+libvorbis
+opusfile
+wavpack
+

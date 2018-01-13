@@ -1,0 +1,9 @@
+%DEPENDS%
+ruby2.4
+libpcap
+postgresql-libs
+ruby2.4-bundler
+sqlite
+libxslt
+git
+

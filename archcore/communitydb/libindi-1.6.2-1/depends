@@ -1,0 +1,8 @@
+%DEPENDS%
+libnova
+cfitsio
+libusb
+libjpeg
+gsl
+libtheora
+

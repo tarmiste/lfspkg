@@ -1,0 +1,6 @@
+%DEPENDS%
+python-keyring
+python-minidb
+python-requests
+python-yaml
+

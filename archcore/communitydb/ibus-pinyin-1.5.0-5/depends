@@ -1,9 +1,0 @@
-%DEPENDS%
-ibus
-pyzy
-lua51
-python2-xdg
-
-%MAKEDEPENDS%
-intltool
-

@@ -1,0 +1,6 @@
+%DEPENDS%
+libgl
+libjpeg
+bzip2
+libpng
+

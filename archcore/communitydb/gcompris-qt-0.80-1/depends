@@ -1,0 +1,10 @@
+%DEPENDS%
+qt5-declarative
+qt5-multimedia
+qt5-svg
+qt5-sensors
+qt5-quickcontrols
+qt5-graphicaleffects
+qml-box2d
+hicolor-icon-theme
+

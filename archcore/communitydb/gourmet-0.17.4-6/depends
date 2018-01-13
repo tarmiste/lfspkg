@@ -1,0 +1,6 @@
+%DEPENDS%
+pygtk
+python2-elib-intl
+python2-pillow
+python2-sqlalchemy
+

@@ -1,0 +1,4 @@
+%DEPENDS%
+jack
+python2-dbus
+

@@ -1,0 +1,7 @@
+%DEPENDS%
+accountsservice
+gtk3
+libxkbfile
+python
+libpulse
+

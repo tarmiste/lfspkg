@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+caja: Document Properties extension
+texlive-bin: DVI support
+

@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+python-iniparse: for ini2po
+gaupol: for po2sub
+python-chardet: encoding detector
+python-levenshtein: faster matching
+

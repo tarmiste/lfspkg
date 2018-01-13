@@ -1,0 +1,4 @@
+%CHECKDEPENDS%
+python-coverage
+python2-coverage
+

@@ -1,0 +1,11 @@
+%DEPENDS%
+boost-libs
+opencl-icd-loader
+libmatio
+vtk
+libjpeg
+libpng
+libtiff
+freetype2
+libgl
+

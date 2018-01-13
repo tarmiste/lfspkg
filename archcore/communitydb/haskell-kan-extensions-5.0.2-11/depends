@@ -1,0 +1,11 @@
+%DEPENDS%
+ghc-libs
+haskell-adjunctions
+haskell-comonad
+haskell-contravariant
+haskell-distributive
+haskell-free
+haskell-mtl
+haskell-semigroupoids
+haskell-tagged
+

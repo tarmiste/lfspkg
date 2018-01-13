@@ -1,0 +1,4 @@
+%DEPENDS%
+libpulse
+boost-libs
+

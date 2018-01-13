@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+ghc
+haskell-test-framework
+haskell-test-framework-hunit
+

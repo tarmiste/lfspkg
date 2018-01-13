@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+gvfs: for trash support, mounting with udisks and remote filesystems
+xarchiver: archive management
+

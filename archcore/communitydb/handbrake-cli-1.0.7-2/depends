@@ -1,0 +1,14 @@
+%DEPENDS%
+bzip2
+gcc-libs
+zlib
+libass
+lame
+libxml2
+opus
+libvorbis
+libtheora
+libsamplerate
+libx264
+jansson
+

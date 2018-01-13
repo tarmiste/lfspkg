@@ -1,0 +1,7 @@
+%DEPENDS%
+ghc-libs
+haskell-abstract-par
+haskell-cereal
+haskell-mtl
+haskell-random
+

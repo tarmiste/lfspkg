@@ -1,0 +1,10 @@
+%DEPENDS%
+libdrm
+libpciaccess
+cairo
+python
+xorg-xrandr
+procps-ng
+kmod
+libxv
+

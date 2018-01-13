@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+xorg-bdftopcf
+fontconfig
+xorg-mkfontscale
+xorg-mkfontdir
+python3
+

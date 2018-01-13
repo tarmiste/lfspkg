@@ -1,0 +1,4 @@
+%DEPENDS%
+dbeaver>=4.2.5
+dbeaver-plugin-batik
+

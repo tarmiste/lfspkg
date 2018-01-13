@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+cmake
+ladspa
+libxft
+freetype2
+fftw
+stk
+wine
+gcc-multilib
+

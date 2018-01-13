@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+fortune-mod: for displaying fortune cookies in the Wanda the Fish applet
+gucharmap: character picker applet
+

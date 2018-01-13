@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+cmake
+intltool
+vala
+webkit2gtk
+

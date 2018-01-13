@@ -1,0 +1,7 @@
+%DEPENDS%
+python2-fuse
+par2cmdline
+pylibacl
+python2-pyxattr
+git
+

@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+python2-futures: recommended thread pool and for tornado.netutil.ThreadedResolver
+python2-monotonic: enable support for a monotonic clock
+python2-pycurl: for tornado.curl_httpclient
+python2-twisted: for tornado.platform.twisted
+

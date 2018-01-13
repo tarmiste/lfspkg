@@ -1,0 +1,9 @@
+%DEPENDS%
+hicolor-icon-theme
+libconfig
+libdbus
+libgl
+libxcomposite
+libxinerama
+libxrandr
+

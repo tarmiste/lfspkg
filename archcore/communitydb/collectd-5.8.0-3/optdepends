@@ -1,0 +1,28 @@
+%OPTDEPENDS%
+curl: apache, ascent, curl, nginx, and write_http plugins
+libdbi: dbi plugin
+libesmtp: notify_email plugin
+libgcrypt: encryption and authentication for network plugin
+libmemcached: memcachec plugin
+libmariadbclient: mysql plugin
+libsystemd: UdevNameAttr option
+iproute2: netlink plugin
+net-snmp: snmp plugin
+libnotify: notify_desktop plugin
+openipmi: ipmi plugin
+liboping: ping plugin
+libpcap: dns plugin
+perl: perl plugin
+postgresql-libs: postgresql plugin
+python2: python plugin
+rrdtool: rrdtool and rrdcached plugins
+lm_sensors: lm_sensors and sensors plugins
+libvirt: libvirt plugin
+libxml2: ascent and libvirt plugins
+yajl: curl_json plugin
+libatasmart: smart plugin
+lvm2: lvm plugin
+protobuf-c: write_riemann plugin
+mosquitto: MQTT plugin
+libmicrohttpd: prometheus plugin
+

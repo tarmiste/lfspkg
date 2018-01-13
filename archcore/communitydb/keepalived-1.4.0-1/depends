@@ -1,0 +1,7 @@
+%DEPENDS%
+openssl
+popt
+libnl1
+ipset
+iptables
+

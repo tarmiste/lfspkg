@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+cmake
+swig
+qt5-tools
+ruby
+

@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+subversion
+asciidoc
+xmlto
+

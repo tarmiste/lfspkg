@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+check
+git
+inetutils
+netsurf-buildsystem
+nsgenbind>=0.5
+perl-html-parser
+re2c
+setconf
+

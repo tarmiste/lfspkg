@@ -1,0 +1,6 @@
+%DEPENDS%
+gnome-panel
+libatasmart
+libxnvctrl
+lm_sensors
+

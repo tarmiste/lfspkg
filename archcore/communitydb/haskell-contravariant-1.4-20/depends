@@ -1,0 +1,7 @@
+%DEPENDS%
+ghc-libs
+haskell-statevar
+haskell-semigroups
+haskell-transformers-compat
+haskell-void
+

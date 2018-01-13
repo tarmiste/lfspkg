@@ -1,0 +1,8 @@
+%DEPENDS%
+wlc
+xorg-server-xwayland
+json-c
+pango
+wayland
+gdk-pixbuf2
+

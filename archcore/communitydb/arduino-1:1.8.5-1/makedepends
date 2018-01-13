@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+java-environment=8
+apache-ant
+unzip
+

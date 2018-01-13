@@ -1,0 +1,10 @@
+%DEPENDS%
+dbus-glib
+libcanberra
+libmatekbd
+libmatemixer
+libnotify
+mate-desktop
+nss
+polkit
+

@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+chrpath
+ghc
+

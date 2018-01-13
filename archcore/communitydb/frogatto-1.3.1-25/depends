@@ -1,0 +1,12 @@
+%DEPENDS%
+git
+glew
+sdl
+sdl_image
+sdl_ttf
+sdl_mixer
+libpng
+boost-libs
+frogatto-data
+ttf-ubuntu-font-family
+

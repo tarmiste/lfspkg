@@ -1,0 +1,4 @@
+%DEPENDS%
+ghc-libs
+haskell-mtl
+

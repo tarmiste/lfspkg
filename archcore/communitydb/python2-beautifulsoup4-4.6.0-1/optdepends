@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+python2-chardet: to autodetect character encodings
+python2-lxml: alternative HTML parser
+python2-html5lib: alternative HTML parser
+

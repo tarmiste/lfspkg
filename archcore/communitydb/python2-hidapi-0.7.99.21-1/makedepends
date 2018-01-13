@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+cython2
+python2-setuptools
+cython
+python-setuptools
+libusb
+udev
+

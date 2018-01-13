@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+gnome-common
+intltool
+vala
+

@@ -1,0 +1,6 @@
+%CHECKDEPENDS%
+python-numpy
+python2-numpy
+python-uncertainties
+python2-uncertainties
+

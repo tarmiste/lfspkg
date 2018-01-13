@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-setuptools-scm
+python2-setuptools-scm
+python-tox
+python2-tox
+python-tempora
+python2-tempora
+

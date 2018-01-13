@@ -1,0 +1,15 @@
+%DEPENDS%
+ghc-libs
+haskell-aeson
+haskell-aeson-pretty
+haskell-dlist
+haskell-fclabels
+haskell-mtl
+haskell-parallel
+haskell-parsec
+haskell-safe
+haskell-text
+haskell-uniplate
+haskell-tamarin-prover-utils
+haskell-tamarin-prover-term
+

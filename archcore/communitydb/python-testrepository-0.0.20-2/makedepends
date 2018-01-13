@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-fixtures
+python2-fixtures
+python-testtools
+python2-testtools
+python-subunit
+python2-subunit
+

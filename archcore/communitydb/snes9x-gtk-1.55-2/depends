@@ -1,0 +1,8 @@
+%DEPENDS%
+sdl
+libpulse
+gtk2
+libxv
+adwaita-icon-theme
+minizip
+

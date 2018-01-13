@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+python2-distutils-extra
+python2-setuptools
+

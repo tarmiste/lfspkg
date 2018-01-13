@@ -1,0 +1,6 @@
+%DEPENDS%
+sdl_mixer
+sdl_image
+libgl
+sauerbraten-data
+

@@ -1,0 +1,5 @@
+%DEPENDS%
+texlive-latexextra
+pygmentize
+fvextra
+

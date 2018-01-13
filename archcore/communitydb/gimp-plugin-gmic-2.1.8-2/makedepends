@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+gimp
+qt5-base
+fftw
+openexr
+opencv
+git
+hdf5
+

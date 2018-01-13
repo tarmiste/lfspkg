@@ -1,0 +1,6 @@
+%DEPENDS%
+gambas3-runtime
+v4l-utils
+libjpeg
+libpng
+

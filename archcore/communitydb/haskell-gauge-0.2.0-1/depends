@@ -1,0 +1,7 @@
+%DEPENDS%
+ghc-libs
+haskell-basement
+haskell-mwc-random
+haskell-vector
+haskell-math-functions
+

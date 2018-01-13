@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+tk: needed for epydocgui
+texlive-bin: needed for PDF conversion
+graphviz: needed for graph generation
+

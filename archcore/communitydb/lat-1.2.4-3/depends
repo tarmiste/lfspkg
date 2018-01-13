@@ -1,0 +1,4 @@
+%DEPENDS%
+gconf-sharp
+libgnome-keyring
+

@@ -1,0 +1,6 @@
+%DEPENDS%
+gambas3-gb-image
+qt5-base
+qt5-svg
+qt5-x11extras
+

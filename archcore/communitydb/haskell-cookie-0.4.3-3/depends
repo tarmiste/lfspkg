@@ -1,0 +1,7 @@
+%DEPENDS%
+ghc-libs
+haskell-blaze-builder
+haskell-data-default-class
+haskell-old-locale
+haskell-text
+

@@ -1,0 +1,9 @@
+%DEPENDS%
+libbsd
+libev
+libevent
+libidn
+libuv
+libyaml
+unbound
+

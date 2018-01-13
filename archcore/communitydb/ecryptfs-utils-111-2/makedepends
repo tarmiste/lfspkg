@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+swig
+intltool
+gettext
+python2
+

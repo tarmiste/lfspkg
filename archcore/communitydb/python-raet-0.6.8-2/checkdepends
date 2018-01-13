@@ -1,0 +1,4 @@
+%CHECKDEPENDS%
+python-pytest-runner
+python-bitvector
+

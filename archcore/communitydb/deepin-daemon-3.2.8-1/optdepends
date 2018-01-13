@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+networkmanager: for network management support
+deepin-grub2-themes: theme for grub module
+iw: for miracast module
+proxychains-ng: for proxy configuration module
+

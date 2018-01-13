@@ -1,0 +1,6 @@
+%DEPENDS%
+python2-httplib2
+python2-oauth2client
+python2-uritemplate
+python2-six
+

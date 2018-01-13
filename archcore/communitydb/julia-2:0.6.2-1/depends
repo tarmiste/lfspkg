@@ -1,0 +1,12 @@
+%DEPENDS%
+arpack
+fftw
+hicolor-icon-theme
+libgit2
+libunwind
+llvm39-libs
+mpfr
+patchelf
+pcre2
+suitesparse
+

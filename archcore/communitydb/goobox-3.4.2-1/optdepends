@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+gst-plugins-good: rip CDs into flac and wav formats
+

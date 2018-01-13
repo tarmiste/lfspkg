@@ -1,0 +1,8 @@
+%DEPENDS%
+ncurses
+libtermkey
+lua
+lua-lpeg
+tre
+file
+

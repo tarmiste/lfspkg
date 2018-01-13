@@ -1,0 +1,4 @@
+%DEPENDS%
+xorg-font-utils
+fontconfig
+

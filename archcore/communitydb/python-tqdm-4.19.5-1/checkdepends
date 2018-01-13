@@ -1,0 +1,8 @@
+%CHECKDEPENDS%
+python-nose
+python2-nose
+python-coverage
+python2-coverage
+flake8
+python2-flake8
+

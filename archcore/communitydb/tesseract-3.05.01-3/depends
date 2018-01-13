@@ -1,0 +1,9 @@
+%DEPENDS%
+libpng
+libtiff
+libjpeg-turbo
+zlib
+giflib
+gcc-libs
+leptonica
+

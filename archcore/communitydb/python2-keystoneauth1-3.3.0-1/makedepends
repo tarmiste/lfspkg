@@ -1,0 +1,14 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-pbr
+python2-pbr
+python-iso8601
+python2-iso8601
+python-positional
+python2-positional
+python-requests
+python2-requests
+python-stevedore
+python2-stevedore
+

@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+c2hs
+ghc
+

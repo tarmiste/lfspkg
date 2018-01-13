@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+cmake
+qt4
+python2
+boost
+mesa
+git
+freetype2
+fontconfig
+libxrender
+

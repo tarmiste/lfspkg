@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+cmake
+boost
+boost-libs
+scons
+

@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python2-jaraco
+python2-more-itertools
+python2-pytz
+python2-tempora
+

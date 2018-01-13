@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+kdesignerplugin
+kdoctools
+python
+intltool
+

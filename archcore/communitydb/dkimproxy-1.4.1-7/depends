@@ -1,0 +1,5 @@
+%DEPENDS%
+perl-mail-dkim
+perl-net-server
+perl-error
+

@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+popt
+python
+python2
+

@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+ghc
+haskell-quickcheck
+haskell-hunit
+haskell-hspec
+haskell-mtl
+haskell-stm
+

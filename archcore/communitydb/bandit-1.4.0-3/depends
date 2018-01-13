@@ -1,0 +1,7 @@
+%DEPENDS%
+python-yaml
+python-stevedore
+python-appdirs
+python-six
+python-pbr
+

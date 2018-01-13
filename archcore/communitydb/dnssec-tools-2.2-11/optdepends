@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+perl-tk: for GUI components
+perl-graphviz: for GUI components
+

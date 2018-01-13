@@ -1,8 +1,0 @@
-%DEPENDS%
-libgl
-libpulse
-libxrender
-
-%MAKEDEPENDS%
-cmake
-

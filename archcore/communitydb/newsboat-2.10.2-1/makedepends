@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+swig
+gettext
+asciidoc
+

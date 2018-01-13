@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+gtk2
+qt4
+kdelibs4support
+kdoctools
+frameworkintegration
+python
+kdesignerplugin
+git
+

@@ -1,0 +1,7 @@
+%DEPENDS%
+python-magic
+python-libarchive-c
+python-setuptools
+python-distro
+python-defusedxml
+

@@ -1,0 +1,4 @@
+%DEPENDS%
+dtkcore
+qt5-x11extras
+

@@ -1,0 +1,4 @@
+%DEPENDS%
+libimobiledevice
+fuse2
+

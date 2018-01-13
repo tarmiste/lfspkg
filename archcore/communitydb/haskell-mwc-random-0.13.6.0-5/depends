@@ -1,0 +1,6 @@
+%DEPENDS%
+ghc-libs
+haskell-math-functions
+haskell-primitive
+haskell-vector
+

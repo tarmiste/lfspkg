@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+cython
+cython2
+git
+

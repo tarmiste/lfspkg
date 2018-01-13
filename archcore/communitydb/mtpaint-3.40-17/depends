@@ -1,0 +1,6 @@
+%DEPENDS%
+gtk2
+giflib
+openjpeg
+lcms2
+

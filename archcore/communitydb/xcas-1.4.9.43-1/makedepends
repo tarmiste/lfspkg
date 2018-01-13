@@ -1,0 +1,13 @@
+%MAKEDEPENDS%
+mpfi
+gsl
+pari
+ntl
+lapack
+libpng
+libjpeg
+fltk
+texlive-core
+texlive-science
+hevea
+

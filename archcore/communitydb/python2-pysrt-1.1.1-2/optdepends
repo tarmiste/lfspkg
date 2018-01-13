@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+python2-setuptools: for srt2 script
+

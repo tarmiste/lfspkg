@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+mate-common
+yelp-tools
+gobject-introspection
+caja
+nemo
+

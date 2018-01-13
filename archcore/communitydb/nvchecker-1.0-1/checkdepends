@@ -1,0 +1,6 @@
+%CHECKDEPENDS%
+python-pytest-runner
+python-pytest-xdist
+python-pytest-asyncio
+python-flaky
+

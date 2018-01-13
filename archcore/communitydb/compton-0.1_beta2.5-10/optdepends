@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+dbus: To control compton via D-Bus
+xorg-xwininfo: For compton-trans
+xorg-xprop: For compton-trans
+

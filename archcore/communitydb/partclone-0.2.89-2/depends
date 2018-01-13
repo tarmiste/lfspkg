@@ -1,0 +1,5 @@
+%DEPENDS%
+progsreiserfs
+ntfs-3g
+nilfs-utils
+

@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+openssl: support for openssl
+

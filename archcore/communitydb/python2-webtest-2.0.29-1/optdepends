@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+python2-pyquery: for response.pyquery
+python2-lxml: for response.lxml
+

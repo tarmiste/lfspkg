@@ -1,0 +1,9 @@
+%DEPENDS%
+certbot=0.20.0
+python-acme=0.20.0
+python-mock
+python-pyopenssl
+python-pyparsing
+python-setuptools
+python-zope-interface
+

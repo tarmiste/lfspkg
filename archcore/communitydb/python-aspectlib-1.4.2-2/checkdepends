@@ -1,0 +1,13 @@
+%CHECKDEPENDS%
+python-pytest-capturelog
+python2-pytest-capturelog
+python-mock
+python2-mock
+python-tornado
+python2-tornado
+python-process-tests
+python2-process-tests
+python2-trollius
+python-profilestats
+python2-profilestats
+

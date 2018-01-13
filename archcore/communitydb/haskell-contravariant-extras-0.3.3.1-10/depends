@@ -1,0 +1,6 @@
+%DEPENDS%
+ghc-libs
+haskell-base-prelude
+haskell-contravariant
+haskell-tuple-th
+

@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+nginx: Web server for serving Wordpress
+apache: Web server for serving Wordpress
+mariadb: Database server
+

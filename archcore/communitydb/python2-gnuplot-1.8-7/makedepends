@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+git
+python-numpy
+python-setuptools
+python2-numpy
+python2-setuptools
+

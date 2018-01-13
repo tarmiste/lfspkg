@@ -1,0 +1,13 @@
+%MAKEDEPENDS%
+mesa-libgl
+qt4
+cmake
+ftgl
+glew
+gtkglext
+libvisual
+sdl
+libxext
+pulseaudio
+jack
+

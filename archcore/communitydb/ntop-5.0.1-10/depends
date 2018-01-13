@@ -1,0 +1,13 @@
+%DEPENDS%
+libevent
+libpcap
+gd
+glibc
+libxml2
+openssl
+rrdtool
+pcre
+geoip
+lua
+python2
+

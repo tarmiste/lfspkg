@@ -1,0 +1,7 @@
+%DEPENDS%
+coq
+ocaml
+camlp5
+gtk2
+gtksourceview2
+

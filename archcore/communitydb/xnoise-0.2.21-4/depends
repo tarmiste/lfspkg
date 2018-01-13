@@ -1,0 +1,10 @@
+%DEPENDS%
+desktop-file-utils
+gst-plugins-base-libs
+gst-plugins-good
+gtk3
+libsoup
+sqlite
+libtaginfo>=0.2
+librsvg
+

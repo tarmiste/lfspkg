@@ -1,0 +1,4 @@
+%DEPENDS%
+libusb
+yubico-c-client
+

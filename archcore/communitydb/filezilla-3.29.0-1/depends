@@ -1,0 +1,10 @@
+%DEPENDS%
+dbus
+xdg-utils
+wxgtk3
+libidn
+hicolor-icon-theme
+sqlite
+gnutls
+libfilezilla
+

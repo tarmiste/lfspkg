@@ -1,0 +1,14 @@
+%MAKEDEPENDS%
+python-pybuilder
+python2-pybuilder
+python-pyassert
+python2-pyassert
+git
+python-coverage
+python2-coverage
+python-mockito
+python2-mockito
+python-unittest-xml-reporting
+python2-unittest-xml-reporting
+pychecker
+

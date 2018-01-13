@@ -1,0 +1,9 @@
+%DEPENDS%
+dbus-glib
+dconf
+ebtables
+hicolor-icon-theme
+ipset
+iptables
+python-slip
+

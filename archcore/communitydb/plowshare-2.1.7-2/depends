@@ -1,0 +1,6 @@
+%DEPENDS%
+curl
+recode
+js
+git
+

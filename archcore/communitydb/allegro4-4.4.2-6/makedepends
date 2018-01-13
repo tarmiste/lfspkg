@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+cmake
+glu
+libpng
+mesa
+ninja
+

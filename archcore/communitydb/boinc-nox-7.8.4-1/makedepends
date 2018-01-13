@@ -1,0 +1,15 @@
+%MAKEDEPENDS%
+libxslt
+perl-xml-sax
+libxss
+libnotify
+wxgtk3
+webkit2gtk
+sqlite3
+curl
+inetutils
+libxmu
+freeglut
+glu
+mesa
+

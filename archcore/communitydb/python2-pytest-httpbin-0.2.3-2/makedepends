@@ -1,0 +1,13 @@
+%MAKEDEPENDS%
+python-pytest
+python2-pytest
+python-flask
+python2-flask
+python-decorator
+python2-decorator
+python-six
+python2-six
+httpbin
+python2-httpbin
+git
+

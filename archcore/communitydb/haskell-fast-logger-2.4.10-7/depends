@@ -1,0 +1,7 @@
+%DEPENDS%
+ghc-libs
+haskell-auto-update
+haskell-easy-file
+haskell-text
+haskell-unix-time
+

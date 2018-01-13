@@ -1,0 +1,6 @@
+%DEPENDS%
+lua
+fontconfig
+sdl_image
+sdl_ttf
+

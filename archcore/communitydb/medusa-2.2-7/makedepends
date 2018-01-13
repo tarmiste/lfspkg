@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+libssh2
+libpqxx
+afpfs-ng
+subversion
+freerdp
+

@@ -1,6 +1,0 @@
-%DEPENDS%
-zsh
-
-%OPTDEPENDS%
-python-pygments: for syntax highlighting
-

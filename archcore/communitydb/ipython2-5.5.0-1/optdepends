@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+wxpython: needed for ipython2 --gui=wx
+python2-nose: for IPython's test suite
+

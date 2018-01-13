@@ -1,0 +1,4 @@
+%DEPENDS%
+libgnome-keyring
+gtk-sharp-2
+

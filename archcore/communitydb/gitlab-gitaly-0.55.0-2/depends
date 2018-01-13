@@ -1,0 +1,6 @@
+%DEPENDS%
+glibc
+ruby2.3
+libxml2
+libxslt
+

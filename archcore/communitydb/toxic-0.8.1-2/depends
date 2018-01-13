@@ -1,0 +1,8 @@
+%DEPENDS%
+curl
+desktop-file-utils
+freealut
+libnotify
+qrencode
+toxcore
+

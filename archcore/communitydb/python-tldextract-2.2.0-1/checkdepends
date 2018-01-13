@@ -1,0 +1,5 @@
+%CHECKDEPENDS%
+python-pytest-runner
+python-pytest-mock
+python-responses
+

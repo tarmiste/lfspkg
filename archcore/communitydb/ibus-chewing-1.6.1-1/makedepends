@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+swig
+gob2
+cmake-fedora
+

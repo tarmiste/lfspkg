@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+pandoc: non-html conversion output
+

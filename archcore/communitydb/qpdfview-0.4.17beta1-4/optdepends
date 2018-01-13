@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+libspectre: for PostScript support
+djvulibre: for DjVu support
+

@@ -1,0 +1,10 @@
+%DEPENDS%
+python2
+libxml2
+jansson
+libyaml
+libsystemd
+libcap
+pam
+pcre
+

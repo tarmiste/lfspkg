@@ -1,0 +1,14 @@
+%DEPENDS%
+gtk3
+alsa-lib
+libnotify
+gconf
+curl
+nss
+libcups
+libxss
+ttf-font
+desktop-file-utils
+shared-mime-info
+hicolor-icon-theme
+

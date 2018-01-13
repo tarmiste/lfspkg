@@ -1,0 +1,7 @@
+%DEPENDS%
+libatasmart
+libnotify
+libxnvctrl
+lm_sensors
+mate-panel
+

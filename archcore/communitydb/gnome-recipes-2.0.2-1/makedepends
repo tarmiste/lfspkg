@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+git
+itstool
+meson
+

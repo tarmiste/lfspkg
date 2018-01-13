@@ -1,0 +1,5 @@
+%DEPENDS%
+libxaw
+libedit
+gcc-libs
+

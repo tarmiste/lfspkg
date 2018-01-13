@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+libxml2
+llvm
+crystal
+

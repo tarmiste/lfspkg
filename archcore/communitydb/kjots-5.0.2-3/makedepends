@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+kdoctools
+boost
+python
+kdelibs4support
+

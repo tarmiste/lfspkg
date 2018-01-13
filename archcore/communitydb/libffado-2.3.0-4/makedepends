@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+scons
+subversion
+python2-pyqt
+

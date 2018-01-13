@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-pyjwt
+python2-pyjwt
+

@@ -1,0 +1,15 @@
+%DEPENDS%
+gtk3
+gst-editing-services
+gst-plugins-good
+gst-python
+libnotify
+python-gobject
+python-numpy
+python-cairo
+python-matplotlib
+gst-plugins-bad
+python-dbus
+gst-transcoder
+gsound
+

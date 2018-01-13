@@ -1,0 +1,7 @@
+%DEPENDS%
+ghc-libs
+haskell-cereal
+haskell-old-time
+haskell-text
+haskell-vector
+

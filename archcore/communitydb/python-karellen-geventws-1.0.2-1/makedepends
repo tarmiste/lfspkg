@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+python-pybuilder
+python-karellen-pyb-plugin
+python-cram
+flake8
+python-sphinx
+python-unittest-xml-reporting
+python-wsaccel
+git
+

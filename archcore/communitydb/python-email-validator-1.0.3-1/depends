@@ -1,0 +1,4 @@
+%DEPENDS%
+python-dnspython
+python-idna
+

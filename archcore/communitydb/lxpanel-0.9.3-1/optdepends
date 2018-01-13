@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+wireless_tools: netstat plugin
+

@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+appstream-glib
+gobject-introspection
+intltool
+itstool
+meson
+nautilus
+vala
+

@@ -1,0 +1,6 @@
+%DEPENDS%
+glu
+llvm-libs
+mesa
+opencl-headers
+

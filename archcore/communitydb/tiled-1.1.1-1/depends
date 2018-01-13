@@ -1,0 +1,8 @@
+%DEPENDS%
+qt5-base
+libgl
+gtk-update-icon-cache
+shared-mime-info
+desktop-file-utils
+libxkbcommon-x11
+

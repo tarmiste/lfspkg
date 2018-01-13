@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+netcdf-fortran: fortran bindings
+netcdf-cxx: c++ bindings
+

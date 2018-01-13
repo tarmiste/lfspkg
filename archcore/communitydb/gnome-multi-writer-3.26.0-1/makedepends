@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+appstream-glib
+docbook-sgml
+docbook-utils
+intltool
+meson
+perl-sgmls
+

@@ -1,0 +1,8 @@
+%DEPENDS%
+openssl-1.0
+gmp
+libpcap
+openmpi
+gcc-libs
+opencl-icd-loader
+

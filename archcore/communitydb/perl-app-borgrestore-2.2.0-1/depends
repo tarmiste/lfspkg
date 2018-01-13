@@ -1,0 +1,16 @@
+%DEPENDS%
+perl>=5.14.0
+perl-dbd-sqlite
+perl-dbi
+perl-file-pushd
+perl-function-parameters
+perl-ipc-run
+perl-json
+perl-log-any
+perl-log-any-adapter-log4perl
+perl-log-log4perl
+perl-path-tiny
+perl-timedate
+perl-version-compare
+borg
+

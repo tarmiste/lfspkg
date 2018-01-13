@@ -1,0 +1,7 @@
+%DEPENDS%
+libfbclient
+libmariadbclient
+postgresql-libs
+sqlite
+freetds
+

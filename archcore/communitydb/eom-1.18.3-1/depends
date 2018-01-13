@@ -1,0 +1,10 @@
+%DEPENDS%
+dbus-glib
+gobject-introspection-runtime
+exempi
+lcms2
+libexif
+libjpeg-turbo
+mate-desktop
+libpeas
+

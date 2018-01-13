@@ -1,0 +1,10 @@
+%DEPENDS%
+java-environment
+giflib
+libxtst
+libxft
+ttf-font
+coreutils
+grep
+which
+

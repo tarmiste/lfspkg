@@ -1,0 +1,7 @@
+%DEPENDS%
+ghc-libs
+haskell-async
+haskell-djinn-lib
+haskell-ghc
+haskell-mtl
+

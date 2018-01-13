@@ -1,0 +1,10 @@
+%DEPENDS%
+ghc-libs
+haskell-comonad
+haskell-hashable
+haskell-keys
+haskell-pointed
+haskell-semigroupoids
+haskell-semigroups
+haskell-vector
+

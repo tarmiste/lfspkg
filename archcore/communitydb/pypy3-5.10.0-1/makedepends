@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+python2
+sqlite
+tk
+python2-pycparser
+

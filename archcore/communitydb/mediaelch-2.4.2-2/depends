@@ -1,0 +1,6 @@
+%DEPENDS%
+libmediainfo
+qt5-declarative
+qt5-multimedia
+qt5-script
+

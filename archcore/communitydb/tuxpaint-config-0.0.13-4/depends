@@ -1,0 +1,6 @@
+%DEPENDS%
+tuxpaint
+fltk
+libxft
+libxext
+

@@ -1,0 +1,17 @@
+%MAKEDEPENDS%
+flex
+bison
+gettext
+mftrace
+texinfo
+fontforge
+t1utils
+gsfonts
+texi2html
+dblatex
+texlive-langcyrillic
+imagemagick
+zip
+rsync
+netpbm
+

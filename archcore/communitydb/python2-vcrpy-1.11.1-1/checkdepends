@@ -1,0 +1,7 @@
+%CHECKDEPENDS%
+python-pytest-runner
+python2-pytest-runner
+python-pytest-httpbin
+python2-pytest-httpbin
+python-mock
+

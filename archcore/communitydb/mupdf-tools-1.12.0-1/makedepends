@@ -1,0 +1,13 @@
+%MAKEDEPENDS%
+curl
+desktop-file-utils
+freetype2
+freeglut
+glu
+harfbuzz
+jbig2dec
+libjpeg
+mesa-libgl
+openjpeg2
+libxext
+

@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+chrpath
+doxygen
+gtkmm3
+libxtst
+python
+

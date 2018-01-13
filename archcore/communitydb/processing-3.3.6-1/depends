@@ -1,0 +1,4 @@
+%DEPENDS%
+libgl
+java-runtime=8
+

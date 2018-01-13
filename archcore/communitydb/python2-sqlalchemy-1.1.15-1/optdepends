@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+python2-psycopg2: connect to PostgreSQL database
+

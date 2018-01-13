@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+gobject-introspection
+gtk-doc
+intltool
+networkmanager
+bash-completion
+vala
+autoconf-archive
+

@@ -1,0 +1,6 @@
+%DEPENDS%
+dtkwidget
+libqtxdg
+qt5-styleplugins
+deepin-qt5dxcb-plugin
+

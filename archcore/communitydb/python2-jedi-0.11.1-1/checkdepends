@@ -1,0 +1,6 @@
+%CHECKDEPENDS%
+python-pytest
+python2-pytest
+python-parso
+python2-parso
+

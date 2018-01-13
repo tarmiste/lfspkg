@@ -1,0 +1,9 @@
+%DEPENDS%
+python2-incremental
+python2-requests
+python2-pyopenssl
+python2-service-identity
+python2-idna
+python2-attrs
+python2-twisted
+

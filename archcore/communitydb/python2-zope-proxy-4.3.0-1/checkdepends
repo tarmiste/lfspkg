@@ -1,0 +1,4 @@
+%CHECKDEPENDS%
+python-zope-security
+python2-zope-security
+

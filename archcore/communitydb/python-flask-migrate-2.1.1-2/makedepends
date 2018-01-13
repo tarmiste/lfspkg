@@ -1,0 +1,14 @@
+%MAKEDEPENDS%
+python-alembic
+python-flask
+python-flask-script
+python-flask-sqlalchemy
+python-setuptools
+python-sphinx
+python2-alembic
+python2-flask
+python2-flask-script
+python2-flask-sqlalchemy
+python2-setuptools
+python2-sphinx
+

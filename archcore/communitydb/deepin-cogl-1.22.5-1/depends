@@ -1,0 +1,10 @@
+%DEPENDS%
+mesa
+libdrm
+libxext
+libxdamage
+libxcomposite
+gdk-pixbuf2
+pango
+libxrandr
+

@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+gobject-introspection
+python2
+vala
+

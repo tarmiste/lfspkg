@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+php-composer
+git
+

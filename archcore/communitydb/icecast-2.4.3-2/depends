@@ -1,0 +1,8 @@
+%DEPENDS%
+libxslt
+libvorbis
+curl
+speex
+libtheora
+libkate
+

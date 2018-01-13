@@ -1,0 +1,6 @@
+%DEPENDS%
+poppler-glib
+desktop-file-utils
+hicolor-icon-theme
+gtk2
+

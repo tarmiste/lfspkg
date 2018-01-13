@@ -1,8 +1,0 @@
-%DEPENDS%
-systemd
-
-%MAKEDEPENDS%
-git
-cmake
-tut
-

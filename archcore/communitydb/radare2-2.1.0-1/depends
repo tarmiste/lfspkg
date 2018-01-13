@@ -1,0 +1,6 @@
+%DEPENDS%
+sh
+capstone
+openssl
+libzip
+

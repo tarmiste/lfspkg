@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+libjpeg
+libpng
+libtiff
+openexr
+libgl
+glu
+boost
+help2man
+texlive-bin
+

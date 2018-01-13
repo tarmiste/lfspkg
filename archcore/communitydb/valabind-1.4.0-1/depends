@@ -1,0 +1,5 @@
+%DEPENDS%
+vala
+swig
+sh
+

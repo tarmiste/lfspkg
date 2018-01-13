@@ -1,0 +1,7 @@
+%DEPENDS%
+gconf-sharp
+gnome-keyring-sharp
+mono-addins
+notify-sharp
+gkeyfile-sharp
+

@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+gpsbabel: import and export GPS tracks from various formats
+

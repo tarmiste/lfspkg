@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+cmake
+subversion
+mesa
+imagemagick
+setconf
+mesa-libgl
+

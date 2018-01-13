@@ -1,0 +1,9 @@
+%CHECKDEPENDS%
+python-pytest-cov
+python2-pytest-cov
+python-mock
+python2-mock
+flake8
+python2-flake8
+docker
+

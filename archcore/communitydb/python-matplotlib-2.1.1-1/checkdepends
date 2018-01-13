@@ -1,0 +1,17 @@
+%CHECKDEPENDS%
+python-pytest-xdist
+python2-pytest-xdist
+python-pytest-runner
+python2-pytest-runner
+python2-mock
+xorg-server-xvfb
+texlive-core
+texlive-latexextra
+imagemagick
+ffmpeg
+mencoder
+inkscape
+python-pandas
+python2-pandas
+ttf-freefont
+

@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+python2-yaml: for YAML support
+

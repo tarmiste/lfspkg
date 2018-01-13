@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+urlview: for url menu
+python: keybase.py
+

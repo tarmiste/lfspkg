@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+go: go compiler
+gcc-go: go compiler
+

@@ -1,0 +1,13 @@
+%DEPENDS%
+ghc-libs
+haskell-cryptonite
+haskell-memory
+haskell-expiring-cache-map
+haskell-http-types
+haskell-mime-types
+haskell-mtl
+haskell-old-locale
+haskell-semigroups
+haskell-text
+haskell-wai
+

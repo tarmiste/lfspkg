@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+cmake
+mesa
+libgl
+python2
+procps-ng
+qt5-webkit
+

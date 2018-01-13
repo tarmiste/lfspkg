@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+git
+cmake
+boost
+swig
+

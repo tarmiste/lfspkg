@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+python
+python2
+python-pillow
+python2-pillow
+qrencode
+glibc
+

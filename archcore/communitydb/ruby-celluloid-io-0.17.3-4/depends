@@ -1,0 +1,6 @@
+%DEPENDS%
+ruby
+ruby-timers
+ruby-celluloid
+ruby-nio4r
+

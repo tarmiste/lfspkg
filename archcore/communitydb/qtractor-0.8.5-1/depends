@@ -1,0 +1,9 @@
+%DEPENDS%
+qt5-x11extras
+suil
+lilv
+libmad
+liblo>=0.28
+rubberband
+hicolor-icon-theme
+

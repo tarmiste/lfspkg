@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+meson
+python-docutils
+

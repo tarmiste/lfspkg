@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+maven
+java-environment=8
+

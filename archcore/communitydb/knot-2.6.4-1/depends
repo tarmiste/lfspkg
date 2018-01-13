@@ -1,0 +1,11 @@
+%DEPENDS%
+lmdb
+liburcu
+protobuf-c
+fstrm
+libedit
+systemd
+libcap-ng
+gnutls
+libidn2
+

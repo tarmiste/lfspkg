@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+python2-setuptools
+python-setuptools
+python2-numpy
+python-numpy
+unzip
+

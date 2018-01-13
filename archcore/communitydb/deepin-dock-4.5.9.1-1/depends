@@ -1,0 +1,8 @@
+%DEPENDS%
+qt5-svg
+deepin-menu
+deepin-daemon
+deepin-launcher
+deepin-qt5integration
+deepin-qt-dbus-factory
+

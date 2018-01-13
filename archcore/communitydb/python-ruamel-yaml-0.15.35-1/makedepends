@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+python-pip
+python-wheel
+

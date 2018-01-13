@@ -1,0 +1,7 @@
+%DEPENDS%
+gtk3
+poppler-glib
+libgee
+gstreamer
+gst-plugins-base
+

@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+gnome-keyring: store SSH/MySQL passwords in GNOME password manager
+python2-pyodbc: database migration
+

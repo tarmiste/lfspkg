@@ -1,0 +1,10 @@
+%DEPENDS%
+qt5-multimedia
+chromaprint
+id3lib
+taglib
+libmp4v2
+desktop-file-utils
+hicolor-icon-theme
+qt5-declarative
+

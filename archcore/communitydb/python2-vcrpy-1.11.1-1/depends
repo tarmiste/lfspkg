@@ -1,0 +1,7 @@
+%DEPENDS%
+python2-yaml
+python2-wrapt
+python2-six
+python2-contextlib2
+python2-mock
+

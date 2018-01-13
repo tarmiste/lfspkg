@@ -1,0 +1,7 @@
+%DEPENDS%
+dbus-glib
+gtk3
+libxxf86misc
+lightdm
+libxss
+

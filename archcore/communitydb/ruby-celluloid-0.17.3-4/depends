@@ -1,0 +1,9 @@
+%DEPENDS%
+ruby
+ruby-timers
+ruby-celluloid-supervision
+ruby-celluloid-pool
+ruby-celluloid-fsm
+ruby-celluloid-extras
+ruby-celluloid-essentials
+

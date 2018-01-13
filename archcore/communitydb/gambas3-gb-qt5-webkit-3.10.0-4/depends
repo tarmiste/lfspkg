@@ -1,0 +1,4 @@
+%DEPENDS%
+gambas3-gb-qt5
+qt5-webkit
+

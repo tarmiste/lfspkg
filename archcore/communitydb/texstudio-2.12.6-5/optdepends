@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+evince: pdf reader
+okular: alternate pdf reader
+

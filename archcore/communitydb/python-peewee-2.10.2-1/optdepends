@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+python-psycopg2: for PostgreSQL database support
+mysql-python: for MySQL database support
+

@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+boost
+cmake
+python
+swig
+

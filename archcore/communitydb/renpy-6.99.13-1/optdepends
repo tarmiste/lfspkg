@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+renpy-demos: Tutorial and The Question demos
+tk: Set projects directory
+

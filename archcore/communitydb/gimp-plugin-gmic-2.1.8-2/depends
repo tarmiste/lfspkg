@@ -1,0 +1,6 @@
+%DEPENDS%
+gimp
+fftw
+qt5-base
+curl
+

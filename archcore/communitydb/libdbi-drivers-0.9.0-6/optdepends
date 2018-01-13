@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+postgresql-libs: To work with postgresql using libdbdpgsql
+sqlite3: To work with sqlite3 using libdbdsqlite3
+libmariadbclient: To work with mysql using libdbdmysql
+

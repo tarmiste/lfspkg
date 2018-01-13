@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+cpyrit-cuda: nvidia gpu support
+cpyrit-opencl: opencl support
+scapy: packet capture analyzation support
+python2-sqlalchemy: storage support
+

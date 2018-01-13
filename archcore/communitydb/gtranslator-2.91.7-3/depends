@@ -1,0 +1,13 @@
+%DEPENDS%
+desktop-file-utils
+gdl
+gettext
+gtksourceview3
+gtkspell3
+iso-codes
+libgda
+libpeas
+gsettings-desktop-schemas
+hicolor-icon-theme
+dconf
+

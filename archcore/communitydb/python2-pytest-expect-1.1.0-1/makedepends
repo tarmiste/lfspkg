@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+python-pytest
+python2-pytest
+python-u-msgpack
+python2-u-msgpack
+

@@ -1,0 +1,7 @@
+%DEPENDS%
+gcc-libs
+openssl
+db
+attr
+libxml2
+

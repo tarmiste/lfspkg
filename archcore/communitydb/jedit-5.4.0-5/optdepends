@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+java-environment: for java development
+noto-fonts: usable font
+

@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+python-cffi
+python2-cffi
+python-setuptools
+python2-setuptools
+git
+python-six
+python2-six
+

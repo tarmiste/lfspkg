@@ -1,0 +1,9 @@
+%DEPENDS%
+glew
+glut
+libgl
+libxml2
+python2-numpy
+python2-pmw
+tcsh
+

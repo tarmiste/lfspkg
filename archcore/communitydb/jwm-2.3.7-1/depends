@@ -1,0 +1,10 @@
+%DEPENDS%
+libx11
+libxft
+libjpeg>=7
+libxpm
+libxinerama
+libpng
+cairo
+librsvg
+

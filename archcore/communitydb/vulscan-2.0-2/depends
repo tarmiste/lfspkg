@@ -1,9 +1,0 @@
-%DEPENDS%
-nmap
-
-%CONFLICTS%
-nmap-vulscan
-
-%PROVIDES%
-nmap-vulscan
-

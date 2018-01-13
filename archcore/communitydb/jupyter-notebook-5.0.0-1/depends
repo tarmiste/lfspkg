@@ -1,0 +1,10 @@
+%DEPENDS%
+python-setuptools
+python-jinja
+python-tornado
+python-terminado
+python-traitlets
+jupyter-nbformat
+python-jupyter_core
+python-jupyter_client
+

@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+wine: VST support (experimental)
+fftw: SpectrumAnalyzer plugin
+stk: STK instruments plugins
+pulseaudio: PulseAudio output
+

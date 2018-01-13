@@ -1,0 +1,7 @@
+%DEPENDS%
+virt-install=1.4.3
+vte3
+gtk-vnc
+spice-gtk3
+python2-cairo
+

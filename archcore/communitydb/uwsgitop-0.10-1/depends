@@ -1,0 +1,4 @@
+%DEPENDS%
+python-simplejson
+python-argparse
+

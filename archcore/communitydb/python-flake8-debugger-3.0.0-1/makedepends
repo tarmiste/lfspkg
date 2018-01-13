@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+flake8
+python2-flake8
+python-pytest-runner
+python2-pytest-runner
+

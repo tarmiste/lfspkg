@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-requests-toolbelt
+python2-requests-toolbelt
+python-pkginfo
+python2-pkginfo
+python-tqdm
+python2-tqdm
+

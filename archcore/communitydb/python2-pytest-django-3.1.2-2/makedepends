@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+python-pytest
+python2-pytest
+python-setuptools-scm
+python2-setuptools-scm
+git
+

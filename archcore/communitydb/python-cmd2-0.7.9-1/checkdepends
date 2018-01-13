@@ -1,0 +1,7 @@
+%CHECKDEPENDS%
+python-pytest-runner
+python2-pytest-runner
+python-mock
+python2-mock
+vi
+

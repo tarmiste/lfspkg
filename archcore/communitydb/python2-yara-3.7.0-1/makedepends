@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+git
+yara
+glibc
+python
+python-setuptools
+python2
+python2-setuptools
+

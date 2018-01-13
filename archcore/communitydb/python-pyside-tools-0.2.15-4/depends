@@ -1,0 +1,4 @@
+%DEPENDS%
+python-pyside
+pyside-tools-common
+

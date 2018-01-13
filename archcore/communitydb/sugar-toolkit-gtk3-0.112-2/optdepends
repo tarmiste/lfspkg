@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+webkit2gtk: run sugar-activity-web
+

@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+mesa
+openal
+imagemagick
+gendesk
+cmake
+

@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+breeze-icons: Default icon theme
+oxygen-icons: Alternative icon theme
+sddm: The recommended display manager
+

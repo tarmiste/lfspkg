@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+gnome-common
+python
+gobject-introspection
+

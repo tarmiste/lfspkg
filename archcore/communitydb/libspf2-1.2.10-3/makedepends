@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+libmilter
+glibc
+

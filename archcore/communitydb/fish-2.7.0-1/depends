@@ -1,0 +1,7 @@
+%DEPENDS%
+bc
+gcc-libs
+inetutils
+ncurses
+which
+

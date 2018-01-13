@@ -1,0 +1,6 @@
+%DEPENDS%
+python-setuptools
+python-argh
+python-requests
+cjdns
+

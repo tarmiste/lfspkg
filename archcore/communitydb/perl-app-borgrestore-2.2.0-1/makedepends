@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+perl-devel-checkbin
+perl-module-build-tiny>=0.035
+

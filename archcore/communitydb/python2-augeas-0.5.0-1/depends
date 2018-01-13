@@ -1,7 +1,0 @@
-%DEPENDS%
-augeas
-python2
-
-%MAKEDEPENDS%
-python2-setuptools
-

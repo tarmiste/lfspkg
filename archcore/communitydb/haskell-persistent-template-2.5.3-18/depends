@@ -1,0 +1,13 @@
+%DEPENDS%
+ghc-libs
+haskell-aeson
+haskell-aeson-compat
+haskell-http-api-data
+haskell-monad-control
+haskell-monad-logger
+haskell-path-pieces
+haskell-persistent
+haskell-tagged
+haskell-text
+haskell-unordered-containers
+

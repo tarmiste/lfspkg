@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-tornado
+python-ptyprocess
+python2-tornado
+python2-ptyprocess
+

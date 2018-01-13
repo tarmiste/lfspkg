@@ -1,0 +1,11 @@
+%CHECKDEPENDS%
+python-virtualenv
+python2-virtualenv
+python-pytest-runner
+python2-pytest-runner
+python-process-tests
+python2-process-tests
+python-requests
+python2-requests
+uwsgi
+

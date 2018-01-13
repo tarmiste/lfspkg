@@ -1,0 +1,9 @@
+%DEPENDS%
+python-setuptools
+sqlite
+python-xmltodict
+python-pytz
+python-praw
+python-pyenchant
+python-pygeoip
+

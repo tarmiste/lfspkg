@@ -1,0 +1,10 @@
+%DEPENDS%
+libjpeg
+libxft
+libxinerama
+hicolor-icon-theme
+desktop-file-utils
+xdg-utils
+libxcursor
+glu
+

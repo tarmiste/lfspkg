@@ -1,0 +1,4 @@
+%DEPENDS%
+qt4
+fcitx>=4.2.9.5
+

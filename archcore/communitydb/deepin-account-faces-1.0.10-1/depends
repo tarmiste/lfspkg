@@ -1,6 +1,0 @@
-%CONFLICTS%
-dde-account-faces
-
-%MAKEDEPENDS%
-git
-

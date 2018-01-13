@@ -1,0 +1,6 @@
+%DEPENDS%
+gdal
+libgeotiff
+laszip
+jsoncpp
+

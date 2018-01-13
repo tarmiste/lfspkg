@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+python-greenlet
+python2-greenlet
+cython
+cython2
+

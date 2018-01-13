@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+gst-plugins-good: to play sound events
+

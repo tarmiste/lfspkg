@@ -1,0 +1,6 @@
+%DEPENDS%
+dbus
+iptables
+gnutls
+glib2
+

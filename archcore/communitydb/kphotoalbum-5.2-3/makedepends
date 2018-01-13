@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+python
+plasma-framework
+phonon-qt5
+kdoctools
+kparts
+libkexiv2
+

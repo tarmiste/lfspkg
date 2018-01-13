@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-doublex
+python2-doublex
+python-expects
+python2-expects
+git
+

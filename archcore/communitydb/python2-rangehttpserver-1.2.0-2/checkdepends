@@ -1,0 +1,6 @@
+%CHECKDEPENDS%
+python-nose
+python-requests
+python2-nose
+python2-requests
+

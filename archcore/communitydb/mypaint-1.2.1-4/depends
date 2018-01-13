@@ -1,0 +1,8 @@
+%DEPENDS%
+gtk3
+json-c
+lcms2
+python2-cairo
+python2-gobject
+python2-numpy
+

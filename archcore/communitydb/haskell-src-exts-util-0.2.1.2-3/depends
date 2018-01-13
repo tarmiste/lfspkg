@@ -1,0 +1,6 @@
+%DEPENDS%
+ghc-libs
+haskell-data-default
+haskell-src-exts
+haskell-uniplate
+

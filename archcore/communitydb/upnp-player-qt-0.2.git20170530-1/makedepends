@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+qt5-declarative
+qt5-websockets
+

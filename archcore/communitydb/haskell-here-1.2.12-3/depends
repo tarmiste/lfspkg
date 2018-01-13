@@ -1,0 +1,6 @@
+%DEPENDS%
+ghc-libs
+haskell-mtl
+haskell-parsec
+haskell-src-meta
+

@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+perl-uri
+perl-html-parser
+

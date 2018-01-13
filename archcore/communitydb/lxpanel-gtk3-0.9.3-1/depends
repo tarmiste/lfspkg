@@ -1,0 +1,7 @@
+%DEPENDS%
+alsa-lib
+menu-cache
+lxmenu-data
+libfm-gtk3
+libkeybinder3
+

@@ -1,0 +1,13 @@
+%DEPENDS%
+libexif
+gvfs
+dconf
+desktop-file-utils
+exempi
+python
+cinnamon-desktop
+libnotify
+libxml2
+cinnamon-translations
+xapps
+

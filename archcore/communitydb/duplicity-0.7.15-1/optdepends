@@ -1,0 +1,9 @@
+%OPTDEPENDS%
+lftp: FTPS backend
+python2-boto: Amazon S3 and Google Cloud Storage backend
+python2-dropbox: Dropbox backend
+python2-gobject: GIO backend
+gvfs: GIO backend
+python2-gdata: Google Docs backend
+rsync: rsync backend
+

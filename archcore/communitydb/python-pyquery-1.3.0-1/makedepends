@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-lxml
+python2-lxml
+python-cssselect
+python2-cssselect
+git
+

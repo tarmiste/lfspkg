@@ -1,0 +1,4 @@
+%DEPENDS%
+bash
+xcb-util-keysyms
+

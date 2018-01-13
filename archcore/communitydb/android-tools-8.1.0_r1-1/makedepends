@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+git
+clang
+gtest
+ruby
+cmake
+ninja
+go-pie
+

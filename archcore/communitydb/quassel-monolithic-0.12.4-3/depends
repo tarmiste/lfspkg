@@ -1,0 +1,8 @@
+%DEPENDS%
+qt5-base
+qca-qt5
+qt5-webkit
+qt5-script
+knotifyconfig
+hicolor-icon-theme
+

@@ -1,0 +1,8 @@
+%DEPENDS%
+libmatekbd
+libnotify
+libxss
+mate-desktop
+mate-menus
+mate-session-manager
+

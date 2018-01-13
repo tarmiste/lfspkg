@@ -1,0 +1,9 @@
+%DEPENDS%
+deepin-qt5integration
+libexif
+freeimage
+libraw
+qt5-svg
+deepin-shortcut-viewer
+deepin-manual
+

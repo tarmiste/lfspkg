@@ -1,7 +1,0 @@
-%DEPENDS%
-neon
-jansson
-
-%MAKEDEPENDS%
-cmake
-

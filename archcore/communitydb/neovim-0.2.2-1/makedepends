@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+cmake
+lua51-mpack
+lua51-lpeg
+gperf
+

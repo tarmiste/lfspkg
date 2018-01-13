@@ -1,0 +1,16 @@
+%OPTDEPENDS%
+python2: python bindings
+java-runtime: java bindings
+tk: tcl bindings
+gnuplot: plotting tools
+graphviz: drawing tools
+python2-matplotlib: for Matplotlib rendering
+python2-twisted: for vtkWeb
+python2-autobahn: for vtkWeb
+openmpi: OpenMPI support
+python2-mpi4py: OpenMPI python support
+unixodbc
+glew
+gdal
+mariadb
+

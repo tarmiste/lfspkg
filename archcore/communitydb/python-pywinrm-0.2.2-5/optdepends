@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+python-requests-ntlm: for HTTP NTLM authentication
+python-requests-kerberos: for kerberos authentication
+python-requests-credssp: for CredSSP authenication
+

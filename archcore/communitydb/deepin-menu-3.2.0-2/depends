@@ -1,0 +1,5 @@
+%DEPENDS%
+python2-pyqt5
+deepin-qt5integration
+deepin-qt-dbus-factory
+

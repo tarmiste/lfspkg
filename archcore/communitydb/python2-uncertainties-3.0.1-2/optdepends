@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+python2-numpy: additional support for NumPy arrays and matrices
+

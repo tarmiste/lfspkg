@@ -1,0 +1,7 @@
+%OPTDEPENDS%
+python2-psycopg2: non-blocking PostgreSQL support
+python2-pyopenssl: non-blocking SSL support
+python2-httplib2: non-blocking HTTP support
+python2-pyzmq: non-blocking ZeroMQ support
+python2-dnspython: non-blocking DNS support
+

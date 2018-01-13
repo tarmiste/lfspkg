@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+flac
+poppler
+exiv2
+qt4
+libvorbis
+gtk2
+libgsf
+libmpeg2
+

@@ -1,0 +1,8 @@
+%CHECKDEPENDS%
+python-cryptography
+python-pyx
+python-matplotlib
+python-netifaces
+graphviz
+sox
+

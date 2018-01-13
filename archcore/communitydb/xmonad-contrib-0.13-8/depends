@@ -1,0 +1,10 @@
+%DEPENDS%
+ghc-libs
+xmonad
+sh
+haskell-x11
+haskell-x11-xft
+haskell-utf8-string
+haskell-random
+haskell-old-time
+

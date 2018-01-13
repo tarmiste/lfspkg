@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+gnome-backgrounds: Default background
+gnome-control-center: System settings
+gnome-screensaver: Lock screen
+network-manager-applet: Network management
+

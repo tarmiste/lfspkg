@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+cargo
+pkg-config
+

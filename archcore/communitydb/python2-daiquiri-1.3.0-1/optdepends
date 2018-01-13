@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+python2-json-logger: For JSON support
+

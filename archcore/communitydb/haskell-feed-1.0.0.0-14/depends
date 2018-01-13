@@ -1,0 +1,12 @@
+%DEPENDS%
+ghc-libs
+haskell-base-compat
+haskell-old-locale
+haskell-old-time
+haskell-safe
+haskell-text
+haskell-time-locale-compat
+haskell-utf8-string
+haskell-xml-types
+haskell-xml-conduit
+

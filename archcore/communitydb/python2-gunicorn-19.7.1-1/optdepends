@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+python2-eventlet: For asynchronous request handling with eventlet.
+python2-gevent: For asynchronous request handling with gevent.
+

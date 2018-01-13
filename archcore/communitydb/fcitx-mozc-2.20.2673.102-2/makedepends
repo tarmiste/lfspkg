@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+pkg-config
+python2
+curl
+gtk2
+mesa
+subversion
+ninja
+git
+clang
+

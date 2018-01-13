@@ -1,0 +1,15 @@
+%DEPENDS%
+capnproto
+libfishsound
+libid3tag
+liblo
+liblrdf
+libmad
+liboggz
+libpulse
+portaudio
+qt5-svg
+rubberband
+sord
+hicolor-icon-theme
+

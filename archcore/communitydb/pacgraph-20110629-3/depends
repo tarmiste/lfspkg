@@ -1,8 +1,0 @@
-%DEPENDS%
-python
-
-%OPTDEPENDS%
-inkscape: png backend
-imagemagick: png backend
-tk: gui version
-

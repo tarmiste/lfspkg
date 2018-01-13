@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+python2-dbus
+libffado
+celt
+opus
+libsamplerate
+

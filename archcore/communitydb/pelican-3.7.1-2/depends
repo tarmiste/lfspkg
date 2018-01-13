@@ -1,0 +1,11 @@
+%DEPENDS%
+python-jinja
+python-pygments
+python-feedgenerator
+python-pytz
+python-docutils
+python-blinker
+python-unidecode
+python-six
+python-dateutil
+

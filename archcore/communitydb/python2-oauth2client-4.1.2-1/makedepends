@@ -1,0 +1,14 @@
+%MAKEDEPENDS%
+python2-setuptools
+python-setuptools
+python-httplib2
+python-pyasn1
+python-pyasn1-modules
+python-rsa
+python-six
+python2-httplib2
+python2-pyasn1
+python2-pyasn1-modules
+python2-rsa
+python2-six
+

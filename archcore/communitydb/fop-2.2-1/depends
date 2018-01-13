@@ -1,0 +1,7 @@
+%DEPENDS%
+java-xmlgraphics-commons
+java-commons-logging
+java-commons-io
+java-batik
+java-avalon-framework
+

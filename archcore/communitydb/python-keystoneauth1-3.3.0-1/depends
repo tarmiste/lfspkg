@@ -1,0 +1,7 @@
+%DEPENDS%
+python-pbr
+python-iso8601
+python-stevedore
+python-positional
+python-requests
+

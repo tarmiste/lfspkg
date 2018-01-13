@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+boost
+cmake
+doxygen
+graphviz
+ttf-dejavu
+

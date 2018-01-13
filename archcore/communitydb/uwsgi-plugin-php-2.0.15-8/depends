@@ -1,0 +1,6 @@
+%DEPENDS%
+uwsgi
+php-embed
+libyaml
+jansson
+

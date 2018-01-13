@@ -1,0 +1,6 @@
+%DEPENDS%
+aarch64-linux-gnu-binutils
+aarch64-linux-gnu-glibc
+libmpc
+zlib
+

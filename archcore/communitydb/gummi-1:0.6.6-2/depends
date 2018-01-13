@@ -1,0 +1,6 @@
+%DEPENDS%
+texlive-core
+gtkspell
+gtksourceview2
+poppler-glib
+

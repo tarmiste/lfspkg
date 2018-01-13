@@ -1,0 +1,6 @@
+%DEPENDS%
+wine
+cabextract
+unzip
+xorg-xmessage
+

@@ -1,7 +1,0 @@
-%DEPENDS%
-chmlib
-python2
-
-%MAKEDEPENDS%
-python2-setuptools
-

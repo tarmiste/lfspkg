@@ -1,0 +1,13 @@
+%DEPENDS%
+gsfonts
+xdg-utils
+qt5-base
+libxt
+libpaper
+freetype2
+libcups
+libjpeg-turbo
+libtiff
+libpng
+zlib
+

@@ -1,8 +1,0 @@
-%DEPENDS%
-qt4
-xdg-utils
-
-%MAKEDEPENDS%
-gcc
-boost
-

@@ -1,0 +1,7 @@
+%DEPENDS%
+python
+cuda
+cudnn
+python-pycuda
+python-protobuf
+

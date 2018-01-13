@@ -1,6 +1,0 @@
-%DEPENDS%
-libgudev
-
-%MAKEDEPENDS%
-python2-gobject2
-

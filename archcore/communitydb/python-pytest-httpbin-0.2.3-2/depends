@@ -1,0 +1,7 @@
+%DEPENDS%
+python-pytest
+python-flask
+python-decorator
+python-six
+httpbin
+

@@ -1,0 +1,16 @@
+%DEPENDS%
+fftw
+curl
+graphicsmagick
+glpk
+hdf5
+qhull
+fltk
+arpack
+glu
+ghostscript
+suitesparse
+gl2ps
+qscintilla-qt5
+libsndfile
+

@@ -1,0 +1,7 @@
+%DEPENDS%
+girara>=0.2.7
+sqlite
+desktop-file-utils
+file
+libsynctex
+

@@ -1,0 +1,7 @@
+%DEPENDS%
+systemd
+libconfig
+libsodium
+libvpx
+opus
+

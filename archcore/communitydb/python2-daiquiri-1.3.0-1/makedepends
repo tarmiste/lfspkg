@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+python-pbr
+python2-pbr
+

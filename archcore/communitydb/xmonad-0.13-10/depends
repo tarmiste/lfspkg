@@ -1,0 +1,10 @@
+%DEPENDS%
+ghc
+haskell-x11
+sh
+haskell-mtl
+haskell-utf8-string
+haskell-extensible-exceptions
+haskell-data-default
+haskell-setlocale
+

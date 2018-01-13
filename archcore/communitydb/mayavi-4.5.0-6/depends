@@ -1,0 +1,13 @@
+%DEPENDS%
+ipython2
+vtk
+python2-envisage
+python2-traitsui
+python2-configobj
+wxpython
+gdal
+unixodbc
+jsoncpp
+openmpi
+ffmpeg
+

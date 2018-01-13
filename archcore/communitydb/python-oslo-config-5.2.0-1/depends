@@ -1,0 +1,8 @@
+%DEPENDS%
+python-six
+python-netaddr
+python-stevedore
+python-debtcollector
+python-oslo-i18n
+python-rfc3986
+

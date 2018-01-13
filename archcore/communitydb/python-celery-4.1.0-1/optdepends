@@ -1,0 +1,11 @@
+%OPTDEPENDS%
+python-pyopenssl: for celery.security
+python-pymongo: for celery.backends.mongodb
+python-msgpack: for using the msgpack serializer
+python-pyro: for using Pyro4 message transport
+python-redis: for celery.backends.redis
+python-sqlalchemy: for celery.backends.database
+python-boto: for SQS transport
+python-yaml: for using the yaml serializer
+python-pyzmq: for using ZeroMQ transport
+

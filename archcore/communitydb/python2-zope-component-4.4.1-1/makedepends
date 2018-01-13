@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-zope-interface
+python2-zope-interface
+python-zope-event
+python2-zope-event
+

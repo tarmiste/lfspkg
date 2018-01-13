@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-pbr
+python2-pbr
+python2-futures
+python-requests
+python2-requests
+

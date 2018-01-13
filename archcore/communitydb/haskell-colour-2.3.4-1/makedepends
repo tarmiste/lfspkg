@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+ghc
+haskell-quickcheck
+haskell-random
+haskell-test-framework
+haskell-test-framework-quickcheck2
+

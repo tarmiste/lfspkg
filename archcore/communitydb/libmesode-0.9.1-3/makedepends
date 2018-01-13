@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+openssl
+expat
+doxygen
+

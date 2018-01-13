@@ -1,0 +1,13 @@
+%DEPENDS%
+alsa-lib
+gtk3
+libsm
+python2-cairo
+python2-dateutil
+python2-decorator
+python2-telepathy
+sugar-artwork
+sugar-datastore
+telepathy-mission-control
+unzip
+

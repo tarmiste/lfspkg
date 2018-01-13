@@ -1,0 +1,12 @@
+%MAKEDEPENDS%
+boost
+setconf
+libmariadbclient
+postgresql-libs
+lua
+libldap
+sqlite
+geoip
+yaml-cpp
+pkg-config
+

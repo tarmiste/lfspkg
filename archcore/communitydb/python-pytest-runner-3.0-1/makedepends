@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+python-pytest
+python2-pytest
+python-setuptools-scm
+python2-setuptools-scm
+python-pytest-virtualenv
+python2-pytest-virtualenv
+

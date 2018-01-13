@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+boost
+cmake
+qt5-base
+qt5-svg
+extra-cmake-modules
+kcoreaddons
+kdoctools
+kio
+

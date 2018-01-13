@@ -1,0 +1,4 @@
+%DEPENDS%
+python2-pytest
+python2-mock
+

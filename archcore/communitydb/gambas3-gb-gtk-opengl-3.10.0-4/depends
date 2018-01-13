@@ -1,0 +1,5 @@
+%DEPENDS%
+gambas3-gb-gtk
+gambas3-gb-opengl
+gtkglext
+

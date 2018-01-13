@@ -1,0 +1,5 @@
+%CHECKDEPENDS%
+lib32-glibc
+python2-twisted
+python2-tornado
+

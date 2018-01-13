@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+mm-common
+glibmm-docs
+cairomm
+cairomm-docs
+pangomm
+pangomm-docs
+

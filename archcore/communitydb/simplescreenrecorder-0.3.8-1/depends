@@ -1,0 +1,15 @@
+%DEPENDS%
+qt4
+ffmpeg
+alsa-lib
+libpulse
+jack
+libgl
+glu
+libx11
+libxext
+libxfixes
+libxi
+desktop-file-utils
+gtk-update-icon-cache
+

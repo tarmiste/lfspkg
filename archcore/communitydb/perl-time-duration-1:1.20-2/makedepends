@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+perl-test-pod-coverage
+perl-test-pod
+

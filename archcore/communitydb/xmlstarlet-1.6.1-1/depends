@@ -1,7 +1,0 @@
-%DEPENDS%
-libxslt
-
-%MAKEDEPENDS%
-fop
-ghostscript
-

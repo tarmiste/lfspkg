@@ -1,0 +1,11 @@
+%DEPENDS%
+ghc-libs
+haskell-attoparsec
+haskell-hashable
+haskell-only
+haskell-scientific
+haskell-text
+haskell-text-short
+haskell-unordered-containers
+haskell-vector
+

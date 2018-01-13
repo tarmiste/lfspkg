@@ -1,0 +1,9 @@
+%DEPENDS%
+gcc-libs
+glew
+glibc
+libgl
+sdl2
+snappy
+zlib
+

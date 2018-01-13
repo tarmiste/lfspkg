@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+python-setuptools_scm
+python2-setuptools_scm
+python-keyring
+python2-keyring
+

@@ -1,0 +1,11 @@
+%DEPENDS%
+ghc-libs
+haskell-aeson
+haskell-bifunctors
+haskell-cryptonite
+haskell-glob
+haskell-scientific
+haskell-text
+haskell-unordered-containers
+haskell-yaml
+

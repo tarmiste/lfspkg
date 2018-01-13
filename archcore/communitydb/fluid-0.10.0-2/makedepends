@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+nodejs-material-design-icons
+

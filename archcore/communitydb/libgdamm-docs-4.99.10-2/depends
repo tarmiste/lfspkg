@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-libgda
-libsigc++
-glibmm
-glibmm-docs
-

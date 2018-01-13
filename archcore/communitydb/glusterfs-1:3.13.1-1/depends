@@ -1,0 +1,9 @@
+%DEPENDS%
+fuse
+python2
+libxml2
+libaio
+liburcu
+attr
+which
+

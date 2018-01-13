@@ -1,0 +1,6 @@
+%DEPENDS%
+glfw
+freetype2
+fontconfig
+freeimage
+

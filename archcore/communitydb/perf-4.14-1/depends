@@ -1,0 +1,10 @@
+%DEPENDS%
+perl
+python2
+slang
+elfutils
+libunwind
+binutils
+numactl
+audit
+

@@ -1,0 +1,17 @@
+%DEPENDS%
+ghc-libs
+haskell-data-default
+haskell-data-accessor
+haskell-data-accessor-template
+haskell-data-accessor-transformers
+haskell-file-embed
+haskell-mtl
+haskell-open-browser
+haskell-optparse-applicative
+pandoc
+haskell-pandoc-types
+haskell-roman-numerals
+haskell-syb
+haskell-text
+haskell-utility-ht
+

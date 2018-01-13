@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-editorconfig
+python2-editorconfig
+

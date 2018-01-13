@@ -1,0 +1,6 @@
+%DEPENDS%
+embree
+opencl-icd-loader
+libgl
+openimageio
+

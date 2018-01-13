@@ -1,8 +1,0 @@
-%DEPENDS%
-zlib
-
-%MAKEDEPENDS%
-git
-doxygen
-python2
-

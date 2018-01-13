@@ -1,0 +1,9 @@
+%DEPENDS%
+python-six
+python-pbr
+python-jsonpatch
+python-stevedore
+python-keystoneauth1
+python-os-client-config
+python-deprecation
+

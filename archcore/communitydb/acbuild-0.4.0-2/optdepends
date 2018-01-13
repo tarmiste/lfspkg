@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+gnupg: to sign container images
+

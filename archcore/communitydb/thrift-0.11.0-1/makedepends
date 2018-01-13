@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+qt4
+qt5-base
+boost
+libevent
+emacs-nox
+

@@ -1,0 +1,14 @@
+%DEPENDS%
+warsow-data
+sdl2
+libjpeg
+libpng
+curl
+libvorbis
+freetype2
+libxinerama
+libxxf86vm
+libxrandr
+libtheora
+libxi
+

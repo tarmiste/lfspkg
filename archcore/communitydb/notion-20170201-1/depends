@@ -1,0 +1,7 @@
+%DEPENDS%
+glib2
+gettext
+lua
+libxext
+libsm
+

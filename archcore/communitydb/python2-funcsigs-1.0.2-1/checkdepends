@@ -1,0 +1,4 @@
+%CHECKDEPENDS%
+python2-nose
+python2-unittest2
+

@@ -1,0 +1,4 @@
+%DEPENDS%
+libmgba
+sdl2
+

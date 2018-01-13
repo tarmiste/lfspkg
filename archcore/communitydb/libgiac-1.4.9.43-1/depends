@@ -1,0 +1,8 @@
+%DEPENDS%
+mpfi
+gsl
+pari
+ntl
+lapack
+libpng
+

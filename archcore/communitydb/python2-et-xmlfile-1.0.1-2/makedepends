@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+python2-setuptools
+python-setuptools
+python-lxml
+python2-lxml
+

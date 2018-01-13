@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+intltool
+gobject-introspection
+python2-cheetah
+autoconf-archive
+

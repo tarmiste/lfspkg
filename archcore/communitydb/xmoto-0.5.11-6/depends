@@ -1,0 +1,14 @@
+%DEPENDS%
+libjpeg
+libpng
+lua52
+sdl_mixer
+ode
+curl
+sqlite
+sdl_ttf
+sdl_net
+glu
+libxdg-basedir
+libxml2
+

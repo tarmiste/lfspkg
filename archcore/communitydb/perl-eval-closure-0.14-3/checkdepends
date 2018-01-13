@@ -1,0 +1,5 @@
+%CHECKDEPENDS%
+perl-test-requires
+perl-test-fatal
+perl-test-output
+

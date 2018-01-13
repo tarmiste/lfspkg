@@ -1,0 +1,9 @@
+%DEPENDS%
+mate-panel
+python-cairo
+python-gobject
+python-pillow
+python-xdg
+python-xlib
+libkeybinder3
+

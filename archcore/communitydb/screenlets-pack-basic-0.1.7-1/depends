@@ -1,0 +1,5 @@
+%DEPENDS%
+screenlets
+python2-feedparser
+python2-numpy
+

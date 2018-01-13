@@ -1,0 +1,3 @@
+%DEPENDS%
+perl-email-address>=1.80
+

@@ -1,8 +1,0 @@
-%DEPENDS%
-perl-io-socket-ssl
-perl-digest-sha1
-net-tools
-
-%OPTDEPENDS%
-perl-json-any: needed for cloudflare module
-

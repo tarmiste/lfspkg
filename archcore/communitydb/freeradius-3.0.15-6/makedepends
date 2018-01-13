@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+unixodbc
+python2
+curl
+json-c
+samba
+

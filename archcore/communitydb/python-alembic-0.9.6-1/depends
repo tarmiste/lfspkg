@@ -1,0 +1,7 @@
+%DEPENDS%
+python
+python-mako
+python-sqlalchemy
+python-editor
+python-dateutil
+

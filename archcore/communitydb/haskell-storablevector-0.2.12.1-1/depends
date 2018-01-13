@@ -1,0 +1,8 @@
+%DEPENDS%
+ghc-libs
+haskell-non-negative
+haskell-utility-ht
+haskell-unsafe
+haskell-quickcheck
+haskell-syb
+

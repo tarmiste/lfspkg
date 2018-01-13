@@ -1,0 +1,6 @@
+%DEPENDS%
+ghc-libs
+haskell-edisonapi
+haskell-mtl
+haskell-quickcheck
+

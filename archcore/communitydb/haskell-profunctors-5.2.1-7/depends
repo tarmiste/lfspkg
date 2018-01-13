@@ -1,0 +1,9 @@
+%DEPENDS%
+ghc-libs
+haskell-base-orphans
+haskell-bifunctors
+haskell-comonad
+haskell-contravariant
+haskell-distributive
+haskell-tagged
+

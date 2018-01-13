@@ -1,0 +1,8 @@
+%DEPENDS%
+ghc-libs
+haskell-dlist
+haskell-fmlist
+haskell-text
+haskell-utf8-string
+haskell-vector
+

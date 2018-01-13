@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+python2-matplotlib
+python2-pyqt4
+graphviz: Dependency graph feature
+

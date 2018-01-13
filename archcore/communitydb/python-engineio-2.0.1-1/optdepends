@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+python-eventlet: eventlet support
+python-aiohttp: aiohttp support
+

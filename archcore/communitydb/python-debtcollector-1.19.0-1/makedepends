@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-pbr
+python2-pbr
+python-babel
+python2-babel
+python-wrapt
+python2-wrapt
+python2-funcsigs
+

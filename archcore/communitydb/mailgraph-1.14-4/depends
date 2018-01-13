@@ -1,4 +1,0 @@
-%DEPENDS%
-rrdtool
-perl-file-tail
-

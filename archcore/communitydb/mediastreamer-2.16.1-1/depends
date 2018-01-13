@@ -1,0 +1,11 @@
+%DEPENDS%
+ortp
+ffmpeg
+libxv
+libupnp
+bzrtp
+glew
+libsrtp
+mbedtls
+bctoolbox
+

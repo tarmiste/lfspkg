@@ -1,0 +1,6 @@
+%DEPENDS%
+python-docutils
+python-commonmark
+python-setuptools
+python-sphinx
+

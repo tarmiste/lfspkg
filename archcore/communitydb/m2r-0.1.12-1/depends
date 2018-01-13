@@ -1,0 +1,5 @@
+%DEPENDS%
+python-mistune
+python-docutils
+python-setuptools
+

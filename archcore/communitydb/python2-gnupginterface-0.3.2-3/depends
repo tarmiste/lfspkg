@@ -1,7 +1,0 @@
-%DEPENDS%
-gnupg
-python2
-
-%CONFLICTS%
-python-gnupginterface<=0.3.2-6
-

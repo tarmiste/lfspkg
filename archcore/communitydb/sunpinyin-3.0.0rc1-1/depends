@@ -1,0 +1,5 @@
+%DEPENDS%
+sqlite
+make
+gcc-libs
+

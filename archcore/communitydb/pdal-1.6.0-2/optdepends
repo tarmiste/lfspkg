@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+python-numpy: for the Python plugin
+hexer-hobu: for the hexbin plugin
+sqlite: for the sqlite plugin
+postgresql-libs: for the postgresql plugin
+

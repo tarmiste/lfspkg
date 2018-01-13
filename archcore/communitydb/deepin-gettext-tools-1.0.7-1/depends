@@ -1,0 +1,6 @@
+%DEPENDS%
+gettext
+python
+perl-config-tiny
+perl-xml-libxml
+

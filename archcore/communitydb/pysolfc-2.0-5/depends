@@ -1,5 +1,0 @@
-%DEPENDS%
-tk
-pysol-sound-server
-python2-pillow
-

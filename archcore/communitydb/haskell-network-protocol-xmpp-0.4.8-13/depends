@@ -1,0 +1,11 @@
+%DEPENDS%
+ghc-libs
+haskell-gnuidn
+haskell-gnutls
+haskell-gsasl
+haskell-libxml-sax
+haskell-monads-tf
+haskell-network
+haskell-text
+haskell-xml-types
+

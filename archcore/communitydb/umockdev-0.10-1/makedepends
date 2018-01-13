@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+gobject-introspection
+gtk-doc
+vala
+

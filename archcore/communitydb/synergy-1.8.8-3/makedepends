@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+libxt
+cmake
+qt5-base
+gmock
+gtest
+

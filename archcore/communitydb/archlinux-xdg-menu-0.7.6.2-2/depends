@@ -1,7 +1,0 @@
-%DEPENDS%
-perl
-perl-xml-parser
-
-%OPTDEPENDS%
-sux: for xdg_menu_su
-

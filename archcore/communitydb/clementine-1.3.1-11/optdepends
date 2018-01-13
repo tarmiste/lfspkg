@@ -1,0 +1,8 @@
+%OPTDEPENDS%
+gst-plugins-base: "Base" plugin libraries
+gst-plugins-good: "Good" plugin libraries
+gst-plugins-bad: "Bad" plugin libraries
+gst-plugins-ugly: "Ugly" plugin libraries
+gst-libav: Libav plugin
+gvfs: Various devices support
+

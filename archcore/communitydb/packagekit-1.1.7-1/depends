@@ -1,0 +1,7 @@
+%DEPENDS%
+dbus-glib
+pacman>=5.0.0
+polkit
+shared-mime-info
+sqlite
+

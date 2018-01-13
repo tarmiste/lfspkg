@@ -1,0 +1,7 @@
+%DEPENDS%
+gtk-vnc
+libvirt
+spice-gtk3
+desktop-file-utils
+libvirt-glib
+

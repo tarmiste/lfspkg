@@ -1,0 +1,9 @@
+%DEPENDS%
+sagemath
+python2-twisted
+python2-flask-oldsessions
+python2-flask-openid
+python2-flask-autoindex
+python2-flask-babel
+mathjax
+

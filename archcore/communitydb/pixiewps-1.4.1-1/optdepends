@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+reaver: authentication session key support
+bully: authentication session key support
+

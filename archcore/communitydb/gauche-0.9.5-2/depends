@@ -1,0 +1,4 @@
+%DEPENDS%
+slib
+libatomic_ops
+

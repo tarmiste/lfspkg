@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+mariadb
+postgresql
+

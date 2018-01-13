@@ -1,0 +1,10 @@
+%DEPENDS%
+ffmpeg
+jansson
+libxinerama
+libxkbcommon-x11
+qt5-x11extras
+curl
+jack
+gtk-update-icon-cache
+

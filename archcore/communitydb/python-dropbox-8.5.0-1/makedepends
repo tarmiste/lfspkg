@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+python-requests
+python2-requests
+python-urllib3
+python2-urllib3
+python-setuptools
+python2-setuptools
+

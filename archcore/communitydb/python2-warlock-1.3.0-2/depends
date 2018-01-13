@@ -1,0 +1,5 @@
+%DEPENDS%
+python2-jsonschema
+python2-jsonpatch
+python2-six
+

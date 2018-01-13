@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+ghc
+haskell-hspec
+haskell-hunit
+haskell-mockery
+haskell-base-compat
+haskell-temporary
+

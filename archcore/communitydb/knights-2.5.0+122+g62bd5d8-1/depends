@@ -1,0 +1,6 @@
+%DEPENDS%
+libkdegames
+kplotting
+plasma-framework
+hicolor-icon-theme
+

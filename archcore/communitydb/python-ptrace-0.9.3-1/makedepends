@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+python
+python-sphinx
+python2
+python2-sphinx
+

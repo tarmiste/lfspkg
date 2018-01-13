@@ -1,0 +1,10 @@
+%DEPENDS%
+ghc-libs
+haskell-aeson
+haskell-hashable
+haskell-quickcheck
+haskell-unordered-containers
+haskell-semigroups
+haskell-text
+haskell-vector
+

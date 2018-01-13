@@ -1,0 +1,5 @@
+%DEPENDS%
+curl
+perl>=5.26
+perl<5.27
+

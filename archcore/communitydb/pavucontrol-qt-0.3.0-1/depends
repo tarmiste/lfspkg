@@ -1,0 +1,4 @@
+%DEPENDS%
+pulseaudio
+qt5-base
+

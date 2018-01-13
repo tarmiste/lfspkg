@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+python2-numpy
+python-numpy
+geos
+shapelib
+

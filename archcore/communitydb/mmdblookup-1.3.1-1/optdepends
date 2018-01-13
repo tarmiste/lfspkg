@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+geoip2-database: IP geolocation databases
+

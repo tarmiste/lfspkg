@@ -1,0 +1,13 @@
+%MAKEDEPENDS%
+deepin-dbus-factory
+deepin-gir-generator
+deepin-go-lib
+deepin-api
+sqlite
+deepin-gettext-tools
+git
+mercurial
+python-gobject
+networkmanager
+go-pie
+

@@ -1,0 +1,6 @@
+%DEPENDS%
+sunpinyin
+sunpinyin-data
+ibus
+pygtk
+

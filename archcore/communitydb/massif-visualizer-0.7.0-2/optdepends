@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+kgraphviewer: call graph tab
+

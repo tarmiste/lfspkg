@@ -1,0 +1,9 @@
+%OPTDEPENDS%
+gst-libav: media playback
+gst-plugins-base: media playback
+gst-plugins-good: media playback
+gst-plugins-bad: media playback
+gst-plugins-ugly: media playback
+pdfjs: displaying PDF in-browser
+qt5-webkit: alternative backend
+

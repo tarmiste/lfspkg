@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+cmake
+doxygen
+swig
+unittestpp
+

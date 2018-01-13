@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+cmake
+gobject-introspection
+intltool
+vala
+

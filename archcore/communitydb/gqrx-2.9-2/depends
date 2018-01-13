@@ -1,0 +1,6 @@
+%DEPENDS%
+qt5-svg
+libpulse
+gnuradio-osmosdr
+libxkbcommon-x11
+

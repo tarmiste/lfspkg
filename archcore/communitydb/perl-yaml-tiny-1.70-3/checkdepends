@@ -1,0 +1,4 @@
+%CHECKDEPENDS%
+perl-cpan-meta>=2.150001
+perl-pod-coverage
+

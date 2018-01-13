@@ -1,0 +1,12 @@
+%MAKEDEPENDS%
+python-setuptools
+python-mako
+python-sqlalchemy
+python-editor
+python-dateutil
+python2-setuptools
+python2-mako
+python2-sqlalchemy
+python2-editor
+python2-dateutil
+

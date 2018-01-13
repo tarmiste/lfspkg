@@ -1,0 +1,7 @@
+%CHECKDEPENDS%
+perl-test-differences
+perl-test-exception
+perl-test-mockobject
+perl-test-pod
+perl-test-pod-coverage
+

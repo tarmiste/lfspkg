@@ -1,0 +1,7 @@
+%DEPENDS%
+ghc-libs
+libx11
+libxinerama
+libxrandr
+haskell-data-default
+

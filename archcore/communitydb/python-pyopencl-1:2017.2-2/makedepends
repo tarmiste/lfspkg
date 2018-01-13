@@ -1,0 +1,14 @@
+%MAKEDEPENDS%
+boost-libs
+ctags
+python2-setuptools
+python-setuptools
+opencl-icd-loader
+opencl-headers
+mesa
+boost
+python2-mako
+python-mako
+python-numpy
+python2-numpy
+

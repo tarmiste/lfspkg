@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+python-dbus
+python2-dbus
+dbus-glib
+python-cryptography
+python2-cryptography
+

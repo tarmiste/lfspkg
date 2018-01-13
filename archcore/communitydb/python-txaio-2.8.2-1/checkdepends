@@ -1,0 +1,4 @@
+%CHECKDEPENDS%
+python-twisted
+python2-twisted
+

@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+php: for developing programs in php
+groovy: for developing programs in groovy
+lib32-glibc
+

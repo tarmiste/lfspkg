@@ -1,0 +1,4 @@
+%DEPENDS%
+libphobos
+curl
+

@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+cmake
+boost
+gtest
+qt5-tools
+patch
+

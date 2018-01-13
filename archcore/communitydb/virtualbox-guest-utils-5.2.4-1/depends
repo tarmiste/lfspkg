@@ -1,0 +1,13 @@
+%DEPENDS%
+glibc
+pam
+libx11
+libxcomposite
+libxdamage
+libxext
+libxfixes
+libxmu
+libxt
+xorg-xrandr
+VIRTUALBOX-GUEST-MODULES
+

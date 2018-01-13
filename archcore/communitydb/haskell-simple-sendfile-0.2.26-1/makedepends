@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+ghc
+haskell-hunit
+haskell-conduit
+haskell-conduit-extra
+haskell-resourcet
+haskell-hspec
+

@@ -1,0 +1,13 @@
+%DEPENDS%
+alsa-lib
+curl
+desktop-file-utils
+hicolor-icon-theme
+libmad
+libvorbis
+libogg
+libxkbcommon-x11
+taglib
+xdg-utils
+qt5-x11extras
+

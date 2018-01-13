@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+lazarus
+qt4pas
+qt5pas
+gtk2
+

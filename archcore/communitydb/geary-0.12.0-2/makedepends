@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+cmake
+gnome-doc-utils
+gobject-introspection
+intltool
+vala
+

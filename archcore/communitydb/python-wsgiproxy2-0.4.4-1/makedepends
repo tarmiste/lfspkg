@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-webob
+python2-webob
+python-six
+python2-six
+git
+

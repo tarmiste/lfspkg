@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-coverage
+python2-coverage
+

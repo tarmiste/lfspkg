@@ -1,0 +1,4 @@
+%CHECKDEPENDS%
+python-zope-testing
+python2-zope-testing
+

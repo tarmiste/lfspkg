@@ -1,0 +1,6 @@
+%DEPENDS%
+clthreads
+clxclient
+jack
+zita-alsa-pcmi
+

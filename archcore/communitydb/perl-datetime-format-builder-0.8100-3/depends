@@ -1,0 +1,7 @@
+%DEPENDS%
+perl
+perl-class-factory-util>=1.6
+perl-datetime>=0.12
+perl-datetime-format-strptime>=1.04
+perl-params-validate>=0.72
+

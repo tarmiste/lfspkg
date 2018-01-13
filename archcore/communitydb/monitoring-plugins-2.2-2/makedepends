@@ -1,0 +1,16 @@
+%MAKEDEPENDS%
+net-snmp
+postgresql-libs
+libdbi
+libmariadbclient
+procps-ng
+iputils
+fping
+dnsutils
+rpcbind
+smbclient
+openssh
+inetutils
+postfix
+perl-net-snmp
+

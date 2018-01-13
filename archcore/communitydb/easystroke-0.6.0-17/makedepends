@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+boost
+inputproto
+intltool
+gettext
+xorg-server-devel
+help2man
+

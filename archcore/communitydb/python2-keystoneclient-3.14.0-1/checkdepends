@@ -1,0 +1,12 @@
+%CHECKDEPENDS%
+python-oslotest
+python2-oslotest
+python-testresources
+python2-testresources
+python-requests-mock
+python2-requests-mock
+python-pycodestyle
+python2-pycodestyle
+python-lxml
+python2-lxml
+

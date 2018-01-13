@@ -1,0 +1,9 @@
+%DEPENDS%
+curl
+glibc
+gnutls
+libpsl
+nettle
+zlib
+libssh2.so=1-64
+

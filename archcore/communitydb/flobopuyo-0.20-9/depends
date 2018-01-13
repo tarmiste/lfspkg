@@ -1,9 +1,0 @@
-%DEPENDS%
-glu
-sdl_image
-sdl_mixer
-
-%MAKEDEPENDS%
-mesa
-patch
-

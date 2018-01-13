@@ -1,0 +1,17 @@
+%MAKEDEPENDS%
+sdl2
+freealut
+freeglut
+libpng
+libxmu
+libxrandr
+plib
+libjpeg
+zlib
+enet
+cmake
+tar
+libvorbis
+glu
+openscenegraph
+

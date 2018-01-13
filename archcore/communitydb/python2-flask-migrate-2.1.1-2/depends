@@ -1,0 +1,7 @@
+%DEPENDS%
+python2-alembic
+python2-flask
+python2-flask-script
+python2-flask-sqlalchemy
+python2-setuptools
+

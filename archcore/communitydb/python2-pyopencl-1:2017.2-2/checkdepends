@@ -1,0 +1,6 @@
+%CHECKDEPENDS%
+python2-six
+python-six
+python-appdirs
+python2-appdirs
+

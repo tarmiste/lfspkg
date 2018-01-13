@@ -1,0 +1,5 @@
+%DEPENDS%
+ruby
+ruby-glib2=3.2.1
+ruby-gobject-introspection=3.2.1
+

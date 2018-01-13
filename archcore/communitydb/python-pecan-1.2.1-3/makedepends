@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+python
+python2
+python-setuptools
+python2-setuptools
+python-tox
+python-sphinx
+python-webob
+python-webtest
+python-mako
+

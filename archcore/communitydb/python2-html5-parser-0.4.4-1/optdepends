@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+python2-beautifulsoup4: to use the soup treebuilder
+

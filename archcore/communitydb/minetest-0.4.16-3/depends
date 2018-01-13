@@ -1,0 +1,13 @@
+%DEPENDS%
+minetest-common
+irrlicht
+curl
+libvorbis
+sqlite
+openal
+hicolor-icon-theme
+desktop-file-utils
+xdg-utils
+freetype2
+luajit
+

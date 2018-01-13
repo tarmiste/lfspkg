@@ -1,0 +1,11 @@
+%DEPENDS%
+dconf
+libcanberra
+libgtop
+libsm
+deepin-desktop-schemas
+gtk3
+startup-notification
+zenity
+bamf
+

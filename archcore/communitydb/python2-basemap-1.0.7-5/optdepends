@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+python2-pillow: Python Imaging Library is only needed for bluemarble and warpimage methods.
+

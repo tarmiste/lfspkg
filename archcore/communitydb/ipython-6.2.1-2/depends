@@ -1,0 +1,11 @@
+%DEPENDS%
+python
+python-traitlets
+python-pexpect
+sqlite
+python-setuptools
+python-pickleshare
+python-prompt_toolkit
+python-jedi
+python-pygments
+

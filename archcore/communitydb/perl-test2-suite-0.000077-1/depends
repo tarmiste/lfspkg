@@ -1,0 +1,5 @@
+%DEPENDS%
+perl-importer
+perl-sub-info
+perl-term-table
+

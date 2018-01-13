@@ -1,0 +1,4 @@
+%CHECKDEPENDS%
+python-lxml
+python2-lxml
+

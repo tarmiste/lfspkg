@@ -1,0 +1,5 @@
+%DEPENDS%
+deepin-qt5integration
+qt5-svg
+qt5-declarative
+

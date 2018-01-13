@@ -1,0 +1,10 @@
+%DEPENDS%
+curl
+gmp
+iproute2
+openssl
+sqlite
+libcap
+libsystemd
+pam
+

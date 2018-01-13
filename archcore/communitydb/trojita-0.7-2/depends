@@ -1,0 +1,8 @@
+%DEPENDS%
+hicolor-icon-theme
+qt5-webkit
+qtkeychain
+qt5-svg
+qgpgme
+mimetic
+

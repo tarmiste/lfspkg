@@ -1,0 +1,6 @@
+%DEPENDS%
+libsecret
+nodejs>=8
+npm
+python2
+

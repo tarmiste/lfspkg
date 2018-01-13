@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+qt5-tools
+mercurial
+imagemagick
+librsvg
+

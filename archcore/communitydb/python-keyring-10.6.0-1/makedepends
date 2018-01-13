@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+python-setuptools_scm
+python2-setuptools_scm
+python-secretstorage
+python2-secretstorage
+

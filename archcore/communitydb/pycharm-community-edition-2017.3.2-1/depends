@@ -1,0 +1,8 @@
+%DEPENDS%
+gcc-libs
+giflib
+glibc
+java-runtime=8
+sh
+ttf-font
+

@@ -1,0 +1,11 @@
+%DEPENDS%
+ghc-libs
+haskell-aeson
+haskell-blaze-markup
+haskell-blaze-html
+haskell-parsec
+haskell-scientific
+haskell-text
+haskell-unordered-containers
+haskell-vector
+

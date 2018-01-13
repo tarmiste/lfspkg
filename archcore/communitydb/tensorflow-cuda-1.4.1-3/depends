@@ -1,0 +1,4 @@
+%DEPENDS%
+cuda
+cudnn
+

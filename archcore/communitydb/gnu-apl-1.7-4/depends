@@ -1,0 +1,6 @@
+%DEPENDS%
+ncurses
+postgresql-libs
+gcc-libs
+sqlite
+

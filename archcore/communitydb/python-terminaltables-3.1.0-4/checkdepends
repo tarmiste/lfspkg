@@ -1,0 +1,10 @@
+%CHECKDEPENDS%
+python-pytest
+python-colorama
+python-termcolor
+python-colorclass
+python2-pytest
+python2-colorama
+python2-termcolor
+python2-colorclass
+

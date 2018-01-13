@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+pkg-config
+intltool
+

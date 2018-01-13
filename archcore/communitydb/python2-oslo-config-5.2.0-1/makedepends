@@ -1,0 +1,14 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-netaddr
+python2-netaddr
+python-stevedore
+python2-stevedore
+python-debtcollector
+python2-debtcollector
+python-oslo-i18n
+python2-oslo-i18n
+python-rfc3986
+python2-rfc3986
+

@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+git
+jack
+a52dec
+freetype2
+faad2
+libmad
+mesa
+sdl2
+

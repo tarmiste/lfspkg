@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-pyparsing
+python2-pyparsing
+python-pyperclip
+python2-pyperclip
+python2-subprocess32
+

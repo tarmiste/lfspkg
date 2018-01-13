@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+intltool
+gnome-common
+

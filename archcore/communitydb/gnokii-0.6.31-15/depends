@@ -1,0 +1,8 @@
+%DEPENDS%
+libusb-compat
+libxpm
+bluez-libs
+libical
+sqlite
+systemd
+

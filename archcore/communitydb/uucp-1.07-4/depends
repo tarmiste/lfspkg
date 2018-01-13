@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-wget
-sed
-grep
-

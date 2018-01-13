@@ -1,0 +1,9 @@
+%DEPENDS%
+openal
+libvorbis
+fribidi
+curl
+bluez-libs
+libxrandr
+glu
+

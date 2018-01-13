@@ -1,0 +1,12 @@
+%MAKEDEPENDS%
+python-docutils
+python2-docutils
+python-setuptools
+python2-setuptools
+python-requests-toolbelt
+python2-requests-toolbelt
+python-requests-oauthlib
+python2-requests-oauthlib
+python-six
+python2-six
+

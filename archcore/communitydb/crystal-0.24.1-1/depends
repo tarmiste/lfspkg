@@ -1,0 +1,7 @@
+%DEPENDS%
+gc
+libatomic_ops
+pcre
+libevent
+llvm-libs
+

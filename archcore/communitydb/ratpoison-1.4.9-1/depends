@@ -1,0 +1,10 @@
+%DEPENDS%
+libxinerama
+readline
+bash
+perl
+libxtst
+libxft
+texinfo
+libxrandr
+

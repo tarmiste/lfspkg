@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+libxcursor: run examples
+

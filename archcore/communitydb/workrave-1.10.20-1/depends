@@ -1,0 +1,9 @@
+%DEPENDS%
+libxtst
+gtkmm3
+gdome2
+gstreamer
+libsm
+libice
+libxss
+

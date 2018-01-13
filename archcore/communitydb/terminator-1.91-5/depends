@@ -1,0 +1,11 @@
+%DEPENDS%
+gsettings-desktop-schemas
+libkeybinder3
+libnotify
+python2-cairo
+python2-dbus
+python2-psutil
+python2-gobject
+vte3
+xdg-utils
+

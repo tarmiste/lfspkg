@@ -1,0 +1,6 @@
+%CHECKDEPENDS%
+python-tox
+python-setuptools
+python-lxml
+git
+

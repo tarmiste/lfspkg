@@ -1,0 +1,14 @@
+%DEPENDS%
+cdrkit
+gtk-vnc
+libarchive
+libgudev
+libosinfo
+libsecret
+tracker
+libvirt-glib
+mtools
+qemu
+spice-gtk3
+libgovirt
+

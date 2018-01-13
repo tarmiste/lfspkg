@@ -1,0 +1,6 @@
+%DEPENDS%
+ghc-libs
+haskell-x11=1.8
+haskell-utf8-string
+libxft
+

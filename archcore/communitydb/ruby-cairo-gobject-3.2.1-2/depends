@@ -1,0 +1,5 @@
+%DEPENDS%
+ruby
+ruby-cairo
+ruby-glib2=3.2.1
+

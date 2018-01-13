@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-requests
+python2-requests
+python-retrying
+python2-retrying
+python-packaging
+python2-packaging
+

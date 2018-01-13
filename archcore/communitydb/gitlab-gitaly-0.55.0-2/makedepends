@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+go
+ruby2.3-bundler
+cmake
+

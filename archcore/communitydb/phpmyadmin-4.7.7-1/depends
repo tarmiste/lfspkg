@@ -1,0 +1,4 @@
+%DEPENDS%
+mariadb-clients
+php
+

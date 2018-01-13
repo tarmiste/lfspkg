@@ -1,0 +1,9 @@
+%DEPENDS%
+pygtk
+python2-pillow
+xdg-utils
+python2
+desktop-file-utils
+hicolor-icon-theme
+python2-setuptools
+

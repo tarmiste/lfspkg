@@ -1,0 +1,6 @@
+%DEPENDS%
+evince
+gconf
+sugar-toolkit-gtk3
+webkit2gtk
+

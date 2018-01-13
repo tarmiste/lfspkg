@@ -1,0 +1,12 @@
+%DEPENDS%
+ghc-libs
+haskell-ghc
+haskell-quickcheck
+haskell-cracknum
+haskell-async
+haskell-mtl
+haskell-random
+haskell-syb
+haskell-data-binary-ieee754
+haskell-generic-deriving
+

@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+doxygen
+boost
+cmake
+mesa
+cppunit
+glfw-x11
+glu
+python
+

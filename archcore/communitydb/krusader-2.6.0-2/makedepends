@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+cmake
+extra-cmake-modules
+python
+

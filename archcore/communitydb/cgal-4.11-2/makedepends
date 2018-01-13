@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+cmake
+qt5-svg
+eigen
+boost
+

@@ -1,0 +1,8 @@
+%DEPENDS%
+glu
+libsamplerate
+libpng
+sdl
+freetype2
+boost-libs
+

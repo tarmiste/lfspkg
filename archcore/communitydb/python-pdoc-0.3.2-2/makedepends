@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+python-mako
+python2-mako
+python-markdown
+python2-markdown
+git
+

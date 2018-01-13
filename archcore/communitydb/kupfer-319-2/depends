@@ -1,0 +1,8 @@
+%DEPENDS%
+libkeybinder3
+libwnck3
+python-cairo
+python-dbus
+python-gobject
+python-xdg
+

@@ -1,0 +1,14 @@
+%DEPENDS%
+dnsutils
+perl
+perl-timedate
+perl-net-dns
+perl-net-dns-sec
+perl-mailtools
+bind
+openssl-1.0
+glibc
+pth
+perl>=5.26
+perl<5.27
+

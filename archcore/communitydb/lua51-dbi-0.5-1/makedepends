@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+sqlite3
+libmariadbclient
+postgresql
+

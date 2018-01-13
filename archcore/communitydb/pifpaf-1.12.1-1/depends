@@ -1,0 +1,10 @@
+%DEPENDS%
+python-daiquiri
+python-cliff
+python-pbr
+python-jinja
+python-six
+python-fixtures
+python-psutil
+python-xattr
+

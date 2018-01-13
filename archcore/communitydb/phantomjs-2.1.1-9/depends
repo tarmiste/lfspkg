@@ -1,0 +1,10 @@
+%DEPENDS%
+icu
+libjpeg-turbo
+libpng
+fontconfig
+gperf
+ruby
+python2
+openssl-1.0
+

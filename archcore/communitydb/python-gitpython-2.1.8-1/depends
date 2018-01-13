@@ -1,0 +1,4 @@
+%DEPENDS%
+python
+python-gitdb>=2.0.0
+

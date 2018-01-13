@@ -1,0 +1,9 @@
+%DEPENDS%
+ghc-libs
+haskell-attoparsec
+haskell-css-text
+haskell-network-uri
+haskell-tagsoup
+haskell-text
+haskell-utf8-string
+

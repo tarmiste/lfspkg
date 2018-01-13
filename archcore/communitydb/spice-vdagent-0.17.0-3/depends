@@ -1,0 +1,10 @@
+%DEPENDS%
+alsa-lib
+dbus
+glib2
+libpciaccess
+libxfixes
+libxinerama
+libxrandr
+systemd
+

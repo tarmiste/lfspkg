@@ -1,0 +1,13 @@
+%DEPENDS%
+ghc-libs
+haskell-comonad
+haskell-contravariant
+haskell-mwc-random
+haskell-primitive
+haskell-profunctors
+haskell-semigroups
+haskell-text
+haskell-unordered-containers
+haskell-vector
+haskell-vector-builder
+

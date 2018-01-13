@@ -1,0 +1,8 @@
+%CHECKDEPENDS%
+python-nose
+python2-nose
+python-mock
+python2-mock
+python-yaml
+python2-yaml
+

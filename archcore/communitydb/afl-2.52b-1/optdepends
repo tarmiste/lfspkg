@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+gcc: gcc instrumentation support
+clang: clang instrumentation support
+llvm: experimental clang-fast instrumentation support
+gnuplot: graph plotting support
+

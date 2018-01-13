@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-cffi
+python2-cffi
+brotli06
+

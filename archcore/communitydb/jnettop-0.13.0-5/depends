@@ -1,7 +1,0 @@
-%DEPENDS%
-libpcap
-glib2
-
-%MAKEDEPENDS%
-pkgconfig
-

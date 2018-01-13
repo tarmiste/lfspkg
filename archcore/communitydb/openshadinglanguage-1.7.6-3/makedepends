@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+boost
+cmake
+llvm35
+clang35
+

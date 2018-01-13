@@ -1,6 +1,0 @@
-%DEPENDS%
-perl
-perl-io-multiplex
-perl-net-server
-perl-net-dns
-

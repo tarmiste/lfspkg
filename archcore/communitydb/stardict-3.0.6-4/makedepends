@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+enchant
+espeak
+libmariadbclient
+gconf
+gnome-common
+gnome-doc-utils
+

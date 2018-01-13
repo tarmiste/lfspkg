@@ -1,0 +1,9 @@
+%DEPENDS%
+python-six
+python-pbr
+python-babel
+python-prettytable
+python-keystoneclient
+python-requests
+python-oslo-utils
+

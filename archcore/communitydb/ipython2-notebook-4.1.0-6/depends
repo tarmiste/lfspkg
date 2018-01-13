@@ -1,0 +1,6 @@
+%DEPENDS%
+ipython2
+python2-ipykernel
+python2-jupyter_core
+python2-jupyter_client
+

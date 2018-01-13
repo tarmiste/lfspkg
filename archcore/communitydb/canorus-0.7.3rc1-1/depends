@@ -1,0 +1,7 @@
+%DEPENDS%
+qt5-svg
+qt5-webengine
+alsa-lib
+zlib
+python
+

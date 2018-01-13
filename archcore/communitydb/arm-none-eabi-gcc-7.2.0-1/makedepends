@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+gmp
+mpfr
+arm-none-eabi-newlib
+

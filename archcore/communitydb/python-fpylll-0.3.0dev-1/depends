@@ -1,0 +1,5 @@
+%DEPENDS%
+fplll
+python-numpy
+python-cysignals
+

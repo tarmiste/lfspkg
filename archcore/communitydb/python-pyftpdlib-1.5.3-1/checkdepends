@@ -1,0 +1,10 @@
+%CHECKDEPENDS%
+python-pytest-runner
+python2-pytest-runner
+python-mock
+python2-mock
+python-pyopenssl
+python2-pyopenssl
+python-psutil
+python2-psutil
+

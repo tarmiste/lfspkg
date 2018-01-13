@@ -1,0 +1,6 @@
+%DEPENDS%
+ghc-libs
+haskell-hashable
+haskell-mtl
+haskell-transformers-compat
+

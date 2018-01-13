@@ -1,0 +1,4 @@
+%DEPENDS%
+python-blessings
+python-wcwidth
+

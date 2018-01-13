@@ -1,0 +1,6 @@
+%DEPENDS%
+python-paramiko
+python-jinja
+python-yaml
+python-crypto
+

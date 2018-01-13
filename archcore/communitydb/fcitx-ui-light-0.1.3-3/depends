@@ -1,8 +1,0 @@
-%DEPENDS%
-fcitx>=4.1.0
-libxpm
-
-%MAKEDEPENDS%
-cmake
-intltool
-

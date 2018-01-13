@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+graphviz: graph_models extension
+python2-werkzeug: runserver_plus extension
+ipython2: shell_plus extensions
+

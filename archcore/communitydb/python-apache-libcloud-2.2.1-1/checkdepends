@@ -1,0 +1,9 @@
+%CHECKDEPENDS%
+python-mock
+python2-mock
+python-pytest-runner
+python2-pytest-runner
+openssh
+python-requests-mock
+python2-requests-mock
+

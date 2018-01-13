@@ -1,0 +1,6 @@
+%DEPENDS%
+libxv
+glu
+libjpeg-turbo
+xcb-util-keysyms
+

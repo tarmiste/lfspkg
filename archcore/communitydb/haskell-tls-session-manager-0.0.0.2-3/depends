@@ -1,0 +1,7 @@
+%DEPENDS%
+ghc-libs
+haskell-auto-update
+haskell-clock
+haskell-psqueues
+haskell-tls
+

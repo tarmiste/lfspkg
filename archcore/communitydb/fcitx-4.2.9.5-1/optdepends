@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+enchant: for word predication support
+opencc: optional engine to do chinese convert
+gettext: for fcitx-po-parser
+

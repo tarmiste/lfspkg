@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+ruby-nats-pure: NATS backend
+

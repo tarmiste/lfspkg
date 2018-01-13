@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+fplll
+python-numpy
+python-cysignals
+cython
+python2-numpy
+python2-cysignals
+cython2
+

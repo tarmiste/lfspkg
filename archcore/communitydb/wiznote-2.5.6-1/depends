@@ -1,0 +1,7 @@
+%DEPENDS%
+desktop-file-utils
+hicolor-icon-theme
+xdg-utils
+qt5-websockets
+qt5-webengine
+

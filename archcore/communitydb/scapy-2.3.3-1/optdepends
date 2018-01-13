@@ -1,0 +1,7 @@
+%OPTDEPENDS%
+python2-crypto: WEP decryption support
+python2-pyx: psdump() and pdfdump() functions
+python2-gnuplot: plotting support
+graphviz: conversations() method support
+sox: for VOIP support
+

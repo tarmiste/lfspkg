@@ -1,0 +1,11 @@
+%DEPENDS%
+giflib
+libtiff
+libexif
+openmotif
+libpng
+fontconfig
+curl
+libepoxy
+poppler-glib
+

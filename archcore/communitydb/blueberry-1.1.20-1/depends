@@ -1,0 +1,8 @@
+%DEPENDS%
+bluez-tools
+gnome-bluetooth
+python2-dbus
+python2-gobject
+python2-setproctitle
+rfkill
+

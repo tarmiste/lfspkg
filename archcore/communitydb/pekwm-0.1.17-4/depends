@@ -1,0 +1,7 @@
+%DEPENDS%
+libjpeg
+libxft
+libxinerama
+libxpm
+libxrandr
+

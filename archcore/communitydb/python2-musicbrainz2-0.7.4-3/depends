@@ -1,9 +1,0 @@
-%DEPENDS%
-python2
-
-%CONFLICTS%
-python-musicbrainz2<=0.7.4-1
-
-%OPTDEPENDS%
-libdiscid: For calculating Disc IDs
-

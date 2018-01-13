@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+lame: record sound
+mplayer: play sound
+

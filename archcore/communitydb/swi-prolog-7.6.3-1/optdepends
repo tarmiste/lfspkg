@@ -1,0 +1,7 @@
+%OPTDEPENDS%
+unixodbc: for using the odbc4pl library
+libjpeg: for using the pl2xpce library
+libxpm: for using the pl2xpce library
+libxinerama: for using the pl2xpce library
+libxft: for using the pl2xpce library
+

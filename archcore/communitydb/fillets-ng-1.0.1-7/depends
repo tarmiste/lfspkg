@@ -1,0 +1,11 @@
+%DEPENDS%
+fillets-ng-data
+lua51
+fribidi
+gcc-libs
+libx11
+sdl_mixer
+sdl_ttf
+sdl_image
+desktop-file-utils
+

@@ -1,0 +1,13 @@
+%MAKEDEPENDS%
+patch
+intltool
+perl-xml-parser
+faac
+lame
+libtheora
+ogmtools
+gpac
+vorbis-tools
+tesseract
+python
+

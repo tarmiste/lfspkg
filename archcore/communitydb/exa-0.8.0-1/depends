@@ -1,0 +1,4 @@
+%DEPENDS%
+libssh2
+zlib
+

@@ -1,0 +1,11 @@
+%DEPENDS%
+boost-libs
+libepoxy
+libxml++2.6
+portaudio
+portmidi
+librsvg
+ffmpeg
+opencv
+sdl2
+

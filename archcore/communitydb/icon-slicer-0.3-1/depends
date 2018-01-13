@@ -1,0 +1,5 @@
+%DEPENDS%
+gdk-pixbuf2
+popt
+xorg-xcursorgen
+

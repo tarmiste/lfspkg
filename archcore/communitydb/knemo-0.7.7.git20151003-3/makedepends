@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+kcmutils
+plasma-framework
+kdoctools
+python
+git
+kdesignerplugin
+

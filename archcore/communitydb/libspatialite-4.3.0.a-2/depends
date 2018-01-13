@@ -1,0 +1,7 @@
+%DEPENDS%
+geos
+libfreexl
+libxml2
+proj
+sqlite
+

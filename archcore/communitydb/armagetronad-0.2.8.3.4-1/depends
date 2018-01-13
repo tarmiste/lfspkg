@@ -1,0 +1,6 @@
+%DEPENDS%
+sdl_image
+libxml2
+sdl_mixer
+ftgl
+

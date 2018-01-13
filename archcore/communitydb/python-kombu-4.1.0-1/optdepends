@@ -1,0 +1,10 @@
+%OPTDEPENDS%
+python-pymongo: for MongoDB support
+python-msgpack: for MessagePack support
+python-pyro: for Pyro support
+python-redis: for Redis support
+python-sqlalchemy: for SQLAlchemy support
+python-boto3: for Amazon SQS support
+python-pycurl: for Amazon SQS support
+python-yaml: for YAML support
+

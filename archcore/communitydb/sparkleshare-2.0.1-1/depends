@@ -1,0 +1,8 @@
+%DEPENDS%
+webkit2-sharp
+notify-sharp-3
+curl
+git
+openssh
+gvfs
+

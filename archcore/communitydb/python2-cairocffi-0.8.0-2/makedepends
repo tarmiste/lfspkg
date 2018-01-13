@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+python-cffi
+python2-cffi
+python-setuptools
+python2-setuptools
+cairo
+gdk-pixbuf2
+python-xcffib
+python2-xcffib
+

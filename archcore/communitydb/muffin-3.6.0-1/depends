@@ -1,0 +1,10 @@
+%DEPENDS%
+clutter
+gobject-introspection-runtime
+cinnamon-desktop
+libcanberra
+libsm
+startup-notification
+zenity
+dconf
+

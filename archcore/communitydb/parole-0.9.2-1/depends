@@ -1,0 +1,11 @@
+%DEPENDS%
+gstreamer
+gst-plugins-base-libs
+hicolor-icon-theme
+libnotify>=0.4.1
+libxfce4ui>=4.12.0
+taglib>=1.4
+desktop-file-utils
+gst-plugins-good
+clutter-gtk
+

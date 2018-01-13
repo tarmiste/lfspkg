@@ -1,0 +1,11 @@
+%DEPENDS%
+ghc-libs
+haskell-cereal
+haskell-libxml-sax
+haskell-network
+haskell-parsec
+haskell-random
+haskell-text
+haskell-vector
+haskell-xml-types
+

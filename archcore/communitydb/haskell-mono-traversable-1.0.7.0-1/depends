@@ -1,0 +1,9 @@
+%DEPENDS%
+ghc-libs
+haskell-hashable
+haskell-split
+haskell-text
+haskell-unordered-containers
+haskell-vector
+haskell-vector-algorithms
+

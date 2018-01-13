@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+read-edid: for decode-edid script
+python: for smbus module
+python2: for smbus module
+

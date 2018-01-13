@@ -1,0 +1,6 @@
+%CHECKDEPENDS%
+python-pytest-cov
+python2-pytest-cov
+python-pytest-timeout
+python2-pytest-timeout
+

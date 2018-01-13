@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+plasma-workspace: for the KDE/Openbox xsession
+python2-xdg: for the openbox-xdg-autostart script
+

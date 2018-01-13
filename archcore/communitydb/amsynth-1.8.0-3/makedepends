@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+dssi
+ladspa
+intltool
+pandoc
+

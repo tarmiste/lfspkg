@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+python2-nose: needed for integrated test suite
+python2-matplotlib: needed for plotting functions
+

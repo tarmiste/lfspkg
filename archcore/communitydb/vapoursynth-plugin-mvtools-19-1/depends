@@ -1,0 +1,6 @@
+%DEPENDS%
+fftw
+gcc-libs
+glibc
+vapoursynth
+

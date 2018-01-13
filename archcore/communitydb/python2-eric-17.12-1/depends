@@ -1,0 +1,6 @@
+%DEPENDS%
+eric-common
+python2-qscintilla-qt5
+qt5-svg
+qt5-webkit
+

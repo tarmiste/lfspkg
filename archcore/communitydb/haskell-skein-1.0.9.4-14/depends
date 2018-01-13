@@ -1,0 +1,6 @@
+%DEPENDS%
+ghc-libs
+haskell-cereal
+haskell-crypto-api
+haskell-tagged
+

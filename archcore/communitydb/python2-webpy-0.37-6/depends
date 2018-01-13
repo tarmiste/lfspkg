@@ -1,9 +1,0 @@
-%DEPENDS%
-python2
-
-%OPTDEPENDS%
-python2-flup: deploy web applications via FastCGI (recommended)
-python2-psycopg2: use PostgreSQL as the backing database
-mysql-python: use MySQL as the backing database
-python2-mako: alternative templating engine
-

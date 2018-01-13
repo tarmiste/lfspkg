@@ -1,0 +1,4 @@
+%DEPENDS%
+python2-persistent
+python2-zope-interface
+

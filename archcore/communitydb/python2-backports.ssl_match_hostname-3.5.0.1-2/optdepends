@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+python2-ipaddress: for IPAddress ServerAltnames support
+

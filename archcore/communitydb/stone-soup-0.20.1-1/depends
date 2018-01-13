@@ -1,0 +1,9 @@
+%DEPENDS%
+lua51
+ncurses
+sdl2_image
+sqlite
+glu
+freetype2
+ttf-dejavu
+

@@ -1,0 +1,6 @@
+%DEPENDS%
+libusb
+protobuf
+python
+qt5-base
+

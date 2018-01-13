@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+cmake
+qt5-tools
+

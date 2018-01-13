@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+ipython: for IPython shell plugin
+

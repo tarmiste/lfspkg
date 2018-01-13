@@ -1,0 +1,10 @@
+%OPTDEPENDS%
+mplayer: play videos with MPlayer
+smplayer: play videos with SMPlayer
+gnome-mplayer: play videos with GNOME MPlayer
+dragon: play videos with Dragon Player
+totem: play videos with Totem
+vlc: play videos with VLC
+mpv: play videos with MPV
+youtube-dl: download videos
+

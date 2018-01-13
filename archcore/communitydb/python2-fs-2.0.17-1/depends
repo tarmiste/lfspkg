@@ -1,0 +1,8 @@
+%DEPENDS%
+python2-appdirs
+python2-enum34
+python2-pytz
+python2-scandir
+python2-setuptools
+python2-six
+

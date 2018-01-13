@@ -1,0 +1,8 @@
+%DEPENDS%
+deepin-qt5integration
+ffmpeg
+taglib
+libcue
+qt5-svg
+gst-plugins-bad
+

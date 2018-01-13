@@ -1,0 +1,8 @@
+%DEPENDS%
+python-future
+python-pbr
+python-subunit
+python-fixtures
+python-testtools
+python-yaml
+

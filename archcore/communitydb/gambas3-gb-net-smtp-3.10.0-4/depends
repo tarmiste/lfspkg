@@ -1,0 +1,4 @@
+%DEPENDS%
+gambas3-runtime
+glib2
+

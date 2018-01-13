@@ -1,0 +1,10 @@
+%DEPENDS%
+imagemagick
+qt5-base
+libwmf
+openexr
+libwebp
+openjpeg2
+librsvg
+ghostscript
+

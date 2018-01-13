@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+cmake
+git
+gyp
+range-v3
+python
+

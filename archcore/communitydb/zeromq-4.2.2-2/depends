@@ -1,0 +1,6 @@
+%DEPENDS%
+gcc-libs
+util-linux
+libsodium
+libpgm
+

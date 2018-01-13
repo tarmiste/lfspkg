@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+python2
+pandoc
+go-pie
+

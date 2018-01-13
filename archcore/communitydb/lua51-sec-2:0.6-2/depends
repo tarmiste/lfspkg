@@ -1,0 +1,5 @@
+%DEPENDS%
+openssl
+lua51
+lua51-socket
+

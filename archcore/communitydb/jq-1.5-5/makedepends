@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+autoconf
+automake
+bison
+flex
+python2
+

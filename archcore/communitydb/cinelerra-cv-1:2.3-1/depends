@@ -1,0 +1,16 @@
+%DEPENDS%
+e2fsprogs
+libavc1394
+libiec61883
+libxv
+libtiff
+mjpegtools
+fftw
+a52dec
+glu
+ffmpeg
+faad2
+faac
+openexr>=2.0.0
+libxft
+

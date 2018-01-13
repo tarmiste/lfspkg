@@ -1,0 +1,9 @@
+%DEPENDS%
+freeglut
+glu
+sdl_image
+openal
+freealut
+ftgl
+fontconfig
+

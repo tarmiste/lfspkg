@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+libxpm
+gpm
+libffi
+libxrandr
+mesa
+

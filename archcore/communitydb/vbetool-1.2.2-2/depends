@@ -1,0 +1,5 @@
+%DEPENDS%
+zlib
+libx86
+libpciaccess
+

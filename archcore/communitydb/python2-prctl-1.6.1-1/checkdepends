@@ -1,0 +1,4 @@
+%CHECKDEPENDS%
+iputils
+procps-ng
+

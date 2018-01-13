@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+perl-module-build
+perl-test-differences
+

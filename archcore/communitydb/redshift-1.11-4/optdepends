@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+python-gobject: for redshift-gtk
+python-xdg: for redshift-gtk
+librsvg: for redshift-gtk
+

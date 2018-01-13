@@ -1,0 +1,6 @@
+%DEPENDS%
+perl
+perl-module-implementation
+perl>=5.26
+perl<5.27
+

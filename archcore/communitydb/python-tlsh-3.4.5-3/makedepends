@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+cmake
+python
+python2
+gcc-libs
+

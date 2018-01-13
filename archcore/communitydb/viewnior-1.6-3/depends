@@ -1,0 +1,4 @@
+%DEPENDS%
+gtk2>=2.12
+exiv2
+

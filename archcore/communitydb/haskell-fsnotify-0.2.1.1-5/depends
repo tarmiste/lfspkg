@@ -1,0 +1,7 @@
+%DEPENDS%
+ghc-libs
+haskell-async
+haskell-hinotify
+haskell-text
+haskell-unix-compat
+

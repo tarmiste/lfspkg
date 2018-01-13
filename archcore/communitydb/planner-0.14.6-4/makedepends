@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+intltool
+gtk-doc
+pygtk
+rarian
+

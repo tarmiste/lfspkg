@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+notification-daemon: OSD notification
+gst-plugins-good: A collection of gstreamer codecs
+gst-plugins-bad: A collection of gstreamer codecs
+gst-plugins-ugly: A collection of gstreamer codecs
+

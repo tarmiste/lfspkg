@@ -1,0 +1,10 @@
+%DEPENDS%
+gnome-bluetooth
+gnome-panel
+gnome-session
+gnome-settings-daemon
+gnome-themes-standard
+libibus
+metacity
+nautilus
+

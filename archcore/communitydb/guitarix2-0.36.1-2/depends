@@ -1,0 +1,15 @@
+%DEPENDS%
+avahi
+bluez-libs
+boost-libs
+fftw
+gtkmm
+jack
+liblrdf
+lilv
+libsigc++
+libsndfile
+zita-convolver
+zita-resampler
+ttf-roboto
+

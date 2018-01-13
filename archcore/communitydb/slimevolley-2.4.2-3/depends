@@ -1,8 +1,0 @@
-%DEPENDS%
-sdl_net
-sdl_ttf
-sdl_image
-
-%MAKEDEPENDS%
-cmake
-

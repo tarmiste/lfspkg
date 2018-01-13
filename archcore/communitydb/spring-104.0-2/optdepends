@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+python2: python-based bots
+java-runtime: java-based bots
+

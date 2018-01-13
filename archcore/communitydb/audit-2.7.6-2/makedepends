@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+libldap
+swig
+linux-headers
+python
+python2
+

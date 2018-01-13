@@ -1,0 +1,6 @@
+%CHECKDEPENDS%
+python-pytest-runner
+python2-pytest-runner
+python-numpy
+python2-numpy
+

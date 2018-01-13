@@ -1,0 +1,6 @@
+%DEPENDS%
+ghc-libs
+glib2
+haskell-utf8-string
+haskell-text
+

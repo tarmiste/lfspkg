@@ -1,0 +1,8 @@
+%DEPENDS%
+libtiff
+libxss
+libxinerama
+libxxf86vm
+libxrandr
+openssl
+

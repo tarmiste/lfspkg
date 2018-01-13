@@ -1,0 +1,7 @@
+%DEPENDS%
+gconf
+libxss
+nss
+qt5-webchannel
+qt5-x11extras
+

@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+lame: for mp3 support
+vorbis-tools: for ogg support
+flac: for flac support
+

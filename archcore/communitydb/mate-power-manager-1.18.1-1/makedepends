@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+intltool
+itstool
+mate-panel
+python
+

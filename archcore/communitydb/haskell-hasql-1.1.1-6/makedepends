@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+ghc
+haskell-bug
+haskell-tasty
+haskell-tasty-quickcheck
+haskell-tasty-hunit
+haskell-quickcheck-instances
+haskell-quickcheck
+haskell-rerebase
+

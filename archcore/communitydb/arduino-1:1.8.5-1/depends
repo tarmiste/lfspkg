@@ -1,0 +1,7 @@
+%DEPENDS%
+gtk2
+desktop-file-utils
+shared-mime-info
+java-runtime=8
+arduino-builder
+

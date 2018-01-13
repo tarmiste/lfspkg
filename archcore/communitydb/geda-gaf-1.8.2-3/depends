@@ -1,0 +1,8 @@
+%DEPENDS%
+gtk2
+guile
+guile2.0
+libstroke
+shared-mime-info
+hicolor-icon-theme
+

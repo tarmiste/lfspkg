@@ -1,0 +1,4 @@
+%DEPENDS%
+python-urwid
+python-pygments
+

@@ -1,7 +1,0 @@
-%DEPENDS%
-coin
-qt4
-
-%MAKEDEPENDS%
-doxygen
-

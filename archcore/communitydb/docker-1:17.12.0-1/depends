@@ -1,0 +1,10 @@
+%DEPENDS%
+glibc
+bridge-utils
+iproute2
+device-mapper
+sqlite
+libsystemd
+libseccomp
+libtool
+

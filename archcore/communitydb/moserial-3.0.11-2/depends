@@ -1,0 +1,4 @@
+%DEPENDS%
+gsettings-desktop-schemas
+gtk3
+

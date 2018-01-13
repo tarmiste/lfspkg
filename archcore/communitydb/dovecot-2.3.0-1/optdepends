@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+libldap: ldap plugin
+xz: imap zlib plugin
+clucene: alternative FTS indexer
+

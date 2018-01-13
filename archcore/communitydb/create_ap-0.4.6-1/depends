@@ -1,0 +1,10 @@
+%DEPENDS%
+bash
+hostapd
+iproute2
+iw
+dnsmasq
+iptables
+util-linux
+procps-ng
+

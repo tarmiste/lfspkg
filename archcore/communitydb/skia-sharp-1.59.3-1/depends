@@ -1,0 +1,10 @@
+%DEPENDS%
+fontconfig
+gcc-libs
+glibc
+libjpeg-turbo
+libpng
+libwebp
+zlib
+libfreetype.so=6-64
+

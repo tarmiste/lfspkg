@@ -1,0 +1,14 @@
+%DEPENDS%
+c-ares
+ffmpeg
+gtk3
+http-parser
+libevent
+libvpx
+libxslt
+libxss
+minizip
+nss
+re2
+snappy
+

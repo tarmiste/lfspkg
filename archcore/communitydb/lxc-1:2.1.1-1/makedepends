@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+docbook2x
+lua
+python-setuptools
+

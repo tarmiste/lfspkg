@@ -1,0 +1,8 @@
+%DEPENDS%
+liblxqt
+qt5-svg
+hicolor-icon-theme
+kidletime
+solid
+xdg-utils
+

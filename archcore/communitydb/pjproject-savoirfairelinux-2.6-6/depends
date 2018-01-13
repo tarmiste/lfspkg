@@ -1,0 +1,11 @@
+%DEPENDS%
+util-linux
+gnutls
+portaudio
+speex
+alsa-lib
+libsamplerate
+ffmpeg
+libsrtp
+opus
+

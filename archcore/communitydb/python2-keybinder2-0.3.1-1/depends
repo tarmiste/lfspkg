@@ -1,0 +1,4 @@
+%DEPENDS%
+libkeybinder2
+pygtk
+

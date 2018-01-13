@@ -1,0 +1,11 @@
+%DEPENDS%
+gtk2
+glu
+sdl_image
+libsndfile
+openal
+sdl_ttf
+glew
+gcc-libs
+glib2
+

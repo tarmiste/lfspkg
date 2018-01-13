@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+cmake
+boost
+python2-cheetah
+python2-mako
+

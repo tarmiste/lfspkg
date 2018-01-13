@@ -1,0 +1,14 @@
+%DEPENDS%
+sdl
+glib2
+fluidsynth
+libpng
+libvorbis
+libxft
+libxinerama
+qt4
+sdl_sound
+libsamplerate
+shared-mime-info
+fltk
+

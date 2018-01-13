@@ -1,7 +1,0 @@
-%DEPENDS%
-glib2
-
-%MAKEDEPENDS%
-git
-check
-

@@ -1,0 +1,9 @@
+%DEPENDS%
+kdelibs4support
+libksysguard
+knotifyconfig
+wireless_tools
+iw
+plasma-framework
+hicolor-icon-theme
+

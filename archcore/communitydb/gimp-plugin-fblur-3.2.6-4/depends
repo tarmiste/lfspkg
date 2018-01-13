@@ -1,7 +1,0 @@
-%DEPENDS%
-gimp
-fftw
-
-%MAKEDEPENDS%
-intltool
-

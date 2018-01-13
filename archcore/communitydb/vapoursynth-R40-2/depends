@@ -1,0 +1,12 @@
+%DEPENDS%
+gcc-libs
+glibc
+libmagick
+python
+tesseract
+libass.so=9-64
+libavcodec.so=57-64
+libavformat.so=57-64
+libavutil.so=55-64
+libzimg.so=2-64
+

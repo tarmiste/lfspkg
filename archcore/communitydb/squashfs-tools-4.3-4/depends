@@ -1,6 +1,0 @@
-%DEPENDS%
-zlib
-lzo
-xz
-lz4
-

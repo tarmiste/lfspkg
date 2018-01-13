@@ -1,0 +1,12 @@
+%DEPENDS%
+gcc-libs
+libpng
+libxml2
+freetype2
+libxtst
+libxinerama
+libxv
+libsm
+libxxf86vm
+alsa-lib
+

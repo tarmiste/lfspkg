@@ -1,0 +1,6 @@
+%DEPENDS%
+python-py
+python-virtualenv
+python-setuptools
+python-pluggy
+

@@ -1,0 +1,15 @@
+%MAKEDEPENDS%
+meson
+valgrind
+docbook-utils
+docbook-sgml
+perl-sgmls
+help2man
+gobject-introspection
+gtk-doc
+python-pillow
+python-cairo
+ttf-dejavu
+adobe-source-han-sans-cn-fonts
+python-gobject
+

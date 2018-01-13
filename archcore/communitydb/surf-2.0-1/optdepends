@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+dmenu: URL-bar
+ca-certificates: SSL verification
+xterm: default download handler
+curl: default download handler
+

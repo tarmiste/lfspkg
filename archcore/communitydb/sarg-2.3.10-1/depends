@@ -1,7 +1,0 @@
-%DEPENDS%
-gd
-libldap
-
-%MAKEDEPENDS%
-cmake
-

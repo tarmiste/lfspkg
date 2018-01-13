@@ -1,0 +1,7 @@
+%DEPENDS%
+libaio
+libev
+libgcrypt
+curl
+perl-dbd-mysql
+

@@ -1,0 +1,8 @@
+%DEPENDS%
+python2-gobject
+libvirt-glib
+libvirt-python2
+python2-requests
+python2-ipaddr
+libosinfo
+

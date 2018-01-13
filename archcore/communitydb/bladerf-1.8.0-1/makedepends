@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+cmake
+help2man
+doxygen
+

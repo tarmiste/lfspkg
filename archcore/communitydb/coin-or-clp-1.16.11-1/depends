@@ -1,0 +1,4 @@
+%DEPENDS%
+coin-or-osi
+suitesparse
+

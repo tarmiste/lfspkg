@@ -1,0 +1,10 @@
+%DEPENDS%
+bamf
+clutter-gtk
+deepin-desktop-schemas
+deepin-menu
+granite
+deepin-mutter
+gnome-desktop
+libgee
+

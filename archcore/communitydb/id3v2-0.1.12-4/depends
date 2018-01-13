@@ -1,6 +1,0 @@
-%DEPENDS%
-gcc-libs
-glibc
-id3lib
-zlib
-

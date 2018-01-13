@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+elasticsearch: for standalone installation
+python: for migration script
+

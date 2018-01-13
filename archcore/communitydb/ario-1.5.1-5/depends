@@ -1,0 +1,12 @@
+%DEPENDS%
+avahi
+curl
+dbus-glib
+gnutls
+gtk2
+libmpdclient
+libnotify
+libsoup
+taglib
+xdg-utils
+

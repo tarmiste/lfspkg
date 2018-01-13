@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+ghc
+haskell-hunit
+haskell-quickcheck
+haskell-foldl
+haskell-hspec
+haskell-semigroups
+

@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+gst-plugins-good: for video previews
+gst-libav: for video previews
+libdvdcss: for decoding encrypted DVDs
+

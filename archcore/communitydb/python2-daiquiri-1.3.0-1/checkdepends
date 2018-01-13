@@ -1,0 +1,8 @@
+%CHECKDEPENDS%
+python-testrepository
+python2-testrepository
+python-testtools
+python2-testtools
+python-json-logger
+python2-json-logger
+

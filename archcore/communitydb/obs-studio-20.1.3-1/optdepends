@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+libfdk-aac: FDK AAC codec support
+libxcomposite: XComposite capture support
+vlc: VLC Media Source support
+

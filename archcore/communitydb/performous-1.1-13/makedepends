@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+cmake
+pkgconfig
+help2man
+boost
+mesa
+

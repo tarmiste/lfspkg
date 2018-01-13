@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+ghc
+haskell-async
+haskell-rebase
+

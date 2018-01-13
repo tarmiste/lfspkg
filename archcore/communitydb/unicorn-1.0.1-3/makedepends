@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+python
+python2
+python-setuptools
+python2-setuptools
+ruby
+

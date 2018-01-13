@@ -1,0 +1,7 @@
+%DEPENDS%
+sdl2
+libxinerama
+sdl2_ttf
+alsa-lib
+qt5-base
+

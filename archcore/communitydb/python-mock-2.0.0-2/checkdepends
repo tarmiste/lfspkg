@@ -1,0 +1,9 @@
+%CHECKDEPENDS%
+python-nose
+python2-nose
+python-pbr
+python2-pbr
+python-six
+python2-six
+git
+

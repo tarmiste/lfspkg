@@ -1,0 +1,5 @@
+%DEPENDS%
+libkcddb
+hicolor-icon-theme
+kcmutils
+

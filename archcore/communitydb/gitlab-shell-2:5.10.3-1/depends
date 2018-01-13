@@ -1,0 +1,5 @@
+%DEPENDS%
+ruby2.3
+redis
+git
+

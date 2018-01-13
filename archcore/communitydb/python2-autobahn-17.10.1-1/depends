@@ -1,0 +1,6 @@
+%DEPENDS%
+python2
+python2-twisted
+python2-six
+python2-txaio
+

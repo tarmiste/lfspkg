@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+gimp: to use the gimp import plugin for raw images
+cinepaint: to use the cinepaint import plugin for raw images
+

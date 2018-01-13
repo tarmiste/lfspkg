@@ -1,0 +1,9 @@
+%DEPENDS%
+ffmpeg
+imlib2
+liblo>=0.28
+libltc
+libxpm
+libxv
+portmidi
+

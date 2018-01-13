@@ -1,0 +1,7 @@
+%DEPENDS%
+ghc-libs
+gtk3
+haskell-pango
+haskell-mtl
+haskell-text
+

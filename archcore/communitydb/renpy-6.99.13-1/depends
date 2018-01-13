@@ -1,0 +1,5 @@
+%DEPENDS%
+ffmpeg
+glew
+python2-pygame-sdl2
+

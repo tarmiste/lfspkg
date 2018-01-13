@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+krb5
+cmake
+damageproto
+fixesproto
+renderproto
+xmlto
+docbook-xsl
+git
+

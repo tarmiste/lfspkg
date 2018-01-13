@@ -1,0 +1,12 @@
+%DEPENDS%
+ghc-libs
+haskell-attoparsec
+haskell-critbit
+haskell-dlist
+haskell-data-ordlist
+haskell-hashable
+haskell-scientific
+haskell-text
+haskell-unix-compat
+haskell-unordered-containers
+

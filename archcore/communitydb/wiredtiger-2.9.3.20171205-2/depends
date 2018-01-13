@@ -1,0 +1,6 @@
+%DEPENDS%
+snappy
+lz4
+zlib
+gperftools
+

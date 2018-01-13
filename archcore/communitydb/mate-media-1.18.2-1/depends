@@ -1,0 +1,5 @@
+%DEPENDS%
+libcanberra
+libmatemixer
+mate-desktop
+

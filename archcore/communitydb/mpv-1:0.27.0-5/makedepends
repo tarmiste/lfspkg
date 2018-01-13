@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+mesa
+python-docutils
+ladspa
+

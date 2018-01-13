@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+intltool
+gettext
+gnome-doc-utils
+itstool
+

@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+botan
+boost
+log4cplus
+libxslt
+docbook-xsl
+elinks
+doxygen
+graphviz
+

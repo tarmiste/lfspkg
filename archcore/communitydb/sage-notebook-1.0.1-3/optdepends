@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+python2-pyopenssl: to use the notebook in secure mode
+

@@ -1,0 +1,8 @@
+%OPTDEPENDS%
+libsndfile: for uncompressed audio support
+libvorbis: for OGG Vorbis support
+flac: for FLAC support
+mpg123: for MPEG support
+dumb: for IT, XM, S3M and MOD support
+fluidsynth: for SoundFont 2 support
+

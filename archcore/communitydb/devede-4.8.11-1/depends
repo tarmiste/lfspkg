@@ -1,0 +1,11 @@
+%DEPENDS%
+mencoder
+ffmpeg
+dvdauthor
+vcdimager
+cdrtools
+ttf-dejavu
+gtk3
+python-cairo
+python-gobject
+

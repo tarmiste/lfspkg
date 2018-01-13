@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+git
+ocaml
+camlp4
+zlib
+neko
+

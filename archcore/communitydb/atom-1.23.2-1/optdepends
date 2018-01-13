@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+ctags: symbol indexing support
+git: Git and GitHub integration
+

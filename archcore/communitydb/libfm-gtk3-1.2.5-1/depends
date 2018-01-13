@@ -1,0 +1,4 @@
+%DEPENDS%
+gtk3
+libfm=1.2.5
+

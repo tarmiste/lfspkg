@@ -1,0 +1,6 @@
+%CHECKDEPENDS%
+perl-module-implementation
+perl-test-fatal
+perl-test-needs
+perl-test-without-module
+

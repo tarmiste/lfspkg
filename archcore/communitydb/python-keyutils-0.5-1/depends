@@ -1,0 +1,4 @@
+%DEPENDS%
+keyutils
+python-setuptools
+

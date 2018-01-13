@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+autoconf-archive
+git
+gobject-introspection
+intltool
+meson
+sassc
+vala
+

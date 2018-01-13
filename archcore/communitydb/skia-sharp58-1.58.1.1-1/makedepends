@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+clang
+git
+python2
+

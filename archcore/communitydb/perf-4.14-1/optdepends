@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+gtk2: support GTK2 browser for perf report
+

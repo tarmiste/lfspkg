@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+ghc
+haskell-gtk2hs-buildtools
+

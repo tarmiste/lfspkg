@@ -1,0 +1,4 @@
+%DEPENDS%
+python2-cffi
+python2-six
+

@@ -1,0 +1,12 @@
+%DEPENDS%
+ghc-libs
+haskell-ansi-terminal
+haskell-async
+haskell-clock
+haskell-mtl
+haskell-optparse-applicative
+haskell-regex-tdfa
+haskell-stm
+haskell-tagged
+haskell-unbounded-delays
+

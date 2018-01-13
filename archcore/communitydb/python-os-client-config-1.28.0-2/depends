@@ -1,0 +1,6 @@
+%DEPENDS%
+python-yaml
+python-appdirs
+python-keystoneauth1
+python-requestsexceptions
+

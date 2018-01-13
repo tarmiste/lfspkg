@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+kicad-library: for footprints and symbols
+kicad-library-3d: for 3d models of components
+

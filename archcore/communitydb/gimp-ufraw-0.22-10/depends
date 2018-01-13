@@ -1,0 +1,8 @@
+%DEPENDS%
+gtkimageview
+exiv2
+lcms
+desktop-file-utils
+cfitsio
+lensfun
+

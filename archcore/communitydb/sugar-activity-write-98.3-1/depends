@@ -1,0 +1,5 @@
+%DEPENDS%
+abiword
+gconf
+sugar-toolkit-gtk3
+

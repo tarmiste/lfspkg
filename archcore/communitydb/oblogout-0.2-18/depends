@@ -1,0 +1,7 @@
+%DEPENDS%
+pygtk
+cairo
+python2-pillow
+python2-distutils-extra
+dbus-python
+

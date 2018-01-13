@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+tk: for gst-blox
+sqlite: database in a file
+sed: for examples
+gtk2: GUI toolkit
+

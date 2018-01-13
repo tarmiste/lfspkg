@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-hpack
+python2-hpack
+python-hyperframe
+python2-hyperframe
+python2-enum34
+

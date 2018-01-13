@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+opera-ffmpeg-codecs: playback of proprietary video/audio (AUR)
+pepper-flash: flash support
+upower: opera battery save
+

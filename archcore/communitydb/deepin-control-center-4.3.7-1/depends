@@ -1,0 +1,13 @@
+%DEPENDS%
+desktop-file-utils
+dtkwidget
+deepin-account-faces
+deepin-api
+geoip
+geoip-database
+geoip-database-extra
+deepin-daemon
+startdde
+deepin-qt-dbus-factory
+deepin-qt5integration
+

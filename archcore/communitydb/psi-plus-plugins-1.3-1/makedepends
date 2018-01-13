@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+libotr
+tidyhtml
+git
+

@@ -1,6 +1,0 @@
-%DEPENDS%
-libtorrent=0.13.6
-curl
-xmlrpc-c
-libsigc++
-

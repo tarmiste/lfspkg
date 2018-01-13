@@ -1,0 +1,10 @@
+%DEPENDS%
+fribidi
+libpaper
+librsvg
+python2
+sdl_image
+sdl_mixer
+sdl_pango
+sdl_ttf
+

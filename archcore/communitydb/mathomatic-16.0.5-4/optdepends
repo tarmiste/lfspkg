@@ -1,0 +1,7 @@
+%OPTDEPENDS%
+python2: for running /usr/share/doc/mathomatic/factorial/factorial
+bash: for running a test script
+m4: for complex operations using the matho script
+rlwrap: for readline editing
+gnuplot: for plotting
+

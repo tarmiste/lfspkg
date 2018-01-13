@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+avr-libc: Standard C library for Atmel AVR development
+

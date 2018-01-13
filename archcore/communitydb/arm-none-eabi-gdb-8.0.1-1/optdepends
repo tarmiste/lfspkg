@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+openocd: for debugging JTAG targets
+stlink: for debugging over STLINK
+

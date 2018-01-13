@@ -1,0 +1,12 @@
+%MAKEDEPENDS%
+python-cssselect
+python2-cssselect
+python-lxml
+python2-lxml
+python-pytest-runner
+python2-pytest-runner
+python-six
+python2-six
+python-w3lib
+python2-w3lib
+

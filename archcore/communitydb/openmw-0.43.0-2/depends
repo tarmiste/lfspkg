@@ -1,0 +1,11 @@
+%DEPENDS%
+openal
+openscenegraph
+mygui
+bullet
+qt5-base
+ffmpeg
+sdl2
+unshield
+libxt
+

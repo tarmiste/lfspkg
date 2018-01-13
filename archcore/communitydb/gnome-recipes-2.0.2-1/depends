@@ -1,0 +1,7 @@
+%DEPENDS%
+gnome-autoar
+gnome-online-accounts
+gspell
+libcanberra
+libsoup
+

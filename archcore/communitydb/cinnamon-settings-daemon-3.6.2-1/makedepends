@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+autoconf-archive
+intltool
+docbook-xsl
+xf86-input-wacom
+

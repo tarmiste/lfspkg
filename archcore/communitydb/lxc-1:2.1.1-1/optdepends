@@ -1,0 +1,7 @@
+%OPTDEPENDS%
+arch-install-scripts: for archlinux template
+dnsmasq: lxc-net.service
+lua
+lua-filesystem: lxc-top
+lua-alt-getopt: lxc-top
+

@@ -1,0 +1,10 @@
+%DEPENDS%
+pcre
+snappy
+openssl
+libsasl
+yaml-cpp
+lsb-release
+wiredtiger
+libstemmer
+

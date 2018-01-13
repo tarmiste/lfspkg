@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+boost
+cmake
+sdl_image
+sdl_ttf
+sdl_mixer
+sdl_net
+lua52
+pango
+git
+

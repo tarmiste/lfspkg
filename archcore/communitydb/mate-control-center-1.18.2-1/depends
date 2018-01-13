@@ -1,0 +1,6 @@
+%DEPENDS%
+mate-menus
+mate-settings-daemon
+marco
+libxss
+

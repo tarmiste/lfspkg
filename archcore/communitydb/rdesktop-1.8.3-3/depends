@@ -1,0 +1,7 @@
+%DEPENDS%
+libao
+libsamplerate
+xorg-xrandr
+pcsclite
+libgssglue
+

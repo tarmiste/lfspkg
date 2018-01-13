@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+tcl: modtcl module
+python: modpython module
+perl: modperl module
+cyrus-sasl: saslauth module
+

@@ -1,0 +1,7 @@
+%DEPENDS%
+openssl
+gnutls
+libgcrypt
+libice
+libsm
+

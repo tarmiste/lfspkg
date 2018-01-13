@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+gobject-introspection
+intltool
+python2-pyparsing
+spice-protocol
+usbutils
+vala
+sdl
+python2-six
+

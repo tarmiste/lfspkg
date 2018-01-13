@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+git
+python
+python-simplemediawiki
+python-lxml
+python-cssselect
+

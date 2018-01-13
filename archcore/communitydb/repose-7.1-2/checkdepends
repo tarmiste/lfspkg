@@ -1,0 +1,5 @@
+%CHECKDEPENDS%
+python-pytest
+python-cffi
+python-pytest-xdist
+

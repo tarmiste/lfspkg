@@ -1,0 +1,6 @@
+%DEPENDS%
+sdl_image
+sdl_ttf
+sdl_mixer
+ncurses
+

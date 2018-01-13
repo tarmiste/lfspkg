@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+cmake
+doxygen
+glfw
+glew
+python2
+python-pygments
+python-docutils
+opencl-headers
+

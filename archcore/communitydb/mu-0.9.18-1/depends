@@ -1,0 +1,4 @@
+%DEPENDS%
+gmime
+xapian-core
+

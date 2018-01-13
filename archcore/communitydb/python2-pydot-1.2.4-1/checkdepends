@@ -1,0 +1,4 @@
+%CHECKDEPENDS%
+python-chardet
+python2-chardet
+

@@ -1,0 +1,5 @@
+%DEPENDS%
+uwsgi
+python2-gevent
+python2-greenlet
+

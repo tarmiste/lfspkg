@@ -1,0 +1,7 @@
+%OPTDEPENDS%
+net-snmp: for SNMP checking
+postgresql-libs: for check_pgsql
+libmariadbclient: for check_mysql_query and check_mysql
+libdbi: for check_dbi
+libldap: for check_ldap
+

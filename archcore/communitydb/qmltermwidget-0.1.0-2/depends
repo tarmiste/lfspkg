@@ -1,6 +1,0 @@
-%DEPENDS%
-qt5-declarative
-
-%CONFLICTS%
-cool-retro-term-git<1.0.0RC1.r39
-

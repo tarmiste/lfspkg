@@ -1,0 +1,7 @@
+%CHECKDEPENDS%
+python-pytest-runner
+python-vcrpy
+python-softlayer
+python-boto3
+python-babel
+

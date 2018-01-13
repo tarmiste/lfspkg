@@ -1,5 +1,0 @@
-%DEPENDS%
-poppler-glib
-gtk2
-glib2
-

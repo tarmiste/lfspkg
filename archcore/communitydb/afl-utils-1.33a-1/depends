@@ -1,0 +1,6 @@
+%DEPENDS%
+afl
+coreutils
+python
+rsync
+

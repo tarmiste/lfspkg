@@ -1,0 +1,14 @@
+%DEPENDS%
+gtk3
+appstream-glib
+libsoup
+gsettings-desktop-schemas
+gnome-desktop
+flatpak
+packagekit
+archlinux-appstream-data
+gtkspell3
+libgudev
+fwupd
+liboauth
+

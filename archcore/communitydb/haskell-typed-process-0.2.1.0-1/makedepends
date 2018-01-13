@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+ghc
+haskell-base64-bytestring
+haskell-hspec
+haskell-temporary
+

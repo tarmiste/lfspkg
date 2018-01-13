@@ -1,0 +1,8 @@
+%DEPENDS%
+gtk3
+gzip
+libarchive
+tar
+unzip
+zip
+

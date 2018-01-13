@@ -1,0 +1,6 @@
+%DEPENDS%
+sagemath
+python2-jupyter_client
+python2-ipywidgets
+mathjax
+

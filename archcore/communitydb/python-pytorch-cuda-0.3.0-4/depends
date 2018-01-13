@@ -1,0 +1,7 @@
+%DEPENDS%
+python
+python-yaml
+python-numpy
+cuda
+cudnn
+

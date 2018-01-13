@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+gnuchess: chess engine
+perl
+

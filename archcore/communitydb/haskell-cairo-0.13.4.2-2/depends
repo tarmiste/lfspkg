@@ -1,0 +1,7 @@
+%DEPENDS%
+ghc-libs
+cairo
+haskell-mtl
+haskell-utf8-string
+haskell-text
+

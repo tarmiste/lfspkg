@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+go-pie
+jq
+libxml2
+deepin-dbus-generator
+

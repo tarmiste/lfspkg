@@ -1,0 +1,15 @@
+%DEPENDS%
+python2-six
+python2-pbr
+python2-iso8601
+python2-prettytable
+python2-debtcollector
+python2-keystoneauth1
+python2-positional
+python2-oslo-utils
+python2-oslo-i18n
+python2-oslo-serialization
+python2-oslo-config
+python2-requests
+python2-stevedore
+

@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+meson
+intltool
+itstool
+docbook-xsl
+libcanberra
+

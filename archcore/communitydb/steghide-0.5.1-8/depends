@@ -1,7 +1,0 @@
-%DEPENDS%
-libmcrypt
-gcc-libs
-mhash
-libjpeg
-zlib
-

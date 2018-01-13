@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+gobject-introspection
+gtk-doc
+

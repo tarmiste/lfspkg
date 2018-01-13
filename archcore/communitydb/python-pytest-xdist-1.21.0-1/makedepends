@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+python-pytest
+python2-pytest
+python-setuptools_scm
+python2-setuptools_scm
+python-execnet
+python2-execnet
+python-pytest-forked
+python2-pytest-forked
+

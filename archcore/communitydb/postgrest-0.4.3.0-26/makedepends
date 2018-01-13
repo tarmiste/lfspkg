@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+ghc
+haskell-aeson-qq
+haskell-async
+haskell-hspec
+haskell-hspec-wai
+haskell-hspec-wai-json
+haskell-hjsonschema
+haskell-hjsonpointer
+

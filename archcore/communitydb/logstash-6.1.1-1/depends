@@ -1,0 +1,5 @@
+%DEPENDS%
+java-runtime-headless>=8
+ruby
+ruby-bundler
+

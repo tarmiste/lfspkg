@@ -1,0 +1,8 @@
+%DEPENDS%
+gdbm
+openssl
+libffi
+libyaml
+gmp
+zlib
+

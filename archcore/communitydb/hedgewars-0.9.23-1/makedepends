@@ -1,0 +1,15 @@
+%MAKEDEPENDS%
+fpc
+cmake
+ghc
+haskell-network
+haskell-bytestring-show
+haskell-mtl
+haskell-stm
+haskell-sandi
+haskell-zlib
+haskell-containers
+haskell-base-prelude
+haskell-deepseq
+imagemagick
+

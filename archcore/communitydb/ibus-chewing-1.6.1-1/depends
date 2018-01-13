@@ -1,0 +1,5 @@
+%DEPENDS%
+ibus
+libchewing
+libxtst
+

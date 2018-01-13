@@ -1,0 +1,6 @@
+%DEPENDS%
+dbus-glib
+libcanberra
+libwnck3
+libnotify
+

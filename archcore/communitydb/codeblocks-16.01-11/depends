@@ -1,0 +1,6 @@
+%DEPENDS%
+boost-libs
+gamin
+hunspell
+wxgtk2
+

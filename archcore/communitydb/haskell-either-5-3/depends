@@ -1,0 +1,8 @@
+%DEPENDS%
+ghc-libs
+haskell-bifunctors
+haskell-mtl
+haskell-profunctors
+haskell-semigroups
+haskell-semigroupoids
+

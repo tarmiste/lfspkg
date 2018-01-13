@@ -1,0 +1,17 @@
+%DEPENDS%
+sdl2
+freealut
+freeglut
+libpng
+libxi
+libxmu
+libxrandr
+plib>=1.8.3
+libjpeg
+zlib
+enet
+speed-dreams-data
+libvorbis
+glu
+openscenegraph
+

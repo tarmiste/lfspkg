@@ -1,0 +1,14 @@
+%MAKEDEPENDS%
+python-pip
+python2-pip
+python-requests
+python2-requests
+python-six
+python2-six
+python-websocket-client
+python2-websocket-client
+python2-backports.ssl_match_hostname
+python2-ipaddress
+python-docker-pycreds
+python2-docker-pycreds
+

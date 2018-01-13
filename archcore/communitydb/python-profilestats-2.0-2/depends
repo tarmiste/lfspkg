@@ -1,0 +1,4 @@
+%DEPENDS%
+python-setuptools
+pyprof2calltree
+

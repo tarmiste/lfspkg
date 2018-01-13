@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+python2-django
+python2-setuptools
+python2-six
+python-django
+python-setuptools
+python-six
+

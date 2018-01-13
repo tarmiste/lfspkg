@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+swig
+python2-setuptools
+

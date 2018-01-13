@@ -1,0 +1,6 @@
+%DEPENDS%
+curl
+gtk3
+libnotify
+libproxy
+

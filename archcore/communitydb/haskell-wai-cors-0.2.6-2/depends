@@ -1,0 +1,9 @@
+%DEPENDS%
+ghc-libs
+haskell-attoparsec
+haskell-base-unicode-symbols
+haskell-case-insensitive
+haskell-http-types
+haskell-wai
+haskell-mtl
+

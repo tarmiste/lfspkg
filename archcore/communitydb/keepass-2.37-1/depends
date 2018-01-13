@@ -1,0 +1,7 @@
+%DEPENDS%
+mono
+desktop-file-utils
+xdg-utils
+shared-mime-info
+gtk-update-icon-cache
+

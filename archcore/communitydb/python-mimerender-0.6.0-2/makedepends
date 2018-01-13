@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+python-mimeparse
+python2-mimeparse
+python-setuptools
+python2-setuptools
+git
+

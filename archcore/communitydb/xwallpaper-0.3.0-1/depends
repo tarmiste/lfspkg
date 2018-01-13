@@ -1,0 +1,9 @@
+%DEPENDS%
+pixman
+libpng
+libxpm
+xcb-util
+xcb-util-image
+libjpeg-turbo
+libseccomp
+

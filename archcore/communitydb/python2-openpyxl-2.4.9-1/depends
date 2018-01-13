@@ -1,0 +1,4 @@
+%DEPENDS%
+python2-jdcal
+python2-et-xmlfile
+

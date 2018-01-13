@@ -1,0 +1,10 @@
+%DEPENDS%
+ghc-libs
+haskell-blaze-builder
+haskell-conduit
+haskell-persistent
+haskell-persistent-template
+haskell-resource-pool
+haskell-resourcet
+haskell-yesod-core
+

@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+pkgconfig
+intltool
+gettext
+

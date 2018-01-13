@@ -1,0 +1,9 @@
+%DEPENDS%
+jemalloc
+libtermkey
+libuv
+msgpack-c
+unibilium
+libvterm
+luajit
+

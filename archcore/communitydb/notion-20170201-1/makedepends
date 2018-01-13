@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+git
+pkgconfig
+libxinerama
+libxrandr
+rubber
+latex2html
+texlive-htmlxml
+texlive-latexextra
+

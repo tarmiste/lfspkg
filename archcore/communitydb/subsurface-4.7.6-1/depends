@@ -1,0 +1,15 @@
+%DEPENDS%
+libzip
+libxml2
+libxslt
+sqlite
+libusb
+libgit2
+subsurface-libdc
+qt5-svg
+qt5-location
+qt5-connectivity
+qt5-webkit
+grantlee
+googlemaps
+

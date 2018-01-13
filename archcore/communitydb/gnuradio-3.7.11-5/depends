@@ -1,0 +1,13 @@
+%DEPENDS%
+fftw
+python2-numpy
+cppunit
+gsl
+blas
+boost-libs>=1.53
+libusbx
+portaudio
+libuhd
+zeromq
+libvolk
+

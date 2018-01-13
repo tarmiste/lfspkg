@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+cmake
+qt5-tools
+eigen
+boost
+

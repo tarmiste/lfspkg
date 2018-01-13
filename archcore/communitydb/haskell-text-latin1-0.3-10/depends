@@ -1,0 +1,7 @@
+%DEPENDS%
+ghc-libs
+haskell-case-insensitive
+haskell-data-checked
+haskell-hashable
+haskell-text
+

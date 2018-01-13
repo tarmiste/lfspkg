@@ -1,0 +1,5 @@
+%DEPENDS%
+libxi
+mono
+openal
+

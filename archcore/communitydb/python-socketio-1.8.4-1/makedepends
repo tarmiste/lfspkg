@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+python-setuptools
+python-sphinx
+python-six
+python-engineio
+python2-setuptools
+python2-sphinx
+python2-six
+python2-engineio
+

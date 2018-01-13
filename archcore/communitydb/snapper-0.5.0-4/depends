@@ -1,0 +1,7 @@
+%DEPENDS%
+btrfs-progs
+libxml2
+dbus
+boost-libs
+acl
+

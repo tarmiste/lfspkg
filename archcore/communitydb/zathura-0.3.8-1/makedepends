@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+python2-docutils
+texlive-bin
+

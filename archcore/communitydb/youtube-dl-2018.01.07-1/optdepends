@@ -1,0 +1,7 @@
+%OPTDEPENDS%
+ffmpeg: for video post-processing
+rtmpdump: for rtmp streams support
+atomicparsley: for embedding thumbnails into m4a files
+python-crypto: for hlsnative downloader
+phantomjs
+

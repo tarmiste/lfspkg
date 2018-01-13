@@ -1,0 +1,9 @@
+%DEPENDS%
+gdlmm
+gdb
+gtksourceviewmm
+libgtop
+vte3
+ghex
+gsettings-desktop-schemas
+

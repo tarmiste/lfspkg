@@ -1,0 +1,9 @@
+%DEPENDS%
+ghc-libs
+haskell-blaze-builder
+haskell-case-insensitive
+haskell-http-types
+haskell-network
+haskell-wai
+haskell-websockets
+

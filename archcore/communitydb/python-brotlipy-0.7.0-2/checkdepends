@@ -1,0 +1,7 @@
+%CHECKDEPENDS%
+python-pytest-runner
+python2-pytest-runner
+python-hypothesis
+python2-hypothesis
+brotli06-testdata
+

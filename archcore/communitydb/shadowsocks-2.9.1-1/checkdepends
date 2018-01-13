@@ -1,0 +1,9 @@
+%CHECKDEPENDS%
+python-coverage
+python-pyflakes
+libsodium
+python-nose
+dante
+procps-ng
+util-linux
+

@@ -1,7 +1,0 @@
-%DEPENDS%
-nautilus
-samba
-
-%MAKEDEPENDS%
-intltool
-

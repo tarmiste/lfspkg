@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+cmake
+glibc
+python
+python2
+

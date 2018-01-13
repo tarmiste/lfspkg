@@ -1,0 +1,6 @@
+%DEPENDS%
+pam
+yubico-c-client
+yubikey-personalization
+json-c
+

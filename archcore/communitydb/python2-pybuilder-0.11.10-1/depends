@@ -1,0 +1,5 @@
+%DEPENDS%
+python2-pip
+python2-tblib
+python2-wheel
+

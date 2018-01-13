@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+happy
+ghc
+

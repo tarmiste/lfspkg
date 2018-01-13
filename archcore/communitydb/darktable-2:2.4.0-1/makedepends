@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+cmake
+intltool
+desktop-file-utils
+llvm
+clang
+python-jsonschema
+libwebp
+python-setuptools
+

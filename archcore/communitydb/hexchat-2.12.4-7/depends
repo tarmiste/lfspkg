@@ -1,0 +1,14 @@
+%DEPENDS%
+dbus-glib
+desktop-file-utils
+gdk-pixbuf2
+glib2
+glibc
+gtk2
+libcanberra
+libnotify
+libproxy
+openssl
+pango
+pciutils
+

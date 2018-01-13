@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+emacs: emacs interface
+gedit: gedit interface
+

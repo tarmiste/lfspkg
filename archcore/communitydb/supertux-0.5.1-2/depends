@@ -1,0 +1,9 @@
+%DEPENDS%
+sdl2_image
+curl
+physfs
+openal
+libvorbis
+glew
+physfs
+

@@ -1,0 +1,5 @@
+%CHECKDEPENDS%
+perl-file-copy-recursive
+perl-cwd-guard
+perl-capture-tiny
+

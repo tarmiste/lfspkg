@@ -1,7 +1,0 @@
-%DEPENDS%
-gcc-libs
-
-%MAKEDEPENDS%
-dos2unix
-clang
-

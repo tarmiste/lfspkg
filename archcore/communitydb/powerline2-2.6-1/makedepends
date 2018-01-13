@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+python2-setuptools
+python-setuptools
+python-sphinx
+

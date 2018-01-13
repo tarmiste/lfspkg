@@ -1,0 +1,8 @@
+%DEPENDS%
+java-runtime>=8
+shared-mime-info
+desktop-file-utils
+libxext
+libgl
+libxrender
+

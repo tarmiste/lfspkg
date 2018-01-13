@@ -1,0 +1,16 @@
+%DEPENDS%
+wine
+imagemagick
+xterm
+wxpython
+cabextract
+unzip
+mesa-demos
+gnupg
+icoutils
+xdg-user-dirs
+libxmu
+netcat
+wget
+p7zip
+

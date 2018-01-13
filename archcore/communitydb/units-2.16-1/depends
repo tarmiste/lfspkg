@@ -1,0 +1,5 @@
+%DEPENDS%
+readline
+python
+python-unidecode
+

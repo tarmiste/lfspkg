@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+ghc
+haskell-ini
+haskell-hedgehog
+haskell-doctest
+haskell-microlens
+

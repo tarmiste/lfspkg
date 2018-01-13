@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+python-pillow: for image saving module
+

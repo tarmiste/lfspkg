@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+boost
+cmake
+git
+ninja
+re2c
+

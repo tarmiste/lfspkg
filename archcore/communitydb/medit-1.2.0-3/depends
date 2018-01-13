@@ -1,0 +1,10 @@
+%DEPENDS%
+pygtk
+libxml2
+pcre
+libsm
+python2
+gtk2
+gcc-libs
+gamin
+

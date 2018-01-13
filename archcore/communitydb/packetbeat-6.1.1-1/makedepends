@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+go-pie
+git
+libpcap
+rsync
+python
+

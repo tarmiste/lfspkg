@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+bzr
+intltool
+vala
+cmake
+ninja
+

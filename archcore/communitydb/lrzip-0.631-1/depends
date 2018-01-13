@@ -1,0 +1,6 @@
+%DEPENDS%
+lzo
+zlib
+bash
+bzip2
+

@@ -1,0 +1,10 @@
+%DEPENDS%
+python-capstone
+python-unicorn
+python-pycparser
+python-psutil
+python-ptrace
+python-pyelftools
+python-six
+python-future
+

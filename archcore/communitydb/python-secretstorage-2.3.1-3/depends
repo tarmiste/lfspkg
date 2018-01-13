@@ -1,0 +1,5 @@
+%DEPENDS%
+python-dbus
+dbus-glib
+python-cryptography
+

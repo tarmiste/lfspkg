@@ -1,0 +1,7 @@
+%DEPENDS%
+ghc-libs
+haskell-network
+haskell-parsec
+haskell-mtl
+haskell-network-uri
+

@@ -1,0 +1,4 @@
+%DEPENDS%
+virtualbox
+libvncserver
+

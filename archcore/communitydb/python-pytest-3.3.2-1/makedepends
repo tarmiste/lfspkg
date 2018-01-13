@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-py
+python2-py
+python-pluggy
+python2-pluggy
+python-attrs
+python2-attrs
+python2-funcsigs
+

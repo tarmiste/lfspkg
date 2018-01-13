@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-pyhamcrest
+python2-pyhamcrest
+git
+

@@ -1,8 +1,0 @@
-%DEPENDS%
-nspr
-gcc-libs
-
-%MAKEDEPENDS%
-python2
-zip
-

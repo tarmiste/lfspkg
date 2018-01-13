@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+python2-lxml: for XML output through lxml instead of xml.etree
+

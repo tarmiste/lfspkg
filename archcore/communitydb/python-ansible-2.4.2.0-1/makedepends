@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+asciidoc
+fakeroot
+python
+python2-setuptools
+python-setuptools
+

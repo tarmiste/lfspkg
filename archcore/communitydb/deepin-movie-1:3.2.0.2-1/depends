@@ -1,0 +1,5 @@
+%DEPENDS%
+deepin-qt5integration
+mpv
+ffmpegthumbnailer
+

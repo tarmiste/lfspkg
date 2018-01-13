@@ -1,0 +1,5 @@
+%DEPENDS%
+arm-none-eabi-binutils
+zlib
+libmpc
+

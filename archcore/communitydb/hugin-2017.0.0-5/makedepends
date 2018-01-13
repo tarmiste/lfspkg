@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+cmake
+boost
+tclap
+mesa
+swig
+

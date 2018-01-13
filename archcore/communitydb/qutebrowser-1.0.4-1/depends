@@ -1,0 +1,10 @@
+%DEPENDS%
+python-attrs
+python-jinja
+python-pygments
+python-pypeg2
+python-pyqt5>=5.7
+python-yaml
+qt5-base>=5.7.1
+qt5-webengine
+

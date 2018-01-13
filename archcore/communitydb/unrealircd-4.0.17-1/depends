@@ -1,0 +1,7 @@
+%DEPENDS%
+openssl
+curl
+c-ares
+tre
+pcre2
+

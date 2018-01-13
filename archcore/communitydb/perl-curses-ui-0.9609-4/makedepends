@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+perl-curses
+perl-term-readkey
+perl-test-pod
+

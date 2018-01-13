@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+libnfnetlink
+ipset
+systemd
+

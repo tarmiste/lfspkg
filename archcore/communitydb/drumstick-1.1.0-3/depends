@@ -1,0 +1,7 @@
+%DEPENDS%
+desktop-file-utils
+fluidsynth
+hicolor-icon-theme
+shared-mime-info
+qt5-svg
+

@@ -1,0 +1,6 @@
+%DEPENDS%
+qmltermwidget
+qt5-quickcontrols
+qt5-graphicaleffects
+hicolor-icon-theme
+

@@ -1,0 +1,5 @@
+%DEPENDS%
+avr-binutils
+gcc-libs
+libmpc
+

@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+intltool
+itstool
+autoconf-archive
+yelp-tools
+python
+

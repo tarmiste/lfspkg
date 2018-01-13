@@ -1,0 +1,6 @@
+%DEPENDS%
+ghc-libs
+haskell-byteable
+haskell-cryptonite
+haskell-memory
+

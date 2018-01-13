@@ -1,0 +1,10 @@
+%DEPENDS%
+wxgtk
+hicolor-icon-theme
+desktop-file-utils
+libsm
+boost-libs
+glew
+wxpython
+curl
+

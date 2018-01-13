@@ -1,0 +1,4 @@
+%DEPENDS%
+vamp-plugin-sdk
+aubio
+

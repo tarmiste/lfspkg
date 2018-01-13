@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+cmake
+git
+glu
+libtheora
+mesa-libgl
+ninja
+opusfile
+

@@ -1,0 +1,10 @@
+%DEPENDS%
+cinnamon-settings-daemon
+cinnamon-translations
+cinnamon-menus
+libgnomekbd
+libmm-glib
+nm-connection-editor
+colord
+gnome-online-accounts
+

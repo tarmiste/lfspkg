@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+gtk3
+libexif
+libxss
+ninja
+nss
+pciutils
+python2
+xdg-utils
+

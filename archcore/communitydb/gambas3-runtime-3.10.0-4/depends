@@ -1,0 +1,4 @@
+%DEPENDS%
+libffi
+xdg-utils
+

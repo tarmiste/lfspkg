@@ -1,0 +1,7 @@
+%DEPENDS%
+python>=3.4.2
+python-chardet
+python-multidict
+python-async-timeout
+python-yarl
+

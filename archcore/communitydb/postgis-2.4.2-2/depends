@@ -1,0 +1,7 @@
+%DEPENDS%
+postgresql
+gdal
+json-c
+proj
+protobuf-c
+

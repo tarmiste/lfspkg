@@ -1,0 +1,3 @@
+%DEPENDS%
+perl-devel-symdump>=2.01
+

@@ -1,0 +1,6 @@
+%DEPENDS%
+python-gobject
+libnotify
+gtk3
+gst-plugins-base
+

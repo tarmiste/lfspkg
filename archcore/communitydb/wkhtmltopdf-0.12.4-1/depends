@@ -1,0 +1,4 @@
+%DEPENDS%
+qt5-webkit
+qt5-svg
+

@@ -1,0 +1,16 @@
+%DEPENDS%
+ghc-libs
+haskell-vty
+haskell-data-clist
+haskell-dlist
+haskell-microlens
+haskell-microlens-th
+haskell-microlens-mtl
+haskell-config-ini
+haskell-vector
+haskell-contravariant
+haskell-stm
+haskell-text
+haskell-text-zipper
+haskell-word-wrap
+

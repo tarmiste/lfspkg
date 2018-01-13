@@ -1,0 +1,6 @@
+%DEPENDS%
+ghc-libs
+haskell-semigroups
+haskell-text
+haskell-text-latin1
+

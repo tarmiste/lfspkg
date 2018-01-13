@@ -1,0 +1,5 @@
+%DEPENDS%
+cmake
+qt5-tools
+git
+

@@ -1,5 +1,0 @@
-%DEPENDS%
-curl
-fuse
-glib2
-

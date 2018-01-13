@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+perl-date-manip: human readable dates
+

@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+cmake
+doxygen
+graphviz
+git
+python
+glm
+gcc6
+boost
+

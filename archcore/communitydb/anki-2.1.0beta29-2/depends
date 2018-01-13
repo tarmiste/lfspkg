@@ -1,0 +1,10 @@
+%DEPENDS%
+qt5-webengine
+python-beautifulsoup4
+python-pyaudio
+python-pyqt5
+python-requests
+python-send2trash
+python-decorator
+python-markdown
+

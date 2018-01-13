@@ -1,0 +1,8 @@
+%DEPENDS%
+zlib
+ptex
+intel-tbb
+libxcursor
+xorg-xrandr
+libxinerama
+

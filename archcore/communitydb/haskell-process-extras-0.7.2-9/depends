@@ -1,0 +1,8 @@
+%DEPENDS%
+ghc-libs
+haskell-data-default
+haskell-generic-deriving
+haskell-listlike
+haskell-mtl
+haskell-text
+

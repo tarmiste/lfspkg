@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+ibus
+dbus-c++
+scim
+kfilemetadata
+

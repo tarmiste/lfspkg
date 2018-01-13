@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+perl-test-fatal
+perl-module-build
+

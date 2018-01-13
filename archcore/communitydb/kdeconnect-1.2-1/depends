@@ -1,0 +1,7 @@
+%DEPENDS%
+hicolor-icon-theme
+kcmutils
+kwayland
+libfakekey
+qca-qt5
+

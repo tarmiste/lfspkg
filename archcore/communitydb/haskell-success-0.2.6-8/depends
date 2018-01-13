@@ -1,0 +1,6 @@
+%DEPENDS%
+ghc-libs
+haskell-transformers-base
+haskell-monad-control
+haskell-mtl
+

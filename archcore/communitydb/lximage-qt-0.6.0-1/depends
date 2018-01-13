@@ -1,0 +1,5 @@
+%DEPENDS%
+lxqt-themes
+libfm-qt
+qt5-svg
+

@@ -1,0 +1,10 @@
+%DEPENDS%
+cblas
+fftw
+boost-libs
+lapacke
+forge
+freeimage
+glfw
+glew
+

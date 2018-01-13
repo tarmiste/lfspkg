@@ -1,0 +1,10 @@
+%DEPENDS%
+perl-html-tree
+perl-html-tableextract
+perl-crypt-ssleay
+perl-libwww
+perl-date-calc
+perl-json
+perl-datetime
+perl-cgi
+

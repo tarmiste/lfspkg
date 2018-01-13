@@ -1,0 +1,6 @@
+%DEPENDS%
+gtk2
+java-runtime
+xorg-xprop
+gtk3
+

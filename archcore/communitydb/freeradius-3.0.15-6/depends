@@ -1,0 +1,10 @@
+%DEPENDS%
+krb5
+pth
+net-snmp
+postgresql-libs
+libmariadbclient
+talloc
+libpcap
+libwbclient
+

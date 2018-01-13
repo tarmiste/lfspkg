@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+boost
+cmake
+freetype2
+gtk3
+libpng
+mesa
+opencl-headers
+glew
+freeglut
+

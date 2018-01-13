@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+cmake
+git
+glew
+libzip
+sdl2
+snappy
+qt5-tools
+zlib
+

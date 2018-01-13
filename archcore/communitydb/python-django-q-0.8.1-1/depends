@@ -1,0 +1,8 @@
+%DEPENDS%
+python-arrow
+python-blessed
+python-django
+python-django-picklefield
+python-future
+python-six
+

@@ -1,0 +1,3 @@
+%CHECKDEPENDS%
+perl-test-deep>=0.11
+

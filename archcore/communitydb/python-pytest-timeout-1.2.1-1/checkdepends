@@ -1,0 +1,4 @@
+%CHECKDEPENDS%
+python-pexpect
+python2-pexpect
+

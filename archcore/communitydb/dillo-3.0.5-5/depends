@@ -1,0 +1,12 @@
+%DEPENDS%
+fltk
+libjpeg
+perl
+openssl
+libpng
+gcc-libs
+libxcursor
+libxi
+libxinerama
+openssl-1.0
+

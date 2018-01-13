@@ -1,0 +1,12 @@
+%DEPENDS%
+ghc-libs
+haskell-attoparsec
+haskell-either
+haskell-filemanip
+haskell-language-python
+haskell-mtl
+haskell-optparse-applicative
+haskell-semigroups
+haskell-split
+haskell-xcb-types
+

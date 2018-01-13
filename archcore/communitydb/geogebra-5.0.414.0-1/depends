@@ -1,0 +1,8 @@
+%DEPENDS%
+desktop-file-utils
+gsl
+hicolor-icon-theme
+java-runtime=8
+shared-mime-info
+xdg-utils
+

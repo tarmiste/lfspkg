@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+gendesk
+java-openjfx
+java-environment=8
+apache-ant
+rsync
+

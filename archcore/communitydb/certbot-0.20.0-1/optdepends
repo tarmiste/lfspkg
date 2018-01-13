@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+certbot-apache: Apache plugin for Let’s Encrypt client
+certbot-nginx: Nginx plugin for Let’s Encrypt client
+

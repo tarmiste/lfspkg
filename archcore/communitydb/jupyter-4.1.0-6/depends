@@ -1,0 +1,12 @@
+%DEPENDS%
+python-setuptools
+python-jinja
+python-mistune
+ipython
+python-ipykernel
+python-jupyter_core
+python-ipywidgets
+jupyter-nbformat
+jupyter_console
+python-jupyter_client
+

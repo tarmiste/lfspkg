@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+toxcore>=0.1.0
+cmake
+gtk3
+libdbus
+check
+

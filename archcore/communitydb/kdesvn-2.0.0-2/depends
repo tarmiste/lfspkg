@@ -1,0 +1,10 @@
+%DEPENDS%
+subversion
+kcoreaddons
+kdoctools
+kio
+knotifications
+kparts
+ktexteditor
+python
+

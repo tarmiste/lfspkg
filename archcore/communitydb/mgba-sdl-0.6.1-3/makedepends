@@ -1,0 +1,13 @@
+%MAKEDEPENDS%
+cmake
+qt5-multimedia
+sdl2
+zlib
+libpng
+libzip
+libedit
+ffmpeg
+libmagick
+desktop-file-utils
+qt5-tools
+

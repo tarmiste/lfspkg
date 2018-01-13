@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+python2-setuptools: futurize2 and pasteurize2 scripts
+

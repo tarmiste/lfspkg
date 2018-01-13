@@ -1,6 +1,0 @@
-%DEPENDS%
-libxss
-
-%MAKEDEPENDS%
-imake
-

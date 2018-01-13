@@ -1,0 +1,10 @@
+%DEPENDS%
+curl
+libarchive
+libssh2
+libxml2
+libxslt
+rsync
+ruby2.4
+xz
+

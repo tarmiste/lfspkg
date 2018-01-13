@@ -1,0 +1,7 @@
+%CHECKDEPENDS%
+python-pytest-timeout
+python2-pytest-timeout
+procps-ng
+openssh
+pypy
+

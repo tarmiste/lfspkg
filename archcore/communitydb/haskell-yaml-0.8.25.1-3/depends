@@ -1,0 +1,12 @@
+%DEPENDS%
+ghc-libs
+haskell-aeson
+haskell-attoparsec
+haskell-conduit
+haskell-vector
+haskell-resourcet
+haskell-scientific
+haskell-semigroups
+haskell-text
+haskell-unordered-containers
+

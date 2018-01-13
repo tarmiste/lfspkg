@@ -1,0 +1,5 @@
+%DEPENDS%
+gst-plugins-base
+libnotify
+mate-panel
+

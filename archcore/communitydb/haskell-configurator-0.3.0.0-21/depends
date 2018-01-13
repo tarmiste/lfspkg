@@ -1,0 +1,8 @@
+%DEPENDS%
+ghc-libs
+haskell-attoparsec
+haskell-hashable
+haskell-text
+haskell-unix-compat
+haskell-unordered-containers
+

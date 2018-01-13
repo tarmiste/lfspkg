@@ -1,0 +1,7 @@
+%DEPENDS%
+db
+openssl
+libbsd
+opendbx
+libldap
+

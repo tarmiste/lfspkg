@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+gnome-common
+gnome-doc-utils
+gobject-introspection
+gtk2
+gtk3
+intltool
+vala
+valgrind
+pkg-config
+

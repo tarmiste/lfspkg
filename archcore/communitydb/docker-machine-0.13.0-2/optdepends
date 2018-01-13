@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+net-tools: required for VirtualBox driver
+

@@ -1,0 +1,8 @@
+%OPTDEPENDS%
+normaliz: Normaliz interface package
+polymake: Polymake interface package
+libxaw: xgap package
+c-xsc: float package
+mpfi: float package
+libmpc: float package
+

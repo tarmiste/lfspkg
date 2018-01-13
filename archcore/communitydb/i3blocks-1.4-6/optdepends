@@ -1,0 +1,9 @@
+%OPTDEPENDS%
+acpi: For battery script
+bc: For bandwidth script
+lm_sensors: For temperature script
+openvpn: For openvpn script
+playerctl: For mediaplayer script
+alsa-utils: For volume script
+sysstat: For cpu_usage script
+

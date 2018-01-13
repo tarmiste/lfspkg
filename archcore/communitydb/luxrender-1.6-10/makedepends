@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+cmake
+boost
+mesa
+qt4
+luxrays=1.6
+python
+opencl-headers
+

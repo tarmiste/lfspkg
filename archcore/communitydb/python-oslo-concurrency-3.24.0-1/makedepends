@@ -1,0 +1,15 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-pbr
+python2-pbr
+python-oslo-config
+python2-oslo-config
+python-oslo-i18n
+python2-oslo-i18n
+python-oslo-utils
+python2-oslo-utils
+python-fasteners
+python2-fasteners
+python2-enum34
+

@@ -1,0 +1,8 @@
+%CHECKDEPENDS%
+python-pytest-runner
+python2-pytest-runner
+flake8
+python2-flake8
+python-pytest-cov
+python2-pytest-cov
+

@@ -1,7 +1,0 @@
-%DEPENDS%
-ncurses
-libpcap
-
-%MAKEDEPENDS%
-libtool
-

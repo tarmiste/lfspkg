@@ -1,0 +1,6 @@
+%CHECKDEPENDS%
+python-coverage
+python-pytest
+python2-coverage
+python2-pytest
+

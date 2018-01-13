@@ -1,0 +1,12 @@
+%DEPENDS%
+expat
+openssl
+zlib
+erlang-nox
+pam
+iproute2
+erlang-unixodbc
+libyaml
+sqlite
+gd
+

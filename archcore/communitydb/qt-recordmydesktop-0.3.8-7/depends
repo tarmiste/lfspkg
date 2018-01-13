@@ -1,5 +1,0 @@
-%DEPENDS%
-recordmydesktop>=0.3.8.1
-python2-pyqt
-xorg-xwininfo
-

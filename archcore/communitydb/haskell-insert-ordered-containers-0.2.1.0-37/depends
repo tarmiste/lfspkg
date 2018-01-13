@@ -1,0 +1,11 @@
+%DEPENDS%
+ghc-libs
+haskell-aeson
+haskell-base-compat
+haskell-hashable
+haskell-lens
+haskell-semigroupoids
+haskell-semigroups
+haskell-text
+haskell-unordered-containers
+

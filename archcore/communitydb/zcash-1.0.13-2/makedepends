@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+boost
+cargo
+cmake
+git
+python
+wget
+

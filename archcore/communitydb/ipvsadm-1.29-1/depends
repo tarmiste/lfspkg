@@ -1,0 +1,5 @@
+%DEPENDS%
+libnl1
+popt
+bash
+

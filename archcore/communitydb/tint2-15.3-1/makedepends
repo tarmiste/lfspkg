@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+cmake
+git
+ninja
+setconf
+startup-notification
+

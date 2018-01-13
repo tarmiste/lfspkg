@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-jsonschema
+python2-jsonschema
+python-jsonpatch
+python2-jsonpatch
+python-six
+python2-six
+git
+

@@ -1,0 +1,7 @@
+%DEPENDS%
+iptables
+python-pyinotify
+whois
+sqlite
+python-systemd
+

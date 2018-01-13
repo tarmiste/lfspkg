@@ -1,0 +1,6 @@
+%DEPENDS%
+ghc-libs
+haskell-appar
+haskell-byteorder
+haskell-network
+

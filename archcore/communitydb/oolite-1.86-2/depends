@@ -1,0 +1,11 @@
+%DEPENDS%
+gnustep-gui
+sdl_mixer
+glu
+espeak
+nspr
+python2
+icu
+gnustep-base
+openal
+

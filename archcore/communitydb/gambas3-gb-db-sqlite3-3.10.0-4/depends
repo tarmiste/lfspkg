@@ -1,0 +1,5 @@
+%DEPENDS%
+gambas3-gb-db
+sqlite
+gcc-libs
+

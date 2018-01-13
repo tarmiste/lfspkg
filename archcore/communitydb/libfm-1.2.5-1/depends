@@ -1,0 +1,5 @@
+%DEPENDS%
+libexif
+libfm-extra=1.2.5
+menu-cache
+

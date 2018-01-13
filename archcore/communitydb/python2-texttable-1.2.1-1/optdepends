@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+python2-cjkwrap: for better CJK support
+

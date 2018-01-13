@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+net-tools: networking tests
+bind-tools: nameserver tests
+iptables: firewall tests
+bash-completion: completion for bash
+

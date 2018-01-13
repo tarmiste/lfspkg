@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+postgresql: postgresql database support
+mariadb: mariadb database support
+perl: perl binding support
+

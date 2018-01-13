@@ -1,0 +1,6 @@
+%DEPENDS%
+gnutls
+nettle
+readline
+argon2
+

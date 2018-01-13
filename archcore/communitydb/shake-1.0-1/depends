@@ -1,7 +1,0 @@
-%DEPENDS%
-attr
-
-%MAKEDEPENDS%
-cmake
-help2man
-

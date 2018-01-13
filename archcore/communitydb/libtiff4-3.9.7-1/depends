@@ -1,0 +1,6 @@
+%DEPENDS%
+gcc-libs
+glibc
+libjpeg-turbo
+zlib
+

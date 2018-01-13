@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+python-gflags: for oauth2client.tools.run function
+

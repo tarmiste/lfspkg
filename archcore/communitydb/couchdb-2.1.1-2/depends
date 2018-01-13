@@ -1,0 +1,6 @@
+%DEPENDS%
+icu
+js185
+openssl
+zlib
+

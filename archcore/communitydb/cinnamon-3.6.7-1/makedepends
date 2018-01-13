@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+gnome-common
+intltool
+gtk-doc
+gobject-introspection
+

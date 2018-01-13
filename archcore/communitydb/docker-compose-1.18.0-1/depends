@@ -1,0 +1,14 @@
+%DEPENDS%
+python-cached-property
+python-docopt
+python-yaml
+python-requests
+python-texttable
+python-websocket-client
+python-docker
+python-dockerpty
+python-six
+python-jsonschema
+python-setuptools
+docker
+

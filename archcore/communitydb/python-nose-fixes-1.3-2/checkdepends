@@ -1,0 +1,4 @@
+%CHECKDEPENDS%
+python-testfixtures
+python2-testfixtures
+

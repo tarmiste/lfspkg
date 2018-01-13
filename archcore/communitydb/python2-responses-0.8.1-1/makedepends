@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-requests
+python2-requests
+python-cookies
+python2-cookies
+python-six
+python2-six
+python2-mock
+

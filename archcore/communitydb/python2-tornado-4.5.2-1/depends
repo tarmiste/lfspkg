@@ -1,0 +1,4 @@
+%DEPENDS%
+python2-singledispatch
+python2-backports-abc
+

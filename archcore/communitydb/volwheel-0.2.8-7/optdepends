@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+alsa-utils: for ALSA support
+

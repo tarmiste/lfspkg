@@ -1,0 +1,9 @@
+%DEPENDS%
+openssl-1.0
+pam
+perl
+libltdl
+libcap
+nettle
+gnutls
+

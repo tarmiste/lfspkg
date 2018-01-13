@@ -1,0 +1,8 @@
+%DEPENDS%
+glib2
+glibc
+gtk3
+pango
+vte3
+libgranite.so=4-64
+

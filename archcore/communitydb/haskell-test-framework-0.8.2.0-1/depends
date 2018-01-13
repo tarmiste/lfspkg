@@ -1,0 +1,10 @@
+%DEPENDS%
+ghc-libs
+haskell-ansi-terminal
+haskell-ansi-wl-pprint
+haskell-hostname
+haskell-old-locale
+haskell-random
+haskell-regex-posix
+haskell-xml
+

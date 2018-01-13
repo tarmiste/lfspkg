@@ -1,0 +1,10 @@
+%DEPENDS%
+dmenu
+xcb-util
+xcb-util-wm
+xcb-util-keysyms
+libxrandr
+libxft
+libxcursor
+terminus-font
+

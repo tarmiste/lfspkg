@@ -1,0 +1,4 @@
+%DEPENDS%
+libmnl
+WIREGUARD-MODULE
+

@@ -1,0 +1,7 @@
+%DEPENDS%
+popt
+ncurses
+net-snmp
+glib2
+gdbm
+

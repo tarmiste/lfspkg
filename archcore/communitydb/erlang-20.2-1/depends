@@ -1,0 +1,6 @@
+%DEPENDS%
+ncurses
+glu
+wxgtk
+openssl
+

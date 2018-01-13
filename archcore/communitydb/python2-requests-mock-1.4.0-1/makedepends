@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+python-pbr
+python2-pbr
+python-requests
+python2-requests
+python-six
+python2-six
+git
+

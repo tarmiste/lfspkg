@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+alsa-lib: to enable the ALSA audio driver
+pulseaudio: to enable the PA audio driver
+

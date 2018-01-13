@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+vte
+libmariadbclient
+postgresql-libs
+libssh
+

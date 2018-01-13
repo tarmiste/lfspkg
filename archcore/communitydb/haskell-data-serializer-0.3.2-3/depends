@@ -1,0 +1,8 @@
+%DEPENDS%
+ghc-libs
+haskell-cereal
+haskell-data-endian
+haskell-parsers
+haskell-semigroups
+haskell-split
+

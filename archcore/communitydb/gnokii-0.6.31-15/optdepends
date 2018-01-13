@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+dialog: sendsms tool
+gtk2: xgnokii GUI
+libmariadbclient: smsd mysql backend
+postgresql-libs: smsd postgresql backend
+

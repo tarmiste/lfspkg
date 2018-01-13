@@ -1,0 +1,6 @@
+%DEPENDS%
+python2-pyqt
+python2-numpy
+qwt5
+sip
+

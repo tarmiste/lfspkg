@@ -1,0 +1,13 @@
+%CHECKDEPENDS%
+python-pytest-benchmark
+python2-pytest-benchmark
+python-virtualenv
+python2-virtualenv
+python-pytest-runner
+python2-pytest-runner
+gdb
+python-manhole
+python2-manhole
+python-process-tests
+python2-process-tests
+

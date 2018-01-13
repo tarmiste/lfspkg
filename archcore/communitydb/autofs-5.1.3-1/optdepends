@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+krb5: for LDAP support
+sssd: for SSSD integration
+

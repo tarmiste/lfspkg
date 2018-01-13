@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+glibc
+python
+python2
+

@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+tesseract: character recognition
+ocrad: character recognition
+gocr: character recognition
+cuneiform: character recognition
+

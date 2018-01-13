@@ -1,0 +1,6 @@
+%DEPENDS%
+qt5-svg
+desktop-file-utils
+zip
+unzip
+

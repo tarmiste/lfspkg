@@ -1,0 +1,4 @@
+%DEPENDS%
+libdbusmenu-gtk2
+libindicator-gtk2
+

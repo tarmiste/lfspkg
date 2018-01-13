@@ -1,0 +1,11 @@
+%DEPENDS%
+curl
+ncurses
+expat
+glib2
+libotr
+libmesode
+libnotify
+gpgme
+python
+

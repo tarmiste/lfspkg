@@ -1,0 +1,13 @@
+%DEPENDS%
+ghc-libs
+haskell-base16-bytestring
+haskell-base64-bytestring
+haskell-cryptohash-sha256
+haskell-ed25519
+haskell-mtl
+haskell-network
+haskell-network-uri
+haskell-parsec
+haskell-tar
+haskell-zlib
+

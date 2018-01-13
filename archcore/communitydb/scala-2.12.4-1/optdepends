@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+scala-docs
+scala-sources
+graphviz: generate diagrams
+

@@ -1,0 +1,6 @@
+%DEPENDS%
+bash
+bc
+xorg-xdpyinfo
+xorg-xprop
+

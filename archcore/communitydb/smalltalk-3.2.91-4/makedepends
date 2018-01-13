@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+gmp
+gdbm
+gtk2
+sqlite
+tk
+zip
+git
+

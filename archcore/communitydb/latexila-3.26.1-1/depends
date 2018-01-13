@@ -1,0 +1,6 @@
+%DEPENDS%
+gsettings-desktop-schemas
+gspell
+libgee
+tepl
+

@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+mpv: Alternative to mplayer for playback
+mplayer: Alternative to mpv for playback
+ffmpeg: for transcoding downloaded content
+python-pyperclip: for copying content to the clipboard
+

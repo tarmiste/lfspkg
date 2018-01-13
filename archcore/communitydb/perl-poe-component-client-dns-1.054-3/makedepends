@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+perl-net-dns
+perl-poe
+

@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+asciidoc
+cmake
+git
+mesa
+setconf
+

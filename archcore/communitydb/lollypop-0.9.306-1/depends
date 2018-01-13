@@ -1,0 +1,9 @@
+%DEPENDS%
+desktop-file-utils
+gst-python
+gtk3
+python-cairo
+python-dbus
+python-gobject
+totem-plparser
+

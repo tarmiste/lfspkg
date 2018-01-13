@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+dcraw: display preview for RAW images
+gpsbabel: load tracks from GPS
+

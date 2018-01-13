@@ -1,7 +1,0 @@
-%DEPENDS%
-lua51
-
-%MAKEDEPENDS%
-cmake
-git
-

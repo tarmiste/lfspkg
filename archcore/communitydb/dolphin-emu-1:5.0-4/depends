@@ -1,0 +1,15 @@
+%DEPENDS%
+bluez-libs
+curl
+enet
+ffmpeg
+libao
+libevdev
+mbedtls
+miniupnpc
+openal
+portaudio
+soundtouch
+xdg-utils
+wxgtk3
+

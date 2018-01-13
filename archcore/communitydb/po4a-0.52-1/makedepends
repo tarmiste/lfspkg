@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+docbook-xsl
+perl-text-wrapi18n
+perl-locale-gettext
+perl-term-readkey
+perl-sgmls
+perl-module-build
+perl-unicode-linebreak
+

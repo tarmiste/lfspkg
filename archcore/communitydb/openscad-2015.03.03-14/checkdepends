@@ -1,0 +1,6 @@
+%CHECKDEPENDS%
+cmake
+xproto
+libx11
+python2
+

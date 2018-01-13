@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+bup: support for incremental backups
+rsync: support for synced backups
+

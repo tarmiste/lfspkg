@@ -1,0 +1,15 @@
+%DEPENDS%
+boost-libs
+curl
+opencascade>=6.6.0
+python2-pivy
+xerces-c
+libspnav
+shared-mime-info
+hicolor-icon-theme
+python2-matplotlib
+python2-shiboken
+python2-pyside-tools
+pyside-tools-common
+qt4
+

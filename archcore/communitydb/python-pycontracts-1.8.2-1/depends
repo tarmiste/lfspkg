@@ -1,0 +1,5 @@
+%DEPENDS%
+python-pyparsing
+python-decorator
+python-six
+

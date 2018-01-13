@@ -1,6 +1,0 @@
-%CONFLICTS%
-linuxconsole
-
-%MAKEDEPENDS%
-addinclude
-

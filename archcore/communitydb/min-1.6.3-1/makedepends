@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+nodejs-grunt-cli
+npm
+

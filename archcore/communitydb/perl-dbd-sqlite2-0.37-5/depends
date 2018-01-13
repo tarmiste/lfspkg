@@ -1,0 +1,5 @@
+%DEPENDS%
+perl-dbi
+perl>=5.26
+perl<5.27
+

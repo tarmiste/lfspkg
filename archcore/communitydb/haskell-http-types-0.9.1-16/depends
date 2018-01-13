@@ -1,0 +1,6 @@
+%DEPENDS%
+ghc-libs
+haskell-blaze-builder
+haskell-case-insensitive
+haskell-text
+

@@ -1,0 +1,15 @@
+%MAKEDEPENDS%
+qt5-tools
+qt5-multimedia
+qt5-declarative
+chromaprint
+id3lib
+taglib
+libmp4v2
+kio
+hicolor-icon-theme
+docbook-xml
+kdoctools
+extra-cmake-modules
+python
+

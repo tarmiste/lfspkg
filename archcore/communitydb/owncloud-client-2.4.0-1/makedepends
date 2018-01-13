@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+python-sphinx
+qt5-tools
+doxygen
+kio
+

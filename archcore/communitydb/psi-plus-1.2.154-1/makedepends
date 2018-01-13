@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+git
+patch
+qconf
+cmake
+

@@ -1,0 +1,13 @@
+%DEPENDS%
+ghc-libs
+haskell-aeson
+haskell-case-insensitive
+haskell-hashable
+haskell-scientific
+haskell-tagged
+haskell-text
+haskell-unordered-containers
+haskell-vector
+haskell-text-binary
+haskell-vector-binary-instances
+

@@ -1,0 +1,6 @@
+%DEPENDS%
+ghc-libs
+haskell-parsec
+haskell-mtl
+haskell-missingh
+

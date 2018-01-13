@@ -1,0 +1,10 @@
+%DEPENDS%
+celt0.5.1
+dbus-glib
+libcacard
+libpulse
+usbredir
+libsoup
+cairo
+libjpeg
+

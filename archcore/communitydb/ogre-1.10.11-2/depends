@@ -1,0 +1,12 @@
+%DEPENDS%
+boost-libs
+freeimage
+freetype2
+libxaw
+libxrandr
+nvidia-cg-toolkit
+zziplib
+sdl2
+glu
+tinyxml
+

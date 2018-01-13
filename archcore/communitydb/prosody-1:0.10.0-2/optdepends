@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+lua51-sec: TLS encryption support
+lua51-bitop: websocket support
+lua51-event: libevent support
+lua51-dbi: SQL storage support
+

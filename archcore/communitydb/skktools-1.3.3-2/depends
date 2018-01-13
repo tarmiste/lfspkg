@@ -1,9 +1,0 @@
-%DEPENDS%
-gdbm
-glib2
-
-%OPTDEPENDS%
-ruby
-python2
-perl
-

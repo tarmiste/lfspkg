@@ -1,0 +1,8 @@
+%CHECKDEPENDS%
+python-pytest-runner
+python-pillow
+python-testfixtures
+python-botocore
+python-jmespath
+mitmproxy
+

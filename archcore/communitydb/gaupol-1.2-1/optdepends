@@ -1,0 +1,8 @@
+%OPTDEPENDS%
+mpv: subtitle preview
+vlc: subtitle preview
+mplayer: subtitle preview
+gst-plugins-bad: extra media codecs
+gst-plugins-ugly: extra media codecs
+gst-libav: extra media codecs
+

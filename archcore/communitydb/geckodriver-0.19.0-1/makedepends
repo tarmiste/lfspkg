@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+rust
+cargo
+gcc-libs
+

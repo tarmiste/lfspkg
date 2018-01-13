@@ -1,0 +1,8 @@
+%DEPENDS%
+curl
+jansson
+libevent
+libmicrohttpd
+libusb
+lm_sensors
+

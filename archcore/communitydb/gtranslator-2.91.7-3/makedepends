@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+intltool
+itstool
+gucharmap
+json-glib
+gnome-common
+yelp-tools
+gobject-introspection
+

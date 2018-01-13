@@ -1,0 +1,10 @@
+%DEPENDS%
+ghc-libs
+haskell-aeson
+haskell-src-exts
+haskell-mtl
+haskell-optparse-applicative
+haskell-strict
+haskell-syb
+haskell-yaml
+

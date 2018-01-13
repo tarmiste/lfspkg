@@ -1,0 +1,6 @@
+%DEPENDS%
+python2
+qt4>=4.8
+python2-shiboken>=1.2.4
+python-pyside-common=1.2.4-6
+

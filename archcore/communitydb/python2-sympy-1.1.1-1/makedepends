@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+python2-mpmath
+python-mpmath
+python-setuptools
+python2-setuptools
+

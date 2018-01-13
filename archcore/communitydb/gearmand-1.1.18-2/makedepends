@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+boost
+gperf
+python-sphinx
+

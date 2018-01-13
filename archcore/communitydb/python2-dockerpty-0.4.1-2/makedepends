@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-docker-py
+python2-docker-py
+python-six
+python2-six
+git
+

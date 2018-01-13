@@ -1,0 +1,9 @@
+%DEPENDS%
+aspell
+gcc-libs
+libcups
+audiofile
+libsndfile
+giflib
+libao
+

@@ -1,0 +1,6 @@
+%DEPENDS%
+sh
+libxinerama
+libxft
+freetype2
+

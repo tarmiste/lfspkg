@@ -1,0 +1,10 @@
+%DEPENDS%
+ghc-libs
+haskell-mtl
+haskell-optparse-applicative
+haskell-reducers
+haskell-split
+haskell-stm
+haskell-tagged
+haskell-tasty
+

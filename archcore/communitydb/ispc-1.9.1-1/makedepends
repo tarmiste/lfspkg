@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+llvm
+clang
+python2
+lib32-glibc
+

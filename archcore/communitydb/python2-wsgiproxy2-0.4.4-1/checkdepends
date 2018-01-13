@@ -1,0 +1,10 @@
+%CHECKDEPENDS%
+python-nose
+python2-nose
+python-requests
+python2-requests
+python-webtest
+python2-webtest
+python-waitress
+python2-waitress
+

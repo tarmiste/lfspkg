@@ -1,0 +1,9 @@
+%DEPENDS%
+ghc-libs
+haskell-digest
+haskell-mtl
+haskell-old-time
+haskell-temporary
+haskell-text
+haskell-zlib
+

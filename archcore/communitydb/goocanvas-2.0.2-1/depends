@@ -1,7 +1,0 @@
-%DEPENDS%
-gtk3
-
-%MAKEDEPENDS%
-gobject-introspection
-python-gobject2
-

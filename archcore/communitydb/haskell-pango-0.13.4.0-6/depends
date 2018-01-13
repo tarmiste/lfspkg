@@ -1,0 +1,6 @@
+%DEPENDS%
+ghc-libs
+pango
+haskell-glib
+haskell-cairo
+

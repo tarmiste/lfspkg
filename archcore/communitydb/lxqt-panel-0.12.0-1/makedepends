@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+lxqt-build-tools
+liblxqt
+libpulse
+libstatgrab
+libsysstat
+lm_sensors
+libxdamage
+

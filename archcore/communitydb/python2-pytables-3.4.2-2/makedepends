@@ -1,0 +1,12 @@
+%MAKEDEPENDS%
+lzo
+hdf5
+python2-numexpr
+python-numexpr
+python-setuptools
+python2-setuptools
+cython
+cython2
+blosc
+bzip2
+

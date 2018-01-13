@@ -1,0 +1,10 @@
+%DEPENDS%
+nemo
+cjs
+clutter-gtk
+clutter-gst
+libmusicbrainz5
+evince
+gtksourceview3
+xreader
+

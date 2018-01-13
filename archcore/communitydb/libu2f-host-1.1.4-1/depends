@@ -1,0 +1,4 @@
+%DEPENDS%
+json-c
+hidapi
+

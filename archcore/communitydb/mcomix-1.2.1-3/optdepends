@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+libunrar: for rar compressed comics
+mupdf-tools: for pdf comics
+p7zip: for 7zip compressed comics
+

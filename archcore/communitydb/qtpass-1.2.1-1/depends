@@ -1,0 +1,5 @@
+%DEPENDS%
+qt5-base
+pass
+libxkbcommon-x11
+

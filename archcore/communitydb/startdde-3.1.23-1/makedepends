@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+cmake
+coffeescript
+deepin-dbus-factory
+deepin-gir-generator
+deepin-go-lib
+deepin-api
+go-pie
+python2
+git
+

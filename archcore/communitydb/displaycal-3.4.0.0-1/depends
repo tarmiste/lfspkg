@@ -1,0 +1,5 @@
+%DEPENDS%
+argyllcms
+wxpython
+python2-numpy
+

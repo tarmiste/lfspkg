@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+boost
+eigen
+gcc-fortran
+swig
+xerces-c
+desktop-file-utils
+cmake
+coin>=3.1.3-9
+

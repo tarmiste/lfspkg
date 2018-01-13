@@ -1,0 +1,4 @@
+%CHECKDEPENDS%
+python-testtools
+python2-testtools
+

@@ -1,0 +1,7 @@
+%DEPENDS%
+iso-codes
+mate-desktop
+zenity
+gtksourceview3
+libpeas
+

@@ -1,0 +1,12 @@
+%DEPENDS%
+ghc-libs
+haskell-byteable
+haskell-data-default-class
+haskell-network
+haskell-socks
+haskell-tls
+haskell-x509
+haskell-x509-store
+haskell-x509-system
+haskell-x509-validation
+

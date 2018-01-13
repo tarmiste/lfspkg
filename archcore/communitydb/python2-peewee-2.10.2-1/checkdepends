@@ -1,0 +1,6 @@
+%CHECKDEPENDS%
+python-apsw
+python2-apsw
+python-flask
+python2-flask
+

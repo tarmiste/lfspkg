@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+postgresql-libs
+libmariadbclient
+sqlite
+

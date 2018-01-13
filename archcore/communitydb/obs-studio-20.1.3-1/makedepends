@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+cmake
+libfdk-aac
+libxcomposite
+x264
+vlc
+

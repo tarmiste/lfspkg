@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+python2-pyopenssl: FTPS support
+python2-psutil: to keep track of FTP server memory usage
+

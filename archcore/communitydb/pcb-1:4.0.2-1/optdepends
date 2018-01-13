@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+tk: additional tools
+tcl: additional tools
+perl: additional tools
+desktop-file-utils: desktop integration
+

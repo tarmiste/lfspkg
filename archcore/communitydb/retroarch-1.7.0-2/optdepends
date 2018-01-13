@@ -1,0 +1,7 @@
+%OPTDEPENDS%
+libretro-overlays: Collection of overlays
+libretro-shaders: Collection of shaders
+python: retroarch-cg2glsl
+retroarch-assets-xmb: XMB menu assets
+retroarch-autoconfig-udev: udev joypad autoconfig
+

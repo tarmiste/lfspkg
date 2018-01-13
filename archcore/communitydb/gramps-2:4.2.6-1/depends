@@ -1,0 +1,11 @@
+%DEPENDS%
+goocanvas
+gtk3
+python-gobject
+librsvg
+xdg-utils
+python-bsddb
+desktop-file-utils
+shared-mime-info
+python-cairo
+

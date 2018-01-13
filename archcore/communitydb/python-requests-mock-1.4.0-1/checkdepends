@@ -1,0 +1,6 @@
+%CHECKDEPENDS%
+python-testrepository
+python2-testrepository
+python-mock
+python2-mock
+

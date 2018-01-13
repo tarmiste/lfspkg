@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+python2-pillow: FLAC cover art
+quodlibet: QuodLibet library support
+

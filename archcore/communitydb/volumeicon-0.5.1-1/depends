@@ -1,9 +1,0 @@
-%DEPENDS%
-gtk3
-alsa-lib
-libnotify
-
-%MAKEDEPENDS%
-intltool
-git
-

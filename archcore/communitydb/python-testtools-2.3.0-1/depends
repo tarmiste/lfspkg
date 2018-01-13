@@ -1,0 +1,7 @@
+%DEPENDS%
+python-pbr
+python-extras
+python-fixtures
+python-pyrsistent
+python-mimeparse
+

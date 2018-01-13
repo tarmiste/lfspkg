@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+python
+python2
+python-setuptools
+python2-setuptools
+python-smartypants
+python2-smartypants
+

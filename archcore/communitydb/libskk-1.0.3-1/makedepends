@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+intltool
+gnome-common
+gobject-introspection
+vala
+

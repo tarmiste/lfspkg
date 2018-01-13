@@ -1,0 +1,8 @@
+%DEPENDS%
+jack2
+alsa-lib
+gcc-libs
+libvorbis
+libmad
+lame
+

@@ -1,0 +1,7 @@
+%DEPENDS%
+python2-pygments
+python2-requests
+python2-curtsies
+python2-greenlet
+python2-six
+

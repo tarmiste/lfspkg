@@ -1,0 +1,11 @@
+%DEPENDS%
+python2-fixtures
+python2-subunit
+python2-testrepository
+python2-testscenarios
+python2-testtools
+python2-mock
+python2-mox3
+python2-os-client-config
+python2-debtcollector
+

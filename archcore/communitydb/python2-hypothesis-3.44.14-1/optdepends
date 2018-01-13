@@ -1,0 +1,7 @@
+%OPTDEPENDS%
+python2-pytz: for datetime and django module
+python2-faker: for fakefactory and django module
+python2-django: for django module
+python2-numpy: for numpy module
+python2-pytest: for pytest module
+

@@ -1,0 +1,10 @@
+%DEPENDS%
+fltk
+portaudio
+fftw
+lash
+mxml
+libxpm
+liblo
+hicolor-icon-theme
+

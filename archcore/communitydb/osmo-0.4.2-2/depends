@@ -1,0 +1,9 @@
+%DEPENDS%
+gspell
+libarchive
+libgringotts
+libical
+libnotify
+libxml2
+webkit2gtk
+

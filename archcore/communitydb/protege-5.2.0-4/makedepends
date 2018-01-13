@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+maven
+jdk8-openjdk
+

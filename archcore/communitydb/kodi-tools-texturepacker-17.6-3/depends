@@ -1,0 +1,6 @@
+%DEPENDS%
+libpng
+giflib
+libjpeg-turbo
+lzo
+

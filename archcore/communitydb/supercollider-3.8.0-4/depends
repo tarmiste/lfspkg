@@ -1,0 +1,6 @@
+%DEPENDS%
+boost-libs
+fftw
+jack
+qt5-webkit
+

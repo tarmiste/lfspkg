@@ -1,0 +1,13 @@
+%DEPENDS%
+qt5-base
+qca-qt5
+qt5-script
+qt5-webkit
+libofx
+grantlee
+kross
+knewstuff
+krunner
+knotifyconfig
+sqlcipher
+

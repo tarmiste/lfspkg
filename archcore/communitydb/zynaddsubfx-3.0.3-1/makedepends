@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+asciidoc
+cmake
+doxygen
+gnuplot
+dblatex
+imagemagick
+ghostscript
+texlive-pstricks
+

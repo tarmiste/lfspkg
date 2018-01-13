@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+perl-html-template
+perl-parse-recdescent
+

@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+gcc-objc
+gnustep-base
+gnustep-make
+

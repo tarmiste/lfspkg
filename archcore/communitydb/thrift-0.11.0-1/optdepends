@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+qt4: TQTcpServer (Qt4) support
+qt5-base: TQTcpServer (Qt5) support
+

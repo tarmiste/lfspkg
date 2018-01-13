@@ -1,0 +1,7 @@
+%OPTDEPENDS%
+luxblend25: Blender exporter
+qt4: Qt GUI
+python: pylux Python interface
+amdapp-sdk: OpenCL support for AMD GPUs
+intel-opencl-runtime: OpenCL support for Intel CPUs
+

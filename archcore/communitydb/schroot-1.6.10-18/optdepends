@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+btrfs-progs-unstable
+lvm2
+

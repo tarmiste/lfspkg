@@ -1,0 +1,6 @@
+%DEPENDS%
+udev
+lockdev
+p8-platform
+libxrandr
+

@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+boost
+cmake
+zip
+xz
+p7zip
+python2
+jdk8-openjdk
+mesa
+

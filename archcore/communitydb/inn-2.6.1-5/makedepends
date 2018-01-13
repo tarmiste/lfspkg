@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+make
+bison
+python2
+gcc
+smtp-forwarder
+libsasl
+

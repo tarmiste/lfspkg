@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-sdl_image
-allegro4
-libgl
-glut
-

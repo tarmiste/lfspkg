@@ -1,0 +1,12 @@
+%DEPENDS%
+gtk3
+zlib
+libjpeg
+libssh
+avahi
+vte3
+libgcrypt
+libxdmcp
+libsecret
+webkit2gtk
+

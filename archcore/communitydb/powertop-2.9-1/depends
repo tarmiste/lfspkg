@@ -1,0 +1,6 @@
+%DEPENDS%
+gcc-libs
+libnl
+ncurses
+pciutils
+

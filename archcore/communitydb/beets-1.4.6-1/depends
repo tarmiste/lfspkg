@@ -1,0 +1,10 @@
+%DEPENDS%
+python-jellyfish
+python-munkres
+python-musicbrainzngs
+python-mutagen
+python-setuptools
+python-six
+python-unidecode
+python-yaml
+

@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+pyprof2calltree
+python2-pyprof2calltree
+git
+

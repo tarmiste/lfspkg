@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+intltool
+python-sphinx
+boost
+itstool
+libgda-mysql
+

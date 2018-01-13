@@ -1,0 +1,4 @@
+%DEPENDS%
+gnome-icon-theme
+gtk-update-icon-cache
+

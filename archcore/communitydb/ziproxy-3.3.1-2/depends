@@ -1,0 +1,8 @@
+%DEPENDS%
+giflib
+libpng
+libjpeg
+zlib
+jasper
+libsasl
+

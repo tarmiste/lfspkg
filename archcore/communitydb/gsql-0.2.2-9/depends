@@ -1,0 +1,9 @@
+%DEPENDS%
+gtk2>=2.12
+gtksourceview2
+libglade
+gconf
+desktop-file-utils
+libnotify
+hicolor-icon-theme
+

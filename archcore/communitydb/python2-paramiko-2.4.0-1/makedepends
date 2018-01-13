@@ -1,0 +1,12 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-bcrypt
+python2-bcrypt
+python-cryptography
+python2-cryptography
+python-pyasn1
+python2-pyasn1
+python-pynacl
+python2-pynacl
+

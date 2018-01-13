@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+python
+plasma-framework
+

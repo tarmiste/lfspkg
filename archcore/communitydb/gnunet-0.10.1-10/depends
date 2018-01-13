@@ -1,0 +1,10 @@
+%DEPENDS%
+gmp
+libgcrypt
+libextractor
+sqlite
+gnurl
+libmicrohttpd
+libunistring
+libidn
+

@@ -1,0 +1,9 @@
+%DEPENDS%
+ghc-libs
+gmp
+libffi
+libxrandr
+haskell-x11>=1.3
+haskell-random
+haskell-unix
+

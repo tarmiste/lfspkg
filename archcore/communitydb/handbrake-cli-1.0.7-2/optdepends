@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+libdvdcss: for decoding encrypted DVDs
+

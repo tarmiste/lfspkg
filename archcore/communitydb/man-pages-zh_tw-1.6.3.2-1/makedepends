@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+opencc
+python
+git
+

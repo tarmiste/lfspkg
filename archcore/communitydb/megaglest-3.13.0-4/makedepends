@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+ftjam
+cmake
+mesa
+git
+

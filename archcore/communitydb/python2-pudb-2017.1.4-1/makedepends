@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+python-urwid
+python-pygments
+python2-urwid
+python2-pygments
+git
+

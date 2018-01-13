@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+python-configobj: for apptools.preferences package
+python-traitsui: for user interface to apptools
+

@@ -1,0 +1,12 @@
+%DEPENDS%
+dumb
+gtk2
+jack
+libgl
+libpulse
+libtheora
+libxpm
+libxxf86dga
+opusfile
+physfs
+

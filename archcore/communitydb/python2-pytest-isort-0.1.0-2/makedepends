@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+python-pytest-cache
+python2-pytest-cache
+python-isort
+python2-isort
+git
+

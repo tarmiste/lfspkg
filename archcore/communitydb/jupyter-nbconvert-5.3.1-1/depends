@@ -1,0 +1,12 @@
+%DEPENDS%
+jupyter
+jupyter-nbformat
+python-pygments
+python-mistune
+python-jinja
+python-entrypoints
+python-traitlets
+python-pandocfilters
+python-bleach
+python-testpath
+

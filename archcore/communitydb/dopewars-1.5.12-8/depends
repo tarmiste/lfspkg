@@ -1,7 +1,0 @@
-%DEPENDS%
-gtk2
-alsa-lib
-audiofile
-sdl_mixer
-ncurses
-

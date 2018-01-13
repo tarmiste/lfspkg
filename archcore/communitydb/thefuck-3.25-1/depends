@@ -1,0 +1,8 @@
+%DEPENDS%
+python-setuptools
+python-psutil
+python-six
+python-colorama
+python-decorator
+python-pyte
+

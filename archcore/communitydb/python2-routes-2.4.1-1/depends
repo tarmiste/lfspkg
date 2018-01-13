@@ -1,0 +1,4 @@
+%DEPENDS%
+python2-repoze.lru
+python2-six
+

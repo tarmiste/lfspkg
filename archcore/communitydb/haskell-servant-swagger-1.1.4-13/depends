@@ -1,0 +1,13 @@
+%DEPENDS%
+ghc-libs
+haskell-aeson
+haskell-http-media
+haskell-insert-ordered-containers
+haskell-lens
+haskell-servant
+haskell-swagger2
+haskell-text
+haskell-unordered-containers
+haskell-hspec
+haskell-quickcheck
+

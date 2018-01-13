@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+libtorrent-rasterbar
+boost
+qt5-tools
+qt5-svg
+

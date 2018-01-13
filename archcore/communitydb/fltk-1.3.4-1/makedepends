@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+mesa
+glu
+doxygen
+libjpeg
+libxft
+libxinerama
+alsa-lib
+desktop-file-utils
+libxcursor
+

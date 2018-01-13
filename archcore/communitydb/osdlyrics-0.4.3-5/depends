@@ -1,0 +1,11 @@
+%DEPENDS%
+gtk2
+dbus-glib
+curl
+libnotify
+libmpd
+xmms2
+desktop-file-utils
+hicolor-icon-theme
+sqlite
+

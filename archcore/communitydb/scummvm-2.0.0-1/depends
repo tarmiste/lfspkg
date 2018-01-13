@@ -1,0 +1,15 @@
+%DEPENDS%
+libpng
+libtheora
+sdl2
+fluidsynth
+flac
+faad2
+libvorbis
+libmad
+freetype2
+libgl
+glu
+libjpeg-turbo
+libmpeg2
+

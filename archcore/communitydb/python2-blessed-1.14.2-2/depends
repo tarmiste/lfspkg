@@ -1,0 +1,4 @@
+%DEPENDS%
+python2-six
+python2-wcwidth
+

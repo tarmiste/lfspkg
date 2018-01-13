@@ -1,0 +1,4 @@
+%DEPENDS%
+libtorrent-rasterbar
+qt5-base
+

@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+networkmanager: detect connection status
+bash-completion: command completion in bash
+

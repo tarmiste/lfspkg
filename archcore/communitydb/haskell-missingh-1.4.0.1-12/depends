@@ -1,0 +1,12 @@
+%DEPENDS%
+ghc-libs
+haskell-hunit
+haskell-hslogger
+haskell-mtl
+haskell-network
+haskell-old-locale
+haskell-old-time
+haskell-parsec
+haskell-random
+haskell-regex-compat
+

@@ -1,0 +1,5 @@
+%DEPENDS%
+libnotify
+gst-plugins-base
+gtk3
+

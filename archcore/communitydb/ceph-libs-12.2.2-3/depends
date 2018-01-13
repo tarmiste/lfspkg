@@ -1,0 +1,13 @@
+%DEPENDS%
+boost-libs
+curl
+glibc
+keyutils
+leveldb
+libaio
+libutil-linux
+lz4
+nss
+python2
+xfsprogs
+

@@ -1,0 +1,12 @@
+%DEPENDS%
+ghc-libs
+haskell-aeson
+haskell-dlist
+haskell-mtl
+haskell-scientific
+haskell-text
+haskell-transformers-compat
+haskell-unordered-containers
+haskell-vector
+haskell-void
+

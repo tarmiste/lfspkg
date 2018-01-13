@@ -1,0 +1,11 @@
+%DEPENDS%
+accountsservice
+gnome-bluetooth
+gnome-menus
+gnome-session
+gnome-themes-standard
+libibus
+libpeas
+libwnck3
+mutter
+

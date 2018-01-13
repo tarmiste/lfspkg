@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+xdotool: if you want to use auto-type
+xsel: clipboard operations in order to work around Mono clipboard bugs
+

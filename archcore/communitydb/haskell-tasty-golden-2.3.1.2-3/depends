@@ -1,0 +1,9 @@
+%DEPENDS%
+ghc-libs
+haskell-tasty
+haskell-mtl
+haskell-optparse-applicative
+haskell-temporary
+haskell-tagged
+haskell-async
+

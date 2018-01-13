@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+python-pytest
+python2-pytest
+mercurial
+

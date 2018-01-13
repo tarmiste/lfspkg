@@ -1,0 +1,10 @@
+%DEPENDS%
+vte3
+libsecret
+libgee
+libwnck3
+expect
+deepin-shortcut-viewer
+deepin-menu
+deepin-manual
+

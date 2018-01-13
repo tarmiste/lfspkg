@@ -1,0 +1,7 @@
+%OPTDEPENDS%
+libgnome-keyring: GNOME Integration
+python2-gobject: GNOME Integration
+python2-fs
+python2-gdata: Google Docs Integration
+python2-crypto: Encrypted file storage
+

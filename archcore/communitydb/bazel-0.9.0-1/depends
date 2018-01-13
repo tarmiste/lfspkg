@@ -1,0 +1,7 @@
+%DEPENDS%
+java-environment>=8
+java-environment<9
+libarchive
+zip
+unzip
+

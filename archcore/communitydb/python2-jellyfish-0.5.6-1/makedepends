@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+git
+python-setuptools
+python2-setuptools
+

@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+boost: gr_modtool
+swig: gr_modtool
+cmake: gr_modtool
+pkgconfig: libuhd
+

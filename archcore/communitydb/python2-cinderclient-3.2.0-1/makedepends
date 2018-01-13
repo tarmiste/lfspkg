@@ -1,0 +1,16 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-pbr
+python2-pbr
+python-babel
+python2-babel
+python-prettytable
+python2-prettytable
+python-keystoneclient
+python2-keystoneclient
+python-requests
+python2-requests
+python-oslo-utils
+python2-oslo-utils
+

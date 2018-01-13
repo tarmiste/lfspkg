@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+git
+libgl
+mesa
+vulkan-icd-loader
+

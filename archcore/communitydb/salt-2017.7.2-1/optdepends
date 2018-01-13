@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+dmidecode: decode SMBIOS/DMI tables
+python2-pygit2: gitfs support
+

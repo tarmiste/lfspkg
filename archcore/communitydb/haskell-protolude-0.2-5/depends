@@ -1,0 +1,9 @@
+%DEPENDS%
+ghc-libs
+haskell-async
+haskell-hashable
+haskell-mtl
+haskell-safe
+haskell-stm
+haskell-text
+

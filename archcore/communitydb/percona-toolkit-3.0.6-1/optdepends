@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+perl-dbd-mysql: MySQL connections
+perl-dbi: MySQL connections
+

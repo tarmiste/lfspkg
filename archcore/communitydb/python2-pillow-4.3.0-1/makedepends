@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+lcms2
+libwebp
+openjpeg2
+tk
+sane
+

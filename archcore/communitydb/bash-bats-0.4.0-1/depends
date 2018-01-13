@@ -1,6 +1,0 @@
-%DEPENDS%
-bash
-
-%MAKEDEPENDS%
-git
-

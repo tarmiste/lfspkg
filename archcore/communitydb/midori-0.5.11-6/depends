@@ -1,0 +1,6 @@
+%DEPENDS%
+webkit2gtk
+libxss
+gcr
+zeitgeist
+

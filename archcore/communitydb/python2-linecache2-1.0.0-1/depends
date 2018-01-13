@@ -1,7 +1,0 @@
-%DEPENDS%
-python2
-
-%MAKEDEPENDS%
-python2-setuptools
-python2-pbr
-

@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+ghc
+haskell-tasty
+haskell-tasty-quickcheck
+haskell-tasty-hunit
+

@@ -1,0 +1,10 @@
+%CHECKDEPENDS%
+python-six
+python2-six
+python-pytest-expect
+python2-pytest-expect
+python-lxml
+python2-lxml
+python-mock
+python2-mock
+

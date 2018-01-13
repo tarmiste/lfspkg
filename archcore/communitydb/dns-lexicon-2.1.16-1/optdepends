@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+python-softlayer: for SoftLayer support
+python-boto3: for Route53 support
+python-babel: for DNS Made Easy support
+

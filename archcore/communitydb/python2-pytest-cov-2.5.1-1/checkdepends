@@ -1,0 +1,14 @@
+%CHECKDEPENDS%
+python-virtualenv
+python2-virtualenv
+python-process-tests
+python2-process-tests
+python-pytest-cache
+python2-pytest-cache
+python-pytest-xdist
+python2-pytest-xdist
+python-pytest-capturelog
+python2-pytest-capturelog
+python-fields
+python2-fields
+

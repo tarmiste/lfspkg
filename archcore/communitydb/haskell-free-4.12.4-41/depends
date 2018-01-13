@@ -1,0 +1,13 @@
+%DEPENDS%
+ghc-libs
+haskell-bifunctors
+haskell-comonad
+haskell-distributive
+haskell-exceptions
+haskell-mtl
+haskell-prelude-extras
+haskell-profunctors
+haskell-semigroupoids
+haskell-semigroups
+haskell-transformers-compat
+

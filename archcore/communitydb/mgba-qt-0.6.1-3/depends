@@ -1,0 +1,5 @@
+%DEPENDS%
+libmgba
+qt5-multimedia
+sdl2
+

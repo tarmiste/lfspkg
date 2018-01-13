@@ -1,0 +1,16 @@
+%CHECKDEPENDS%
+python-psycopg2
+python-nose
+python-pyopenssl
+python-httplib2
+python-mock
+python-pyzmq
+python-dnspython
+python2-psycopg2
+python2-nose
+python2-pyopenssl
+python2-httplib2
+python2-mock
+python2-pyzmq
+python2-dnspython
+

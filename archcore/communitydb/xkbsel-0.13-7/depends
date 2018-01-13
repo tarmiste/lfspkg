@@ -1,8 +1,0 @@
-%DEPENDS%
-gdbm
-libxaw
-
-%MAKEDEPENDS%
-patch
-xkeyboard-config
-

@@ -1,0 +1,11 @@
+%CHECKDEPENDS%
+python-pytest
+python2-pytest
+python-lxml
+python2-lxml
+python-pyquery
+python2-pyquery
+python-cairosvg
+python-flask
+python2-flask
+

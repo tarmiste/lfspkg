@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+cmake
+python
+python-setuptools
+python-numpy
+

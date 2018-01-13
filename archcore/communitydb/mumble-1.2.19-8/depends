@@ -1,0 +1,17 @@
+%DEPENDS%
+qt4
+speex
+lsb-release
+libxi
+avahi
+libsndfile
+protobuf
+libpulse
+opus
+xdg-utils
+speech-dispatcher
+libpng
+freetype2
+fontconfig
+libxrender
+

@@ -1,0 +1,10 @@
+%DEPENDS%
+fontconfig
+libfilteraudio
+libxext
+libxrender
+openal
+toxcore
+v4l-utils
+hicolor-icon-theme
+

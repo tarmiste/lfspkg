@@ -1,0 +1,6 @@
+%DEPENDS%
+python2-traitlets
+python2-tornado
+ipython2
+python2-jupyter_client
+

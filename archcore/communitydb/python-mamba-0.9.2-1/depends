@@ -1,0 +1,6 @@
+%DEPENDS%
+python-coverage
+python-watchdog
+python-clint
+python-setuptools
+

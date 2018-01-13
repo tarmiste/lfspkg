@@ -1,0 +1,13 @@
+%DEPENDS%
+ghc-libs
+haskell-base64-bytestring
+haskell-cereal
+haskell-cipher-aes
+haskell-cprng-aes
+haskell-crypto-api
+haskell-crypto-random
+haskell-entropy
+haskell-setenv
+haskell-skein
+haskell-tagged
+

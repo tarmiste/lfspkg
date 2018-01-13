@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+ghc-static
+perl
+libxslt
+docbook-xsl
+python-sphinx
+haskell-hscolour
+texlive-bin
+texlive-latexextra
+ttf-dejavu
+

@@ -1,0 +1,6 @@
+%DEPENDS%
+erlang
+sdl
+glu
+libgl
+

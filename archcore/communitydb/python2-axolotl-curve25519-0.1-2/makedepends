@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+zlib
+glibc
+python-setuptools
+python2-setuptools
+

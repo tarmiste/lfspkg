@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+haskell-cabal-doctest
+ghc
+

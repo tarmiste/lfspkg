@@ -1,7 +1,0 @@
-%DEPENDS%
-gtk-sharp-2
-dbus-sharp-glib
-
-%PROVIDES%
-notify-sharp-svn
-

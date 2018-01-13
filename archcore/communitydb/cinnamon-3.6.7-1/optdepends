@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+blueberry: Bluetooth support
+gnome-panel: fallback mode
+metacity: fallback mode
+system-config-printer: printer settings
+

@@ -1,5 +1,0 @@
-%DEPENDS%
-xorg-server
-libxft
-libxext
-

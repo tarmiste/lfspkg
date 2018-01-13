@@ -1,0 +1,4 @@
+%DEPENDS%
+python2-webob
+python2-six
+

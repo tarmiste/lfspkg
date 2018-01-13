@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+gnome-common
+gtk-doc
+intltool
+gobject-introspection
+libgnome-keyring
+xreader
+

@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+gnustep-make
+curl
+zip
+mesa
+gcc-objc
+

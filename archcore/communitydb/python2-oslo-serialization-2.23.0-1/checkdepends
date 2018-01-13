@@ -1,0 +1,5 @@
+%CHECKDEPENDS%
+python-oslotest
+python2-oslotest
+python2-ipaddress
+

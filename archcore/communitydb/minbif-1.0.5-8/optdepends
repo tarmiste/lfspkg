@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+xinetd: to run minbif through xinetd
+

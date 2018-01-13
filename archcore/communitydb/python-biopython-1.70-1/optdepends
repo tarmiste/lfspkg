@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+python-mysql-connector: for BioSQL module
+

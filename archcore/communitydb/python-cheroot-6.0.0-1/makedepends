@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+python-six
+python2-six
+python-setuptools-scm
+python2-setuptools-scm
+

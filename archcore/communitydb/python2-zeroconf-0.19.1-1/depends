@@ -1,0 +1,5 @@
+%DEPENDS%
+python2
+python2-netifaces
+python2-six
+

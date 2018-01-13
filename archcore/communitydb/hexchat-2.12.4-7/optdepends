@@ -1,0 +1,7 @@
+%OPTDEPENDS%
+enchant: Spell check
+iso-codes: Display language names instead of codes
+lua: Lua plugin
+perl: Perl plugin
+python: Python plugin
+

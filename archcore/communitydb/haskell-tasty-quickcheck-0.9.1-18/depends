@@ -1,0 +1,7 @@
+%DEPENDS%
+ghc-libs
+haskell-quickcheck
+haskell-random
+haskell-tagged
+haskell-tasty
+

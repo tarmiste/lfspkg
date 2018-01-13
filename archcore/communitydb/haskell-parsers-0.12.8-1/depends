@@ -1,0 +1,12 @@
+%DEPENDS%
+ghc-libs
+haskell-attoparsec
+haskell-base-orphans
+haskell-charset
+haskell-mtl
+haskell-parsec
+haskell-scientific
+haskell-semigroups
+haskell-text
+haskell-unordered-containers
+

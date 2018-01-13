@@ -1,0 +1,15 @@
+%MAKEDEPENDS%
+python
+python-setuptools
+python2
+python2-setuptools
+python-yaml
+python2-yaml
+python-numpy
+python2-numpy
+gcc6
+cmake
+cuda
+cudnn
+git
+

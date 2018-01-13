@@ -1,0 +1,6 @@
+%DEPENDS%
+clutter
+dbus-glib
+gtk2
+startup-notification
+

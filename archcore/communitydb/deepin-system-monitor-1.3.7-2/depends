@@ -1,0 +1,7 @@
+%DEPENDS%
+deepin-qt5integration
+dtkwm
+procps-ng
+nethogs
+libcap
+

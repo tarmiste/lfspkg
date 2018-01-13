@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-pyparsing
+python2-pyparsing
+python-decorator
+python2-decorator
+python-six
+python2-six
+

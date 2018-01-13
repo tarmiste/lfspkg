@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-extras
+python2-extras
+python-testtools
+python2-testtools
+

@@ -1,0 +1,5 @@
+%DEPENDS%
+sdl
+gtk2
+gd
+

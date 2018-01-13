@@ -1,0 +1,17 @@
+%MAKEDEPENDS%
+c-ares
+geoip
+qt5-tools
+qt5-multimedia
+gtk3
+krb5
+libpcap
+bash
+libssh
+gnutls
+portaudio
+lua52
+python
+desktop-file-utils
+hicolor-icon-theme
+

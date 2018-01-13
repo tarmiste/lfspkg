@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+openssh: repositories on remote hosts
+python-llfuse: mounting backups as a FUSE file system
+

@@ -1,0 +1,8 @@
+%DEPENDS%
+giflib
+jasper
+librsvg
+xine-lib
+curl
+pth
+

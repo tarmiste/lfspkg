@@ -1,0 +1,10 @@
+%CHECKDEPENDS%
+python-pytest-runner
+python2-pytest-runner
+python-django
+python2-django
+python-requests
+python2-requests
+python-brotli
+python2-brotli
+

@@ -1,0 +1,7 @@
+%DEPENDS%
+python2-ipykernel
+python2-traitlets
+python2-pyzmq
+python2-jupyter_core
+python2-dateutil
+

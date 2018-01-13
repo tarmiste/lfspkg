@@ -1,0 +1,7 @@
+%CHECKDEPENDS%
+xorg-server-xvfb
+python-pytest
+python2-pytest
+xsel
+xclip
+

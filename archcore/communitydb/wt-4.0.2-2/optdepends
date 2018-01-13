@@ -1,0 +1,8 @@
+%OPTDEPENDS%
+openssl: for SSL support in built-in webserver
+fcgi: for FastCGI support
+postgresql-libs: for PostgreSQL Dbo support
+sqlite: for Sqlite Dbo support
+mysql++: for the hangman example
+qt4: for the Wt/Qt interopability example (wtwithqt)
+

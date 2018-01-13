@@ -1,0 +1,16 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-pbr
+python2-pbr
+python-jsonpatch
+python2-jsonpatch
+python-stevedore
+python2-stevedore
+python-keystoneauth1
+python2-keystoneauth1
+python-os-client-config
+python2-os-client-config
+python-deprecation
+python2-deprecation
+

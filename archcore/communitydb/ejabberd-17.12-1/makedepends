@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+git
+rebar
+hevea
+texlive-bin
+texlive-core
+texlive-latexextra
+

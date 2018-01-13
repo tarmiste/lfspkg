@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+chromaprint: fingerprinting
+python-discid: cd lookup
+

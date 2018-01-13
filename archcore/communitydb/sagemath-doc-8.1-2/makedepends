@@ -1,0 +1,13 @@
+%MAKEDEPENDS%
+sage-notebook
+python2-pyzmq
+python2-pillow
+python2-docutils
+tachyon
+python2-jupyter_client
+python2-pkgconfig
+cython2
+thebe
+python2-sphinx
+python2-ipywidgets
+

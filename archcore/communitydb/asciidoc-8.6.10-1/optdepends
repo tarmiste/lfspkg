@@ -1,0 +1,9 @@
+%OPTDEPENDS%
+lilypond: music-filter
+imagemagick: music-filter (used in conjunction with lilypond)
+source-highlight: source-highlight-filter
+dblatex: pdf generation
+fop: alternative pdf generation
+lynx: text generation
+w3m: text generation (alternative to lynx)
+

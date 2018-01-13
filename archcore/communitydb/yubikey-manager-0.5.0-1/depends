@@ -1,0 +1,12 @@
+%DEPENDS%
+python
+python-click
+python-cryptography
+python-pyopenssl
+python-pyscard
+python-pyusb
+python-six
+ccid
+libu2f-host
+yubikey-personalization
+

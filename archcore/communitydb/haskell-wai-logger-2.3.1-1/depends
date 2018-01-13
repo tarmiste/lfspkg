@@ -1,0 +1,11 @@
+%DEPENDS%
+ghc-libs
+haskell-blaze-builder
+haskell-byteorder
+haskell-case-insensitive
+haskell-fast-logger
+haskell-http-types
+haskell-network
+haskell-unix-time
+haskell-wai
+

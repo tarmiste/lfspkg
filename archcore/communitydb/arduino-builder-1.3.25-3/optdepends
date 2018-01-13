@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+arduino-avr-core: AVR core with upstream avr-gcc and avrdude
+

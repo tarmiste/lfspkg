@@ -1,0 +1,5 @@
+%DEPENDS%
+libsm
+mate-desktop
+vte3
+

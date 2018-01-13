@@ -1,0 +1,6 @@
+%DEPENDS%
+alsa-lib
+hicolor-icon-theme
+desktop-file-utils
+jansson
+

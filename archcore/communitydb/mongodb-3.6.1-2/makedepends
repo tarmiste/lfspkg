@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+scons
+readline
+ncurses
+libpcap
+python2-setuptools
+python2-regex
+python2-cheetah
+python2-typing
+python2-requests
+

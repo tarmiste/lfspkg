@@ -1,0 +1,5 @@
+%DEPENDS%
+fuse
+glib2
+zlib
+

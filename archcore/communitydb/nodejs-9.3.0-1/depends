@@ -1,0 +1,8 @@
+%DEPENDS%
+openssl-1.0
+zlib
+icu
+libuv
+http-parser
+c-ares
+

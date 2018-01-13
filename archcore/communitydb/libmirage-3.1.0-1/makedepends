@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+gtk-doc
+gobject-introspection
+cmake
+intltool
+

@@ -1,0 +1,5 @@
+%DEPENDS%
+ecl-16.1.2
+texinfo
+shared-mime-info
+

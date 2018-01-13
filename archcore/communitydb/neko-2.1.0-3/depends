@@ -1,0 +1,7 @@
+%DEPENDS%
+gc
+gtk2
+libmariadbclient
+mbedtls
+sqlite
+

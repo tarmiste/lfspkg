@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+git
+python-setuptools
+webkit2gtk
+

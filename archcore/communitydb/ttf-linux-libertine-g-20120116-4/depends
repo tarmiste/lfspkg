@@ -1,0 +1,4 @@
+%DEPENDS%
+fontconfig
+xorg-mkfontdir
+

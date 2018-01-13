@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+scons
+boost
+mesa
+patch
+

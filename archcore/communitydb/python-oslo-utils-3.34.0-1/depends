@@ -1,0 +1,10 @@
+%DEPENDS%
+python-six
+python-pbr
+python-iso8601
+python-oslo-i18n
+python-pytz
+python-netaddr
+python-netifaces
+python-debtcollector
+

@@ -1,0 +1,16 @@
+%DEPENDS%
+python-setuptools
+python-jinja
+python-pygments
+python-docutils
+python-sphinx_rtd_theme
+python-sphinx-alabaster-theme
+python-babel
+python-snowballstemmer
+python-six
+python-imagesize
+python-requests
+python-sphinxcontrib-websupport
+python-sqlalchemy
+python-whoosh
+

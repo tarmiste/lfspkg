@@ -1,6 +1,0 @@
-%DEPENDS%
-libxext
-
-%MAKEDEPENDS%
-imake
-

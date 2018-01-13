@@ -1,0 +1,8 @@
+%DEPENDS%
+qoauth
+knotifyconfig
+kcmutils
+kemoticons
+kdewebkit
+hicolor-icon-theme
+

@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+python2-nautilus: file manager integration for Nautilus
+python2-caja: file manager integration for Caja
+librsvg: to shown menu icons correctly if not using traditional window header
+

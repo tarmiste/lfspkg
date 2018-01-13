@@ -1,0 +1,10 @@
+%DEPENDS%
+ghc-libs
+haskell-aeson
+haskell-aeson-better-errors
+haskell-mtl
+haskell-scientific
+haskell-text
+haskell-unordered-containers
+haskell-vector
+

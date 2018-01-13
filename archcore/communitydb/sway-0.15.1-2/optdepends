@@ -1,0 +1,7 @@
+%OPTDEPENDS%
+rxvt-unicode: Default terminal emulator.
+dmenu: Default for launching applications.
+imagemagick: For taking screenshots.
+ffmpeg: For recording screencasts.
+i3status: To display system information with a bar.
+

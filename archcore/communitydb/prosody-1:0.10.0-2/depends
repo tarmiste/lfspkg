@@ -1,0 +1,8 @@
+%DEPENDS%
+lua51
+lua51-socket
+lua51-expat
+lua51-filesystem
+libidn
+openssl
+

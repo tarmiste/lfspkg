@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+texinfo: for help-support in octave
+gnuplot: alternative plotting
+portaudio: audio support
+

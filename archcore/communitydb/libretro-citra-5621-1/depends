@@ -1,0 +1,6 @@
+%DEPENDS%
+curl
+gcc-libs
+glibc
+libretro-core-info
+

@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+python
+python2
+freetype2
+python2-pillow
+python-pillow
+

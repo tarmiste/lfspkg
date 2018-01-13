@@ -1,0 +1,5 @@
+%DEPENDS%
+gtkspell3
+lucene++
+wxgtk3
+

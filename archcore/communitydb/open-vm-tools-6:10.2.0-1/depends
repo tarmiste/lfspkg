@@ -1,0 +1,12 @@
+%DEPENDS%
+libdnet
+icu
+procps-ng
+uriparser
+libsigc++
+libxss
+iproute2
+fuse2
+lsb-release
+libmspack
+

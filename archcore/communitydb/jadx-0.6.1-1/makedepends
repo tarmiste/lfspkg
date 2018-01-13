@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+java-environment
+gradle
+

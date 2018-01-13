@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+automoc4
+cmake
+patch
+

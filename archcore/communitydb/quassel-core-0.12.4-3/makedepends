@@ -1,0 +1,12 @@
+%MAKEDEPENDS%
+qt5-base
+qt5-tools
+qt5-webkit
+qca-qt5
+qt5-script
+knotifyconfig
+cmake
+extra-cmake-modules
+python
+hicolor-icon-theme
+

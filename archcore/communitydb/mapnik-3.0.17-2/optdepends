@@ -1,0 +1,9 @@
+%OPTDEPENDS%
+libxslt: Web Map Service
+python2-lxml: Web Map Service
+python2-pillow: Web Map Service
+python-nose: Web Map Service
+apache: Web Map Service
+mod_fcgid: Web Map Service - or:
+mod_wsgi2: Web Map Service
+

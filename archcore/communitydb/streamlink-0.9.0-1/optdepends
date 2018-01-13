@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+ffmpeg: Required to play streams that are made up of separate audio and video streams, eg. YouTube 1080p+
+

@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+dmd
+meson
+ninja
+mustache-d
+curl
+gir-to-d
+gobject-introspection
+docbook-xsl
+

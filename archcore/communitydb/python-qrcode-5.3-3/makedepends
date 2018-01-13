@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+python-pillow
+python2-pillow
+python-six
+python2-six
+python-setuptools
+python2-setuptools
+

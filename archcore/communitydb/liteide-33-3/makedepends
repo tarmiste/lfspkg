@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+gcc-go
+gendesk
+git
+imagemagick
+mercurial
+setconf
+

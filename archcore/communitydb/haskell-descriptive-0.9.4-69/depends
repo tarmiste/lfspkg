@@ -1,0 +1,9 @@
+%DEPENDS%
+ghc-libs
+haskell-aeson
+haskell-bifunctors
+haskell-mtl
+haskell-scientific
+haskell-text
+haskell-vector
+

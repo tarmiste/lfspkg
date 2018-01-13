@@ -1,0 +1,5 @@
+%CHECKDEPENDS%
+perl-digest-sha1
+perl-uri
+perl-html-parser
+

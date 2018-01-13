@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+gtk2
+gtk3
+icon-naming-utils
+icon-slicer
+python2
+

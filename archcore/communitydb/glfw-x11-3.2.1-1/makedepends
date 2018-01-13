@@ -1,0 +1,14 @@
+%MAKEDEPENDS%
+mesa
+cmake
+doxygen
+vulkan-headers
+vulkan-icd-loader
+extra-cmake-modules
+wayland-protocols
+libxi
+libxrandr
+libxcursor
+libxkbcommon
+libxinerama
+

@@ -1,0 +1,11 @@
+%DEPENDS%
+ghc-libs
+haskell-blaze-html
+haskell-conduit
+haskell-monad-logger
+haskell-persistent
+haskell-resourcet
+haskell-tagged
+haskell-text
+haskell-unordered-containers
+

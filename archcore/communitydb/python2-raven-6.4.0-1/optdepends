@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+python2-setuptools: for "raven2" script
+

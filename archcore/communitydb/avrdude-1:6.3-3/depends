@@ -1,0 +1,6 @@
+%DEPENDS%
+readline
+libftdi
+libusb-compat
+elfutils
+

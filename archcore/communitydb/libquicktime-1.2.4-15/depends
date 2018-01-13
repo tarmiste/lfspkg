@@ -1,0 +1,17 @@
+%DEPENDS%
+alsa-lib
+faac
+faad2
+gtk2
+lame
+libjpeg-turbo
+libxaw
+libxv
+schroedinger
+libavcodec.so=57-64
+libswscale.so=4-64
+libvorbisenc.so=2-64
+libvorbisfile.so=3-64
+libvorbis.so=0-64
+libx264.so=148-64
+

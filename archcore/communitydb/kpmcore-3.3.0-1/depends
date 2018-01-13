@@ -1,0 +1,7 @@
+%DEPENDS%
+parted
+libatasmart
+kwidgetsaddons
+kcoreaddons
+ki18n
+

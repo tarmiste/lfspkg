@@ -1,0 +1,6 @@
+%DEPENDS%
+freetype2
+python2
+python2-pip
+python2-pillow
+

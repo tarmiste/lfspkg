@@ -1,0 +1,6 @@
+%CHECKDEPENDS%
+python-pytest
+python-pytest-cov
+python-pytest-asyncio
+python-pytest-aiohttp
+

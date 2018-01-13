@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+gnupg: encrypted file storage
+python2-magic: determine mimetype based on contents
+

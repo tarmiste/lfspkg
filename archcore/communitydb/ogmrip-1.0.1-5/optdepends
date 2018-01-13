@@ -1,0 +1,11 @@
+%OPTDEPENDS%
+faac: support for the AAC audio codec
+lame: support for the MP3 audio codec
+libtheora: decode and encode Ogg Theora files
+ogmtools: support for the Ogg Media container
+gpac: support for the MP4 container
+vorbis-tools: support for the Ogg Vorbis audio codec
+gocr: support for the SRT subtitle format
+ocrad: support for the SRT subtitle format
+tesseract: support for the SRT subtitle format
+

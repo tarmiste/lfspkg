@@ -1,0 +1,8 @@
+%OPTDEPENDS%
+ipython2: Python Shell plugin
+pyrtf: RTF support
+python2-beautifulsoup4: Webpage import plugin
+python2-gtkspell: Spell Checking plugin
+python2-poppler: Printing and PDF Export plugin
+python2-reportlab: Printing and PDF Export plugin
+

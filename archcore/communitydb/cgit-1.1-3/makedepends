@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+zlib
+curl
+asciidoc
+

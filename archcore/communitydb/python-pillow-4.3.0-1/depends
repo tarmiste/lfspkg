@@ -1,0 +1,7 @@
+%DEPENDS%
+python
+lcms2
+libwebp
+openjpeg2
+python-olefile
+

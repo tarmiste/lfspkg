@@ -1,0 +1,7 @@
+%DEPENDS%
+python2-setuptools
+python2-zope-interface
+python2-zope-component
+python2-zope-location
+python2-zope-proxy
+

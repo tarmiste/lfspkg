@@ -1,0 +1,4 @@
+%DEPENDS%
+snappy
+zstd
+

@@ -1,0 +1,10 @@
+%DEPENDS%
+desktop-file-utils
+freetype2
+freeglut
+glu
+harfbuzz
+jbig2dec
+libjpeg
+openjpeg2
+

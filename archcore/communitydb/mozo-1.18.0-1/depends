@@ -1,0 +1,5 @@
+%DEPENDS%
+gtk3
+mate-menus
+python2-gobject
+

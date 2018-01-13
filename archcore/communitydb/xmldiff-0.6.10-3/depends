@@ -1,8 +1,0 @@
-%DEPENDS%
-python2
-libxslt
-jade
-
-%OPTDEPENDS%
-docbook-xsl: render revision info
-

@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+docbook2x
+docbook-xml
+perl-xml-sax
+git
+

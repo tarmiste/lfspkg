@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+cmake
+gobject-introspection
+gtkspell3
+intltool
+libsoup
+vala
+vte3
+webkit2gtk
+

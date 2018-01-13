@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+python2: for python plug-ins
+gutenprint: for print plug-ins
+ghostscript: for pdf plug-ins
+

@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-clint
+python2-clint
+python-coverage
+python2-coverage
+python-watchdog
+python2-watchdog
+

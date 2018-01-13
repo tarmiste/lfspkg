@@ -1,0 +1,14 @@
+%DEPENDS%
+ghc-libs
+haskell-descriptive
+haskell-exceptions
+haskell-monad-loops
+haskell-mtl
+haskell-path
+haskell-path-io
+haskell-src-exts
+haskell-text
+haskell-unix-compat
+haskell-utf8-string
+haskell-yaml
+

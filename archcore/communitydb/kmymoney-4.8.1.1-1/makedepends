@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+cmake
+automoc4
+docbook-xml
+docbook-xsl
+boost
+doxygen
+patch
+

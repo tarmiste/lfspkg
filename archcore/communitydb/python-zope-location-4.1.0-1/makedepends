@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-zope-interface
+python2-zope-interface
+python-zope-schema
+python2-zope-schema
+python-zope-proxy
+python2-zope-proxy
+

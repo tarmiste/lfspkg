@@ -1,0 +1,11 @@
+%DEPENDS%
+curl
+desktop-file-utils
+freetype2
+harfbuzz
+jbig2dec
+libjpeg
+openjpeg2
+openssl
+libxext
+

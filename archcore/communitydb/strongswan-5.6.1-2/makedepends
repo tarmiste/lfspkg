@@ -1,0 +1,16 @@
+%MAKEDEPENDS%
+curl
+gmp
+iproute2
+openssl
+sqlite
+libcap
+libsystemd
+systemd
+pam
+libnm-glib
+python
+ruby
+mariadb
+python-setuptools
+

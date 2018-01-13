@@ -1,0 +1,4 @@
+%DEPENDS%
+unixodbc
+erlang-nox
+

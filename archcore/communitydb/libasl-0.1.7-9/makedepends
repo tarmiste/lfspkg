@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+cmake
+opencl-headers
+boost
+mesa-libgl
+

@@ -1,0 +1,7 @@
+%DEPENDS%
+sqlite
+libutil-linux
+binutils
+json-glib
+libelf
+

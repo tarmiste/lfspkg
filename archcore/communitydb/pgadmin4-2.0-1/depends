@@ -1,0 +1,7 @@
+%DEPENDS%
+qt5-webengine
+python
+python-psycopg2
+postgresql-libs
+hicolor-icon-theme
+

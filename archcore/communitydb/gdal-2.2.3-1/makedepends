@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+perl
+swig
+chrpath
+doxygen
+

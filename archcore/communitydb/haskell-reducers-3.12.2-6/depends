@@ -1,0 +1,9 @@
+%DEPENDS%
+ghc-libs
+haskell-fingertree
+haskell-hashable
+haskell-semigroupoids
+haskell-semigroups
+haskell-text
+haskell-unordered-containers
+

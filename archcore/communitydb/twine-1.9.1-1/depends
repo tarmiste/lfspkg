@@ -1,0 +1,6 @@
+%DEPENDS%
+python-setuptools
+python-requests-toolbelt
+python-pkginfo
+python-tqdm
+

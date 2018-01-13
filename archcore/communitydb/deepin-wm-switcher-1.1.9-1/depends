@@ -1,0 +1,6 @@
+%DEPENDS%
+deepin-daemon
+deepin-wm
+deepin-metacity
+qt5-x11extras
+

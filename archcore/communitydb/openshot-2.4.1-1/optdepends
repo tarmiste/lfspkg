@@ -1,0 +1,8 @@
+%OPTDEPENDS%
+frei0r-plugins: effects
+libquicktime
+libavc1394
+faac
+jack
+jack-rack
+

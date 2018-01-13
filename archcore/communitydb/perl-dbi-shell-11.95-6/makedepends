@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+perl-text-reform
+perl-io-tee
+

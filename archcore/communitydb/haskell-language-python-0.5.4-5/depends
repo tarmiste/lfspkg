@@ -1,0 +1,5 @@
+%DEPENDS%
+ghc-libs
+haskell-monads-tf
+haskell-utf8-string
+

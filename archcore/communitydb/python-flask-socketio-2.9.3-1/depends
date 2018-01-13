@@ -1,0 +1,5 @@
+%DEPENDS%
+python-flask
+python-eventlet
+python-socketio
+

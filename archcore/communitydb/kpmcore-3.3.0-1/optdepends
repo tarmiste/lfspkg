@@ -1,0 +1,12 @@
+%OPTDEPENDS%
+e2fsprogs: ext2/3/4 support
+xfsprogs: XFS support
+jfsutils: JFS support
+reiserfsprogs: Reiser support
+ntfs-3g: NTFS support
+dosfstools: FAT32 support
+f2fs-tools: F2FS support
+exfat-utils: exFAT support
+nilfs-utils: nilfs support
+udftools: UDF support
+

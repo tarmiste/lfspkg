@@ -1,0 +1,13 @@
+%DEPENDS%
+ghc-libs
+haskell-hunit
+haskell-quickcheck
+haskell-ansi-terminal
+haskell-async
+haskell-call-stack
+haskell-hspec-expectations
+haskell-quickcheck-io
+haskell-random
+haskell-setenv
+haskell-tf-random
+

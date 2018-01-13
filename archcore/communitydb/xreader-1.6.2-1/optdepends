@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+nemo: nemo extension
+caja: caja extension
+gtk3-print-backends: printer support in gtk3 apps
+texlive-bin: support for dvi files
+

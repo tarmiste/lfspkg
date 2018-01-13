@@ -1,0 +1,14 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-pbr
+python2-pbr
+python-sqlalchemy
+python2-sqlalchemy
+python-decorator
+python2-decorator
+python-sqlparse
+python2-sqlparse
+python-tempita
+python2-tempita
+

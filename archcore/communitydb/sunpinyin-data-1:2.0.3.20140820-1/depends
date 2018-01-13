@@ -1,7 +1,0 @@
-%PROVIDES%
-sunpinyin-data-le=2.0.3.20140820
-
-%MAKEDEPENDS%
-sunpinyin
-git
-

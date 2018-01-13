@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+linux-lts-headers>=4.9.75
+linux-lts-headers<4.10
+

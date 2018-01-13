@@ -1,0 +1,4 @@
+%DEPENDS%
+pygtksourceview2
+python2-dbus
+

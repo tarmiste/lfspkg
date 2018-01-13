@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+gnome-doc-utils
+intltool
+python-docutils
+

@@ -1,0 +1,6 @@
+%CHECKDEPENDS%
+perl-test-requires
+perl-moo
+perl-sub-name
+perl-mouse
+

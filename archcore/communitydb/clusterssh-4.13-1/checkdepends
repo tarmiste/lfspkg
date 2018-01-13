@@ -1,0 +1,14 @@
+%CHECKDEPENDS%
+perl-cpan-changes
+perl-file-slurp
+perl-file-which
+perl-readonly
+perl-test-differences
+perl-test-distmanifest
+perl-test-perltidy
+perl-test-pod
+perl-test-pod-coverage
+perl-test-pod-coverage
+perl-test-trap
+perl-sort-naturally
+

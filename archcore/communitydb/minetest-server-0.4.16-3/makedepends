@@ -1,0 +1,13 @@
+%MAKEDEPENDS%
+sqlite
+freetype2
+leveldb
+openal
+libvorbis
+curl
+irrlicht
+hicolor-icon-theme
+cmake
+hiredis
+luajit
+
