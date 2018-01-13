@@ -1,6 +1,0 @@
-%DEPENDS%
-ncurses
-
-%OPTDEPENDS%
-s-nail: used by the preserve command for notification
-

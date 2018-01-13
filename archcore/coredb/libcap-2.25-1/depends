@@ -1,7 +1,0 @@
-%DEPENDS%
-glibc
-attr
-
-%MAKEDEPENDS%
-linux-api-headers
-
