@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+tk
+sqlite
+valgrind
+bluez-libs
+mpdecimal
+llvm
+gdb
+xorg-server-xvfb
+

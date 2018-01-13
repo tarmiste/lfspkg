@@ -1,0 +1,5 @@
+%DEPENDS%
+mono
+libglade
+gtk2
+

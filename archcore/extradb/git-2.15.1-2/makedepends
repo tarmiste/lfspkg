@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+python2
+emacs
+libgnome-keyring
+xmlto
+asciidoc
+

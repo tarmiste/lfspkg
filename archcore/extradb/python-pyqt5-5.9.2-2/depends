@@ -1,0 +1,4 @@
+%DEPENDS%
+python-sip
+pyqt5-common
+

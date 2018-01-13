@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+festival: Speech output using Festival
+espeak: Speech output using ESpeak
+pulseaudio: PulseAudio support
+

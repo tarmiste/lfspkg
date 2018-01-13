@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+qt4: immodule and helper applications
+gtk2: immodule and helper applications
+gtk3: immodule and helper applications
+

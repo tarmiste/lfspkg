@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+mesa
+glu
+libxxf86vm
+cmake
+

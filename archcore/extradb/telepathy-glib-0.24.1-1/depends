@@ -1,9 +1,0 @@
-%DEPENDS%
-dbus-glib
-
-%MAKEDEPENDS%
-libxslt
-vala
-gobject-introspection
-python2
-

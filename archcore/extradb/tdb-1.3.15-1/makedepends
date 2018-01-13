@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+python2
+libxslt
+docbook-xsl
+

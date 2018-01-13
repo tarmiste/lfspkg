@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+libvncserver: VNC support
+freerdp: RDP support
+keditbookmarks: to edit bookmarks
+

@@ -1,0 +1,13 @@
+%MAKEDEPENDS%
+cblas
+lapack
+python
+python2
+python-setuptools
+python2-setuptools
+gcc-fortran
+python-nose
+python2-nose
+cython
+cython2
+

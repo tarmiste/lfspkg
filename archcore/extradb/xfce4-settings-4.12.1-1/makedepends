@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+intltool
+xf86-input-libinput
+

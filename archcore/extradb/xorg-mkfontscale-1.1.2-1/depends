@@ -1,8 +1,0 @@
-%DEPENDS%
-freetype2
-libfontenc
-
-%MAKEDEPENDS%
-xorg-util-macros
-xproto
-

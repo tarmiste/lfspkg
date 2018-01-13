@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+postgresql
+qt5-tools
+boost
+python
+kdesignerplugin
+

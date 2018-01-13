@@ -1,0 +1,9 @@
+%OPTDEPENDS%
+clang: Assistance for C and C++
+ruby-dbus: Assistance for Ruby and CSS
+gjs: Assistance for JavaScript
+vala: Assistance for Vala
+libgee: Assistance for Vala
+go: Assistance for Go
+python-pylint: Assistance for Python
+

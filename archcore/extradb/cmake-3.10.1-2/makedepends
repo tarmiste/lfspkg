@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+qt5-base
+python-sphinx
+emacs
+

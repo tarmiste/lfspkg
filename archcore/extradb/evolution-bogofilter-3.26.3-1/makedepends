@@ -1,0 +1,14 @@
+%MAKEDEPENDS%
+intltool
+itstool
+docbook-xsl
+networkmanager
+bogofilter
+spamassassin
+highlight
+gtk-doc
+yelp-tools
+git
+cmake
+ninja
+

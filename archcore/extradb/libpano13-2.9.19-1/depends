@@ -1,7 +1,0 @@
-%DEPENDS%
-libpng
-libtiff
-
-%MAKEDEPENDS%
-jdk7-openjdk
-

@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+openssh: for using cvs over ssh
+inetutils: for using cvs over rsh
+

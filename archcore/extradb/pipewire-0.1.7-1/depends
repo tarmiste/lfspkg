@@ -1,0 +1,5 @@
+%DEPENDS%
+gstreamer
+gst-plugins-base
+v4l-utils
+

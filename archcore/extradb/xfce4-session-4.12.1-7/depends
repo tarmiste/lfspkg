@@ -1,0 +1,11 @@
+%DEPENDS%
+libxfce4ui
+libwnck
+libsm
+polkit
+xorg-iceauth
+xorg-xinit
+xorg-xrdb
+polkit-gnome
+hicolor-icon-theme
+

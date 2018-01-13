@@ -1,0 +1,12 @@
+%DEPENDS%
+systemd
+dconf
+gsettings-desktop-schemas
+gtk3
+gnome-desktop
+json-glib
+libgl
+libsm
+libxtst
+systemd
+

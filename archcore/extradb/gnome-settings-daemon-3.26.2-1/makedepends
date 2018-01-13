@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+intltool
+xf86-input-wacom
+libxslt
+docbook-xsl
+python
+git
+gnome-common
+

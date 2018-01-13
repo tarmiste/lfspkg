@@ -1,0 +1,7 @@
+%OPTDEPENDS%
+telepathy-gabble: XMPP/Jabber support
+telepathy-idle: IRC support
+telepathy-salut: Link-local XMPP support
+telepathy-rakia: SIP support
+telepathy-haze: libpurple support
+

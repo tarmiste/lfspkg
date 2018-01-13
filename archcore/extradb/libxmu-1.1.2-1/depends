@@ -1,7 +1,0 @@
-%DEPENDS%
-libxext
-libxt
-
-%MAKEDEPENDS%
-xorg-util-macros
-

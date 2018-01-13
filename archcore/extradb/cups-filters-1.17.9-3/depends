@@ -1,0 +1,10 @@
+%DEPENDS%
+lcms2
+poppler
+qpdf
+imagemagick
+liblouis
+ijs
+libcups
+systemd
+

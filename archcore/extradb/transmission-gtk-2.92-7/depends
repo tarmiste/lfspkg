@@ -1,0 +1,7 @@
+%DEPENDS%
+curl
+libevent
+gtk3
+desktop-file-utils
+hicolor-icon-theme
+

@@ -1,0 +1,13 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-six
+python2-six
+python-lazy-object-proxy
+python2-lazy-object-proxy
+python-wrapt
+python2-wrapt
+python2-singledispatch
+python2-enum34
+python2-backports.functools_lru_cache
+

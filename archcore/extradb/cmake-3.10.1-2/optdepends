@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+qt5-base: cmake-gui
+libxkbcommon-x11: cmake-gui
+

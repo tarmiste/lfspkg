@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+cmake
+python-numpy
+python2-numpy
+mesa
+eigen
+hdf5
+lapacke
+

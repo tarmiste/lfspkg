@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+nasm
+jdk8-openjdk
+

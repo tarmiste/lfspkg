@@ -1,0 +1,7 @@
+%DEPENDS%
+perl-lwp-protocol-https
+perl-try-tiny
+perl-path-class
+perl>=5.26
+perl<5.27
+

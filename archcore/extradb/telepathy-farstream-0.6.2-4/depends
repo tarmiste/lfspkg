@@ -1,0 +1,4 @@
+%DEPENDS%
+telepathy-glib
+farstream
+

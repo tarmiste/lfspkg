@@ -1,6 +1,0 @@
-%DEPENDS%
-libxcb>=1.7
-
-%MAKEDEPENDS%
-xorg-util-macros
-

@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+lua-lgi: lua bindings
+

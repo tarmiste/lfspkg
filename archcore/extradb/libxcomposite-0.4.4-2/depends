@@ -1,7 +1,0 @@
-%DEPENDS%
-libxfixes
-compositeproto
-
-%MAKEDEPENDS%
-xorg-util-macros
-

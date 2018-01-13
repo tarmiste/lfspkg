@@ -1,0 +1,10 @@
+%DEPENDS%
+kdebase-runtime
+mariadb
+taglib-extras
+liblastfm
+ffmpeg
+libofa
+qjson
+qtscriptgenerator
+

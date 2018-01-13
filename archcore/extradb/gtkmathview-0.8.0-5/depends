@@ -1,7 +1,0 @@
-%DEPENDS%
-popt
-gtk2
-t1lib
-gmetadom
-pangox-compat
-

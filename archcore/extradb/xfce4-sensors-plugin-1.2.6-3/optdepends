@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+hddtemp: for monitoring the temperature of hard drives
+

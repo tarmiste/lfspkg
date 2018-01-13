@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+gtk2: nvidia-settings
+xorg-server-devel: nvidia-xconfig
+opencl-nvidia-340xx: OpenCL support
+

@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+graphviz: for caller/callee graph generation
+qt5-base: for doxywizard
+

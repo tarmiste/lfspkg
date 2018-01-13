@@ -1,0 +1,16 @@
+%DEPENDS%
+popt
+cifs-utils
+tdb
+libwbclient>=4.7.4
+ldb
+tevent
+libgcrypt
+python2
+talloc
+readline
+gnutls
+libbsd
+libldap
+libcups
+

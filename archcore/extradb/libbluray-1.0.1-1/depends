@@ -1,0 +1,6 @@
+%DEPENDS%
+fontconfig
+glibc
+libfreetype.so=6-64
+libxml2
+

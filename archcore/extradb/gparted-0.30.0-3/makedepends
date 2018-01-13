@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+intltool
+pkg-config
+gnome-doc-utils
+polkit
+

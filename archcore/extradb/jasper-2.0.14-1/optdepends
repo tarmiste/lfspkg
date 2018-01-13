@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+jasper-doc: documentation
+freeglut: jiv support
+glu: jiv support
+

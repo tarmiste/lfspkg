@@ -1,0 +1,17 @@
+%MAKEDEPENDS%
+ladspa
+frei0r-plugins
+libdv
+sdl_image
+libsamplerate
+sox
+ffmpeg
+vid.stab
+qt5-svg
+jack
+libexif
+python2
+swig
+movit
+eigen
+

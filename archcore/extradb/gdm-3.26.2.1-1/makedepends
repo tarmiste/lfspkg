@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+yelp-tools
+intltool
+gobject-introspection
+git
+docbook-xsl
+

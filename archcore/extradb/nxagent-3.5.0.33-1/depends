@@ -1,0 +1,6 @@
+%DEPENDS%
+nx-xcompext
+libxml2
+xkeyboard-config
+xorg-xkbcomp
+

@@ -1,0 +1,6 @@
+%DEPENDS%
+libaccounts-qt
+qt5-webkit
+signond
+libnotify
+

@@ -1,0 +1,5 @@
+%DEPENDS%
+kcoreaddons
+kwidgetsaddons
+qt5-x11extras
+

@@ -1,8 +1,0 @@
-%DEPENDS%
-kdebase-runtime
-liblightdm-qt4
-
-%MAKEDEPENDS%
-cmake
-automoc4
-

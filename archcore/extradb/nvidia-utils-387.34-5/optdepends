@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+nvidia-settings: configuration tool
+xorg-server-devel: nvidia-xconfig
+opencl-nvidia: OpenCL support
+

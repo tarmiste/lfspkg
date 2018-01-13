@@ -1,0 +1,6 @@
+%DEPENDS%
+libjpeg
+openssl
+progsreiserfs
+ntfsprogs
+

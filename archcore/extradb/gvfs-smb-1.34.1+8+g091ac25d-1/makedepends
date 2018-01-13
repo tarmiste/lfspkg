@@ -1,0 +1,16 @@
+%MAKEDEPENDS%
+dbus
+intltool
+libgphoto2
+libimobiledevice
+smbclient
+docbook-xsl
+gtk3
+libmtp
+gnome-online-accounts
+libnfs
+libgdata
+git
+gtk-doc
+python
+

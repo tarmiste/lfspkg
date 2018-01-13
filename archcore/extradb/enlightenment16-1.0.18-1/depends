@@ -1,0 +1,9 @@
+%DEPENDS%
+libxinerama
+imlib2
+perl
+pango
+libxcomposite
+libxrandr
+libpulse
+

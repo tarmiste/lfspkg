@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+icu>=55.1
+python
+python2
+python-numpy
+python2-numpy
+bzip2
+zlib
+openmpi
+

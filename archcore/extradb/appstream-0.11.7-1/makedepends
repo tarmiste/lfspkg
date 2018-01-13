@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+meson
+xmlto
+gobject-introspection
+python2
+gtk-doc
+qt5-base
+itstool
+vala
+

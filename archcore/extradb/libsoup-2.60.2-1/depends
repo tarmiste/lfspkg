@@ -1,0 +1,7 @@
+%DEPENDS%
+glib2
+libxml2
+glib-networking
+sqlite
+krb5
+

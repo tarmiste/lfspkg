@@ -1,9 +1,0 @@
-%DEPENDS%
-libxt
-
-%CONFLICTS%
-xorg-res-utils
-
-%MAKEDEPENDS%
-xorg-util-macros
-

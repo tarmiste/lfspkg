@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+libxslt
+python2
+gnome-common
+

@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+texinfo
+libx11
+libsm
+

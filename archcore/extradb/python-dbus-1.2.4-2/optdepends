@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+dbus-glib: glib mainloop support
+

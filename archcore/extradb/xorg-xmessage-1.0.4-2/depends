@@ -1,6 +1,0 @@
-%DEPENDS%
-libxaw
-
-%MAKEDEPENDS%
-xorg-util-macros
-

@@ -1,0 +1,6 @@
+%DEPENDS%
+kparts
+syntax-highlighting
+libgit2
+editorconfig-core-c
+

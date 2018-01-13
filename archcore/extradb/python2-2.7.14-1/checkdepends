@@ -1,0 +1,5 @@
+%CHECKDEPENDS%
+gdb
+file
+xorg-server-xvfb
+

@@ -1,0 +1,13 @@
+%OPTDEPENDS%
+mono: sharp bindings
+guile: guile bindings
+lua: lua bindings
+ocaml: ocaml bindings
+perl: perl bindings
+python2: python bindings
+r: r bindings
+tcl: tcl bindings
+qt4: gvedit
+gtk2: gtk output plugin
+xterm: vimdot
+

@@ -1,6 +1,0 @@
-%DEPENDS%
-gcc-libs
-
-%MAKEDEPENDS%
-subversion
-

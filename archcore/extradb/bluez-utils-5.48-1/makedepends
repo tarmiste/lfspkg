@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+dbus
+libical
+systemd
+alsa-lib
+

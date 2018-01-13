@@ -1,0 +1,10 @@
+%DEPENDS%
+fribidi
+perl
+libstroke
+libxpm
+librsvg
+libxinerama
+libxcursor
+python2-xdg
+

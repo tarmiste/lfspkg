@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+gtk2: Netscape plugin support
+gst-plugins-base: free media decoding
+gst-plugins-good: media decoding
+gst-libav: nonfree media decoding
+

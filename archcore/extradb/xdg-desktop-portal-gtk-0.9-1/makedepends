@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+xdg-desktop-portal
+flatpak
+git
+

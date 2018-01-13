@@ -1,0 +1,8 @@
+%DEPENDS%
+fontconfig
+fribidi
+glib2
+glibc
+harfbuzz
+libfreetype.so=6-64
+

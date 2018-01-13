@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+intltool
+xmlto
+docbook-xsl
+desktop-file-utils
+

@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+texlive-pictures: for package qtree
+

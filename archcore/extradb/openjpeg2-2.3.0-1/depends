@@ -1,0 +1,6 @@
+%DEPENDS%
+zlib
+libpng
+libtiff
+lcms2
+

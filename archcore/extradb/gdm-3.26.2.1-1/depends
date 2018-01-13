@@ -1,0 +1,10 @@
+%DEPENDS%
+gnome-shell
+gnome-session
+upower
+xorg-xrdb
+xorg-server
+xorg-server-xwayland
+xorg-xhost
+libgdm
+

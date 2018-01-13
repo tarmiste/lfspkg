@@ -1,0 +1,9 @@
+%DEPENDS%
+kactivities
+baloo
+libkipi
+libkdcraw
+kparts
+kitemmodels
+cfitsio
+

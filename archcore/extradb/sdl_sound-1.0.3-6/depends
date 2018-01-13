@@ -1,0 +1,8 @@
+%DEPENDS%
+sdl
+libmikmod
+libvorbis
+flac
+speex
+smpeg
+

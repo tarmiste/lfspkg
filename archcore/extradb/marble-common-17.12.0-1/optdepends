@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+gpsd: GPS based geolocation
+libwlocate: WLAN based geolocation
+qt5-serialport: APRS plugin
+shapelib: SHP plugin
+

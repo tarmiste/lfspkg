@@ -1,0 +1,9 @@
+%DEPENDS%
+libxml2
+gnutls
+libproxy
+vpnc
+krb5
+lz4
+pcsclite
+

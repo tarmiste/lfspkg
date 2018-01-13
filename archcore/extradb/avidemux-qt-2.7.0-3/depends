@@ -1,0 +1,10 @@
+%DEPENDS%
+avidemux-cli=2.7.0
+qt5-base
+x264
+x265
+libx264
+glu
+libxv
+desktop-file-utils
+

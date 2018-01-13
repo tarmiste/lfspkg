@@ -1,9 +1,0 @@
-%DEPENDS%
-gtk2
-
-%CONFLICTS%
-gtk2-xfce-engine
-
-%PROVIDES%
-gtk2-xfce-engine=2.10.1-1
-

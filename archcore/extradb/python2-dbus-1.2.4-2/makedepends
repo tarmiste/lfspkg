@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+docutils
+dbus-glib
+python
+python2
+autoconf-archive
+

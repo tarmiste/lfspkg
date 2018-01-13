@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+krb5
+libxml2
+python2
+perl
+tcl>=8.6.0
+openssl>=1.0.0
+pam
+zlib
+

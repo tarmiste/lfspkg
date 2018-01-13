@@ -1,6 +1,0 @@
-%DEPENDS%
-python2
-
-%CONFLICTS%
-python-mpd<=0.3.0-2
-

@@ -1,0 +1,9 @@
+%DEPENDS%
+bzip2
+gdbm
+openssl
+zlib
+expat
+sqlite
+libffi
+

@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+intltool
+autoconf-archive
+appstream-glib
+git
+

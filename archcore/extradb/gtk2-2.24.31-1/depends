@@ -1,0 +1,16 @@
+%DEPENDS%
+atk
+pango
+libxcursor
+libxinerama
+libxrandr
+libxi
+libxcomposite
+libxdamage
+shared-mime-info
+cairo
+libcups
+gtk-update-icon-cache
+librsvg
+desktop-file-utils
+

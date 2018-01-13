@@ -1,0 +1,6 @@
+%DEPENDS%
+python-dbus
+ghostscript
+net-snmp
+foomatic-db-engine
+

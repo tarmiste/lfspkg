@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+qt5-imageformats: support for tiff, webp, and more image formats
+kimageformats: support for dds, xcf, exr, psd, and more image formats
+kipi-plugins: export to various online services
+

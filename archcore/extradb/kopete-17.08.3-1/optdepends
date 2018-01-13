@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+mediastreamer: jingle support
+libgadu: Gadu-Gadu protocol
+openssl-1.0: jingle support
+

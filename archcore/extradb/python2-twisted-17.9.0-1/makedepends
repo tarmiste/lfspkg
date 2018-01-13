@@ -1,0 +1,16 @@
+%MAKEDEPENDS%
+python-zope-interface
+python2-zope-interface
+python-setuptools
+python2-setuptools
+python-service-identity
+python2-service-identity
+python-incremental
+python2-incremental
+python-constantly
+python2-constantly
+python-automat
+python2-automat
+python-hyperlink
+python2-hyperlink
+

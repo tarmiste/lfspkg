@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+pkgconfig
+xproto
+perl
+xorg-util-macros
+xorg-font-util
+

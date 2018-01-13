@@ -1,0 +1,5 @@
+%DEPENDS%
+clutter-gtk
+libcanberra
+librsvg
+

@@ -1,0 +1,12 @@
+%MAKEDEPENDS%
+intltool
+llvm
+gobject-introspection
+gtk-doc
+yelp-tools
+appstream-glib
+vala
+git
+mm-common
+meson
+

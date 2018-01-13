@@ -1,0 +1,4 @@
+%CHECKDEPENDS%
+python-nose
+python-ply
+

@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+libmariadbclient
+lua
+libxml2
+e2fsprogs
+sqlite
+gdbm
+pkgconfig
+

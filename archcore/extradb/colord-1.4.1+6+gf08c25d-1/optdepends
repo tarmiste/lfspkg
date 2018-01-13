@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+sane: scanner support
+argyllcms: color profiling
+

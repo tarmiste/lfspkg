@@ -1,0 +1,9 @@
+%DEPENDS%
+freetype2
+libxext
+libsm
+lcms2
+libltdl
+bzip2
+xz
+

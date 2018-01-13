@@ -1,0 +1,7 @@
+%OPTDEPENDS%
+libpulse: PulseAudio plugin
+jack: Jack plugin
+ffmpeg: libavcodec resampling plugin, a52 plugin
+libsamplerate: libsamplerate resampling plugin
+speex: libspeexdsp resampling plugin
+

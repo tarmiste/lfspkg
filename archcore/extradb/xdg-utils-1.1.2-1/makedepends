@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+docbook-xsl
+lynx
+xmlto
+git
+

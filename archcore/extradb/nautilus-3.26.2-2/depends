@@ -1,0 +1,11 @@
+%DEPENDS%
+libexif
+gnome-desktop
+exempi
+gvfs
+dconf
+tracker
+nautilus-sendto
+gnome-autoar
+libnautilus-extension
+

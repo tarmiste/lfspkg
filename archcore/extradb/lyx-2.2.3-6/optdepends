@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+rcs: built-in version control system
+texlive-latexextra: float wrap support
+

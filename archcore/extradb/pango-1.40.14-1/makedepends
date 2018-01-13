@@ -1,0 +1,12 @@
+%MAKEDEPENDS%
+harfbuzz
+fontconfig
+cairo
+libxft
+libthai
+gobject-introspection
+help2man
+gtk-doc
+git
+meson
+

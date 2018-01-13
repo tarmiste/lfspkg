@@ -1,7 +1,0 @@
-%DEPENDS%
-taglib
-thunar
-
-%MAKEDEPENDS%
-intltool
-

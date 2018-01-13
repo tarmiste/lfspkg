@@ -1,0 +1,6 @@
+%DEPENDS%
+libusb
+nss
+pixman
+glib2
+

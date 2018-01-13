@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+opencl-headers: headers necessary for OpenCL development
+

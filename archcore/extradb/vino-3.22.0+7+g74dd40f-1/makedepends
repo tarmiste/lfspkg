@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+intltool
+networkmanager
+gnome-common
+git
+

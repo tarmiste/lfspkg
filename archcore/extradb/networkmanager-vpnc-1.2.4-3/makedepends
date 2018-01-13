@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+libnm-gtk
+intltool
+python
+git
+

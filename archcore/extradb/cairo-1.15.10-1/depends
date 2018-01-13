@@ -1,0 +1,9 @@
+%DEPENDS%
+libpng
+libxrender
+libxext
+fontconfig
+pixman
+glib2
+lzo
+

@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+xdg-utils: xdg .desktop file support
+colord: for ICC color profile support
+

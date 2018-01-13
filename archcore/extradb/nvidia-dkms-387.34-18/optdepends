@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+linux-headers: Build the module for Arch kernel
+linux-lts-headers: Build the module for LTS Arch kernel
+

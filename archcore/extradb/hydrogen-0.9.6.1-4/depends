@@ -1,0 +1,7 @@
+%DEPENDS%
+libarchive
+liblrdf
+qt4
+jack
+libpulse
+

@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+nvidia-libgl
+nvidia-utils=387.34
+linux
+linux-headers>=4.14
+linux-headers<4.15
+

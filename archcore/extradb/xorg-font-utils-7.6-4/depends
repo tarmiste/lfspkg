@@ -1,6 +1,0 @@
-%DEPENDS%
-xorg-bdftopcf
-xorg-mkfontdir
-xorg-mkfontscale
-xorg-font-util
-

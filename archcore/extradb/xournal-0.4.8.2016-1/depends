@@ -1,0 +1,7 @@
+%DEPENDS%
+libgnomecanvas
+poppler-glib
+shared-mime-info
+desktop-file-utils
+hicolor-icon-theme
+

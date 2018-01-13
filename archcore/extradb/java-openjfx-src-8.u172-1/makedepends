@@ -1,0 +1,14 @@
+%MAKEDEPENDS%
+java-environment-openjdk=8
+bison
+gperf
+gtk2
+libxtst
+ffmpeg
+python2
+qt5-base
+webkit2gtk
+ruby
+cmake
+unzip
+

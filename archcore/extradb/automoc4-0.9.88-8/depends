@@ -1,7 +1,0 @@
-%DEPENDS%
-qt4
-
-%MAKEDEPENDS%
-pkgconfig
-cmake
-

@@ -1,0 +1,16 @@
+%MAKEDEPENDS%
+git
+m17n-db
+hunspell
+hunspell-de
+hunspell-el
+hunspell-en
+hunspell-es
+hunspell-fr
+hunspell-he
+hunspell-hu
+hunspell-it
+hunspell-nl
+hunspell-pl
+hunspell-ro
+

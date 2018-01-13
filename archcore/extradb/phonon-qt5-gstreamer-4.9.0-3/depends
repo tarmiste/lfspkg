@@ -1,0 +1,5 @@
+%DEPENDS%
+gst-plugins-base
+qt5-x11extras
+phonon-qt5
+

@@ -1,0 +1,13 @@
+%MAKEDEPENDS%
+gtk-doc
+intltool
+gobject-introspection
+itstool
+docbook-xsl
+python2
+appdata-tools
+unicode-character-database
+unzip
+gnome-common
+git
+

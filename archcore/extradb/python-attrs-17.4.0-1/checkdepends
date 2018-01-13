@@ -1,0 +1,8 @@
+%CHECKDEPENDS%
+python-pytest-runner
+python2-pytest-runner
+python-zope-interface
+python2-zope-interface
+python-hypothesis
+python2-hypothesis
+

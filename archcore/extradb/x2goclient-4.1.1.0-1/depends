@@ -1,0 +1,9 @@
+%DEPENDS%
+qt4
+libldap
+libcups
+nxproxy
+libssh
+libxpm
+hicolor-icon-theme
+

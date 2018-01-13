@@ -1,0 +1,8 @@
+%DEPENDS%
+libcanberra
+vte3
+exiv2
+shared-color-targets
+colord-gtk
+libexif
+

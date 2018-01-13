@@ -1,0 +1,7 @@
+%DEPENDS%
+celt0.5.1
+libjpeg-turbo
+libsasl
+pixman
+glib2
+

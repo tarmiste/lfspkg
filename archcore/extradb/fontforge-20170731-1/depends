@@ -1,0 +1,16 @@
+%DEPENDS%
+libtool
+libxkbui
+libxi
+pango
+giflib
+libtiff
+libxml2
+libspiro
+libunicodenames
+zeromq
+python
+desktop-file-utils
+gtk-update-icon-cache
+hicolor-icon-theme
+

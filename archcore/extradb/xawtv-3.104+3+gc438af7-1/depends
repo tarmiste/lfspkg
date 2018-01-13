@@ -1,0 +1,16 @@
+%DEPENDS%
+aalib
+v4l-utils
+libxv
+libxxf86dga
+libxrandr
+libgl
+libdv
+zvbi
+libxinerama
+lirc
+libxft
+libxaw
+xorg-fonts-misc
+libxxf86vm
+

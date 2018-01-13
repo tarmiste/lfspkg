@@ -1,0 +1,6 @@
+%DEPENDS%
+libxi
+libxinerama
+libxrandr
+libsystemd
+

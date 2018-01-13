@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+avahi: Bonjour protocol support
+ca-certificates: SSL CA certificates
+python-dbus: for purple-remote and purple-url-handler
+tk: Tcl/Tk scripting support
+

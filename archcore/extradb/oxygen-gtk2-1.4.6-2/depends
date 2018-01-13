@@ -1,9 +1,0 @@
-%DEPENDS%
-gtk2
-
-%CONFLICTS%
-oxygen-gtk
-
-%MAKEDEPENDS%
-cmake
-

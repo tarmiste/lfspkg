@@ -1,0 +1,6 @@
+%DEPENDS%
+gjs
+gtk3
+libunistring
+gnome-desktop
+

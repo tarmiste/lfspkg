@@ -1,0 +1,6 @@
+%DEPENDS%
+plasma-framework
+fluidsynth
+qt5-quickcontrols2
+hicolor-icon-theme
+

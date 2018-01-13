@@ -1,0 +1,5 @@
+%DEPENDS%
+gtk-update-icon-cache
+hicolor-icon-theme
+librsvg
+

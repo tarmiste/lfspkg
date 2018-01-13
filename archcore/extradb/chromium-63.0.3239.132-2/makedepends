@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+python2
+gperf
+yasm
+mesa
+ninja
+nodejs
+git
+clang
+lld
+

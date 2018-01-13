@@ -1,0 +1,8 @@
+%DEPENDS%
+jansson
+gtk3
+libxv
+libvdpau
+nvidia-utils
+libxnvctrl
+

@@ -1,0 +1,9 @@
+%DEPENDS%
+gupnp-av
+gupnp-dlna
+libgee
+gtk3
+libunistring
+tracker
+libmediaart
+

@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+yelp-tools
+git
+gnome-common
+

@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+python2
+git
+gperf
+jsoncpp
+ninja
+qt5-tools
+

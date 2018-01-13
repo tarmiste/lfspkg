@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+gobject-introspection
+intltool
+gtk-doc
+libxfixes
+git
+

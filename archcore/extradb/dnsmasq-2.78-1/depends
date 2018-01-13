@@ -1,0 +1,8 @@
+%DEPENDS%
+glibc
+gmp
+libidn
+libdbus
+libnetfilter_conntrack
+nettle
+

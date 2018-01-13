@@ -1,0 +1,6 @@
+%DEPENDS%
+gnome-menus
+hicolor-icon-theme
+python2-gobject
+gtk3
+

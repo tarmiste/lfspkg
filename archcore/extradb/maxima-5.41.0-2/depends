@@ -1,0 +1,6 @@
+%DEPENDS%
+sbcl=1.4.0
+texinfo
+sh
+shared-mime-info
+

@@ -1,6 +1,0 @@
-%DEPENDS%
-python2
-
-%CONFLICTS%
-python-fpconst<=0.7.3-3
-

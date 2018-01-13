@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+gtk-doc
+libpulse
+gstreamer
+gtk2
+gtk3
+git
+

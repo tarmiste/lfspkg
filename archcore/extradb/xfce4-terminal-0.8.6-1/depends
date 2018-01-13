@@ -1,0 +1,5 @@
+%DEPENDS%
+libxfce4ui
+vte3
+hicolor-icon-theme
+

@@ -1,8 +1,0 @@
-%DEPENDS%
-libx11
-libxrandr
-
-%MAKEDEPENDS%
-xorg-util-macros
-xproto
-

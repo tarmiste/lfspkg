@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+libxml2
+python2
+chrpath
+doxygen
+git
+cppunit
+

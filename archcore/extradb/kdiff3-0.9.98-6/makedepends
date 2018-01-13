@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+cmake
+automoc4
+docbook-xml
+

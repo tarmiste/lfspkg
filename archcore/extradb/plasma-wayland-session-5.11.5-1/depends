@@ -1,0 +1,6 @@
+%DEPENDS%
+plasma-workspace
+qt5-wayland
+kwayland-integration
+xorg-server-xwayland
+

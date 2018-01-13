@@ -1,0 +1,9 @@
+%DEPENDS%
+phonon-qt5
+libdbusmenu-qt5
+kwindowsystem
+kconfig
+kcodecs
+kcoreaddons
+qt5-speech
+

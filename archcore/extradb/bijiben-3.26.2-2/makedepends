@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+intltool
+itstool
+evolution
+python
+appstream-glib
+yelp-tools
+autoconf-archive
+git
+

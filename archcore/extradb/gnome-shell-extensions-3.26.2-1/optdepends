@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+nautilus: gnome-classic session
+

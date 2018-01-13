@@ -1,6 +1,0 @@
-%DEPENDS%
-libogg
-
-%MAKEDEPENDS%
-libvorbis
-

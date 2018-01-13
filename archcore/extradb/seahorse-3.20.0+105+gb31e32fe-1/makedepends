@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+libldap
+intltool
+yelp-tools
+gobject-introspection
+openssh
+vala
+gnome-common
+git
+

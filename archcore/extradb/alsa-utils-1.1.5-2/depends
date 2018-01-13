@@ -1,0 +1,8 @@
+%DEPENDS%
+alsa-lib>1.0.24
+pciutils
+ncurses
+psmisc
+libsamplerate
+fftw
+

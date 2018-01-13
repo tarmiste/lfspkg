@@ -1,0 +1,7 @@
+%DEPENDS%
+awk
+bash
+jq
+git
+libarchive
+

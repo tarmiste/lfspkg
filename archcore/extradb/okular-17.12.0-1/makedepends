@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+ebook-tools
+kdegraphics-mobipocket
+kdoctools
+khtml
+python
+chmlib
+discount
+

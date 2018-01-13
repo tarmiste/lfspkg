@@ -1,0 +1,5 @@
+%DEPENDS%
+libxext
+libxrender
+randrproto>=1.5.0
+

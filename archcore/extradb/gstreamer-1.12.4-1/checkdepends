@@ -1,0 +1,5 @@
+%CHECKDEPENDS%
+gmp
+gsl
+gtk3
+

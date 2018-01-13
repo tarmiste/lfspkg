@@ -1,0 +1,10 @@
+%DEPENDS%
+libdrm
+libx11
+llvm-libs
+expat
+libelf
+libxshmfence
+lm_sensors
+libunwind
+

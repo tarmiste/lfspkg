@@ -1,0 +1,14 @@
+%MAKEDEPENDS%
+boost
+boost-libs
+docbook-xsl
+file
+flac
+libebml
+libmatroska
+libogg
+libvorbis
+qt5-multimedia
+ruby
+zlib
+

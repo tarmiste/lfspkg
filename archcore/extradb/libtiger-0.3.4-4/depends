@@ -1,7 +1,0 @@
-%DEPENDS%
-pango
-libkate
-
-%MAKEDEPENDS%
-pkg-config
-

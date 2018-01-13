@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+freeglut
+mesa
+glu
+git
+

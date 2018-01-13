@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+gtk2
+v4l-utils
+

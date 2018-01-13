@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+boost
+python
+kdoctools
+qt5-tools
+knotifyconfig
+ktexteditor
+

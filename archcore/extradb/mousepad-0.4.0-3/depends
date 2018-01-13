@@ -1,0 +1,5 @@
+%DEPENDS%
+gtksourceview3
+dbus-glib
+desktop-file-utils
+

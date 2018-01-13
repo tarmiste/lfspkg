@@ -1,0 +1,17 @@
+%DEPENDS%
+dbus
+systemd
+glib2
+libsoup
+polkit
+libxau
+ostree
+fuse
+json-glib
+libseccomp
+libarchive
+python
+bubblewrap
+appstream-glib
+xdg-desktop-portal
+

@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+kdoctools
+python
+boost
+eigen
+vc
+poppler-qt5
+opencolorio
+

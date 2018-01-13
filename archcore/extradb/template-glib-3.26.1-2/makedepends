@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+git
+meson
+vala
+gobject-introspection
+gtk-doc
+

@@ -1,9 +1,0 @@
-%DEPENDS%
-xfce4-panel
-
-%CONFLICTS%
-verve-plugin
-
-%MAKEDEPENDS%
-intltool
-

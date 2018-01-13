@@ -1,0 +1,6 @@
+%DEPENDS%
+libsoup
+gtk3
+geocode-glib
+dconf
+

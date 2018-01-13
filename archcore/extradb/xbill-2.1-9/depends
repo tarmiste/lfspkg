@@ -1,7 +1,0 @@
-%DEPENDS%
-xaw3d
-libxpm
-
-%MAKEDEPENDS%
-libxaw
-

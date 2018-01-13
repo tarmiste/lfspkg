@@ -1,0 +1,11 @@
+%OPTDEPENDS%
+postgresql-libs: PostgreSQL driver
+libmariadbclient: MariaDB driver
+unixodbc: ODBC driver
+libfbclient: Firebird/iBase driver
+libxinerama: Xinerama support
+libxcursor: Xcursor support
+libxfixes: Xfixes support
+icu: Unicode support
+sni-qt: StatusNotifierItem (AppIndicators) support
+

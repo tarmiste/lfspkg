@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+cups
+perl
+libxml2
+enscript
+perl
+net-snmp
+bash
+bzr
+

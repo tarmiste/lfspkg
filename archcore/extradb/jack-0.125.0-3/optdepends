@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+libffado: FireWire support
+celt: NetJACK driver
+

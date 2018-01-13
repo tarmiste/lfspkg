@@ -1,0 +1,11 @@
+%DEPENDS%
+libvncserver
+openssl
+libjpeg
+libxtst
+libxinerama
+libxdamage
+libxrandr
+avahi
+xorg-xdpyinfo
+

@@ -1,0 +1,15 @@
+%DEPENDS%
+akonadiconsole
+akregator
+akonadi-calendar-tools
+kaddressbook
+kalarm
+kleopatra
+kmail
+knotes
+kontact
+korganizer
+kdepim-addons
+pim-data-exporter
+grantlee-editor
+

@@ -1,0 +1,9 @@
+%DEPENDS%
+kdepim-runtime
+kmail-account-wizard
+akonadi-import-wizard
+mbox-importer
+pim-sieve-editor
+kontactinterface
+libktnef
+

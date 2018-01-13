@@ -1,0 +1,8 @@
+%DEPENDS%
+ibus
+python-gobject
+python-dbus
+python-pyenchant
+m17n-lib
+sqlite
+

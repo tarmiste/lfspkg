@@ -1,0 +1,6 @@
+%DEPENDS%
+kidentitymanagement
+pimcommon
+kmailtransport
+qt5-webengine
+

@@ -1,0 +1,9 @@
+%DEPENDS%
+libqalculate
+gsl
+knewstuff
+khtml
+kdelibs4support
+kplotting
+hicolor-icon-theme
+

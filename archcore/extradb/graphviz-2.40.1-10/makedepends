@@ -1,0 +1,13 @@
+%MAKEDEPENDS%
+swig
+mono
+guile
+lua
+ocaml
+perl
+python2
+r
+tk
+qt4
+gtk2
+

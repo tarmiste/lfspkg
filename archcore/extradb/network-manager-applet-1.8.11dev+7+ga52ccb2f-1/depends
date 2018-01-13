@@ -1,0 +1,7 @@
+%DEPENDS%
+nm-connection-editor
+libmm-glib
+libnotify
+libsecret
+networkmanager
+

@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+openmp: OpenMP support in clang with -fopenmp
+

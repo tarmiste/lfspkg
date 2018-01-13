@@ -1,7 +1,0 @@
-%DEPENDS%
-neon
-libxml2
-
-%MAKEDEPENDS%
-cmake
-

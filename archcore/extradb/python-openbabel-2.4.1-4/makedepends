@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+cmake
+eigen
+wxgtk
+boost
+python
+

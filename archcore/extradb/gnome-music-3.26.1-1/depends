@@ -1,0 +1,13 @@
+%DEPENDS%
+grilo
+grilo-plugins
+tracker-miners
+libdmapsharing
+libmediaart
+gtk3
+gvfs
+python-gobject
+python-cairo
+gst-plugins-base
+python-requests
+

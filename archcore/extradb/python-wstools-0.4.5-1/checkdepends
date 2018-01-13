@@ -1,0 +1,10 @@
+%CHECKDEPENDS%
+python-pytest-runner
+python2-pytest-runner
+autopep8
+python2-autopep8
+python-hacking
+python2-hacking
+python-pytest-cov
+python2-pytest-cov
+

@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+itstool
+git
+appstream-glib
+meson
+

@@ -1,0 +1,4 @@
+%DEPENDS%
+pygobject2-devel=2.28.7
+python2
+

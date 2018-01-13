@@ -1,0 +1,9 @@
+%DEPENDS%
+glib2
+libpng
+libtiff
+libjpeg
+libx11
+jasper
+shared-mime-info
+

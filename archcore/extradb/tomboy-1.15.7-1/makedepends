@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+intltool
+pkgconfig
+gnome-doc-utils
+git
+yelp-tools
+autoconf-archive
+

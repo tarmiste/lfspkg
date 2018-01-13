@@ -1,0 +1,8 @@
+%DEPENDS%
+expat
+libdaemon
+glib2
+libcap
+gdbm
+dbus
+

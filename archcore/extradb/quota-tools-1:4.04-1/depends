@@ -1,0 +1,4 @@
+%DEPENDS%
+e2fsprogs
+libtirpc
+

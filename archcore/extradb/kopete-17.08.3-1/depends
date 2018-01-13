@@ -1,0 +1,7 @@
+%DEPENDS%
+kdebase-runtime
+libotr
+qimageblitz
+qca-qt4
+qjson
+

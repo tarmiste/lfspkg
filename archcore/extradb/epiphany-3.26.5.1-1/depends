@@ -1,0 +1,6 @@
+%DEPENDS%
+webkit2gtk
+gcr
+gnome-desktop
+icu
+

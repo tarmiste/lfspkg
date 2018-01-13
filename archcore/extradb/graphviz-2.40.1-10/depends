@@ -1,0 +1,10 @@
+%DEPENDS%
+libltdl
+gd
+librsvg
+libxaw
+ghostscript
+pango
+gts
+gsfonts
+

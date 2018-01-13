@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+python2-tagpy: Metadata editing support
+python2-dbus: Various extra functionality (e.g. multimedia keys support)
+

@@ -1,0 +1,5 @@
+%DEPENDS%
+webkit2gtk
+libpeas
+python-gobject
+

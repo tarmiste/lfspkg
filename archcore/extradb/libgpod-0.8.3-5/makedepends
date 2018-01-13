@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+intltool
+swig
+docbook-xsl
+pygobject2-devel
+gtk-sharp-2
+

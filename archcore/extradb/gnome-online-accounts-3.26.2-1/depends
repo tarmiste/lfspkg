@@ -1,0 +1,10 @@
+%DEPENDS%
+webkit2gtk
+json-glib
+libnotify
+rest
+libsecret
+telepathy-glib
+krb5
+gcr
+

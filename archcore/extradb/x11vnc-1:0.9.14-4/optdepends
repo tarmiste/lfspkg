@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+tk: GUI support
+net-tools: -auth guess
+xf86-video-dummy: Xdummy script
+

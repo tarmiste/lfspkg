@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+libxslt
+vala
+git
+help2man
+

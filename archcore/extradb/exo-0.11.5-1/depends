@@ -1,0 +1,5 @@
+%DEPENDS%
+libxfce4ui
+perl-uri
+hicolor-icon-theme
+

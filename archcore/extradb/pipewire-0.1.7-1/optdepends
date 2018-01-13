@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+ffmpeg
+jack2
+libva
+

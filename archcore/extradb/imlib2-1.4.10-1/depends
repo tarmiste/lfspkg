@@ -1,0 +1,10 @@
+%DEPENDS%
+libtiff
+giflib
+bzip2
+freetype2
+libxext
+libpng
+libid3tag
+libjpeg-turbo
+

@@ -1,0 +1,11 @@
+%OPTDEPENDS%
+libraw: raw plugin
+openexr: openexr plugin
+ffmpeg: ffmpeg plugin
+suitesparse: matting-levin plugin
+librsvg: svg plugin
+jasper: jasper plugin
+libtiff: tiff plugin
+lua: lua plugin
+lensfun: lens-correct plugin
+

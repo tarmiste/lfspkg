@@ -1,0 +1,5 @@
+%DEPENDS%
+python-sip
+python-dbus
+pyqt4-common
+

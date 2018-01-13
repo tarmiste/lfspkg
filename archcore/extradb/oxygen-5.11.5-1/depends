@@ -1,0 +1,7 @@
+%DEPENDS%
+frameworkintegration
+kdecoration
+kcmutils
+kwayland
+hicolor-icon-theme
+

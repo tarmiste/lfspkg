@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+python2
+libmariadbclient
+postgresql
+qt5-tools
+

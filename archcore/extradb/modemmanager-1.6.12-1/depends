@@ -1,0 +1,9 @@
+%DEPENDS%
+systemd
+libgudev
+polkit
+ppp
+libqmi
+libmbim
+libmm-glib
+

@@ -1,0 +1,4 @@
+%CHECKDEPENDS%
+gst-plugins-good
+gst-plugins-base
+

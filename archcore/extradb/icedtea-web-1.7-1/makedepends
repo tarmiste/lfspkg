@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+java-environment-openjdk=8
+zip
+libxtst
+npapi-sdk
+rhino
+junit
+firefox
+epiphany
+

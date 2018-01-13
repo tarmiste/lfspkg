@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+libva-vdpau-driver: backend for Nvidia and AMD cards
+libva-intel-driver: backend for Intel cards
+

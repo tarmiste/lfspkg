@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+pygtk
+intltool
+gobject-introspection
+pygobject2-devel
+

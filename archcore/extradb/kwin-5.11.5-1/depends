@@ -1,0 +1,8 @@
+%DEPENDS%
+kscreenlocker
+xcb-util-cursor
+plasma-framework
+kcmutils
+breeze
+kinit
+

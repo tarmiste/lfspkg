@@ -1,0 +1,11 @@
+%DEPENDS%
+knewstuff
+kdeclarative
+kitemmodels
+qt5-graphicaleffects
+appstream-qt
+archlinux-appstream-data
+hicolor-icon-theme
+kirigami2
+qt5-quickcontrols
+

@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+pkgconfig
+python
+gnome-common
+git
+appstream-glib
+autoconf-archive
+gobject-introspection
+

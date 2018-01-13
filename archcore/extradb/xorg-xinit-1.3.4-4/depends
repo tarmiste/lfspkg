@@ -1,0 +1,7 @@
+%DEPENDS%
+libx11
+xorg-xauth
+xorg-xrdb
+xorg-xmodmap
+inetutils
+

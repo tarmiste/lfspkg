@@ -1,0 +1,5 @@
+%DEPENDS%
+telepathy-kde-common-internals
+telepathy-kde-accounts-kcm
+plasma-workspace
+

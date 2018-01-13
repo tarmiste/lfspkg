@@ -1,0 +1,6 @@
+%DEPENDS%
+xfce4-panel
+lm_sensors
+libnotify
+hicolor-icon-theme
+

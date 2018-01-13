@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+breeze-kde4: Breeze widget style for KDE4 applications
+breeze-gtk: Breeze widget style for GTK applications
+kcmutils: for breeze-settings
+

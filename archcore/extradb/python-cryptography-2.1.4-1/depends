@@ -1,0 +1,7 @@
+%DEPENDS%
+python-six
+python-cffi
+python-idna
+python-setuptools
+python-asn1crypto
+

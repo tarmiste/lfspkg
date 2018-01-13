@@ -1,0 +1,8 @@
+%DEPENDS%
+curl
+libarchive
+shared-mime-info
+jsoncpp
+libuv
+rhash
+

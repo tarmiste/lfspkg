@@ -1,0 +1,8 @@
+%OPTDEPENDS%
+dnsmasq: connection sharing
+bluez: Bluetooth support
+openresolv: resolvconf support
+ppp: dialup connection support
+dhclient: External DHCP client
+modemmanager: cellular network support
+

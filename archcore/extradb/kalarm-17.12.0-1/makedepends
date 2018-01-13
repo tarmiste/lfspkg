@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+kdoctools
+boost
+python
+kdesignerplugin
+kdepim-apps-libs
+mailcommon
+

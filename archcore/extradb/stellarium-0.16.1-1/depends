@@ -1,0 +1,11 @@
+%DEPENDS%
+libpng
+libgl
+freetype2
+openssl
+qt5-script
+qt5-serialport
+qt5-multimedia
+qt5-location
+gpsd
+

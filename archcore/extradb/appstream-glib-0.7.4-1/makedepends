@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+gobject-introspection
+gtk-doc
+autoconf-archive
+git
+gperf
+meson
+

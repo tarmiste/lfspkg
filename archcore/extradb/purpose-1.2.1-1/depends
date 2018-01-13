@@ -1,0 +1,5 @@
+%DEPENDS%
+kaccounts-integration
+accounts-qml-module
+hicolor-icon-theme
+

@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+boost
+git
+autoconf-archive
+

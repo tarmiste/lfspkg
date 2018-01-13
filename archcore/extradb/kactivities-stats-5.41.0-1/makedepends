@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+boost
+doxygen
+qt5-tools
+

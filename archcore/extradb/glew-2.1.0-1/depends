@@ -1,0 +1,5 @@
+%DEPENDS%
+libxmu
+libxi
+glu
+

@@ -1,0 +1,6 @@
+%DEPENDS%
+libxml2
+libxslt
+docbook-xml
+sed
+

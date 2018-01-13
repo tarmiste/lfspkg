@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+ghostscript: import PS/PDF files as bitmap backgrounds
+

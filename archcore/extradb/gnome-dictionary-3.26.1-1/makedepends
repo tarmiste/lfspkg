@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+itstool
+docbook-xsl
+gtk-doc
+yelp-tools
+git
+gobject-introspection
+meson
+appstream-glib
+

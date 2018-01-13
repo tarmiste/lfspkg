@@ -1,0 +1,10 @@
+%DEPENDS%
+namcap
+openssh
+subversion
+rsync
+arch-install-scripts
+git
+bzr
+mercurial
+

@@ -1,0 +1,10 @@
+%OPTDEPENDS%
+plasma-workspace-wallpapers: additional wallpapers
+gpsd: GPS based geolocation
+networkmanager-qt: IP based geolocation
+kdepim-addons: displaying PIM events in the calendar
+appmenu-qt4: global menu support for Qt4 applications
+qt5-virtualkeyboard: virtual keyboard support in lock screen
+baloo: Baloo search runner
+appstream-qt: package search runner
+

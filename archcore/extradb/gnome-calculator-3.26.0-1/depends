@@ -1,0 +1,8 @@
+%DEPENDS%
+gtk3
+dconf
+gtksourceview3
+mpfr
+libsoup
+libmpc
+

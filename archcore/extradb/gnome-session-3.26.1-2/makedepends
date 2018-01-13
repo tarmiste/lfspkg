@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+intltool
+mesa
+gtk-doc
+xtrans
+git
+gnome-common
+python
+xmlto
+

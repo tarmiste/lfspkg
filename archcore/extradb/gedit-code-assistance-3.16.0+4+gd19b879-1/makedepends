@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+intltool
+gobject-introspection
+vala
+git
+

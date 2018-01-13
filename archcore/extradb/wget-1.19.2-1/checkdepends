@@ -1,0 +1,5 @@
+%CHECKDEPENDS%
+perl-http-daemon
+perl-io-socket-ssl
+python
+

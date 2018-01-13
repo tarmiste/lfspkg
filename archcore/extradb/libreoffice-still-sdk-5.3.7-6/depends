@@ -1,0 +1,9 @@
+%DEPENDS%
+libreoffice-still
+gcc-libs
+sh
+make
+zip
+gcc
+java-environment
+

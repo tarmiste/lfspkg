@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+python-pip
+python2-pip
+python-docutils
+python2-docutils
+git
+

@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+python
+python2
+swig
+git
+doxygen
+

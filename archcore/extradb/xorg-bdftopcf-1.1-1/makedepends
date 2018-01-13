@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+xorg-util-macros
+xproto
+fontsproto
+

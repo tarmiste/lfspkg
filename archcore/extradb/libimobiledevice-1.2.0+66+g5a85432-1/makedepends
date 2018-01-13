@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+python2
+cython2
+python
+cython
+libplist
+autoconf-archive
+git
+python2-setuptools
+python-setuptools
+

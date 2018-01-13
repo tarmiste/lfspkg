@@ -1,7 +1,0 @@
-%DEPENDS%
-qjson
-
-%MAKEDEPENDS%
-cmake
-doxygen
-

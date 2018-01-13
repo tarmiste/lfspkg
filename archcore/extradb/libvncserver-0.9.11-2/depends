@@ -1,0 +1,7 @@
+%DEPENDS%
+libpng
+libjpeg
+gnutls
+libgcrypt
+openssl
+

@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+python2
+zip
+autoconf2.13
+mercurial
+

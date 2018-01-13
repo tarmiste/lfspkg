@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+git
+meson
+doxygen
+graphviz
+xmltoman
+ffmpeg
+jack2
+libva
+

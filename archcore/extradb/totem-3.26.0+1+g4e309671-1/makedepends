@@ -1,0 +1,13 @@
+%MAKEDEPENDS%
+libnautilus-extension
+lirc
+itstool
+docbook-xsl
+python-pylint
+gobject-introspection
+git
+appstream-glib
+gtk-doc
+meson
+intltool
+

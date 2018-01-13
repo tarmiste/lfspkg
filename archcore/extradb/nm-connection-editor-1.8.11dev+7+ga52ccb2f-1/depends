@@ -1,0 +1,8 @@
+%DEPENDS%
+libnm-glib
+libgudev
+gtk3
+mobile-broadband-provider-info
+iso-codes
+gcr
+

@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+libxslt
+docbook-xsl
+w3c-mathml2
+docbook-mathml
+git
+

@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+intltool
+itstool
+docbook-xsl
+yelp-tools
+appdata-tools
+gnome-common
+git
+

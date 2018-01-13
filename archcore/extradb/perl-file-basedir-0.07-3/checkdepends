@@ -1,0 +1,6 @@
+%CHECKDEPENDS%
+perl-test-pod
+perl-test-pod-coverage
+perl-file-which
+xdg-user-dirs
+

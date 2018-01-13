@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+libcups
+python2
+python
+

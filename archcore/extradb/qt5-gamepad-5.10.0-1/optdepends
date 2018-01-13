@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+qt5-declarative: QML bindings
+

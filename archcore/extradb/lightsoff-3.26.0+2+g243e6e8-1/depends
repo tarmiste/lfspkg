@@ -1,0 +1,4 @@
+%DEPENDS%
+clutter-gtk
+librsvg
+

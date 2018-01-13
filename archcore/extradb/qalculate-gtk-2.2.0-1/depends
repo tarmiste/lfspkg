@@ -1,0 +1,4 @@
+%DEPENDS%
+libqalculate
+gtk3
+

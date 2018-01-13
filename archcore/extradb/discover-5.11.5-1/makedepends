@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+python
+plasma-framework
+packagekit-qt5
+flatpak
+

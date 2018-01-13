@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+packagekit-qt5: to manage packages from Arch Linux repositories
+flatpak: Flatpak packages support
+

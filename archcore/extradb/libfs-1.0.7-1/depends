@@ -1,9 +1,0 @@
-%DEPENDS%
-glibc
-xproto
-fontsproto
-
-%MAKEDEPENDS%
-xorg-util-macros
-xtrans
-

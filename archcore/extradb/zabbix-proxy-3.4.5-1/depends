@@ -1,0 +1,8 @@
+%DEPENDS%
+net-snmp
+curl
+libxml2
+sqlite
+unixodbc
+libldap
+

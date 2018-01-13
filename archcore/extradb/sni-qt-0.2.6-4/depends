@@ -1,6 +1,0 @@
-%DEPENDS%
-libdbusmenu-qt4
-
-%MAKEDEPENDS%
-cmake
-

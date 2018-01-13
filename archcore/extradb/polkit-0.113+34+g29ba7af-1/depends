@@ -1,0 +1,7 @@
+%DEPENDS%
+glib2
+pam
+expat
+systemd
+js
+

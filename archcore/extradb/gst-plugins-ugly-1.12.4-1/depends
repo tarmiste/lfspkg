@@ -1,0 +1,13 @@
+%DEPENDS%
+gst-plugins-base-libs
+libdvdread
+lame
+libmpeg2
+a52dec
+libsidplay
+libcdio
+libx264
+libx264-all
+opencore-amr
+mpg123
+

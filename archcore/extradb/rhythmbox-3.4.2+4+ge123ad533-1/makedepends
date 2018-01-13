@@ -1,0 +1,15 @@
+%MAKEDEPENDS%
+itstool
+intltool
+brasero
+gobject-introspection
+vala
+grilo
+libdmapsharing
+lirc
+libgpod
+libmtp
+gtk-doc
+yelp-tools
+git
+

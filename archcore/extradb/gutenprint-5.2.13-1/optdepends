@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+gimp: adds gutenprint plugin to gimp
+libusb: required for drivers that depend on gutenprint52usb backend
+foomatic-db-gutenprint-ppds: prebuilt ppd files
+

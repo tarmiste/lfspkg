@@ -1,0 +1,9 @@
+%DEPENDS%
+baloo-widgets
+knewstuff
+kio-extras
+kuiserver
+kcmutils
+kparts
+kinit
+

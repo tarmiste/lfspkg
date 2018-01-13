@@ -1,8 +1,0 @@
-%DEPENDS%
-telepathy-mission-control
-libaccounts-glib
-libsignon-glib
-
-%MAKEDEPENDS%
-qt5-base
-

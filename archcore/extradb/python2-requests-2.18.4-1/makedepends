@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-chardet
+python2-chardet
+python-urllib3
+python2-urllib3
+python-idna
+python2-idna
+

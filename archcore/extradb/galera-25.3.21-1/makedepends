@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+asio
+check
+scons
+

@@ -1,0 +1,5 @@
+%DEPENDS%
+sdl=1.2.15
+perl-file-sharedir
+perl-capture-tiny
+

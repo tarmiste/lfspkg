@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+perl-sgmls: for conversion to man and texinfo
+

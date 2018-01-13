@@ -1,0 +1,12 @@
+%MAKEDEPENDS%
+gdbm
+libldap
+unixodbc
+openssl
+nss
+sqlite
+libmariadbclient
+db
+postgresql-libs
+python2
+

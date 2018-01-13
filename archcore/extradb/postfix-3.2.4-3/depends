@@ -1,0 +1,12 @@
+%DEPENDS%
+openssl
+pcre
+icu
+libsasl
+libldap
+db
+libmariadbclient
+postgresql-libs
+sqlite
+tinycdb
+

@@ -1,0 +1,7 @@
+%DEPENDS%
+perl-error
+perl-netaddr-ip
+perl-uri
+perl-net-dns
+perl
+

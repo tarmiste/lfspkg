@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+ladspa
+wavpack
+flac
+speex
+gmp
+timidity++
+mpg123
+vorbis-tools
+

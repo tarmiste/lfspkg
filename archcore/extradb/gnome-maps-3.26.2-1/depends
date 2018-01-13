@@ -1,0 +1,10 @@
+%DEPENDS%
+geocode-glib
+geoclue2
+gjs
+libchamplain
+gnome-themes-standard
+libgee
+folks
+gfbgraph
+

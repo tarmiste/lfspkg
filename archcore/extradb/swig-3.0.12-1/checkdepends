@@ -1,0 +1,13 @@
+%CHECKDEPENDS%
+ruby
+python2
+java-environment
+tcl
+php
+lua
+ocaml
+r
+go
+python2-cffi
+camlp4
+

@@ -1,0 +1,8 @@
+%DEPENDS%
+incidenceeditor
+libktnef
+libksieve
+akonadi-notes
+akonadi-import-wizard
+kparts
+

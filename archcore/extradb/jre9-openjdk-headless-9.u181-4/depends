@@ -1,0 +1,5 @@
+%DEPENDS%
+java-runtime-common>=3
+ca-certificates-utils
+nss
+

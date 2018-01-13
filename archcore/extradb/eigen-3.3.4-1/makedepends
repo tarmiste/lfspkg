@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+cmake
+pkg-config
+freeglut
+gcc-fortran
+fftw
+qt4
+suitesparse
+boost
+

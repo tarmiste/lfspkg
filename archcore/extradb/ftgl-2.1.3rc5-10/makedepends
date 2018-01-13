@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+doxygen
+mesa
+graphviz
+

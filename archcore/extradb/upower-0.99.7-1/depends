@@ -1,0 +1,6 @@
+%DEPENDS%
+systemd
+libusb
+libimobiledevice
+libgudev
+

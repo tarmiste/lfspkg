@@ -1,0 +1,11 @@
+%OPTDEPENDS%
+ffmpeg: for FFmpeg plugin
+cdrtools: for creation of DVD ISO images
+dvdauthor: for creation of DVD
+dvgrab: for firewire capture
+libdv: for webcam capture (if FFmpeg is not installed)
+recordmydesktop: for screen capture
+xine-ui: for DVD preview
+vlc: for DVD preview
+plasma-desktop: theme configuration
+

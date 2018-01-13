@@ -1,0 +1,16 @@
+%DEPENDS%
+totem-plparser
+iso-codes
+libpeas
+clutter-gtk
+clutter-gst
+grilo
+gsettings-desktop-schemas
+dconf
+python-gobject
+python-xdg
+gnome-desktop
+gst-plugins-base
+gst-plugins-good
+gst-plugins-bad
+

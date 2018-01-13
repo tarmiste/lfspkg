@@ -1,0 +1,14 @@
+%MAKEDEPENDS%
+gtk-doc
+yelp-tools
+gnome-common
+intltool
+libburn
+libisofs
+libnautilus-extension
+gobject-introspection
+gconf
+itstool
+docbook-xsl
+git
+

@@ -1,5 +1,0 @@
-%DEPENDS%
-bash
-libarchive
-coreutils
-

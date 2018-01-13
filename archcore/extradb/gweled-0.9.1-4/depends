@@ -1,0 +1,6 @@
+%DEPENDS%
+gtk2
+librsvg
+libmikmod
+hicolor-icon-theme
+

@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+libxext: for Xinerama support
+

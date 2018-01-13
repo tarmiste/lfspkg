@@ -1,0 +1,13 @@
+%MAKEDEPENDS%
+gobject-introspection
+vala
+sane
+bash-completion
+argyllcms
+git
+docbook-utils
+docbook-sgml
+perl-sgmls
+meson
+gtk-doc
+

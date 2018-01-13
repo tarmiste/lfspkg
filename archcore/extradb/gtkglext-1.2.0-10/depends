@@ -1,9 +1,0 @@
-%DEPENDS%
-gtk2
-glu
-libxmu
-pangox-compat
-
-%MAKEDEPENDS%
-mesa
-

@@ -1,0 +1,9 @@
+%DEPENDS%
+libxft
+libxaw
+ncurses
+xorg-luit
+xbitmaps
+libutempter
+libxkbfile
+

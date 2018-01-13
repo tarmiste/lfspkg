@@ -1,0 +1,14 @@
+%MAKEDEPENDS%
+spamassassin
+bogofilter
+valgrind
+libgdata
+libnotify
+libcanberra
+poppler-glib
+pygtk
+libytnef
+libical
+dillo
+docbook-utils
+

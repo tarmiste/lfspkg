@@ -1,0 +1,8 @@
+%DEPENDS%
+make
+arch-install-scripts
+squashfs-tools
+libisoburn
+dosfstools
+lynx
+

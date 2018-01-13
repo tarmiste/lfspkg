@@ -1,0 +1,10 @@
+%CHECKDEPENDS%
+python-pytest
+python2-pytest
+python-hypothesis
+python2-hypothesis
+python-pyflakes
+python2-pyflakes
+python-pycodestyle
+python2-pycodestyle
+

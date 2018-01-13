@@ -1,0 +1,10 @@
+%DEPENDS%
+gtk2
+glib2
+libguess
+libsm
+audacious-plugins
+gnome-icon-theme
+hicolor-icon-theme
+desktop-file-utils
+

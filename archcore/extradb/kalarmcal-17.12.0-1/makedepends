@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+python
+boost
+kdesignerplugin
+kdoctools
+

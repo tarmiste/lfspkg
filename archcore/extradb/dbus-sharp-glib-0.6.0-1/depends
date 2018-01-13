@@ -1,6 +1,0 @@
-%DEPENDS%
-dbus-sharp>=0.8
-
-%MAKEDEPENDS%
-pkgconfig
-

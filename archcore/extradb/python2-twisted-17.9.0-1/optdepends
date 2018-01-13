@@ -1,0 +1,14 @@
+%OPTDEPENDS%
+python2-pyopenssl: for TLS client hostname verification
+python2-service-identity: for TLS client hostname verification
+python2-idna: for TLS client hostname verification
+python2-cryptography: for using conch
+python2-pyasn1: for using conch
+python2-appdirs: for using conch
+python2-h2: for http2 support
+python2-priority: for http2 support
+python2-pyserial: for serial support
+python2-soappy: for twisted.web.soap
+pygtk: for using manhole
+tk: for using tkconch
+

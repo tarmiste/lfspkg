@@ -1,0 +1,15 @@
+%DEPENDS%
+dconf
+gobject-introspection-runtime
+gsettings-desktop-schemas
+libcanberra
+startup-notification
+zenity
+libsm
+gnome-desktop
+upower
+libxkbcommon-x11
+gnome-settings-daemon
+libgudev
+libinput
+

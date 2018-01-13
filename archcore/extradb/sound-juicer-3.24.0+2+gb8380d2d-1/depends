@@ -1,0 +1,9 @@
+%DEPENDS%
+libmusicbrainz5
+libdiscid
+gtk3
+gst-plugins-base
+gst-plugins-good
+brasero
+iso-codes
+

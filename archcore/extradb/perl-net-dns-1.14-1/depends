@@ -1,0 +1,4 @@
+%DEPENDS%
+perl-digest-hmac
+perl-net-ip
+

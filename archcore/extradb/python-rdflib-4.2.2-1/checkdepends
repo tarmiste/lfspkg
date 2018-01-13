@@ -1,0 +1,12 @@
+%CHECKDEPENDS%
+python2-nose
+python-nose
+python2-pyparsing
+python-pyparsing
+python2-six
+python-six
+python-html5lib
+python2-html5lib
+python-sparqlwrapper
+python2-sparqlwrapper
+

@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+cmake
+freetype2
+python2
+doxygen
+dblatex
+graphviz
+asciidoc
+

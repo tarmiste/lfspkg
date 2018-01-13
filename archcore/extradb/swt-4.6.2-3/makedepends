@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+jdk8-openjdk
+glu
+unzip
+pkgconfig
+gtk2
+gtk3
+apache-ant
+

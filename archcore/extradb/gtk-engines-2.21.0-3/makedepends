@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+pkg-config
+intltool
+gnome-common
+git
+

@@ -1,0 +1,4 @@
+%DEPENDS%
+pygtk
+python2-mpd
+

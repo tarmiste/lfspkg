@@ -1,0 +1,6 @@
+%DEPENDS%
+libgtop
+gtkmm3
+librsvg
+systemd
+

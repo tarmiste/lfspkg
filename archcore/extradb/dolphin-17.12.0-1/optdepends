@@ -1,0 +1,7 @@
+%OPTDEPENDS%
+kde-cli-tools: for editing file type options
+ffmpegthumbs: video thumbnails
+ruby: installing new service menus from KDE Store
+kdegraphics-thumbnailers: PDF and PS thumbnails
+konsole: terminal panel
+

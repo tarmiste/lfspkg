@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+gtk-doc
+gnome-control-center
+evolution-data-server
+gobject-introspection
+git
+meson
+

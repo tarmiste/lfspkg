@@ -1,0 +1,12 @@
+%DEPENDS%
+glib2
+xz
+zlib
+libsoup
+gpgme
+libarchive
+fuse2
+util-linux
+mkinitcpio
+openssl
+

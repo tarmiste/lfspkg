@@ -1,0 +1,7 @@
+%DEPENDS%
+libxext
+libxi
+recordproto
+inputproto
+libxfixes
+

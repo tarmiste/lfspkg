@@ -1,0 +1,5 @@
+%DEPENDS%
+metis
+lapack
+intel-tbb
+

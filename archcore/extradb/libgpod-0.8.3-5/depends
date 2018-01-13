@@ -1,0 +1,7 @@
+%DEPENDS%
+gdk-pixbuf2
+mutagen
+sg3_utils
+libimobiledevice
+libplist
+

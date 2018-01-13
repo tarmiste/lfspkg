@@ -1,0 +1,12 @@
+%MAKEDEPENDS%
+jdk7-openjdk
+ccache
+cpio
+unzip
+zip
+libxrender
+libxtst
+fontconfig
+libcups
+alsa-lib
+

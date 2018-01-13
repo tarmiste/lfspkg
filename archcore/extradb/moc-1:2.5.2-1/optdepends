@@ -1,0 +1,9 @@
+%OPTDEPENDS%
+speex: for using the speex plugin
+ffmpeg: for using the ffmpeg plugin
+taglib: for using the musepack plugin
+libmpcdec: for using the musepack plugin
+wavpack: for using the wavpack plugin
+faad2: for using the aac plugin
+libmodplug: for using the modplug plugin
+

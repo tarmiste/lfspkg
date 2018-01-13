@@ -1,0 +1,15 @@
+%DEPENDS%
+gtk3
+gst-plugins-good
+totem-plparser
+cdrkit
+cdrdao
+shared-mime-info
+libcanberra
+dvd+rw-tools
+dconf
+libsm
+tracker
+libnotify
+gvfs
+

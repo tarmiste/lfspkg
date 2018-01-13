@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+galera: for MariaDB cluster with Galera WSREP
+perl-dbd-mysql: for mysqlhotcopy, mysql_convert_table_format and mysql_setpermission
+

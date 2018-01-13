@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+kdoctools
+python
+doxygen
+qt5-tools
+

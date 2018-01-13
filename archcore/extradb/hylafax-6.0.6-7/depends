@@ -1,8 +1,0 @@
-%DEPENDS%
-libtiff
-pam
-ghostscript
-
-%MAKEDEPENDS%
-smtp-server
-

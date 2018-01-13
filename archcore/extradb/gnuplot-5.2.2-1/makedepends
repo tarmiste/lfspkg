@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+texinfo
+texlive-core
+emacs
+texlive-latexextra
+qt5-tools
+

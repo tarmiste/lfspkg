@@ -1,0 +1,7 @@
+%DEPENDS%
+zlib
+apr-util
+pcre
+libnghttp2
+openssl
+

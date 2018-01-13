@@ -1,0 +1,8 @@
+%DEPENDS%
+glib2
+gtk-doc
+graphviz
+ttf-dejavu
+pkg-config
+gcc
+

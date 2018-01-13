@@ -1,0 +1,14 @@
+%MAKEDEPENDS%
+libfbclient
+libmariadbclient
+sqlite
+unixodbc
+postgresql-libs
+alsa-lib
+gst-plugins-base-libs
+gtk3
+libpulse
+cups
+freetds
+vulkan-headers
+

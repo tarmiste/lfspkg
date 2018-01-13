@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+gobject-introspection
+appstream-glib
+git
+meson
+gtk-doc
+

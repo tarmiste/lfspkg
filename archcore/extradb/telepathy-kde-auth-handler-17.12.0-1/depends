@@ -1,0 +1,4 @@
+%DEPENDS%
+qca-qt5
+telepathy-kde-common-internals
+

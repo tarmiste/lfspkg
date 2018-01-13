@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+python2-numpy
+pygobject2-devel
+

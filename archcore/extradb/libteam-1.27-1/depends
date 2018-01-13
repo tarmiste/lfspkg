@@ -1,0 +1,8 @@
+%DEPENDS%
+libnl
+libdaemon
+jansson
+libdbus
+bash
+zeromq
+

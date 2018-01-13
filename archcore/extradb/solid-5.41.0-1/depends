@@ -1,0 +1,6 @@
+%DEPENDS%
+qt5-declarative
+media-player-info
+upower
+udisks2
+

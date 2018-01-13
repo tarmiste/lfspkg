@@ -1,0 +1,4 @@
+%DEPENDS%
+util-linux
+fuse2
+

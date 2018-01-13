@@ -1,0 +1,12 @@
+%DEPENDS%
+libkcddb
+kcmutils
+knotifyconfig
+libmad
+kfilemetadata
+knewstuff
+libmpcdec
+libdvdread
+libburn
+qt5-webkit
+

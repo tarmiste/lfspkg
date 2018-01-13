@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+cairo
+libxml2
+pciutils
+

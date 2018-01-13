@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+gnuplot: for plotting support
+

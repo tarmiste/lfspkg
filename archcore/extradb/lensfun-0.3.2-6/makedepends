@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+python
+libpng
+doxygen
+cmake
+

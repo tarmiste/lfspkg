@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+kdoctools
+boost
+qt5-xmlpatterns
+

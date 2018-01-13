@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+gcc-libs
+cmake
+doxygen
+graphviz
+python
+

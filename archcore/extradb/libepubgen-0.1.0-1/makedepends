@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+boost
+cppunit
+doxygen
+libxml2
+

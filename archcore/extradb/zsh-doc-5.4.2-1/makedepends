@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+pcre
+libcap
+gdbm
+

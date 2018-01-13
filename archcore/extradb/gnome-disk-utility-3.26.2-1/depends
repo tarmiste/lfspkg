@@ -1,0 +1,10 @@
+%DEPENDS%
+udisks2
+gtk3
+libsecret
+libpwquality
+libcanberra
+libdvdread
+libnotify
+parted
+

@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+gst-plugins-base
+gconf
+glu
+webkit2gtk
+libnotify
+gtk2
+

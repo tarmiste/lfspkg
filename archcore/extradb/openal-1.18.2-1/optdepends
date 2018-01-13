@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+qt5-base: alsoft-config GUI Configurator
+fluidsynth: MIDI rendering
+

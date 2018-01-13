@@ -1,0 +1,8 @@
+%DEPENDS%
+exo
+garcon
+libxfce4ui
+libwnck
+hicolor-icon-theme
+desktop-file-utils
+

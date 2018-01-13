@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+valgrind
+xorg-util-macros
+libxslt
+docbook-xsl
+

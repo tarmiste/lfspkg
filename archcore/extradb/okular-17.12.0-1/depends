@@ -1,0 +1,13 @@
+%DEPENDS%
+djvulibre
+libspectre
+libkexiv2
+poppler-qt5
+qca-qt5
+kpty
+kactivities
+threadweaver
+kjs
+kparts
+purpose
+

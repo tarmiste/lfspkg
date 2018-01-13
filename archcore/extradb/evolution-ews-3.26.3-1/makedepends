@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+git
+cmake
+ninja
+intltool
+python
+

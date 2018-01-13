@@ -1,0 +1,5 @@
+%DEPENDS%
+libsystemd
+mtdev
+libevdev
+

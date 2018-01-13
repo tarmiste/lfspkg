@@ -1,0 +1,8 @@
+%DEPENDS%
+solid
+kjobwidgets
+kbookmarks
+libxslt
+kwallet
+desktop-file-utils
+

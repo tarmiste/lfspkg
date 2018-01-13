@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+libcanberra: sound support
+

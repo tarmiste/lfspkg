@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+postgresql-libs
+libmariadbclient
+unixodbc
+cups
+gtk2
+libfbclient
+mesa
+

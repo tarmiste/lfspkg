@@ -1,0 +1,7 @@
+%DEPENDS%
+khtml
+kdoctools
+xapian-core
+grantlee
+kinit
+

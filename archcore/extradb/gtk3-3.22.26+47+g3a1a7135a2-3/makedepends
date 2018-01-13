@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+gobject-introspection
+gtk-doc
+git
+glib2-docs
+sassc
+

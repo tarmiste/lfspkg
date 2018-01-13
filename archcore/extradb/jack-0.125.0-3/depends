@@ -1,0 +1,6 @@
+%DEPENDS%
+libsamplerate
+db
+zita-alsa-pcmi
+zita-resampler
+

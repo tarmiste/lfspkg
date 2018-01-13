@@ -1,0 +1,5 @@
+%DEPENDS%
+libburn
+libisofs
+readline
+

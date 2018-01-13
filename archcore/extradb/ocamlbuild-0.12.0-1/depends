@@ -1,0 +1,3 @@
+%DEPENDS%
+ocaml>=4.04.0
+

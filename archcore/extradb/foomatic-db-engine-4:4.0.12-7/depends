@@ -1,0 +1,9 @@
+%DEPENDS%
+perl
+libxml2
+cups-filters>=1.0.42
+bash
+perl-xml-libxml
+perl-clone
+perl-dbi
+

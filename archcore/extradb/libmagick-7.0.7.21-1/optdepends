@@ -1,0 +1,12 @@
+%OPTDEPENDS%
+ghostscript: PS/PDF support
+libraw: DNG support
+librsvg: SVG support
+libwebp: WEBP support
+libwmf: WMF support
+libxml2: Magick Scripting Language
+ocl-icd: OpenCL support
+openexr: OpenEXR support
+openjpeg2: JPEG2000 support
+pango: Text rendering
+

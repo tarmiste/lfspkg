@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+python
+gtk-doc
+autoconf-archive
+git
+

@@ -1,0 +1,6 @@
+%DEPENDS%
+gstreamer
+orc
+libxv
+iso-codes
+

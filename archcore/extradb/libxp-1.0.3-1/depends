@@ -1,7 +1,0 @@
-%DEPENDS%
-libxext
-printproto
-
-%MAKEDEPENDS%
-xorg-util-macros
-

@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+libsecret
+libnotify
+libmm-glib
+intltool
+gobject-introspection
+git
+gtk-doc
+meson
+

@@ -1,0 +1,10 @@
+%DEPENDS%
+qt5-location
+qt5-sensors
+qt5-webchannel
+libwebp
+libxslt
+libxcomposite
+gst-plugins-base
+hyphen
+

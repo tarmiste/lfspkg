@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+qt5-base
+

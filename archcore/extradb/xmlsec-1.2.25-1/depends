@@ -1,0 +1,7 @@
+%DEPENDS%
+libxslt
+openssl
+gnutls
+nss
+libltdl
+

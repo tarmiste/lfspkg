@@ -1,0 +1,10 @@
+%DEPENDS%
+gtk3
+gcr
+libsecret
+libsoup
+desktop-file-utils
+dconf
+gpgme
+gnome-keyring
+

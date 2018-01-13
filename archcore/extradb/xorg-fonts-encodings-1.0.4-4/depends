@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-xorg-mkfontscale
-xorg-util-macros
-xorg-font-util
-

@@ -1,0 +1,12 @@
+%MAKEDEPENDS%
+glib2
+freetype2
+graphite
+cairo
+icu
+gobject-introspection
+gtk-doc
+ragel
+git
+python
+

@@ -1,0 +1,10 @@
+%DEPENDS%
+sdl2_ttf
+libgl
+libpng
+libjpeg
+libvorbis
+physfs
+hicolor-icon-theme
+xdg-utils
+

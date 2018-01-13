@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+python-setuptools
+python2-setuptools
+python-pycparser
+python2-pycparser
+

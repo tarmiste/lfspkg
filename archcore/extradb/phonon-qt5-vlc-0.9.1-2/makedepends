@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+vlc
+extra-cmake-modules
+automoc4
+phonon-qt4
+phonon-qt5
+

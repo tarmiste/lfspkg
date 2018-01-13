@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+python-ply
+python2-ply
+python-setuptools
+python2-setuptools
+

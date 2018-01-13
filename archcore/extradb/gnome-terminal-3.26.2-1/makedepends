@@ -1,0 +1,12 @@
+%MAKEDEPENDS%
+intltool
+itstool
+docbook-xsl
+libnautilus-extension
+appdata-tools
+gnome-shell
+gconf
+vala
+yelp-tools
+git
+

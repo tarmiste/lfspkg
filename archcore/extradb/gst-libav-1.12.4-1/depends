@@ -1,0 +1,5 @@
+%DEPENDS%
+gst-plugins-base-libs
+bzip2
+ffmpeg
+

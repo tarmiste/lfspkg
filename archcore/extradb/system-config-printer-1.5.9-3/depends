@@ -1,0 +1,10 @@
+%DEPENDS%
+python-pycups
+python-dbus
+python-pycurl
+libnotify
+python-requests
+python-gobject
+gtk3
+python-cairo
+

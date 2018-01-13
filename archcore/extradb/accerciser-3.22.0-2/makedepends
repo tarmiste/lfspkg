@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+itstool
+docbook-xsl
+intltool
+gnome-common
+git
+

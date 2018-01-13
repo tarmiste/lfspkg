@@ -1,0 +1,5 @@
+%DEPENDS%
+dkms
+nvidia-utils=387.34
+libgl
+

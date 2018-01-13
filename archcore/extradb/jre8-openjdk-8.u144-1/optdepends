@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+icedtea-web: web browser plugin + Java Web Start
+alsa-lib: for basic sound support
+gtk2: for the Gtk+ look and feel - desktop usage
+java-openjfx: for JavaFX GUI components support
+

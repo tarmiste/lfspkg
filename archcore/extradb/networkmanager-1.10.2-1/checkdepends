@@ -1,0 +1,4 @@
+%CHECKDEPENDS%
+libx11
+python-dbus
+

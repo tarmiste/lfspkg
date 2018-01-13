@@ -1,0 +1,4 @@
+%DEPENDS%
+libsasl=2.1.26
+krb5
+

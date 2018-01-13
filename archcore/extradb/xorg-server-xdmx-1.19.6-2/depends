@@ -1,0 +1,11 @@
+%DEPENDS%
+libxfont2
+libxi
+libxaw
+libxrender
+libdmx
+libxfixes
+libunwind
+pixman
+xorg-server-common
+

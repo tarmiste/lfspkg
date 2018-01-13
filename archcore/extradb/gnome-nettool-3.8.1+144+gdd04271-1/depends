@@ -1,0 +1,8 @@
+%DEPENDS%
+gtk3
+libgtop
+dnsutils
+iputils
+dconf
+whois
+

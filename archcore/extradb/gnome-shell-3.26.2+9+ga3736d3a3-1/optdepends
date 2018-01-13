@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+gnome-control-center: System settings
+evolution-data-server: Evolution calendar integration
+

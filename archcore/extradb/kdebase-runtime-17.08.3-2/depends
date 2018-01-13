@@ -1,0 +1,11 @@
+%DEPENDS%
+kdelibs
+smbclient
+libssh
+libcanberra
+oxygen-icons
+xorg-xauth
+libwebp
+exiv2
+gpgme
+

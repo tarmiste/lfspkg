@@ -1,0 +1,7 @@
+%DEPENDS%
+libglade
+libxmu
+glu
+xorg-appres
+perl-libwww
+

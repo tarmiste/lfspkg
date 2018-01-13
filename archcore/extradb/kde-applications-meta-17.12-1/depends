@@ -1,0 +1,14 @@
+%DEPENDS%
+kdeaccessibility-meta
+kdeadmin-meta
+kdebase-meta
+kdeedu-meta
+kdegames-meta
+kdegraphics-meta
+kdemultimedia-meta
+kdenetwork-meta
+kdepim-meta
+kdesdk-meta
+kdeutils-meta
+kdewebdev-meta
+

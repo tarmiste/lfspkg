@@ -1,0 +1,10 @@
+%DEPENDS%
+qt5-declarative
+ffmpeg
+libxv
+openal
+uchardet
+desktop-file-utils
+qt5-quickcontrols
+qt5-svg
+

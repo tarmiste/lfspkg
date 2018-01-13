@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+perl-file-which
+perl-text-patch
+perl-archive-extract
+perl-archive-zip
+perl-module-build
+

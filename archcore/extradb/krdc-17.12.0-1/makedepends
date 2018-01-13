@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+libvncserver
+freerdp
+kdoctools
+python
+

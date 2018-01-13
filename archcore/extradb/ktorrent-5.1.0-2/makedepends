@@ -1,0 +1,12 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+python
+kdoctools
+boost
+plasma-workspace
+kdnssd
+taglib
+kde-syndication
+kplotting
+kdewebkit
+

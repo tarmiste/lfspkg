@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+intltool
+pkg-config
+gnome-python
+libwnck
+libgnome-keyring
+

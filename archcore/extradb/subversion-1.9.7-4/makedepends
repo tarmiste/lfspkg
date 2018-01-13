@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+apache
+python2
+perl
+swig
+java-environment
+libgnome-keyring
+kdelibs
+ruby
+

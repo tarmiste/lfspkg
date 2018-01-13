@@ -1,0 +1,12 @@
+%DEPENDS%
+knewstuff
+knotifyconfig
+kded
+kfilemetadata
+qt5-webkit
+mlt
+glu
+sdl_image
+hicolor-icon-theme
+qt5-quickcontrols
+

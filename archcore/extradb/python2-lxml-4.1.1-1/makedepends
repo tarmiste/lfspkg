@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+libxslt
+python-setuptools
+python2-setuptools
+epydoc
+python2-pygments
+python2-docutils
+

@@ -1,0 +1,8 @@
+%DEPENDS%
+glibc
+libavcodec.so=57-64
+libavformat.so=57-64
+libavutil.so=55-64
+liblsmash.so=2-64
+libswscale.so=4-64
+

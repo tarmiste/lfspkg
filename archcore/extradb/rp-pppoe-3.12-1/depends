@@ -1,5 +1,0 @@
-%DEPENDS%
-ppp=2.4.7
-sh
-net-tools
-

@@ -1,0 +1,5 @@
+%DEPENDS%
+curl
+qt5-base
+libevent
+

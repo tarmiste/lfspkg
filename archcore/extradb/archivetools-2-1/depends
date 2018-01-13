@@ -1,0 +1,7 @@
+%DEPENDS%
+rsync
+hardlink
+xz
+util-linux
+systemd
+

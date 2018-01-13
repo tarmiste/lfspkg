@@ -1,0 +1,6 @@
+%DEPENDS%
+telepathy-glib
+sqlite
+libxml2
+dconf
+

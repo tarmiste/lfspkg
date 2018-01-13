@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+openssl
+python-setuptools
+python2-setuptools
+python-cryptography
+python2-cryptography
+

@@ -1,0 +1,7 @@
+%DEPENDS%
+python2-zope-interface
+python2-incremental
+python2-constantly
+python2-automat
+python2-hyperlink
+

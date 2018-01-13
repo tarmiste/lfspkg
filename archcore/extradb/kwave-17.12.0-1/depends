@@ -1,0 +1,9 @@
+%DEPENDS%
+kio
+audiofile
+libmad
+libsamplerate
+hicolor-icon-theme
+id3lib
+fftw
+

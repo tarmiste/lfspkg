@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+python
+gtk-doc
+x264
+autoconf-archive
+git
+valgrind
+

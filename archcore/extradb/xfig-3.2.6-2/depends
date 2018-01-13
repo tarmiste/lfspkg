@@ -1,0 +1,7 @@
+%DEPENDS%
+libjpeg
+xaw3d
+xorg-fonts-75dpi
+xorg-fonts-100dpi
+libpng
+

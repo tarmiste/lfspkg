@@ -1,7 +1,0 @@
-%OPTDEPENDS%
-hyphen: offers hyphenation library functions
-
-%MAKEDEPENDS%
-glibc
-perl
-

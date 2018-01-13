@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+tk: for xorriso-tcltk frontend
+bwidget: for xorriso-tcltk frontend
+

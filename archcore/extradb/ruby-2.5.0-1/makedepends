@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+gdbm
+openssl
+libffi
+doxygen
+graphviz
+libyaml
+ttf-dejavu
+tk
+

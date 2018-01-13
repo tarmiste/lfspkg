@@ -1,0 +1,5 @@
+%DEPENDS%
+libxft
+libedit
+m17n-lib
+

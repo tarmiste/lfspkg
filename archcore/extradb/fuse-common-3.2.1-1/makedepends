@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+pkg-config
+meson
+udev
+

@@ -1,0 +1,11 @@
+%CHECKDEPENDS%
+python-bottle
+python2-bottle
+python-nose-show-skipped
+python2-nose-show-skipped
+vsftpd
+python-flaky
+python2-flaky
+python-pyflakes
+python2-pyflakes
+

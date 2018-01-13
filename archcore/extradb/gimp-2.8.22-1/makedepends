@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+intltool
+poppler-glib
+alsa-lib
+iso-codes
+curl
+ghostscript
+

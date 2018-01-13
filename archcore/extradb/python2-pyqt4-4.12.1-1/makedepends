@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+python-sip
+python-dbus
+python2-sip
+phonon-qt4
+mesa
+python2-opengl
+qt-assistant-compat
+python2-dbus
+

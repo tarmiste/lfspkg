@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+git
+inetutils
+gtk2
+jansson
+gtk3
+libxv
+libvdpau
+nvidia-utils
+libxext
+

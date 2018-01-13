@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+gucharmap: for charmap plugin
+vte3: for embedded terminal
+libgit2-glib: for git plugin
+

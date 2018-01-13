@@ -1,0 +1,10 @@
+%DEPENDS%
+vim-runtime=8.0.1415-2
+gpm
+acl
+glibc
+libgcrypt
+pcre
+zlib
+libffi
+

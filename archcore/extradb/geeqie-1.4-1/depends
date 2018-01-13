@@ -1,0 +1,6 @@
+%DEPENDS%
+exiv2
+clutter-gtk
+lcms
+ffmpegthumbnailer
+

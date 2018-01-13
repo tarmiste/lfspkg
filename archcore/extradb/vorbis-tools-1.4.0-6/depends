@@ -1,6 +1,0 @@
-%DEPENDS%
-libao
-libvorbis
-curl
-flac
-

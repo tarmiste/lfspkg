@@ -1,0 +1,7 @@
+%DEPENDS%
+xfce4-panel
+libpulse
+libkeybinder3
+gtk-update-icon-cache
+libnotify
+

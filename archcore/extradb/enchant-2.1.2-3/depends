@@ -1,0 +1,7 @@
+%DEPENDS%
+aspell
+hunspell
+hspell
+libvoikko
+glib2
+

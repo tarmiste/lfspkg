@@ -1,0 +1,14 @@
+%MAKEDEPENDS%
+alsa-lib
+libpulse
+fluidsynth
+portaudio
+jack
+qt5-base
+sdl2
+sdl_sound
+ffmpeg
+git
+cmake
+ninja
+

@@ -1,0 +1,4 @@
+%DEPENDS%
+python-qscintilla-qt4-common
+python-pyqt4
+

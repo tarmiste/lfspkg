@@ -1,0 +1,16 @@
+%MAKEDEPENDS%
+glibc
+libgcrypt
+gpm
+python2
+python
+ruby
+libxt
+gtk3
+lua
+gawk
+tcl
+pcre
+zlib
+libffi
+

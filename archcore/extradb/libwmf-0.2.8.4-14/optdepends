@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+gdk-pixbuf2: for pixbuf loader
+

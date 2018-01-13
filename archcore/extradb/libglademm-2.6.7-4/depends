@@ -1,7 +1,0 @@
-%DEPENDS%
-libglade>=2.6.3
-gtkmm>=2.14.1
-
-%MAKEDEPENDS%
-pkgconfig
-

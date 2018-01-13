@@ -1,0 +1,14 @@
+%MAKEDEPENDS%
+intltool
+libchamplain
+exiv2
+itstool
+brasero
+libraw
+liboauth
+docbook-xsl
+yelp-tools
+flex
+gnome-common
+git
+

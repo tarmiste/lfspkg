@@ -1,9 +1,0 @@
-%DEPENDS%
-libxaw
-libxt
-
-%MAKEDEPENDS%
-xorg-util-macros
-xproto
-libxmu
-

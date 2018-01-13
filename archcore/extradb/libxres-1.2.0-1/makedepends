@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+resourceproto
+damageproto
+compositeproto
+scrnsaverproto
+xorg-util-macros
+

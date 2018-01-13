@@ -1,0 +1,15 @@
+%DEPENDS%
+sqlite
+ca-certificates
+fontconfig
+libgl
+libxrandr
+libxv
+libxi
+alsa-lib
+xdg-utils
+hicolor-icon-theme
+desktop-file-utils
+libmng
+dbus
+

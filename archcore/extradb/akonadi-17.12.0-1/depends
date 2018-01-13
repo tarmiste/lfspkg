@@ -1,0 +1,6 @@
+%DEPENDS%
+kio
+kitemmodels
+mariadb
+hicolor-icon-theme
+

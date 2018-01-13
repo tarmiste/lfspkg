@@ -1,0 +1,7 @@
+%DEPENDS%
+kcompletion
+kservice
+kiconthemes
+sonnet
+qt5-speech
+

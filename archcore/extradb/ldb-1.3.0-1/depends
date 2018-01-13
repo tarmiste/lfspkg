@@ -1,0 +1,6 @@
+%DEPENDS%
+talloc
+tevent
+tdb
+popt
+

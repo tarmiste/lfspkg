@@ -1,0 +1,7 @@
+%OPTDEPENDS%
+perl: to use corresponding binding
+tcl: to use corresponding binding
+python2: to use corresponding binding
+ruby: to use corresponding binding
+lua51: to use corresponding binding
+

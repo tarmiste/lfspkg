@@ -1,0 +1,5 @@
+%DEPENDS%
+libxklavier
+gtk3
+dconf
+

@@ -1,0 +1,6 @@
+%DEPENDS%
+libnetfilter_conntrack
+libnetfilter_cttimeout
+libnetfilter_cthelper
+libnetfilter_queue
+

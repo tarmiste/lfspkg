@@ -1,0 +1,5 @@
+%DEPENDS%
+libkexiv2
+libkdcraw
+kio
+

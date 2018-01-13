@@ -1,0 +1,7 @@
+%DEPENDS%
+libwpd
+libwpg
+libxml2
+icu
+librevenge
+

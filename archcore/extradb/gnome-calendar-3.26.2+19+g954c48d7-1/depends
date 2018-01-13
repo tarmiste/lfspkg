@@ -1,0 +1,6 @@
+%DEPENDS%
+evolution-data-server
+gsettings-desktop-schemas
+evolution
+gnome-control-center
+

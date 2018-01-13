@@ -1,0 +1,7 @@
+%DEPENDS%
+gtk3
+libxml2
+libsoup
+liboauth
+totem-plparser
+

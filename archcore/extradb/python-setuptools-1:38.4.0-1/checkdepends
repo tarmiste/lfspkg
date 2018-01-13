@@ -1,0 +1,15 @@
+%CHECKDEPENDS%
+python-pytest-runner
+python2-pytest-runner
+python-pytest-flake8
+python2-pytest-flake8
+python-mock
+python2-mock
+python-pytest-fixture-config
+python2-pytest-fixture-config
+python-pytest-virtualenv
+python2-pytest-virtualenv
+python-wheel
+python2-wheel
+git
+

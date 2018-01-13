@@ -1,0 +1,14 @@
+%DEPENDS%
+libxt
+libxslt
+enchant
+geoclue2
+gst-plugins-base-libs
+gst-plugins-bad
+libsecret
+libwebp
+harfbuzz-icu
+gtk3
+libnotify
+hyphen
+

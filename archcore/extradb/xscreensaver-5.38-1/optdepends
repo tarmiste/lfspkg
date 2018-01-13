@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+gdm: for login manager support
+

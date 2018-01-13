@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+speex
+ffmpeg
+taglib
+libmpcdec
+wavpack
+libmodplug
+faad2
+

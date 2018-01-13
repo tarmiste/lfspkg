@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+itstool
+docbook-xml
+startup-notification
+lsb-release
+gobject-introspection
+yelp-tools
+appstream-glib
+git
+meson
+

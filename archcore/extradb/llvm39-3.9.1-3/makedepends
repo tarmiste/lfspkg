@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+cmake
+libffi
+python2
+libedit
+

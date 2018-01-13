@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+libsndfile: Example sampler
+gtk2: Example sampler
+python2: Scripts
+

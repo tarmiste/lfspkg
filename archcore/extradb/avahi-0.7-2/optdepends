@@ -1,0 +1,11 @@
+%OPTDEPENDS%
+gtk3: avahi-discover, avahi-discover-standalone, bshell, bssh, bvnc
+gtk2: gtk2 bindings
+qt4: qt4 bindings
+pygtk: avahi-bookmarks
+python2-twisted: avahi-bookmarks
+mono: mono bindings
+nss-mdns: NSS support for mDNS
+python-gobject: avahi-discover
+python-dbus: avahi-discover
+

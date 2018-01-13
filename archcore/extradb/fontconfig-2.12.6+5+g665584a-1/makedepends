@@ -1,0 +1,12 @@
+%MAKEDEPENDS%
+git
+autoconf-archive
+gperf
+python-lxml
+python-six
+docbook-utils
+docbook-sgml
+perl-sgmls
+texlive-formatsextra>=2017
+lynx
+

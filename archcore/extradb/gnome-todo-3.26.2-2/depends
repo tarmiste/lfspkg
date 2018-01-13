@@ -1,0 +1,5 @@
+%DEPENDS%
+evolution-data-server
+libpeas
+python
+

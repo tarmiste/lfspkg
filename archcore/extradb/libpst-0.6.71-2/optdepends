@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+boost-libs: for libpst python interface
+

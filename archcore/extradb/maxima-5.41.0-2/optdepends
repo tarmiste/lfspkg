@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+gnuplot: plotting capabilities
+rlwrap: readline support via /usr/bin/rmaxima
+tk: graphical xmaxima interface
+

@@ -1,0 +1,12 @@
+%MAKEDEPENDS%
+itstool
+libnautilus-extension
+texlive-bin
+gobject-introspection
+intltool
+docbook-xsl
+python
+gtk-doc
+git
+gnome-common
+

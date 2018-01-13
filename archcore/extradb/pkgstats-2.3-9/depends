@@ -1,0 +1,10 @@
+%DEPENDS%
+bash
+curl
+pacman
+sed
+coreutils
+systemd
+awk
+grep
+

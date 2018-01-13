@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+gtk3
+gnutls
+glu
+freeglut
+

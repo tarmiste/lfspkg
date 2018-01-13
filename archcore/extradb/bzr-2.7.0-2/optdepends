@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+python2-paramiko: SFTP support
+

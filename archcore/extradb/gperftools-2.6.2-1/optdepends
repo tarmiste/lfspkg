@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+graphviz: pprof graph generation
+gv: pprof postscript generation
+

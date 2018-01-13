@@ -1,8 +1,0 @@
-%DEPENDS%
-libx11
-libxcursor
-libpng
-
-%MAKEDEPENDS%
-xorg-util-macros
-

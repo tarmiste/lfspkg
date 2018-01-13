@@ -1,0 +1,16 @@
+%MAKEDEPENDS%
+libcap
+libxml2
+zlib
+krb5
+e2fsprogs
+openssl
+readline
+idnkit
+geoip
+dnssec-anchors
+python
+json-c
+python-ply
+libseccomp
+

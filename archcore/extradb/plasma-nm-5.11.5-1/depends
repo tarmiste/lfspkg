@@ -1,0 +1,7 @@
+%DEPENDS%
+plasma-workspace
+modemmanager-qt
+networkmanager-qt
+qca-qt5
+mobile-broadband-provider-info
+

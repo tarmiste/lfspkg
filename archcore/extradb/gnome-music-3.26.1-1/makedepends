@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+intltool
+itstool
+gobject-introspection
+gnome-common
+git
+

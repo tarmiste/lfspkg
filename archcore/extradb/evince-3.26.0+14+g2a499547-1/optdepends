@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+texlive-bin: DVI support
+gvfs: bookmark support and session saving
+

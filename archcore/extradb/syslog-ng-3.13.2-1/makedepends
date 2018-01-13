@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+python2
+libxslt
+json-c
+libmongoc
+librabbitmq-c
+python
+

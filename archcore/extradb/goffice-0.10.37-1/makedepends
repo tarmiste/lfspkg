@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+intltool
+gtk-doc
+gobject-introspection
+autoconf-archive
+git
+

@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+libwpg
+boost
+doxygen
+

@@ -1,0 +1,6 @@
+%DEPENDS%
+glibc
+libffi
+expat
+libxml2
+

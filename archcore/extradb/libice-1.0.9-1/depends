@@ -1,8 +1,0 @@
-%DEPENDS%
-glibc
-xproto>=7.0.18
-
-%MAKEDEPENDS%
-xtrans>=1.2.5
-xorg-util-macros
-

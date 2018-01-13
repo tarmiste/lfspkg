@@ -1,0 +1,15 @@
+%DEPENDS%
+glibc
+libcap
+libseccomp
+libxml2
+zlib
+krb5
+e2fsprogs
+openssl
+readline
+geoip
+idnkit
+dnssec-anchors
+json-c
+

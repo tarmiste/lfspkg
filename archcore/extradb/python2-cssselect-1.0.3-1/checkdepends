@@ -1,0 +1,6 @@
+%CHECKDEPENDS%
+python-pytest-runner
+python2-pytest-runner
+python-lxml
+python2-lxml
+

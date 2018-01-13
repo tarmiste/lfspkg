@@ -1,0 +1,13 @@
+%DEPENDS%
+btrfs-progs
+dosfstools
+dmraid
+gptfdisk
+libbytesize
+lvm2
+mdadm
+parted
+volume_key
+xfsprogs
+kmod
+

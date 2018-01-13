@@ -1,0 +1,12 @@
+%DEPENDS%
+libanjuta
+vte3
+autogen
+devhelp
+glade
+libgda
+subversion
+neon
+vala
+dconf
+

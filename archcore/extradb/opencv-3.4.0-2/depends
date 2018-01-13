@@ -1,0 +1,10 @@
+%DEPENDS%
+intel-tbb
+openexr
+xine-lib
+libdc1394
+gtkglext
+cblas
+lapack
+libgphoto2
+

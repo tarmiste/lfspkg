@@ -1,0 +1,8 @@
+%DEPENDS%
+kauth
+kcodecs
+kconfig
+kguiaddons
+ki18n
+kwidgetsaddons
+

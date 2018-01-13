@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+pkgconfig
+asio
+boost
+gobject-introspection
+libwpd
+libwps
+python2-gobject
+python-gobject
+

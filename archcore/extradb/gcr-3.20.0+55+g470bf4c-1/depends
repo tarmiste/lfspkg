@@ -1,0 +1,6 @@
+%DEPENDS%
+dconf
+gtk3
+libgcrypt
+p11-kit
+

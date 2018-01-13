@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+python2-idna: for Internationalized Domain Names support
+

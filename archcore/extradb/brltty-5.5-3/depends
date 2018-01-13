@@ -1,0 +1,8 @@
+%DEPENDS%
+libxaw
+gpm
+icu
+tcl
+bluez-libs
+espeak
+

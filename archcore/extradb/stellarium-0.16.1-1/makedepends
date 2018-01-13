@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+cmake
+boost
+mesa
+mesa-libgl
+qt5-tools
+

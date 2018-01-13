@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+intltool
+gtk-doc
+gnome-common
+git
+python
+

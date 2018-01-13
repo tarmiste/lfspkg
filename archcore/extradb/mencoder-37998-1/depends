@@ -1,0 +1,17 @@
+%DEPENDS%
+enca
+a52dec
+libvpx
+libx264
+libmng
+libdca
+smbclient
+libmad
+faac
+faad2
+mpg123
+libcdio-paranoia
+rtmpdump
+libdvdnav
+ffmpeg
+

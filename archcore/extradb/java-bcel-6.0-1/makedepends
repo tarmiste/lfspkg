@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+apache-ant
+junit
+

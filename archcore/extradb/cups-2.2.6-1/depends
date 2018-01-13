@@ -1,0 +1,11 @@
+%DEPENDS%
+acl
+pam
+libcups>=2.2.6
+cups-filters
+bc
+dbus
+systemd
+libpaper
+hicolor-icon-theme
+

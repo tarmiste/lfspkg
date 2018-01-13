@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+tk: for using fetchmailconf
+python2: for using fetchmailconf
+

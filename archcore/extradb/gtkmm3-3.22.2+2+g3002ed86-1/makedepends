@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+git
+mm-common
+glibmm-docs
+cairomm-docs
+pangomm-docs
+atkmm-docs
+

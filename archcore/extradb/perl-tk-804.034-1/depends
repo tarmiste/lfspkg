@@ -1,0 +1,8 @@
+%DEPENDS%
+libpng
+libjpeg
+tk
+perl
+perl>=5.26
+perl<5.27
+

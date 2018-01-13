@@ -1,0 +1,5 @@
+%DEPENDS%
+lcms2
+gtk3
+colord
+

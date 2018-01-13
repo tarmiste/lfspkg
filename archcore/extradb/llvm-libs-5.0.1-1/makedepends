@@ -1,0 +1,12 @@
+%MAKEDEPENDS%
+cmake
+libffi
+python2
+ocaml=4.05.0
+python-sphinx
+ocaml-ctypes
+ocaml-findlib
+libedit
+swig
+gcc-multilib
+

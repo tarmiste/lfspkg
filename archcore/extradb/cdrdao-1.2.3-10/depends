@@ -1,0 +1,7 @@
+%DEPENDS%
+gcc-libs
+lame
+libmad
+libvorbis
+libao
+

@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+nvidia-utils=387.34
+linux-lts>=4.9.75
+linux-lts-headers>=4.9.75
+

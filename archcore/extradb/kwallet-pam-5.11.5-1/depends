@@ -1,0 +1,5 @@
+%DEPENDS%
+pam
+libgcrypt
+socat
+

@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+gtk2
+libid3tag
+libvorbis
+libmad
+libmikmod
+jack
+mesa
+audiofile
+doxygen
+

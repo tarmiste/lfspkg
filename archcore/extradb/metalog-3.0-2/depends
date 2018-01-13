@@ -1,6 +1,0 @@
-%DEPENDS%
-pcre
-
-%PROVIDES%
-logger
-

@@ -1,0 +1,7 @@
+%DEPENDS%
+gtk3
+libarchive
+libjpeg-turbo
+libtiff
+lcms2
+

@@ -1,8 +1,0 @@
-%DEPENDS%
-mkinitcpio
-tftp-hpa
-syslinux
-
-%OPTDEPENDS%
-dhcp: for dhcp server usage
-

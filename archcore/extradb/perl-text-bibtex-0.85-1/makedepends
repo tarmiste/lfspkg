@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+perl-module-build
+perl-config-autoconf
+perl-extutils-libbuilder
+

@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+cmake
+ruby
+gperf
+python2
+qt5-doc
+qt5-tools
+

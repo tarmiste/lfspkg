@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+transmission-cli: daemon and web support
+

@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+fontconfig: needed for Java Mauve support - libmawt.so
+java-rhino: for some JavaScript support
+

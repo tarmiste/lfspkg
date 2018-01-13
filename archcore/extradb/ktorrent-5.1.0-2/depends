@@ -1,0 +1,6 @@
+%DEPENDS%
+libktorrent
+kcmutils
+knotifyconfig
+kross
+

@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+doxygen
+graphviz
+gtk3
+meson
+

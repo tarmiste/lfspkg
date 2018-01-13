@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+razor: to identify collaborately-flagged spam
+make: to use sa-compile
+gcc: to use sa-compile
+

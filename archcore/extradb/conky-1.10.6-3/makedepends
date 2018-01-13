@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+cmake
+docbook2x
+docbook-xml
+man-db
+git
+

@@ -1,0 +1,6 @@
+%DEPENDS%
+libxml2
+polkit
+libldap
+dbus-glib
+

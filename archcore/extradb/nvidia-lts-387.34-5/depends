@@ -1,0 +1,5 @@
+%DEPENDS%
+linux-lts>=4.9.75
+nvidia-utils=387.34
+libgl
+

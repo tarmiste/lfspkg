@@ -1,0 +1,8 @@
+%DEPENDS%
+desktop-file-utils
+hicolor-icon-theme
+mkvtoolnix-cli
+qt5-multimedia
+shared-mime-info
+xdg-utils
+

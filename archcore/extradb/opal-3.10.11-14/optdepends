@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+ffmpeg: h263 and mpeg4 plugins
+

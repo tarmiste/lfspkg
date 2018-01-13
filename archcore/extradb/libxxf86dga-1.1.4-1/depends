@@ -1,7 +1,0 @@
-%DEPENDS%
-libxext
-xf86dgaproto
-
-%MAKEDEPENDS%
-xorg-util-macros
-

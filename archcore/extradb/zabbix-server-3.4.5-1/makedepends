@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+postgresql-libs
+libxml2
+unixodbc
+net-snmp
+libmariadbclient
+libldap
+libevent
+

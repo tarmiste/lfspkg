@@ -1,0 +1,11 @@
+%DEPENDS%
+qt5-svg
+texlive-core
+python2
+imagemagick
+enchant
+boost-libs
+libmythes
+file
+hicolor-icon-theme
+

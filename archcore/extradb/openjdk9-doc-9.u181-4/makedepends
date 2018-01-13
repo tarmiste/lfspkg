@@ -1,0 +1,15 @@
+%MAKEDEPENDS%
+jdk8-openjdk
+cpio
+unzip
+zip
+libelf
+libcups
+libx11
+libxrender
+libxtst
+libxt
+alsa-lib
+pandoc
+graphviz
+

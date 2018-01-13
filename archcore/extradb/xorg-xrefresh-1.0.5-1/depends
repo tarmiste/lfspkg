@@ -1,6 +1,0 @@
-%DEPENDS%
-libx11
-
-%MAKEDEPENDS%
-xorg-util-macros
-

@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+librsvg
+gtk2
+poppler-glib
+libspectre
+gtk-doc
+valgrind
+git
+

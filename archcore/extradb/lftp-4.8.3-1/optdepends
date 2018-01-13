@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+perl: needed for convert-netscape-cookies and verify-file
+

@@ -1,0 +1,8 @@
+%DEPENDS%
+kdepim-apps-libs
+kmailtransport
+libgravatar
+kidentitymanagement
+kmbox
+qt5-webengine
+

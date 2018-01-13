@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+pkgconfig
+intltool
+gobject-introspection
+itstool
+vala
+gnome-common
+git
+appstream-glib
+gnome-video-effects
+

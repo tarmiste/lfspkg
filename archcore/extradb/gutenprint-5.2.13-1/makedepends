@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+gimp
+gtk2
+cups
+ghostscript
+dialog
+doxygen
+docbook-utils
+texi2html
+texlive-bin
+

@@ -1,7 +1,0 @@
-%DEPENDS%
-scim
-libchewing
-
-%MAKEDEPENDS%
-intltool
-

@@ -1,0 +1,5 @@
+%DEPENDS%
+openjade
+docbook-dsssl
+docbook-sgml31
+

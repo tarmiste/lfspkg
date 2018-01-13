@@ -1,0 +1,7 @@
+%OPTDEPENDS%
+qt5-base: support for qt5 input method
+qt4: support for qt4 input method
+gtk3: support for gtk3 input method
+anthy: support for anthy input method
+libchewing: support for chewing input method
+

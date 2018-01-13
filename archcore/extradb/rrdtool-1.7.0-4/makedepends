@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+intltool
+ruby
+python2-setuptools
+tcl
+lua51
+

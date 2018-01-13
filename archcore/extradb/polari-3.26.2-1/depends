@@ -1,0 +1,9 @@
+%DEPENDS%
+gjs
+gtk3
+telepathy-glib
+telepathy-idle
+telepathy-mission-control
+telepathy-logger
+gspell
+

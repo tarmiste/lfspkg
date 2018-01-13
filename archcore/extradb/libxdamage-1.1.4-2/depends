@@ -1,7 +1,0 @@
-%DEPENDS%
-libxfixes>=4.0.4
-damageproto>=1.2.0
-
-%MAKEDEPENDS%
-pkg-config
-

@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+networkmanager: Location detection via available WiFi networks
+libnotify: Notification integration
+pulseaudio: Audio support
+speech-dispatcher: Text-to-Speech
+

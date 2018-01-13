@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+openmp: OpenMP support in clang with -fopenmp
+python2: for scan-view and git-clang-format
+

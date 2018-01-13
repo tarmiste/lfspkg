@@ -1,0 +1,6 @@
+%DEPENDS%
+perl
+libpng
+libtiff
+libxml2
+

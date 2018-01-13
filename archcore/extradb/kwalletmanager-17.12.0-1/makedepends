@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+python
+kcmutils
+kdoctools
+

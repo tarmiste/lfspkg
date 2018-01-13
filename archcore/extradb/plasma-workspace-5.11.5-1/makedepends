@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+kdoctools
+gpsd
+baloo
+appstream-qt
+krunner
+networkmanager-qt
+kdesignerplugin
+

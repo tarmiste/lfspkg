@@ -1,6 +1,0 @@
-%DEPENDS%
-python2-pygame
-
-%MAKEDEPENDS%
-netpbm
-

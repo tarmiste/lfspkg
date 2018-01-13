@@ -1,0 +1,13 @@
+%DEPENDS%
+libdrm
+wayland
+libxxf86vm
+libxdamage
+libxshmfence
+libelf
+libomxil-bellagio
+libunwind
+llvm-libs
+lm_sensors
+libglvnd
+

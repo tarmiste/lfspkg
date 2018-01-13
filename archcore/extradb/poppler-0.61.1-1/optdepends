@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+poppler-data: encoding data to display PDF documents containing CJK characters
+

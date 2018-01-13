@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+intltool
+pkgconfig
+gtk-doc
+gobject-introspection
+autoconf-archive
+git
+valgrind
+bash-completion
+

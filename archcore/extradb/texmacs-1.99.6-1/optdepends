@@ -1,0 +1,7 @@
+%OPTDEPENDS%
+transfig: convert images using fig2ps
+gawk: conversion of some files
+ghostscript: rendering ps files
+imagemagick: convert images
+aspell: spell checking
+

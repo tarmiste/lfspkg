@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+vala
+git
+autoconf-archive
+

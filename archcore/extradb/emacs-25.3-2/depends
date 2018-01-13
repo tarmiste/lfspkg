@@ -1,0 +1,15 @@
+%DEPENDS%
+librsvg
+gpm
+giflib
+libxpm
+libotf
+m17n-lib
+gtk3
+hicolor-icon-theme
+gconf
+desktop-file-utils
+alsa-lib
+libmagick6
+gnutls
+

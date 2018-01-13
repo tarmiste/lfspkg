@@ -1,0 +1,5 @@
+%DEPENDS%
+signond
+libaccounts-qt
+qt5-declarative
+

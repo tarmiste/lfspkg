@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+python
+kdoctools
+eigen
+mesa
+kdesignerplugin
+qt5-tools
+

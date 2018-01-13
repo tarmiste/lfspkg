@@ -1,0 +1,10 @@
+%DEPENDS%
+glibc
+libxml2
+libcap
+libseccomp
+openssl
+geoip
+json-c
+bind-tools
+

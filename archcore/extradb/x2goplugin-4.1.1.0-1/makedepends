@@ -1,0 +1,12 @@
+%MAKEDEPENDS%
+qt4
+libldap
+libcups
+nxproxy
+libssh
+libxpm
+man2html
+hicolor-icon-theme
+xdg-utils
+xorg-xauth
+

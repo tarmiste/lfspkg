@@ -1,0 +1,13 @@
+%MAKEDEPENDS%
+alsa-lib
+mesa
+libpulse
+libxrandr
+libxinerama
+wayland
+libxkbcommon
+wayland-protocols
+ibus
+fcitx
+libxss
+

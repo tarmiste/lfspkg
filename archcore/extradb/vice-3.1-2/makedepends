@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+xorg-bdftopcf
+xorg-mkfontdir
+libpcap
+libxaw
+ffmpeg
+

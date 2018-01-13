@@ -1,0 +1,11 @@
+%OPTDEPENDS%
+python2-dbus: dbus support
+gtkspell: for spelling support
+libxss: for idle module
+notification-daemon: for desktop notification
+python2-gnomekeyring: for GnomeKeyring support
+python2-crypto: support for E2E encryption
+python2-docutils: for RST generator support
+gupnp-igd: for UPnP-IGD support
+python2-gnupg: for PGP encryption
+

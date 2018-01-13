@@ -1,0 +1,14 @@
+%MAKEDEPENDS%
+intltool
+ruby
+lua
+libopenraw
+openexr
+mesa
+glu
+ffmpeg
+librsvg
+jasper
+exiv2
+vala
+

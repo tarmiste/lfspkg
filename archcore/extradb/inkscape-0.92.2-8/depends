@@ -1,0 +1,16 @@
+%DEPENDS%
+gc
+gsl
+gtkmm
+gtkspell
+libmagick6
+libxslt
+poppler-glib
+popt
+potrace
+ttf-dejavu
+python2
+libcdr
+desktop-file-utils
+hicolor-icon-theme
+

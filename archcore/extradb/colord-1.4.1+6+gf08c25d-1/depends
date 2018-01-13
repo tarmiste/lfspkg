@@ -1,0 +1,11 @@
+%DEPENDS%
+lcms2
+libgusb
+polkit
+sqlite
+systemd
+dconf
+dbus
+libgudev
+shared-mime-info
+

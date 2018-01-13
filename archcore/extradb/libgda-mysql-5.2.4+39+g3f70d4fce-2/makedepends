@@ -1,0 +1,14 @@
+%MAKEDEPENDS%
+glade
+libmariadbclient
+postgresql-libs
+libfbclient
+jdk8-openjdk
+intltool
+gobject-introspection
+gtk-doc
+vala
+itstool
+gnome-common
+git
+

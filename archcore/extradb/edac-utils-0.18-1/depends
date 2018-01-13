@@ -1,8 +1,0 @@
-%DEPENDS%
-perl
-sysfsutils
-dmidecode
-
-%MAKEDEPENDS%
-git
-

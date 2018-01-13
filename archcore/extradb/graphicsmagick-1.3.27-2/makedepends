@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+perl
+jasper
+libpng
+libwmf
+libxml2
+libtiff
+libwebp
+

@@ -1,0 +1,9 @@
+%DEPENDS%
+libxfont2
+libunwind
+libsystemd
+pixman
+xorg-server-common
+xorg-xauth
+libgl
+

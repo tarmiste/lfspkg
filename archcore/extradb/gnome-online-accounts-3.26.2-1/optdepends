@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+gvfs-goa: Virtual file systems (e.g. OwnCloud)
+gvfs-google: Google Drive
+

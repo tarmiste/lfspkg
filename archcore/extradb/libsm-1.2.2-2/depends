@@ -1,8 +1,0 @@
-%DEPENDS%
-libice
-util-linux
-
-%MAKEDEPENDS%
-xorg-util-macros
-xtrans
-

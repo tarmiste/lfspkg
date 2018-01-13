@@ -1,0 +1,15 @@
+%DEPENDS%
+dconf
+gtk2
+gtk3
+hicolor-icon-theme
+libnotify
+python-dbus
+python-gobject
+iso-codes
+python2-gobject2
+python2-dbus
+python2-gobject
+librsvg
+libibus=1.5.17
+

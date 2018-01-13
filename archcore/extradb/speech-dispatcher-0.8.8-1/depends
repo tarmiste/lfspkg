@@ -1,0 +1,8 @@
+%DEPENDS%
+libspeechd=0.8.8-1
+libltdl
+python-xdg
+dotconf
+libpulse
+libao
+

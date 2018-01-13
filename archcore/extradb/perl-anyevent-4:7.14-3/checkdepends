@@ -1,0 +1,6 @@
+%CHECKDEPENDS%
+glib-perl
+perl-async-interrupt
+perl-ev
+perl-net-ssleay
+

@@ -1,0 +1,12 @@
+%OPTDEPENDS%
+gst-plugins-ugly: Extra media codecs
+gst-plugins-bad: Extra media codecs
+gst-libav: Extra media codecs
+brasero: Audio CD Recorder plugin
+libdmapsharing: DAAP Music Sharing plugin
+grilo-plugins: Grilo media browser plugin
+lirc: LIRC plugin
+libgpod: Portable Players - iPod plugin
+libmtp: Portable Players - MTP plugin
+gvfs-mtp: Portable Players - Android plugin
+

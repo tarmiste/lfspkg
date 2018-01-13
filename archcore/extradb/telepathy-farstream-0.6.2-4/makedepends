@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+dbus-glib
+gobject-introspection
+python2
+gtk-doc
+git
+glib2-docs
+

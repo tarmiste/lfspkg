@@ -1,0 +1,6 @@
+%DEPENDS%
+gcc-libs
+popt
+libuuid.so=1-64
+libncursesw.so=6-64
+

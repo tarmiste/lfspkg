@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+python
+flatpak
+xmlto
+docbook-xsl
+git
+

@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+libxml2
+lua
+

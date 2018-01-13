@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+rest
+json-glib
+gobject-introspection
+gtk-doc
+git
+

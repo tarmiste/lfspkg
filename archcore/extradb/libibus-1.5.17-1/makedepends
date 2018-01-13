@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+gobject-introspection
+vala
+intltool
+gnome-common
+gtk-doc
+gconf
+qt5-base
+cldr-emoji-annotation
+unicode-emoji
+

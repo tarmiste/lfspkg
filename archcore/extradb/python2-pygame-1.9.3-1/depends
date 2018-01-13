@@ -1,0 +1,7 @@
+%DEPENDS%
+sdl_mixer
+sdl_ttf
+sdl_image
+python2
+portmidi
+

@@ -1,0 +1,5 @@
+%DEPENDS%
+kdbusaddons
+kconfig
+kcrash
+

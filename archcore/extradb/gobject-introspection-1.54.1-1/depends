@@ -1,0 +1,5 @@
+%DEPENDS%
+python
+python-mako
+gobject-introspection-runtime=1.54.1-1
+

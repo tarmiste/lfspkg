@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+intltool
+doxygen
+gnome-doc-utils
+python
+

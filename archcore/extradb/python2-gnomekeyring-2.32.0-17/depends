@@ -1,0 +1,4 @@
+%DEPENDS%
+pygtk
+libgnome-keyring
+

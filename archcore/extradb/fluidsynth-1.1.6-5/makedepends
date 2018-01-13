@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+cmake
+ladspa
+doxygen
+

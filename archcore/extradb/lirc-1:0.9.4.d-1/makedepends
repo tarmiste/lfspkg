@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+help2man
+alsa-lib
+libx11
+libxslt
+python
+

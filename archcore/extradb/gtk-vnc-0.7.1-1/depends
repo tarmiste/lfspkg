@@ -1,0 +1,6 @@
+%DEPENDS%
+libgcrypt
+gtk3
+gnutls
+libpulse
+

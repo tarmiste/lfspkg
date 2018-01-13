@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+perl-font-ttf
+perl-sort-versions
+fontconfig
+adobe-source-sans-pro-fonts
+ttf-liberation
+ghostscript
+

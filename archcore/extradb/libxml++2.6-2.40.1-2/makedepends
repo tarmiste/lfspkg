@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+pkgconfig
+glibmm-docs
+libxml2
+glibmm
+

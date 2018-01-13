@@ -1,0 +1,12 @@
+%MAKEDEPENDS%
+qt5-tools
+python2
+pciutils
+libxtst
+libxcursor
+libxrandr
+libxss
+libxcomposite
+gperf
+nss
+

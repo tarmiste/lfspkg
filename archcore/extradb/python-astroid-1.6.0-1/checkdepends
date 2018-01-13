@@ -1,0 +1,10 @@
+%CHECKDEPENDS%
+python-dateutil
+python2-dateutil
+python-pytest
+python2-pytest
+python-numpy
+python2-numpy
+python-nose
+python2-nose
+

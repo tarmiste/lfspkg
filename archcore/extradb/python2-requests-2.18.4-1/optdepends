@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+python2-ndg-httpsclient: HTTPS requests with SNI support
+python2-grequests: asynchronous requests with gevent
+python2-pysocks: SOCKS proxy support
+

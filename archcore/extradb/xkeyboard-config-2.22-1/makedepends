@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+intltool
+xorg-xkbcomp
+libxslt
+

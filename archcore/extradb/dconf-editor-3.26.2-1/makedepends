@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+vala
+intltool
+appstream-glib
+git
+

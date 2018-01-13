@@ -1,0 +1,15 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+gpsd
+kdoctools
+knewstuff
+kparts
+krunner
+libwlocate
+phonon-qt5
+plasma-workspace
+qt5-serialport
+qt5-tools
+qt5-webkit
+shapelib
+

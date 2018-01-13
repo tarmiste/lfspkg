@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+perl-tk: for ClickToFocus support
+perl-x11-protocol: for ClickToFocus support
+

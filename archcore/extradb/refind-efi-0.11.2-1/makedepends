@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+gnu-efi-libs
+git
+

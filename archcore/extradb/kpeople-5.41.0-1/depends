@@ -1,0 +1,6 @@
+%DEPENDS%
+kservice
+kwidgetsaddons
+kitemviews
+qt5-declarative
+

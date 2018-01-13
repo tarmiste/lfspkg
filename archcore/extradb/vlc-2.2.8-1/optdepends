@@ -1,0 +1,33 @@
+%OPTDEPENDS%
+avahi: for service discovery using bonjour protocol
+libnotify: for notification plugin
+gtk2: for notify plugin
+ncurses: for ncurses interface support
+libdvdcss: for decoding encrypted DVDs
+lirc: for lirc plugin
+libavc1394: for devices using the 1394ta AV/C
+libdc1394: for IEEE 1394 plugin
+kdelibs: KDE Solid hardware integration
+libva-vdpau-driver: vdpau back-end for nvidia
+libva-intel-driver: back-end for intel cards
+libbluray: for Blu-Ray support
+flac: for Free Lossless Audio Codec plugin
+portaudio: for portaudio support
+twolame: for TwoLAME mpeg2 encoder plugin
+projectm: for ProjectM visualisation plugin
+libcaca: for colored ASCII art video output
+libgme: for libgme plugin
+librsvg: for SVG plugin
+libgoom2: for libgoom plugin
+vcdimager: navigate VCD with libvcdinfo
+aalib: for ASCII art plugin
+libmtp: for MTP devices support
+smbclient: for SMB access plugin
+libcdio: for audio CD playback support
+ttf-freefont: for subtitle font
+ttf-dejavu: for subtitle font
+opus: for opus support
+libssh2: for sftp support
+lua-socket: for http interface
+qt4: for the GUI
+

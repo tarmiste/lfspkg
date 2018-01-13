@@ -1,0 +1,10 @@
+%DEPENDS%
+gtk3
+dconf
+libarchive
+file
+json-glib
+libnotify
+zip
+unzip
+

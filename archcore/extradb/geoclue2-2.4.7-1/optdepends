@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+geoip: geoip-lookup server binary
+

@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+python2: einabench-cmp
+libreoffice: thumbnailing for DOC/PPT/XLS files
+

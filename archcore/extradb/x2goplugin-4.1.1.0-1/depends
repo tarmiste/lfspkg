@@ -1,0 +1,7 @@
+%DEPENDS%
+qt4
+libcups
+nxproxy
+libssh
+libxpm
+

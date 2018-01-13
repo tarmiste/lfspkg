@@ -1,6 +1,0 @@
-%DEPENDS%
-libfontenc
-
-%MAKEDEPENDS%
-xorg-util-macros
-

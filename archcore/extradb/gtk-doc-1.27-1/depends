@@ -1,0 +1,7 @@
+%DEPENDS%
+docbook-xsl
+docbook-xml
+source-highlight
+glib2-docs
+python-six
+

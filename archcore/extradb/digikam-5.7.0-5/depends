@@ -1,0 +1,14 @@
+%DEPENDS%
+liblqr
+libkipi
+lensfun
+opencv
+akonadi-contacts
+knotifyconfig
+libksane
+kfilemetadata
+qtav
+marble-common
+threadweaver
+kcalcore
+

@@ -1,0 +1,8 @@
+%OPTDEPENDS%
+python-setuptools
+python-pip
+sqlite
+mpdecimal: for decimal
+xz: for lzma
+tk: for tkinter
+

@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+python-gobject
+gtk-doc
+gobject-introspection
+

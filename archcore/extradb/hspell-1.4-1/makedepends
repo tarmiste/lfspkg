@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+glibc
+zlib
+perl
+hunspell
+gawk
+

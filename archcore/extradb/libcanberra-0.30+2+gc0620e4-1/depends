@@ -1,0 +1,7 @@
+%DEPENDS%
+libvorbis
+libltdl
+alsa-lib
+tdb
+sound-theme-freedesktop
+

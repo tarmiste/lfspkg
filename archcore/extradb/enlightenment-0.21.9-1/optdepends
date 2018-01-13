@@ -1,0 +1,6 @@
+%OPTDEPENDS%
+connman: network module
+acpid: power events on laptop lid close
+geoip-database: geolocation module
+xorg-server-xwayland: xwayland support
+

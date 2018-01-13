@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+python
+libxml2
+

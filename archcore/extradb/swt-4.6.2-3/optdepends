@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+glu
+gtk2
+gtk3
+

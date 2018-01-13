@@ -1,0 +1,5 @@
+%DEPENDS%
+xcb-util-cursor
+libkipi
+purpose
+

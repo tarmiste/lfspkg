@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+kdelibs
+cmake
+automoc4
+

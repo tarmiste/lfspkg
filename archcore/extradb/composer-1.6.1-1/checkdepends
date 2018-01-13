@@ -1,0 +1,5 @@
+%CHECKDEPENDS%
+git
+mercurial
+parallel
+

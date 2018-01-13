@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+exo
+gobject-introspection
+intltool
+

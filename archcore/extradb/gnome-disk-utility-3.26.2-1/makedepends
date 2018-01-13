@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+docbook-xsl
+appstream-glib
+git
+meson
+

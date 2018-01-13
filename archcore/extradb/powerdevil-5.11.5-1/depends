@@ -1,0 +1,6 @@
+%DEPENDS%
+plasma-workspace
+bluez-qt
+networkmanager-qt
+libkscreen
+

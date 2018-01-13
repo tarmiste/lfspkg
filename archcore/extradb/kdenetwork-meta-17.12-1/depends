@@ -1,0 +1,9 @@
+%DEPENDS%
+kdenetwork-filesharing
+kget
+krdc
+krfb
+zeroconf-ioslave
+kio-extras
+telepathy-kde-meta
+

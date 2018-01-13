@@ -1,0 +1,17 @@
+%MAKEDEPENDS%
+python-sip
+python2-sip
+python-opengl
+python2-opengl
+python2-dbus
+python-dbus
+qt5-connectivity
+qt5-multimedia
+qt5-tools
+qt5-serialport
+qt5-svg
+qt5-webengine
+qt5-webkit
+qt5-websockets
+qt5-x11extras
+

@@ -1,0 +1,8 @@
+%DEPENDS%
+python
+gtk3
+python-atspi
+ipython
+libwnck3
+python-cairo
+

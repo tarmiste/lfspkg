@@ -1,0 +1,6 @@
+%DEPENDS%
+libxslt
+python2
+docbook-xml
+rarian
+

@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+intltool
+libxslt
+libxml2
+itstool
+git
+

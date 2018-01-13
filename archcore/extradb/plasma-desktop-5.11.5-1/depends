@@ -1,0 +1,13 @@
+%DEPENDS%
+polkit-kde-agent
+libcanberra
+libxkbfile
+kmenuedit
+appstream-qt
+systemsettings
+ksysguard
+kpeople
+baloo
+qt5-graphicaleffects
+knetattach
+

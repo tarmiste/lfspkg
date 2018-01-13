@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+perl-file-slurp
+perl-locale-maketext-lexicon
+perl-module-build
+

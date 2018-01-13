@@ -1,6 +1,0 @@
-%DEPENDS%
-shared-mime-info
-
-%MAKEDEPENDS%
-intltool
-

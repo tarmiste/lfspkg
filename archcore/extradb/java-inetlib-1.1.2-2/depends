@@ -1,6 +1,0 @@
-%DEPENDS%
-java-runtime-headless
-
-%MAKEDEPENDS%
-java-environment
-

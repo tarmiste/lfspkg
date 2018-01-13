@@ -1,0 +1,10 @@
+%DEPENDS%
+pam
+libxmu
+libpng
+libjpeg
+libxft
+libxrandr
+xorg-xauth
+ttf-font
+

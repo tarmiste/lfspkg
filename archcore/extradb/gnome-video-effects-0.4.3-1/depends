@@ -1,0 +1,5 @@
+%DEPENDS%
+gst-plugins-good
+gst-plugins-bad
+frei0r-plugins
+

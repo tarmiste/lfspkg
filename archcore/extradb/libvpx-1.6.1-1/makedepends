@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+yasm
+git
+

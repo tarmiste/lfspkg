@@ -1,0 +1,6 @@
+%DEPENDS%
+llvm-libs
+libxml2
+python2
+python2-six
+

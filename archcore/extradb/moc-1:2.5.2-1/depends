@@ -1,0 +1,8 @@
+%DEPENDS%
+libmad
+libid3tag
+jack
+curl
+libltdl
+file
+

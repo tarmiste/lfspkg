@@ -1,0 +1,8 @@
+%OPTDEPENDS%
+jasper: jp2 module
+libpng: png module
+libwmf: wmf module
+libxml2: msl, svg, url modules
+libtiff: ps2, ps3, tiff modules
+ghostscript: pdf, ps modules
+

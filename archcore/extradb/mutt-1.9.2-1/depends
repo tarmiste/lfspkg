@@ -1,0 +1,10 @@
+%DEPENDS%
+gpgme
+ncurses
+openssl
+libsasl
+gdbm
+libidn
+mime-types
+krb5
+

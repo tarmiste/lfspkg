@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+intltool
+gobject-introspection
+python
+vala
+libxslt
+gnome-common
+git
+

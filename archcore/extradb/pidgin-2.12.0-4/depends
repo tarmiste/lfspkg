@@ -1,0 +1,10 @@
+%DEPENDS%
+libpurple
+startup-notification
+gtkspell
+libxss
+libsm
+gst-plugins-base
+gst-plugins-good
+hicolor-icon-theme
+

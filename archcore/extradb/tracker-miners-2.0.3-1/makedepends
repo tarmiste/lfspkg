@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+intltool
+git
+python
+

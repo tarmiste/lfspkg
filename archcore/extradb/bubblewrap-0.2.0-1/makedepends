@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+libxslt
+docbook-xsl
+

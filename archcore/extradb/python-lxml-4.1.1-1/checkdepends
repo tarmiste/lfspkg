@@ -1,0 +1,10 @@
+%CHECKDEPENDS%
+python-cssselect
+python2-cssselect
+python-html5lib
+python2-html5lib
+python-beautifulsoup4
+python2-beautifulsoup4
+cython
+cython2
+

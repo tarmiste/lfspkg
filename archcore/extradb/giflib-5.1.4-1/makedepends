@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+xmlto
+docbook-xml
+docbook-xsl
+

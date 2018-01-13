@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+qt5-doc: documentation
+qt5-webkit: for Qt Assistant
+

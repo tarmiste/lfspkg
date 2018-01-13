@@ -1,0 +1,7 @@
+%DEPENDS%
+python-gobject
+python-cairo
+gtksourceview3
+gsettings-desktop-schemas
+dconf
+

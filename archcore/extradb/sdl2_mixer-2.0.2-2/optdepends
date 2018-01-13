@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+fluidsynth: MIDI software synth, replaces built-in timidity
+

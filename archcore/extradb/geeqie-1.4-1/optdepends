@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+librsvg: SVG rendering
+fbida: for jpeg rotation
+

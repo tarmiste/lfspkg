@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+encfs: to use encFS for encryption
+cryfs: to use cryFS for encryption
+

@@ -1,0 +1,15 @@
+%DEPENDS%
+ark
+filelight
+kcalc
+kcharselect
+kdebugsettings
+kdf
+kfloppy
+kgpg
+kteatime
+ktimer
+kwalletmanager
+print-manager
+sweeper
+

@@ -1,7 +1,0 @@
-%DEPENDS%
-libxext
-xf86vidmodeproto
-
-%MAKEDEPENDS%
-xorg-util-macros
-

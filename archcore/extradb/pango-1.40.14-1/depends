@@ -1,0 +1,6 @@
+%DEPENDS%
+libthai
+cairo
+libxft
+harfbuzz
+

@@ -1,0 +1,9 @@
+%OPTDEPENDS%
+gpsd: log coordinates of detected networks
+wireshark-cli: provide OUI files used to determine device manufacturer
+wireshark-cli: mergecap, to merge multiple capture files
+sox: provide the default kismet sound playback binary
+festival: text-to-speech support
+flite: alternative/lightweight text-to-speech support
+ruby: ruby interface
+

@@ -1,0 +1,8 @@
+%DEPENDS%
+openssl
+libaio
+zlib
+lz4
+lzo
+xz
+

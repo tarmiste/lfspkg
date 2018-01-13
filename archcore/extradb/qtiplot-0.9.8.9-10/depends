@@ -1,0 +1,10 @@
+%DEPENDS%
+muparser
+gsl
+boost-libs
+shared-mime-info
+glu
+liborigin2
+qt-assistant-compat
+tamu-anova
+

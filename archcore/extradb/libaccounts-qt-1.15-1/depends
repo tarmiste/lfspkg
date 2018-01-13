@@ -1,0 +1,4 @@
+%DEPENDS%
+libaccounts-glib
+qt5-base
+

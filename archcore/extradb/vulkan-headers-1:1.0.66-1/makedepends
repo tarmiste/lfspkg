@@ -1,0 +1,12 @@
+%MAKEDEPENDS%
+asciidoctor
+python3
+dblatex
+source-highlight
+cmake
+ghostscript
+git
+lyx
+pango
+gdk-pixbuf2
+

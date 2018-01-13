@@ -1,0 +1,7 @@
+%DEPENDS%
+clutter-gtk
+libcanberra
+librsvg
+libgnome-games-support
+libgee
+

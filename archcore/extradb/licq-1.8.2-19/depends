@@ -1,0 +1,7 @@
+%DEPENDS%
+boost-libs
+gpgme
+libxss
+qt4
+openssl-1.0
+

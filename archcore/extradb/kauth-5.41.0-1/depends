@@ -1,0 +1,4 @@
+%DEPENDS%
+kcoreaddons
+polkit-qt5
+

@@ -1,8 +1,0 @@
-%DEPENDS%
-imlib2
-libcdaudio
-libgl
-
-%MAKEDEPENDS%
-mesa
-

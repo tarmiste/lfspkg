@@ -1,0 +1,13 @@
+%DEPENDS%
+flatpak
+binutils
+elfutils
+unzip
+tar
+git
+bzr
+patch
+rpmextract
+cpio
+appstream-glib
+

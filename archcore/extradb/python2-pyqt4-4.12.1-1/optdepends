@@ -1,0 +1,5 @@
+%OPTDEPENDS%
+phonon-qt4: enable audio and video in PyQt applications
+python2-opengl: enable OpenGL 3D graphics in PyQt applications
+qt-assistant-compat: add PyQt online help in Qt Assistant
+

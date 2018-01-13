@@ -1,0 +1,14 @@
+%DEPENDS%
+libxfont2
+libgl
+libepoxy
+libunwind
+libsystemd
+libxv
+pixman
+xorg-server-common
+xcb-util-image
+xcb-util-renderutil
+xcb-util-wm
+xcb-util-keysyms
+

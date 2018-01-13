@@ -1,0 +1,10 @@
+%DEPENDS%
+liblrdf
+liblo
+lilv
+suil
+taglib
+aubio
+rubberband
+gtkmm
+

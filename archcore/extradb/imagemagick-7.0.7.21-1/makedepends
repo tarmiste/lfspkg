@@ -1,0 +1,16 @@
+%MAKEDEPENDS%
+ghostscript
+openexr
+libwmf
+librsvg
+libxml2
+openjpeg2
+libraw
+opencl-headers
+libwebp
+chrpath
+ocl-icd
+glu
+ghostpcl
+ghostxps
+

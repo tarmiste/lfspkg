@@ -1,0 +1,5 @@
+%DEPENDS%
+python-markupsafe
+python-beaker
+python-setuptools
+

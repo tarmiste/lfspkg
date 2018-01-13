@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+cmake
+automoc4
+

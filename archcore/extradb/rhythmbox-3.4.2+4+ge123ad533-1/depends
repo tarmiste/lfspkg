@@ -1,0 +1,15 @@
+%DEPENDS%
+dconf
+gst-plugins-base
+gst-plugins-good
+libsoup
+json-glib
+libnotify
+libpeas
+media-player-info
+totem-plparser
+tdb
+python-gobject
+libgudev
+grilo
+

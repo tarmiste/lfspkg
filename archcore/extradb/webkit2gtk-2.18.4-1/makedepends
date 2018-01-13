@@ -1,0 +1,11 @@
+%MAKEDEPENDS%
+gtk2
+gperf
+gobject-introspection
+ruby
+gtk-doc
+cmake
+python
+python2
+ninja
+

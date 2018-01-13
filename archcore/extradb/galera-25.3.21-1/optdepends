@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+rsync: transfer database state to a newly joined node with rsync
+

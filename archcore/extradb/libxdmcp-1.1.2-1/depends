@@ -1,7 +1,0 @@
-%DEPENDS%
-xproto
-glibc
-
-%MAKEDEPENDS%
-xorg-util-macros
-

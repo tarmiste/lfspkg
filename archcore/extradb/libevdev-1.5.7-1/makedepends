@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+python2
+check
+valgrind
+doxygen
+

@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+intltool
+espeak
+libltdl
+python-xdg
+dotconf
+libpulse
+libao
+

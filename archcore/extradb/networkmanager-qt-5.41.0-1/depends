@@ -1,0 +1,4 @@
+%DEPENDS%
+networkmanager
+qt5-base
+

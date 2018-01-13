@@ -1,0 +1,11 @@
+%DEPENDS%
+libtiff
+libjpeg
+libpng
+cairo
+giflib
+glib2
+libexif
+zlib
+freetype2
+

@@ -1,0 +1,4 @@
+%DEPENDS%
+polkit
+qt5-base
+

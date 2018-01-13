@@ -1,0 +1,6 @@
+%DEPENDS%
+libnm
+libsecret
+ppp=2.4.7
+pptpclient
+

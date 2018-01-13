@@ -1,0 +1,6 @@
+%DEPENDS%
+zlib
+openssl
+libssh2
+curl
+

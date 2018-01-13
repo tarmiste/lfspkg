@@ -1,0 +1,6 @@
+%DEPENDS%
+bash
+coreutils
+pacman
+util-linux
+

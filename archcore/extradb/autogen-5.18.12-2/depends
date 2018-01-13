@@ -1,0 +1,4 @@
+%DEPENDS%
+guile2.0
+libxml2
+

@@ -1,5 +1,0 @@
-%DEPENDS%
-glib2
-intltool
-gtk-doc
-

@@ -1,0 +1,11 @@
+%DEPENDS%
+gtk3
+python-gobject
+python-dbus
+python-cairo
+python-mutagen
+gst-plugins-base
+gst-plugins-good
+gst-plugins-ugly
+python-feedparser
+

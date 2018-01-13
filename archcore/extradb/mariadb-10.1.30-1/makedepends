@@ -1,0 +1,12 @@
+%MAKEDEPENDS%
+cmake
+zlib
+libaio
+libxml2
+openssl
+jemalloc
+lz4
+boost
+libevent
+systemd
+

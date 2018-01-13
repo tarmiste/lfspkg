@@ -1,7 +1,0 @@
-%DEPENDS%
-gtk2
-
-%MAKEDEPENDS%
-gtk-doc
-gobject-introspection
-

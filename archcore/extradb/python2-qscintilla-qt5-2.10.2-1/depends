@@ -1,0 +1,4 @@
+%DEPENDS%
+python-qscintilla-qt5-common
+python2-pyqt5
+

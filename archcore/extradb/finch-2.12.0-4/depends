@@ -1,0 +1,5 @@
+%DEPENDS%
+libpurple
+libx11
+python
+

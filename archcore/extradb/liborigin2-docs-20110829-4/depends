@@ -1,8 +1,0 @@
-%PROVIDES%
-liborigin
-
-%MAKEDEPENDS%
-doxygen
-qt4
-boost
-

@@ -1,0 +1,8 @@
+%DEPENDS%
+gtk2
+gst-plugins-base-libs
+libsm
+libxxf86vm
+wxgtk-common
+libnotify
+

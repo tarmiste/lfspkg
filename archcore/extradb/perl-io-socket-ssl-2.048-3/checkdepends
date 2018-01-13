@@ -1,0 +1,3 @@
+%CHECKDEPENDS%
+perl-io-socket-inet6
+

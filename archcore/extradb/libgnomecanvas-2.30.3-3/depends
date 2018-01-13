@@ -1,8 +1,0 @@
-%DEPENDS%
-libglade>=2.6.4
-libart-lgpl>=2.3.21
-
-%MAKEDEPENDS%
-pkg-config
-intltool
-

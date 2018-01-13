@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+cairo: hb-view program
+

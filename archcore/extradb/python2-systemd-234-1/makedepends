@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+systemd
+python
+python2
+git
+

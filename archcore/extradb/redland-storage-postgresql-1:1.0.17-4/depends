@@ -1,0 +1,4 @@
+%DEPENDS%
+redland
+postgresql-libs
+

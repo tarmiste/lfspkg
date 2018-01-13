@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+itstool
+intltool
+git
+yelp-tools
+

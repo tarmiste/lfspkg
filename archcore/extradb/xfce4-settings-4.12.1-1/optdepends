@@ -1,0 +1,3 @@
+%OPTDEPENDS%
+libcanberra: for sound control
+

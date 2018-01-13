@@ -1,0 +1,10 @@
+%OPTDEPENDS%
+maxima: Maxima backend
+octave: Octave backend
+r: R backend
+luajit: LUA backend
+python: Python 3 backend
+python2: Python 2 backend
+sagemath: SageMath backend
+julia: Julia backend
+

@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+openmpi: MPI support
+lib32-glibc: 32-bit ABI support
+

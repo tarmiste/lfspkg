@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+frameworkintegration
+kdelibs
+automoc4
+kdecoration
+kcmutils
+plasma-framework
+python
+

@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+python-pyqt5
+python-gobject
+sane
+rpcbind
+cups
+libusb
+

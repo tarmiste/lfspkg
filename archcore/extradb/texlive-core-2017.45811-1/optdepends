@@ -1,0 +1,11 @@
+%OPTDEPENDS%
+dialog: for texconfig
+ghostscript: for epstopdf, epspdf and other ConTeXt tools
+java-runtime: for utilities like arara
+perl-tk: for texdoctk
+psutils: to manipulate the output of dvips
+python: for pythontex
+python2: for dviasm
+ruby: for old ConTeXT MkII and epspdf
+t1utils: can be useful when installing Type1 fonts
+

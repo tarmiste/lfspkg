@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+boost
+cmake
+gtest
+git
+java-environment>=9
+ninja
+

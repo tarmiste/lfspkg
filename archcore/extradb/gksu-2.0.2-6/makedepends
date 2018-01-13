@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+gtk-doc
+intltool
+

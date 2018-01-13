@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+gtk3
+intltool
+curl
+qt5-base
+libevent
+systemd
+qt5-tools
+

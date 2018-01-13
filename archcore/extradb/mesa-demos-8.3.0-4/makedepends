@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+mesa
+freetype2
+git
+

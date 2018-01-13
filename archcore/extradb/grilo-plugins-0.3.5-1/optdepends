@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+dleyna-server: DLNA plugin
+tracker-miners: Tracker plugin
+

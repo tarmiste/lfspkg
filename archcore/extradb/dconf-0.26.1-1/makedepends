@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+vala
+dbus
+git
+gtk-doc
+python
+

@@ -1,0 +1,5 @@
+%DEPENDS%
+xdg-utils
+gnome-mime-data
+hicolor-icon-theme
+

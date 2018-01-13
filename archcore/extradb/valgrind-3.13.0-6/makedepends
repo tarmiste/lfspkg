@@ -1,0 +1,6 @@
+%MAKEDEPENDS%
+gdb
+openmpi
+lib32-glibc
+lib32-gcc-libs
+

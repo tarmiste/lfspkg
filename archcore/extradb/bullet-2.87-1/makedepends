@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+cmake
+doxygen
+graphviz
+ttf-dejavu
+mesa
+glu
+python
+python-numpy
+

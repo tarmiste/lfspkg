@@ -1,0 +1,7 @@
+%OPTDEPENDS%
+gnome-keyring: for keyring support when GNOME compatibility is enabled
+xscreensaver: for locking screen with xflock4
+gnome-screensaver: for locking screen with xflock4
+xlockmore: for locking screen with xflock4
+slock: for locking screen with xflock4
+

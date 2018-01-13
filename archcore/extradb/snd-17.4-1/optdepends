@@ -1,0 +1,8 @@
+%OPTDEPENDS%
+wavpack
+flac
+speex
+mpg123
+timidity++
+vorbis-tools
+

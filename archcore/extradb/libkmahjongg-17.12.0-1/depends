@@ -1,0 +1,5 @@
+%DEPENDS%
+kconfigwidgets
+kcompletion
+qt5-svg
+

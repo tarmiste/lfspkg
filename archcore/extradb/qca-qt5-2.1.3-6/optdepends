@@ -1,0 +1,4 @@
+%OPTDEPENDS%
+pkcs11-helper: PKCS-11 plugin
+botan1.10: botan plugin
+

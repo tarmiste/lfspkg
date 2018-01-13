@@ -1,0 +1,5 @@
+%MAKEDEPENDS%
+python
+gnome-common
+git
+

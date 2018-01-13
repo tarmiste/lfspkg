@@ -1,0 +1,4 @@
+%DEPENDS%
+llvm35-libs=3.5.2-4
+perl
+

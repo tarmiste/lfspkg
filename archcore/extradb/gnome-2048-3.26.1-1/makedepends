@@ -1,0 +1,8 @@
+%MAKEDEPENDS%
+intltool
+vala
+itstool
+yelp-tools
+appstream-glib
+git
+

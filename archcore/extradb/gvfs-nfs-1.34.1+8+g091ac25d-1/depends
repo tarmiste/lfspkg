@@ -1,0 +1,4 @@
+%DEPENDS%
+gvfs=1.34.1+8+g091ac25d
+libnfs
+

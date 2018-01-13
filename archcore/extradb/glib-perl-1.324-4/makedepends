@@ -1,0 +1,4 @@
+%MAKEDEPENDS%
+perl-extutils-depends
+perl-extutils-pkgconfig
+

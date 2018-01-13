@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+git
+cmake
+wget
+python-lxml
+libxcb
+libxrandr
+imagemagick
+qt5-svg
+

@@ -1,0 +1,5 @@
+%DEPENDS%
+openssl
+python-six
+python-cryptography
+

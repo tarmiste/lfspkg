@@ -1,0 +1,10 @@
+%MAKEDEPENDS%
+frameworkintegration
+kcmutils
+kdecoration
+extra-cmake-modules
+kdoctools
+kdelibs
+automoc4
+python
+

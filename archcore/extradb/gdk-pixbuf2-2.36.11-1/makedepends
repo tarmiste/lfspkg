@@ -1,0 +1,7 @@
+%MAKEDEPENDS%
+gtk-doc
+gobject-introspection
+git
+docbook-xsl
+meson
+

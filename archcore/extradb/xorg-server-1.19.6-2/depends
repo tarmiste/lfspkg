@@ -1,0 +1,13 @@
+%DEPENDS%
+libepoxy
+libxfont2
+pixman
+xorg-server-common
+libunwind
+dbus
+libgl
+xf86-input-libinput
+libpciaccess
+libdrm
+libxshmfence
+

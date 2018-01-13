@@ -1,0 +1,9 @@
+%MAKEDEPENDS%
+extra-cmake-modules
+qt5-tools
+clang
+python-pyqt5
+python2-pyqt5
+gperf
+doxygen
+
