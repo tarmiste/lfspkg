@@ -1,0 +1,49 @@
+# $Id: PKGBUILD 314129 2018-01-06 07:29:59Z bisson $
+# Contributor: tobias [tobias [at] archlinux.org]
+# Maintainer: Gaetan Bisson <bisson@archlinux.org>
+
+pkgname=mutt
+pkgver=1.9.2
+pkgrel=2
+pkgdesc='Small but very powerful text-based mail client'
+url='http://www.mutt.org/'
+license=('GPL')
+backup=('etc/Muttrc')
+arch=('x86_64')
+optdepends=('smtp-forwarder: to send mail')
+depends=('gpgme' 'ncurses' 'openssl' 'libsasl' 'gdbm' 'libidn' 'mime-types' 'krb5')
+source=("http://ftp.mutt.org/pub/mutt/${pkgname}-${pkgver}.tar.gz"{,.asc})
+sha256sums=('a2e152a352bbf02d222d54074199d9c53821c19f700c4cb85f78fa85faed7896'
+            'SKIP')
+validpgpkeys=('8975A9B33AA37910385C5308ADEF768480316BDA')
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--enable-gpgme \
+		--enable-pop \
+		--enable-imap \
+		--enable-smtp \
+		--enable-hcache \
+		--enable-sidebar \
+		--with-curses=/usr \
+		--with-regex \
+		--with-gss=/usr \
+		--with-ssl=/usr \
+		--with-sasl \
+		--with-idn \
+
+	make
+}
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
+
+	rm "${pkgdir}"/etc/mime.types{,.dist}
+	rm "${pkgdir}"/usr/bin/{flea,muttbug}
+	rm "${pkgdir}"/usr/share/man/man1/{flea,muttbug}.1
+	install -Dm644 contrib/gpg.rc "${pkgdir}"/etc/Muttrc.gpg.dist
+}

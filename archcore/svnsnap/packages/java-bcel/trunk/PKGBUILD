@@ -1,0 +1,21 @@
+# Maintainer: Guillaume ALAUX <guillaume@archlinux.org>
+_libname=bcel
+pkgname=java-${_libname}
+pkgver=6.0
+pkgrel=1
+pkgdesc="Java library to analyze, create, and manipulate (binary) Java class files"
+arch=('any')
+url='https://commons.apache.org/proper/commons-bcel/'
+license=('APACHE')
+depends=('java-runtime-headless')
+makedepends=('apache-ant' 'junit')
+source=(https://www.apache.org/dist/commons/bcel/binaries/bcel-6.0-bin.tar.gz{,.asc})
+validpgpkeys=('CD5464315F0B98C77E6E8ECD9DAADC1C9FCC82D0') # Benedikt Ritter (CODE SIGNING KEY)
+sha256sums=('f7244e1fba5bd0fc2900e641290e4fec73b69fd03ddc30fc4193e8722e3a2dba'
+            'SKIP')
+
+package() {
+  install -D -m 644 ${srcdir}/${_libname}-${pkgver}/${_libname}-${pkgver}.jar \
+    -t ${pkgdir}/usr/share/java
+  ln -s ${_libname}-${pkgver}.jar ${pkgdir}/usr/share/java/${_libname}.jar
+}

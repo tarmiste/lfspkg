@@ -1,0 +1,34 @@
+# $Id: PKGBUILD 312200 2017-12-12 17:13:02Z foutrelis $
+# Maintainer: Evangelos Foutras <evangelos@foutrelis.com>
+# Contributor: tobias <tobias funnychar archlinux.org>
+
+pkgname=xfce4-notifyd
+pkgver=0.4.1
+pkgrel=1
+pkgdesc="Notification daemon for the Xfce desktop"
+arch=('x86_64')
+url="http://goodies.xfce.org/projects/applications/xfce4-notifyd"
+license=('GPL2')
+groups=('xfce4-goodies')
+depends=('libxfce4ui' 'libnotify' 'hicolor-icon-theme')
+makedepends=('intltool' 'python' 'xfce4-panel')
+provides=('notification-daemon')
+source=(http://archive.xfce.org/src/apps/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2)
+sha256sums=('70fa9faa6e3fe0adb0d20e98316649056040a0a47ca9388a21733911284a3e81')
+
+build() {
+  cd "$srcdir/$pkgname-$pkgver"
+
+  ./configure \
+    --prefix=/usr \
+    --disable-static \
+    --disable-debug
+  make
+}
+
+package() {
+  cd "$srcdir/$pkgname-$pkgver"
+  make DESTDIR="$pkgdir" install
+}
+
+# vim:set ts=2 sw=2 et:

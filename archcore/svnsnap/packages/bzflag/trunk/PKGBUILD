@@ -1,0 +1,30 @@
+# $Id: PKGBUILD 310398 2017-11-18 21:13:16Z bisson $
+# Maintainer: Gaetan Bisson <bisson@archlinux.org>
+# Contributor: Kevin Piche <kevin@archlinux.org>
+# Contributor: Damir Perisa <damir.perisa@bluewin.ch>
+
+pkgname=bzflag
+pkgver=2.4.12
+pkgrel=1
+pkgdesc='Multiplayer 3D tank battle game'
+url='http://bzflag.org/'
+license=('LGPL')
+arch=('x86_64')
+depends=('curl' 'glew' 'glu' 'sdl' 'c-ares')
+source=("https://download.bzflag.org/bzflag/source/${pkgver}/bzflag-${pkgver}.tar.bz2")
+sha256sums=('a8a13a58648798a6f6f969a2911cf21377fe45964f2edf46a327d1370ff1000d')
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	./configure --prefix=/usr
+	make
+	cd misc
+	make
+}
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
+	install -Dm644 misc/bzflag.desktop "${pkgdir}"/usr/share/applications/bzflag.desktop
+	install -Dm644 data/bzflag-48x48.png "${pkgdir}"/usr/share/pixmaps/bzflag-48x48.png
+}

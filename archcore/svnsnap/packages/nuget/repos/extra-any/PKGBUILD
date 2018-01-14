@@ -1,0 +1,41 @@
+# Maintainer: Giancarlo Razzolini <grazzolini@archlinux.org>
+# Contributor: Daniel Isenmann <daniel@archlinux.org>
+# Contributor: wenLiangcan <boxeed at gmail dot com>
+
+pkgname=nuget
+pkgver=2.14
+pkgrel=2
+pkgdesc="Package manager for .NET."
+arch=('any')
+url="http://www.nuget.org"
+license=('APACHE')
+depends=('mono' 'sh')
+source=(https://sources.archlinux.org/other/packages/${pkgname}/${pkgname}-${pkgver}.tar.gz
+        "${pkgname}"
+        "${pkgname}.pc"
+	"https://sources.archlinux.org/other/packages/${pkgname}/xdt.tar.gz")
+install="${pkgname}.install"
+md5sums=('0834b8cea239fb098618f8d3ba09e214'
+         'dce06048fb6eb42beb69001adb2fd530'
+         'ffb7d95fb39f72c9619c72db91ec36a0'
+         '61580e6d1e1ecf80f8f2caf4a43b7b71')
+
+build() {
+	xbuild /p:Configuration=Release xdt/XmlTransform/Microsoft.Web.XmlTransform.csproj
+	cd ${srcdir}/${pkgname}-${pkgver}
+	./build.sh
+}
+
+package() {
+
+mkdir -p ${pkgdir}/usr/lib/pkgconfig
+install -m 0644 ${srcdir}/nuget.pc ${pkgdir}/usr/lib/pkgconfig/nuget.pc
+
+install -d ${pkgdir}/usr/lib/nuget
+install -m 0644 ${srcdir}/${pkgname}-${pkgver}/src/CommandLine/obj/Mono\ Release/NuGet.exe ${pkgdir}/usr/lib/nuget/
+install -m 0644 ${srcdir}/${pkgname}-${pkgver}/src/Core/obj/Mono\ Release/NuGet.Core.dll ${pkgdir}/usr/lib/nuget/
+install -m 0644 ${srcdir}/xdt/XmlTransform/obj/Release/Microsoft.Web.XmlTransform.dll ${pkgdir}/usr/lib/nuget/
+
+install -d ${pkgdir}/usr/bin
+install -m 0755 ${srcdir}/nuget ${pkgdir}/usr/bin/nuget
+}

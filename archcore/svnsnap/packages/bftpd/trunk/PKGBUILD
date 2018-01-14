@@ -1,0 +1,68 @@
+# $Id: PKGBUILD 310876 2017-11-25 10:16:25Z arojas $
+# Maintainer: Thomas Bächler <thomas@archlinux.org>
+
+pkgname=bftpd
+pkgver=4.8
+pkgrel=1
+pkgdesc="Small, easy-to-configure FTP server"
+arch=(x86_64)
+url="https://bftpd.sourceforge.net/"
+license=('GPL')
+depends=('pam')
+install=bftpd.install
+backup=(etc/bftpd.conf
+        etc/logrotate.d/bftpd
+        etc/pam.d/bftpd
+        etc/xinetd.d/bftpd)
+source=(https://downloads.sourceforge.net/sourceforge/bftpd/bftpd-$pkgver.tar.gz
+        bftpd.logrotate
+        bftpd.pam
+        bftpd.xinetd
+        bftpd.service
+        bftpd.socket
+        bftpd_AT.service)
+sha256sums=('0c80399b0cbdd24c882d59c39b4bd5233fe1a153f5d92f23e3a9496ea4549afe'
+            '83b6c950026ed7c1ac7802f800dd79d494ac395b48f88d57bee55c2122c7f821'
+            '57dfd072fd7ef0018c6b0a798367aac1abb5979060ff3f9df22d1048bb71c0d5'
+            '18096a2f6914fecd9f36721247d170ba48b986225dae3564cb2d3b0e6f18c35a'
+            '6047c33d1694445aa1b0cfad4ba796ff6c1635eb86c8398f39c0f9180d9490be'
+            '0f930f803cf40dda1336ddb89e925b8f7b703518484b8a1a41153f0828de404c'
+            '97dba309c60029c498f353b39778c6594deef8a3b98ca09889857ca920674ccc')
+
+build() {
+  cd "${srcdir}"/$pkgname
+  # The bftpd author keeps screwing up the release tarballs
+  rm -f config.{cache,status}
+  autoreconf
+  sed 's|$(prefix)/sbin|$(prefix)/bin|g' -i Makefile.in
+  ./configure --prefix=/usr \
+              --enable-pam \
+              --mandir=/usr/share/man \
+              --sysconfdir=/etc \
+  make
+}
+
+package() {
+  cd "${srcdir}"/$pkgname
+  install -d -m755 "${pkgdir}"/usr/{bin,share/man/man8}
+  install -D -m644 "${srcdir}"/bftpd.logrotate "${pkgdir}"/etc/logrotate.d/bftpd
+  make DESTDIR="${pkgdir}" install
+  # Remove log file and /var/run from the package
+  # This guy keeps messing up his Makefile, /usr/var, wtf?
+  rm -f "${pkgdir}"/usr/var/log/bftpd.log
+  rmdir "${pkgdir}"/usr/var/{run/bftpd,run,log,}
+  # Install PAM file
+  mkdir -p "${pkgdir}"/etc/pam.d
+  cp "${srcdir}"/bftpd.pam "${pkgdir}"/etc/pam.d/bftpd
+  # Install xinetd file
+  install -D -m644 "${srcdir}"/bftpd.xinetd "${pkgdir}"/etc/xinetd.d/bftpd
+  # Did I mention this guy keeps messing up his Makefiles?
+  mv "${pkgdir}"/usr/etc/bftpd.conf "${pkgdir}"/etc/
+  rmdir "${pkgdir}"/usr/etc
+  # Fix default in config file
+  sed 's|#ROOTDIR="/path/for/anonymous/user"|# bftpd interprets ROOTDIR="%h" (the default), as ROOTDIR="/" for the anonymous user, override it\n  ROOTDIR="/srv/ftp"|' -i "${pkgdir}"/etc/bftpd.conf
+  # Install systemd files
+  install -D -m644 "${srcdir}"/bftpd.service "${pkgdir}"/usr/lib/systemd/system/bftpd.service
+  install -D -m644 "${srcdir}"/bftpd_AT.service "${pkgdir}"/usr/lib/systemd/system/bftpd@.service
+  install -D -m644 "${srcdir}"/bftpd.socket "${pkgdir}"/usr/lib/systemd/system/bftpd.socket
+}

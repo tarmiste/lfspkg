@@ -1,0 +1,26 @@
+# $Id: PKGBUILD 289817 2017-03-02 01:34:06Z bisson $
+# Maintainer: Gaetan Bisson <bisson@archlinux.org>
+# Contributor: damir <damir@archlinux.org>
+# Contributor: Camille Moncelier <pix@devlife.org>
+
+pkgname=m17n-db
+pkgver=1.7.0
+pkgrel=1
+pkgdesc='Multilingual text processing library (database)'
+url='http://www.nongnu.org/m17n/'
+arch=('any')
+license=('GPL')
+depends=('glibc') # not because of compiling, but because of /usr/share/i18n/charmaps/ files that glibc provides
+source=("http://download.savannah.gnu.org/releases/m17n/${pkgname}-${pkgver}.tar.gz")
+sha256sums=('a2ba9f80161433d5c06e57915a9cd51f26c6df4a8909723f952cdbb9b48508f0')
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	./configure --prefix=/usr
+	make
+}
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
+}

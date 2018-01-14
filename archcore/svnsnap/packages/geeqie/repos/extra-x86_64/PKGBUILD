@@ -1,0 +1,37 @@
+# $Id: PKGBUILD 313933 2018-01-02 23:43:47Z arojas $
+# Maintainer: Eric Bélanger <eric@archlinux.org>
+# Contributor: Lukas Jirkovsky <l.jirkovsky@gmail.com>
+
+pkgname=geeqie
+pkgver=1.4
+pkgrel=1
+pkgdesc="A lightweight image browser and viewer"
+arch=('x86_64')
+url="http://www.geeqie.org/"
+license=('GPL2')
+depends=('exiv2' 'clutter-gtk' 'lcms' 'ffmpegthumbnailer')
+makedepends=('intltool' 'doxygen' 'gnome-doc-utils' 'python')
+optdepends=('librsvg: SVG rendering'
+	    'fbida: for jpeg rotation')
+validpgpkeys=('85D4CA42952C949B175362B379D0B06F4E20AF1C')
+source=(http://www.geeqie.org/${pkgname}-${pkgver}.tar.xz{,.asc} geeqie-no-changelog.patch)
+sha1sums=('bef0e6c6a0aba8b957375087bcb570cb9dac64b1'
+          'SKIP'
+          '9681536c6063e4f8869ac99d174b39b4ae9309f5')
+
+prepare() {
+  cd $pkgname-$pkgver
+  patch -p1 -i ../geeqie-no-changelog.patch # Workaround missing changelog (Fedora)
+  ./autogen.sh
+}
+
+build() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+  ./configure --prefix=/usr
+  make
+}
+
+package(){
+  cd "${srcdir}/${pkgname}-${pkgver}"
+  make DESTDIR="${pkgdir}" install
+}

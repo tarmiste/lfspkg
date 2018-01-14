@@ -1,0 +1,28 @@
+# $Id: PKGBUILD 310007 2017-11-15 14:11:34Z foutrelis $
+# Maintainer: Gaetan Bisson <bisson@archlinux.org>
+# Contributor: Gan Lu <rhythm.gan@gmail.com>
+# Contributor: damir <damir@archlinux.org>
+
+pkgname=scim-tables
+pkgver=0.5.14.1
+pkgrel=2
+pkgdesc='Generic table input method module for SCIM'
+url='https://github.com/scim-im/scim-tables'
+arch=('x86_64')
+license=('GPL')
+depends=('scim')
+makedepends=('intltool')
+source=("https://downloads.sourceforge.net/sourceforge/scim/${pkgname}-${pkgver}.tar.gz")
+sha256sums=('3fd8528f4bad10b7612cd470ec7a9b53a9b391bf629b74a168ce1f6aa05d06cd')
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	./bootstrap
+	./configure --prefix=/usr
+	make
+}
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
+}

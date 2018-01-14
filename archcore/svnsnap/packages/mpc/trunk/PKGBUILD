@@ -1,0 +1,33 @@
+# $Id: PKGBUILD 310007 2017-11-15 14:11:34Z foutrelis $
+# Maintainer: Gaetan Bisson <bisson@archlinux.org>
+# Contributor: Angel Velasquez <angvp@archlinux.org>
+# Contributor: Andrea Scarpino <andrea@archlinux.org>
+# Contributor: Alexander Fehr <pizzapunk gmail com>
+# Contributor: Link Dupont <link@subpop.net>
+
+pkgname=mpc
+pkgver=0.28
+pkgrel=1
+pkgdesc='Minimalist command line interface to MPD'
+url='https://www.musicpd.org/clients/mpc/'
+license=('GPL2')
+arch=('x86_64')
+depends=('libmpdclient')
+validpgpkeys=('0392335A78083894A4301C43236E8A58C6DB4512')
+source=("https://www.musicpd.org/download/${pkgname}/${pkgver%.*}/${pkgname}-${pkgver}.tar.xz"{,.sig})
+sha256sums=('a4337d06c85dc81a638821d30fce8a137a58d13d510be34a11c1cce95cabc547'
+            'SKIP')
+
+options=('!emptydirs')
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	./configure --prefix=/usr 
+	make 
+}
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install 
+	install -Dm644 doc/mpc-completion.bash "${pkgdir}/usr/share/bash-completion/completions/mpc" 
+}

@@ -1,0 +1,34 @@
+# $Id: PKGBUILD 295989 2017-05-14 14:08:22Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Crass00 <crass00 @ hotmail . com>
+
+pkgname=python2-backports.functools_lru_cache
+pkgver=1.4
+pkgrel=2
+pkgdesc="Backport of functools.lru_cache from Python 3.3"
+arch=('any')
+url="https://github.com/jaraco/backports.functools_lru_cache"
+license=('MIT')
+depends=('python2-backports')
+makedepends=('python2-setuptools-scm')
+checkdepends=('python2-pytest-runner')
+optdepends=('python2-ipaddress: for IPAddress ServerAltnames support')
+source=("https://pypi.io/packages/source/b/backports.functools_lru_cache/backports.functools_lru_cache-$pkgver.tar.gz")
+sha512sums=('78dcd12f392bc110d1556f567a9f8fe977fa4ddc98a2121ceaf43606687171866832b8d32220dfb4ca335f53e89acecabda9e48ad48571f1741b21ab2d3b8a21')
+
+build() {
+  cd backports.functools_lru_cache-$pkgver
+  python2 setup.py build
+}
+
+check() {
+  cd backports.functools_lru_cache-$pkgver
+  python2 setup.py pytest
+}
+
+package() {
+  cd backports.functools_lru_cache-$pkgver
+  python2 setup.py install --root="$pkgdir" --optimize=1
+
+  rm "$pkgdir"/usr/lib/python2.7/site-packages/backports/__init__.py*
+}

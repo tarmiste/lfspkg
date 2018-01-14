@@ -1,0 +1,30 @@
+# $Id: PKGBUILD 291976 2017-04-01 08:28:01Z arojas $
+# Maintainer: Guillaume ALAUX <guillaume@archlinux.org> 
+# Contributor: Eric Belanger <eric@archlinux.org>
+# Contributor: Sarah Hay <sarahhay@mb.sympatico.ca>
+
+pkgname=cowsay
+pkgver=3.03
+pkgrel=9
+pkgdesc='Configurable talking cow (and a few other creatures)'
+arch=('any')
+url='http://www.nog.net/~tony/warez/'
+license=('PerlArtistic' 'GPL')
+depends=('perl')
+source=(https://github.com/tnalpgge/rank-amateur-cowsay/archive/cowsay-$pkgver.tar.gz
+        cowsay.patch)
+sha256sums=('9a32cba0b561719e1302398857124fdf4dd21a7623c017eaadbf31277f9274af'
+            'aa88442a31f01ffe5884b3ae974ed1ced23d860859d7f2234cdcd3ac437fc17f')
+
+build() {
+	cd rank-amateur-cowsay-${pkgname}-${pkgver}
+	patch -p1 -i $srcdir/cowsay.patch
+	sed -i 's|/man/|/share/man/|' install.sh
+}
+
+package() {
+	cd rank-amateur-cowsay-${pkgname}-${pkgver}
+	echo "${pkgdir}/usr" | ./install.sh
+	# This one is not a valid '.cow' file
+	rm ${pkgdir}/usr/share/cows/mech-and-cow
+}

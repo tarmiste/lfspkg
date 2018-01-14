@@ -1,0 +1,36 @@
+# $Id: PKGBUILD 310959 2017-11-26 19:08:01Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: hauptmech, figo.zhang, chubtuff, lubosz
+#
+# Matlab bindings are not built by default to reduce dependencies.
+
+pkgname=gl2ps
+pkgver=1.4.0
+pkgrel=1
+pkgdesc="an OpenGL to PostScript printing library"
+arch=('x86_64')
+url='http://geuz.org/gl2ps/'
+license=('LGPL')
+depends=('libpng' 'libgl')
+makedepends=('cmake' 'texlive-core')
+source=("http://geuz.org/gl2ps/src/gl2ps-${pkgver}.tgz")
+sha512sums=('420b21a5b4397c9a9a2323a8686b8635c2683354c94762d2d0172c661fc36c4298042498dd8ef2323adf32f45aa4e0a3dba146058ccde597e5a46c2027cbf7ce')
+
+prepare() {
+  mkdir build
+}
+
+build() {
+  cd build
+  cmake ../gl2ps-$pkgver-source \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_EXE_LINKER_FLAGS=-lm
+  make
+}
+
+package() {
+  cd build
+  make DESTDIR="$pkgdir/" install
+}
+

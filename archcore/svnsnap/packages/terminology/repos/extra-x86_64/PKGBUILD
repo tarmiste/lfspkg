@@ -1,0 +1,36 @@
+# Maintainer: Ronald van Haren <ronald@archlinux.org>
+# Contributor: Doug Newgard <scimmia22 at outlook dot com>
+# Contributor: Paul Ezvan <paul@ezvan.fr>
+
+pkgname=terminology
+pkgver=1.1.1
+pkgrel=1
+pkgdesc="EFL based terminal emulator"
+arch=('x86_64')
+url="https://www.enlightenment.org/about-terminology"
+license=('BSD')
+depends=('efl')
+makedepends=('mesa')
+source=("http://download.enlightenment.org/rel/apps/${pkgname}/${pkgname}-${pkgver}.tar.xz")
+sha1sums=('11cc987d67ae4852511fece82094f54864df3bee')
+
+build() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+
+  export CFLAGS="${CFLAGS} -fvisibility=hidden"
+  
+  ./configure \
+    --prefix=/usr
+
+  make
+}
+
+package(){
+  cd "${srcdir}/${pkgname}-${pkgver}"
+
+  make DESTDIR="${pkgdir}" install
+
+  # install license files
+  install -Dm644 "${srcdir}/${pkgname}-${pkgver}/COPYING" \
+        "${pkgdir}/usr/share/licenses/${pkgname}/COPYING"
+}

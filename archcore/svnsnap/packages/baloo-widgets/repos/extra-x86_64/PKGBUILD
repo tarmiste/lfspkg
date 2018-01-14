@@ -1,0 +1,38 @@
+# $Id: PKGBUILD 314397 2018-01-11 16:42:06Z arojas $
+# Maintainer: Antonio Rojas <arojas@archlinux.org>
+# Contributor: Andrea Scarpino <andrea@archlinux.org>
+
+pkgname=baloo-widgets
+pkgver=17.12.1
+pkgrel=1
+pkgdesc="Widgets for Baloo"
+arch=(x86_64)
+url='https://community.kde.org/Baloo'
+license=(LGPL)
+depends=(baloo)
+makedepends=(extra-cmake-modules kdoctools python)
+replaces=(baloo4-widgets)
+source=("https://download.kde.org/stable/applications/$pkgver/src/$pkgname-$pkgver.tar.xz"{,.sig})
+sha256sums=('31f8ed659f20541da12a98e4237f24f871660d2267ae663af796d728bb0bc8f0'
+            'SKIP')
+validpgpkeys=(CA262C6C83DE4D2FB28A332A3A6A4DB839EAA6D7  # Albert Astals Cid <aacid@kde.org>
+              F23275E4BF10AFC1DF6914A6DBD2CE893E2D1C87) # Christoph Feck <cfeck@kde.org>
+
+prepare() {
+  mkdir -p build
+}
+
+build() {
+  cd build
+  cmake ../$pkgname-$pkgver \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_INSTALL_LIBDIR=lib
+  make
+}
+
+package() {
+  cd build
+  make DESTDIR="$pkgdir" install
+}
+

@@ -1,0 +1,21 @@
+# $Id: PKGBUILD 308832 2017-11-01 22:34:22Z djgera $
+# Maintainer: Gerardo Exequiel Pozzi <djgera@archlinux.org>
+# Maintainer: Pierre Schmitz <pierre@archlinux.de>
+
+pkgname=archiso
+pkgver=33
+pkgrel=1
+pkgdesc='Tools for creating Arch Linux live and install iso images'
+arch=('any')
+license=('GPL')
+url='https://projects.archlinux.org/archiso.git/'
+depends=('make' 'arch-install-scripts' 'squashfs-tools' 'libisoburn' 'dosfstools' 'lynx')
+source=("https://sources.archlinux.org/other/${pkgname}/${pkgname}-${pkgver}.tar.gz"
+        "https://sources.archlinux.org/other/${pkgname}/${pkgname}-${pkgver}.tar.gz.sig")
+sha256sums=('f73fd4817267c8fec01ff1611be8887b3070290e1f6eeb419f615e82ff2c2ea3'
+            'SKIP')
+validpgpkeys=('0F334D8698881578F65D2AE55ED514A45BD5C938') # Gerardo Exequiel Pozzi
+
+package() {
+    make -C "${pkgname}-${pkgver}" DESTDIR="${pkgdir}" install
+}

@@ -1,0 +1,45 @@
+# $Id: PKGBUILD 308877 2017-11-02 20:14:51Z heftig $
+# Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+
+pkgname=gnome-shell-extensions
+pkgver=3.26.2
+pkgrel=1
+pkgdesc="Extensions for GNOME shell, including classic mode"
+url="https://wiki.gnome.org/Projects/GnomeShell/Extensions"
+arch=(any)
+license=(GPL)
+depends=(gnome-shell)
+makedepends=(intltool git gnome-common)
+optdepends=('nautilus: gnome-classic session')
+groups=(gnome)
+_commit=057e5bb0c1bf1dd47252e3641996541fc6a4ef68  # tags/3.26.2^0
+source=("git+https://git.gnome.org/browse/gnome-shell-extensions#commit=$_commit"
+        "git+https://git.gnome.org/browse/gnome-shell-sass")
+sha256sums=('SKIP'
+            'SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/-/+/g'
+}
+
+prepare() {
+  cd $pkgname
+
+  git submodule init
+  git config --local submodule.data/gnome-shell-sass.url "$srcdir/gnome-shell-sass"
+  git submodule update
+
+  NOCONFIGURE=1 ./autogen.sh
+}
+
+build() {
+  cd $pkgname
+  ./configure --prefix=/usr --libexecdir=/usr/lib/gnome-session --enable-extensions=all
+  make
+}
+
+package() {
+  cd $pkgname
+  make DESTDIR="$pkgdir" install
+}

@@ -1,0 +1,32 @@
+# $Id: PKGBUILD 310044 2017-11-16 09:17:36Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Jan de Groot
+# Contributor: Charles Mauch <cmauch@gmail.com>
+
+pkgname=perl-mime-types
+pkgver=2.14
+pkgrel=1
+pkgdesc="Perl/CPAN Module MIME::Types : Information and processing MIME types"
+arch=('any')
+url="http://search.cpan.org/dist/MIME-Types/"
+license=('PerlArtistic')
+depends=('perl')
+options=('!emptydirs')
+source=("http://www.cpan.org/authors/id/M/MA/MARKOV/MIME-Types-${pkgver}.tar.gz")
+sha512sums=('dc12df5408107cd24819affe1e374a9eba801ebd39ad5c14c40ed46e51d88379c53f4a645a5149842c92e348b3cb80b6784976d71f0dd7f73195072b668926e0')
+
+build() {
+  cd MIME-Types-${pkgver}
+  perl Makefile.PL INSTALLDIRS=vendor
+  make
+}
+
+check() {
+  cd MIME-Types-${pkgver}
+  make test
+}
+
+package() {
+  cd MIME-Types-${pkgver}
+  make DESTDIR="${pkgdir}" install
+}

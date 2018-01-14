@@ -1,0 +1,25 @@
+# $Id: PKGBUILD 310007 2017-11-15 14:11:34Z foutrelis $
+# Maintainer: Gaetan Bisson <bisson@archlinux.org>
+# Contributor: Ashish Shukla <wahjava.ml@gmail.com>
+
+pkgname=libotf
+pkgver=0.9.13
+pkgrel=2
+pkgdesc='OpenType Font library'
+url='http://www.nongnu.org/m17n/'
+license=('LGPL')
+arch=('x86_64')
+depends=('libxaw' 'freetype2')
+source=("http://download.savannah.gnu.org/releases/m17n//${pkgname}-${pkgver}.tar.gz")
+sha256sums=('7bc466ba50425f95b52de12b4ad35320acefcef13ce67bf33edc14abdcfe6908')
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	./configure --prefix=/usr
+	make
+}
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
+}

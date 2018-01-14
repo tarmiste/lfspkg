@@ -1,0 +1,31 @@
+# $Id: PKGBUILD 314305 2018-01-09 20:41:15Z tpowa $
+# Maintainer: Tobias Powalowski <tpowa@archlinux.org>
+# Contributor: Francesco Groccia <frgroccia gmail.com>
+# Contributor: Jakub "mr.MikyMaus" Fiser <mr@MikyMaus.org>
+
+pkgname=clawsker
+pkgver=1.1.1
+pkgrel=1
+pkgdesc="An applet to edit Claws Mail's hidden preferences."
+arch=('any')
+url="http://www.claws-mail.org/clawsker.php"
+license=('GPL3')
+makedepends=('gettext')
+depends=('gtk2-perl' 'perl-locale-gettext' 'claws-mail')
+validpgpkeys=('43BC364B16DF0C205EBD75921F0F0A88DE5BCCA6') # Ricardo Mones Lastra <ricardo@mones.org>
+source=("http://www.claws-mail.org/tools/$pkgname-$pkgver.tar.xz"{,.asc})
+md5sums=('0ab8d6595ef4827f2fbaaa497939aacf'
+         'SKIP')
+
+build()
+{
+  cd "$srcdir/$pkgname-$pkgver"
+  make PREFIX="/usr"
+}
+
+package() {
+  cd "$srcdir/$pkgname-$pkgver"
+  # race condition fixed upstream
+  # TODO: remove '-j1' for next release
+  make -j1 PREFIX="/usr" DESTDIR="$pkgdir" install
+}

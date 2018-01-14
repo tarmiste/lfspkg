@@ -1,0 +1,28 @@
+# $Id: PKGBUILD 308616 2017-10-29 22:30:43Z bisson $
+# Maintainer: Gaetan Bisson <bisson@archlinux.org>
+# Contributor: Firmicus <francois.archlinux.org>
+
+pkgname=ttf-junicode
+pkgver=1.001
+pkgrel=1
+pkgdesc='Junius-Unicode: Font for medievalists'
+url='http://junicode.sourceforge.net'
+license=('custom:OFL')
+arch=('any')
+makedepends=('poppler')
+depends=('xorg-fonts-encodings' 'xorg-fonts-alias' 'xorg-font-utils' 'fontconfig')
+source=("https://downloads.sourceforge.net/junicode/junicode-${pkgver}.zip"
+        'LICENSE')
+sha256sums=('64128229678d0fe1ae6f2897533932011af7dfcdeeba4d1148e45a8c6e439953'
+            'ca122f3bda0154f692817450168cb650a7fc59ef96c93582acd2e7a744d464d3')
+
+install=install
+
+package() {
+	cd "${srcdir}"
+	install -m755 -d "${pkgdir}/usr/share/"{fonts/TTF,{doc,licenses}/${pkgname}}
+
+	install -m644 *.ttf "${pkgdir}/usr/share/fonts/TTF"
+	install -m644 doc/Junicode.pdf "${pkgdir}/usr/share/doc/${pkgname}"
+	ln -s "../../doc/${pkgname}/Junicode.pdf" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}

@@ -1,0 +1,24 @@
+# $Id: PKGBUILD 310007 2017-11-15 14:11:34Z foutrelis $
+# Contributor: damir <damir@archlinux.org>
+# Maintainer: Gaetan Bisson <bisson@archlinux.org>
+
+pkgname=libhangul
+pkgver=0.1.0
+pkgrel=2
+pkgdesc='Input method library for Korean'
+url='http://code.google.com/p/libhangul/'
+license=('LGPL')
+arch=('x86_64')
+source=("https://kldp.net/hangul/release/3442-${pkgname}-${pkgver}.tar.gz")
+sha256sums=('5905aa5c557d8d46e190fec1afdd75babf3bc086ef286b42007572703658295a')
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	./configure --prefix=/usr
+	make
+}
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
+}

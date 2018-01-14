@@ -1,0 +1,24 @@
+# $Id: PKGBUILD 289162 2017-02-18 12:02:15Z jgc $
+# Maintainer: Jan de Groot <jgc@archlinux.org>
+
+pkgname=bcprov
+pkgver=1.56
+pkgrel=1
+pkgdesc="Java cryptography APIs (Bouncy Castle)"
+arch=('any')
+url="https://www.bouncycastle.org/java.html"
+license=('custom')
+source=(https://www.bouncycastle.org/download/bcprov-jdk15on-${pkgver/./}.jar
+        LICENSE.html)
+noextract=(bcprov-jdk15on-${pkgver/./}.jar)
+sha256sums=('963e1ee14f808ffb99897d848ddcdb28fa91ddda867eb18d303e82728f878349'
+            'e9bb81d9c9486a5de0d1facd674e761b46cc421ddd31bbd2b100871a8bea2ed6')
+
+package() {
+  depends=('java-runtime')
+  cd "${srcdir}"
+  install -m755 -d "${pkgdir}/usr/share/java"
+  install -m755 -d "${pkgdir}/usr/share/licenses/${pkgname}"
+  install -m644 bcprov-jdk15on-${pkgver/./}.jar "${pkgdir}/usr/share/java/bcprov.jar"
+  install -m644 LICENSE.html "${pkgdir}/usr/share/licenses/${pkgname}/"
+}
