@@ -1,69 +1,42 @@
-# Maintainer: tba
-# THIS PKGBUILD IS AN UNTESTED PROTOTYPE.  USE AT OWN RISK
-#
-# EDITHOOK1
-#
+# Maintainer: DJ Lucas <dj_AT_linuxfromscratch_DOT_org>
 
-BLFSTOOLSEQ=274
 pkgname=lzo
 pkgver=2.10
 pkgrel=1
-# EDITHOOK2
-pkgdesc=""
+pkgdesc="Portable lossless data compression library"
 arch=('x86_64')
-# EDITHOOK3
-url=""
+url="http://www.oberhumer.com/opensource/lzo"
+groups=('core')
 license=('GPL')
-groups=()
-# EDITHOOK4
-depends=()
-makedepends=()
-optdepends=()
-provides=()
-conflicts=()
-replaces=()
-backup=()
-options=()
-install=
-changelog=
-# EDITHOOK5
-source=(
-    http://www.oberhumer.com/opensource/lzo/download/lzo-2.10.tar.gz
-)
-# EDITHOOK6
-noextract=()
-# EDITHOOK7
+depends=('glibc')
+source=("http://www.oberhumer.com/opensource/${pkgname}/download/${pkgname}-${pkgver}.tar.gz")
 
-md5sums=('39d3f3f9c55c87b1e5d6888e1420f4b5')
-
-# EDITHOOKPREP
-prepare() {
-	cd "$pkgname-$pkgver"
-	./configure --prefix=/usr                    \
-            --enable-shared                  \
-            --disable-static                 \
-            --docdir=/usr/share/doc/lzo-2.10
-}
-
-# EDITHOOKBLD
 build() {
-	cd "$pkgname-$pkgver"
-	make
+  cd "${pkgname}-${pkgver}"
+  ./configure --prefix=/usr    \
+              --enable-shared  \
+              --disable-static \
+              --docdir="/usr/share/doc/${pkgname}-${pkgver}"
+  make
+  gcc ${CFLAGS} -fpic -Iinclude/lzo -o minilzo/minilzo.o -c minilzo/minilzo.c
+  gcc ${LDFLAGS} -shared -o libminilzo.so.0 -Wl,-soname,libminilzo.so.0 \
+                              minilzo/minilzo.o
 }
 
-# EDITHOOKCHK
 check() {
-	cd "$pkgname-$pkgver"
-	make -k check
+  cd "${pkgname}-${pkgver}"
+  make test
+  make check
 }
 
-# EDITHOOKPKG
 package() {
-	cd "$pkgname-$pkgver"
-	make -j1 DESTDIR="$pkgdir/" install
+  cd "${pkgname}-${pkgver}"
+  make DESTDIR="${pkgdir}" install
+  install -vm755 libminilzo.so.0 "${pkgdir}/usr/lib"
+  install -pvm644 minilzo/minilzo.h "${pkgdir}/usr/include/lzo"
+  cd "${pkgdir}/usr/lib"
+  ln -s libminilzo.so.0 libminilzo.so
 }
-# EDITHOOKC
-#######  Building package
-cd $UNPACKDIR
 
+sha256sums=('c0f892943208266f9b6543b3ae308fab6284c5c90e627931446fb49b4221a072')
 
