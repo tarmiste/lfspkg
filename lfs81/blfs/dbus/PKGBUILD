@@ -1,5 +1,3 @@
-# Maintainer: DJ Lucas <dj_AT_linuxfromscratch_DOT_org>
-
 pkgname=dbus
 pkgver=1.10.20
 pkgrel=1
@@ -8,6 +6,9 @@ arch=('x86_64')
 url="http://www.freedesktop.org/wiki/Software/${pkgname}"
 groups=('core')
 license=('GPL')
+depends=('glibc'
+         'systemd'
+         'libx11')
 makedepends=('bash'
              'binutils'
              'coreutils'
@@ -18,9 +19,6 @@ makedepends=('bash'
              'make'
              'sed'
              'util-linux')
-depends=('glibc'
-         'systemd'
-         'libx11')
 optdepends=('doxygen: generate additional documentation'
             'xmlto: generate additional documentation'
             'ducktype: generate additional documentation'

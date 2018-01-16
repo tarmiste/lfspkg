@@ -1,4 +1,3 @@
-# Maintainer: DJ Lucas <dj_AT_linuxfromscratch_DOT_org>
 pkgname=systemd
 pkgver=232
 pkgrel=1
