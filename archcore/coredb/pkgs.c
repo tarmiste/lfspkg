@@ -47,6 +47,8 @@ addifunique(char *pkg)
 getdepends(char *pkg)
 {
 	int i,j;
+	int foundit=0;
+	int len;
 
 	dependslist[0] = 0;
 	makedependslist[0] = 0;
@@ -56,6 +58,27 @@ getdepends(char *pkg)
 			return;
 		}
 		if(!strcmp(pkgs[i].names[0], pkg)) {
+			foundit=1;
+		}
+		for(j =0; j < 100; j++) {
+			if(pkgs[i].provides[j] == 0) break;
+			len=strlen(pkgs[i].provides[j]);
+			if(len != 0)  {
+#if	0
+				if(!strcmp(".so", pkgs[i].provides[j]+(len-3)) {
+				if(!strncmp(pkgs[i].provides[j], pkg, len-3)) {
+printf("Truncate match .so\n");
+					foundit=1;
+				}
+				}
+#endif
+			}
+			if(!strcmp(pkgs[i].provides[j], pkg)) {
+				foundit=1;
+				break;
+			}
+		}
+		if(foundit) {
 			for(j=0; j < 200; j++) {
 				dependslist[j] = pkgs[i].depends[j];
 				if(dependslist[j] == 0) break;	
@@ -149,7 +172,9 @@ printf("adding first set\n");
 
 			pkg=installedpkgs[i];
 			getdepends(pkg);
+#if	0
 printf("deps for %s\n", pkg);
+#endif
 
 			for(j = 0; j < 200; j++){
 				if(dependslist[j] == 0) {
@@ -159,10 +184,8 @@ printf("deps for %s\n", pkg);
 				memset(&depstr[0], 0, 100);
 				strcpy(&depstr[0], dependslist[j]);
 				depstr[getdeplength(&depstr[0])] = 0;
-printf("old=%s, new=%s\n", dependslist[j], &depstr[0]);
 				addifunique(&depstr[0]);
 #endif
-				printf("%s\n", dependslist[j]);
 				addifunique(dependslist[j]);
 			}
 			for(j = 0; j < 200; j++){
@@ -175,7 +198,6 @@ printf("old=%s, new=%s\n", dependslist[j], &depstr[0]);
 				depstr[getdeplength(&depstr[0])] = 0;
 				addifunique(&depstr[0]);
 #endif
-				printf("%s\n", makedependslist[j]);
 				addifunique(makedependslist[j]);
 			}
 
@@ -183,11 +205,13 @@ printf("old=%s, new=%s\n", dependslist[j], &depstr[0]);
 	}
 
 
+#if	0
 printf("=====final package list = \n");
 for(i = 0; i < 20000; i++) {
 	if(installedpkgs[i] == 0) break;
 	printf("%s\n", installedpkgs[i]);
 }
 printf("=====end of initial package list = \n");
+#endif
 	printf("installedpkgs= %d\n", installedcount);
 }
