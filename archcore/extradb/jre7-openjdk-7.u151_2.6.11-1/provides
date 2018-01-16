@@ -1,0 +1,4 @@
+%PROVIDES%
+java-runtime=7
+java-runtime-openjdk=7
+

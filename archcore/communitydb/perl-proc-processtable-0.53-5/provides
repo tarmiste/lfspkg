@@ -1,0 +1,5 @@
+%PROVIDES%
+perl-proc-killall
+perl-proc-killfam
+perl-proc-processtable-process
+

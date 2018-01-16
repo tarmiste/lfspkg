@@ -1,0 +1,5 @@
+%PROVIDES%
+hdf5
+hdf5-cpp-fortran
+hdf5-fortran-openmpi
+

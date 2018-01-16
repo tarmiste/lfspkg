@@ -1,0 +1,3 @@
+%PROVIDES%
+libjemalloc.so=2-64
+

@@ -1,0 +1,4 @@
+%PROVIDES%
+libhistory.so=7-64
+libreadline.so=7-64
+

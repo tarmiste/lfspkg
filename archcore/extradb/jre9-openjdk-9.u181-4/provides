@@ -1,0 +1,4 @@
+%PROVIDES%
+java-runtime=9
+java-runtime-openjdk=9
+

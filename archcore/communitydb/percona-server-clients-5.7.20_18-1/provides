@@ -1,0 +1,4 @@
+%PROVIDES%
+mysql-clients=5.7.20_18
+mariadb-clients=5.7.20_18
+

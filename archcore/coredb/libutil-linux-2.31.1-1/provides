@@ -1,0 +1,7 @@
+%PROVIDES%
+libblkid.so=1-64
+libfdisk.so=1-64
+libmount.so=1-64
+libsmartcols.so=1-64
+libuuid.so=1-64
+

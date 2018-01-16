@@ -1,0 +1,4 @@
+%PROVIDES%
+java-runtime=8
+java-runtime-openjdk=8
+

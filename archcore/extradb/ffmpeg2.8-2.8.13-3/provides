@@ -1,0 +1,11 @@
+%PROVIDES%
+libavcodec.so=56-64
+libavdevice.so=56-64
+libavfilter.so=5-64
+libavformat.so=56-64
+libavresample.so=2-64
+libavutil.so=54-64
+libpostproc.so=53-64
+libswresample.so=1-64
+libswscale.so=3-64
+

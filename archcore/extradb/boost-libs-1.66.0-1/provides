@@ -1,0 +1,3 @@
+%PROVIDES%
+libboost_context.so=1.66.0-64
+

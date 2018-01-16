@@ -1,0 +1,7 @@
+%PROVIDES%
+rust
+cargo
+rust-nightly
+cargo-nightly
+rustfmt
+

@@ -1,2 +1,3 @@
-sed -e 's/^/"/' |sed -e 's/$/",/' |sed -e 's/"%/\/* /' |sed -e 's/%",/ *\//g'
+sed -e 's/"/@/g' | sed -e 's/^/"/' |sed -e 's/$/",/' |sed -e 's/"%/\/* /' |sed -e 's/%",/ *\//g'
+#sed -e 's/=*.$//p' | sed -e 's/"/@/g' | sed -e 's/^/"/' |sed -e 's/$/",/' |sed -e 's/"%/\/* /' |sed -e 's/%",/ *\//g'
 

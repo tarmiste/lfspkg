@@ -1,0 +1,4 @@
+%PROVIDES%
+libx264-8bit.so=148-64
+libx264-10bit.so=148-64
+

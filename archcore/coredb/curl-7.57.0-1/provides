@@ -1,0 +1,3 @@
+%PROVIDES%
+libcurl.so=4-64
+

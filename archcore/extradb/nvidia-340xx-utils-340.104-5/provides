@@ -1,0 +1,7 @@
+%PROVIDES%
+libgl
+libgles
+libegl
+nvidia-utils
+nvidia-340xx-libgl
+

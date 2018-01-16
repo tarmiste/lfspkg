@@ -1,0 +1,4 @@
+%PROVIDES%
+perl-libxml
+perl-xml-libxml-common
+

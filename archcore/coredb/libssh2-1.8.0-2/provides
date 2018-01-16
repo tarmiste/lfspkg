@@ -1,0 +1,3 @@
+%PROVIDES%
+libssh2.so=1-64
+

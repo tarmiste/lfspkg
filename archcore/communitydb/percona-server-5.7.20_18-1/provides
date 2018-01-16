@@ -1,0 +1,4 @@
+%PROVIDES%
+mysql=5.7.20_18
+mariadb=5.7.20_18
+

@@ -1,0 +1,4 @@
+%PROVIDES%
+java-runtime-headless=8
+java-runtime-headless-openjdk=8
+

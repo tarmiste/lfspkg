@@ -1,0 +1,7 @@
+%PROVIDES%
+libva-drm.so=2-64
+libva-glx.so=2-64
+libva-wayland.so=2-64
+libva-x11.so=2-64
+libva.so=2-64
+

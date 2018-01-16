@@ -1,0 +1,5 @@
+%PROVIDES%
+d-runtime=2.078.0
+d-stdlib=2.078.0
+libphobos-devel=2.078.0
+

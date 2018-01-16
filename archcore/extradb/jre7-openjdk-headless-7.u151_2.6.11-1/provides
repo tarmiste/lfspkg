@@ -1,0 +1,4 @@
+%PROVIDES%
+java-runtime-headless=7
+java-runtime-headless-openjdk=7
+

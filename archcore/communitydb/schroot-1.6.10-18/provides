@@ -1,0 +1,5 @@
+%PROVIDES%
+schroot
+sbuild
+dchroot
+

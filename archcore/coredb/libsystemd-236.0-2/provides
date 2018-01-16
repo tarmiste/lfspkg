@@ -1,0 +1,4 @@
+%PROVIDES%
+libsystemd.so=0-64
+libudev.so=1-64
+

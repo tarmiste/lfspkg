@@ -1,0 +1,7 @@
+%PROVIDES%
+tetex
+texlive-latex3
+pdfjam
+texlive-genericextra
+texlive-plainextra
+

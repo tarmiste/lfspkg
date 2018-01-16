@@ -1,0 +1,5 @@
+%PROVIDES%
+nss-myhostname
+systemd-tools=236.0
+udev=236.0
+
