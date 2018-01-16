@@ -10,6 +10,15 @@ cat name |../makestr
 echo "},"
 
 echo "{"
+if [ -f provides ]
+then
+cat provides |../makestr
+else 
+cat ../emptyprovides
+fi
+echo "},"
+
+echo "{"
 if [ -f depends ]
 then
 cat depends |../makestr

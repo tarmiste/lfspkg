@@ -2,6 +2,7 @@
 
 struct pkgdeps {
 char *names[100];
+char *provides[200];
 char *depends[200];
 char *optdepends[200];
 char *makedepends[200];
