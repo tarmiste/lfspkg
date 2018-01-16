@@ -1,4 +1,4 @@
-pkgname=rootfs
+pkgname=filesystem
 pkgver=1.0
 pkgrel=1
 pkgdesc="Skeleton directory layout and core /etc and /var/log files for initial install"
