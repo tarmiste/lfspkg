@@ -1,0 +1,29 @@
+# $Id: PKGBUILD 280592 2018-01-08 22:35:26Z jlichtblau $
+# Maintainer: Jaroslav Lichtblau <svetlemodry@archlinux.org>
+# Contributor: Marcin (CTRL) Wieczorek <marcin@marcin.co>
+# Contributor: Xiao-Long Chen <chenxiaolong@cxl.epac.to>
+
+pkgname=umockdev
+pkgver=0.10
+pkgrel=1
+pkgdesc="Record/mock hardware devices for bug reports and regression tests"
+arch=('x86_64')
+url="https://github.com/martinpitt/umockdev/"
+license=('LGPL')
+depends=('systemd' 'libgudev')
+makedepends=('gobject-introspection' 'gtk-doc' 'vala')
+source=($pkgname-$pkgver.tar.gz::https://github.com/martinpitt/$pkgname/archive/$pkgver.tar.gz)
+sha256sums=('5a2fe3a29a75ad98a09a31adca4be410cc931db6c771a207fd9b7d71c5d4411f')
+
+build() {
+  cd "${srcdir}"/${pkgname}-${pkgver}
+
+  ./autogen.sh --prefix=/usr --enable-gtk-doc --enable-introspection
+  make
+}
+
+package() {
+  cd "${srcdir}"/${pkgname}-${pkgver}
+
+  make DESTDIR="${pkgdir}" install
+}

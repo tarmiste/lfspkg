@@ -1,0 +1,31 @@
+# Maintainer: Pierre Neidhardt <ambrevar@gmail.com>
+# Contributor: Auguste Pop <auguste [at] gmail [dot] com>
+
+pkgname=uncrustify
+pkgver=0.66.1
+pkgrel=1
+pkgdesc="A source code beautifier"
+arch=("x86_64")
+url="http://uncrustify.sourceforge.net/"
+license=("GPL")
+depends=("gcc-libs")
+makedepends=("cmake" "python")
+source=("https://downloads.sourceforge.net/$pkgname/$pkgname-$pkgver.tar.gz")
+md5sums=('e80c84a5db5fb3575d14eb9c14722c2f')
+
+build() {
+	cd "$srcdir"
+	mkdir -p build
+	cd build
+	cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+	make
+}
+
+package() {
+	cd "$srcdir/build"
+	make DESTDIR="$pkgdir" PREFIX=/usr install
+
+	cd ..
+	install -d -m755 "$pkgdir"/usr/share/uncrustify
+	install -m644 etc/*.cfg "$pkgdir"/usr/share/uncrustify
+}

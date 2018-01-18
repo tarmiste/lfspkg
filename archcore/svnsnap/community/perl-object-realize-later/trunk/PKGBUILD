@@ -1,0 +1,26 @@
+# $Id: PKGBUILD 270675 2017-11-29 12:57:54Z spupykin $
+# Maintainer: Sergej Pupykin <pupykin.s+arch@gmail.com>
+# Maintainer: Charles Mauch <cmauch@gmail.com>
+
+pkgname=perl-object-realize-later
+pkgver=0.19
+pkgrel=3
+pkgdesc="Perl/CPAN Module Object::Realize::Later : Delay construction of real data until used"
+arch=("any")
+url="http://search.cpan.org/~markov/Object-Realize-Later/"
+license=("GPL" "PerlArtistic")
+source=("https://www.cpan.org/authors/id/M/MA/MARKOV/Object-Realize-Later-$pkgver.tar.gz")
+sha256sums=('7f3de6b6ac5a236636d00dd867012481e1c4878e7e68d136e565ce50b2c2404d')
+
+build() {
+  cd "$srcdir"/Object-Realize-Later-$pkgver
+  PERL_MM_USE_DEFAULT=1 perl Makefile.PL INSTALLDIRS=vendor
+  make
+}
+
+package() {
+  cd "$srcdir"/Object-Realize-Later-$pkgver
+  make install DESTDIR="$pkgdir"
+  find "$pkgdir" -name '.packlist' -delete
+  find "$pkgdir" -name '*.pod' -delete
+}

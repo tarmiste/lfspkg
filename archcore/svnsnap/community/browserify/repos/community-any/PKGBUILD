@@ -1,0 +1,32 @@
+# $Id: PKGBUILD 282752 2018-01-15 16:55:43Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+
+pkgname=browserify
+pkgdesc='browser-side require() the node way'
+pkgver=15.2.0
+pkgrel=1
+arch=('any')
+url='http://browserify.org/'
+license=('MIT' 'BSD')
+depends=('nodejs' 'acorn')
+makedepends=('npm' 'git')
+source=(https://registry.npmjs.org/$pkgname/-/$pkgname-$pkgver.tgz)
+noextract=($pkgname-$pkgver.tgz)
+install=browserify.install
+sha512sums=('20763214f9b65e32422fe555d19b45bfcc27fec00754e9bcdeadf27d29fc6166d9f637326e03cac520dd8ae314fb7e6350bd7dd7897be119d75cf0fd232a3dca')
+
+package() {
+  npm install -g --user root --prefix "$pkgdir"/usr "$srcdir"/$pkgname-$pkgver.tgz
+  rm -r "$pkgdir"/usr/etc
+  mkdir -p "$pkgdir/usr/share/licenses/$pkgname"
+  ln -s "../../../lib/node_modules/$pkgname/LICENSE" "$pkgdir/usr/share/licenses/$pkgname/"
+
+  # Experimental dedup
+  cd "$pkgdir"/usr/lib/node_modules/$pkgname/node_modules
+  for dep in acorn; do
+    rm -r $dep;
+  done
+
+  # Fix npm security derp
+  find "$pkgdir/usr" -type d -exec chmod 755 '{}' +
+}

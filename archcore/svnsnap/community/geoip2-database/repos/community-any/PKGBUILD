@@ -1,0 +1,39 @@
+# $Id: PKGBUILD 270720 2017-11-29 16:40:55Z mtorromeo $
+# Maintainer: Massimiliano Torromeo <massimiliano.torromeo@gmail.com>
+
+pkgname='geoip2-database'
+pkgver=20171128
+pkgrel=1
+pkgdesc="GeoLite2 IP geolocation databases compiled by MaxMind"
+arch=('any')
+url="https://dev.maxmind.com/geoip/geoip2/geolite2/"
+license=('custom:OPEN DATA LICENSE')
+source=(GeoLite2-City-$pkgver.tar.gz::https://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz
+        GeoLite2-Country-$pkgver.tar.gz::https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz
+        GeoLite2-ASN-$pkgver.tar.gz::https://geolite.maxmind.com/download/geoip/database/GeoLite2-ASN.tar.gz)
+noextract=(GeoLite2-City-$pkgver.tar.gz
+           GeoLite2-Country-$pkgver.tar.gz
+           GeoLite2-ASN-$pkgver.tar.gz)
+sha256sums=('c3a6ad2d44ce3c3cb3e7859e2cf7f68f9554f592efb162694051aba51f189a3e'
+            'ad497e127835fd5af30aa512ab063e36b561aaa5f91281b1b92ad089b7c659ec'
+            '80ea94475f258576221e9607449e4cc7ea6119fd1bfe151ce8b854cedb85899b')
+
+prepare() {
+  cd "$srcdir"
+
+  for _db in GeoLite2-{City,Country,ASN}; do
+    tar --strip-components=1 -xf $_db-$pkgver.tar.gz --wildcards "*/$_db.mmdb"
+  done
+
+  tar --strip-components=1 -xf GeoLite2-ASN-$pkgver.tar.gz --wildcards "*/COPYRIGHT.txt" "*/LICENSE.txt"
+}
+
+package() {
+  cd "$srcdir"
+
+  install -d "$pkgdir/usr/share/GeoIP"
+  install -m644 -t "$pkgdir/usr/share/GeoIP" GeoLite2-{City,Country,ASN}.mmdb
+
+  install -Dm644 COPYRIGHT.txt "$pkgdir/usr/share/licenses/$pkgname/COPYRIGHT.txt"
+  install -Dm644 LICENSE.txt "$pkgdir/usr/share/licenses/$pkgname/LICENSE.txt"
+}

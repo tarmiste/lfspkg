@@ -1,0 +1,24 @@
+# $Id: PKGBUILD 274867 2017-12-19 10:12:09Z spupykin $
+# Maintainer: Sergej Pupykin <pupykin.s+arch@gmail.com>
+# Contributor: Eschwartz <eschwartz93@gmail.com>
+
+pkgname=firefox-noscript
+pkgver=10.1.6
+pkgrel=1
+pkgdesc="Extension for firefox which disables script"
+arch=('any')
+url="http://noscript.net/"
+license=('GPL2')
+groups=('firefox-addons')
+depends=('firefox')
+makedepends=('unzip')
+source=(https://secure.informaction.com/download/releases/noscript-${pkgver}.xpi)
+noextract=("noscript-${pkgver}.xpi")
+sha256sums=('16c34ea0ec3eee05d303ba4fa2744d5cbe0a948325e84d41e5e8568f27a17207')
+
+package() {
+  cd "${srcdir}"
+  _extension_id="{73a6fe31-595d-460b-a920-fcc0f8843232}"
+  _extension_dest="${pkgdir}/usr/lib/firefox/browser/extensions/${_extension_id}"
+  install -Dm644 noscript-${pkgver}.xpi "${_extension_dest}.xpi"
+}

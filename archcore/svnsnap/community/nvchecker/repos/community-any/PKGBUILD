@@ -1,0 +1,31 @@
+# $Id: PKGBUILD 273249 2017-12-08 08:11:20Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+
+pkgname=nvchecker
+pkgver=1.0
+pkgrel=1
+pkgdesc="New version checker for software"
+arch=('any')
+url="https://github.com/lilydjwg/nvchecker"
+license=('MIT')
+depends=('python-setuptools' 'python-tornado' 'python-pycurl')
+checkdepends=('python-pytest-runner' 'python-pytest-xdist' 'python-pytest-asyncio' 'python-flaky')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/lilydjwg/nvchecker/archive/v$pkgver.tar.gz")
+sha512sums=('3a850030944aeec8c40490cd190e4c3d91f4c8518d3f963aee78878babb2096139a12cad1159469ac184257c2117d5bd00896d25bbd16dc8220046d522565834')
+
+build() {
+  cd nvchecker-$pkgver
+  python setup.py build 
+}
+
+check() {
+  cd nvchecker-$pkgver
+  python setup.py pytest
+}
+
+package() {
+  cd nvchecker-$pkgver
+  python setup.py install -O1 --prefix=/usr --root="$pkgdir"
+}
+
+# vim:set ts=2 sw=2 et:

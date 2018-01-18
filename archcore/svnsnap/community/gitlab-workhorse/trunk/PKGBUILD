@@ -1,0 +1,35 @@
+# Maintainer: Sven-Hendrik Haase <sh@lutzhaase.com>
+# Contributor: Caleb Maclennan <caleb@alerque.com>
+# Contributor: Pavol (Lopo) Hluchy <lopo AT losys DOT eu>
+
+pkgname=gitlab-workhorse
+pkgver=3.3.1
+pkgrel=2
+pkgdesc="HTTP server to unload Git HTTP traffic from GitLab Rails app (Unicorn)"
+arch=('x86_64')
+url="https://gitlab.com/gitlab-org/gitlab-workhorse"
+license=('MIT')
+depends=('glibc')
+makedepends=('go-pie')
+source=("${pkgname}-${pkgver}.tar.gz::https://gitlab.com/gitlab-org/gitlab-workhorse/repository/archive.tar.gz?ref=v${pkgver}"
+        "gitlab-workhorse.service")
+sha512sums=('a90842d09f3569ad82cacbe3c0de4660c8d843b892c1e63bcc5a403e3f9be2a9fd565b8703f826e0324ff5d1d152ad08c7dbc8929209172b3f04e94b76423a27'
+            'c5ce0e47fa186cf9374e9771e99df0346c3652a20dd43257a6d50003b083e78cb2ed65abdbd45cc4062114023f7b112793c25136e2d6b118e1ba30623f16be83')
+
+build() {
+  cd "${pkgname}-v${pkgver}-"*
+
+  make
+}
+
+package() {
+  cd "${pkgname}-v${pkgver}-"*
+
+  install -Dm755 "gitlab-workhorse" "${pkgdir}/usr/bin/gitlab-workhorse"
+  install -Dm755 "gitlab-zip-cat" "${pkgdir}/usr/bin/gitlab-zip-cat"
+  install -Dm755 "gitlab-zip-metadata" "${pkgdir}/usr/bin/gitlab-zip-metadata"
+  install -Dm644 "LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+  install -Dm0644 "${srcdir}/gitlab-workhorse.service" "${pkgdir}/usr/lib/systemd/system/gitlab-workhorse.service"
+}
+
+# vim:set ts=2 sw=2 et:

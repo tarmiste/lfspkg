@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 310007 2017-11-15 14:11:34Z foutrelis $
+# $Id: PKGBUILD 314943 2018-01-16 00:35:25Z eworm $
 # Maintainer: Eric Bélanger <eric@archlinux.org>
 
 pkgname=inetutils
@@ -16,10 +16,10 @@ backup=('etc/xinetd.d/telnet' 'etc/xinetd.d/talk'
 	'etc/pam.d/rlogin' 'etc/pam.d/rsh')
 options=('!emptydirs')
 install=inetutils.install
-source=(http://ftp.gnu.org/gnu/inetutils/${pkgname}-${pkgver}.tar.xz{,.sig}
-        ftpd.service rlogin.pam rlogin@.service rlogin.socket rlogin.xinetd
-        rsh.pam rsh@.service rsh.socket rsh.xinetd talk.service talk.socket talk.xinetd
-        telnet@.service telnet.socket telnet.xinetd)
+source=("https://ftp.gnu.org/gnu/inetutils/${pkgname}-${pkgver}.tar.xz{,.sig}"
+        'ftpd.service' 'rlogin.pam' 'rlogin@.service' 'rlogin.socket' 'rlogin.xinetd'
+        'rsh.pam' 'rsh@.service' 'rsh.socket' 'rsh.xinetd' 'talk.service' 'talk.socket'
+        'talk.xinetd' 'telnet@.service' 'telnet.socket' 'telnet.xinetd')
 sha1sums=('5e515cc9da142cb73bb1beda137b4c2dcf2b528c'
           'SKIP'
           '026181500b71f0c09ef5c262450be718651e5658'

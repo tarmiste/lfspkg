@@ -1,0 +1,34 @@
+# Maintainer: Bruno Pagani <archange@archlinux.org>
+
+pkgbase=arc-kde
+pkgname=('arc-kde' 'kvantum-theme-arc')
+pkgver=20171109
+pkgrel=1
+pkgdesc="Arc theme for KDE Plasma 5"
+arch=('any')
+url="https://github.com/PapirusDevelopmentTeam/${pkgbase}"
+license=('GPL3')
+options=('!strip')
+source=(${pkgbase}-${pkgver}.tar.gz::"${url}/archive/${pkgver}.tar.gz")
+sha256sums=('e767169e088498b1430bd42d0152b6c159000e89f4442aebec7869f8d4157a03')
+
+package_arc-kde() {
+    optdepends=('kvantum-theme-arc: Arc theme for Kvantum Qt style (recommended)')
+    cd ${pkgbase}-${pkgver}
+    install -d "${pkgdir}"/usr/share
+ 
+    cp -r plasma "${pkgdir}"/usr/share
+    cp -r aurorae "${pkgdir}"/usr/share
+    cp -r color-schemes "${pkgdir}"/usr/share
+    cp -r konsole "${pkgdir}"/usr/share
+    cp -r yakuake "${pkgdir}"/usr/share
+}
+
+package_kvantum-theme-arc() {
+    pkgdesc="Arc theme for Kvantum"
+    depends=('kvantum-qt5')
+    cd ${pkgbase}-${pkgver}
+    install -d "${pkgdir}"/usr/share
+
+    cp -r Kvantum "${pkgdir}"/usr/share
+}

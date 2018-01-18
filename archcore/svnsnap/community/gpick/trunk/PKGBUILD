@@ -1,0 +1,25 @@
+# $Id: PKGBUILD 276908 2017-12-29 22:04:46Z jelle $
+# Maintainer : Martin Wimpress <code@flexion.org>
+
+pkgname=gpick
+pkgver=0.2.5
+pkgrel=6
+pkgdesc="Advanced color picker written in C++ using GTK+ toolkit"
+arch=('x86_64')
+url="http://www.gpick.org/"
+license=('BSD')
+depends=('desktop-file-utils' 'gtk2' 'lua')
+makedepends=('boost' 'scons')
+source=("https://github.com/thezbyg/${pkgname}/archive/${pkgname}-${pkgver}.tar.gz")
+md5sums=('ada40cd8cae63c7bbfa1f8b9e7536f1e')
+
+build() {
+    cd "${srcdir}/${pkgname}-${pkgname}-${pkgver}"
+    scons
+}
+
+package() {
+    cd "${srcdir}/${pkgname}-${pkgname}-${pkgver}"
+    scons DESTDIR="${pkgdir}/usr" install
+    install -Dm644 installer/License.txt "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}

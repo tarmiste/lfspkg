@@ -1,0 +1,22 @@
+# $Id: PKGBUILD 281861 2018-01-13 23:47:37Z jleclanche $
+# Maintainer: Jerome Leclanche <jerome@leclan.ch>
+
+pkgname=prettier
+pkgver=1.10.2
+pkgrel=1
+pkgdesc="An opinionated code formatter for JavScript, ES2017, JSX, Flow, TypeScript, JSON, CSS, LESS, SCSS, GraphQL, Markdown"
+arch=("any")
+
+url="https://prettier.io/"
+license=("MIT")
+depends=("nodejs")
+makedepends=("npm")
+source=("https://registry.npmjs.org/less/-/$pkgname-$pkgver.tgz")
+sha256sums=("a0603eb7fad1cbef2e503f508f44d927a99c6542087c5fda7a063a3eed4166ae")
+noextract=("$pkgname-$pkgver.tgz")
+
+
+package() {
+	npm install -g --prefix "$pkgdir/usr" "$srcdir"/$pkgname-$pkgver.tgz
+	rmdir "$pkgdir/usr/etc"
+}

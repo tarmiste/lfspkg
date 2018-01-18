@@ -1,0 +1,27 @@
+# $Id: PKGBUILD 273636 2017-12-10 21:57:34Z arojas $
+# Contributor: Thomas S Hatch <thatch45@gmail.com>
+# Contributor: Jon Nordby <jononor@gmail.com>
+
+pkgname=augeas
+pkgver=1.9.0
+pkgrel=1
+pkgdesc="A configuration editing tool that parses config files and transforms them into a tree"
+arch=('x86_64')
+url="http://augeas.net"
+license=('LGPL')
+depends=('libxml2' 'gcc-libs')
+validpgpkeys=('AED6E2A185EEB379F17476D2E012D07AD0E3CC30')
+source=(http://download.augeas.net/augeas-$pkgver.tar.gz{,.sig})
+sha256sums=('2b463d398cabc9b42747aa61d3e83ed6a93ce03d9074cf8e7a7bd3107a668343'
+            'SKIP')
+
+build() {
+  cd $pkgname-$pkgver
+  ./configure --prefix=/usr
+  make
+}
+
+package() {
+  cd $pkgname-$pkgver
+  make DESTDIR="$pkgdir" install
+}

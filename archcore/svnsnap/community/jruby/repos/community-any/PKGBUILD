@@ -1,0 +1,38 @@
+# $Id: PKGBUILD 277967 2018-01-03 07:48:05Z heftig $
+# Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+# Contributor: FaziBear <fazibear@gmail.com>
+
+pkgname=jruby
+pkgver=9.1.15.0
+pkgrel=1
+pkgdesc="100% pure-Java implementation of the Ruby programming language"
+arch=(any)
+url="http://www.jruby.org/"
+license=(EPL GPL2 LGPL2.1 custom)
+options=(!strip)
+noextract=($pkgname-bin-${pkgver}.tar.gz)
+source=(http://jruby.org.s3.amazonaws.com/downloads/$pkgver/$pkgname-bin-${pkgver}.tar.gz)
+sha256sums=('4a0d9305867ed327a8cf4f7ff8a65c7ff62094a495ec85463d0792656762469e')
+
+package() {
+  depends=(java-runtime-headless bash)
+
+  cd "$pkgdir"
+
+  mkdir opt
+  bsdtar -C opt -xf "$srcdir/$pkgname-bin-$pkgver.tar.gz"
+  mv opt/jruby-$pkgver opt/jruby
+
+  find opt/jruby -regextype posix-extended -regex '.*\.(bat|dll|exe)' -print -delete
+  rm -rv opt/jruby/lib/jni/{Darwin,*-SunOS,*-Windows,*-AIX,*-*BSD}
+
+  chmod -cR g-w opt/jruby
+
+  mkdir -p usr/bin
+  for _file in jirb{,_swing} jgem jruby{,c}; do
+    ln -s ../../opt/jruby/bin/$_file usr/bin/$_file
+  done
+
+  mkdir -p usr/share/licenses/$pkgname
+  ln -s ../../../../opt/jruby/COPYING usr/share/licenses/$pkgname/COPYING
+}

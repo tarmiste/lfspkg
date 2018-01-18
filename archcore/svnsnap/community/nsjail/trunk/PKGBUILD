@@ -1,0 +1,29 @@
+# Maintainer: Bruno Pagani <archange@archlinux.org> 
+
+pkgname=nsjail
+pkgver=2.3
+pkgrel=1
+pkgdesc="A light-weight process isolation tool"
+arch=('x86_64')
+url="http://nsjail.com"
+license=('Apache')
+depends=('protobuf' 'libnl')
+makedepends=('git')
+source=(${pkgname}-${pkgver}.tar.gz::"https://github.com/google/nsjail/archive/${pkgver}.tar.gz"
+        'git+https://github.com/google/kafel.git#commit=33d7970ba0d5a1939371f3448e13ede833b32afd')
+sha256sums=('a9f7e63c798cd93e3be8d23e1170baac94f304320660d92597f752a48b1e7fb6'
+            'SKIP')
+
+prepare() {
+    mv kafel ${pkgname}-${pkgver}
+}
+
+build() {
+    cd ${pkgname}-${pkgver}
+    make
+}
+
+package() {
+    cd ${pkgname}-${pkgver}
+    install -Dm755 nsjail -t "${pkgdir}"/usr/bin/ 
+}

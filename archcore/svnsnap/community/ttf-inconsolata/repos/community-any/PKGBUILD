@@ -1,0 +1,22 @@
+# $Id: PKGBUILD 228471 2017-05-18 11:44:27Z eworm $
+# Maintainer: Ronald van Haren <ronald@archlinux.org>
+
+pkgname=ttf-inconsolata
+pkgver=20151221.480630d
+pkgrel=2
+pkgdesc="Monospace font for pretty code listings and for the terminal"
+arch=('any')
+url="https://www.google.com/fonts/specimen/Inconsolata"
+license=('custom:OFL')
+depends=('fontconfig' 'xorg-font-utils')
+source=('https://sources.archlinux.org/other/community/ttf-inconsolata/ttf-inconsolata-480630d.tar.bz2'
+        '75-ttf-inconsolata.conf')
+sha1sums=('628bacd3855a9328c2c84c3ad7d5caf9ebd2dc14'
+          '27cf0d59c91fd9ff2fb72de9d7ee5082a46a1792')
+    
+package() {
+  install -d ${pkgdir}/usr/share/fonts/TTF
+  install -Dm644 ${srcdir}/inconsolata/*.ttf ${pkgdir}/usr/share/fonts/TTF
+  install -Dm644 ${srcdir}/inconsolata/OFL.txt ${pkgdir}/usr/share/licenses/ttf-inconsolata/OFL.txt
+  install -Dm644 ${srcdir}/75-ttf-inconsolata.conf ${pkgdir}/etc/fonts/conf.avail/75-ttf-inconsolata.conf
+}

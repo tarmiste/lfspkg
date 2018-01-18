@@ -1,0 +1,37 @@
+# $Id: PKGBUILD 282205 2018-01-14 17:10:24Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+
+pkgname=tldr
+pkgver=0.4.2
+pkgrel=1
+pkgdesc="Command line client for tldr, a collection of simplified and community-driven man pages."
+arch=('any')
+url="https://github.com/tldr-pages/tldr-python-client"
+license=('MIT')
+depends=('python-termcolor' 'python-colorama')
+makedepends=('python-setuptools-markdown' 'python-setuptools-scm')
+checkdepends=('python-pytest-runner')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/tldr-pages/tldr-python-client/archive/$pkgver.tar.gz")
+sha512sums=('b9732b94032756a5f85346543c1116bd9c0be846433e30cdb9e73760667ef8f49b3962dbe36615299045aa4ee5cd344b5cbe7c2f60155162b6e27a9d9084436f')
+
+prepare() {
+  export SETUPTOOLS_SCM_PRETEND_VERSION=$pkgver
+}
+
+build() {
+  cd tldr-python-client-$pkgver
+  python setup.py build
+}
+
+check() {
+  cd tldr-python-client-$pkgver
+  python setup.py pytest
+}
+
+package() {
+  cd tldr-python-client-$pkgver
+  python setup.py install -O1 --prefix=/usr --root="$pkgdir"
+  install -Dm755 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+}
+
+# vim:set ts=2 sw=2 et:

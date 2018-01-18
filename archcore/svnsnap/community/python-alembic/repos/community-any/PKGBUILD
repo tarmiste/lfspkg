@@ -1,0 +1,60 @@
+# Maintainer: Levente Polyak <anthraxx[at]archlinux[dot]org>
+# Contributor: googol <googol@posteo.de>
+# Contributor: Oliver Mangold <o.mangold at gmail dot com>
+
+pkgbase=python-alembic
+pkgname=('python-alembic' 'python2-alembic')
+pkgver=0.9.6
+pkgrel=1
+pkgdesc='Lightweight database migration tool for usage with SQLAlchemy'
+url='https://bitbucket.org/zzzeek/alembic'
+arch=('any')
+license=('MIT')
+makedepends=('python-setuptools' 'python-mako' 'python-sqlalchemy' 'python-editor' 'python-dateutil'
+             'python2-setuptools' 'python2-mako' 'python2-sqlalchemy' 'python2-editor' 'python2-dateutil')
+checkdepends=('python-pytest' 'python-mock' 'python2-pytest' 'python2-mock')
+source=(https://pypi.io/packages/source/a/alembic/alembic-${pkgver}.tar.gz{,.asc})
+sha512sums=('f7bc6fa2888056d66b1d3640387b933b4accea6e6062ec089e5ce1353cbaa89ad3c1afac6c06aa52ddd497bdd41f9fdf5d4d860244ed8f339c69c16eb5494c46'
+            'SKIP')
+validpgpkeys=('83AF7ACE251C13E6BB7DEFBD330239C1C4DAFEE1') # Michael Bayer <classic@zzzcomputing.com>
+
+prepare() {
+  cp -a alembic-${pkgver}{,-py2}
+}
+
+build() {
+  (cd alembic-${pkgver}
+    python setup.py build
+  )
+  (cd alembic-${pkgver}-py2
+    python2 setup.py build
+  )
+}
+
+check() {
+  (cd alembic-${pkgver}
+    py.test
+  )
+  (cd alembic-${pkgver}-py2
+    py.test2
+  )
+}
+
+package_python-alembic() {
+  depends=('python' 'python-mako' 'python-sqlalchemy' 'python-editor' 'python-dateutil')
+  cd alembic-${pkgver}
+  python setup.py install --root="${pkgdir}" --prefix=/usr -O1 --skip-build
+  install -Dm 644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}"
+  install -Dm 644 README.rst CHANGES -t "${pkgdir}/usr/share/doc/${pkgname}"
+}
+
+package_python2-alembic() {
+  depends=('python2' 'python2-mako' 'python2-sqlalchemy' 'python2-editor' 'python2-dateutil')
+  cd alembic-${pkgver}-py2
+  python2 setup.py install --root="${pkgdir}" --prefix=/usr -O1 --skip-build
+  install -Dm 644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}"
+  install -Dm 644 README.rst CHANGES -t "${pkgdir}/usr/share/doc/${pkgname}"
+  mv "${pkgdir}/usr/bin/alembic"{,2}
+}
+
+# vim: ts=2 sw=2 et:

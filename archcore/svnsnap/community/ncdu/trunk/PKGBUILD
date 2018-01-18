@@ -1,0 +1,29 @@
+# $Id: PKGBUILD 266875 2017-11-15 14:29:11Z foutrelis $
+# Contributor: lp76 <l.peduto@gmail.com>
+# Contributor: Daenyth <Daenyth+Arch AT gmail DOT com>
+# Maintainer: Gaetan Bisson <bisson@archlinux.org>
+
+pkgname=ncdu
+pkgver=1.12
+pkgrel=1
+pkgdesc='Disk usage analyzer with an ncurses interface'
+url='https://dev.yorhel.nl/ncdu'
+license=('custom:MIT')
+depends=('ncurses')
+arch=('x86_64')
+validpgpkeys=('74460D32B80810EBA9AFA2E962394C698C2739FA')
+source=("https://dev.yorhel.nl/download/${pkgname}-${pkgver}.tar.gz"{,.asc})
+sha256sums=('820e4e4747a2a2ec7a2e9f06d2f5a353516362c22496a10a9834f871b877499a'
+            'SKIP')
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	./configure --prefix=/usr
+	make
+}
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
+	install -Dm644 COPYING "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}

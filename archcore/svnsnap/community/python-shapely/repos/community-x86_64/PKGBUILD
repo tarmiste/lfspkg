@@ -1,0 +1,67 @@
+# $Id: PKGBUILD 273414 2017-12-09 21:04:56Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: David Verelst <david dot verelst at gmail com>
+# Contributor: richli
+
+pkgbase=python-shapely
+pkgname=(python-shapely python2-shapely)
+pkgver=1.6.3
+pkgrel=1
+pkgdesc="Manipulation and analysis of geometric objects in the Cartesian plane"
+arch=('x86_64')
+url="https://pypi.python.org/pypi/Shapely"
+license=('BSD')
+makedepends=('python-setuptools' 'python2-setuptools' 'python-packaging' 'python2-packaging' 'geos'
+             'python-numpy' 'python2-numpy' 'cython' 'cython2')
+checkdepends=('python-pytest' 'python2-pytest')
+source=("https://pypi.io/packages/source/S/Shapely/Shapely-${pkgver}.tar.gz")
+sha512sums=('e541c8e3369914bbdc63e3d2396cb699503f50138ff41ef8d3998a272e1bb051171ab063ba8346464c5bdc425efa5bfdb0d71f0365e63b3b2d592141dba3a7dd')
+
+prepare() {
+  rm -r Shapely-$pkgver/_vendor
+  sed -i 's/from _vendor.packaging./from packaging./' Shapely-$pkgver/setup.py
+
+  cp -a Shapely-$pkgver{,-py2}
+}
+
+build() {
+  cd "$srcdir"/Shapely-$pkgver
+  python setup.py build
+
+  cd "$srcdir"/Shapely-$pkgver-py2
+  python2 setup.py build
+}
+
+check() {
+  # TODO: make the hack less dirty...
+
+  cd "$srcdir"/Shapely-$pkgver
+  mv shapely shapely.bak
+  PYTHONPATH="$PWD/build/lib.linux-$CARCH-3.6:$PYTHONPATH" py.test
+  mv shapely.bak shapely
+
+  cd "$srcdir"/Shapely-$pkgver-py2
+  mv shapely shapely.bak
+  PYTHONPATH="$PWD/build/lib.linux-$CARCH-2.7:$PYTHONPATH" py.test2
+  mv shapely.bak shapely
+}
+
+package_python-shapely() {
+  depends=('geos' 'python')
+  optdepends=('python-numpy: for shapely.vectorized submodule')
+
+  cd "$srcdir"/Shapely-$pkgver
+  python setup.py install --root="$pkgdir" --optimize=1
+  install -Dm644 LICENSE.txt "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+}
+
+package_python2-shapely() {
+  depends=('geos' 'python2')
+  optdepends=('python2-numpy: for shapely.vectorized submodule')
+
+  cd "$srcdir"/Shapely-$pkgver-py2
+  python2 setup.py install --root="$pkgdir" --optimize=1
+  install -Dm644 LICENSE.txt "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+}
+
+# vim:set ts=2 sw=2 et:

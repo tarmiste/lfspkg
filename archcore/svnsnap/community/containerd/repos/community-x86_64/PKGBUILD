@@ -1,0 +1,37 @@
+# $Id: PKGBUILD 275570 2017-12-22 20:50:38Z seblu $
+# Maintainer: Sébastien "Seblu" Luttringer
+# Contributor: Iwan Timmer <irtimmer@gmail.com>
+
+pkgname=containerd
+pkgver=1.0.0
+pkgrel=2
+pkgdesc='An open and reliable container runtime'
+url='https://containerd.io/'
+depends=('glibc' 'runc')
+makedepends=('go-pie' 'git' 'btrfs-progs')
+arch=('x86_64')
+source=("containerd²::git+https://github.com/containerd/containerd.git#tag=v$pkgver")
+license=("APACHE")
+md5sums=('SKIP')
+
+prepare() {
+  mkdir -p src/github.com/containerd
+  ln -rTsf containerd² src/github.com/containerd/containerd
+  # fix paths in service
+  sed -i 's,/sbin,/usr/bin,;s,/usr/local,/usr,' containerd²/containerd.service
+}
+
+build() {
+  export GOPATH="$srcdir"
+  cd src/github.com/containerd/containerd
+  make
+}
+
+package() {
+  export GOPATH="$srcdir"
+  cd src/github.com/containerd/containerd
+  make install DESTDIR="$pkgdir/usr"
+  install -Dm644 containerd.service "$pkgdir"/usr/lib/systemd/system/containerd.service
+}
+
+# vim:set ts=2 sw=2 et:

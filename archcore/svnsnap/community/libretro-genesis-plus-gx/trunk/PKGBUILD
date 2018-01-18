@@ -1,0 +1,40 @@
+# $Id: PKGBUILD 275519 2017-12-22 15:53:45Z alucryd $
+# Maintainer: Maxime Gauduin <alucryd@archlinux.org>
+# Contributor: Johnathan Jenkins <twodopeshaggy@gmail.com>
+# Contributor: prettyvanilla <prettyvanilla@posteo.at>
+# Contributor: almostalive <almostalive2003@gmail.com>
+
+pkgname=libretro-genesis-plus-gx
+pkgver=1366
+pkgrel=1
+pkgdesc='Sega MS/GG/MD/CD core'
+arch=('x86_64')
+url='https://github.com/libretro/Genesis-Plus-GX'
+license=('BSD' 'LGPL2.1')
+groups=('libretro')
+depends=('glibc' 'libretro-core-info')
+makedepends=('git')
+_commit='5c515fb88ea15a8898f3d5768a994b1752fb511b'
+source=("libretro-genesis-plus-gx::git+https://github.com/libretro/Genesis-Plus-GX.git#commit=${_commit}")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd libretro-genesis-plus-gx
+
+  git rev-list --count HEAD
+}
+
+build() {
+  cd libretro-genesis-plus-gx
+
+  make -f Makefile.libretro
+}
+
+package() {
+  cd libretro-genesis-plus-gx
+
+  install -Dm 644 genesis_plus_gx_libretro.so -t "${pkgdir}"/usr/lib/libretro/
+  install -Dm 644 LICENSE.txt -t "${pkgdir}"/usr/share/licenses/libretro-genesis-plus-gx/
+}
+
+# vim: ts=2 sw=2 et:

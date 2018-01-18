@@ -1,0 +1,27 @@
+# $Id: PKGBUILD 281582 2018-01-12 14:58:56Z bgyorgy $
+# Maintainer: Balló György <ballogyor+arch at gmail dot com>
+# Contributor: Sergej Pupykin <pupykin.s+arch@gmail.com>
+# Contributor: thefatprecious <marty@loomar.com>
+
+pkgname=tvtime
+pkgver=1.0.11
+pkgrel=2
+pkgdesc="High quality television application for use with video capture cards"
+arch=('x86_64')
+url='https://linuxtv.org/'
+license=('GPL')
+depends=('alsa-lib' 'freetype2' 'hicolor-icon-theme' 'libxinerama' 'libxml2' 'libxss' 'libxv' 'libxxf86vm')
+source=("https://linuxtv.org/downloads/$pkgname/$pkgname-$pkgver.tar.gz")
+sha256sums=('403bf2106578b1f3d6ce70bc08654f7a90753f19e27b4cc170bc636307cdc78c')
+
+build() {
+  cd $pkgname-$pkgver
+  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+  make
+}
+
+package() {
+  cd $pkgname-$pkgver
+  make DESTDIR="$pkgdir" install
+  install -Dm644 docs/html/default.tvtime.xml "$pkgdir"/usr/share/tvtime/default.tvtime.xml
+}

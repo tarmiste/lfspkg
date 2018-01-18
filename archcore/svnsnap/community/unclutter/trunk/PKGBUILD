@@ -1,0 +1,32 @@
+# $Id: PKGBUILD 270675 2017-11-29 12:57:54Z spupykin $
+# Maintainer: Sergej Pupykin <pupykin.s+arch@gmail.com>
+# Maintainer: Andrea Scarpino <andrea@archlinux.org>
+# Contributor: Callan Barrett <wizzomafizzo@gmail.com>
+# Contributor: Anthony Martin <ality@pbrane.org>
+
+pkgname=unclutter
+pkgver=8
+pkgrel=10
+pkgdesc="A small program for hiding the mouse cursor"
+url="http://www.ibiblio.org/pub/X11/contrib/utilities/unclutter-8.README"
+arch=('x86_64')
+license=('Public Domain')
+depends=('libxext')
+makedepends=('imake')
+source=(https://www.ibiblio.org/pub/X11/contrib/utilities/$pkgname-$pkgver.tar.gz
+	https://www.ibiblio.org/pub/X11/contrib/utilities/$pkgname-$pkgver.README)
+sha256sums=('33a78949a7dedf2e8669ae7b5b2c72067896497820292c96afaa60bb71d1f2a6'
+            '3a71a1f42bbe134b7cf7f8ce588c0b702cf26ac4bbec631fce55a49196501086')
+
+build() {
+  cd "$srcdir"/$pkgname
+  xmkmf -a
+  make
+}
+
+package() {
+  cd "$srcdir"/$pkgname
+  make DESTDIR="$pkgdir" install
+  install -Dm0644 unclutter.man "$pkgdir"/usr/share/man/man1/unclutter.1
+  install -Dm0644 "$srcdir"/unclutter-8.README "$pkgdir"/usr/share/licenses/$pkgname/unclutter-8.README
+}

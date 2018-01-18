@@ -1,0 +1,31 @@
+# $Id: PKGBUILD 264982 2017-11-01 10:54:52Z arodseth $
+# Maintainer: Alexander F Rødseth <xyproto@archlinux.org>
+
+pkgname=netsurf-buildsystem
+pkgver=1.6
+pkgrel=1
+pkgdesc='The Netsurf buildsystem'
+arch=('any')
+url='http://source.netsurf-browser.org/buildsystem.git/' # invalid https
+license=('MIT')
+source=("http://download.netsurf-browser.org/libs/releases/buildsystem-$pkgver.tar.gz")
+sha256sums=('3d9c8a2f60dab6add712a2e67ba35f592e31688566b2ded38d0d61461138b35c')
+
+build() {
+  cd "buildsystem-$pkgver"
+
+  sed -i 's:-Werror::' Makefile
+  make PREFIX=/usr COMPONENT_TYPE='lib-shared'
+  make PREFIX=/usr COMPONENT_TYPE='lib-static'
+}
+
+package() {
+  cd "buildsystem-$pkgver"
+
+  make install PREFIX=/usr DESTDIR="$pkgdir" COMPONENT_TYPE='lib-shared'
+  make install PREFIX=/usr DESTDIR="$pkgdir" COMPONENT_TYPE='lib-static'
+  install -Dm644 COPYING "$pkgdir/usr/share/licenses/$pkgname/COPYING"
+}
+
+# getver: git.netsurf-browser.org/buildsystem.git/plain/Makefile
+# vim: ts=2 sw=2 et:

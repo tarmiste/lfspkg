@@ -1,0 +1,25 @@
+# $Id: PKGBUILD 270675 2017-11-29 12:57:54Z spupykin $
+# Maintainer: Sergej Pupykin <pupykin.s+arch@gmail.com>
+
+pkgname=stalonetray
+pkgver=0.8.3
+pkgrel=1
+pkgdesc="STAnd-aLONE sysTRAY. It has minimal build and run-time dependencies: the Xlib only."
+arch=('x86_64')
+url="http://stalonetray.sourceforge.net"
+license=('GPL')
+depends=('libx11' 'libxpm')
+source=(https://downloads.sourceforge.net/$pkgname/$pkgname-$pkgver.tar.bz2)
+sha256sums=('36548a588b2d466913423245dda6ffb6313132cd0cec635a117d37b3dab5fd4c')
+
+build() {
+  cd "$srcdir"/$pkgname-$pkgver
+  ./configure --prefix=/usr
+  make
+}
+
+package() {
+  cd "$srcdir"/$pkgname-$pkgver
+  make DESTDIR="$pkgdir" install
+  install -D -m644 stalonetrayrc.sample "$pkgdir"/etc/stalonetrayrc
+}

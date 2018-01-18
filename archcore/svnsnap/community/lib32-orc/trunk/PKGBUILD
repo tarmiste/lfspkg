@@ -1,0 +1,50 @@
+# $Id$
+# Maintainer: Maxime Gauduin <alucryd@archlinux.org>
+
+pkgname=lib32-orc
+pkgver=0.4.27
+pkgrel=1
+pkgdesc='The Oild Runtime Compiler'
+url="https://cgit.freedesktop.org/gstreamer/orc"
+arch=('x86_64')
+license=('custom')
+url='https://code.entropywave.com/projects/orc/'
+depends=('lib32-glibc' 'orc')
+makedepends=('gtk-doc' 'meson' 'valgrind-multilib')
+#source=("https://gstreamer.freedesktop.org/data/src/orc/orc-${pkgver}.tar.xz"{,.asc})
+source=("https://github.com/GStreamer/orc/archive/orc-${pkgver}.tar.gz")
+validpgpkeys=('D637032E45B8C6585B9456565D2EEE6F6F349D7C') # Tim-Philipp Müller
+sha256sums=('49f331f1edbd43a0d8fae2634ded9c4a0fc8558a3388f6cbb203858e69165652')
+
+prepare() {
+  if [[ -d build ]]; then
+    rm -rf build
+  fi
+  mkdir build
+}
+
+build() {
+  cd build
+
+  export CC='gcc -m32'
+  export CXX='g++ -m32'
+  export PKG_CONFIG_PATH='/usr/lib32/pkgconfig'
+
+  meson ../orc-orc-${pkgver} \
+    --buildtype='release' \
+    --prefix='/usr' \
+    --libdir='/usr/lib32'
+  ninja
+}
+
+package() {
+  cd build
+
+  DESTDIR="$pkgdir" ninja install
+  rm -rf "${pkgdir}"/usr/{bin,include,share}
+
+  install -dm 755 "${pkgdir}"/usr/share/licenses
+  ln -s orc "${pkgdir}"/usr/share/licenses/lib32-orc
+}
+
+# vim: ts=2 sw=2 et:

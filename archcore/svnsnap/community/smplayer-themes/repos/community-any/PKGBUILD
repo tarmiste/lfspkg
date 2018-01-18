@@ -1,0 +1,33 @@
+# Maintainer: Levente Polyak <anthraxx[at]archlinux[dot]org>
+# Contributor: Alessio 'mOLOk' Bolognino <themolok@gmail.com>
+
+pkgname=smplayer-themes
+pkgver=17.3.0
+pkgrel=1
+epoch=1
+pkgdesc='Themes for SMPlayer'
+url='http://smplayer.sourceforge.net/'
+arch=('any')
+license=('GPL2')
+depends=('smplayer')
+makedepends=('optipng')
+source=(https://downloads.sourceforge.net/smplayer/${pkgname}-${pkgver}.tar.bz2)
+sha512sums=('99f320fdd6934b377da7f39486489e8c5f6f2c76168b06a58ef4b019689da87fe7474ba59d0653e1ec8f2e2e075c1e9af06c09b6a3bc7a416f8c328a47e495fe')
+
+prepare() {
+  cd ${pkgname}-${pkgver}
+  # Fix invalid PNG icons to work with libpng 1.6
+  find -name '*.png' -exec optipng -quiet -force -fix {} +
+}
+
+build() {
+  cd ${pkgname}-${pkgver}
+  make PREFIX=/usr
+}
+
+package() {
+  cd ${pkgname}-${pkgver}
+  make DESTDIR="${pkgdir}" PREFIX=/usr install
+}
+
+# vim: ts=2 sw=2 et:

@@ -1,0 +1,30 @@
+# $Id: PKGBUILD 283546 2018-01-17 04:17:26Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+
+pkgname=python-boto3
+pkgver=1.5.16
+pkgrel=1
+pkgdesc='The AWS SDK for Python'
+arch=('any')
+license=('Apache')
+url='https://github.com/boto/boto3'
+depends=('python-botocore' 'python-jmespath' 'python-s3transfer')
+makedepends=('python-setuptools')
+# checkdepends=('python-coverage' 'python-nose' 'python-mock')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/boto/boto3/archive/$pkgver.tar.gz")
+sha512sums=('76a1121d7acd124befe96ff009d89c848cda10254ae10315db7179601ac155ee573c3a1945a7b764d2fdf9077039e4f38cf81f0cefb63486ca5c1cf131f4f3de')
+
+build() {
+  cd "$srcdir"/boto3-$pkgver
+  python setup.py build
+}
+
+check() {
+  cd "$srcdir"/boto3-$pkgver
+  # scripts/ci/run-tests
+}
+
+package() {
+  cd boto3-$pkgver
+  python setup.py install --root="$pkgdir" --optimize=1
+}

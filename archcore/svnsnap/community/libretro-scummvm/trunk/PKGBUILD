@@ -1,0 +1,37 @@
+# $Id: PKGBUILD 275536 2017-12-22 19:14:34Z alucryd $
+# Maintainer: Maxime Gauduin <alucryd@ærchlinux.org>
+# Contributor: Oliver Jaksch <arch-aur@com-in.de>
+
+pkgname=libretro-scummvm
+pkgver=84203
+pkgrel=1
+pkgdesc='ScummVM core'
+arch=('x86_64')
+url='https://github.com/libretro/scummvm'
+license=('GPL')
+groups=('libretro')
+depends=('gcc-libs' 'glibc' 'libretro-core-info')
+makedepends=('git')
+_commit='6345d9a9aafc927ddd504c46ebd68af5702e9f8a'
+source=("libretro-scummvm::git+https://github.com/libretro/scummvm.git#commit=${_commit}")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd libretro-scummvm
+
+  git rev-list --count HEAD
+}
+
+build() {
+  cd libretro-scummvm/backends/platform/libretro/build
+
+  make
+}
+
+package() {
+  cd libretro-scummvm/backends/platform/libretro/build
+
+  install -Dm 644 scummvm_libretro.so -t "${pkgdir}"/usr/lib/libretro/
+}
+
+# vim: ts=2 sw=2 et:

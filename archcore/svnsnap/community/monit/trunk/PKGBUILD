@@ -1,0 +1,33 @@
+# $Id: PKGBUILD 275708 2017-12-24 08:57:58Z jlichtblau $
+# Maintainer: Jaroslav Lichtblau <svetlemodry@archlinux.org>
+# Contributor: Geoffroy Carrier <geoffroy.carrier@aur.archlinux.org>
+# Contributor: Marco Bartholomew <marco@marcobartholomew.com>
+
+pkgname=monit
+pkgver=5.25.1
+pkgrel=1
+pkgdesc="Utility for managing and monitoring, processes, files, directories and devices on a *NIX system"
+arch=('x86_64')
+url="http://mmonit.com/monit/"
+license=('GPL3')
+depends=('openssl')
+backup=('etc/monitrc')
+changelog=$pkgname.changelog
+source=(http://mmonit.com/$pkgname/dist/$pkgname-$pkgver.tar.gz)
+sha256sums=('4b5c25ceb10825f1e5404f1d8a7b21507716b82bc20c3586f86603691c3b81bc')
+
+build() {
+  cd "${srcdir}"/$pkgname-$pkgver
+
+  ./configure --prefix=/usr --sysconfdir=/etc
+  make
+}
+
+package() {
+  cd "${srcdir}"/$pkgname-$pkgver
+
+  make DESTDIR="${pkgdir}" install
+
+  install -Dm700 monitrc "${pkgdir}"/etc/monitrc
+  install -Dm644 system/startup/$pkgname.service "${pkgdir}"/usr/lib/systemd/system/$pkgname.service
+}

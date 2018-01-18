@@ -1,0 +1,46 @@
+# $Id: PKGBUILD 268034 2017-11-22 14:30:03Z arcanis $
+# Maintainer: Evgeniy Alekseev <arcanis at archlinux dot org>
+# Contributor: Raphaël Doursenaud <rdoursenaud at free dot fr>
+
+pkgbase=python-mysql-connector
+pkgname=('python-mysql-connector' 'python2-mysql-connector')
+_pkgname=mysql-connector-python
+pkgver=2.1.7
+pkgrel=1
+pkgdesc="A standardized database driver for Python platforms and development"
+arch=('any')
+url="http://dev.mysql.com/downloads/connector/python/"
+license=('GPL')
+depends=('python' 'python2')
+source=("https://cdn.mysql.com/Downloads/Connector-Python/${_pkgname}-${pkgver}.tar.gz")
+sha512sums=('f88c3a6dd3c3c1cd5c16165daef801dbcc7ea9163406273dd751e25687a57dcdf4ffbcdb65bb107e8cd9d7c91029823f625dc19ab34116398263fa074598880a')
+changelog=ChangeLog
+
+prepare() {
+  cp -r "${_pkgname}-${pkgver}" "${_pkgname}-${pkgver}-py2"
+  # change python to python2
+  find "${_pkgname}-${pkgver}-py2" -name '*.py' -type f -exec \
+      sed -i 's|env python|env python2|' {} \;
+}
+
+build() {
+  cd "${srcdir}/${_pkgname}-${pkgver}"
+  python setup.py build
+
+  cd "${srcdir}/${_pkgname}-${pkgver}-py2"
+  python2 setup.py build
+}
+
+package_python-mysql-connector() {
+  depends=('python')
+
+  cd "${srcdir}/${_pkgname}-${pkgver}"
+  python setup.py install --root="${pkgdir}" --optimize=1
+}
+
+package_python2-mysql-connector() {
+  depends=('python2')
+
+  cd "${srcdir}/${_pkgname}-${pkgver}-py2"
+  python2 setup.py install --root="${pkgdir}" --optimize=1
+}

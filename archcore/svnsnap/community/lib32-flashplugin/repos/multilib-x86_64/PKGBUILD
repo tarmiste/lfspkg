@@ -1,0 +1,20 @@
+# $Id: PKGBUILD 280709 2018-01-09 16:34:50Z foutrelis $
+# Maintainer: Daniel Wallace <danielwallace at gtmanfred dot com>
+
+pkgname=lib32-flashplugin
+pkgver=28.0.0.137
+pkgrel=1
+license=('custom')
+pkgdesc='Adobe Flash Player for 32-bit Mozilla-based browsers'
+url="https://get.adobe.com/flashplayer/"
+arch=('x86_64')
+depends=('mozilla-common' 'lib32-libxt' 'lib32-gtk2' 'lib32-nss' 'lib32-curl' 'lib32-alsa-lib')
+#optdepends=('lib32-libvdpau: video hardware decoding for supporting players')
+options=(!strip)
+source=("flash_player_npapi_linux_$pkgver.i386.tar.gz::https://fpdownload.adobe.com/get/flashplayer/pdc/$pkgver/flash_player_npapi_linux.i386.tar.gz")
+sha256sums=('706ee8e5154451fd1eba123b8792c1e16ca4c5b66ec4ddd44dc27fa2563b4181')
+
+package() {
+  install -Dm644 "$srcdir/libflashplayer.so" "$pkgdir/usr/lib32/mozilla/plugins/libflashplayer.so"
+  install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname" license.pdf LGPL/*.txt
+}

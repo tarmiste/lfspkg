@@ -1,0 +1,23 @@
+# $Id: PKGBUILD 276419 2017-12-28 14:20:02Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+
+pkgname=acorn
+pkgver=5.3.0
+pkgrel=1
+pkgdesc='A tiny, fast JavaScript parser, written completely in JavaScript.'
+arch=('any')
+url='https://github.com/ternjs/acorn'
+license=('MIT')
+depends=('nodejs')
+makedepends=('npm')
+source=(https://registry.npmjs.org/$pkgname/-/$pkgname-$pkgver.tgz)
+noextract=($pkgname-$pkgver.tgz)
+sha512sums=('61e8fecce2750e6fc8319cf38fbf0e9ed3ffaf7cc711a29cc8da14da501ac4fb6bb1e33aac5d31c2aa33e50e72b008840fd8538c8da182dbcb5e2b6508dd7f52')
+
+package() {
+  npm install -g --user root --prefix "$pkgdir"/usr "$srcdir"/$pkgname-$pkgver.tgz
+  rm -r "$pkgdir"/usr/etc
+
+  mkdir -p "$pkgdir/usr/share/licenses/$pkgname"
+  ln -s "../../../lib/node_modules/$pkgname/LICENSE" "$pkgdir/usr/share/licenses/$pkgname/"
+}

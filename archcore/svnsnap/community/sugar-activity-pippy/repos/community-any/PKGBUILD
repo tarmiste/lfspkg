@@ -1,0 +1,28 @@
+# $Id: PKGBUILD 237924 2017-06-17 14:57:14Z bgyorgy $
+# Maintainer: Balló György <ballogyor+arch at gmail dot com>
+
+pkgname=sugar-activity-pippy
+_pkgname=Pippy
+pkgver=71
+pkgrel=1
+pkgdesc="Sugar activity to learn and develop in Python programming language"
+arch=('any')
+url="https://wiki.sugarlabs.org/go/Activities/Pippy"
+license=('GPL')
+groups=('sugar-fructose')
+depends=('python2-pybox2d' 'python2-pygame' 'sugar' 'vte3')
+source=(https://github.com/sugarlabs/$_pkgname/archive/v$pkgver.tar.gz)
+sha256sums=('5ac947541628f8dbe3268746eec47690e78cbd3a92914a25d84df1a726031501')
+
+prepare() {
+  cd $_pkgname-$pkgver
+  find . -type f | xargs sed -i 's@^#!.*python$@#!/usr/bin/python2@'
+  sed -i 's/python %s; sleep 1/python2 %s; sleep 1/' pippy_app.py
+  rm -r library/box2d_*/ library/Box2D.py library/LICENSE
+}
+
+package() {
+  cd $_pkgname-$pkgver
+  python2 setup.py install --prefix "$pkgdir/usr"
+  rm -r "$pkgdir"/usr/share/applications
+}

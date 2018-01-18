@@ -1,0 +1,29 @@
+# $Id: PKGBUILD 266920 2017-11-16 08:54:43Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Balló György <ballogyor+arch at gmail dot com>
+# Contributor: Jan de Groot <jgc@archlinux.org>
+
+pkgname=deepin-metacity
+pkgver=3.22.13
+pkgrel=1
+pkgdesc="2D window manager for Deepin"
+arch=('x86_64')
+license=('GPL')
+depends=('dconf' 'libcanberra' 'libgtop' 'libsm' 'deepin-desktop-schemas' 'gtk3' 'startup-notification' 'zenity' 'bamf')
+makedepends=('intltool' 'itstool' 'autoconf-archive' 'yelp-tools' 'python')
+url="https://github.com/linuxdeepin/deepin-metacity"
+source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxdeepin/deepin-metacity/archive/$pkgver.tar.gz")
+sha512sums=('8e851e94e98a08081104c32d07a675d2ed068f47cbff18fa9926f3130bdb984ed913314d2718b1d0673ad34068dcf80ede78149cbf6cd41e8814a653792bf654')
+
+build() {
+  cd $pkgname-$pkgver
+  ./autogen.sh --prefix=/usr --sysconfdir=/etc --localstatedir=/var --libexecdir=/usr/lib/$pkgname \
+               --disable-static --disable-schemas-compile
+  sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+  make
+}
+
+package() {
+  cd $pkgname-$pkgver
+  make DESTDIR="$pkgdir" install
+}

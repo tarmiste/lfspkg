@@ -1,0 +1,32 @@
+# $Id: PKGBUILD 274615 2017-12-16 19:21:07Z jlichtblau $
+# Maintainer: Jaroslav Lichtblau <svetlemodry@archlinux.org>
+
+pkgname=man-pages-de
+pkgver=2.3
+pkgrel=1
+pkgdesc="German Linux man pages"
+arch=('any')
+url="https://alioth.debian.org/projects/manpages-de/"
+license=('GPL3')
+depends=('man-db')
+makedepends=('po4a')
+changelog=$pkgname.changelog
+options=('!emptydirs')
+source=(http://manpages-de.alioth.debian.org/downloads/manpages-de-$pkgver.tar.xz)
+sha256sums=('99b93ce505d65b3c54e3a00d93aaa8f3152ca9bdfb5c17ed140c340b64ad034f')
+
+build() {
+  cd "${srcdir}"/manpages-de-$pkgver
+
+  ./configure --prefix=/usr
+  make
+}
+
+package() {
+  cd "${srcdir}"/manpages-de-$pkgver
+
+  make DESTDIR="${pkgdir}" install
+
+#duplicates
+rm "${pkgdir}"/usr/share/man/de/man1/groups.1.gz #shadow
+}

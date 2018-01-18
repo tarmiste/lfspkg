@@ -1,0 +1,59 @@
+# $Id: PKGBUILD 282088 2018-01-14 15:47:18Z jelle $
+# Maintainer: Thomas Dziedzic < gostrc at gmail >
+# Contributor: Pierre Chapuis <catwell at archlinux dot us>
+
+pkgname=('python-decorator' 'python2-decorator')
+pkgver=4.2.1
+pkgrel=1
+pkgdesc='Python Decorator module'
+arch=('any')
+url='http://pypi.python.org/pypi/decorator'
+license=('BSD')
+makedepends=('python2' 'python' 'python-setuptools' 'python2-setuptools')
+source=('https://pypi.python.org/packages/70/f1/cb9373195639db13063f55eb06116310ad691e1fd125e6af057734dc44ea/decorator-4.2.1.tar.gz'
+        'LICENSE.txt')
+md5sums=('e886337e9f70e70d45d67266b8e66044'
+         '0ca76d2c707f09dbb04acc425ea1a08b')
+
+build() {
+  # Make python and python2 builds possible
+  cp -r decorator-$pkgver decorator2-$pkgver
+
+  cd "$srcdir/decorator-$pkgver"
+
+  python3 setup.py build
+
+  cd "$srcdir/decorator2-$pkgver"
+
+  python2 setup.py build
+}
+
+package_python2-decorator() {
+depends=('python2')
+replaces=('python-decorator<=3.3.2-1')
+  cd "${srcdir}/decorator2-${pkgver}"
+
+  python2 setup.py install --root="${pkgdir}" --optimize=1
+
+  install -D -m644 "${srcdir}/LICENSE.txt" \
+    "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}
+package_python-decorator() {
+depends=('python')
+  cd "${srcdir}/decorator-${pkgver}"
+
+  python3 setup.py install --root="${pkgdir}" --optimize=1
+
+  install -D -m644 "${srcdir}/LICENSE.txt" \
+    "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}
+
+check() {
+  cd "$srcdir/decorator-$pkgver"
+
+  python3 setup.py test
+
+  cd "$srcdir/decorator2-$pkgver"
+
+  python2 setup.py test
+}

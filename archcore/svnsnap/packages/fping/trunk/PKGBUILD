@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 310007 2017-11-15 14:11:34Z foutrelis $
+# $Id: PKGBUILD 314942 2018-01-16 00:32:07Z eworm $
 # Maintainer: Giovanni Scafora <giovanni@archlinux.org>
 # Contributor: Tom Newsom <Jeepster@gmx.co.uk>
 
@@ -10,8 +10,8 @@ arch=('x86_64')
 url="http://www.fping.org/"
 license=('custom') 
 depends=('glibc')
-source=("http://www.fping.org/dist/${pkgname}-${pkgver}.tar.gz")
-md5sums=('c21a80d7519fa0ad2411bf6799873eb0')
+source=("https://www.fping.org/dist/${pkgname}-${pkgver}.tar.gz")
+sha256sums=('67eb4152b98ad34f99d2eec4e1098a0bb52caf13c0c89cd147349d08190fe8ce')
 
 build() {
   cd "$srcdir/$pkgname-$pkgver"

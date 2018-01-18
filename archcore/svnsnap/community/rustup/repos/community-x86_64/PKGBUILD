@@ -1,0 +1,42 @@
+# Maintainer: Sven-Hendrik Haase <sh@lutzhaase.com>
+# Contributor: Jonathon Fernyhough <jonathon_at_manjaro_dot_org>
+# Contributor: Jon Gjengset <jon@tsp.io>
+pkgname=rustup
+pkgver=1.9.0
+pkgrel=2
+pkgdesc="The Rust toolchain installer"
+arch=('x86_64')
+url="https://github.com/rust-lang-nursery/rustup.rs"
+license=('MIT' 'Apache')
+makedepends=('cargo')
+provides=('rust' 'cargo' 'rust-nightly' 'cargo-nightly' 'rustfmt')
+conflicts=('rust' 'cargo' 'rustfmt')
+install='post.install'
+source=("rustup-${pkgver}.tar.gz::https://github.com/rust-lang-nursery/rustup.rs/archive/${pkgver}.tar.gz")
+sha512sums=('33299d1b9da96b899205042a53666e870d9ddab7721a56ecaefeb4d05503d838d44f2c8688f21d04ef9181bd7c9597cc85b83c527c86822f39c56f9cac7e08ec')
+_binlinks=('cargo' 'rustc' 'rustdoc' 'rust-gdb' 'rust-lldb' 'rls' 'rustfmt' 'cargo-fmt')
+
+build() {
+    msg2 "Building rustup"
+    cd "$srcdir/$pkgname.rs-${pkgver}"
+    # cargo update
+    cargo build --release --features no-self-update --bin rustup-init
+}
+
+package() {
+    cd "$pkgname.rs-${pkgver}"
+    install -Dm755 "target/release/rustup-init" "${pkgdir}/usr/bin/rustup"
+    for link in "${_binlinks[@]}"; do
+        ln -s /usr/bin/rustup "${pkgdir}/usr/bin/${link}"
+    done
+
+    # Generate completion files.
+    mkdir -p "$pkgdir/usr/share/bash-completion/completions"
+    $pkgdir/usr/bin/rustup completions bash > "$pkgdir/usr/share/bash-completion/completions/rustup"
+    mkdir -p "$pkgdir/usr/share/fish/completions"
+    $pkgdir/usr/bin/rustup completions fish > "$pkgdir/usr/share/fish/completions/rustup.fish"
+    mkdir -p "$pkgdir/usr/share/zsh/site-functions"
+    $pkgdir/usr/bin/rustup completions zsh > "$pkgdir/usr/share/zsh/site-functions/_rustup"
+}
+
+# vim:filetype=sh:

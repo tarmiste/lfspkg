@@ -1,0 +1,48 @@
+# Maintainer: Morten Linderud <foxboron@archlinux.org>
+# Contributor: Maikel Wever <maikelwever@gmail.com>
+
+pkgbase=python-pipenv
+pkgname=(python-pipenv python2-pipenv)
+pkgver=9.0.1
+pkgrel=1
+pkgdesc="Sacred Marriage of Pipfile, Pip, & Virtualenv."
+url="https://docs.pipenv.org"
+arch=('any')
+license=('MIT')
+makedepends=('python' 'python-setuptools'
+             'python2' 'python2-setuptools')
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/pypa/pipenv/archive/v${pkgver}.tar.gz")
+sha256sums=('5e16b51a30ef4b91a9f258ba62271596d52390e15776267e79caf4f6ffa02e52')
+
+prepare() {
+  cp -a pipenv-$pkgver{,-py2}
+}
+
+build(){
+  cd "$srcdir/pipenv-$pkgver"
+  python setup.py build
+
+  cd "$srcdir/pipenv-$pkgver-py2"
+  python2 setup.py build
+}
+
+package_python2-pipenv() {
+  depends=('python2' 'python2-pip' 'python-pew'
+           'python2-virtualenv' 'python2-flake8' 'python2-requests'
+           'python2-urllib3')
+  cd "pipenv-$pkgver-py2"
+  python2 setup.py install --root="$pkgdir/" --optimize=1 --skip-build
+  install -Dm 644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+
+  mv "${pkgdir}/usr/bin/pipenv" "${pkgdir}/usr/bin/pipenv2"
+}
+
+package_python-pipenv() {
+  depends=('python' 'python-pip' 'python-pew'
+           'python-virtualenv' 'flake8' 'python-requests'
+           'python-urllib3')
+  cd "pipenv-$pkgver"
+  python setup.py install --root="$pkgdir/" --optimize=1 --skip-build
+  install -Dm 644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}
+

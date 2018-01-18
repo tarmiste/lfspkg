@@ -1,0 +1,26 @@
+# $Id: PKGBUILD 249644 2017-08-09 09:20:24Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+
+_npmname=emojione
+pkgname=nodejs-$_npmname
+pkgver=3.1.2
+pkgrel=1
+pkgdesc="A complete set of emojis designed for the web"
+arch=('any')
+url="http://www.emojione.com"
+license=('MIT')
+depends=('nodejs')
+makedepends=('npm')
+source=("https://registry.npmjs.org/$_npmname/-/$_npmname-$pkgver.tgz")
+noextract=($_npmname-$pkgver.tgz)
+sha512sums=('c10a55c6d3bd9b151260cb4b729e6ecfa0e5c582ae4e5581ec0cd56ac60d1ac96dbee4bfc1cc8cea640b45434c1b61f1d47bef9c0b4ee01f8685c16962021a32')
+
+package() {
+  npm install -g --user root --prefix "$pkgdir"/usr "$srcdir"/$_npmname-$pkgver.tgz
+  rm -r "$pkgdir"/usr/etc
+  mkdir -p "$pkgdir/usr/share/licenses/$pkgname"
+  ln -s "../../../lib/node_modules/$_npmname/LICENSE.md" "$pkgdir/usr/share/licenses/$pkgname/"
+
+  # Fix permissions
+  find "$pkgdir/usr" -type d -exec chmod 755 '{}' +
+}

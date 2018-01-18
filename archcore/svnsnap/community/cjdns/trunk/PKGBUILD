@@ -1,0 +1,54 @@
+# Maintainer: Levente Polyak <anthraxx[at]archlinux[dot]org>
+# Contributor: Kevin MacMartin <prurigro@gmail.com>
+# Contributor: openfbt
+# Contributor: Werecat
+# Contributor: Xyne
+
+pkgname=cjdns
+pkgver=20
+pkgrel=2
+pkgdesc='Routing engine designed for security, scalability, speed and ease of use'
+url='https://github.com/cjdelisle/cjdns'
+arch=('x86_64')
+license=('GPL3')
+depends=('glibc' 'sh')
+optdepends=('nodejs: optional utilities support')
+makedepends=('nodejs' 'python2')
+install=cjdns.install
+source=(${pkgname}-${pkgver}.tar.gz::https://github.com/cjdelisle/${pkgname}/archive/cjdns-v${pkgver}.tar.gz
+        1107.patch)
+sha512sums=('afa63daea3c3bd3e16dd0a326ebdc2afcb411c595e66552c3156c59c36af21c0b2278b3299b1053b98d381790311beeb14547afdf3d182170c446867d2199a94'
+            '3ad5bd71b706a99a429b54d3fe2241c21c0fb417a76df27b30db46e8c6fec22d952c1a1643bac2540f79a3790fd2cc1177fd4c1fe8562df86623fb6d64bc5d68')
+
+prepare() {
+  cd ${pkgname}-${pkgname}-v${pkgver}
+  patch -p1 -i "${srcdir}/1107.patch"
+}
+
+build() {
+  cd ${pkgname}-${pkgname}-v${pkgver}
+  CJDNS_RELEASE_VERSION="${pkgver}" \
+    node ./node_build/make.js
+}
+
+package() {
+  cd ${pkgname}-${pkgname}-v${pkgver}
+  install -Dm 755 cjdroute "${pkgdir}/usr/bin/cjdroute"
+  install -Dm 644 contrib/systemd/${pkgname}.service "${pkgdir}/usr/lib/systemd/system/${pkgname}.service"
+  install -Dm 644 contrib/systemd/${pkgname}-resume.service "${pkgdir}/usr/lib/systemd/system/${pkgname}-resume.service"
+  install -Dm 644 doc/man/cjdroute.conf.5 "${pkgdir}/usr/share/man/man5/cjdroute.conf.5"
+  install -Dm 644 README.md "${pkgdir}/usr/share/doc/${pkgname}/README.md"
+  install -Dm 644 -t "${pkgdir}/usr/share/doc/${pkgname}" \
+    doc/admin-api.md \
+    doc/configure.md \
+    doc/djc_layer_model.md \
+    doc/nat-gateway.md \
+    doc/network-services.md \
+    doc/non-root-user.md \
+    doc/security_specification.md \
+    doc/shorewall_and_vpn_gateway_howto.md \
+    doc/tunnel.md
+  cp -a tools "${pkgdir}/usr/lib/${pkgname}"
+}
+
+# vim: ts=2 sw=2 et:

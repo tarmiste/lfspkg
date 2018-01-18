@@ -1,0 +1,39 @@
+# $Id: PKGBUILD 275516 2017-12-22 15:48:39Z alucryd $
+# Maintainer: Maxime Gauduin <alucryd@archlinux.org>
+# Contributor: Johnathan Jenkins <twodopeshaggy@gmail.com>
+# Contributor: prettyvanilla <prettyvanilla@posteo.at>
+# Contributor: almostalive <almostalive2003@gmail.com>
+
+pkgname=libretro-desmume
+pkgver=5333
+pkgrel=1
+pkgdesc='Nintendo DS core'
+arch=('x86_64')
+url='https://github.com/libretro/desmume'
+license=('GPL2')
+groups=('libretro')
+depends=('gcc-libs' 'glibc' 'libretro-core-info')
+makedepends=('git')
+_commit='94645824e96a425a642d9dfee8f9c1e2fa134e4f'
+source=("libretro-desmume::git+https://github.com/libretro/desmume.git#commit=${_commit}")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd libretro-desmume
+
+  git rev-list --count HEAD
+}
+
+build() {
+  cd libretro-desmume/desmume
+
+  make -f Makefile.libretro
+}
+
+package() {
+  cd libretro-desmume/desmume
+
+  install -Dm 644 desmume_libretro.so -t "${pkgdir}"/usr/lib/libretro/
+}
+
+# vim: ts=2 sw=2 et:

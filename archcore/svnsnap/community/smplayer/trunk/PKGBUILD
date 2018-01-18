@@ -1,0 +1,45 @@
+# Maintainer: Levente Polyak <anthraxx[at]archlinux[dot]org>
+# Contributor: Ionut Biru <ibiru@archlinux.org>
+# Contributor: Allan McRae <allan@archlinux.org>
+# Contributor: Alessio 'mOLOk' Bolognino <themolok@gmail.com>
+# Contributor: shamrok <szamrok@gmail.com>
+
+pkgname=smplayer
+pkgver=18.1.0
+pkgrel=1
+pkgdesc='Media player with built-in codecs that can play virtually all video and audio formats'
+url='https://www.smplayer.info/'
+arch=('x86_64')
+license=('GPL')
+depends=('qt5-script' 'mpv' 'hicolor-icon-theme' 'libx11' 'zlib' 'gcc-libs')
+makedepends=('qt5-tools')
+optdepends=('smplayer-themes: icon themes collection'
+            'smplayer-skins: skin themes collection'
+            'smtube: browse and play youtube videos'
+            'youtube-dl: youtube videos and streaming'
+            'mplayer: alternative multimedia engine')
+source=(https://downloads.sourceforge.net/${pkgname}/${pkgname}-${pkgver}.tar.bz2)
+sha256sums=('9d7d908c5160510e8802fbf852598324fd80ca9a8a571b8e65d66b39ec0b19bd')
+sha512sums=('f0fb844634fbb22c975744cc4d557503aba7131cb52c5e1165a3ff9eec259bf45ebde5b7dfefa48d5f17e2946c1cfa0cce34429b373918f488e3f51c3398884e')
+
+prepare() {
+  cd ${pkgname}-${pkgver}
+  # make build reproducible, we compress ourselves
+  sed '/gzip -9/d' -i Makefile
+}
+
+build() {
+  cd ${pkgname}-${pkgver}
+  make PREFIX=/usr \
+    DOC_PATH="\\\"/usr/share/doc/smplayer\\\"" \
+    QMAKE_OPTS=DEFINES+=NO_DEBUG_ON_CONSOLE \
+    CFLAGS_EXTRA="${CFLAGS} ${LDFLAGS}"
+}
+
+package() {
+  cd ${pkgname}-${pkgver}
+  make DOC_PATH=/usr/share/doc/smplayer \
+    DESTDIR="${pkgdir}" PREFIX=/usr install
+}
+
+# vim: ts=2 sw=2 et:

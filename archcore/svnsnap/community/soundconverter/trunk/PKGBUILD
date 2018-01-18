@@ -1,0 +1,36 @@
+# $Id: PKGBUILD 239096 2017-06-20 17:47:30Z bgyorgy $
+# Maintainer: schuay <jakob.gruber@gmail.com>
+# Contributor: Stefan Husmann <stefan-husmann@t-online.de>
+# Contributor: Andrea Scarpino <andrea@archlinux.org>
+
+pkgname=soundconverter
+pkgver=3.0.0beta1
+_gitrev=3569f9927b2aabd1615f750b11c2a44d2a1dab56
+pkgrel=1
+pkgdesc="A simple sound converter application for GNOME"
+arch=('any')
+license=('GPL3')
+url="http://soundconverter.org/"
+depends=('gconf' 'gst-plugins-base' 'gst-plugins-good' 'gtk3' 'libnotify' 'python-gobject')
+makedepends=('intltool')
+optdepends=('gst-plugins-ugly: Extra media codecs'
+            'gst-plugins-bad: Extra media codecs'
+            'gst-libav: Extra media codecs')
+source=("$pkgname-$pkgver.tar.gz::https://codeload.github.com/kassoulet/$pkgname/tar.gz/$_gitrev")
+sha256sums=('6f73cb73dc3331c19e170e20687c90a3ef075bf6fc659d24b05619042c250297')
+
+prepare() {
+  cd "${srcdir}/${pkgname}-${_gitrev}"
+  NOCONFIGURE=1 ./autogen.sh
+}
+
+build() {
+  cd "${srcdir}/${pkgname}-${_gitrev}"
+  ./configure --prefix=/usr 
+  make
+}
+
+package() {
+  cd "${srcdir}/${pkgname}-${_gitrev}"
+  make DESTDIR="${pkgdir}" install
+}

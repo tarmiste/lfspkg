@@ -1,0 +1,33 @@
+# $Id: PKGBUILD 275132 2017-12-21 09:25:51Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+
+pkgname=glider
+pkgver=0.4.3
+pkgrel=1
+pkgdesc="A forward proxy with multiple protocols support"
+arch=('x86_64')
+url="https://github.com/nadoo/glider"
+license=('GPL')
+depends=('glibc')
+makedepends=('go-pie' 'git')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/nadoo/glider/archive/v$pkgver.tar.gz")
+sha512sums=('ab9a4347e3a797c87335147671171a5ef6ff4f02a17fa03180e317158141a461850e7cb2914768761772fc5b99a89dc7909e795eecdcd0449746b449ed546656')
+
+prepare() {
+  mkdir .gopath
+  export GOPATH="$srcdir"/.gopath
+
+  go get github.com/nadoo/conflag github.com/shadowsocks/go-shadowsocks2/core
+}
+
+build() {
+  cd glider-$pkgver
+  go build
+}
+
+package() {
+  cd glider-$pkgver
+  install -Dm755 glider-$pkgver "$pkgdir"/usr/bin/glider
+  install -Dm644 config/glider.conf.example "$pkgdir"/etc/glider/glider.conf.example
+  install -Dm644 systemd/glider@.service "$pkgdir"/usr/lib/systemd/system/glider@.service
+}

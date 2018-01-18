@@ -1,0 +1,67 @@
+# $Id: PKGBUILD 275296 2017-12-22 05:37:07Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Daniel Wallace <danielwallace at gtmanfred dot com>
+
+pkgbase=python-openstackclient
+pkgname=(python-openstackclient python2-openstackclient)
+pkgver=3.13.0
+pkgrel=1
+pkgdesc="OpenStack Command-line Client"
+arch=('any')
+url="http://docs.openstack.org/developer/python-openstackclient"
+license=('Apache')
+makedepends=('python-setuptools' 'python2-setuptools' 'python-pbr' 'python2-pbr' 'python-babel'
+             'python2-babel' 'python-cliff' 'python2-cliff' 'python-keystoneclient'
+             'python2-keystoneclient' 'python-keystoneauth1' 'python2-keystoneauth1'
+             'python-osc-lib' 'python2-osc-lib' 'python-oslo-utils' 'python2-oslo-utils'
+             'python-oslo-i18n' 'python2-oslo-i18n' 'python-openstacksdk' 'python2-openstacksdk'
+             'python-glanceclient' 'python2-glanceclient' 'python-novaclient' 'python2-novaclient'
+             'python-cinderclient' 'python2-cinderclient')
+checkdepends=('python-oslotest' 'python2-oslotest' 'python-requests-mock' 'python2-requests-mock')
+source=("$pkgbase-$pkgver.tar.gz::https://github.com/openstack/python-openstackclient/archive/$pkgver.tar.gz")
+sha512sums=('f8c25eb1067e6e3685334f77e7849c5be46e27a83c0a0ce54fa0d802fad2e42e8c71d35c4e71750dda1c82ef1f7971621774bb5cc0b0f42c6ba24042e593eaf8')
+
+prepare() {
+  cp -a python-openstackclient-$pkgver{,-py2}
+
+  export PBR_VERSION=$pkgver
+}
+
+build() {
+  cd "$srcdir"/python-openstackclient-$pkgver
+  python setup.py build
+
+  cd "$srcdir"/python-openstackclient-$pkgver-py2
+  python2 setup.py build
+}
+
+check() {
+  cd "$srcdir"/python-openstackclient-$pkgver
+  python setup.py testr || warning "Tests failed"
+
+  cd "$srcdir"/python-openstackclient-$pkgver-py2
+  PYTHON=python2 python2 setup.py testr
+}
+
+package_python-openstackclient() {
+  depends=('python-six' 'python-pbr' 'python-babel' 'python-cliff' 'python-keystoneclient'
+           'python-keystoneauth1' 'python-osc-lib' 'python-oslo-utils' 'python-oslo-i18n'
+           'python-openstacksdk' 'python-glanceclient' 'python-novaclient' 'python-cinderclient')
+
+  cd "$srcdir"/python-openstackclient-$pkgver
+  python setup.py install --root="$pkgdir" --optimize=1
+}
+
+package_python2-openstackclient() {
+  depends=('python2-six' 'python2-pbr' 'python2-babel' 'python2-cliff' 'python2-keystoneclient'
+           'python2-keystoneauth1' 'python2-osc-lib' 'python2-oslo-utils' 'python2-oslo-i18n'
+           'python2-openstacksdk' 'python2-glanceclient' 'python2-novaclient'
+           'python2-cinderclient')
+
+  cd "$srcdir"/python-openstackclient-$pkgver-py2
+  python2 setup.py install --root="$pkgdir" --optimize=1
+
+  mv "$pkgdir"/usr/bin/openstack{,2}
+}
+
+# vim:set ts=2 sw=2 et:

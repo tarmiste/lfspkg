@@ -1,0 +1,20 @@
+# $Id: PKGBUILD 219084 2017-03-26 13:41:37Z kkeen $
+# Maintainer: Sergej Pupykin <pupykin.s+arch@gmail.com>
+# Maintainer: Roman Kyrylych <Roman.Kyrylych@gmail.com>
+# Contributor: Gernot Pansy
+
+pkgname=xcursor-neutral
+pkgver=1.13a
+pkgrel=7
+pkgdesc="A smoothed and shadowed X cursors theme"
+arch=(any)
+url="http://www.kde-look.org/content/show.php?content=28310"
+license=("PerlArtistic")
+source=(https://dl.opendesktop.org/api/files/download/id/1460735305/28310-neutral-$pkgver.tar.gz)
+md5sums=('b2d8e14bcb4ab13d9001890b041803db')
+
+package() {
+  mkdir -p "$pkgdir"/usr/share/icons/Neutral
+  sed s/neutral/Neutral/ -i "$srcdir"/neutral/index.theme
+  cp -R "$srcdir"/neutral/{cursors,index.theme} "$pkgdir"/usr/share/icons/Neutral
+}

@@ -1,0 +1,27 @@
+# Maintainer: Levente Polyak <anthraxx[at]archlinux[dot]org>
+# Contributor: Dmitry Chusovitin <dchusovitin@gmail.com>
+
+pkgname=rabbitmqadmin
+pkgver=3.6.14
+pkgrel=1
+pkgdesc='Command-line tool for managing RabbitMQ server (requires "management" plugin)'
+url='https://www.rabbitmq.com/management-cli.html'
+arch=('any')
+license=('MPL')
+depends=('python')
+source=(${pkgname}-${pkgver}.tar.gz::https://github.com/rabbitmq/rabbitmq-management/archive/rabbitmq_v${pkgver//./_}.tar.gz)
+sha256sums=('6a2c930cdb29286d01449d8ba8ac7eda87cd70b1ce886460a43f278fec149d86')
+sha512sums=('544dc7eeab6d1f66e31206e6d4fe9f18f1282338fdb05a0f1586138c39e0c2500daee7367f8939b44747a2c840837ccc175062ebcc98d8f25f9438f8e927c8e0')
+
+prepare() {
+  cd rabbitmq-management-rabbitmq_v${pkgver//./_}
+  sed -e "s|%%VSN%%|${pkgver}|" -i bin/rabbitmqadmin
+}
+
+package() {
+  cd rabbitmq-management-rabbitmq_v${pkgver//./_}
+  install -Dm 755 bin/rabbitmqadmin -t "${pkgdir}/usr/bin"
+  install -Dm 644 LICENSE-MPL-RabbitMQ "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}
+
+# vim: ts=2 sw=2 et:

@@ -1,0 +1,68 @@
+# $Id: PKGBUILD 265271 2017-11-03 08:40:13Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Bartłomiej Piotrowski <bpiotrowski@archlinux.org>
+# Contributor: Geoffroy Carrier <geoffroy.carrier@koon.fr>
+# Contributor: michalzxc
+# Contributor: nbags <neilbags@gmail.com>
+
+pkgname=fail2ban
+pkgver=0.10.1
+pkgrel=2
+pkgdesc='Bans IPs after too many failed authentication attempts'
+url='http://www.fail2ban.org/'
+license=('GPL')
+arch=('any')
+depends=('iptables' 'python-pyinotify' 'whois' 'sqlite' 'python-systemd')
+makedepends=('python-setuptools')
+checkdepends=('python-coverage')
+backup=(etc/fail2ban/fail2ban.conf
+        etc/fail2ban/jail.conf
+        etc/logrotate.d/fail2ban)
+source=("$pkgname-$pkgver.tar.gz::https://github.com/fail2ban/$pkgname/archive/$pkgver.tar.gz"
+        https://github.com/felixonmars/fail2ban/commit/b4d601658209237d932ca3a6574eeb743be1ede9.patch)
+sha512sums=('556e071e439454ef369e7e323cae9652bbfb8e43d697e9b6c19d710e9d59838db489ffe07125443c86837b0a9f0688b7567135178591d1817caaab954ce40366'
+            'ac0220d10164fd7eb6247d6ca383417911c8bf8b5c1463e32cf3d7ca9c1367215c0d45141f6e53e849e54b63beaf9122ff6cd6bfc841d4a880f0bfe27224e3ad')
+
+prepare() {
+  cd $pkgname-$pkgver
+  sed -i 's|self.install_dir|"/usr/bin"|' setup.py
+  sed -i 's/^before = paths-debian.conf/before = paths-arch.conf/' config/jail.conf
+
+  patch -p1 -i ../b4d601658209237d932ca3a6574eeb743be1ede9.patch
+}
+
+check() {
+  cd $pkgname-$pkgver
+  ./fail2ban-2to3
+  coverage run bin/fail2ban-testcases || warning "Tests failed"
+}
+
+package() {
+  cd $pkgname-$pkgver
+  python setup.py install --prefix /usr --root "$pkgdir" --optimize=1
+
+  chmod 644 "$pkgdir/usr/lib/python3.6/site-packages/fail2ban-$pkgver-py3.6.egg-info"/*
+
+  install -Dm644 build/fail2ban.service \
+    "$pkgdir"/usr/lib/systemd/system/$pkgname.service
+  install -Dm644 files/fail2ban-tmpfiles.conf \
+    "$pkgdir"/usr/lib/tmpfiles.d/$pkgname.conf
+  install -Dm644 files/fail2ban-logrotate \
+    "$pkgdir"/etc/logrotate.d/fail2ban
+  install -Dm644 files/bash-completion \
+    "$pkgdir"/usr/share/bash-completion/completions/fail2ban
+
+  # fix sendmail location
+  sed -i 's/sbin/bin/g' "$pkgdir"/etc/fail2ban/action.d/sendmail*.conf
+
+  install -Dm644 man/fail2ban.1 "$pkgdir"/usr/share/man/man1/fail2ban.1
+  install -Dm644 man/fail2ban-client.1 \
+    "$pkgdir"/usr/share/man/man1/fail2ban-client.1
+  install -Dm644 man/fail2ban-regex.1 \
+    "$pkgdir"/usr/share/man/man1/fail2ban-regex.1
+  install -Dm644 man/fail2ban-server.1 \
+    "$pkgdir"/usr/share/man/man1/fail2ban-server.1
+  install -Dm644 man/jail.conf.5 "$pkgdir"/usr/share/man/man5/jail.conf.5
+
+  rm -r "$pkgdir/run"
+}

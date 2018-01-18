@@ -1,0 +1,20 @@
+# $Id: PKGBUILD 244790 2017-07-12 09:23:05Z spupykin $
+# Maintainer: Sergej Pupykin <pupykin.s+arch@gmail.com>
+# Contributor: Charles Mauch <cmauch@gmail.com>
+
+pkgname=when
+pkgver=1.1.37
+pkgrel=1
+pkgdesc="A simple commandline personal calendar program"
+arch=('any')
+url="http://www.lightandmatter.com/when/when.html"
+license=('GPL')
+depends=('perl')
+source=(when-$pkgver.tar.gz::http://www.lightandmatter.com/when/when.tar.gz)
+sha256sums=('475e4b5070b383d2ad610e6610f8d2ff7995feab96e5d4de8d676063ad204733')
+
+package() {
+  cd "$srcdir"/when_dist
+  install -D -m755 "$srcdir"/when_dist/when "$pkgdir"/usr/bin/when
+  install -D -m644 "$srcdir"/when_dist/when.1 "$pkgdir"/usr/share/man/man1/when.1
+}

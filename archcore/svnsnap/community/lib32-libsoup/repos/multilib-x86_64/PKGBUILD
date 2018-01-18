@@ -1,0 +1,43 @@
+# $Id: PKGBUILD 266152 2017-11-10 18:44:44Z alucryd $
+# Maintainer: Maxime Gauduin <alucryd@archlinux.org>
+# Contributor: Maximilian Stein <theoddbird@posteo.org>
+# Contributor: josephgbr <rafael.f.f1@gmail.com>
+
+pkgname=lib32-libsoup
+pkgver=2.60.2
+pkgrel=1
+pkgdesc='HTTP client/server library for GNOME'
+arch=('x86_64')
+url="https://wiki.gnome.org/Projects/libsoup"
+license=('LGPL')
+depends=('lib32-glib-networking' 'lib32-krb5' 'lib32-libxml2' 'lib32-sqlite'
+         'libsoup')
+makedepends=('gcc-multilib' 'gobject-introspection' 'intltool' 'python'
+             'vala')
+options=('!emptydirs')
+source=("https://download.gnome.org/sources/libsoup/${pkgver:0:4}/libsoup-${pkgver}.tar.xz")
+sha256sums=('7263cfe18872e2e652c196f5667e514616d9c97c861dfca82a65a55f45f0da01')
+
+build() {
+  cd libsoup-${pkgver}
+
+  export CC='gcc -m32'
+  export CXX='g++ -m32'
+  export PKG_CONFIG_PATH='/usr/lib32/pkgconfig'
+
+  ./configure \
+    --prefix='/usr' \
+    --libdir='/usr/lib32' \
+    --disable-static
+  sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+  make
+}
+
+package() {
+  cd libsoup-${pkgver}
+
+  make DESTDIR="${pkgdir}" install
+  rm -rf "${pkgdir}"/usr/{include,share}
+}
+
+# vim: ts=2 sw=2 et:

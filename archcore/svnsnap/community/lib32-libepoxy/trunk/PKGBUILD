@@ -1,0 +1,51 @@
+# $Id: PKGBUILD 239643 2017-06-22 18:22:34Z alucryd $
+# Maintainer: Maxime Gauduin <alucryd@archlinux.org>
+# Contributor: Laurent Carlier <lordheavym@gmail.com>
+
+pkgname=lib32-libepoxy
+pkgver=1.4.3
+pkgrel=1
+pkgdesc='Library handling OpenGL function pointer management'
+arch=('x86_64')
+url='https://github.com/anholt/libepoxy'
+license=('MIT')
+depends=('lib32-glibc')
+makedepends=('gcc-multilib' 'lib32-libgl' 'meson' 'python')
+source=("https://github.com/anholt/libepoxy/releases/download/${pkgver}/libepoxy-${pkgver}.tar.xz")
+sha256sums=('0b808a06c9685a62fca34b680abb8bc7fb2fda074478e329b063c1f872b826f6')
+
+prepare() {
+  cd libepoxy-${pkgver}
+
+  if [[ -d build ]]; then
+    rm -rf build
+  fi
+  mkdir build
+}
+
+build() {
+  cd libepoxy-${pkgver}/build
+
+  export CC='gcc -m32'
+  export CXX='/bin/false'
+  export PKG_CONFIG_PATH='/usr/lib32/pkgconfig'
+
+  meson \
+    --prefix='/usr' \
+    --libdir='/usr/lib32' \
+    --buildtype='release' \
+    ..
+  ninja
+}
+
+package() {
+  cd libepoxy-${pkgver}/build
+
+  DESTDIR="${pkgdir}" ninja install
+  rm -rf "${pkgdir}"/usr/include
+
+  install -dm 755 "${pkgdir}"/usr/share/licenses
+  ln -s libepoxy "${pkgdir}"/usr/share/licenses/lib32-libepoxy
+}
+
+# vim: ts=2 sw=2 et:

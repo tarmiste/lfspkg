@@ -1,0 +1,43 @@
+# $Id: PKGBUILD 274803 2017-12-18 21:26:12Z arojas $
+# Maintainer: Alexandre Filgueira (faidoc) <alexfilgueira@antergos.com>
+# Contributor: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+
+pkgname=cinnamon-settings-daemon
+pkgver=3.6.2
+pkgrel=1
+pkgdesc="The Cinnamon Settings daemon"
+arch=('x86_64')
+license=('GPL')
+depends=('cinnamon-desktop' 'libcanberra-pulse' 'librsvg' 'nss'
+         'pulseaudio-alsa' 'upower' 'libnotify' 'libgnomekbd' 'libwacom'
+         'libgudev' 'dbus-glib' 'colord' 'libcups' 'polkit')
+makedepends=('autoconf-archive' 'intltool' 'docbook-xsl' 'xf86-input-wacom')
+options=('!emptydirs')
+url="https://github.com/linuxmint/cinnamon-settings-daemon"
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/linuxmint/cinnamon-settings-daemon/archive/${pkgver}.tar.gz")
+sha256sums=('60f4de4eb1e05d720605dbd6f90bb841039be00ca1ad4f2bedaf39725ea34339')
+
+build() {
+  cd $pkgname-$pkgver
+
+  ./autogen.sh \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --localstatedir=/var \
+        --libexecdir="/usr/lib/${pkgname}" \
+        --enable-systemd \
+        --enable-polkit
+
+  #https://bugzilla.gnome.org/show_bug.cgi?id=656231
+  sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+
+  make
+}
+
+package() {
+  cd $pkgname-$pkgver
+  make DESTDIR="$pkgdir" install
+
+  # Remove useless man page (FS#54840)
+  rm "$pkgdir/usr/share/man/man1/cinnamon-settings-daemon.1"
+}

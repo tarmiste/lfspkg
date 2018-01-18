@@ -1,0 +1,32 @@
+# $Id: PKGBUILD 279786 2018-01-07 03:29:01Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+
+pkgname=eslint
+pkgver=4.15.0
+pkgrel=1
+pkgdesc='An AST-based pattern checker for JavaScript'
+arch=('any')
+url='http://eslint.org'
+license=('MIT')
+depends=('nodejs' 'acorn')
+makedepends=('npm')
+source=("https://registry.npmjs.org/$pkgname/-/$pkgname-$pkgver.tgz")
+noextract=("$pkgname-$pkgver.tgz")
+sha512sums=('cc43bf675654c4843e3210d52a4553518a483c34c424b5c632b9080fee6fd4d7901ed0b3e85662916b85460c44d50fd1576578cd5975bb7c66a4f0031e1319e8')
+
+package() {
+  npm install -g --user root --prefix "$pkgdir"/usr "$srcdir"/$pkgname-$pkgver.tgz
+  rm -r "$pkgdir"/usr/etc
+
+  # Fix permissions
+  find "$pkgdir/usr" -type d -exec chmod 755 '{}' +
+
+  install -dm755 "${pkgdir}/usr/share/licenses/${pkgname}"
+  ln -s ../../../lib/node_modules/eslint/LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+
+  # Experimental dedup
+  cd "$pkgdir"/usr/lib/node_modules/$pkgname/node_modules
+  for dep in acorn; do
+    rm -r $dep;
+  done
+}

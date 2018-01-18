@@ -1,0 +1,49 @@
+# $Id: PKGBUILD 243378 2017-07-09 05:02:55Z lcarlier $
+# Maintainer: Andreas Radke <andyrtr@archlinux.org>
+
+_pkgbasename=libcups
+pkgname=lib32-$_pkgbasename
+pkgver=2.2.4
+pkgrel=2
+pkgdesc="The CUPS Printing System - client libraries (32-bit)"
+arch=('x86_64')
+license=('GPL')
+url="https://www.cups.org/"
+depends=(lib32-krb5 lib32-libtiff lib32-libpng lib32-gnutls $_pkgbasename)
+source=(https://github.com/apple/cups/releases/download/v${pkgver}/cups-${pkgver}-source.tar.gz{,.sig}
+        cupsGetDests.diff)
+sha256sums=('596d4db72651c335469ae5f37b0da72ac9f97d73e30838d787065f559dea98cc'
+            'SKIP'
+            '25c1f212d0055848c9d46195d74ade64514675c83b2098e41ba1144bd6b8a05d')
+validpgpkeys=('3737FD0D0E63B30172440D2DDBA3A7AB08D76223') # CUPS.org (CUPS.org PGP key) <security@cups.org>
+
+prepare() {
+  cd ${srcdir}/cups-${pkgver}
+
+  patch -Np1 -i ../cupsGetDests.diff
+}
+
+build() {
+  export CC="gcc -m32"
+  export CXX="g++ -m32"
+  export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
+
+  cd ${srcdir}/cups-${pkgver}
+
+  aclocal -I config-scripts
+  autoconf -I config-scripts
+
+  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+     --disable-ldap --enable-raw-printing --disable-gssapi --disable-dbus \
+     --enable-ssl=yes--enable-threads --enable-libusb=no \
+	 --disable-avahi --disable-dnssd \
+     --with-optim="$CFLAGS" --libdir=/usr/lib32
+  make libs
+}
+
+package() {
+  cd ${srcdir}/cups-${pkgver}
+  make BUILDROOT=${pkgdir} install-libs
+  rm -rf "$pkgdir/usr/lib"
+}
+

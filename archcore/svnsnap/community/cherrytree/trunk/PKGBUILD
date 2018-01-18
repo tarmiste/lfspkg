@@ -1,0 +1,29 @@
+# $Id: PKGBUILD 281847 2018-01-13 22:42:06Z bgyorgy $
+# Maintainer: Balló György <ballogyor+arch at gmail dot com>
+# Contributor: Bartłomiej Piotrowski
+# Contributor: Brad Fanella <bradfanella@archlinux.us>
+# Contributor: Allan McRae <allan@archlinux.org>
+# Contributor: Tomas A. Schertel <tschertel@gmail.com>
+
+pkgname=cherrytree
+pkgver=0.38.4
+pkgrel=1
+pkgdesc='Hierarchical note taking application featuring rich text and syntax highlighting'
+arch=('any')
+url='https://www.giuspen.com/cherrytree/'
+license=('GPL3')
+depends=('pygtksourceview2' 'python2-dbus')
+optdepends=('python2-pyenchant: for spell checking support'
+            'p7zip: for password protection support')
+source=(https://www.giuspen.com/software/$pkgname-$pkgver.tar.xz)
+sha256sums=('e2a1d2338b8d90d5db14ae8c41bda27c95ef31113f3062a1e2e7449a67f75ffd')
+
+build() {
+  cd $pkgname-$pkgver
+  python2 setup.py build
+}
+
+package() {
+  cd $pkgname-$pkgver
+  python2 setup.py install --root="$pkgdir" --optimize=1
+}

@@ -1,0 +1,23 @@
+# $Id: PKGBUILD 272023 2017-12-03 17:56:09Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Samuel Littley <aur@toastwaffle.com>
+# Contributor: rnons <remotenonsense at gmail dot com>
+
+pkgname=python-ruamel-yaml
+pkgver=0.15.35
+pkgrel=1
+pkgdesc="YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order"
+arch=('x86_64')
+url="https://bitbucket.org/ruamel/yaml"
+license=("MIT")
+makedepends=('python-pip' 'python-wheel')
+source=("https://pypi.io/packages/source/r/ruamel.yaml/ruamel.yaml-$pkgver.tar.gz")
+sha512sums=('3d376ec2b680bf97f3dc80ae15db871ed03abf5187ec5cfcca12b579e449a10f879ea4b885d87d735d15405f18cf685521a855069a86ecbfe71ed51e43abbbe6')
+
+package() {
+  depends=('python')
+
+  cd ruamel.yaml-$pkgver
+  LC_CTYPE=en_US.UTF-8 pip install . --root="$pkgdir"
+  install -D -m644 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+}

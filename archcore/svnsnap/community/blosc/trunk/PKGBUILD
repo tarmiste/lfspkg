@@ -1,0 +1,40 @@
+# $Id: PKGBUILD 270866 2017-11-30 18:50:54Z aginiewicz $
+# Maintainer: Andrzej Giniewicz <gginiu@gmail.com>
+
+pkgname=blosc
+pkgver=1.12.1
+pkgrel=2
+pkgdesc='A blocking, shuffling and loss-less compression library.'
+arch=('x86_64')
+url='http://blosc.org/'
+license=('BSD')
+depends=('snappy' 'zstd')
+makedepends=('cmake')
+options=(staticlibs)
+source=("https://github.com/Blosc/c-blosc/archive/v${pkgver}.tar.gz")
+md5sums=('6fa4ecb7ef70803a190dd386bf4a2e93')
+
+build() {
+  cd "${srcdir}"
+  rm -rf build
+  mkdir build
+  cd build
+
+  cmake -DCMAKE_INSTALL_PREFIX="/usr" \
+        -DPREFER_EXTERNAL_LZ4="ON" \
+	-DPREFER_EXTERNAL_ZLIB="ON" \
+	-DPREFER_EXTERNAL_SNAPPY="ON" \
+	-DPREFER_EXTERNAL_ZSTD="ON" \
+        -DBUILD_TESTS="OFF" \
+        ../c-blosc-${pkgver}
+
+  make
+}
+
+package() {
+  cd "${srcdir}/build"
+
+  make DESTDIR="${pkgdir}" install
+
+  install -Dm644 "$srcdir"/c-blosc-${pkgver}/LICENSES/BLOSC.txt "$pkgdir"/usr/share/licenses/$pkgname/LICENCE
+}

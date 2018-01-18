@@ -1,0 +1,58 @@
+# $Id: PKGBUILD 274414 2017-12-14 09:54:42Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+
+pkgbase=python-tenacity
+pkgname=('python-tenacity' 'python2-tenacity')
+pkgver=4.8.0
+pkgrel=1
+pkgdesc='Retry code until it succeeeds'
+arch=('any')
+license=('Apache')
+url='https://github.com/jd/tenacity'
+makedepends=('python-setuptools' 'python2-setuptools' 'python2-futures' 'python2-monotonic'
+             'python-pbr' 'python2-pbr')
+checkdepends=('python-nose' 'python2-nose' 'python-tornado' 'python2-tornado')
+source=("$pkgbase-$pkgver.tar.gz::https://github.com/jd/tenacity/archive/$pkgver.tar.gz")
+sha512sums=('3ccc515478278e72024c90c25fbae8196633dab815e9125283534447d6503a90e73c7dd588843de5c030f5573c759c738b1b8f13f6aa7243113573273e9f7faa')
+
+prepare() {
+  cp -a tenacity-$pkgver{,-py2}
+  sed -i '/monotonic/d' tenacity-$pkgver/requirements.txt
+  sed -i 's/from monotonic import monotonic/from time import monotonic/' tenacity-$pkgver/tenacity/{__init__,async,tornadoweb}.py
+
+  export PBR_VERSION=$pkgver
+}
+
+build() {
+  cd "$srcdir"/tenacity-$pkgver
+  python setup.py build
+
+  cd "$srcdir"/tenacity-$pkgver-py2
+  python2 setup.py build
+}
+
+check() {
+  cd "$srcdir"/tenacity-$pkgver
+  python setup.py nosetests
+
+  cd "$srcdir"/tenacity-$pkgver-py2
+  python2 setup.py nosetests --ignore-files '.*async.py'
+}
+
+package_python-tenacity() {
+  depends=('python-six')
+  optdepends=('python-tornado: for Tornado coroutines support')
+
+  cd tenacity-$pkgver
+  python setup.py install --root="$pkgdir" --optimize=1
+}
+
+package_python2-tenacity() {
+  depends=('python2-six' 'python2-futures' 'python2-monotonic')
+  optdepends=('python2-tornado: for Tornado coroutines support')
+
+  cd tenacity-$pkgver-py2
+  python2 setup.py install --root="$pkgdir" --optimize=1
+}
+
+# vim:set ts=2 sw=2 et:

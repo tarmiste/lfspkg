@@ -1,0 +1,26 @@
+# $Id: PKGBUILD 270675 2017-11-29 12:57:54Z spupykin $
+# Maintainer: Sergej Pupykin <pupykin.s+arch@gmail.com>
+
+pkgname=unifdef
+pkgver=2.11
+pkgrel=1
+pkgdesc="Remove #ifdef'ed lines"
+arch=(x86_64)
+url="http://dotat.at/prog/unifdef/"
+license=('GPL')
+depends=()
+source=("https://dotat.at/prog/unifdef/unifdef-$pkgver.tar.gz")
+sha256sums=('e8483c05857a10cf2d5e45b9e8af867d95991fab0f9d3d8984840b810e132d98')
+
+build() {
+  cd "$srcdir/$pkgname-$pkgver"
+  make clean
+  make
+}
+
+package() {
+  cd "$srcdir/$pkgname-$pkgver"
+  mkdir -p "$pkgdir"/usr/bin "$pkgdir"/usr/share/man/man1
+  install -m 0755 unifdef "$pkgdir"/usr/bin/
+  install -m 0644 unifdef.1 "$pkgdir"/usr/share/man/man1/
+}

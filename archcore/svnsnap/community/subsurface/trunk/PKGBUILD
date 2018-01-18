@@ -1,0 +1,38 @@
+# $Id: PKGBUILD 277164 2017-12-30 14:23:24Z bisson $
+# Contributor: Francois Boulogne <fboulogne at april dot org>
+# Maintainer: Gaetan Bisson <bisson@archlinux.org>
+
+pkgname=subsurface
+_pkgname=Subsurface
+pkgver=4.7.6
+pkgrel=1
+pkgdesc='Divelog program'
+url='https://subsurface-divelog.org/'
+license=('GPL2')
+arch=('x86_64')
+makedepends=('cmake' 'asciidoc' 'qt5-tools')
+depends=('libzip' 'libxml2' 'libxslt' 'sqlite' 'libusb' 'libgit2'
+         'subsurface-libdc' 'qt5-svg' 'qt5-location'
+         'qt5-connectivity' 'qt5-webkit' 'grantlee' 'googlemaps')
+source=("https://subsurface-divelog.org/downloads/${_pkgname}-${pkgver}.tgz")
+sha256sums=('cf9b14a3b4b6e3fc2a74c2c6b9c850640fd4d9ea1df720e04ce00dd6bfc3884b')
+
+# qt5-webkit still used for: printing, manual, facebook
+
+build() {
+	cd "${srcdir}/${_pkgname}-${pkgver}"
+	install -d build
+	cd build
+	cmake \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DLIBDIVECOMPUTER_INCLUDE_DIR=/usr/include/libdivecomputer \
+		..
+	make
+}
+
+package() {
+	cd "${srcdir}/${_pkgname}-${pkgver}"
+	cd build
+	make DESTDIR="${pkgdir}" install
+}

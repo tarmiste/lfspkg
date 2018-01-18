@@ -1,0 +1,35 @@
+# $Id: PKGBUILD 264112 2017-10-24 14:19:49Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Josip Ponjavic <josipponjavic at gmail dot com>
+# Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=deepin-gettext-tools
+pkgver=1.0.7
+pkgrel=1
+pkgdesc='Deepin Gettext Tools'
+arch=('any')
+url="https://github.com/linuxdeepin/deepin-gettext-tools"
+license=('GPL3')
+depends=('gettext' 'python' 'perl-config-tiny' 'perl-xml-libxml')
+makedepends=('git')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxdeepin/deepin-gettext-tools/archive/$pkgver.tar.gz")
+sha512sums=('59a2b8d89afb4b7f14211c4ef678958f392d89be30ea71b74f6b546678aa6a031c369f1a672a3ba29e1f0744f4fa122852f147cf736e263aec172a5ad0a8f06c')
+
+prepare() {
+  cd deepin-gettext-tools-$pkgver
+
+  sed -e 's/sudo cp/cp/' -i src/generate_mo.py
+  sed -e 's/qmake/qmake-qt5/' -e '/lupdate/d' -i Makefile
+}
+
+check() {
+  cd deepin-gettext-tools-$pkgver
+  perl src/desktop_ts_convert.pl --help
+  python src/generate_mo.py --help
+  python src/update_pot.py --help
+}
+
+package() {
+  cd deepin-gettext-tools-$pkgver
+  make DESTDIR="$pkgdir" install
+}

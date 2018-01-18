@@ -1,0 +1,32 @@
+# $Id: PKGBUILD 270785 2017-11-30 04:16:30Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+
+pkgbase=python-cryptography-vectors
+pkgname=('python-cryptography-vectors' 'python2-cryptography-vectors')
+pkgver=2.1.4
+pkgrel=1
+pkgdesc="Test vectors for the cryptography package"
+arch=('any')
+license=('Apache')
+url="http://pypi.python.org/pypi/cryptography-vectors"
+makedepends=('python-setuptools' 'python2-setuptools')
+source=("https://pypi.io/packages/source/c/cryptography-vectors/cryptography_vectors-${pkgver}.tar.gz")
+sha512sums=('74c2c1e3924f848488a3b5abdabda1a0089ae7d070b94e65f9fa2bf2da057ad27a37e46f90de4f2c3e9f1cc96c1c179cb5dbf0f50d5166a02846923e3bceb165')
+
+prepare() {
+   cp -a cryptography_vectors-$pkgver{,-python2}
+}
+
+package_python-cryptography-vectors() {
+   depends=('python')
+ 
+   cd cryptography_vectors-$pkgver
+   python3 setup.py install --root="$pkgdir" --optimize=1
+}
+ 
+package_python2-cryptography-vectors() {
+   depends=('python2')
+ 
+   cd cryptography_vectors-$pkgver-python2
+   python2 setup.py install --root="$pkgdir" --optimize=1
+}

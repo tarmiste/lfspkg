@@ -1,0 +1,49 @@
+# $Id: PKGBUILD 252744 2017-08-20 14:43:41Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+
+pkgbase=python-editorconfig
+pkgname=('python-editorconfig' 'python2-editorconfig')
+pkgver=0.12.1
+pkgrel=1
+pkgdesc='EditorConfig File Locator and Interpreter for Python'
+arch=('any')
+license=('PSF')
+url='https://github.com/editorconfig/editorconfig-core-py'
+makedepends=('python-setuptools' 'python2-setuptools')
+source=("https://pypi.io/packages/source/E/EditorConfig/EditorConfig-$pkgver.tar.gz")
+sha512sums=('d31abc261c3f2e17582d3c5ef549fd2f2292588d8a4549eb98d80693cf94a50078047d95892164a71043375f6c5596152ac62e04e854d78458cfb1183030669f')
+
+prepare() {
+  cp -a EditorConfig-$pkgver{,-py2}
+}
+
+build() {
+  cd "$srcdir"/EditorConfig-$pkgver
+  python setup.py build
+
+  cd "$srcdir"/EditorConfig-$pkgver-py2
+  python2 setup.py build
+}
+
+package_python-editorconfig() {
+  depends=('python')
+
+  cd EditorConfig-$pkgver
+  python setup.py install --root="$pkgdir" --optimize=1
+  install -D -m644 LICENSE.txt "$pkgdir"/usr/share/licenses/$pkgname/LICENSE.txt
+
+  # FS#55201
+  mv "$pkgdir"/usr/bin/editorconfig{,3}
+}
+
+package_python2-editorconfig() {
+  depends=('python2')
+
+  cd EditorConfig-$pkgver-py2
+  python2 setup.py install --root="$pkgdir" --optimize=1
+  install -D -m644 LICENSE.txt "$pkgdir"/usr/share/licenses/$pkgname/LICENSE.txt
+
+  mv "$pkgdir"/usr/bin/editorconfig{,2}
+}
+
+# vim:set ts=2 sw=2 et:

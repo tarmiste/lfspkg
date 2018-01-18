@@ -1,0 +1,26 @@
+# $Id: PKGBUILD 266875 2017-11-15 14:29:11Z foutrelis $
+# Maintainer: Antonio Rojas <arojas@archlinux.org>
+
+pkgname=libfes
+pkgver=0.2
+pkgrel=1
+pkgdesc="A software library devoted to solving systems of polynomial equations over F2"
+arch=('x86_64')
+url="http://www.lifl.fr/~bouillag/fes/"
+license=('GPL3')
+depends=('glibc')
+makedepends=('python2')
+source=("https://bitbucket.org/fes/fes/downloads/fes-$pkgver.spkg")
+md5sums=('3d4051b5b7b23ef609f166733578d978')
+
+build() {
+  cd fes-$pkgver/src
+  ./configure --prefix=/usr
+  make
+}
+
+package() {
+  cd fes-$pkgver/src
+  make install DESTDIR="$pkgdir"
+}
+

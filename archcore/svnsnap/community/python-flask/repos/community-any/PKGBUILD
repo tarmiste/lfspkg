@@ -1,0 +1,60 @@
+# $Id: PKGBUILD 258907 2017-09-20 15:12:56Z svenstaro $
+# Maintainer: Sven-Hendrik Haase <sh@lutzhaase.com>
+# Contributor: Alexander Rødseth <rodseth@gmail.com>
+# Contributor: Thomas Dziedzic < gostrc at gmail >
+# Contributor: Tarmo Heiskanen <turskii@gmail.com>
+
+pkgname=('python-flask' 'python2-flask')
+pkgver=0.12.2
+pkgrel=3
+pkgdesc='Micro webdevelopment framework for Python'
+url='http://flask.pocoo.org/'
+arch=('any')
+license=('custom:BSD')
+makedepends=('python-setuptools' 'python2-setuptools')
+source=("https://github.com/pallets/flask/archive/0.12.2.tar.gz")
+sha512sums=('5007129eed63902a39c6652f0868348629f3f6e09d38a764a6ed0e77f6e87f0a28068cfeee6ecb2dee92ccee771d57f42ba816f856e49f08b8c1dfe6bde9873c')
+
+prepare() {
+  cp -r "flask-$pkgver" "python-flask-$pkgver"
+  cp -r "flask-$pkgver" "python2-flask-$pkgver"
+}
+
+build_python-flask() {
+  cd "$pkgname-$pkgver"
+
+  python setup.py build
+}
+
+build_python2-flask() {
+  cd "$pkgname-$pkgver"
+
+  python setup.py build
+}
+
+check_python-flask() {
+  cd "$pkgname-$pkgver"
+  python setup.py test
+
+  cd "$pkgname-$pkgver"
+  python2 setup.py test
+}
+
+package_python-flask() {
+  depends=('python-werkzeug' 'python-jinja' 'python-itsdangerous' 'python-click')
+  cd "$pkgname-$pkgver"
+
+  python setup.py install --prefix=/usr --root="$pkgdir" --optimize=1
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
+
+package_python2-flask() {
+  depends=('python2-werkzeug' 'python2-jinja' 'python2-itsdangerous' 'python2-click')
+  cd "$pkgname-$pkgver"
+
+  python2 setup.py install --root="$pkgdir" --optimize=1
+  mv "$pkgdir"/usr/bin/flask "$pkgdir"/usr/bin/flask2
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
+
+# vim:set ts=2 sw=2 et:

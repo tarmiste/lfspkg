@@ -1,0 +1,32 @@
+# $Id: PKGBUILD 270516 2017-11-28 21:33:49Z kkeen $
+# Maintainer: Sergej Pupykin <pupykin.s+arch@gmail.com>
+# Contributor: Hannes Rist <hrist@phreeknet.org>
+
+pkgname=mg
+pkgver=20171014
+pkgrel=1
+pkgdesc="Micro GNU/emacs, this is a portable version of the mg maintained by the OpenBSD team."
+arch=('x86_64')
+url="http://homepage.boetes.org/software/mg/"
+depends=('ncurses' 'libbsd')
+license=('custom')
+source=(http://homepage.boetes.org/software/mg/mg-$pkgver.tar.gz)
+sha256sums=('51519698f3f44acd984d7805e4e315ded50c15aba8222521f88756fd67745341')
+
+build() {
+  cd "$srcdir"/$pkgname-$pkgver
+  make prefix=/usr mandir=/usr/share/man
+}
+
+package() {
+  cd "$srcdir"/$pkgname-$pkgver
+
+  mkdir -p "$pkgdir"/usr/bin
+  make install INSTALL=install prefix=/usr mandir=/usr/share/man DESTDIR="$pkgdir" BINDIR=/usr/bin
+
+  mkdir -p "$pkgdir"/usr/share/
+  install -D -m0644 README "$pkgdir"/usr/share/licenses/$pkgname/README
+
+  mkdir -p "$pkgdir"/usr/share/doc
+  install -D -m0644 tutorial "$pkgdir"/usr/share/doc/$pkgname/tutorial
+}

@@ -1,0 +1,44 @@
+# $Id: PKGBUILD 276887 2017-12-29 20:10:20Z seblu $
+# Maintainer: Sébastien Luttringer
+# Contributor: Andrea Zucchelli <zukka77@gmail.com>
+
+pkgname=keepalived
+pkgver=1.4.0
+pkgrel=1
+pkgdesc='Failover and monitoring daemon for LVS clusters'
+arch=('x86_64')
+url='http://www.keepalived.org/'
+license=('GPL2')
+backup=('etc/keepalived/keepalived.conf' 'etc/sysconfig/keepalived')
+depends=('openssl' 'popt' 'libnl1' 'ipset' 'iptables')
+optdepends=('ipset: ipset support')
+makedepends=('libnfnetlink' 'ipset' 'systemd')
+options=('!emptydirs')
+source=("http://www.keepalived.org/software/$pkgname-$pkgver.tar.gz")
+md5sums=('2e0e98b95b46fcce45a491cc37f817a4')
+
+build() {
+  # trick broken ./configure systemctl test
+  printf "#!/bin/sh\necho -.mount\n" > systemctl
+  chmod +x systemctl
+  PATH=$PWD:$PATH
+
+  cd $pkgname-$pkgver
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --sbindir=/usr/bin \
+    --localstatedir=/var \
+    --runstatedir=/run
+  make
+}
+
+package() {
+  cd $pkgname-$pkgver
+  make DESTDIR="$pkgdir" install
+  # move examples to /usr/share
+  install -d -m 755 "$pkgdir/usr/share/$pkgname"
+  mv "$pkgdir/etc/keepalived/samples" "$pkgdir/usr/share/$pkgname/samples"
+}
+
+# vim:set ts=2 sw=2 et:

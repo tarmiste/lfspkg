@@ -1,0 +1,58 @@
+# Maintainer: Thore Bödecker <foxxx0@archlinux.org>
+# Contributor: Pierre Neidhardt <ambrevar@gmail.com>
+# Contributor: Hermann Zahnweh (eigengrau)
+# Contributor: Andy Weidenbaum <archbaum@gmail.com>
+# Contributor: foalsrock <foalsrock at gmail dot-com>
+# Contributor: jebaum <jebaum at ucla dot edu>
+
+pkgname=fzf
+pkgver=0.17.3
+pkgrel=1
+pkgdesc="Command-line fuzzy finder"
+arch=("x86_64")
+url="https://github.com/junegunn/fzf"
+license=("MIT")
+depends=("bash")
+makedepends=("git" "go-pie")
+optdepends=("fish: fish keybindings"
+	"tmux: fzf-tmux script for launching fzf in a tmux pane"
+	"vim: plugin"
+	"zsh: zsh keybindings")
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/junegunn/fzf/archive/${pkgver}.tar.gz"
+	"git+https://github.com/junegunn/${pkgname}.wiki")
+sha256sums=('e843904417adf926613431e4403fded24fade56269446e92aac6ff1db86af81e'
+            'SKIP')
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+    GOPATH="$srcdir" TMPDIR=/tmp go get -u github.com/junegunn/fzf/...
+}
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+
+	## Doc
+	install -dm755 "$pkgdir/usr/share/doc/fzf/wiki"
+	install -m644 "$srcdir/fzf.wiki"/* "$pkgdir/usr/share/doc/fzf/wiki"
+	install -m644 README.md "$pkgdir/usr/share/doc/fzf"
+
+	## Man page
+	install -Dm644 "man/man1/fzf.1" "$pkgdir/usr/share/man/man1/fzf.1"
+
+	## License
+	install -Dm644 "LICENSE" "$pkgdir/usr/share/licenses/fzf/LICENSE"
+
+	## Binaries
+	install -dm755 "$pkgdir/usr/bin"
+	install -m755 "$srcdir/bin/fzf" "bin/fzf-tmux" "$pkgdir/usr/bin/"
+
+	## Completion and keybindings
+	install -dm755 "$pkgdir/usr/share/fzf"
+	install -m644 shell/*.bash shell/*.zsh "$pkgdir/usr/share/fzf"
+
+	## Fish keybindings
+	install -Dm644 "shell/key-bindings.fish" "$pkgdir/usr/share/fish/functions/fzf_key_bindings.fish"
+
+	## Vim plugin
+	install -Dm644 plugin/fzf.vim "$pkgdir"/usr/share/vim/vimfiles/plugin/fzf.vim
+}

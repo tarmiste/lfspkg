@@ -1,0 +1,39 @@
+# Maintainer: Sven-Hendrik Haase <sh@lutzhaase.com>
+# Contributor: Peter Hatina <phatina AT gmail.com>
+pkgname=glm
+pkgver=0.9.8.5
+pkgrel=1
+pkgdesc="C++ mathematics library for 3D software based on the OpenGL Shading Language (GLSL) specification"
+arch=('any')
+license=('MIT')
+url="http://glm.g-truc.net"
+makedepends=('cmake')
+source=("https://github.com/g-truc/glm/releases/download/${pkgver}/glm-${pkgver}.zip")
+md5sums=('456c9f54cf9da189733a74c173b840b5')
+
+package() {
+    cd $pkgname
+
+    mkdir build
+    cd build
+
+    cmake .. \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib
+    make DESTDIR=$pkgdir install
+
+    cd ..
+
+    mkdir -p $pkgdir/usr/share/doc
+    cp -r doc $pkgdir/usr/share/doc/glm
+
+    find $pkgdir -type f -exec chmod 644 {} \;
+    find $pkgdir -type d -exec chmod 755 {} \;
+
+    install -Dm644 copying.txt $pkgdir/usr/share/licenses/$pkgname/LICENSE
+
+    # Fix https://bugs.archlinux.org/task/52501
+    sed -i \
+        "s/PACKAGE_VERSION_UNSUITABLE TRUE/PACKAGE_VERSION_UNSUITABLE FALSE/g" \
+        $pkgdir/usr/lib/cmake/glm/glmConfigVersion.cmake
+}

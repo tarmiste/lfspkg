@@ -1,0 +1,32 @@
+# $Id: PKGBUILD 239679 2017-06-22 18:51:02Z alucryd $
+# Maintainer: Maxime Gauduin <alucryd@archlinux.org>
+
+pkgname=libretro-shaders-cg
+pkgver=701
+pkgrel=1
+pkgdesc='Collection of Cg shaders for libretro'
+arch=('any')
+url='http://www.libretro.com/'
+license=('GPL3')
+groups=('libretro')
+provides=('libretro-shaders')
+conflicts=('libretro-shaders')
+depends=('nvidia-cg-toolkit')
+makedepends=('git')
+_commit='8b8422fdfec367132dda5dcceaff2602dc41c610'
+source=("libretro-shaders-cg::git+https://github.com/libretro/common-shaders.git#commit=${_commit}")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd libretro-shaders-cg
+
+  git rev-list --count HEAD
+}
+
+package() {
+  install -dm 755 "${pkgdir}"/usr/share/libretro
+  cp -dr --no-preserve='ownership' libretro-shaders-cg "${pkgdir}"/usr/share/libretro/shaders
+  rm -rf "${pkgdir}"/usr/share/libretro/shaders/.git
+}
+
+# vim: ts=2 sw=2 et:

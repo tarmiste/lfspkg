@@ -1,0 +1,30 @@
+# $Id: PKGBUILD 266875 2017-11-15 14:29:11Z foutrelis $
+# Maintainer: Sergej Pupykin <pupykin.s+arch@gmail.com>
+
+pkgname=shuffle
+pkgver=1.5
+pkgrel=5
+pkgdesc="Shuffles lines of input."
+arch=('x86_64')
+url="http://www.w3.org/People/Bos/Shuffle/"
+license=('custom')
+depends=(glibc)
+makedepends=('gcc')
+source=(https://www.w3.org/People/Bos/Shuffle/shuffle.c
+	https://www.w3.org/People/Bos/Shuffle/shuffle.1
+	LICENSE)
+sha256sums=('4d4cbc5ebe4fe37a6e1c74861269b16dc5c36ac254d695457f8caa210ffd16fb'
+            '560622c1801234a9987ba19ca1273b160231d7cc72ed3be42106e481aad4e7d4'
+            'e5e894c20a61e44877dbda7859409ed775287222eca0585fbfb60f9060db08d9')
+
+build() {
+  cd "$srcdir"
+  gcc -o shuffle shuffle.c
+}
+
+package() {
+  cd "$srcdir"
+  install -D -m 755 shuffle "$pkgdir"/usr/bin/shuffle
+  install -D -m 644 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+  install -D -m 644 shuffle.1 "$pkgdir"/usr/share/man/man1/shuffle.1
+}

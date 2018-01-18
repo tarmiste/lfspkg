@@ -1,0 +1,46 @@
+# $Id: PKGBUILD 246104 2017-07-23 07:48:01Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+
+pkgbase=python-gcp-devrel-py-tools
+pkgname=('python-gcp-devrel-py-tools' 'python2-gcp-devrel-py-tools')
+pkgver=0.0.11
+_commit=7b2bd4a3bbb9b597b91eb175898d32fd8c04f7e9
+pkgrel=1
+pkgdesc='Tools for Cloud Platform Python libraries and samples'
+arch=('any')
+license=('Apache')
+url='https://github.com/GoogleCloudPlatform/python-repo-tools'
+makedepends=('python-setuptools' 'python2-setuptools' 'python-requests' 'python2-requests'
+             'python-retrying' 'python2-retrying' 'python-packaging' 'python2-packaging')
+source=("$pkgbase-$_commit.tar.gz::https://github.com/GoogleCloudPlatform/python-repo-tools/archive/$_commit.tar.gz")
+sha512sums=('d8f709c9114ccfcaf624caff13785d2b7335a50a23a52982fca1d76343c5ae55014ae2793da216036f5d70a519da53d9909544a6021bf2b0d0a32dc1c7240c90')
+
+prepare() {
+  cp -a python-repo-tools-$_commit{,-py2}
+}
+
+build() {
+  cd "$srcdir"/python-repo-tools-$_commit
+  python setup.py build
+
+  cd "$srcdir"/python-repo-tools-$_commit-py2
+  python2 setup.py build
+}
+
+package_python-gcp-devrel-py-tools() {
+  depends=('python-requests' 'python-retrying' 'python-setuptools' 'python-packaging')
+
+  cd python-repo-tools-$_commit
+  python setup.py install --root="$pkgdir" --optimize=1
+}
+
+package_python2-gcp-devrel-py-tools() {
+  depends=('python2-requests' 'python2-retrying' 'python2-setuptools' 'python2-packaging')
+
+  cd python-repo-tools-$_commit-py2
+  python2 setup.py install --root="$pkgdir" --optimize=1
+
+  mv "$pkgdir"/usr/bin/gcp-devrel-py-tools{,2}
+}
+
+# vim:set ts=2 sw=2 et:

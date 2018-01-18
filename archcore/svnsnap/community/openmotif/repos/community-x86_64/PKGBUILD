@@ -1,0 +1,28 @@
+# $Id: PKGBUILD 273633 2017-12-10 21:48:38Z arojas $
+# Maintainer: Sergej Pupykin <pupykin.s+arch@gmail.com>
+# Contributor: Enrico Morelli <morelli@cerm.unifi.it>
+
+pkgname=openmotif
+pkgver=2.3.8
+pkgrel=1
+pkgdesc="Open Motif"
+arch=('x86_64')
+url="https://motif.ics.com/"
+license=('LGPL')
+depends=(libxext libxp libxft libxt libxmu libpng libjpeg)
+makedepends=(xbitmaps xproto printproto xextproto automake)
+conflicts=(lesstif)
+source=("https://downloads.sourceforge.net/project/motif/Motif%20$pkgver%20Source%20Code/motif-$pkgver.tar.gz")
+sha256sums=('859b723666eeac7df018209d66045c9853b50b4218cecadb794e2359619ebce7')
+
+build() {
+  cd motif-$pkgver
+  export LDFLAGS="-lX11"
+  ./configure --prefix=/usr
+  make
+}
+
+package() {
+  cd motif-$pkgver
+  make DESTDIR="$pkgdir" install
+}

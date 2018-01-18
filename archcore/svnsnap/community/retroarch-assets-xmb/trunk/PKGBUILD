@@ -1,0 +1,32 @@
+# $Id: PKGBUILD 272308 2017-12-05 19:55:06Z alucryd $
+# Maintainer: Maxime Gauduin <alucryd@archlinux.org>
+
+pkgname=retroarch-assets-xmb
+pkgver=9
+pkgrel=1
+epoch=1
+pkgdesc='XMB menu assets for RetroArch'
+arch=('any')
+url='http://www.libretro.com/'
+license=('GPL')
+groups=('libretro')
+depends=('retroarch')
+makedepends=('git')
+_commit='5d6dba5113f352e908443c2122e4ff98dc8d7bb0'
+source=("git+https://github.com/libretro/retroarch-assets.git#commit=${_commit}")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd retroarch-assets
+
+  git rev-list --count HEAD
+}
+
+package() {
+  cd retroarch-assets
+
+  install -dm 755 "${pkgdir}"/usr/share/retroarch/assets
+  cp -dr --no-preserve='ownership' xmb "${pkgdir}"/usr/share/retroarch/assets/
+}
+
+# vim: ts=2 sw=2 et:

@@ -1,0 +1,57 @@
+# $Id: PKGBUILD 272139 2017-12-04 16:48:22Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Daniel Wallace <danielwallace at gtmanfred dot com>
+
+pkgbase=python-oslo-i18n
+pkgname=(python-oslo-i18n python2-oslo-i18n)
+pkgver=3.19.0
+pkgrel=1
+pkgdesc="Oslo i18n library"
+arch=('any')
+url="https://pypi.python.org/pypi/oslo.i18n/$pkgver"
+license=('Apache')
+makedepends=('python-setuptools' 'python2-setuptools' 'python-pbr' 'python2-pbr' 'python-babel'
+             'python2-babel')
+checkdepends=('python-mock' 'python2-mock' 'python-oslotest' 'python2-oslotest' 'python-oslo-config'
+              'python2-oslo-config')
+options=('!emptydirs')
+source=("$pkgbase-$pkgver.tar.gz::https://github.com/openstack/oslo.i18n/archive/$pkgver.tar.gz")
+sha512sums=('396f785c9aa1f257bcd4125b0b32b93afbcba27bfbb59126da48e1f1bcab1a691d3e7343cbe952396a86e1e5b69c6ead20e55bd1251121c67f4b3c02a20e8334')
+
+prepare() {
+  cp -a oslo.i18n-$pkgver{,-py2}
+
+  export PBR_VERSION=$pkgver
+}
+
+build() {
+  cd "$srcdir"/oslo.i18n-$pkgver
+  python setup.py build
+
+  cd "$srcdir"/oslo.i18n-$pkgver-py2
+  python2 setup.py build
+}
+
+check() {
+  cd "$srcdir"/oslo.i18n-$pkgver
+  python setup.py testr
+
+  cd "$srcdir"/oslo.i18n-$pkgver-py2
+  PYTHON=python2 python2 setup.py testr
+}
+
+package_python-oslo-i18n() {
+  depends=('python-six' 'python-pbr' 'python-babel')
+
+  cd "$srcdir"/oslo.i18n-$pkgver
+  python setup.py install --root="$pkgdir" --optimize=1
+}
+
+package_python2-oslo-i18n() {
+  depends=('python2-six' 'python2-pbr' 'python2-babel')
+
+  cd "$srcdir"/oslo.i18n-$pkgver-py2
+  python2 setup.py install --root="$pkgdir" --optimize=1
+}
+
+# vim:set ts=2 sw=2 et:

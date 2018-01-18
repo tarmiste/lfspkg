@@ -1,0 +1,28 @@
+# Maintainer: Morten Linderud <foxboron@archlinux.org> 
+# Contributor: Alad Wenter <https://wiki.archlinux.org/index.php/Special:EmailUser/Alad>
+
+pkgbase=font-awesome
+pkgname=(ttf-font-awesome otf-font-awesome)
+pkgver=5.0.2
+pkgrel=1
+pkgdesc="Iconic font designed for Bootstrap"
+url="http://fontawesome.com"
+license=('custom:OFL')
+arch=('any')
+depends=('fontconfig')
+source=("$pkgname-$pkgver.zip::https://use.fontawesome.com/releases/v${pkgver}/fontawesome-free-${pkgver}.zip")
+sha256sums=('77c18e313e2259639444126a676c5628de61c822485f152f6610c382ab6f76ed')
+
+package_ttf-font-awesome() {
+  cd "fontawesome-free-${pkgver}"
+  install -Dm644 LICENSE.txt "$pkgdir/usr/share/licenses/$pkgname/LICENSE.txt"
+  install -d "$pkgdir/usr/share/fonts/TTF"
+  install -m644 ./web-fonts-with-css/webfonts/*.ttf "$pkgdir/usr/share/fonts/TTF"
+}
+
+package_otf-font-awesome() {
+  cd "fontawesome-free-${pkgver}"
+  install -Dm644 LICENSE.txt "$pkgdir/usr/share/licenses/$pkgname/LICENSE.txt"
+  install -d "$pkgdir/usr/share/fonts/OTF"
+  install -m644 ./use-on-desktop/*.otf "$pkgdir/usr/share/fonts/OTF"
+}

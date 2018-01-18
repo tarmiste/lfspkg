@@ -1,0 +1,27 @@
+# $Id: PKGBUILD 270675 2017-11-29 12:57:54Z spupykin $
+# Maintainer: Sergej Pupykin <pupykin.s+arch@gmail.com>
+# Maintainer: Charles Mauch <cmauch@gmail.com>
+
+pkgname=perl-html-tableextract
+pkgver=2.13
+pkgrel=3
+pkgdesc="Perl/CPAN Module HTML::TableExtract : Flexible HTML table extraction"
+arch=('any')
+url="http://search.cpan.org/~msisk/HTML-TableExtract/"
+license=("GPL" "PerlArtistic")
+makedepends=("perl-html-parser" "perl-html-element-extended")
+depends=("perl-html-parser" "perl-html-element-extended")
+source=("https://www.cpan.org/authors/id/M/MS/MSISK/HTML-TableExtract-$pkgver.tar.gz")
+sha256sums=('0a7d81a265d2d46aeeb277a9d7cd5f5e2c8e3765959b641252c8e0a175ad5106')
+
+build() {
+  cd "$srcdir"/HTML-TableExtract-$pkgver
+  PERL_MM_USE_DEFAULT=1 perl Makefile.PL INSTALLDIRS=vendor
+  make
+}
+package() {
+  cd "$srcdir"/HTML-TableExtract-$pkgver
+  make install DESTDIR="$pkgdir"
+  find "$pkgdir" -name '.packlist' -delete
+  find "$pkgdir" -name '*.pod' -delete
+}

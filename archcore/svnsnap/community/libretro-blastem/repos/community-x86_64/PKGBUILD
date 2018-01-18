@@ -1,0 +1,38 @@
+# $Id: PKGBUILD 275512 2017-12-22 15:41:08Z alucryd $
+# Maintainer: Maxime Gauduin <alucryd@archlinux.org>
+
+pkgname=libretro-blastem
+pkgver=942
+pkgrel=1
+pkgdesc='Sega Mega Drive core'
+arch=('x86_64')
+url='https://github.com/libretro/blastem-libretro'
+license=('GPL3')
+groups=('libretro')
+depends=('glibc' 'libretro-core-info')
+makedepends=('git')
+_commit='13209ec505694c5f18c12f44cedb81a542f3cafa'
+source=("libretro-blastem::git+https://github.com/libretro/blastem-libretro.git#commit=${_commit}")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd libretro-blastem
+
+  git rev-list --count HEAD
+}
+
+build() {
+  cd libretro-blastem/libretro
+
+  sed 's/CFLAGS :=/CFLAGS +=/g' -i Makefile
+
+  make WITH_DYNAREC='x86_64'
+}
+
+package() {
+  cd libretro-blastem/libretro
+
+  install -Dm 644 blastem_libretro.so -t "${pkgdir}"/usr/lib/libretro/
+}
+
+# vim: ts=2 sw=2 et:

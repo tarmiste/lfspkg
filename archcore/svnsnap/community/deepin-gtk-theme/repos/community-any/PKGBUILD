@@ -1,0 +1,21 @@
+# $Id: PKGBUILD 267062 2017-11-17 03:08:49Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Josip Ponjavic <josipponjavic at gmail dot com>
+# Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=deepin-gtk-theme
+pkgver=17.10.5
+pkgrel=1
+pkgdesc="Deepin GTK Theme"
+arch=('any')
+url="https://github.com/linuxdeepin/deepin-gtk-theme"
+license=('LGPL3')
+optdepends=('gtk-engine-murrine: for gtk2 themes')
+groups=('deepin')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxdeepin/deepin-gtk-theme/archive/$pkgver.tar.gz")
+sha512sums=('2d29d6ba63532a0b87fb0d5a93a6b6f15e2ec5966a3db7c2b028dfec6a2175c11492ed238a34fc95e7d904cd51af709147554ee5232aa05cedb9ed166dfe5b20')
+
+package() {
+  cd deepin-gtk-theme-$pkgver
+  make DESTDIR="$pkgdir" install
+}

@@ -1,0 +1,33 @@
+# Maintainer: Julien Nicoulaud <julien.nicoulaud@gmail.com>
+# Contributor: James Rayner <james@archlinux.org>
+# Contributor: Todd Maynard <arch@toddmaynard.com>
+# Source: https://github.com/nicoulaj/archlinux-packages
+pkgname=python2-cheetah
+pkgver=2.4.4
+pkgrel=6
+pkgdesc="A Python-powered template engine and code generator"
+arch=(x86_64)
+url="http://www.cheetahtemplate.org"
+license=(custom)
+depends=(python2 python2-markdown)
+makedepends=(python2-distribute)
+optdepends=('python2-pygments: for the CodeHighlighter filter')
+provides=(cheetah python-cheetah)
+conflicts=(cheetah python-cheetah)
+changelog=Changelog
+source=(https://pypi.python.org/packages/source/C/Cheetah/Cheetah-${pkgver}.tar.gz)
+sha256sums=('be308229f0c1e5e5af4f27d7ee06d90bb19e6af3059794e5fd536a6f29a9b550')
+
+build() {
+  cd "${srcdir}/Cheetah-${pkgver}"
+  python2 setup.py build
+}
+
+package() {
+  msg "Install..."
+  cd "${srcdir}/Cheetah-${pkgver}"
+  python2 setup.py install --root="${pkgdir}" || return 1
+
+  msg2 "Install copyright resources in /usr/share/licenses/${pkgname}..."
+  install -Dm644 "${srcdir}/Cheetah-${pkgver}/LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}

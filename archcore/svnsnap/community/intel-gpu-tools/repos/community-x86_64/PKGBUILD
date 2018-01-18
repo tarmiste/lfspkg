@@ -1,0 +1,31 @@
+# $Id: PKGBUILD 266194 2017-11-10 22:21:52Z jelle $
+# Maintainer: Daniel Micay <danielmicay@gmail.com>
+# Contributor: Mikael Eriksson <mikael_eriksson@miffe.org>
+# Originally by: Denis Smirnov <detanator@gmail.com>
+
+pkgname=intel-gpu-tools
+pkgver=1.20
+pkgrel=1
+pkgdesc="Tools for development and testing of the Intel DRM driver"
+arch=(i686 x86_64)
+license=(MIT)
+url='http://cgit.freedesktop.org/xorg/app/intel-gpu-tools/'
+depends=(libdrm libpciaccess cairo python xorg-xrandr procps-ng kmod libxv)
+makedepends=(swig gtk-doc xorg-util-macros dri2proto)
+source=(https://xorg.freedesktop.org/releases/individual/app/$pkgname-$pkgver.tar.bz2{,.sig})
+md5sums=('3b77a6a23274afe363bd5c942fe42562'
+         'SKIP')
+validpgpkeys=('775965B85650195ACE77E18D7370055DB74C2475')
+
+build() {
+  cd $pkgname-$pkgver
+  export LANG=en_US.UTF-8
+  ./configure --prefix=/usr --libexecdir=/usr/lib --disable-tests --without-libunwind
+  make
+}
+
+package() {
+  cd $pkgname-$pkgver
+  make DESTDIR="$pkgdir" install
+  install -Dm644 COPYING "$pkgdir/usr/share/licenses/intel-gpu-tools/COPYING"
+}

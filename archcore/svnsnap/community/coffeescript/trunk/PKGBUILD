@@ -1,0 +1,37 @@
+# $Id: PKGBUILD 276965 2017-12-30 08:54:12Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: sloppybench <sloppybench@eml.cc>
+# Contributor: der_FeniX <derfenix@gmail.com>
+# Contributor: Anatol Pomozov <anatol.pomozov@gmail.com>
+# Contributor: Gordin <9ordin @t gmail dot com>
+# Contributor: Simon Lipp <aur@simon.lipp.name>
+# Contributor: Chris Bolton <http://scr.im/chris-kun>
+# Contributor: Sergei Lebedev <superbobry at gmail dot com>
+# Contributor: flying sheep <flying-sheep@web.de>
+
+pkgname=coffeescript
+pkgver=2.1.1
+pkgrel=1
+pkgdesc='CoffeeScript is a little language that compiles into JavaScript'
+arch=('any')
+url='http://coffeescript.org'
+license=('MIT')
+depends=('nodejs')
+makedepends=('npm')
+provides=("coffee-script=$pkgver")
+conflicts=('coffee-script')
+replaces=('coffee-script')
+source=("https://registry.npmjs.org/$pkgname/-/$pkgname-$pkgver.tgz")
+noextract=("$pkgname-$pkgver.tgz")
+sha512sums=('4e5db3ebfacd32a2762ea5a55712cac0b17d1678b0269c1ea277d22c2c215fc345084b0605c14812bb5f29df3eb785c70d2611b218fd157c4f5f9dc14f7942f7')
+
+package() {
+  npm install -g --user root --prefix "$pkgdir"/usr "$srcdir"/$pkgname-$pkgver.tgz
+
+  # Why 777? :/
+  chmod -R u=rwX,go=rX "$pkgdir"
+
+  rm -r "$pkgdir"/usr/etc
+  mkdir -p "$pkgdir/usr/share/licenses/$pkgname"
+  ln -s "../../../lib/node_modules/$pkgname/LICENSE" "$pkgdir/usr/share/licenses/$pkgname/"
+}

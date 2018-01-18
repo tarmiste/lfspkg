@@ -1,0 +1,32 @@
+# $Id: PKGBUILD 246397 2017-07-26 07:18:59Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+
+_pkgbasename=expat
+pkgname=lib32-${_pkgbasename}
+pkgver=2.2.2
+pkgrel=1
+pkgdesc="An XML Parser library written in C (32 bit)"
+arch=('x86_64')
+url="http://expat.sourceforge.net/"
+license=('custom')
+depends=('lib32-glibc' "${_pkgbasename}")
+source=(http://downloads.sourceforge.net/sourceforge/expat/${_pkgbasename}-${pkgver}.tar.bz2)
+sha512sums=('05383244f345b1c6a7290f3bb58bfab4da9546bfe880de644e784bcc48bd4317f2beb3fdb6120a5f396e06bb269f7e80713db211346d2d17bc7de3353d556575')
+
+build() {
+  cd "${srcdir}/${_pkgbasename}-${pkgver}"
+  export CC='gcc -m32'
+  export PKG_CONFIG_PATH=/usr/lib32/pkgconfig
+  ./configure --prefix=/usr --libdir=/usr/lib32 --mandir=/usr/share/man
+  make
+}
+
+package() {
+  cd "${srcdir}/${_pkgbasename}-${pkgver}"
+  make DESTDIR="${pkgdir}" install
+  install -d -m755 "${pkgdir}/usr/share/licenses/"
+  ln -s ${_pkgbasename} "${pkgdir}/usr/share/licenses/${pkgname}"
+
+  # Clean up lib32 package
+  rm -rf "${pkgdir}"/usr/{bin,include,share/man}
+}

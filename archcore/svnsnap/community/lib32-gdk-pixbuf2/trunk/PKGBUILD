@@ -1,0 +1,63 @@
+# $Id: PKGBUILD 242302 2017-07-04 12:08:42Z lcarlier $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Ionut Biru <ibiru@archlinux.org>
+
+_pkgbasename=gdk-pixbuf2
+pkgname=lib32-$_pkgbasename
+pkgver=2.36.6
+pkgrel=1
+pkgdesc="An image loading library (32-bit)"
+arch=('x86_64')
+url="http://www.gtk.org/"
+license=('LGPL2.1')
+depends=(lib32-glib2 lib32-libpng lib32-libtiff lib32-libjpeg lib32-libx11
+         $_pkgbasename)
+makedepends=('gtk-doc' 'gobject-introspection' 'git')
+options=('!docs')
+install=gdk-pixbuf2.install
+_commit=d8ae54bc5e3e31d43acf410a6689be2d40567b03  # tags/2.36.6^0
+source=("git+https://git.gnome.org/browse/gdk-pixbuf#commit=$_commit"
+        gdk-pixbuf-query-loaders-32.hook)
+sha256sums=('SKIP'
+            'b9a1e5b0d18a4259b9b87ccb3f055402c89c85f7bddb5ed9d8b407de537f7d86')
+
+pkgver() {
+  cd gdk-pixbuf
+  git describe --tags | sed 's/-/+/g'
+}
+
+prepare() {
+  cd gdk-pixbuf
+  NOCONFIGURE=1 ./autogen.sh
+}
+
+build() {
+  export CC="gcc -m32"
+  export CXX="g++ -m32"
+  export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
+  export CFLAGS="-I/usr/include/libtiff32 $CFLAGS"
+
+  cd gdk-pixbuf
+  ./configure --prefix=/usr  --libdir=/usr/lib32 \
+    --without-libjasper \
+    --with-x11 \
+    --with-included-loaders=png
+  sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+  make
+}
+
+package() {
+  cd gdk-pixbuf
+  make DESTDIR="$pkgdir" install
+
+  rm -rf "${pkgdir}"/etc
+  rm -rf "${pkgdir}"/usr/{include,share}
+
+  cd "${pkgdir}"/usr/bin
+  mv gdk-pixbuf-query-loaders{,-32}
+  mv gdk-pixbuf-thumbnailer{,-32}
+  rm gdk-pixbuf-pixdata gdk-pixbuf-csource
+  install -Dm644 "${srcdir}/gdk-pixbuf-query-loaders-32.hook" -t "$pkgdir/usr/share/libalpm/hooks"
+}
+
+# vim:set ts=2 sw=2 et:

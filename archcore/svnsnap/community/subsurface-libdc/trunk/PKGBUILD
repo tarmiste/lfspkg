@@ -1,0 +1,30 @@
+# $Id: PKGBUILD 277161 2017-12-30 14:02:57Z bisson $
+# Contributor: Francois Boulogne <fboulogne at april dot org>
+# Maintainer: Gaetan Bisson <bisson@archlinux.org>
+
+pkgname=subsurface-libdc
+_pkgname=libdivecomputer-subsurface-branch
+pkgver=4.7.6
+pkgrel=1
+pkgdesc='Library for communication with dive computers'
+url='https://github.com/Subsurface-divelog/libdc'
+license=('LGPL')
+arch=('x86_64')
+source=("https://subsurface-divelog.org/downloads/${_pkgname}-${pkgver}.tgz")
+sha256sums=('571f2c730dc1b920526050aa9f69753987a774fb7f9951fb7ad222e510aaee0e')
+
+conflicts=('libdivecomputer')
+provides=('libdivecomputer')
+replaces=('libdivecomputer')
+
+build() {
+	cd "${srcdir}/${_pkgname}-${pkgver}"
+	autoreconf --install
+	./configure --prefix=/usr
+	make
+}
+
+package() {
+	cd "${srcdir}/${_pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
+}

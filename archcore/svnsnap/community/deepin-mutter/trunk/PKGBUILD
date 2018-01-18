@@ -1,0 +1,40 @@
+# $Id: PKGBUILD 145358 2015-10-31 12:11:57Z fyan $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Josip Ponjavic <josipponjavic at gmail dot com>
+# Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=deepin-mutter
+pkgver=3.20.26
+pkgrel=1
+pkgdesc="Base window manager for deepin, fork of gnome mutter"
+arch=('x86_64')
+url="https://github.com/linuxdeepin/deepin-mutter"
+license=('GPL3')
+depends=('deepin-clutter' 'dconf' 'gobject-introspection-runtime' 'deepin-desktop-schemas'
+         'libcanberra' 'startup-notification' 'zenity' 'libsm' 'gnome-desktop' 'upower'
+         'libxkbcommon-x11' 'libgudev' 'deepin-cogl')
+makedepends=('gnome-common' 'gnome-doc-utils' 'gobject-introspection' 'gtk-doc' 'intltool')
+options=('!emptydirs')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxdeepin/deepin-mutter/archive/$pkgver.tar.gz")
+sha512sums=('064789b5f06032abb8089815e9e4aff3715d51dfcc6a39d8db2735b64fea04557b372a6b300f053266e0f3129b1e57afc3a23d54144ea69559c00ea77acf7136')
+
+build() {
+  cd deepin-mutter-$pkgver
+  ./autogen.sh \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --libexecdir=/usr/lib/deepin-mutter \
+    --localstatedir=/var \
+    --enable-gtk-doc \
+    --enable-wayland \
+    --enable-native-backend \
+    --disable-static \
+    --disable-schemas-compile \
+    --enable-compile-warnings=minimum
+  make
+}
+
+package() {
+  cd deepin-mutter-$pkgver
+  make DESTDIR="$pkgdir" install
+}

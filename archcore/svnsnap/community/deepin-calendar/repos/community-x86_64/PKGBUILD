@@ -1,0 +1,28 @@
+# $Id: PKGBUILD 270974 2017-12-01 13:42:35Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Josip Ponjavic <josipponjavic at gmail dot com>
+# Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=deepin-calendar
+pkgver=1.1.1
+pkgrel=2
+pkgdesc='Calendar for Deepin Desktop Environment'
+arch=('x86_64')
+url="https://github.com/linuxdeepin/dde-calendar"
+license=('GPL3')
+depends=('deepin-qt5integration')
+makedepends=('qt5-tools' 'deepin-gettext-tools')
+groups=('deepin')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxdeepin/dde-calendar/archive/$pkgver.tar.gz")
+sha512sums=('59af8ec9e4273b77366b366b68e6bdb44337de4482f1a2a621706e2aa68d10d759e8e147b876fe4ab7f6b62f653088d86e82014e327f10e0163fb845f145cb73')
+
+build() {
+  cd dde-calendar-$pkgver
+  qmake-qt5 PREFIX=/usr
+  make
+}
+
+package() {
+  cd dde-calendar-$pkgver
+  make INSTALL_ROOT="$pkgdir" install
+}

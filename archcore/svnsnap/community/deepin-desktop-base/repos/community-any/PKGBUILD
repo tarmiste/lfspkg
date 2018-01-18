@@ -1,0 +1,39 @@
+# $Id: PKGBUILD 267880 2017-11-22 06:13:04Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Josip Ponjavic <josipponjavic at gmail dot com>
+# Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=deepin-desktop-base
+pkgver=2017.11.1
+pkgrel=1
+epoch=1
+pkgdesc='Base component for Deepin'
+arch=('any')
+url="https://github.com/linuxdeepin/deepin-desktop-base"
+license=('GPL3')
+depends=('deepin-wallpapers')
+groups=('deepin')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxdeepin/deepin-desktop-base/archive/$pkgver.tar.gz")
+sha512sums=('2d1081e415f240371499c398154bd458f8e23bf0dfe09be3b4a3a681f1e64340fd568a0fcfd8a6dc973f7013d29aa9d76ca99c58cb099b02dd99ffa3f85b446c')
+
+build() {
+  cd $pkgname-$pkgver
+  make
+}
+
+package() {
+  cd $pkgname-$pkgver
+  make DESTDIR="$pkgdir" install
+
+  # Remove Deepin distro's lsb-release
+  rm "$pkgdir"/etc/lsb-release
+
+  # Don't override systemd timeouts
+  rm -r "$pkgdir"/etc/systemd
+
+  # Make a symlink for deepin-version
+  ln -s ../usr/lib/deepin/desktop-version "$pkgdir"/etc/deepin-version
+
+  # Remove apt-specific templates
+  rm -r "$pkgdir"/usr/share/python-apt
+}

@@ -1,0 +1,63 @@
+# $Id: PKGBUILD 278327 2018-01-03 17:39:07Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Matmas <matmas@matmas.net>
+# Contributor: Thomas Gubler <thomasgubler@gmail.com>
+# Contributor: Daniel YC Lin <dlin.tw at gmail>
+# Contributor: Florian Bruhin <archlinux.org@the-compiler.org>
+
+pkgname=(python-websocket-client python2-websocket-client)
+pkgver=0.46.0
+pkgrel=1
+pkgdesc="WebSocket client library for Python"
+arch=(any)
+url="https://github.com/liris/websocket-client"
+license=('LGPL')
+makedepends=('python-setuptools' 'python2-setuptools' 'python-six' 'python2-six')
+source=(https://pypi.io/packages/source/w/websocket-client/websocket_client-$pkgver.tar.gz
+        use-system-ca.patch)
+sha512sums=('8ec13770c56475d8cd0559a84a827cf13c73f79c2b3b14b7f7eec71a938896c691393fe86df5b227aa046fecf34cbdf88974ee870d89c2e66018b1ac91761ccf'
+            '0c477ff2cb1c0201b47e5462500326ebc0d60d1010bc9e6c29eb201204f74c1932df1ff0c1c4e59fa64d946ff7e253c1cce350793a8a102e9e7e10074e0aa1db')
+
+prepare() {
+  (cd websocket_client-$pkgver; patch -p1 -i ../use-system-ca.patch)
+  rm websocket_client-$pkgver/websocket/cacert.pem
+  sed -i "s/'backports.ssl_match_hostname'//" websocket_client-$pkgver/setup.py
+
+  cp -a websocket_client-$pkgver{,-py2}
+}
+
+build() {
+  cd "$srcdir"/websocket_client-$pkgver
+  python setup.py build
+
+  cd "$srcdir"/websocket_client-$pkgver-py2
+  python2 setup.py build
+}
+
+check() {
+  cd "$srcdir"/websocket_client-$pkgver
+  python setup.py test
+
+  cd "$srcdir"/websocket_client-$pkgver-py2
+  python2 setup.py test
+}
+
+package_python-websocket-client() {
+  depends=('python-six')
+
+  cd websocket_client-$pkgver
+  python setup.py install --root="$pkgdir" --optimize=1
+  install -Dm644 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+}
+
+package_python2-websocket-client() {
+  depends=('python2-six')
+
+  cd websocket_client-$pkgver-py2
+  python2 setup.py install --root="$pkgdir" --optimize=1
+  install -Dm644 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+
+  mv "$pkgdir"/usr/bin/wsdump{,2}.py
+}
+
+# vim:set ts=2 sw=2 ft=sh et:

@@ -1,0 +1,31 @@
+# $Id: PKGBUILD 274869 2017-12-19 10:12:33Z spupykin $
+# Maintainer: Sergej Pupykin <arch+pub@sergej.pp.ru>
+# Maintainer: ajs124 < aur AT ajs124 DOT de >
+
+pkgname=firejail
+pkgver=0.9.52
+pkgrel=1
+pkgdesc="Linux namespaces sandbox program"
+arch=(x86_64)
+license=(GPL2)
+url=https://l3net.wordpress.com/projects/firejail/
+backup=('etc/firejail/login.users'
+	'etc/firejail/firejail.config')
+validpgpkeys=('F951164995F5C4006A73411E2CCB36ADFC5849A7')
+#source=(${pkgname}-${pkgver}.tar.gz::https://github.com/netblue30/${pkgname}/archive/$pkgver.tar.gz)
+source=(https://sourceforge.net/projects/firejail/files/firejail/firejail-${pkgver}.tar.xz{,.asc})
+sha256sums=('da14c93ebc0e8deb420ab9979d1c006ecc98b5b310b27cae43f0c623c9471471'
+            'SKIP')
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	# fix build
+	export CFLAGS="${CFLAGS/-fsanitize=undefined/}"
+	./configure --prefix=/usr
+	make
+}
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
+}

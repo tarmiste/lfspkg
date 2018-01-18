@@ -1,0 +1,30 @@
+# Maintainer:
+# Contributor: Martin Wimpress <code@flexion.org>
+
+pkgname=mate-themes
+pkgver=3.22.14
+pkgrel=1
+pkgdesc="Default themes for the MATE desktop"
+url="http://mate-desktop.org"
+arch=('any')
+license=('GPL')
+makedepends=('gtk2' 'intltool')
+optdepends=('gtk-engines: for gtk2 themes'
+            'gtk-engine-murrine: for gtk2 themes'
+            'mate-icon-theme: default icon theme')
+options=('!emptydirs')
+groups=('mate')
+source=("http://pub.mate-desktop.org/releases/themes/${pkgver%.*}/${pkgname}-${pkgver}.tar.xz")
+sha256sums=('53b59fdc40fd5c35b85119231cd8e1d490d8e7f369cb43b31a87ed5c2dddd825')
+
+build() {
+    cd ${pkgname}-${pkgver}
+    ./configure \
+        --prefix=/usr
+    make
+}
+
+package() {
+    cd ${pkgname}-${pkgver}
+    make DESTDIR="${pkgdir}" install
+}

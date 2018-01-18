@@ -1,0 +1,36 @@
+# $Id: PKGBUILD 268497 2017-11-26 00:52:22Z kkeen $
+# Maintainer: Kevin Piche <kevin@archlinux.org>
+# Contributor: Dale Blount <archlinux@dale.us>
+
+pkgname=fortune-mod
+pkgver=1.99.5
+pkgrel=1
+pkgdesc="The Fortune Cookie Program from BSD games"
+arch=('x86_64')
+url="http://www.shlomifish.org/open-source/projects/fortune-mod/"
+license=('BSD')
+depends=('recode')
+source=("https://github.com/shlomif/fortune-mod/archive/fortune-mod-$pkgver.tar.gz"
+        01_all_fortune_all-fix.patch)
+md5sums=('62abb4b368873a27f23ff1f9c386605e'
+         'e85b073f16dc6f0e8f0ed90044797aa3')
+
+build() {
+  cd "$srcdir/fortune-mod-fortune-mod-$pkgver/fortune-mod"
+  #patch -p0 < "$srcdir/01_all_fortune_all-fix.patch"
+  make REGEXDEFS='-DHAVE_REGEX_H -DPOSIX_REGEX -DHAVE_STDBOOL'  \
+       COOKIEDIR=/usr/share/fortune  \
+       LOCALDIR=/usr/local/share/fortune all fortune/fortune.man
+}
+
+package() {
+  cd "$srcdir/fortune-mod-fortune-mod-$pkgver/fortune-mod"
+  make FORTDIR="$pkgdir"/usr/bin \
+       COOKIEDIR="$pkgdir"/usr/share/fortune \
+       BINDIR="$pkgdir"/usr/bin \
+       BINMANDIR="$pkgdir"/usr/share/man/man1 \
+       FORTMANDIR="$pkgdir"/usr/share/man/man6 install
+  rm "$pkgdir"/usr/share/fortune/*.u8
+  rm "$pkgdir"/usr/share/fortune/off/*.u8
+  install -D -m644 ../LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}

@@ -1,0 +1,26 @@
+# $Id: PKGBUILD 222683 2017-04-13 12:22:34Z arodseth $
+# Maintainer: Alexander F Rødseth <xyproto@archlinux.org>
+# Contributor: Marcin Kulik <marcin@asciinema.org>
+
+pkgname=asciinema
+pkgver=1.4.0
+pkgrel=1
+pkgdesc='Record and share terminal sessions'
+arch=('any')
+url='https://asciinema.org/'
+license=('GPL3')
+makedepends=('python-setuptools')
+depends=('python')
+source=("$pkgname.tar.gz::https://github.com/asciinema/asciinema/archive/v${pkgver}.tar.gz"
+        'asciinema.sh')
+sha256sums=('841a55b0f51988d5e155e99badbd6ce5cf3b43cca2ba15cd20c971a19719dc9a'
+            '14a2dd176aa95010e1e4876265f12288499008c1cf530da5b1d9aff9d74917cd')
+
+package() {
+  cd "$pkgname-$pkgver"
+
+  python setup.py install --root="$pkgdir" --optimize=1
+  install -Dm755 "$srcdir/asciinema.sh" "$pkgdir/usr/bin/asciinema"
+}
+
+# vim:set ts=2 sw=2 et:

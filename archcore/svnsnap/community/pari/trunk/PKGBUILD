@@ -1,0 +1,42 @@
+# $Id: PKGBUILD 280585 2018-01-08 22:12:20Z bisson $
+# Maintainer: Gaetan Bisson <bisson@archlinux.org>
+
+pkgname=pari
+pkgver=2.9.4
+pkgrel=1
+pkgdesc='Computer algebra system designed for fast computations in number theory'
+url='https://pari.math.u-bordeaux.fr/'
+license=('GPL')
+arch=('x86_64')
+depends=('gmp' 'readline' 'libx11')
+makedepends=('perl' 'texlive-core')
+optdepends=('perl: gphelp, tex2mail')
+validpgpkeys=('42028EA404A2E9D80AC453148F0E7C2B4522E387')
+source=("https://pari.math.u-bordeaux.fr/pub/pari/unix/${pkgname}-${pkgver}.tar.gz"{,.asc})
+sha256sums=('4f9cdc739630a039c0fcc9afac2e5647659c4a709dcc6f7a69d5908cd4a82647'
+            'SKIP')
+
+conflicts=('pari-sage')
+replaces=("pari-sage<=1:${pkgver}")
+
+build() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	./Configure \
+		--prefix=/usr \
+		--with-readline \
+		--mt=pthread \
+		--with-gmp \
+
+	make all
+}
+
+check() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make bench
+}
+
+package() {
+	cd "${srcdir}/${pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
+	ln -sf gp.1.gz "${pkgdir}"/usr/share/man/man1/pari.1
+}

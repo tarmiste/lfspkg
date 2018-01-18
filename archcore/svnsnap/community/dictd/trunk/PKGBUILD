@@ -1,0 +1,59 @@
+# $Id: PKGBUILD 270675 2017-11-29 12:57:54Z spupykin $
+# Maintainer: Sergej Pupykin <pupykin.s+arch@gmail.com>
+# Contributor: SmackleFunky <smacklefunky@optusnet.com.au>
+# Contributor: Enrico Morelli <morelli@cerm.unifi.it>
+
+pkgname=dictd
+pkgver=1.12.1
+pkgrel=5
+pkgdesc="Online dictionary client and server"
+url="http://sourceforge.net/projects/dict/"
+license=('GPL')
+arch=('x86_64')
+depends=('sh' 'zlib' 'libmaa')
+makedepends=('flex')
+optdepends=('xclip: for dict_lookup')
+backup=(etc/dict/dictd.conf
+	etc/dict/dict.conf
+	etc/dict/site.info
+	etc/conf.d/dictd
+	etc/xinetd.d/dictd
+	etc/dict/colorit.conf)
+options=('!emptydirs')
+source=("https://downloads.sourceforge.net/dict/$pkgname-$pkgver.tar.gz"
+	dict.conf
+	dictd.conf
+	dictd.confd
+	dictd.service
+	site.info
+	dictd.xinetd
+	colorit.conf)
+sha256sums=('a237f6ecdc854ab10de5145ed42eaa2d9b6d51ffdc495f7daee59b05cc363656'
+            '278b6986ebbfe74396a9e287d94a2d8128a83d511df84f02093058081aa12d57'
+            'dbe289daeae4bee89d523bc8401eb5603df47f7e978ce7faf30f407804eb27cf'
+            'c257599f6d063f786dd405c5760545e6af70f5a8b9f032d7099a33e0d7c60990'
+            '8a946a7abc9f927f51a0f6c3af6f2e1e3f4db128a135be893a6ae98788d35865'
+            'cb55e7aaedef73665996f015a07e97e45cd3771775e291d798bf163b0052c0a2'
+            '37daa473faf10518be23f6bd7b685c04c4c8c039025e14b6c6084764affcf976'
+            'e1d4894d2f0be55c6b937c6da59ca57b81899981427ae3b827e1de2f344c01f6')
+
+build() {
+  cd "$srcdir"/$pkgname-$pkgver
+  ./configure --enable-dictorg --prefix=/usr --sysconfdir=/etc/dict --sbindir=/usr/bin
+  make
+}
+
+package() {
+  cd "$srcdir"/$pkgname-$pkgver
+  make DESTDIR="$pkgdir" install
+  install -Dm 0644 "$srcdir"/dictd.xinetd "$pkgdir"/etc/xinetd.d/dictd
+  install -Dm 0644 "$srcdir"/dictd.conf "$pkgdir"/etc/dict/dictd.conf
+  install -Dm 0644 "$srcdir"/dict.conf "$pkgdir"/etc/dict/dict.conf
+  install -Dm 0644 "$srcdir"/site.info "$pkgdir"/etc/dict/site.info
+  install -Dm 0644 "$srcdir"/dictd.confd "$pkgdir"/etc/conf.d/dictd
+  install -Dm 0644 "$srcdir"/colorit.conf "$pkgdir"/etc/dict/colorit.conf
+  install -Dm0644 "$srcdir"/$pkgname.service "$pkgdir"/usr/lib/systemd/system/$pkgname.service
+  # examples
+  install -dm0755 "$pkgdir"/usr/share/doc/$pkgname
+  cp -a examples "$pkgdir"/usr/share/doc/$pkgname/examples
+}

@@ -1,0 +1,51 @@
+# $Id: PKGBUILD 265831 2017-11-09 09:07:43Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Simon Sapin <simon dot sapin at exyr dot org>
+# Contributor: Kyle Keen <keenerd@gmail.com>
+
+pkgbase=python-text-unidecode
+pkgname=(python-text-unidecode python2-text-unidecode)
+pkgver=1.1
+pkgrel=1
+pkgdesc="The most basic Text::Unidecode port"
+url="https://github.com/kmike/text-unidecode"
+license=('PerlArtistic')
+arch=('any')
+makedepends=('python-setuptools' 'python2-setuptools')
+checkdepends=('python-pytest-runner' 'python2-pytest-runner')
+source=("https://pypi.io/packages/source/t/text-unidecode/text-unidecode-$pkgver.tar.gz")
+sha512sums=('e799ff7164de06db17e441d3a6428c20d434069ce49344e037ea2dbb63416044691652720328f86f22c59e2303d435e9e321658b2ae4bee76916e6157e9f7fe7')
+
+prepare() {
+  cp -a text-unidecode-$pkgver{,-py2}
+}
+
+build() {
+  cd "$srcdir"/text-unidecode-$pkgver
+  python setup.py build
+
+  cd "$srcdir"/text-unidecode-$pkgver-py2
+  python2 setup.py build
+}
+
+check() {
+  cd "$srcdir"/text-unidecode-$pkgver
+  python setup.py pytest
+
+  cd "$srcdir"/text-unidecode-$pkgver-py2
+  python2 setup.py pytest
+}
+
+package_python-text-unidecode() {
+  depends=('python')
+
+  cd text-unidecode-$pkgver
+  python3 setup.py install --root="$pkgdir" --optimize=1
+}
+
+package_python2-text-unidecode() {
+  depends=('python2')
+
+  cd text-unidecode-$pkgver-py2
+  python2 setup.py install --root="$pkgdir" --optimize=1
+}

@@ -1,0 +1,34 @@
+# $Id: PKGBUILD 280744 2018-01-09 18:14:44Z svenstaro $
+# Maintainer: Sven-Hendrik Haase <sh@lutzhaase.com>
+# Contributor: DuGi <dugi@irc.pl>
+
+pkgname=springlobby
+pkgver=0.263
+pkgrel=1
+pkgdesc="A free cross-platform lobby client for the Spring RTS project"
+arch=('x86_64')
+url="http://springlobby.info/"
+license=('GPL2')
+depends=('hicolor-icon-theme' 'wxgtk3' 'curl' 'libtorrent-rasterbar' 'boost-libs'
+         'alure' 'libsm')
+optdepends=('sdl' 'sdl_sound' 'sdl_mixer')
+makedepends=('boost' 'cmake')
+source=(http://springlobby.info/tarballs/springlobby-${pkgver}.tar.bz2)
+sha512sums=('d25ce1c02342a8a6cb1c9ea1a579a5d18a80116d68c13956609b450c880e534fa0299b12dabec274051671c1fd96ac003a89e3cba32caa5d22c6832ada06b0a5')
+
+build() {
+  cd $srcdir/${pkgname}-${pkgver}
+
+  cmake . \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DwxWidgets_CONFIG_EXECUTABLE=/usr/bin/wx-config-gtk3
+  make
+}
+
+package() {
+  cd $srcdir/${pkgname}-${pkgver}
+
+  make DESTDIR=$pkgdir install
+}
+
+# vim: sw=2:ts=2 et:

@@ -1,0 +1,26 @@
+# $Id: PKGBUILD 265564 2017-11-06 14:56:02Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+
+pkgname=cldr-emoji-annotation
+pkgver=32.0.0
+_tag=${pkgver}_1
+pkgrel=1
+pkgdesc="Emoji annotation files in CLDR"
+arch=('any')
+url="https://github.com/fujiwarat/cldr-emoji-annotation"
+license=('custom')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/fujiwarat/cldr-emoji-annotation/archive/$_tag.tar.gz")
+sha512sums=('3b9db285f42d001626d93bcf8e7fb87bfce4e5a8d6b78d348020171aa6a6d6d93e0222e735e6e76ca068e2cebc05ed794e789cf2c26cdbc87e41044853aabf70')
+
+build() {
+  cd cldr-emoji-annotation-$_tag
+  ./autogen.sh --prefix=/usr
+  make
+}
+
+package() {
+  cd cldr-emoji-annotation-$_tag
+  make DESTDIR="$pkgdir" install
+
+  install -Dm644 unicode-license.txt "$pkgdir"/usr/share/licenses/$pkgname/unicode-license.txt
+}

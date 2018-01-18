@@ -1,0 +1,39 @@
+# $Id: PKGBUILD 209378 2017-01-29 13:49:29Z alucryd $
+# Maintainer: Maxime Gauduin <alucryd@archlinux.org>
+# Contributor: Jan de Groot <jgc@archlinux.org>
+# Contributor: Chaiwat Suttipongsakul <cwt114@gmail.com>
+
+pkgname=lib32-libthai
+pkgver=0.1.26
+pkgrel=1
+pkgdesc='Thai language support routines'
+url='https://linux.thai.net/projects/libthai'
+arch=('x86_64')
+license=('LGPL')
+depends=('lib32-libdatrie')
+makedepends=('gcc-multilib')
+source=("https://linux.thai.net/pub/thailinux/software/libthai/libthai-${pkgver}.tar.xz")
+sha256sums=('8710112c836b272db1740a9ea3e6c7ebb65b64eee0e143fc2b2c60f99f6bfe2a')
+
+build() {
+  cd libthai-${pkgver}
+
+  export CC='gcc -m32'
+  export CXX='g++ -m32'
+  export PKG_CONFIG_PATH='/usr/lib32/pkgconfig'
+
+  ./configure \
+    --prefix='/usr' \
+    --libdir='/usr/lib32' \
+    --disable-static
+  make
+}
+
+package() {
+  cd libthai-${pkgver}
+
+  make DESTDIR="${pkgdir}" install
+  rm -rf "${pkgdir}"/usr/{include,share}
+}
+
+# vim: ts=2 sw=2 et:

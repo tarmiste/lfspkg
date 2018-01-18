@@ -1,0 +1,75 @@
+# Maintainer: Levente Polyak <anthraxx[at]archlinux[dot]org>
+# Contributor: Simon Legner <Simon.Legner@gmail.com>
+# Contributor: Chris Molozian (novabyte) <chris DOT molozian AT gmail DOT com>
+# Contributor: Sanjuro Makabe (itti) <vuck AT gmx DOT de>
+
+pkgbase=gradle
+pkgname=('gradle' 'gradle-doc' 'gradle-src')
+pkgver=4.4.1
+pkgrel=1
+pkgdesc='Powerful build system for the JVM'
+url='https://gradle.org/'
+arch=('any')
+license=('Apache')
+depends=('java-environment' 'bash')
+source=(https://services.gradle.org/distributions/${pkgbase}-${pkgver}-all.zip
+        ${pkgbase}.sh)
+sha256sums=('dd9b24950dc4fca7d1ca5f1ccd57ca8c5b9eb407e3e6e0f48174fde4bb19ed06'
+            '7cdd70370b92b297f350d5ff69b915359bdc37b4feac839696b0ab5eaa7d7c2a')
+sha512sums=('f281be409fee7c0b554c0920dd01a09eee0449cc8894e364a0174181836cf4ab986d078ea9fa48acfd16c8900d44cafedf3daeb804f0996f67af2438f5857233'
+            'f38e9b26e22948366acf6580d6f38e2c88c3791c425b24922368fe1bc78c744fa516a03ffdbef02e3755859da620a6259997d4b4e5f97e3dc8cb49b74a694616')
+
+package_gradle() {
+  cd ${pkgbase}-${pkgver}
+
+  # install profile.d script
+  install -Dm 755 "${srcdir}/${pkgbase}.sh" "${pkgdir}/etc/profile.d/${pkgbase}.sh"
+
+  # create the necessary directory structure
+  install -d "${pkgdir}/usr/share/java/${pkgname}/bin"
+  install -d "${pkgdir}/usr/share/java/${pkgname}/lib/plugins"
+  install -d "${pkgdir}/usr/share/java/${pkgname}/init.d"
+  install -d "${pkgdir}/usr/bin"
+
+  # copy across jar files
+  install -Dm 644 lib/*.jar "${pkgdir}/usr/share/java/${pkgname}/lib"
+  install -Dm 644 lib/plugins/*.jar "${pkgdir}/usr/share/java/${pkgname}/lib/plugins"
+
+  # copy across supporting text documentation and scripts
+  install -m 644 NOTICE "${pkgdir}/usr/share/java/${pkgname}"
+  install -m 644 LICENSE "${pkgdir}/usr/share/java/${pkgname}"
+  install -m 644 *.html "${pkgdir}/usr/share/java/${pkgname}"
+  install -m 755 bin/gradle "${pkgdir}/usr/share/java/${pkgname}/bin"
+  install -m 644 init.d/*.* "${pkgdir}/usr/share/java/${pkgname}/init.d"
+
+  # link gradle script to /usr/bin
+  ln -s /usr/share/java/${pkgname}/bin/${pkgname} "${pkgdir}/usr/bin"
+}
+
+package_gradle-doc() {
+  pkgdesc='Powerful build system for the JVM (documentation and samples)'
+  options=('!strip')
+  optdepends=('gradle')
+
+  cd ${pkgbase}-${pkgver}
+
+  # create the necessary directory structure
+  install -d "${pkgdir}/usr/share/java/gradle/docs"
+  install -d "${pkgdir}/usr/share/java/gradle/samples"
+
+  # copy across documentation and samples
+  cp -r docs/* "${pkgdir}/usr/share/java/gradle/docs"
+  cp -r samples/* "${pkgdir}/usr/share/java/gradle/samples"
+}
+
+package_gradle-src() {
+  pkgdesc='Powerful build system for the JVM (sources)'
+  options=('!strip')
+  optdepends=('gradle')
+
+  cd ${pkgbase}-${pkgver}
+  install -d "${pkgdir}/usr/share/java/gradle/src"
+  cp -r src/* "${pkgdir}/usr/share/java/gradle/src"
+}
+
+# vim: ts=2 sw=2 et:

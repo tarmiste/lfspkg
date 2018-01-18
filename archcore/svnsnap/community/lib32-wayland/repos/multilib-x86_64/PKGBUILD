@@ -1,0 +1,45 @@
+# $Id: PKGBUILD 260448 2017-09-24 19:26:30Z alucryd $
+# Maintainer: Maxime Gauduin <alucryd@archlinux.org>
+# Contributor: Tom Gundersen <teg@jklm.no>
+# Contributor: Sébastien Luttringer <sеblu@аrchlіnux․org>
+# Contributor: Joel Teichroeb <joel@teichroeb.net>
+
+pkgname=lib32-wayland
+pkgver=1.14.0
+pkgrel=1
+pkgdesc='A computer display server protocol'
+arch=('x86_64')
+url='https://wayland.freedesktop.org'
+license=('MIT')
+depends=('lib32-glibc' 'lib32-libffi' 'lib32-expat' 'lib32-libxml2' 'wayland')
+source=("https://wayland.freedesktop.org/releases/wayland-${pkgver}.tar.xz"{,.sig})
+validpgpkeys=('C7223EBE4EF66513B892598911A30156E0E67611') # Bryce Harrington
+sha256sums=('ed80cabc0961a759a42092e2c39aabfc1ec9a13c86c98bbe2b812f008da27ab8'
+            'SKIP')
+
+build() {
+  cd wayland-${pkgver}
+
+  export CC='gcc -m32'
+  export CXX='g++ -m32'
+  export PKG_CONFIG_PATH='/usr/lib32/pkgconfig'
+
+  ./configure \
+    --prefix='/usr' \
+    --libdir='/usr/lib32' \
+    --disable-documentation \
+    --disable-static
+  make
+}
+
+package() {
+  cd wayland-${pkgver}
+
+  make DESTDIR="${pkgdir}" install
+  rm -rf "${pkgdir}"/usr/{bin,include,share}
+
+  install -dm 755 "${pkgdir}"/usr/share/licenses
+  ln -s wayland "${pkgdir}"/usr/share/licenses/lib32-wayland
+}
+
+# vim: ts=2 sw=2 et:

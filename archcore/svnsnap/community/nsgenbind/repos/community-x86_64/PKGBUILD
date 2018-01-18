@@ -1,0 +1,24 @@
+# $Id: PKGBUILD 264854 2017-10-31 08:32:34Z arodseth $
+# Maintainer: Alexander F Rødseth <xyproto@archlinux.org>
+# Contributor: Marian Buschsieweke <mari.hahn@uni-muenster.de>
+
+pkgname=nsgenbind
+pkgver=0.5
+pkgrel=1
+pkgdesc='NetSurf JavaScript binding generator'
+arch=('x86_64' 'i686')
+url='http://git.netsurf-browser.org/nsgenbind.git/'
+license=('GPL')
+makedepends=('git' 'netsurf-buildsystem')
+source=("git://git.netsurf-browser.org/nsgenbind.git#tag=release/$pkgver")
+md5sums=('SKIP')
+
+build() {
+  make -C "$pkgname" PREFIX=/usr
+}
+
+package() {
+  make -C "$pkgname" install PREFIX=/usr DESTDIR="$pkgdir"
+}
+
+# vim: ts=2 sw=2 et:

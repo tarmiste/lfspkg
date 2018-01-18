@@ -1,0 +1,28 @@
+# $Id: PKGBUILD 271016 2017-12-01 13:57:24Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Josip Ponjavic <josipponjavic at gmail dot com>
+# Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=deepin-notifications
+pkgver=3.1.2
+pkgrel=2
+pkgdesc="System notifications for linuxdeepin desktop environment"
+arch=('x86_64')
+url="https://github.com/linuxdeepin/deepin-notifications"
+license=('GPL3')
+depends=('deepin-qt5integration' 'qt5-svg' 'qt5-declarative')
+provides=('notification-daemon')
+groups=('deepin')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxdeepin/deepin-notifications/archive/$pkgver.tar.gz")
+sha512sums=('2d94f65413d4bc8d53618fc271c6845965a98a0f06bc5f7641ed2784a11ce67b9385abc7c7fe9178ba69c503a866a80bdb382e9099a448d0ad549f83ae32a288')
+
+build() {
+  cd deepin-notifications-$pkgver
+  qmake-qt5 PREFIX=/usr
+  make
+}
+
+package() {
+  cd deepin-notifications-$pkgver
+  make INSTALL_ROOT="$pkgdir" install
+}

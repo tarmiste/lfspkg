@@ -1,0 +1,81 @@
+# $Id: PKGBUILD 272208 2017-12-05 07:30:48Z arojas $
+# Maintainer : speps <speps at aur dot archlinux dot org>
+# Contributor: Sven-Hendrik Haase <sh@lutzhaase.com>
+# Contributor: Andrea Scarpino <andrea@archlinux.org>
+# Contributor: Pierre Schmitz <pierre@archlinux.de>
+
+pkgbase=qtcurve
+pkgname=(qtcurve-utils qtcurve-gtk2 qtcurve-qt4 qtcurve-qt5 qtcurve-kde)
+pkgver=1.9.1.git20170710
+pkgrel=2
+_commit=b4d175d57a3689cb488b57d8fef3707e4fb0f150
+pkgdesc='A configurable set of widget styles for KDE and Gtk'
+arch=(x86_64)
+url='https://github.com/KDE/qtcurve/'
+license=(LGPL)
+groups=(qtcurve)
+makedepends=(extra-cmake-modules gtk2 qt4 kdelibs4support kdoctools frameworkintegration python kdesignerplugin git)
+#source=("$pkgbase-$pkgver.tar.gz::https://github.com/KDE/qtcurve/archive/$pkgver.tar.gz")
+source=("git://git.kde.org/qtcurve.git#commit=$_commit")
+sha256sums=('SKIP')
+
+prepare() {
+  mkdir -p build{,-kde}
+}
+
+build() {
+  cd build
+  cmake ../$pkgbase \
+           -DCMAKE_BUILD_TYPE=Release \
+           -DCMAKE_INSTALL_PREFIX=/usr \
+           -DQTC_QT4_ENABLE_KDE=false \
+           -DQTC_QT5_ENABLE_KDE=false
+  make
+
+  cd ../build-kde
+  cmake ../$pkgbase \
+           -DCMAKE_BUILD_TYPE=Release \
+           -DCMAKE_INSTALL_PREFIX=/usr \
+           -DENABLE_QT4=false \
+           -DENABLE_GTK2=false
+  make
+}
+
+package_qtcurve-utils() {
+  pkgdesc='A configurable set of widget styles for KDE and Gtk (shared libraries)'
+  depends=(libx11 gcc-libs)
+  cd build/lib/utils
+  make DESTDIR="$pkgdir" install
+}
+
+package_qtcurve-gtk2() {
+  pkgdesk='A configurable set of widget styles for Gtk2'
+  depends=(qtcurve-utils gtk2)
+  cd build/gtk2
+  make DESTDIR="$pkgdir" install
+  cd ../lib/cairo
+  make DESTDIR="$pkgdir" install
+}
+
+package_qtcurve-qt4() {
+  pkgdesc='A configurable set of widget styles for Qt4'
+  depends=(qtcurve-utils qt4)
+  cd build/qt4
+  make DESTDIR="$pkgdir" install
+}
+
+package_qtcurve-qt5() {
+  pkgdesc='A configurable set of widget styles for Qt5'
+  depends=(qtcurve-utils qt5-svg qt5-x11extras)
+  groups=()
+  cd build/qt5
+  make DESTDIR="$pkgdir" install
+}
+
+package_qtcurve-kde() {
+  pkgdesc='A configurable set of widget styles for Qt5 (with KDE integration)'
+  depends=(qtcurve-utils kdelibs4support frameworkintegration)
+  conflicts=(qtcurve-qt5)
+  cd build-kde/qt5
+  make DESTDIR="$pkgdir" install
+}

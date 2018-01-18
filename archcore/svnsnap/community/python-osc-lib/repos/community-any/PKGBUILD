@@ -1,0 +1,64 @@
+# $Id: PKGBUILD 274339 2017-12-14 06:43:05Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Daniel Wallace <danielwallace at gtmanfred dot com>
+
+pkgbase=python-osc-lib
+pkgname=(python-osc-lib python2-osc-lib)
+pkgver=1.8.0
+pkgrel=2
+pkgdesc="OpenStackClient Library"
+arch=('any')
+url="http://docs.openstack.org/developer/osc-lib"
+license=('Apache')
+makedepends=('git' 'python-setuptools' 'python2-setuptools' 'python-pbr' 'python2-pbr'
+             'python-babel' 'python2-babel' 'python-cliff' 'python2-cliff'
+             'python-keystoneauth1' 'python2-keystoneauth1' 'python-os-client-config'
+             'python2-os-client-config' 'python-oslo-i18n' 'python2-oslo-i18n' 'python-oslo-utils'
+             'python2-oslo-utils' 'python-simplejson' 'python2-simplejson' 'python-stevedore'
+             'python2-stevedore' 'python-openstacksdk' 'python2-openstacksdk')
+checkdepends=('python-oslotest' 'python2-oslotest' 'python-requests-mock'
+              'python2-requests-mock')
+source=("$pkgbase-$pkgver.tar.gz::https://github.com/openstack/osc-lib/archive/$pkgver.tar.gz")
+sha512sums=('3562d5b04c3e801ab0993bb6bdcb2cf6c5f9fd1cc1409843f6ce8ca7a3379a77b62f4b8740561aac2f127cc76ef834a84dca5c16da1a2c9fd01584a7af2c40dc')
+
+prepare() {
+  cp -a osc-lib-$pkgver{,-py2}
+
+  export PBR_VERSION=$pkgver
+}
+
+build() {
+  cd "$srcdir"/osc-lib-$pkgver
+  python setup.py build
+
+  cd "$srcdir"/osc-lib-$pkgver-py2
+  python2 setup.py build
+}
+
+check() {
+  cd "$srcdir"/osc-lib-$pkgver
+  python setup.py testr || warning "Tests failed"
+
+  cd "$srcdir"/osc-lib-$pkgver-py2
+  PYTHON=python2 python2 setup.py testr || warning "Tests failed"
+}
+
+package_python-osc-lib() {
+  depends=('python-six' 'python-pbr' 'python-babel' 'python-cliff' 'python-keystoneauth1'
+           'python-os-client-config' 'python-oslo-i18n' 'python-oslo-utils' 'python-stevedore'
+           'python-simplejson' 'python-openstacksdk')
+
+  cd osc-lib-$pkgver
+  python setup.py install --root="$pkgdir" --optimize=1
+}
+
+package_python2-osc-lib() {
+  depends=('python2-six' 'python2-pbr' 'python2-babel' 'python2-cliff' 'python2-keystoneauth1'
+           'python2-os-client-config' 'python2-oslo-i18n' 'python2-oslo-utils' 'python2-stevedore'
+           'python2-simplejson' 'python2-openstacksdk')
+
+  cd osc-lib-$pkgver-py2
+  python2 setup.py install --root="$pkgdir" --optimize=1
+}
+
+# vim:set ts=2 sw=2 et:

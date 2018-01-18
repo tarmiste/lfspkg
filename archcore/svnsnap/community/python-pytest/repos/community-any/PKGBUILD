@@ -1,0 +1,63 @@
+# $Id: PKGBUILD 280207 2018-01-07 17:42:25Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Felix Kaiser <felix.kaiser@fxkr.net>
+
+pkgbase=python-pytest
+pkgname=('python-pytest' 'python2-pytest')
+pkgver=3.3.2
+pkgrel=1
+pkgdesc="Simple powerful testing with Python"
+arch=('any')
+license=('MIT')
+url="http://pytest.org/"
+makedepends=('python-setuptools' 'python2-setuptools' 'python-py' 'python2-py' 'python-pluggy'
+             'python2-pluggy' 'python-attrs' 'python2-attrs' 'python2-funcsigs')
+checkdepends=('lsof' 'python-nose' 'python2-nose' 'python-mock' 'python2-mock' 'python-tox'
+              'python2-tox' 'python-yaml' 'python2-yaml' 'python-pytest-xdist'
+              'python2-pytest-xdist' 'python-twisted' 'python2-twisted' 'python-requests'
+              'python2-requests' 'python-hypothesis' 'python2-hypothesis')
+source=("$pkgbase-$pkgver.tar.gz::https://github.com/pytest-dev/pytest/archive/$pkgver.tar.gz")
+sha512sums=('6e15a213ead242afabc10d99907362a32ca381824168dc09daffadff32130e110ec7f2251d9534d77f9dcfa53ab9e2e76565afcfaeef6d832e7b42c720d192da')
+
+prepare() {
+  cp -a pytest-$pkgver{,-py2}
+
+  export SETUPTOOLS_SCM_PRETEND_VERSION=$pkgver
+}
+
+build() {
+  cd "$srcdir"/pytest-$pkgver
+  python setup.py build
+
+  cd "$srcdir"/pytest-$pkgver-py2
+  python2 setup.py build
+}
+
+check() {
+  # Expected failure due to xdist, also present on official travis
+
+  cd "$srcdir"/pytest-$pkgver
+  python setup.py test || warning "Tests failed"
+
+  cd "$srcdir"/pytest-$pkgver-py2
+  python2 setup.py test || warning "Tests failed"
+}
+
+package_python-pytest() {
+  depends=('python-py' 'python-setuptools' 'python-pluggy' 'python-attrs')
+
+  cd pytest-$pkgver
+  python setup.py install --root="$pkgdir" --optimize=1
+  install -D -m644 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+}
+
+package_python2-pytest() {
+  depends=('python2-py' 'python2-setuptools' 'python2-pluggy' 'python2-attrs' 'python2-funcsigs')
+
+  cd pytest-$pkgver-py2
+  python2 setup.py install --root="$pkgdir" --optimize=1
+  install -D -m644 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+
+  mv "$pkgdir"/usr/bin/py.test{,2}
+  mv "$pkgdir"/usr/bin/pytest{,2}
+}

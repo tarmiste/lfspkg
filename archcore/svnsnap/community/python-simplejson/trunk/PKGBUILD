@@ -1,0 +1,59 @@
+# $Id: PKGBUILD 268386 2017-11-25 03:55:15Z felixonmars $
+# Maintainer: Alexander Rødseth <rodseth@gmail.com>
+# Contributor: Jaroslav Lichtblau <dragonlord@aur.archlinux.org>
+# Contributor: Allan McRae <allan@archlinux.org>
+# Contributor: David Moore <davidm@sjsoft.com>
+
+pkgbase=python-simplejson
+pkgname=('python-simplejson' 'python2-simplejson')
+pkgver=3.13.2
+pkgrel=1
+pkgdesc='Simple, fast, extensible JSON encoder/decoder for Python'
+license=('MIT')
+arch=('x86_64')
+url='https://github.com/simplejson/simplejson'
+makedepends=('python-setuptools' 'python2-setuptools')
+checkdepends=('python-pytest-runner' 'python2-pytest-runner')
+source=("$pkgbase-$pkgver.tar.gz::https://github.com/simplejson/simplejson/archive/v$pkgver.tar.gz")
+sha512sums=('b1d6c68e1a6c967dfb695d0cd3d8dca19d458b650ddc0c8273328378eab7f52b801ee29431a6b3bde16608e886259267f41cbefabb7fbe7adb1e243479f91132')
+
+prepare() {
+  cp -a simplejson-$pkgver{,-py2}
+}
+
+build() {
+  cd "$srcdir"/simplejson-$pkgver
+  python setup.py build
+
+  cd "$srcdir"/simplejson-$pkgver-py2
+  python2 setup.py build
+}
+
+check() {
+  cd "$srcdir"/simplejson-$pkgver
+  python setup.py pytest
+
+  cd "$srcdir"/simplejson-$pkgver-py2
+  python2 setup.py pytest 
+}
+
+package_python-simplejson() {
+  depends=('python')
+
+  cd simplejson-$pkgver
+  python setup.py install --root="$pkgdir"
+  install -Dm644 "$srcdir"/simplejson-$pkgver/LICENSE.txt \
+    "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+}
+
+package_python2-simplejson() {
+  depends=('python2')
+
+  cd simplejson-$pkgver-py2
+  python2 setup.py install --root="$pkgdir"
+  install -Dm644 "$srcdir"/simplejson-$pkgver/LICENSE.txt \
+    "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+}
+
+# vim:set ts=2 sw=2 et:
+  

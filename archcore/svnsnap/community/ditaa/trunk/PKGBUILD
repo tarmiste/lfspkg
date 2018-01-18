@@ -1,0 +1,42 @@
+# $Id: PKGBUILD 197721 2016-12-02 11:12:31Z arodseth $
+# Maintainer: Alexander Rødseth <rodseth@gmail.com>
+# Contributor: Florian Pritz <bluewind@xinu.at>
+# Contributor: domanov <domanov@gmail.com>
+
+pkgname=ditaa
+pkgver=0.10
+pkgrel=1
+pkgdesc='Java utility to convert diagrams drawn using ascii art to bitmap'
+arch=('any')
+url='https://github.com/stathissideris/ditaa'
+license=('GPL')
+depends=('java-environment' 'gsfonts')
+makedepends=('git' 'apache-ant')
+source=("git://github.com/stathissideris/ditaa#tag=v$pkgver"
+        "$pkgname.sh")
+sha256sums=('SKIP'
+            '77f95a7c3235a1263b560844f988445083895550385bff1a4c28313b0767e38f')
+
+prepare() {
+  cd "$pkgname"
+
+  sed -i 's/0_9/0_10/g' build/release.xml
+  sed -i 's/version 0.9/version 0.10/g' \
+    src/org/stathissideris/ascii2image/core/CommandLineConverter.java
+  sed -i "s:VERSION:${pkgver/./_}:" "$srcdir/$pkgname.sh"
+  mkdir -p bin
+}
+
+build() {
+  cd "$pkgname"
+
+  ant -buildfile build/release.xml release-jar
+}
+
+package() {
+  install -Dm755 "$pkgname/releases/$pkgname${pkgver/./_}.jar" \
+    "$pkgdir/usr/share/java/$pkgname/ditaa-${pkgver/./_}.jar"
+  install -Dm755 "$pkgname.sh" "$pkgdir/usr/bin/$pkgname"
+}
+
+# vim:set ts=2 sw=2 et:

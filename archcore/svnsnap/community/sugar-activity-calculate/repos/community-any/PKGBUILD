@@ -1,0 +1,27 @@
+# $Id: PKGBUILD 237909 2017-06-17 14:42:02Z bgyorgy $
+# Maintainer: Balló György <ballogyor+arch at gmail dot com>
+
+pkgname=sugar-activity-calculate
+_pkgname=Calculate
+pkgver=44
+pkgrel=1
+pkgdesc="Graphing calculator for Sugar"
+arch=('any')
+url="https://wiki.sugarlabs.org/go/Activities/Calculate"
+license=('GPL')
+groups=('sugar-fructose')
+depends=('sugar-toolkit-gtk3')
+optdepends=('python2-matplotlib: alternative plotting backend')
+source=(https://download.sugarlabs.org/sources/sucrose/fructose/$_pkgname/$_pkgname-$pkgver.tar.bz2)
+sha256sums=('917c5be892f50e95209c952330bd22c3e4768bfdfe09b5fa78e9e1fa3c9385ab')
+
+prepare() {
+  cd $_pkgname-$pkgver
+  sed -i 's@^#!.*python$@#!/usr/bin/python2@' setup.py
+}
+
+package() {
+  cd $_pkgname-$pkgver
+  python2 setup.py install --prefix "$pkgdir/usr"
+  rm -r "$pkgdir"/usr/share/applications
+}

@@ -1,0 +1,53 @@
+# Maintainer: Pierre Neidhardt <ambrevar@gmail.com>
+# Contributor: Florian Bruhin (The Compiler) <archlinux.org@the-compiler.org>
+
+pkgname=qutebrowser
+pkgver=1.1.0
+pkgrel=1
+pkgdesc="A keyboard-driven, vim-like browser based on PyQt5"
+arch=("any")
+url="http://www.qutebrowser.org/"
+license=("GPL")
+depends=("python-attrs" "python-jinja" "python-pygments" "python-pypeg2"
+	"python-pyqt5>=5.7" "python-yaml" "qt5-base>=5.7.1" "qt5-webengine")
+makedepends=("asciidoc")
+optdepends=("gst-libav: media playback"
+	"gst-plugins-base: media playback"
+	"gst-plugins-good: media playback"
+	"gst-plugins-bad: media playback"
+	"gst-plugins-ugly: media playback"
+	"pdfjs: displaying PDF in-browser"
+	"qt5-webkit: alternative backend")
+options=(!emptydirs)
+source=(
+	"https://github.com/qutebrowser/qutebrowser/releases/download/v$pkgver/qutebrowser-$pkgver.tar.gz"
+	"https://github.com/qutebrowser/qutebrowser/releases/download/v$pkgver/qutebrowser-$pkgver.tar.gz.asc")
+validpgpkeys=("E04E560002401B8EF0E76F0A916EB0C8FD55A072")
+sha256sums=('24e59f9901e635beac82563c10067f1b6bb78bd936e3954f2862873c55f902f0'
+            'SKIP')
+
+build() {
+	cd "$srcdir/$pkgname-$pkgver"
+	a2x -f manpage doc/qutebrowser.1.asciidoc
+	python setup.py build
+}
+
+package() {
+	cd "$srcdir/$pkgname-$pkgver"
+	python setup.py install --root="$pkgdir/" --optimize=1
+	install -Dm644 doc/qutebrowser.1 "$pkgdir/usr/share/man/man1/qutebrowser.1"
+	install -Dm644 misc/qutebrowser.desktop \
+		"$pkgdir/usr/share/applications/qutebrowser.desktop"
+	for i in 16 24 32 48 64 128 256 512; do
+		install -Dm644 "icons/qutebrowser-${i}x$i.png" \
+			"$pkgdir/usr/share/icons/hicolor/${i}x$i/apps/qutebrowser.png"
+	done
+	install -Dm644 icons/qutebrowser.svg \
+		"$pkgdir/usr/share/icons/hicolor/scalable/apps/qutebrowser.svg"
+	install -Dm755 -t "$pkgdir/usr/share/qutebrowser/userscripts/" misc/userscripts/*
+
+	# TODO: When next release of Qutebrowser comes with a Makefile, use it instead
+	# of installing scripts manually.
+	install -Dm755 -t "$pkgdir/usr/share/qutebrowser/scripts/" \
+		scripts/{importer.py,dictcli.py,keytester.py,open_url_in_instance.sh,utils.py}
+}

@@ -1,0 +1,52 @@
+# Maintainer: Levente Polyak <anthraxx[at]archlinux[dot]org>
+# Contributor: Evan Teitelman <teitelmanevan at gmail dot com>
+# Contributor: fxbru <frxbru[at]gmail>
+
+pkgname=sqlmap
+pkgver=1.2
+pkgrel=1
+pkgdesc='Automatic SQL injection and database takeover tool'
+url='http://sqlmap.org'
+arch=('any')
+license=('GPL2')
+depends=('python2' 'sh')
+backup=('etc/sqlmap.conf')
+source=(${pkgname}-${pkgver}.tar.gz::https://github.com/sqlmapproject/sqlmap/archive/${pkgver}.tar.gz)
+sha256sums=('39e0ef58365a5a0413d88dfcc0d1c210b465661cb97c8e5b42c1feba791d2453')
+sha512sums=('c6e6b56359cabb129361a5cd34fae7e87ca817a8cc7339ef8f3ed1821605f996bb9b5570f14a5040640d580baf7c21296dace59f45dc4b29affd7361d0e13d82')
+
+build() {
+  cd ${pkgname}-${pkgver}
+  python2 -m compileall .
+  python2 -O -m compileall .
+}
+
+package() {
+  cd ${pkgname}-${pkgver}
+
+  install -d "${pkgdir}/etc"
+  install -d "${pkgdir}/usr/bin"
+  install -d "${pkgdir}/opt/${pkgname}"
+  install -d "${pkgdir}/usr/share/doc"
+
+  mv doc "${pkgdir}/usr/share/doc/${pkgname}"
+  mv sqlmap.conf "${pkgdir}/etc/sqlmap.conf"
+  ln -sf /etc/sqlmap.conf "${pkgdir}/opt/${pkgname}/sqlmap.conf"
+  cp -a --no-preserve=ownership * "${pkgdir}/opt/${pkgname}"
+
+  cat > "${pkgdir}/usr/bin/sqlmap" << EOF
+#!/bin/sh
+cd /opt/${pkgname}
+python2 sqlmap.py "\$@"
+EOF
+  cat > "${pkgdir}/usr/bin/sqlmapapi" << EOF
+#!/bin/sh
+cd /opt/${pkgname}
+python2 sqlmapapi.py "\$@"
+EOF
+
+  chmod 755 "${pkgdir}/usr/bin/sqlmap"
+  chmod 755 "${pkgdir}/usr/bin/sqlmapapi"
+}
+
+# vim: ts=2 sw=2 et:

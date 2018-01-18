@@ -1,0 +1,25 @@
+# $Id: PKGBUILD 275067 2017-12-20 19:37:11Z foxboron $
+# Maintainer: Morten Linderud <foxboron@archlinux.org>
+# Contributor: Sergej Pupykin <pupykin.s+arch@gmail.com>
+# Contributor : Rohan Dhruva (rohandhruva at gmail dot com)
+
+pkgname=python-docs
+pkgver=3.6.4
+pkgrel=1
+pkgdesc="Set of HTML documentation for python"
+arch=('any')
+url="http://docs.python.org/py3k/"
+license=('GPL')
+options=('docs')
+source=(https://docs.python.org/3/archives/python-$pkgver-docs-html.tar.bz2)
+sha256sums=('c0ad3e364ff0ff0cb1a904e96f3d8e59b71effbb1e5d1b3ddc0561365f87b417')
+
+package() {
+  mkdir -p "$pkgdir"/usr/share/doc/python/html
+  cp -rf "$srcdir"/python-$pkgver-docs-html/* "$pkgdir"/usr/share/doc/python/html/
+  find "$pkgdir"/usr/share/doc/python/html/ -type f -exec chmod 0644 {} \;
+  find "$pkgdir"/usr/share/doc/python/html/ -type d -exec chmod 0755 {} \;
+  install -dm0755 "$pkgdir"/etc/profile.d
+  echo "export PYTHONDOCS=/usr/share/doc/python/html/library" >"$pkgdir"/etc/profile.d/$pkgname.sh
+  echo "setenv PYTHONDOCS /usr/share/doc/python/html/library" >"$pkgdir"/etc/profile.d/$pkgname.csh
+}

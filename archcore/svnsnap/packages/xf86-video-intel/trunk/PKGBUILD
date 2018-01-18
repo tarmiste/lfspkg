@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 313290 2017-12-18 10:34:40Z andyrtr $
+# $Id: PKGBUILD 315007 2018-01-17 13:23:31Z andyrtr $
 # Maintainer: AndyRTR <andyrtr@archlinux.org>
 # Maintainer: Jan de Groot <jgc@archlinux.org>
 
 pkgname=xf86-video-intel
-_commit=af6d8e9e8f546e5cba60e3a62765c2dbd0328e83 # master
-pkgver=2.99.917+802+gaf6d8e9e
+_commit=26f5406841f3924f23f29df61b5ea53d2816b665 # master
+pkgver=2.99.917+805+g26f54068
 pkgrel=1
 epoch=1
 arch=(x86_64)

@@ -1,0 +1,51 @@
+# $Id: PKGBUILD 265152 2017-11-02 15:12:02Z alucryd $
+# Maintainer: Maxime Gauduin <alucryd@archlinux.org>
+# Contributor: Jameson Pugh <imntreal@gmail.com>
+# Contributor: J0k3r <moebius282@gmail.com>
+
+pkgname=lib32-sdl2
+pkgver=2.0.7
+pkgrel=1
+pkgdesc='Simple DirectMedia Layer'
+arch=('x86_64')
+url='https://www.libsdl.org'
+license=('MIT')
+depends=('lib32-libgl' 'lib32-libx11' 'lib32-libxext' 'lib32-libxrender'
+         'sdl2')
+makedepends=('gcc-multilib' 'lib32-alsa-lib' 'lib32-mesa' 'lib32-libpulse'
+             'lib32-libxinerama' 'lib32-libxkbcommon' 'lib32-libxrandr'
+             'lib32-wayland' 'wayland-protocols')
+optdepends=('lib32-alsa-lib: ALSA audio driver'
+            'lib32-libpulse: PulseAudio audio driver')
+source=("https://www.libsdl.org/release/SDL2-${pkgver}.tar.gz"{,.sig})
+validpgpkeys=('1528635D8053A57F77D1E08630A59377A7763BE6') # Sam Lantinga
+sha256sums=('ee35c74c4313e2eda104b14b1b86f7db84a04eeab9430d56e001cea268bf4d5e'
+            'SKIP')
+
+build() {
+  cd SDL2-${pkgver}
+
+  export CC='gcc -m32'
+  export CXX='g++ -m32'
+  export PKG_CONFIG_PATH='/usr/lib32/pkgconfig'
+
+  ./configure \
+    --prefix='/usr' \
+    --libdir='/usr/lib32' \
+    --enable-{alsa,pulseaudio-shared,sdl-dlopen,video-wayland} \
+    --disable-{arts,esd,nas} \
+    --disable-rpath
+  make
+}
+
+package() {
+  cd SDL2-${pkgver}
+
+  make DESTDIR="${pkgdir}" install
+  rm -rf "${pkgdir}"/usr/{bin,include,share}
+
+  install -dm 755 "${pkgdir}"/usr/share/licenses
+  ln -s sdl2 "${pkgdir}"/usr/share/licenses/lib32-sdl2
+}
+
+# vim: ts=2 sw=2 et:

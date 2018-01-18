@@ -1,0 +1,36 @@
+# $Id: PKGBUILD 281206 2018-01-10 23:27:12Z svenstaro $
+# Maintainer: Sergej Pupykin <arch+pub@sergej.pp.ru>
+# Maintainer: Ido Rosen <ido@kernel.org>
+# Contributor: Ross Whitfield <whitfieldre@ornl.gov>
+# Contributor: Mateusz Paluszkiewcz <aifam96 at gmail dot com>
+# Contributor: Christopher Reimer <vdr4arch at creimer dot net>
+
+pkgname=poco
+pkgver=1.8.1
+_pkgver=${pkgver/_/}
+pkgrel=1
+pkgdesc="C++ class libraries for network-centric, portable applications, complete edition with debug libraries"
+arch=('x86_64')
+url="http://www.pocoproject.org/"
+license=('custom:boost')
+depends=('libmariadbclient' 'openssl' 'unixodbc')
+makedepends=('cmake')
+source=("https://pocoproject.org/releases/poco-${_pkgver%p?}/poco-${_pkgver}-all.tar.bz2")
+sha256sums=('3c2eb8ca1c9ff0f5dca2c2be00d6fcc7306caa745f85dc955402c70f4dddd73b')
+
+build() {
+  cd "${srcdir}/poco-${_pkgver}-all"
+  mkdir -p build
+  cd build
+  cmake \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_BUILD_TYPE=Release \
+    ..
+  make
+}
+
+package() {
+  cd "${srcdir}/poco-${_pkgver}-all"/build
+  make DESTDIR="${pkgdir}" install
+  install -Dm644 '../LICENSE' "${pkgdir}/usr/share/licenses/poco/LICENSE"
+}

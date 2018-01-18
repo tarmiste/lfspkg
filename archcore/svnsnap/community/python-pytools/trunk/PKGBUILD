@@ -1,0 +1,52 @@
+# $Id: PKGBUILD 260596 2017-09-26 04:07:22Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Stéphane Gaudreault <stephane@archlinux.org>
+
+pkgbase=python-pytools
+pkgname=('python2-pytools' 'python-pytools')
+pkgver=2017.6
+pkgrel=1
+pkgdesc="A collection of tools for Python"
+arch=('any')
+url="http://mathema.tician.de/software/pytools"
+license=('MIT')
+makedepends=('python-setuptools' 'python2-setuptools' 'python-decorator' 'python2-decorator'
+             'python-six' 'python2-six' 'python-appdirs' 'python2-appdirs' 'python-numpy'
+             'python2-numpy')
+checkdepends=('python-pytest-runner' 'python2-pytest-runner')
+source=("https://pypi.io/packages/source/p/pytools/pytools-$pkgver.tar.gz")
+sha512sums=('2865af51fb3cdfeff6feb53049e34a4d2dd3779c82b95e69c1590cec5471ce2afad0066e041bf30cadeda72732a76a55c1b7af7246a59b77ee474a775ee1ef52')
+
+prepare() {
+  cp -a pytools-$pkgver{,-python2}
+}
+
+build() {
+  cd "$srcdir"/pytools-$pkgver
+  python setup.py build
+
+  cd "$srcdir"/pytools-$pkgver-python2
+  python2 setup.py build
+}
+
+check() {
+  cd "$srcdir"/pytools-$pkgver
+  python setup.py pytest
+
+  cd "$srcdir"/pytools-$pkgver-python2
+  python2 setup.py pytest
+}
+
+package_python-pytools(){
+  depends=('python-six' 'python-decorator' 'python-appdirs' 'python-numpy')
+
+  cd pytools-$pkgver
+  python setup.py install --prefix=/usr --root="$pkgdir" --skip-build --optimize=1
+}
+
+package_python2-pytools() {
+  depends=('python2-six' 'python2-decorator' 'python2-appdirs' 'python2-numpy')
+
+  cd pytools-$pkgver-python2
+  python2 setup.py install --prefix=/usr --root="$pkgdir" --skip-build --optimize=1
+}

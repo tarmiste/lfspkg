@@ -1,0 +1,40 @@
+# $Id: PKGBUILD 241154 2017-06-27 11:36:03Z heftig $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: farwayer <farwayer [at] gmail [dot] com>
+
+pkgname=lib32-opus
+pkgver=1.2.1
+pkgrel=1
+pkgdesc="Totally open, royalty-free, highly versatile audio codec (32-bit)"
+arch=(x86_64)
+url="https://www.opus-codec.org/"
+license=(BSD)
+depends=(lib32-glibc opus)
+makedepends=(gcc-multilib)
+source=(https://archive.mozilla.org/pub/opus/opus-$pkgver.tar.gz)
+sha256sums=('cfafd339ccd9c5ef8d6ab15d7e1a412c054bf4cb4ecbbbcc78c12ef2def70732')
+
+build() {
+  export CC='gcc -m32'
+  export CXX='g++ -m32'
+  export PKG_CONFIG_PATH='/usr/lib32/pkgconfig'
+  
+  cd opus-$pkgver
+  ./configure --prefix=/usr --disable-static --libdir=/usr/lib32 \
+    --enable-custom-modes \
+    --enable-ambisonics
+  make
+}
+
+check() {
+  cd opus-$pkgver
+  make check
+}
+
+package() {
+  cd opus-$pkgver
+  make DESTDIR="$pkgdir" install
+  rm -r "$pkgdir"/usr/{include,share}
+  install -d "$pkgdir/usr/share/licenses"
+  ln -s opus "$pkgdir/usr/share/licenses/$pkgname"
+}

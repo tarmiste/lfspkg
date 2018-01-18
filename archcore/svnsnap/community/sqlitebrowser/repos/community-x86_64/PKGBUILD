@@ -1,0 +1,28 @@
+# $Id: PKGBUILD 274695 2017-12-17 21:55:25Z arojas $
+# Maintainer: Sergej Pupykin <pupykin.s+arch@gmail.com>
+# Maintainer: Douglas Soares de Andrade <dsandrade@gmail.com>
+# Contributor: Michael Fellinger <m.fellinger@gmail.com>
+
+pkgname=sqlitebrowser
+pkgver=3.10.1
+pkgrel=1
+pkgdesc="SQLite Database browser is a light GUI editor for SQLite databases, built on top of Qt"
+arch=('x86_64')
+url="http://sqlitebrowser.org/"
+license=('GPL')
+depends=('qt5-base' 'hicolor-icon-theme')
+makedepends=('cmake' 'qt5-tools')
+#source=(https://github.com/sqlitebrowser/sqlitebrowser/archive/sqlb-$pkgver.tar.gz)
+source=("$pkgname-$pkgver.tar.gz::https://github.com/sqlitebrowser/sqlitebrowser/archive/v$pkgver.tar.gz")
+sha256sums=('36eb53bc75192c687dce298c79f1532c410ce4ecbeeacfb07b9d02a307f16bef')
+
+build() {
+  cd $pkgname-$pkgver
+  cmake -DCMAKE_INSTALL_PREFIX=/usr .
+  make
+}
+
+package() {
+  cd $pkgname-$pkgver
+  make install DESTDIR="$pkgdir"
+}

@@ -1,0 +1,28 @@
+# $Id: PKGBUILD 275269 2017-12-22 02:53:38Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+
+pkgname=npm-check-updates
+pkgdesc='Find newer versions of dependencies than what your package.json or bower.json allows'
+pkgver=2.14.0
+pkgrel=1
+arch=('any')
+url='https://github.com/tjunnone/npm-check-updates'
+license=('Apache')
+depends=('semver' 'npm')
+source=(http://registry.npmjs.org/$pkgname/-/$pkgname-$pkgver.tgz)
+noextract=($pkgname-$pkgver.tgz)
+sha512sums=('5a65caf9b6452b182f7e77d50df32c1d4788c7f7321961012e5dafa58526a18eddfa87aa14b8d44ea63a6b638ca8ebb4742bd722bcae8a55cee3f6b5c341317d')
+
+package() {
+  npm install -g --user root --prefix "$pkgdir"/usr "$srcdir"/$pkgname-$pkgver.tgz
+  rm -r "$pkgdir"/usr/etc
+
+  # Experimental dedup
+  cd "$pkgdir"/usr/lib/node_modules/$pkgname/node_modules
+  for dep in npm semver; do
+    rm -r $dep;
+  done
+
+  # Fix npm derp
+  find "$pkgdir/usr" -type d -exec chmod 755 '{}' +
+}

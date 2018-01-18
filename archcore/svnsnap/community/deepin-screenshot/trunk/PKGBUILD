@@ -1,0 +1,28 @@
+# $Id: PKGBUILD 270999 2017-12-01 13:51:39Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Josip Ponjavic <josipponjavic at gmail dot com>
+# Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=deepin-screenshot
+pkgver=4.0.10.4
+pkgrel=2
+pkgdesc="Easy-to-use screenshot tool for linuxdeepin desktop environment"
+arch=('x86_64')
+url="https://github.com/linuxdeepin/deepin-screenshot"
+license=('GPL3')
+depends=('deepin-qt5integration' 'dtkwm')
+makedepends=('qt5-tools')
+groups=('deepin-extra')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxdeepin/deepin-screenshot/archive/$pkgver.tar.gz")
+sha512sums=('e03e2841a966f481a0e423170ad7ed8384c08f71ea2e1fb81fcd5d296927d382fbdf4b72f74210590cc61e669320341aad470593b8c695b157089940f5021d6e')
+
+build() {
+  cd deepin-screenshot-$pkgver
+  qmake-qt5 PREFIX=/usr
+  make
+}
+
+package() {
+  cd deepin-screenshot-$pkgver
+  make INSTALL_ROOT="$pkgdir" install
+}

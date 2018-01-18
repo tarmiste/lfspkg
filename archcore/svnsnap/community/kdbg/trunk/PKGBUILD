@@ -1,0 +1,35 @@
+# $Id: PKGBUILD 274022 2017-12-12 22:28:40Z arojas $
+# Maintainer: Antonio Rojas <arojas@archlinux.org>
+# Contributor: Sergej Pupykin <pupykin.s+arch@gmail.com>
+# Contributor: Eric Belanger <belanger@astro.umontreal.ca>
+# Contributor: Jason Taylor <jftaylor21@gmail.com>
+# Contributor: Georg Grabler <ggrabler@chello.at>
+
+pkgname=kdbg
+pkgver=3.0.0
+pkgrel=1
+pkgdesc="A graphical debugger interface"
+arch=(x86_64)
+url="http://www.kdbg.org"
+license=(GPL)
+depends=(gdb kxmlgui hicolor-icon-theme)
+makedepends=(extra-cmake-modules)
+source=("https://downloads.sourceforge.net/project/kdbg/Source%20Code/$pkgver/kdbg-$pkgver.tar.gz")
+sha256sums=('36964c74c2599c4baafbb8b4640ac113fceaaeaa2f200681cbacc9280d55ae53')
+
+prepare() {
+  mkdir -p build
+}
+
+build() {
+  cd build
+  cmake ../$pkgname-$pkgver \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_BUILD_TYPE=Release
+  make
+}
+
+package() {
+  cd build
+  make DESTDIR="$pkgdir" install
+}

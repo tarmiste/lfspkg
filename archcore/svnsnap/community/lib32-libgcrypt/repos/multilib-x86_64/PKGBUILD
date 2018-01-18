@@ -1,0 +1,40 @@
+# $Id: PKGBUILD 258738 2017-09-18 10:07:08Z anthraxx $
+# Maintainer: Andreas Radke <andyrtr@archlinux.org>
+
+_pkgbasename=libgcrypt
+pkgname=lib32-$_pkgbasename
+pkgver=1.8.1
+pkgrel=1
+pkgdesc="General purpose cryptographic library based on the code from GnuPG (32-bit)"
+arch=(x86_64)
+url="https://www.gnupg.org"
+license=('LGPL')
+depends=('lib32-libgpg-error' $_pkgbasename)
+makedepends=(gcc-multilib libtool-multilib)
+source=(ftp://ftp.gnupg.org/gcrypt/${_pkgbasename}/${_pkgbasename}-${pkgver}.tar.bz2{,.sig})
+sha1sums=('dd35f00da45602afe81e01f4d60c40bbdd826fe6'
+          'SKIP')
+validpgpkeys=('031EC2536E580D8EA286A9F22071B08A33BD3F06'  # "NIIBE Yutaka (GnuPG Release Key) <gniibe@fsij.org>"
+              'D8692123C4065DEA5E0F3AB5249B39D24F25E3B6') # Werner Koch
+
+build() {
+  export CC="gcc -m32"
+  export CXX="g++ -m32"
+  export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
+
+  cd ${_pkgbasename}-${pkgver}
+
+  # Use 32-bit assembler
+  sed 's:path="amd64":path="i586 i386":' -i mpi/config.links
+
+  ./configure --prefix=/usr --disable-static --disable-padlock-support \
+              --libdir=/usr/lib32 --enable-shared
+  make
+}
+
+package() {
+  cd ${_pkgbasename}-${pkgver}
+
+  make DESTDIR=${pkgdir} install
+  rm -rf "${pkgdir}"/usr/{include,share,bin,sbin}
+}

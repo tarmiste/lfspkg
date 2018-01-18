@@ -1,0 +1,23 @@
+# $Id: PKGBUILD 275885 2017-12-25 00:40:27Z svenstaro $
+# Maintainer: Sven-Hendrik Haase <sh@lutzhaase.com>
+# Contributor: Diego Galizzi <dgalizzi at gmail dot com>
+# Contributor: zoulnix <http://goo.gl/HQaP>
+
+pkgname=cimg
+pkgver=2.1.7
+pkgrel=1
+pkgdesc="Open-source C++ toolkit for image processing"
+arch=('any')
+url="http://cimg.eu/"
+license=('custom')
+depends=('fftw' 'graphicsmagick')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/dtschump/CImg/archive/v.${pkgver//./}.tar.gz")
+sha256sums=('dfe587d18c158e981c32609155dd46d29fe23f3dc217356f068eed25ae89fb6f')
+
+package() {
+  cd "${srcdir}"/CImg-v.${pkgver//./}
+  install -d "${pkgdir}"/usr/include/CImg/plugins ${pkgdir}/usr/share/licenses/${pkgname}
+  install -m644 CImg.h "${pkgdir}"/usr/include/
+  install -m644 plugins/*.h "${pkgdir}"/usr/include/CImg/plugins/
+  install -m644 Licence_CeCILL*_V*-en.txt "${pkgdir}"/usr/share/licenses/${pkgname}/
+}

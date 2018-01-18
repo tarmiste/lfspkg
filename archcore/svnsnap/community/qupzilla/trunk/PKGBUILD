@@ -1,0 +1,35 @@
+# $Id: PKGBUILD 283502 2018-01-16 18:37:01Z arojas $
+# Maintainer: speps <speps at aur dot archlinux dot org>
+# Maintainer: Antonio Rojas <arojas@archlinux.org>
+
+pkgname=qupzilla
+pkgver=2.2.4
+pkgrel=1
+pkgdesc="Cross-platform QtWebEngine browser"
+arch=(x86_64)
+url="https://www.qupzilla.com/"
+license=(GPL3)
+depends=(qt5-webengine qt5-x11extras qt5-svg)
+makedepends=(qt5-tools kwallet libgnome-keyring)
+optdepends=('kwallet: kf5 kwallet integration' 'libgnome-keyring: gnome keyring integration')
+source=(https://github.com/QupZilla/qupzilla/releases/download/v$pkgver/QupZilla-$pkgver.tar.xz)
+sha256sums=('a5c7d591d5a9028052d1a3fb3536c716fcfbe4e1675af38b1a06b8fab977314c')
+
+build() {
+  cd QupZilla-$pkgver
+  export USE_WEBGL=true \
+    QUPZILLA_PREFIX=/usr/ \
+    KDE_INTEGRATION=true \
+    GNOME_INTEGRATION=true
+  qmake
+  make
+}
+
+package() {
+  cd QupZilla-$pkgver
+  make INSTALL_ROOT="$pkgdir/" install
+
+  # zsh completion
+  install -Dm644 linux/completion/_$pkgbase \
+    "$pkgdir/usr/share/zsh/site-functions/_$pkgbase"
+}

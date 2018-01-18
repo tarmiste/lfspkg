@@ -1,0 +1,31 @@
+# $Id: PKGBUILD 239683 2017-06-22 18:56:39Z alucryd $
+# Maintainer: Maxime Gauduin <alucryd@archlinux.org>
+
+pkgname=libretro-shaders-slang
+pkgver=387
+pkgrel=1
+pkgdesc='Collection of Vulkan shaders for libretro'
+arch=('any')
+url='http://www.libretro.com/'
+license=('GPL3')
+groups=('libretro')
+provides=('libretro-shaders')
+conflicts=('libretro-shaders')
+makedepends=('git')
+_commit='d30218fd22ed49ae6e1e144f7ecadb35c032f776'
+source=("libretro-shaders-slang::git+https://github.com/libretro/slang-shaders.git#commit=${_commit}")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd libretro-shaders-slang
+
+  git rev-list --count HEAD
+}
+
+package() {
+  install -dm 755 "${pkgdir}"/usr/share/libretro
+  cp -dr --no-preserve='ownership' libretro-shaders-slang "${pkgdir}"/usr/share/libretro/shaders
+  rm -rf "${pkgdir}"/usr/share/libretro/shaders/.git
+}
+
+# vim: ts=2 sw=2 et:

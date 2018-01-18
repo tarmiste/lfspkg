@@ -1,0 +1,24 @@
+# $Id: PKGBUILD 280703 2018-01-09 15:26:35Z foxboron $
+# Maintainer: Morten Linderud <foxboron@archlinux.org>
+# Contributor: Daniel Micay <danielmicay@gmail.com>
+# Contributor: Elena ``of Valhalla'' Grandi <gmail.com: elena.valhalla>
+# Contributor: Jesse Jaara <gmail.com: jesse.jaara>
+
+pkgname=ttf-symbola
+pkgver=10.23
+pkgrel=1
+pkgdesc="Font for unicode symbols (part of Unicode Fonts for Ancient Scripts)."
+arch=('any')
+url="http://users.teilar.gr/~g1951d/"
+license=('custom')
+depends=('fontconfig' 'xorg-font-utils')
+makedepends=('unzip')
+source=("${pkgname}-${pkgver}.zip::http://users.teilar.gr/~g1951d/Symbola.zip"
+	"LICENSE")
+sha256sums=('ff0706603b93238008ce1b76fdeeb83c23a470bd90fed56c2c64c6a052842c50'
+            '2905469f5b3cc7b84048d59028e2f540e9f538571e55db4d040d49f614bd1b18')
+
+package() {
+  install -Dm644 Symbola.ttf "$pkgdir/usr/share/fonts/TTF/Symbola.ttf"
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}

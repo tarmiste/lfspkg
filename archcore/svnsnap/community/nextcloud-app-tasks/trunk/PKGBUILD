@@ -1,0 +1,22 @@
+# $Id: PKGBUILD 214638 2017-03-03 08:03:09Z spupykin $
+# Maintainer: Sergej Pupykin <arch+pub@sergej.pp.ru>
+# Maintainer: Jonas Heinrich <onny@project-insanity.org>
+# Contributor: Jonas Heinrich <onny@project-insanity.org>
+
+pkgname=nextcloud-app-tasks
+pkgver=0.9.5
+pkgrel=1
+pkgdesc="Enhanced task app for NextCloud"
+arch=('any')
+url="https://github.com/nextcloud/tasks"
+license=('AGPL')
+depends=('nextcloud')
+makedepends=()
+options=('!strip')
+source=("tasks-${pkgver}.tar.gz::https://github.com/nextcloud/tasks/archive/v$pkgver.tar.gz")
+sha512sums=('ba66e90ab9021cce29514839cc9bc694a09b652b954b669b72c40b2e04f9f80e638c67a871b6134cd1dcb2c3f49bb1033473b36d0577e1001e0057b860fe0a23')
+
+package() {
+  install -d "${pkgdir}/usr/share/webapps/nextcloud/apps"
+  cp -a "${srcdir}/tasks-$pkgver" "${pkgdir}/usr/share/webapps/nextcloud/apps/tasks"
+}

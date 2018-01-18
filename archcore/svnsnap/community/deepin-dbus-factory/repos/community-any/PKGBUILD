@@ -1,0 +1,25 @@
+# $Id: PKGBUILD 274828 2017-12-19 03:30:28Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Josip Ponjavic <josipponjavic at gmail dot com>
+# Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=deepin-dbus-factory
+pkgver=3.1.12
+pkgrel=1
+pkgdesc='GO DBus factory for DDE'
+arch=('any')
+url="https://github.com/linuxdeepin/dbus-factory"
+license=('GPL3')
+makedepends=('go-pie' 'jq' 'libxml2' 'deepin-dbus-generator')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxdeepin/dbus-factory/archive/$pkgver.tar.gz")
+sha512sums=('9caaf6f84ec5e17cae143043193e02628d06b2da033b6c783f024ec8a9017fd4ea2f60fa86b2a297285de066f32e9c60b36ec56ffd413372df824cba723866a2')
+
+build(){
+  cd dbus-factory-$pkgver
+  make
+}
+
+package() {
+  cd dbus-factory-$pkgver
+  make GOPATH=/usr/share/gocode DESTDIR="$pkgdir" install
+}

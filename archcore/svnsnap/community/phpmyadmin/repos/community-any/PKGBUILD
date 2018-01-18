@@ -1,0 +1,30 @@
+# $Id: PKGBUILD 283091 2018-01-16 08:42:45Z spupykin $
+# Maintainer:
+# Contributor: Bartłomiej Piotrowski <bpiotrowski@archlinux.org>
+# Contributor: Sergej Pupykin <pupykin.s+arch@gmail.com>
+# Contributor: tobias <tobias@archlinux.org>
+# Contributor: Manolis Tzanidakis <manolis@archlinux.org>
+# Contributor: Simon Lackerbauer <calypso "at" strpg.org>
+
+pkgname=phpmyadmin
+pkgver=4.7.7
+pkgrel=2
+pkgdesc='PHP and hence web-based tool to administrate MySQL over the WWW'
+arch=('any')
+url='http://www.phpmyadmin.net'
+license=('GPL')
+depends=('mysql-clients' 'php')
+backup=(etc/webapps/phpmyadmin/config.inc.php)
+source=(https://files.phpmyadmin.net/phpMyAdmin/$pkgver/phpMyAdmin-$pkgver-all-languages.tar.xz)
+sha256sums=('2a748e92e7bf8d4d008a524f8101f011ff63de2fd20339d025f2be4900f75deb')
+
+package() {
+  _instdir="$pkgdir"/usr/share/webapps/phpMyAdmin
+  mkdir -p "$_instdir" "$pkgdir"/etc/webapps/phpmyadmin
+  cd "$_instdir"
+
+  cp -ra "$srcdir"/phpMyAdmin-$pkgver-all-languages/* .
+
+  ln -s /etc/webapps/phpmyadmin/config.inc.php "$_instdir"/config.inc.php
+  cp "$_instdir"/config.sample.inc.php "$pkgdir"/etc/webapps/phpmyadmin/config.inc.php
+}

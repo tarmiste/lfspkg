@@ -1,0 +1,37 @@
+# $Id: PKGBUILD 275517 2017-12-22 15:50:12Z alucryd $
+# Maintainer: Maxime Gauduin <alucryd@archlinux.org>
+# Contributor: Lauri Niskanen <ape@ape3000.com>
+
+pkgname=libretro-gambatte
+pkgver=736
+pkgrel=1
+pkgdesc='Nintendo Game Boy/Game Boy Color core'
+arch=('x86_64')
+url='https://github.com/libretro/gambatte-libretro'
+license=('GPL2')
+groups=('libretro')
+depends=('gcc-libs' 'glibc' 'libretro-core-info')
+makedepends=('git')
+_commit='30be0296be2e36f3f6a5f97d251bfe5b906e61b2'
+source=("libretro-gambatte::git+https://github.com/libretro/gambatte-libretro.git#commit=${_commit}")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd libretro-gambatte
+
+  git rev-list --count HEAD
+}
+
+build() {
+  cd libretro-gambatte
+
+  make -f Makefile.libretro
+}
+
+package() {
+  cd libretro-gambatte
+
+  install -Dm 644 gambatte_libretro.so -t "${pkgdir}"/usr/lib/libretro/
+}
+
+# vim: ts=2 sw=2 et:

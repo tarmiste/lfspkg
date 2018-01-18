@@ -1,0 +1,63 @@
+# $Id: PKGBUILD 255220 2017-09-01 05:23:26Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Daniel Wallace <danielwallace at gtmanfred dot com>
+
+pkgbase=python-cinderclient
+pkgname=(python-cinderclient python2-cinderclient)
+pkgver=3.2.0
+pkgrel=1
+pkgdesc="OpenStack Block Storage API Client Library"
+arch=('any')
+url="http://docs.openstack.org/developer/python-cinderclient"
+license=('Apache')
+makedepends=('python-setuptools' 'python2-setuptools' 'python-pbr' 'python2-pbr' 'python-babel'
+             'python2-babel' 'python-prettytable' 'python2-prettytable' 'python-keystoneclient'
+             'python2-keystoneclient' 'python-requests' 'python2-requests' 'python-oslo-utils'
+             'python2-oslo-utils')
+checkdepends=('python-oslotest' 'python2-oslotest' 'python-requests-mock' 'python2-requests-mock'
+              'python-ddt' 'python2-ddt')
+source=("$pkgbase-$pkgver.tar.gz::https://github.com/openstack/python-cinderclient/archive/$pkgver.tar.gz")
+sha512sums=('ca8d6c0626c363a730234862a1fd9ed79dbe610c6450ae987e44c81c97d14720a31a29383aee6c116e2f6f55570a55a1e00d6f0bc0198ad50c8c9572e77670ef')
+
+prepare() {
+  sed -i '/simplejson/d' python-cinderclient-$pkgver/requirements.txt
+  cp -a python-cinderclient-$pkgver{,-py2}
+
+  export PBR_VERSION=$pkgver
+}
+
+build() {
+  cd "$srcdir"/python-cinderclient-$pkgver
+  python setup.py build
+
+  cd "$srcdir"/python-cinderclient-$pkgver-py2
+  python2 setup.py build
+}
+
+check() {
+  cd "$srcdir"/python-cinderclient-$pkgver
+  python setup.py testr
+
+  cd "$srcdir"/python-cinderclient-$pkgver-py2
+  PYTHON=python2 python2 setup.py testr
+}
+
+package_python-cinderclient() {
+  depends=('python-six' 'python-pbr' 'python-babel' 'python-prettytable' 'python-keystoneclient'
+           'python-requests' 'python-oslo-utils')
+
+  cd "$srcdir"/python-cinderclient-$pkgver
+  python setup.py install --root="$pkgdir" --optimize=1
+}
+
+package_python2-cinderclient() {
+  depends=('python2-six' 'python2-pbr' 'python2-babel' 'python2-prettytable'
+           'python2-keystoneclient' 'python2-requests' 'python2-oslo-utils')
+
+  cd "$srcdir"/python-cinderclient-$pkgver-py2
+  python2 setup.py install --root="$pkgdir" --optimize=1
+
+  mv "$pkgdir"/usr/bin/cinder{,2}
+}
+
+# vim:set ts=2 sw=2 et:

@@ -1,0 +1,32 @@
+# $Id: PKGBUILD 267783 2017-11-21 12:55:44Z arodseth $
+# Maintainer: Alexander F Rødseth <xyproto@archlinux.org>
+# Contributor: Bartłomiej Piotrowski <bpiotrowski@archlinux.org>
+# Contributor: DrZaius <lou@fakeoutdoorsman.com>
+
+pkgname=opusfile
+pkgver=0.10
+pkgrel=1
+pkgdesc='Library for opening, seeking, and decoding .opus files'
+arch=('x86_64')
+url='https://opus-codec.org/'
+license=('BSD')
+depends=('libogg' 'openssl' 'opus')
+source=("https://downloads.xiph.org/releases/opus/$pkgname-$pkgver.tar.gz")
+sha256sums=('48e03526ba87ef9cf5f1c47b5ebe3aa195bd89b912a57060c36184a6cd19412f')
+
+build() {
+  cd "$pkgname-$pkgver"
+
+  ./configure --prefix=/usr
+  make
+}
+
+package() {
+  cd "$pkgname-$pkgver"
+
+  make DESTDIR="$pkgdir" install
+  install -Dm644 COPYING "$pkgdir/usr/share/licenses/opusfile/LICENSE"
+}
+
+# getver: github.com/xiph/opusfile/tags
+# vim:ts=2 sw=2 et:

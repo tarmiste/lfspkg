@@ -1,0 +1,53 @@
+# $Id: PKGBUILD 278730 2018-01-05 02:19:54Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Daniel Wallace <danielwallace at gtmanfred dot com>
+
+pkgbase=python-cmd2
+pkgname=(python-cmd2 python2-cmd2)
+pkgver=0.7.9
+pkgrel=1
+pkgdesc="Extra features for standard library's cmd module"
+arch=('any')
+url="https://github.com/python-cmd2/cmd2"
+license=('MIT')
+makedepends=('python-setuptools' 'python2-setuptools' 'python-pyparsing' 'python2-pyparsing'
+             'python-pyperclip' 'python2-pyperclip' 'python2-subprocess32')
+checkdepends=('python-pytest-runner' 'python2-pytest-runner' 'python-mock' 'python2-mock' 'vi')
+source=("$pkgbase-$pkgver.tar.gz::https://github.com/python-cmd2/cmd2/archive/$pkgver.tar.gz")
+sha512sums=('e2c01e292b51eff9da77bcca6a1c1429a824d345c79c92311b86b590b4983578a00f29eee18f21be06fe839da7fabb651405be7ea29f72e660a0032f98b60d0b')
+
+prepare() {
+  cp -a cmd2-$pkgver{,-py2}
+}
+
+build() {
+  cd "$srcdir"/cmd2-$pkgver
+  python setup.py build
+
+  cd "$srcdir"/cmd2-$pkgver-py2
+  python2 setup.py build
+}
+
+check() {
+  cd "$srcdir"/cmd2-$pkgver
+  python setup.py pytest
+
+  cd "$srcdir"/cmd2-$pkgver-py2
+  python2 setup.py pytest
+}
+
+package_python-cmd2() {
+  depends=('python-pyparsing' 'python-pyperclip')
+
+  cd "$srcdir"/cmd2-$pkgver
+  python setup.py install --root="$pkgdir" --optimize=1
+}
+
+package_python2-cmd2() {
+  depends=('python2-pyparsing' 'python2-pyperclip' 'python2-subprocess32')
+
+  cd "$srcdir"/cmd2-$pkgver-py2
+  python2 setup.py install --root="$pkgdir" --optimize=1
+}
+
+# vim:set ts=2 sw=2 et:

@@ -1,0 +1,28 @@
+# $Id: PKGBUILD 271010 2017-12-01 13:55:27Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Josip Ponjavic <josipponjavic at gmail dot com>
+# Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
+
+pkgname=deepin-picker
+pkgver=1.6.1
+pkgrel=2
+pkgdesc='Color picker tool for deepin'
+arch=('x86_64')
+url="https://github.com/linuxdeepin/deepin-picker"
+license=('GPL3')
+depends=('deepin-qt5integration' 'qt5-svg')
+makedepends=('qt5-tools' 'deepin-gettext-tools')
+groups=('deepin-extra')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxdeepin/deepin-picker/archive/$pkgver.tar.gz")
+sha512sums=('365ec5dedb7ec22a4f6559fbee21aa87dceb6c9af3188f42a4e41fbf9ae581f3955dcd3247dac2749b45a7ddccb649cbe35ec9914e32191bd57b3ad5f9037f09')
+
+build() {
+  cd deepin-picker-$pkgver
+  qmake-qt5 PREFIX=/usr
+  make
+}
+
+package() {
+  cd deepin-picker-$pkgver
+  make INSTALL_ROOT="$pkgdir" install
+}

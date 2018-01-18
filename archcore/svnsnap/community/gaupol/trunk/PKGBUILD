@@ -1,0 +1,34 @@
+# $Id: PKGBUILD 224765 2017-04-24 04:42:38Z foutrelis $
+# Maintainer: Evangelos Foutras <evangelos@foutrelis.com>
+# Contributor: Ionut Biru <ibiru@archlinux.org>
+# Contributor: Allan McRae <allan@archlinux.org>
+# Contributor: FJ <joostef@gmail.com>
+# Contributor: Sebastien Piccand <sebcactus gmail com>
+
+pkgname=gaupol
+pkgver=1.2
+pkgrel=1
+pkgdesc="Editor for text-based subtitles"
+arch=('any')
+url="http://otsaloma.io/gaupol/"
+license=('GPL')
+depends=('python-gobject' 'gtk3' 'gst-plugins-base' 'gst-plugins-good'
+         'iso-codes' 'python-cairo' 'python-pyenchant' 'python-chardet'
+         'gtkspell3' 'desktop-file-utils' 'hicolor-icon-theme')
+makedepends=('intltool')
+optdepends=('mpv: subtitle preview'
+            'vlc: subtitle preview'
+            'mplayer: subtitle preview'
+            'gst-plugins-bad: extra media codecs'
+            'gst-plugins-ugly: extra media codecs'
+            'gst-libav: extra media codecs')
+source=($pkgname-$pkgver.tar.gz::https://github.com/otsaloma/$pkgname/archive/$pkgver.tar.gz)
+sha256sums=('a6749d1ee77b36dfb0b80f41f11f63fbba3b9e638552a566f973dc9216d6f97c')
+
+package() {
+  cd "$srcdir/$pkgname-$pkgver"
+
+  python3 setup.py --without-iso-codes install --root="$pkgdir" -O1
+}
+
+# vim:set ts=2 sw=2 et:

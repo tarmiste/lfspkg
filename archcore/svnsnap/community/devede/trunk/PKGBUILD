@@ -1,0 +1,24 @@
+# $Id: PKGBUILD 272112 2017-12-04 12:26:20Z arojas $
+# Maintainer: Sergej Pupykin <pupykin.s+arch@gmail.com>
+# Contributor: Andrea Scarpino <andrea@archlinux.org>
+# Contributor: Javier 'Phrodo_00' Aravena <phrodo.00@gmail.com>
+# Maintainer: Daniel J Griffiths <ghost1227@archlinux.us>
+
+pkgname=devede
+pkgver=4.8.11
+pkgrel=1
+pkgdesc="A program to create VideoDVDs and CDs"
+arch=('any')
+url="http://www.rastersoft.com/programas/devede.html"
+license=('GPL3')
+depends=('mencoder' 'ffmpeg' 'dvdauthor' 'vcdimager'
+	 'cdrtools' 'ttf-dejavu' 'gtk3' 'python-cairo' 'python-gobject')
+makedepends=('python-setuptools')
+optdepends=('mplayer' 'vlc' 'mpv')
+source=($pkgname-$pkgver.tar.gz::https://github.com/rastersoft/devedeng/archive/$pkgver.tar.gz)
+sha256sums=('5e09e813fef797cbd7bd36fd78b0cf5409329a55c72901b441506764e7c61049')
+
+package() {
+  cd "$srcdir"/${pkgname}ng-$pkgver
+  python setup.py install --root="$pkgdir"
+}

@@ -1,0 +1,54 @@
+# Maintainer: Levente Polyak <anthraxx[at]archlinux[dot]org>
+# Contributor: Sébastien Luttringer <seblu@aur.archlinux.org>
+
+pkgname=lynis
+pkgver=2.5.9
+pkgrel=1
+pkgdesc='Security and system auditing tool to harden Unix/Linux systems'
+url='https://cisofy.com/lynis/'
+arch=('any')
+license=('GPL3')
+backup=('etc/lynis/default.prf')
+depends=('sh' 'awk')
+optdepends=('net-tools: networking tests'
+            'bind-tools: nameserver tests'
+            'iptables: firewall tests'
+            'bash-completion: completion for bash')
+source=(https://cisofy.com/files/lynis-${pkgver}.tar.gz{,.asc})
+sha512sums=('655942b6546183396a416df6b7a365918aab1a19b55e2b1d34da4a5fe7fe865aee59aae6de2467b8e5393cae9bb80f97c48a85f1e3606951d88ea21cb624c45a'
+            'SKIP')
+validpgpkeys=('73AC9FC55848E977024D1A61429A566FD5B79251') # CISOfy (Software Signing Key) <security@cisofy.com>
+
+prepare() {
+  cd ${pkgname}
+  sed -e 's|/path/to/lynis|/usr/bin/lynis|g' -i extras/systemd/lynis.service
+}
+
+package() {
+  cd ${pkgname}
+
+  # binary
+  install -Dm 755 lynis -t "${pkgdir}/usr/bin"
+
+  # profile
+  install -Dm 644 default.prf -t "${pkgdir}/etc/${pkgname}"
+
+  # plugins, include, db
+  install -d "${pkgdir}/usr/share/${pkgname}"
+  cp -ra db include plugins "${pkgdir}/usr/share/${pkgname}"
+
+  # doc files
+  install -Dm 644 README INSTALL CHANGELOG.md FAQ \
+    -t "${pkgdir}/usr/share/doc/${pkgname}"
+  install -Dm 644 "${pkgname}.8" -t "${pkgdir}/usr/share/man/man8"
+
+  # completion
+  install -Dm 644 extras/bash_completion.d/${pkgname} \
+    -t "${pkgdir}/usr/share/bash-completion/completions"
+
+  # systemd
+  install -Dm 644 extras/systemd/{lynis.service,lynis.timer} \
+    -t "${pkgdir}/usr/lib/systemd/system"
+}
+
+# vim: ts=2 sw=2 et:

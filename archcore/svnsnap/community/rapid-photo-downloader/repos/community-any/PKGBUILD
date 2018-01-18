@@ -1,0 +1,30 @@
+# $Id: PKGBUILD 241572 2017-06-29 12:04:26Z bgyorgy $
+# Maintainer: Jaroslav Lichtblau <svetlemodry@archlinux.org>
+# Contributor: Marc Moody <marc.r.moody at gmail dot com>
+# Contributor: Dinh Bowman <dinh at vagueindustries dot com>
+
+pkgname=rapid-photo-downloader
+pkgver=0.4.11
+pkgrel=4
+pkgdesc="Photo and video downloader"
+arch=('any')
+url="http://www.damonlynch.net/rapid/"
+license=('GPL3')
+depends=('python2' 'python2-notify' 'pygtk' 'librsvg' 'python2-pillow'
+         'python2-exiv2' 'python2-gconf' 'python2-dbus' 'perl-image-exiftool')
+optdepends=('ffmpegthumbnailer: Enable video thumbnails')
+changelog=$pkgname.changelog
+source=(http://launchpad.net/rapid/trunk/${pkgver}/+download/${pkgname}-${pkgver}.tar.gz)
+sha256sums=('57396807458dea457e814b1ba021d69378af3ca310c44800ccb150d3cbace911')
+
+build() {
+  cd "${srcdir}"/$pkgname-$pkgver
+
+  python2 setup.py build
+}
+
+package() {
+  cd "${srcdir}"/$pkgname-$pkgver
+
+  python2 setup.py install --root="${pkgdir}"
+}

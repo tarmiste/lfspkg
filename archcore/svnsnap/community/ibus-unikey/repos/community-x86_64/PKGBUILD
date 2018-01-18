@@ -1,0 +1,32 @@
+# $Id: PKGBUILD 276332 2017-12-28 05:13:56Z eschwartz $
+# Maintainer: Felix Yan <felixonmars@gmail.com>
+# Contributor: Thomas Dziedzic < gostrc at gmail >
+# Contributor: Trương Xuân Tính <xuantinh at gmail dot com>
+
+pkgname=ibus-unikey
+pkgver=0.6.1
+pkgrel=4
+pkgdesc='IBus module for Vietnamese Keyboard'
+arch=('x86_64')
+license=('GPL')
+url='http://code.google.com/p/ibus-unikey/'
+depends=('ibus')
+makedepends=('intltool')
+source=("https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/ibus-unikey/${pkgname}-${pkgver}.tar.gz")
+md5sums=('3bae6df0d4609a8c438c246030b9a61e')
+
+build() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+
+  ./configure \
+    --prefix=/usr \
+    --libexecdir=/usr/lib/ibus
+
+  make
+}
+
+package() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+
+  make DESTDIR="${pkgdir}" install
+}

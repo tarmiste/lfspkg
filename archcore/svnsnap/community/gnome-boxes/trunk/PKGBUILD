@@ -1,0 +1,29 @@
+# $Id: PKGBUILD 282867 2018-01-16 01:35:05Z bgyorgy $
+# Maintainer: Balló György <ballogyor+arch at gmail dot com>
+# Contributor: Stefano Facchini <stefano.facchini@gmail.com>
+
+pkgname=gnome-boxes
+pkgver=3.26.2
+pkgrel=1
+pkgdesc="Simple GNOME application to access remote or virtual systems"
+arch=('x86_64')
+url="https://wiki.gnome.org/Boxes"
+license=('LGPL')
+groups=('gnome')
+depends=('cdrkit' 'gtk-vnc' 'libarchive' 'libgudev' 'libosinfo' 'libsecret' 'tracker'
+         'libvirt-glib' 'mtools' 'qemu' 'spice-gtk3' 'libgovirt')
+makedepends=('gobject-introspection' 'intltool' 'itstool' 'spice-protocol' 'vala')
+source=(https://download.gnome.org/sources/$pkgname/${pkgver::4}/$pkgname-$pkgver.tar.xz)
+sha256sums=('d00fc083182963dc1bbdee5e743ceb28ba03fbf5a9ea87c78d29dca5fb5b9210')
+
+build() {
+  cd $pkgname-$pkgver
+  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --libexecdir=/usr/lib/$pkgname \
+              --disable-schemas-compile --enable-vala
+  make
+}
+
+package() {
+  cd $pkgname-$pkgver
+  make DESTDIR="$pkgdir" install
+}

@@ -1,0 +1,27 @@
+# $Id: PKGBUILD 266875 2017-11-15 14:29:11Z foutrelis $
+# Maintainer: Sébastien Luttringer
+# Contributor : XAVeRY - los dot danielos at gmail dot com
+
+pkgname=lsscsi
+pkgver=0.28
+pkgrel=1
+pkgdesc='A tool that lists devices connected via SCSI and its transports'
+arch=('x86_64')
+url="http://sg.danny.cz/scsi/lsscsi.html"
+license=('GPL')
+depends=('sysfsutils')
+source=("http://sg.danny.cz/scsi/${pkgname}-${pkgver}.tgz")
+md5sums=('4a39e3b09cd422e2cae3edbaf56b3176')
+
+build() {
+  cd ${pkgname}-${pkgver}
+  ./configure --prefix=/usr
+  make
+}
+
+package() {
+  cd ${pkgname}-${pkgver}
+  make DESTDIR="${pkgdir}" install
+}
+
+# vim:set ts=2 sw=2 et:

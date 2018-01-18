@@ -1,0 +1,26 @@
+# $Id: PKGBUILD 282745 2018-01-15 16:45:01Z bgyorgy $
+# Maintainer: Balló György <ballogyor+arch at gmail dot com>
+# Contributor: Nevar <psi.neamf@gmail.com>
+
+pkgname=nautilus-share
+pkgver=0.7.3
+pkgrel=7
+pkgdesc='Nautilus extension to share folder using Samba'
+arch=('x86_64')
+url="https://git.gnome.org/browse/nautilus-share"
+license=('GPL')
+depends=('nautilus' 'samba')
+makedepends=('intltool')
+source=("https://download.gnome.org/sources/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.xz")
+sha256sums=('1686b1c3f9f2b4b35bcb0fc9f826f89e540d1e5fee8eb64806a8d31e3db55ad5')
+
+build() {
+  cd $pkgname-$pkgver
+  ./configure --prefix=/usr
+  make
+}
+
+package() {
+  cd $pkgname-$pkgver
+  make DESTDIR="$pkgdir" install
+}

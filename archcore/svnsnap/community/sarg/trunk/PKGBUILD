@@ -1,0 +1,36 @@
+# $Id: PKGBUILD 270675 2017-11-29 12:57:54Z spupykin $
+# Maintainer: Sergej Pupykin <pupykin.s+arch@gmail.com>
+# Maintainer: JJDaNiMoTh <jjdanimoth.aur@gmail.com>
+# Contributor: Tino Reichardt <milky-archlinux@mcmilk.de>
+
+pkgname=sarg
+pkgver=2.3.10
+pkgrel=1
+pkgdesc="Squid Analysis Report Generator"
+arch=('x86_64')
+url="http://sarg.sourceforge.net"
+license=('GPL')
+depends=('gd' 'libldap')
+makedepends=('cmake')
+backup=('etc/sarg/css.tpl'
+	'etc/sarg/exclude_codes'
+	'etc/sarg/sarg.conf'
+	'etc/sarg/user_limit_block')
+source=(https://downloads.sourceforge.net/sourceforge/sarg/$pkgname-$pkgver.tar.gz)
+sha256sums=('f83eeb3fe09f1c571e927b991027b2f59b90b360caee40f623586b9a2a93bc95')
+
+build() {
+  cd "$srcdir"/$pkgname-$pkgver
+  cmake \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DSYSCONFDIR=/etc/sarg \
+    -DMANDIR=/usr/share/man/man1 \
+    .
+  make
+}
+
+package() {
+  cd "$srcdir"/$pkgname-$pkgver
+  mkdir -p "$pkgdir"/usr/share/sarg "$pkgdir"/etc
+  make DESTDIR="$pkgdir" install
+}

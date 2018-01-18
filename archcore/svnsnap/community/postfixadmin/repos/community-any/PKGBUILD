@@ -1,0 +1,43 @@
+# Maintainer: Sven-Hendrik Haase <sh@lutzhaase.com>
+# Contributor: Filip <fila pruda.com>
+pkgname=postfixadmin
+pkgver=3.1
+pkgrel=1
+pkgdesc="A web based interface used to manage mailboxes, virtual domains and aliases created for Postfix"
+arch=('any')
+license=('GPL')
+url="http://postfixadmin.sourceforge.net/"
+backup=(etc/webapps/postfixadmin/config.inc.php
+        etc/webapps/postfixadmin/.htaccess)
+depends=('php')
+optdepends=('mariadb: MySQL server'
+            'postgresql: PostgreSQL server')
+source=("https://downloads.sourceforge.net/project/postfixadmin/postfixadmin/postfixadmin-${pkgver}/postfixadmin-${pkgver}.tar.gz")
+sha512sums=('a3e1ecb3ac4ff4d604533bce532694bcc304b9b3d3e1b1ec840be6d007027705113f067393486f58908dd3846332ecf59c9c3c1a5123d03aa088f47593a75812')
+
+package() {
+  _destdir=$pkgdir/usr/share/webapps/postfixAdmin
+  _destdir_etc=$pkgdir/etc/webapps/postfixadmin
+  _destdir_doc=$pkgdir/usr/share/doc/postfixadmin
+
+  install -dm755 ${_destdir}
+  install -dm755 ${_destdir_etc}
+  install -dm755 ${_destdir_doc}
+
+  cd $srcdir/$pkgname-$pkgver
+  cp -r * ${_destdir}
+
+  # config
+  mv ${_destdir}/config.inc.php ${_destdir_etc}
+  ln -s /etc/webapps/postfixadmin/config.inc.php ${_destdir}/config.inc.php
+  echo "#Require all denied" >${_destdir_etc}/.htaccess
+  ln -s /etc/webapps/postfixadmin/.htaccess ${_destdir}/.htaccess
+
+  # template cache needs to be writeable
+  mkdir -p ${_destdir}/templates_c
+  chown http:http ${_destdir}/templates_c
+
+  # docs
+  mv ${_destdir}/{*.TXT,tests,ADDITIONS,DOCUMENTS,VIRTUAL_VACATION} ${_destdir_doc}
+  rm -rf ${_destdir}/debian
+}

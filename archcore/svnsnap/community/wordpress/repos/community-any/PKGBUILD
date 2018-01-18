@@ -1,0 +1,38 @@
+# $Id: PKGBUILD 270863 2017-11-30 18:35:57Z arodseth $
+# Maintainer: Alexander F Rødseth <xyproto@archlinux.org>
+# Contributor: Thomas Dziedzic <gostrc@gmail.com>
+# Contributor: Jose Valecillos <valecillosjg@gmail.com>
+# Contributor: Kaos <gianlucaatlas@gmail.com>
+# Contributor: Christopher Rogers <slaxemulator@gmail.com>
+
+pkgname=wordpress
+pkgver=4.9.1
+pkgrel=1
+pkgdesc='Blog tool and publishing platform'
+arch=('any')
+url='https://wordpress.org/'
+license=('GPL')
+depends=('php')
+optdepends=('nginx: Web server for serving Wordpress'
+            'apache: Web server for serving Wordpress'
+            'mariadb: Database server')
+options=('emptydirs')
+install="$pkgname.install"
+source=("https://wordpress.org/$pkgname-$pkgver.tar.gz"
+        'password_reset_exploit.patch')
+sha256sums=('a94ae99cda7666bfd482b36f268ad240a3bde2a66724e1312dabf068a9555100'
+            '68244b5bd534b21c88dc25074bf1fbc7a26d601cee69d78a467b1287f9eb2eed')
+
+prepare() {
+  cd "$pkgname"
+
+  patch -p1 -i "$srcdir/password_reset_exploit.patch"
+}
+
+package() {
+  install -d "$pkgdir/usr/share/webapps"
+  cp -r "$pkgname" "$pkgdir/usr/share/webapps"
+}
+
+# getver: wordpress.org/download/
+# vim: ts=2 sw=2 et:

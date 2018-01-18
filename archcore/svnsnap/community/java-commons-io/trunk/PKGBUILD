@@ -1,0 +1,21 @@
+# Maintainer: Lukas Fleischer <lfleischer@archlinux.org>
+# Contributor: Stefan Husmann <stefan-husmann@t-online.de>
+# Contributor: Simon Lipp <sloonz+aur@gmail.com>
+
+pkgname=java-commons-io
+pkgver=2.5
+pkgrel=1
+pkgdesc='IO related classes for Java.'
+arch=('any')
+url='http://commons.apache.org/io/'
+license=(APACHE)
+depends=('java-runtime')
+source=("https://www.apache.org/dist/commons/io/binaries/commons-io-$pkgver-bin.tar.gz"{,.asc})
+md5sums=('4a706bf3296c814f7d0481681f37289c'
+         'SKIP')
+validpgpkeys=('6BDACA2C0493CCA133B372D09C4F7E9D98B1CC53') # Benson Margulies
+
+package() {
+	install -Dm644 "$srcdir/commons-io-${pkgver}/commons-io-${pkgver}.jar" \
+	  "$pkgdir/usr/share/java/commons-io/commons-io.jar"
+}

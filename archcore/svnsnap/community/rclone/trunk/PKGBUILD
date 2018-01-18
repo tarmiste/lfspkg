@@ -1,0 +1,48 @@
+# $Id: PKGBUILD 275597 2017-12-23 18:04:55Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+
+pkgname=rclone
+pkgver=1.39
+pkgrel=1
+pkgdesc="Sync files to and from Google Drive, S3, Swift, Cloudfiles, Dropbox and Google Cloud Storage"
+arch=('x86_64')
+url="http://rclone.org/"
+license=('MIT')
+depends=('glibc')
+makedepends=('python2' 'pandoc' 'go-pie')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/ncw/rclone/archive/v$pkgver.tar.gz")
+sha512sums=('6e5e5f5e06510f36185d165986cbd3ed994d3cbf97055b4dea37c78af932f89ab8c89249006b829aad38ba43c77ff46f254ba56bcfbae7deca1ebcea555ad884')
+
+prepare() {
+  cd rclone-$pkgver
+
+  sed -i "1s/python$/&2/" bin/make_manual.py
+
+  mkdir -p .gopath/src/github.com/ncw
+  ln -sf "$PWD" .gopath/src/github.com/ncw/rclone
+  export GOPATH="$PWD/.gopath"
+
+  go get github.com/ncw/rclone
+}
+
+build() {
+  cd rclone-$pkgver/.gopath/src/github.com/ncw/rclone
+
+  PATH="$GOPATH/bin:$PATH" make TAG=v$pkgver rclone doc
+}
+
+check() {
+  cd rclone-$pkgver/.gopath/src/github.com/ncw/rclone
+  make TAG=v$pkgver test || warning "Tests failed"
+}
+
+package() {
+  cd rclone-$pkgver/.gopath/src/github.com/ncw/rclone
+  make TAG=v$pkgver DESTDIR="$pkgdir" install
+
+  install -Dm644 COPYING "$pkgdir/usr/share/licenses/$pkgname/COPYING"
+
+  install -Dm644 rclone.1 "$pkgdir/usr/share/man/man1/rclone.1"
+  install -d "$pkgdir/usr/share/doc/$pkgname"
+  install -t "$pkgdir/usr/share/doc/$pkgname" -m644 MANUAL.html MANUAL.txt
+}

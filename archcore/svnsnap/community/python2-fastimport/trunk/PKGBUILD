@@ -1,0 +1,20 @@
+# $Id: PKGBUILD 192074 2016-10-12 17:26:41Z arojas $
+# Maintainer: Martin Wimpress <code@flexion.org>
+
+_pkgname=fastimport
+pkgname=python2-fastimport
+pkgver=0.9.6
+pkgrel=1
+pkgdesc="VCS fastimport/fastexport parser"
+arch=(any)
+url="https://pypi.python.org/pypi/fastimport/"
+license=('GPL')
+depends=('python2')
+makedepends=('python2-distutils-extra')
+source=("https://pypi.io/packages/source/f/${_pkgname}/${_pkgname}-${pkgver}.tar.gz")
+md5sums=('8e85d4ef7e99793f29b8badee4e82390')
+
+package() {
+    cd "${srcdir}/${_pkgname}-${pkgver}"
+    python2 setup.py install --root="${pkgdir}" --optimize=1
+}

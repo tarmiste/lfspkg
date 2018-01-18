@@ -1,0 +1,35 @@
+# Maintainer: Johannes Löthberg <johannes@kyriasis.com>
+
+pkgbase=python-pafy
+pkgname=(python-pafy python2-pafy)
+pkgver=0.5.3.1
+pkgrel=1
+
+pkgdesc="Python API for YouTube"
+url="http://np1.github.io/pafy"
+arch=('any')
+license=('GPL3')
+
+makedepends=('python-setuptools' 'python2-setuptools')
+optdepends=('ffmpeg: fix issues with audio file downloads'
+            'youtube-dl: alternative backend')
+
+source=("python-pafy-$pkgver.tar.gz::https://github.com/np1/pafy/archive/v$pkgver.tar.gz")
+
+sha1sums=('03e7d2e1570aa712ab3823cba89298a5c624e94a')
+
+package_python-pafy() {
+	depends=('python')
+
+	cd pafy-$pkgver
+	python setup.py install --root="$pkgdir" --optimize=1
+}
+
+package_python2-pafy() {
+	depends=('python2')
+
+	cd pafy-$pkgver
+
+	python2 setup.py install --root="$pkgdir" --optimize=1
+	rm "$pkgdir"/usr/bin/ytdl
+}

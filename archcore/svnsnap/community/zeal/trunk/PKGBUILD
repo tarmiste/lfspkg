@@ -1,0 +1,34 @@
+# $Id: PKGBUILD 273931 2017-12-12 07:44:42Z arojas $
+# Maintainer:  Bartłomiej Piotrowski <bpiotrowski@archlinux.org>
+# Contributor: Oleg Shparber <trollixx+aur@gmail.com>
+# Contributor: Thomas Weißschuh <thomas t-8ch de>
+
+pkgname=zeal
+epoch=1
+pkgver=0.5.0
+pkgrel=1
+pkgdesc='An offline API documentation browser'
+arch=('x86_64')
+url='https://zealdocs.org/'
+license=(GPL3)
+depends=(qt5-webkit hicolor-icon-theme libarchive qt5-x11extras)
+source=(zeal-${pkgver}.tar.gz::https://github.com/zealdocs/zeal/archive/v${pkgver}.tar.gz
+        0001-Revert-doc-Add-Carbon-ad-to-the-welcome-page.patch)
+sha256sums=('3efb7b1b5d9a05f0fc60a6686571f7a4b58fa6f6d66f1baf608e83b10fb1290c'
+            '6b0a5642be3bd6b36f02973a0b28c15334803cf93ec70a5d18601852a974dac1')
+
+prepare() {
+  cd $pkgname-$pkgver
+  # patch -p1 -i "$srcdir/0001-Revert-doc-Add-Carbon-ad-to-the-welcome-page.patch"
+}
+
+build() {
+  cd $pkgname-$pkgver
+  qmake-qt5 CONFIG+=force_debug_info
+  make
+}
+
+package() {
+  cd $pkgname-$pkgver
+  make INSTALL_ROOT="$pkgdir" install
+}

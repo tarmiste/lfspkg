@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 310457 2017-11-19 22:29:12Z jgc $
+# $Id: PKGBUILD 314774 2018-01-14 11:04:42Z heftig $
 # Maintainer: Jan de Groot <jgc@archlinux.org>
 # Contributor: damir <damir@archlinux.org>
 
 pkgname=libcdio-paranoia
 pkgver=10.2+0.94+2
-pkgrel=1
+pkgrel=2
 pkgdesc="CD paranoia libraries from libcdio"
 arch=('x86_64')
 license=('GPL' 'LGPL')

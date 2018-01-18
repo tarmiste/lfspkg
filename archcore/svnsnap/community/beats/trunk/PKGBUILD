@@ -1,0 +1,147 @@
+# Maintainer: Massimiliano Torromeo <massimiliano.torromeo@gmail.com>
+# Contributor: Tyler Langlois <ty |at| tjll |dot| net>
+
+pkgbase=beats
+pkgname=(filebeat packetbeat metricbeat heartbeat-elastic auditbeat)
+pkgver=6.1.1
+pkgrel=1
+pkgdesc='Data shippers for Elasticsearch'
+arch=('x86_64')
+url='https://www.elastic.co/products/beats'
+license=('APACHE')
+depends=('glibc')
+makedepends=('go-pie' 'git' 'libpcap' 'rsync' 'python')
+optdepends=('elasticsearch: for standalone installation'
+            'python: for migration script')
+options=('!strip')
+source=("https://github.com/elastic/beats/archive/v$pkgver/beats-$pkgver.tar.gz"
+        "filebeat.sysusers"
+        "filebeat.service"
+        "packetbeat.service"
+        "metricbeat.service"
+        "heartbeat.service"
+        "auditbeat.service"
+        "filebeat-tmpfile.conf"
+        "packetbeat-tmpfile.conf"
+        "metricbeat-tmpfile.conf"
+        "heartbeat-tmpfile.conf"
+        "auditbeat-tmpfile.conf")
+sha256sums=('c69f0047644be919e42a1d8fa3383c894ca8e054d5b6f727f161ed4ce497ca84'
+            '33feb3690f8b31563cc1e2da557c2aa326501ce9ccd7e0a142036902bfdb05ff'
+            '4d5394cfe3299c9a6af5ac34c1ad4bcdc2e79162379cccbf00fb414eb28253c0'
+            '9f4e33fc768d3500fa3428dcbfda241c6473a2cae8cc4dbadf8f61ca9f2bbec5'
+            '26b123acd96808162a7f827ce6f0e9669140c2665fc28d76583a15996fbf853d'
+            '212cb4ab5a02d7078025f7d1f50f48e5caa25debce0852cf68cd8f89ed0a8d09'
+            'b7f1c61950f21c7fab31166c68d4a9e5027f0c5bcc40a97913d6d89eaf643b85'
+            'ec999a29bc19d1b36b84e03cbd7b00b29d3e08c97ca03043b9fd6bfbe04c5e2d'
+            '3f3ead4168d5b4953cca883d8a3c4552c26a75f52cedfcf6c7785bfd7bbae3c4'
+            'cb927141d3bed94cb5570789dd9fc97713e967580ee354ff393020811f087dca'
+            '9629931db8455891f0a6e9f9c91272716f2b47ec88f8a49e601423a16c7cdba5'
+            'dcdf1be6acda30cc3e8949b5affbc1fe7b0a1efc2a08dfe2f878d6eb6de84d38')
+
+prepare() {
+    cd beats-$pkgver
+
+    # Avoid installing extraneous configs
+    sed '/[- ]win/d ; /[- ]darwin/d ; /[- ]binary/d' -i */Makefile
+    # Install the Linux config as default
+    sed -r 's#/([a-z]+)-linux.yml#/\1.yml#' -i */Makefile
+
+    # Perform some timestomping to avoid make warnings
+    LANG=C _t="$(date -r Makefile +'%Y-%m-%d %k:%M:%S')"
+    touch -m -d "$_t" */Makefile
+
+    # Workaround to place extracted release into GOPATH
+    mkdir -p "$srcdir"/gopath/src/github.com/elastic
+    ln -sf "$srcdir"/beats-$pkgver \
+        "$srcdir"/gopath/src/github.com/elastic/beats
+}
+
+build() {
+    export GOPATH="$srcdir"/gopath
+    for beat in ${pkgname[@]}; do
+        beat="${beat%-elastic}"
+        msg2 "Building $beat..."
+        cd "$srcdir"/beats-$pkgver/$beat
+        make
+    done
+
+    for beat in filebeat metricbeat auditbeat; do
+        cd "$srcdir"/beats-$pkgver/$beat
+        cp _meta/fields.common.yml _meta/fields.generated.yml
+        python ../metricbeat/scripts/fields_collector.py >> _meta/fields.generated.yml
+        make kibana
+    done
+
+    for beat in heartbeat packetbeat; do
+        cd "$srcdir"/beats-$pkgver/$beat
+        make fields
+    done
+
+    cd "$srcdir"/beats-$pkgver/filebeat
+    make modules
+
+    mv "$srcdir"/beats-$pkgver/packetbeat/_meta/{fields,fields.generated}.yml
+}
+
+_do_package_beat() {
+    _pkgname="${pkgname%-elastic}"
+
+    backup=(etc/$_pkgname/$_pkgname.yml)
+
+    install -dm755 "$pkgdir"/{etc,usr/share,var/lib}/$_pkgname
+
+    cd beats-$pkgver/$_pkgname
+    make install-home HOME_PREFIX="$pkgdir"/usr/share/$_pkgname
+
+    cp $_pkgname.{yml,reference.yml} "$pkgdir"/etc/$_pkgname
+    install -Dm644 _meta/fields.generated.yml "$pkgdir"/etc/$_pkgname/fields.yml
+
+    install -Dm755 $_pkgname \
+                   "$pkgdir"/usr/bin/$_pkgname
+    install -Dm644 "$srcdir"/$_pkgname.service \
+                   "$pkgdir"/usr/lib/systemd/system/$_pkgname.service
+    install -Dm644 "$srcdir"/$_pkgname-tmpfile.conf \
+                   "$pkgdir"/usr/lib/tmpfiles.d/$_pkgname.conf
+}
+
+package_filebeat() {
+    pkgdesc='Sends log files to Logstash or directly to Elasticsearch'
+
+    _do_package_beat
+
+    cd "$srcdir"/beats-$pkgver/$pkgname
+    cp -R modules.d "$pkgdir"/etc/$pkgname/
+    install -Dm644 "$srcdir"/$pkgname.sysusers \
+                   "$pkgdir"/usr/lib/sysusers.d/$pkgname.conf
+}
+
+package_packetbeat() {
+    pkgdesc='Analyzes network traffic and sends the data to Elasticsearch'
+    depends=('libpcap')
+
+    _do_package_beat
+}
+
+package_metricbeat() {
+    pkgdesc='Server monitoring agent that sends metrics to Elasticsearch'
+    conflicts=('topbeat')
+    replaces=('topbeat')
+
+    _do_package_beat
+}
+
+package_heartbeat-elastic() {
+    pkgdesc='Ping remote services for availability and log results to Elasticsearch or send to Logstash'
+    conflicts=('heartbeat')
+    replaces=('heartbeat')
+
+    _do_package_beat
+}
+
+package_auditbeat() {
+    pkgdesc='Audit the activities of users and processes on your system'
+    depends=('audit')
+
+    _do_package_beat
+}

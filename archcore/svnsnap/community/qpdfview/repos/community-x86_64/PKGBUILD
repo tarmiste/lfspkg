@@ -1,0 +1,34 @@
+# $Id: PKGBUILD 283673 2018-01-17 14:05:35Z bgyorgy $
+# Maintainer: Alad Wenter <alad@mailbox.org>
+# Contributor: Adam Reichold <adam.reichold@t-online.de>
+
+pkgname=qpdfview
+pkgver=0.4.17beta1
+pkgrel=5
+pkgdesc='A tabbed PDF viewer using the poppler library.'
+url='https://launchpad.net/qpdfview'
+arch=('x86_64')
+license=('GPL2')
+depends=('libcups' 'libsynctex' 'poppler-qt5' 'qt5-svg')
+makedepends=('qt5-tools' 'libspectre' 'djvulibre')
+optdepends=('libspectre: for PostScript support'
+            'djvulibre: for DjVu support')
+source=("https://launchpad.net/qpdfview/trunk/$pkgver/+download/qpdfview-$pkgver.tar.gz"
+        "https://launchpad.net/qpdfview/trunk/$pkgver/+download/qpdfview-$pkgver.tar.gz.asc")
+sha256sums=('60206c5f76410a35098e3c965552cec08cd85941776ea6f6b207d7ea63ce940f'
+            'SKIP')
+# Adam Reichold <adam.reichold@t-online.de>
+validpgpkeys=('1F521FF0F87E9E1CDE46B8A9F4928C4DD24D4DF8')
+
+build() {
+    cd "$pkgname-$pkgver"
+    lrelease-qt5 qpdfview.pro
+    qmake-qt5 qpdfview.pro
+    make
+}
+
+package() {
+    cd "$pkgname-$pkgver"
+    make INSTALL_ROOT="$pkgdir" install
+}
+

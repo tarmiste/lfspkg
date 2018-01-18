@@ -1,0 +1,45 @@
+# $Id: PKGBUILD 267280 2017-11-18 13:49:21Z foxboron $
+# Maintainer: Morten Linderud <foxboron@archlinux.org>
+# Contributor: Balló György <ballogyor+arch at gmail dot com>
+
+_pkgbase=send2trash
+pkgbase=python-$_pkgbase
+pkgname=('python-send2trash' 'python2-send2trash')
+pkgver=1.4.2
+pkgrel=1
+pkgdesc="Send file to trash natively"
+arch=('any')
+url="https://github.com/hsoft/send2trash"
+license=('BSD')
+makedepends=('python' 'python-setuptools'
+	     'python' 'python2-setuptools')
+source=("$pkgbase-$pkgver.tar.gz::https://github.com/hsoft/$_pkgbase/archive/$pkgver.tar.gz")
+sha256sums=('3fd57fc13078f3570e70a860a15f92eec8fa08933ca2e1dba43a98ee2587de39')
+
+prepare() {
+	cp -a $_pkgbase-$pkgver{,-python2}
+}
+
+build() {
+	cd $_pkgbase-$pkgver
+	python setup.py build
+
+	cd ../$_pkgbase-$pkgver-python2
+	python2 setup.py build
+}
+
+package_python-send2trash() {
+	depends=('python')
+
+	cd $_pkgbase-$pkgver
+	python setup.py install --root "$pkgdir" --optimize=1 --skip-build
+	install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
+
+package_python2-send2trash() {
+	depends=('python2')
+
+	cd $_pkgbase-$pkgver-python2
+	python2 setup.py install --root "$pkgdir" --optimize=1 --skip-build
+	install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}

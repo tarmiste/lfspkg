@@ -1,0 +1,28 @@
+# $Id: PKGBUILD 207800 2017-01-17 21:00:12Z arodseth $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Maintainer: Alexander F Rødseth <xyproto@archlinux.org>
+# Contributor: Damir Perisa <damir.perisa@bluewin.ch>
+
+pkgname=opendesktop-fonts
+pkgver=1.4.2
+pkgrel=4
+pkgdesc='Chinese TrueType Fonts'
+arch=('any')
+url='http://www.opendesktop.org.tw/'
+license=('custom:Arphic Public License')
+depends=('fontconfig' 'xorg-font-utils')
+provides=('ttf-fireflysung')
+replaces=('ttf-fireflysung')
+#source=("ftp://ftp.opendesktop.org.tw/odp/ODOFonts/OpenFonts/${pkgname}-${pkgver}.tar.gz")
+source=("https://sources.archlinux.org/other/${pkgname}/${pkgname}-${pkgver}.tar.gz")
+md5sums=('c33e83d27ac3401bc51a2b8a88705c78')
+
+package() {
+  cd "$pkgname-$pkgver"
+
+  install -d "$pkgdir/usr/share/fonts/TTF"
+  install -m 644 *.ttf *.ttc "$pkgdir/usr/share/fonts/TTF"
+  install -D -m644 COPYRIGHT "$pkgdir/usr/share/licenses/${pkgname}/LICENSE"
+}
+
+# vim:set ts=2 sw=2 et:

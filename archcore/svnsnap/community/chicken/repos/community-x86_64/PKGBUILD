@@ -1,0 +1,30 @@
+# $Id: PKGBUILD 274882 2017-12-19 12:57:22Z arodseth $
+# Maintainer: Alexander F Rødseth <xyproto@archlinux.org>
+# Contributor: Vesa Kaihlavirta <vegai@iki.fi>
+# Contributor: David <david@pako.st>
+
+pkgname=chicken
+pkgver=4.13.0
+pkgrel=1
+pkgdesc='Feature rich R5RS Scheme compiler and interpreter'
+arch=('x86_64')
+url='http://call-cc.org/'
+conflicts=('mono') # /usr/bin/csc
+license=('BSD')
+makedepends=('chicken')
+options=('staticlibs')
+source=("https://code.call-cc.org/releases/$pkgver/$pkgname-$pkgver.tar.gz") # ${pkgver%.*}
+sha256sums=('add549619a31363d6608b39e0cf0e68b9d5e6ff2a719b5691ddeba57229c6c43')
+
+build() {
+  make -C "$pkgname-$pkgver" PLATFORM=linux PREFIX=/usr -j1
+}
+
+package() {
+  cd "$pkgname-$pkgver"
+  make PLATFORM=linux PREFIX=/usr DESTDIR="$pkgdir" -j1 install
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
+
+# getver: code.call-cc.org/releases/current/NEWS
+# vim: ts=2 sw=2 et:

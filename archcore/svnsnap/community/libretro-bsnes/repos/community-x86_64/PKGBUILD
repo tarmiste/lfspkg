@@ -1,0 +1,40 @@
+# $Id: PKGBUILD 275514 2017-12-22 15:46:22Z alucryd $
+# Maintainer: Maxime Gauduin <alucryd@archlinux.org>
+
+pkgname=libretro-bsnes
+pkgver=543
+pkgrel=1
+pkgdesc='Super Nintendo Entertainment System cores'
+arch=('x86_64')
+url='https://github.com/libretro/bsnes-libretro'
+license=('GPL3')
+groups=('libretro')
+depends=('gcc-libs' 'glibc' 'libretro-core-info')
+makedepends=('git')
+_commit='a4800add4a2c5fed274bc0d68fcc3c4f060d92bd'
+source=("libretro-bsnes::git+https://github.com/libretro/bsnes-libretro#commit=${_commit}")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd libretro-bsnes
+
+  git rev-list --count HEAD
+}
+
+build() {
+  cd libretro-bsnes
+
+  for p in accuracy balanced performance; do
+    make profile=${p}
+  done
+}
+
+package() {
+  cd libretro-bsnes
+
+  for p in accuracy balanced performance; do
+    install -Dm 644 out/bsnes_${p}_libretro.so -t "${pkgdir}"/usr/lib/libretro/
+  done
+}
+
+# vim: ts=2 sw=2 et:

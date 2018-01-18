@@ -1,0 +1,25 @@
+# Maintainer: Pierre Neidhardt <ambrevar@gmail.com>
+# Contributor: Eli Schwartz <eschwartz93@gmail.com>
+# Contributor: Renato Garcia <fgarcia.renato@gmail.com>
+
+pkgname=trash-cli
+pkgver=0.17.1.14
+pkgrel=2
+pkgdesc="Command line trashcan (recycle bin) interface"
+arch=("any")
+url="https://github.com/andreafrancia/$pkgname"
+license=("GPL")
+depends=("python")
+makedepends=("python-setuptools")
+source=("$pkgname-$pkgver.tar.gz::https://github.com/andreafrancia/$pkgname/archive/$pkgver.tar.gz")
+sha256sums=('8fdd20e5e9c55ea4e24677e602a06a94a93f1155f9970c55b25dede5e037b974')
+
+build() {
+	cd "$srcdir/$pkgname-$pkgver"
+	python setup.py build
+}
+
+package(){
+	cd "$srcdir/$pkgname-$pkgver"
+	python setup.py install --root="$pkgdir" --optimize=1
+}

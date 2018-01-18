@@ -1,0 +1,62 @@
+# $Id: PKGBUILD 282748 2018-01-15 16:53:15Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Daniel Wallace <danielwallace at gtmanfred dot com>
+
+pkgbase=python-oslo-concurrency
+pkgname=(python-oslo-concurrency python2-oslo-concurrency)
+pkgver=3.25.0
+pkgrel=1
+pkgdesc="OpenStack library for all concurrency-related code"
+arch=('any')
+url="https://pypi.python.org/pypi/oslo.concurrency/$pkgver"
+license=('Apache')
+makedepends=('python-setuptools' 'python2-setuptools' 'python-pbr' 'python2-pbr' 'python-oslo-config'
+             'python2-oslo-config' 'python-oslo-i18n' 'python2-oslo-i18n' 'python-oslo-utils'
+             'python2-oslo-utils' 'python-fasteners' 'python2-fasteners' 'python2-enum34')
+checkdepends=('python-mock' 'python2-mock' 'python-oslotest' 'python2-oslotest' 'python-oslo-config'
+              'python2-oslo-config' 'python-eventlet' 'python2-eventlet')
+options=('!emptydirs')
+source=("$pkgbase-$pkgver.tar.gz::https://github.com/openstack/oslo.concurrency/archive/$pkgver.tar.gz")
+sha512sums=('80bd92df5bd6433f5eb3e8571496176c4b959a76afbbfbe9d76196b14ecf4206521a5de33b87f529821908232a1f0fe682f6c0ee3872bc2aa058f8085f8f1498')
+
+prepare() {
+  cp -a oslo.concurrency-$pkgver{,-py2}
+
+  export PBR_VERSION=$pkgver
+}
+
+build() {
+  cd "$srcdir"/oslo.concurrency-$pkgver
+  python setup.py build
+
+  cd "$srcdir"/oslo.concurrency-$pkgver-py2
+  python2 setup.py build
+}
+
+check() {
+  cd "$srcdir"/oslo.concurrency-$pkgver
+  python setup.py testr || warning "Tests failed"
+
+  cd "$srcdir"/oslo.concurrency-$pkgver-py2
+  PYTHON=python2 python2 setup.py testr || warning "Tests failed"
+}
+
+package_python-oslo-concurrency() {
+  depends=('python-six' 'python-pbr' 'python-oslo-config' 'python-oslo-i18n' 'python-oslo-utils'
+           'python-fasteners')
+
+  cd "$srcdir"/oslo.concurrency-$pkgver
+  python setup.py install --root="$pkgdir" --optimize=1
+}
+
+package_python2-oslo-concurrency() {
+  depends=('python2-six' 'python2-pbr' 'python2-oslo-config' 'python2-oslo-i18n'
+           'python2-oslo-utils' 'python2-fasteners' 'python2-enum34')
+
+  cd "$srcdir"/oslo.concurrency-$pkgver-py2
+  python2 setup.py install --root="$pkgdir" --optimize=1
+
+  mv "$pkgdir"/usr/bin/lockutils-wrapper{,2}
+}
+
+# vim:set ts=2 sw=2 et:

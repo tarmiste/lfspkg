@@ -1,0 +1,52 @@
+# $Id: PKGBUILD 278585 2018-01-04 07:31:39Z jlichtblau $
+# Maintainer: Jaroslav Lichtblau <svetlemodry@archlinux.org>
+# Contributor: Michele Schäuble <mschaeuble@swissonline.ch>
+
+pkgname=josm
+pkgver=13265
+pkgrel=1
+pkgdesc="An editor for OpenStreetMap written in Java"
+arch=('any')
+url="http://josm.openstreetmap.de/"
+license=('GPL')
+depends=('java-runtime>=8' 'libxtst' 'ttf-font')
+changelog=$pkgname.changelog
+backup=('etc/conf.d/josm')
+source=(https://josm.openstreetmap.de/$pkgname-tested.jar
+        https://josm.openstreetmap.de/export/HEAD/$pkgname/trunk/linux/tested/usr/share/applications/$pkgname.desktop
+        $pkgname.conf.d)
+noextract=($pkgname-tested.jar)
+sha256sums=('25b7335163d8d8bdfaf1ecf1f5be0944483c6a96e2bb176a9081d3135cedb756'
+            '9b18b076fd371fc87b851a700bb1fff6547b061769af57a3abc9af83405c16d2'
+            'c86a73251eed42fcb129ae9b88a0ee3cf03d8d00a9385519ad536d5af0907663')
+
+prepare() {
+  cd "${srcdir}"
+  bsdtar -xf $pkgname-tested.jar images/logo.png
+}
+
+package() {
+  cd "${srcdir}"
+
+  install -Dm644 $pkgname-tested.jar "${pkgdir}"/usr/share/java/$pkgname/$pkgname.jar
+
+#.desktop and icon file
+  install -Dm644 "${srcdir}"/${pkgname}.desktop ${pkgdir}/usr/share/applications/$pkgname.desktop
+  install -Dm644 images/logo.png "${pkgdir}"/usr/share/pixmaps/$pkgname.png
+
+#executable file
+  install -d "${pkgdir}"/usr/bin
+  cat <<"EOF" >"${pkgdir}"/usr/bin/$pkgname 
+#!/bin/sh
+# source application-specific settings
+while true; do
+    JOSM_ARGS=
+    [ -f /etc/conf.d/josm ] && . /etc/conf.d/josm
+    CLASSPATH="/usr/share/java/josm/josm.jar"
+    java ${JOSM_ARGS} -cp "${CLASSPATH}" -Djosm.restart=true org.openstreetmap.josm.gui.MainApplication "$@"
+    [ $? -eq 9 ] || break
+done
+EOF
+  chmod 755 "${pkgdir}"/usr/bin/$pkgname
+  install -Dm644 "${srcdir}"/$pkgname.conf.d "${pkgdir}"/etc/conf.d/$pkgname
+}

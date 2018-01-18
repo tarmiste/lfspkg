@@ -1,0 +1,37 @@
+# $Id: PKGBUILD 273227 2017-12-08 05:56:44Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+
+pkgname=debootstrap
+pkgver=1.0.93
+pkgrel=1
+pkgdesc="Bootstrap a basic Debian system"
+arch=('any')
+license=('GPL')
+url="https://tracker.debian.org/pkg/debootstrap"
+depends=('wget' 'binutils')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/felixonmars/debootstrap/archive/$pkgver.tar.gz"
+        arch-detect.patch)
+optdepends=('gnupg: check release signatures'
+            'debian-archive-keyring: check release signatures for Debian'
+            'ubuntu-keyring: check release signatures for Ubuntu')
+sha512sums=('57a6aa5d27b1b600f49db847b238e412a9819c499995e4dbc63943bb7c6a738f4d97befc2a9d25575a6d619bdc64e838654fa629573ee5fe95c6bc56758a1b8b'
+            '9e4c805b174eeb9ecab13701249c56542c1dc0c371df5f708540d17959f89de80763c4311972abb8f1d4f82b13080f7aa835028c1e5016ee17eebc32c8daa6e7')
+
+prepare() {
+  cd debootstrap-$pkgver
+
+  sed -i 's/sbin/bin/g' Makefile
+
+  # Debian defaults
+  sed -i 's|export PATH|export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"|' debootstrap
+
+  # Detect Architecture
+  patch -p1 -i ../arch-detect.patch
+}
+
+package() {
+  cd debootstrap-$pkgver
+  make DESTDIR="$pkgdir" install
+
+  install -Dm644 debootstrap.8 "$pkgdir"/usr/share/man/man8/debootstrap.8
+}

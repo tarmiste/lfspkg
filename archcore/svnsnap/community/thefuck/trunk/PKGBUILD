@@ -1,0 +1,43 @@
+# $Id: PKGBUILD 268252 2017-11-23 23:31:12Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+
+pkgname=thefuck
+pkgver=3.25
+pkgrel=1
+pkgdesc="Magnificent app which corrects your previous console command"
+arch=('any')
+url="https://github.com/nvbn/thefuck"
+license=('MIT')
+depends=('python-setuptools' 'python-psutil' 'python-six' 'python-colorama' 'python-decorator'
+         'python-pyte')
+makedepends=('python-pip')
+checkdepends=('python-pytest-mock' 'python-mock' 'python-pexpect')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/nvbn/thefuck/archive/$pkgver.tar.gz")
+sha512sums=('c7b215358c09e1fa5e6aae519e7d6c3fd50027b4c72bb1c128786cd2cff707196f2b9b2a23dfed34d841874caab9463791e82c9083f6aac9c90f26d12a4d4598')
+
+build() {
+  cd thefuck-$pkgver
+  python setup.py build
+}
+
+check() {
+  cd thefuck-$pkgver
+
+  # Hack distribution test by installing it and set PYTHONPATH afterwards
+  python setup.py install --root="$PWD/tmp_install" --optimize=1
+
+  # Hack $HOME as it's / in the chroot and not writable
+  cp tests/test_conf.py "$srcdir/test_conf.py.bak"
+  sed -i "s|data = {}|data = {'HOME': '$srcdir'}|" tests/test_conf.py
+  LC_CTYPE=en_US.utf8 PYTHONPATH="$PWD/tmp_install/usr/lib/python3.6/site-packages:$PYTHONPATH" py.test tests
+  mv "$srcdir/test_conf.py.bak" tests/test_conf.py
+}
+
+package() {
+  cd thefuck-$pkgver
+  python setup.py install -O1 --prefix=/usr --root="$pkgdir"
+
+  install -Dm644 LICENSE.md "$pkgdir"/usr/share/licenses/$pkgname/LICENSE.md
+}
+
+# vim:set ts=2 sw=2 et:

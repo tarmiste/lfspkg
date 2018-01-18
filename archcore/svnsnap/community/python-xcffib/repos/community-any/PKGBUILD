@@ -1,0 +1,53 @@
+# $Id: PKGBUILD 209823 2017-02-04 07:34:30Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Roger Duran <rogerduran@gmail.com>
+
+pkgbase=python-xcffib
+pkgname=(python-xcffib python2-xcffib)
+pkgver=0.5.1
+pkgrel=1
+pkgdesc="Python3 drop in replacement for xpyb, an XCB python binding"
+arch=('any')
+url="https://pypi.python.org/pypi/xcffib"
+license=('Apache')
+makedepends=('python-setuptools' 'python2-setuptools' 'python-cffi' 'python2-cffi' 'python-six'
+             'python2-six' 'libxcb' 'git' 'haskell-xcffib')
+checkdepends=('python-nose' 'python2-nose' 'xorg-server-xvfb' 'xorg-xeyes')
+source=("git+https://github.com/tych0/xcffib.git#tag=v$pkgver")
+md5sums=('SKIP')
+
+prepare() {
+  cp -a xcffib{,-py2}
+}
+
+build() {
+  cd "$srcdir/xcffib"
+  make xcffib GEN=xcffibgen CABAL=true
+  python setup.py build
+
+  cd "$srcdir/xcffib-py2"
+  make xcffib GEN=xcffibgen CABAL=true
+  python2 setup.py build
+}
+
+check() {
+  cd "$srcdir/xcffib"
+  nosetests3
+
+  cd "$srcdir/xcffib-py2"
+  nosetests2
+}
+
+package_python-xcffib() {
+  depends=('python-six' 'python-cffi' 'libxcb')
+
+  cd "$srcdir/xcffib"
+  python setup.py install --root="$pkgdir/" --optimize=1
+}
+
+package_python2-xcffib() {
+  depends=('python2-six' 'python2-cffi' 'libxcb')
+
+  cd "$srcdir/xcffib-py2"
+  python2 setup.py install --root="$pkgdir/" --optimize=1
+}

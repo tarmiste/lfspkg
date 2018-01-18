@@ -1,0 +1,36 @@
+# $Id: PKGBUILD 275535 2017-12-22 18:49:10Z alucryd $
+# Maintainer: Maxime Gauduin <alucryd@archlinux.org>
+
+pkgname=libretro-reicast
+pkgver=2618
+pkgrel=1
+pkgdesc='Sega Dreamcast core'
+arch=('x86_64')
+url='https://github.com/libretro/reicast-emulator'
+license=('GPL2')
+groups=('libretro')
+depends=('gcc-libs' 'glibc' 'libgl' 'libretro-core-info')
+makedepends=('git' 'mesa')
+_commit='74c4ddf8c7efcd87dfa674c7dfc80b97a9be4122'
+source=("libretro-reicast::git+https://github.com/libretro/reicast-emulator.git#commit=${_commit}")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd libretro-reicast
+
+  git rev-list --count HEAD
+}
+
+build() {
+  cd libretro-reicast
+
+  make
+}
+
+package() {
+  cd libretro-reicast
+
+  install -Dm 644 reicast_libretro.so -t "${pkgdir}"/usr/lib/libretro/
+}
+
+# vim: ts=2 sw=2 et:

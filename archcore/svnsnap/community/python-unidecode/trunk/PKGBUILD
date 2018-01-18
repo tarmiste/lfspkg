@@ -1,0 +1,47 @@
+# $Id: PKGBUILD 242341 2017-07-04 22:05:13Z alucryd $
+# Maintainer: Maxime Gauduin <alucryd@archlinux.org>
+# Contributor: Kwpolska <kwpolska@kwpolska.tk>
+
+pkgbase=python-unidecode
+pkgname=('python-unidecode' 'python2-unidecode')
+pkgver=0.04.21
+pkgrel=1
+pkgdesc='ASCII transliterations of Unicode text'
+arch=('any')
+url='https://github.com/avian2/unidecode'
+license=('GPL')
+makedepends=('python-setuptools' 'python2-setuptools')
+source=("python-unidecode-${pkgver}.tar.gz::https://github.com/avian2/unidecode/archive/release-${pkgver}.tar.gz")
+sha256sums=('94aae5e8bed7a7646ba3a206f3fa2020464b9f88cef1853bc5cc580be15a3a3b')
+
+prepare() {
+  cp -r {,python-}unidecode-release-${pkgver}
+   mv {,python2-}unidecode-release-${pkgver}
+}
+
+build() {
+  for py in python{,2}; do
+    pushd ${py}-unidecode-release-${pkgver}
+    ${py} setup.py build
+    popd
+  done
+}
+
+package_python-unidecode() {
+  depends=('python')
+
+  cd python-unidecode-release-${pkgver}
+
+  python setup.py install --root="${pkgdir}" --optimize='1'
+}
+
+package_python2-unidecode() {
+  depends=('python2')
+
+  cd python2-unidecode-release-${pkgver}
+
+  python2 setup.py install --root="${pkgdir}" --optimize='1'
+  mv "${pkgdir}"/usr/bin/unidecode{,2}
+}
+
+# vim: ts=2 sw=2 et:

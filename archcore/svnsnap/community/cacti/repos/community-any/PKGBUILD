@@ -1,0 +1,34 @@
+# $Id: PKGBUILD 278129 2018-01-03 08:57:37Z arojas $
+# Maintainer: Sergej Pupykin <pupykin.s+arch@gmail.com>
+# Contributor: tuxbubling <tuxbubling@jabber.fr>
+
+pkgname=cacti
+pkgver=1.1.29
+pkgrel=1
+pkgdesc="complete network graphing solution designed to harness the power of RRDTool's data storage and graphing functionality"
+arch=(any)
+url="https://www.cacti.net"
+license=('GPL')
+depends=('rrdtool' 'mariadb' 'php' 'php-gd' 'net-snmp' 'xorg-fonts-100dpi')
+backup=('etc/webapps/cacti/.htaccess'
+	'etc/webapps/cacti/config.php')
+install=cacti.install
+source=("https://www.cacti.net/downloads/$pkgname-${pkgver/_/}.tar.gz")
+sha256sums=('16f19adc5d9a398336cb05a15af43cb073e268c94a9c29cae06622a95527c1e3')
+
+package() {
+  mkdir -p "$pkgdir"/usr/share/webapps/cacti "$pkgdir"/etc/webapps/cacti
+  mv "$srcdir"/$pkgname-${pkgver/_/}/* "$pkgdir"/usr/share/webapps/cacti
+  echo "Require all denied" >> "$pkgdir"/etc/webapps/cacti/.htaccess
+  mv "$pkgdir"/usr/share/webapps/cacti/include/config.php "$pkgdir"/etc/webapps/cacti
+  ln -s /etc/webapps/cacti/.htaccess "$pkgdir"/usr/share/webapps/cacti/.htaccess
+  ln -s /etc/webapps/cacti/config.php "$pkgdir"/usr/share/webapps/cacti/include/config.php
+
+  install -dm0755 "$pkgdir"/var/log/ "$pkgdir"/var/lib/cacti/
+
+  mv "$pkgdir"/usr/share/webapps/cacti/rra "$pkgdir"/var/lib/cacti/rra
+  ln -s /var/lib/cacti/rra "$pkgdir"/usr/share/webapps/cacti/rra
+
+  mv "$pkgdir"/usr/share/webapps/cacti/log "$pkgdir"/var/log/cacti
+  ln -s /var/log/cacti "$pkgdir"/usr/share/webapps/cacti/log
+}

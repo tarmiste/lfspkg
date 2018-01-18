@@ -1,0 +1,52 @@
+# $Id: PKGBUILD 244898 2017-07-13 08:14:00Z felixonmars $
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+
+pkgbase=python-rply
+pkgname=('python-rply' 'python2-rply')
+pkgver=0.7.5
+pkgrel=1
+pkgdesc="A pure Python Lex/Yacc that works with RPython"
+arch=('any')
+license=('BSD')
+url="https://rply.readthedocs.org"
+makedepends=('python-setuptools' 'python2-setuptools' 'python-appdirs' 'python2-appdirs')
+checkdepends=('python-pytest' 'python2-pytest')
+source=("$pkgbase-$pkgver.tar.gz::https://github.com/alex/rply/archive/v$pkgver.tar.gz")
+sha512sums=('ccecc451d9e2e0fdf9df7eaaeabface782d9159cc1caf1feae6e46210f6384aa1a78c15ea3c0e9dcc0bd0d2b28e3b1328c8d37e94a8968b07ef7938e5f5ce201')
+
+prepare() {
+  cp -a rply-$pkgver{,-py2}
+}
+
+build() {
+  cd "$srcdir"/rply-$pkgver
+  python setup.py build
+
+  cd "$srcdir"/rply-$pkgver-py2
+  python2 setup.py build
+}
+
+check() {
+  cd "$srcdir"/rply-$pkgver
+  py.test
+
+  cd "$srcdir"/rply-$pkgver-py2
+  py.test2
+}
+
+package_python-rply() {
+  depends=('python-appdirs')
+
+  cd rply-$pkgver
+  python setup.py install --root="$pkgdir" --optimize=1
+  install -D -m644 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+}
+
+package_python2-rply() {
+  depends=('python2-appdirs')
+
+  cd rply-$pkgver-py2
+  python2 setup.py install --root="$pkgdir" --optimize=1
+  install -D -m644 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+}
+
