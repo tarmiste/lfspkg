@@ -6,7 +6,6 @@
 # Contributor: Arvid Ephraim Picciani <aep@exys.org>
 # Contributor: Michael Krauss <hippodriver@gmx.net>
 
-pkgname=python-pyparsing
 pkgname=('python-pyparsing' 'python2-pyparsing')
 pkgver=2.2.0
 pkgrel=1
