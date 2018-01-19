@@ -97,9 +97,7 @@ cd       build</userinput></screen>
 
 <screen><userinput remap="configure">CC="gcc -isystem $GCC_INCDIR -isystem /usr/include" \
 ../configure --prefix=/usr                          \
-      --with-headers=/usr/include
-      --libdir=/usr/lib \
-      --libexecdir=/usr/lib \
+      --with-headers=/usr/include  \
       --disable-profile		\
              --disable-werror                       \
              --enable-kernel=&min-kernel;                    \
