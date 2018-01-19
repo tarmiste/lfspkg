@@ -1,0 +1,76 @@
+
+for i in `cat pkglist`
+do
+
+    found=0
+
+    if [ -d packages/$i/trunk ]
+    then
+    # check for exact package
+    
+        if [ `grep -c pkgname=${i} packages/$i/trunk/PKGBUILD` -ne '0' ]
+        then echo $i exact match packages/$i/trunk/PKGBUILD 
+        found=1
+        fi
+    
+        if [ `echo $found` -eq '0' ]
+        then
+            if [ `grep ^pkgname= packages/$i/trunk/PKGBUILD |grep -c $i` -ne '0' ]
+            then echo $i string match packages/$i/trunk/PKGBUILD 
+            found=1
+            fi
+    
+        fi
+
+
+    fi
+
+    if [ -d community/$i/trunk ]
+    then
+        if [ `echo $found` -eq '0' ]
+        then
+            if [ `grep -c pkgname=${i} community/$i/trunk/PKGBUILD` -ne '0' ]
+            then echo $i exact match community/$i/trunk/PKGBUILD 
+            found=1
+            fi
+        fi
+
+        if [ `echo $found` -eq '0' ]
+        then
+            if [ `grep ^pkgname= community/$i/trunk/PKGBUILD |grep -c $i` -ne '0' ]
+            then echo $i string match community/$i/trunk/PKGBUILD 
+            found=1
+            fi
+    
+        fi
+
+    fi
+
+    
+    # search for it
+    
+    if [ `echo $found` -eq '0' ]
+    then
+    
+        for j in `cat list`
+        do
+           if [ `grep ^pkgname= $j |grep -c "'$i'"` -ne '0' ]
+           then
+               echo $i search match $j
+               found=1
+           fi
+           if [ `grep ^pkgname= $j |grep -c '"$i"'` -ne '0' ]
+           then
+               echo $i search match $j
+               found=1
+           fi
+        done
+    
+    fi
+    
+    
+echo $i found=$found
+
+done
+   
+
