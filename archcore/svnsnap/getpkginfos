@@ -1,0 +1,10 @@
+ls */*/trunk/PKGBUILD  |grep -v libreoffice-still-i18n >dopkginfolist
+
+for i in `cat dopkginfolist`
+do 
+   echo ===== $i
+   cd `dirname $i`
+   rm -f PKGINFO
+   cat PKGBUILD ../../../getpkginfostub |bash >PKGINFO
+   cd ../../../
+done

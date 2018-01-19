@@ -1,5 +1,7 @@
 echo pkgbase=OPAR ${pkgbase[@]} EPAR
 echo pkgname=OPAR ${pkgname[@]} EPAR
+echo pkgver=OPAR ${pkgver[@]} EPAR
+echo pkgdesc=OPAR ${pkgdesc[@]} EPAR
 echo depends=OPAR ${depends[@]} EPAR
 echo optdepends=OPAR ${optdepends[@]} EPAR
 echo makedepends=OPAR ${makedepends[@]} EPAR
