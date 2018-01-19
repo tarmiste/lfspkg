@@ -6,18 +6,20 @@ do
 
     if [ -d packages/$i/trunk ]
     then
-    # check for exact package
+        # check for exact package name 
     
         if [ `grep -c pkgname=${i} packages/$i/trunk/PKGBUILD` -ne '0' ]
-        then echo $i exact match packages/$i/trunk/PKGBUILD 
-        found=1
+        then 
+           echo $i exact match packages/$i/trunk/PKGBUILD 
+           found=1
         fi
     
         if [ `echo $found` -eq '0' ]
         then
             if [ `grep ^pkgname= packages/$i/trunk/PKGBUILD |grep -c $i` -ne '0' ]
-            then echo $i string match packages/$i/trunk/PKGBUILD 
-            found=1
+            then 
+                echo $i string match packages/$i/trunk/PKGBUILD 
+                found=1
             fi
     
         fi
