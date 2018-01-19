@@ -71,7 +71,6 @@ cd       build</userinput></screen>
              --enable-plugins    \
              --enable-shared     \
              --disable-werror    \
-    --with-lib-path=/usr/lib:/usr/local/lib \
     --enable-threads \
     --enable-relro \
     --enable-deterministic-archives \
