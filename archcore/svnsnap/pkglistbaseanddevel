@@ -1,3 +1,4 @@
+# Initial list of packages installed for base and base-devel installation.
 acl
 archlinux-keyring
 argon2
