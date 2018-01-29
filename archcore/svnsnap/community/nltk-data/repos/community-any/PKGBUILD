@@ -1,22 +1,25 @@
-# $Id: PKGBUILD 175406 2016-05-14 22:08:10Z arodseth $
+# $Id: PKGBUILD 287260 2018-01-26 19:21:08Z arodseth $
 # Maintainer: Alexander F Rødseth <xyproto@archlinux.org>
 # Contributor: Thomas Dziedzic < gostrc at gmail >
 # Contributor: Anton Bazhenov <anton.bazhenov at gmail>
 # Contributor: Michal Bozon <michal.bozon__at__gmail.com>
 
 pkgname=nltk-data
-pkgver=3.2.1
+pkgver=3.2.5
 pkgrel=1
 pkgdesc='Corpora, grammars and other linguistic data for NLTK'
 arch=('any')
 url='http://www.nltk.org/data.html'
 license=('custom')
-makedepends=('unzip' "python-nltk=$pkgver")
+makedepends=("python-nltk=$pkgver" 'python-six' 'unzip')
 source=('LICENSE')
 md5sums=('69998d5f493a60e7a1467b8003ab8e22')
 
 package() {
   install -d "$pkgdir/usr/share/nltk_data"
+
+  # Downloading the data.
+  # TODO: Do what the python script does, but in this PKGBUILD
   python -m nltk.downloader -d "$pkgdir/usr/share/nltk_data" all
 
   for _dir in "$pkgdir/usr/share/nltk_data/"*; do
@@ -28,8 +31,7 @@ package() {
   find "$pkgdir/usr/share/nltk_data/" -type d -exec chmod 0755 {} \;
 
   install -d "$pkgdir/usr/share/licenses/nltk-data"
-  install -m644 "$srcdir/LICENSE" \
-    "$pkgdir/usr/share/licenses/nltk-data"
+  install -m644 "$srcdir/LICENSE" "$pkgdir/usr/share/licenses/nltk-data"
 }
 
-# vim:set ts=2 sw=2 et:
+# vim: ts=2 sw=2 et:

@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 278634 2018-01-04 12:37:28Z felixonmars $
+# $Id: PKGBUILD 286880 2018-01-25 20:28:03Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 pkgname=cgrep
 pkgver=6.6.22
-pkgrel=1
+pkgrel=7
 pkgdesc="A context-aware grep for source codes"
 url="http://awgn.github.io/cgrep/"
 license=("GPL2")

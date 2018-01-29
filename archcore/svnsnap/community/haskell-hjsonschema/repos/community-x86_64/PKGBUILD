@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283300 2018-01-16 14:14:44Z felixonmars $
+# $Id: PKGBUILD 287361 2018-01-27 08:52:05Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=hjsonschema
 pkgname=haskell-hjsonschema
 pkgver=1.7.2
-pkgrel=1
+pkgrel=7
 pkgdesc="JSON Schema library"
 url="https://github.com/seagreen/hjsonschema"
 license=("MIT")

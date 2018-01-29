@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283256 2018-01-16 13:48:30Z felixonmars $
+# $Id: PKGBUILD 286432 2018-01-24 13:33:28Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=cheapskate
 pkgname=haskell-cheapskate
 pkgver=0.1.1
-pkgrel=24
+pkgrel=28
 pkgdesc="Experimental markdown processor."
 url="http://github.com/jgm/cheapskate"
 license=("custom:BSD3")

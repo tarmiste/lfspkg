@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283410 2018-01-16 16:34:54Z felixonmars $
+# $Id: PKGBUILD 287234 2018-01-26 19:16:21Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=wai-app-static
 pkgname=haskell-wai-app-static
 pkgver=3.1.6.1
-pkgrel=124
+pkgrel=131
 pkgdesc="WAI application for static serving"
 url="http://www.yesodweb.com/book/web-application-interface"
 license=("MIT")

@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282345 2018-01-15 05:06:49Z felixonmars $
+# $Id: PKGBUILD 286406 2018-01-24 13:31:08Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=statistics
 pkgname=haskell-statistics
 pkgver=0.14.0.2
-pkgrel=16
+pkgrel=18
 pkgdesc="A library of statistical types, data, and functions"
 url="https://github.com/bos/statistics"
 license=("custom:BSD2")

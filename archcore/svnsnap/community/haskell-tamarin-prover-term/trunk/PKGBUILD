@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282166 2018-01-14 16:41:28Z felixonmars $
+# $Id: PKGBUILD 286365 2018-01-24 12:38:51Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=tamarin-prover-term
 pkgname=haskell-tamarin-prover-term
 pkgver=1.2.2
-pkgrel=7
+pkgrel=9
 pkgdesc="Term manipulation library for the tamarin prover"
 url="http://www.infsec.ethz.ch/research/software/tamarin"
 license=("GPL")

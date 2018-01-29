@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 310007 2017-11-15 14:11:34Z foutrelis $
+# $Id: PKGBUILD 315103 2018-01-18 21:01:29Z bpiotrowski $
 # Maintainer: Jan de Groot <jgc@archlinux.org>
 # Contributor: Arjan Timmerman <arjan@soulfly.nl>
 
 pkgname=genius
 pkgver=1.0.23
-pkgrel=1
+pkgrel=2
 pkgdesc="Advanced calculator including a mathematical programming language"
 arch=('x86_64')
 license=('GPL')

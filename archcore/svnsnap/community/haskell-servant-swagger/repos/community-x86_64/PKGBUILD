@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282695 2018-01-15 14:05:01Z felixonmars $
+# $Id: PKGBUILD 286957 2018-01-25 21:06:43Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=servant-swagger
 pkgname=haskell-servant-swagger
 pkgver=1.1.4
-pkgrel=16
+pkgrel=22
 pkgdesc="Generate Swagger specification for your servant API."
 url="https://github.com/haskell-servant/servant-swagger"
 license=("custom:BSD3")

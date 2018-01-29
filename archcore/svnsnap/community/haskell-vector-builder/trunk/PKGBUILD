@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 269642 2017-11-27 10:31:56Z felixonmars $
+# $Id: PKGBUILD 285624 2018-01-23 14:21:51Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=vector-builder
 pkgname=haskell-vector-builder
 pkgver=0.3.4.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Vector builder"
 url="https://github.com/nikita-volkov/vector-builder"
 license=("MIT")

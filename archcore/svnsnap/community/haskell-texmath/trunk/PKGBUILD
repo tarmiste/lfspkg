@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282029 2018-01-14 11:18:42Z felixonmars $
+# $Id: PKGBUILD 286098 2018-01-23 20:26:05Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=texmath
 pkgname=haskell-texmath
 pkgver=0.10.1
-pkgrel=3
+pkgrel=6
 pkgdesc="Conversion between formats used to represent mathematics."
 url="https://github.com/jgm/texmath"
 license=("GPL")

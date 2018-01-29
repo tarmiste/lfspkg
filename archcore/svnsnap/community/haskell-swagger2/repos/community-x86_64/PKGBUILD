@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282694 2018-01-15 14:04:59Z felixonmars $
+# $Id: PKGBUILD 286955 2018-01-25 21:06:38Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=swagger2
 pkgname=haskell-swagger2
 pkgver=2.2
-pkgrel=7
+pkgrel=13
 pkgdesc="Swagger 2.0 data model"
 url="https://github.com/GetShopTV/swagger2"
 license=("custom:BSD3")

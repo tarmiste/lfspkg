@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 282353 2018-01-15 05:07:09Z felixonmars $
+# $Id: PKGBUILD 285718 2018-01-23 16:05:59Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=attoparsec-iso8601
 pkgname=haskell-attoparsec-iso8601
 pkgver=1.0.0.0
-pkgrel=17
+pkgrel=18
 pkgdesc="Parsing of ISO 8601 dates, originally from aeson"
 url="https://github.com/bos/aeson"
 license=('custom:BSD3')

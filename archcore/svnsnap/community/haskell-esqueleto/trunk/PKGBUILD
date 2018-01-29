@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283323 2018-01-16 15:10:19Z felixonmars $
+# $Id: PKGBUILD 286487 2018-01-24 14:29:50Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=esqueleto
 pkgname=haskell-esqueleto
 pkgver=2.5.3
-pkgrel=43
+pkgrel=47
 pkgdesc="Type-safe EDSL for SQL queries on persistent backends."
 url="https://github.com/bitemyapp/esqueleto"
 license=("custom:BSD3")

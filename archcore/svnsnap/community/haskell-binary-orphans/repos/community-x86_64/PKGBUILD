@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282325 2018-01-15 05:05:38Z felixonmars $
+# $Id: PKGBUILD 286380 2018-01-24 13:29:20Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=binary-orphans
 pkgname=haskell-binary-orphans
 pkgver=0.1.8.0
-pkgrel=6
+pkgrel=8
 pkgdesc="Orphan instances for binary"
 url="https://github.com/phadej/binary-orphans"
 license=("custom:BSD3")

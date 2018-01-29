@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 268829 2017-11-26 08:00:52Z felixonmars $
+# $Id: PKGBUILD 286658 2018-01-24 19:31:55Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=boxes
 pkgname=haskell-boxes
 pkgver=0.1.4
-pkgrel=8
+pkgrel=9
 pkgdesc="2D text pretty-printing library"
 url="https://hackage.haskell.org/package/${_hkgname}"
 license=("custom:BSD3")

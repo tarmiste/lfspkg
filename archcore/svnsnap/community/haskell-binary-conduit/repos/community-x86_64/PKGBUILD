@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 283097 2018-01-16 08:57:56Z felixonmars $
+# $Id: PKGBUILD 285800 2018-01-23 16:11:29Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=binary-conduit
 pkgname=haskell-binary-conduit
 pkgver=1.2.5
-pkgrel=11
+pkgrel=12
 pkgdesc="Data serialization/deserialization conduit library"
 url="https://github.com/qnikst/binary-conduit/"
 license=('MIT')

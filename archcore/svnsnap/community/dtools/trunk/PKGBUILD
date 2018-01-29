@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 278959 2018-01-05 13:42:58Z wild $
+# $Id: PKGBUILD 284193 2018-01-19 19:10:25Z wild $
 # Maintainer: Dan Printzell <arch@vild.io>
 # Contributor: Mihails Strasunse <public@dicebot.lv>
 
 pkgname='dtools'
 pkgver=2.078.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Ancilliary tools for the D programming language"
 license=('Boost')
 groups=('dlang')
@@ -42,6 +42,7 @@ package() {
     cd $pkgdir
     ln -s dtools-rdmd usr/bin/rdmd
     ln -s dtools-dustmite usr/bin/dustmite
+    ln -s dtools-ddemangle usr/bin/ddemangle
 
     install -Dm644 $srcdir/LICENSE_1_0.txt usr/share/licenses/$pkgname/LICENSE
 }

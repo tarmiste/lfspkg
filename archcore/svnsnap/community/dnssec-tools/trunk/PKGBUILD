@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 266875 2017-11-15 14:29:11Z foutrelis $
+# $Id: PKGBUILD 285005 2018-01-22 16:31:28Z eschwartz $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Luca Fulchir <luca@fulchir.it>
 
@@ -54,11 +54,12 @@ prepare() {
       -e 's:/usr/sbin/dnssec-signzone:/usr/bin/dnssec-signzone:' \
       -i tools/etc/dnssec-tools/dnssec-tools.conf
 
-  export CFLAGS="$CFLASG -I/usr/include/openssl-1.0"
 }
 
 build() {
   cd "$srcdir/${pkgname}-${pkgver}"
+
+  export CFLAGS="$CFLAGS -I/usr/include/openssl-1.0"
   ./configure \
     --exec_prefix=/usr \
     --prefix=/usr \

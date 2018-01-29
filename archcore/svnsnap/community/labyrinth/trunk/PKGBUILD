@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 182762 2016-07-12 21:07:30Z bgyorgy $
+# $Id: PKGBUILD 284478 2018-01-21 02:48:38Z bgyorgy $
 # Maintainer: Balló György <ballogyor+arch at gmail dot com>
 # Contributor: M Rawash <mrawash@gmail.com>
 # Contributor: zhuqin <zhuqin83@gmail.com>
@@ -32,7 +32,7 @@ build() {
 
 package() {
   cd $pkgname-$pkgver
-  python2 setup.py install --root "$pkgdir" --optimize=1
+  python2 setup.py install --root="$pkgdir" --optimize=1
   make -C po localedir=$pkgdir/usr/share/locale install
   install -Dm644 data/$pkgname-16.png "$pkgdir/usr/share/icons/hicolor/16x16/apps/$pkgname.png"
   install -Dm644 data/$pkgname-22.png "$pkgdir/usr/share/icons/hicolor/22x22/apps/$pkgname.png"

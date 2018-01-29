@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283333 2018-01-16 15:42:53Z felixonmars $
+# $Id: PKGBUILD 286154 2018-01-24 07:30:14Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=shakespeare
 pkgname=haskell-shakespeare
 pkgver=2.0.14.1
-pkgrel=4
+pkgrel=6
 pkgdesc="A toolkit for making compile-time interpolated templates"
 url="http://www.yesodweb.com/book/shakespearean-templates"
 license=("MIT")

@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 283442 2018-01-16 16:49:10Z felixonmars $
+# $Id: PKGBUILD 287311 2018-01-26 23:33:56Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 pkgname=hopenpgp-tools
 pkgver=0.19.5
-pkgrel=44
+pkgrel=57
 pkgdesc="hOpenPGP-based command-line tools"
 url="http://floss.scru.org/hopenpgp-tools"
 license=("AGPL3")

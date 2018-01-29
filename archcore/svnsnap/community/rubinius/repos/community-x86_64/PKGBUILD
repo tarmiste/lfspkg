@@ -1,9 +1,9 @@
-# $Id: PKGBUILD 283571 2018-01-17 06:08:24Z heftig $
+# $Id: PKGBUILD 287144 2018-01-26 13:25:40Z heftig $
 # Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
 
 pkgbase=rubinius
 pkgname=(rubinius rubinius-ruby)
-pkgver=3.91
+pkgver=3.95
 pkgrel=1
 pkgdesc="Ruby runtime written in Ruby, designed for concurrency"
 arch=(x86_64)
@@ -14,7 +14,7 @@ makedepends=(llvm ruby clang valgrind)
 options=(!emptydirs)
 source=(http://releases.rubinius.com/${pkgbase}-${pkgver}.tar.bz2
         gemrc dirs.patch)
-sha256sums=('9be8f94a322cd27c84f51e8075635ee7193e407ea0b37d6e297bea01dd2aa0a6'
+sha256sums=('cb2f42645e5408c8017fe80975179ddc38357192193f16070120ee38a2891801'
             '4bb7eb2fe66e396ed16b589cdb656831407b39ad4e138d88536754c0448ac614'
             '01eaefc509d3192ade1115282b42e06a72b0ab9353b61d1779db296bb832e2f2')
 

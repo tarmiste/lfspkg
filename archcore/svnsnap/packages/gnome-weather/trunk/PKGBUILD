@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 305800 2017-09-18 13:16:10Z jgc $
+# $Id: PKGBUILD 315050 2018-01-18 09:29:42Z heftig $
 # Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
 
 pkgname=gnome-weather
@@ -10,7 +10,7 @@ arch=(any)
 license=(GPL)
 depends=(gtk3 gjs libgweather geoclue2 gnome-desktop)
 makedepends=(intltool gobject-introspection autoconf-archive appstream-glib git)
-groups=(gnome-extra)
+groups=(gnome)
 _commit=608877f993ab001666d9ca843c23c98c16459abe  # tags/3.26.0^0
 source=("git+https://git.gnome.org/browse/gnome-weather#commit=$_commit")
 sha256sums=('SKIP')

@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 271653 2017-12-02 02:53:53Z felixonmars $
+# $Id: PKGBUILD 284697 2018-01-21 18:50:17Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=comonad
 pkgname=haskell-comonad
 pkgver=5.0.2
-pkgrel=4
+pkgrel=5
 pkgdesc="Comonads"
 url="https://github.com/ekmett/comonad/"
 license=("custom:BSD3")

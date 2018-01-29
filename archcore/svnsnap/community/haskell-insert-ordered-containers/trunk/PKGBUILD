@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 282021 2018-01-14 11:12:49Z felixonmars $
+# $Id: PKGBUILD 286915 2018-01-25 20:50:06Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=insert-ordered-containers
 pkgname=haskell-insert-ordered-containers
 pkgver=0.2.1.0
-pkgrel=38
+pkgrel=44
 pkgdesc="Associative containers retating insertion order for traversals."
 url="https://github.com/phadej/insert-ordered-containers"
 license=('custom:BSD3')

@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 278322 2018-01-03 17:38:03Z felixonmars $
+# $Id: PKGBUILD 285778 2018-01-23 16:10:21Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=JuicyPixels
 pkgname=haskell-juicypixels
 pkgver=3.2.9.3
-pkgrel=1
+pkgrel=2
 pkgdesc="Picture loading/serialization (in png, jpeg, bitmap, gif, tga, tiff and radiance)"
 url="https://github.com/Twinside/Juicy.Pixels"
 license=("custom:BSD3")

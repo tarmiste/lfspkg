@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 277237 2017-12-30 15:03:54Z felixonmars $
+# $Id: PKGBUILD 285838 2018-01-23 16:15:27Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Thomas Dziedzic <gostrc@gmail.com>
 
 _hkgname=monoid-subclasses
 pkgname=haskell-monoid-subclasses
 pkgver=0.4.4
-pkgrel=5
+pkgrel=6
 pkgdesc="Subclasses of Monoid"
 url="https://github.com/blamario/monoid-subclasses/"
 license=('custom:BSD3')

@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 283433 2018-01-16 16:37:06Z felixonmars $
+# $Id: PKGBUILD 287229 2018-01-26 19:15:48Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=yesod-test
 pkgname=haskell-yesod-test
 pkgver=1.5.9.1
-pkgrel=16
+pkgrel=26
 pkgdesc="Integration testing for WAI/Yesod Applications"
 url="http://www.yesodweb.com"
 license=('MIT')

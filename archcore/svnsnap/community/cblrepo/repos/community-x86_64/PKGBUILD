@@ -1,9 +1,9 @@
-# $Id: PKGBUILD 282329 2018-01-15 05:06:06Z felixonmars $
+# $Id: PKGBUILD 286448 2018-01-24 13:34:55Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 pkgname=cblrepo
 pkgver=0.24.0
-pkgrel=50
+pkgrel=54
 pkgdesc="Tool to maintain a database of CABAL packages and their dependencies"
 url="https://github.com/magthe/cblrepo"
 license=("Apache")

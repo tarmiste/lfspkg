@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283156 2018-01-16 09:09:57Z felixonmars $
+# $Id: PKGBUILD 285652 2018-01-23 14:44:32Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=sbv
 pkgname=haskell-sbv
 pkgver=7.5
-pkgrel=1
+pkgrel=2
 pkgdesc="SMT Based Verification: Symbolic Haskell theorem prover using SMT solving"
 url="http://leventerkok.github.com/sbv"
 license=("custom:BSD3")

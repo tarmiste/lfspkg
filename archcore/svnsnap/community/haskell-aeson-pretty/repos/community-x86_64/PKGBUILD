@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282349 2018-01-15 05:07:00Z felixonmars $
+# $Id: PKGBUILD 286874 2018-01-25 20:27:36Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=aeson-pretty
 pkgname=haskell-aeson-pretty
 pkgver=0.8.5
-pkgrel=18
+pkgrel=21
 pkgdesc="JSON pretty-printing library and command-line tool."
 url="http://github.com/informatikr/aeson-pretty"
 license=("custom:BSD3")

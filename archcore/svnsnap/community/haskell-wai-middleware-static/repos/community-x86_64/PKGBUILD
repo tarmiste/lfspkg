@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282713 2018-01-15 14:07:07Z felixonmars $
+# $Id: PKGBUILD 287237 2018-01-26 19:16:34Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=wai-middleware-static
 pkgname=haskell-wai-middleware-static
 pkgver=0.8.1
-pkgrel=16
+pkgrel=19
 pkgdesc="WAI middleware that serves requests to static files"
 url="https://github.com/scotty-web/wai-middleware-static"
 license=("custom:BSD3")

@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282388 2018-01-15 05:08:36Z felixonmars $
+# $Id: PKGBUILD 285748 2018-01-23 16:08:35Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=parsers
 pkgname=haskell-parsers
 pkgver=0.12.8
-pkgrel=2
+pkgrel=3
 pkgdesc="Parsing combinators"
 url="https://github.com/ekmett/parsers/"
 license=("custom:BSD3")

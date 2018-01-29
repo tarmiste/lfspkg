@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282023 2018-01-14 11:13:58Z felixonmars $
+# $Id: PKGBUILD 287056 2018-01-26 10:10:37Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=jwt
 pkgname=haskell-jwt
 pkgver=0.7.2
-pkgrel=22
+pkgrel=27
 pkgdesc="JSON Web Token (JWT) decoding and encoding"
 url="https://bitbucket.org/ssaasen/haskell-jwt"
 license=("MIT")

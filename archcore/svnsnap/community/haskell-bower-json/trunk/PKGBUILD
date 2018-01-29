@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 281995 2018-01-14 10:58:27Z felixonmars $
+# $Id: PKGBUILD 286192 2018-01-24 08:00:29Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=bower-json
 pkgname=haskell-bower-json
 pkgver=1.0.0.1
-pkgrel=32
+pkgrel=34
 pkgdesc="Read bower.json from Haskell"
 url="https://github.com/hdgarrood/bower-json"
 license=("MIT")

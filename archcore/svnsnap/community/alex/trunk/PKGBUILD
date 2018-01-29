@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 268861 2017-11-26 09:19:52Z felixonmars $
+# $Id: PKGBUILD 285372 2018-01-23 06:32:21Z felixonmars $
 # Maintainer: Alexander F Rødseth <xyproto@archlinux.org>
 # Contributor: Sergej Pupykin <pupykin.s+arch@gmail.com>
 # Contributor: Vesa Kaihlavirta <vegai@iki.fi>
@@ -6,7 +6,7 @@
 
 pkgname=alex
 pkgver=3.2.3
-pkgrel=3
+pkgrel=4
 pkgdesc='Lexical analyser generator for Haskell'
 arch=('x86_64')
 url='https://hackage.haskell.org/package/alex'

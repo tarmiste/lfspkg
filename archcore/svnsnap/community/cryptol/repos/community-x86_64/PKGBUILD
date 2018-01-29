@@ -1,9 +1,9 @@
-# $Id: PKGBUILD 281780 2018-01-13 02:50:03Z felixonmars $
+# $Id: PKGBUILD 285773 2018-01-23 16:10:03Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 pkgname=cryptol
 pkgver=2.5.0
-pkgrel=13
+pkgrel=15
 pkgdesc="The Language of Cryptography"
 url="http://www.cryptol.net"
 license=("custom:BSD3")

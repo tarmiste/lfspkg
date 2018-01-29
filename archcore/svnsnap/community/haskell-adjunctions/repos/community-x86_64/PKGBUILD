@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 277215 2017-12-30 15:02:54Z felixonmars $
+# $Id: PKGBUILD 286025 2018-01-23 18:51:54Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=adjunctions
 pkgname=haskell-adjunctions
 pkgver=4.3
-pkgrel=41
+pkgrel=44
 pkgdesc="Adjunctions and representable functors"
 url="https://github.com/ekmett/adjunctions/"
 license=("custom:BSD3")

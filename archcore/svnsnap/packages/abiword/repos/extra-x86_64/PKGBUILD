@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 311521 2017-12-02 22:10:57Z jgc $
+# $Id: PKGBUILD 315448 2018-01-25 20:53:28Z felixonmars $
 # Maintainer: Jan de Groot <jgc@archlinux.org>
 # Contributor: Giovanni Scafora <giovanni@archlinux.org>
 # Contributor: Maël Lavault <moimael@neuf.fr>
 
 pkgname=abiword
 pkgver=3.0.2
-pkgrel=6
+pkgrel=7
 pkgdesc='Fully-featured word processor'
 arch=('x86_64')
 license=('GPL')
@@ -64,6 +64,9 @@ prepare() {
 
   # Generate m4 file for configure
   find plugins -name plugin.m4 | xargs cat > plugin-configure.m4
+
+  # enchant-2 naming change
+  sed -i 's/enchant >=/enchant-2 >=/' configure.ac
 
   libtoolize --force
   autoreconf -fi

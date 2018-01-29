@@ -1,9 +1,9 @@
-# $Id: PKGBUILD 281993 2018-01-14 10:57:05Z felixonmars $
+# $Id: PKGBUILD 284188 2018-01-19 18:32:24Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 pkgbase=pifpaf
 pkgname=('pifpaf' 'python2-pifpaf')
-pkgver=2.0.0
+pkgver=2.0.2
 pkgrel=1
 pkgdesc='Suite of tools and fixtures to manage daemons for testing'
 arch=('any')
@@ -20,7 +20,7 @@ checkdepends=('python-testrepository' 'python2-testrepository' 'python-requests'
 # 'elasticsearch': test fails
 # 'rabbitmq': test hangs
 source=("$pkgbase-$pkgver.tar.gz::https://github.com/jd/pifpaf/archive/$pkgver.tar.gz")
-sha512sums=('524f0847120c183f5142ff53ba9a855477018b84bed1288e6ad024dcb88275405dbc9eeff43f71ae971d0e03a5add834f7c39004e3f87bfcfb434f0aeb5b4124')
+sha512sums=('38a9910ce42539cf33361b3ca200e8cee575e5c52f48bfa0aeee2c066a38cea70bb12148261145c694e0921c72970a75ba2f4b28d77db3a397bca79dcfea5b5d')
 
 prepare() {
   cp -a pifpaf-$pkgver{,-py2}

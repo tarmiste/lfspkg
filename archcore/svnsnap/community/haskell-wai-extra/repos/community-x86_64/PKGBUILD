@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283255 2018-01-16 13:48:27Z felixonmars $
+# $Id: PKGBUILD 286410 2018-01-24 13:31:25Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=wai-extra
 pkgname=haskell-wai-extra
 pkgver=3.0.22.0
-pkgrel=1
+pkgrel=3
 pkgdesc="Provides some basic WAI handlers and middleware."
 url="https://github.com/yesodweb/wai"
 license=("MIT")

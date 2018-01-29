@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282557 2018-01-15 07:40:31Z felixonmars $
+# $Id: PKGBUILD 287167 2018-01-26 17:46:29Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=warp-tls
 pkgname=haskell-warp-tls
 pkgver=3.2.4
-pkgrel=35
+pkgrel=41
 pkgdesc="HTTP over TLS support for Warp via the TLS package"
 url="https://github.com/yesodweb/wai"
 license=("MIT")

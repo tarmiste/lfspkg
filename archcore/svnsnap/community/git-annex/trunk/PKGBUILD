@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 283230 2018-01-16 10:47:55Z felixonmars $
+# $Id: PKGBUILD 287319 2018-01-26 23:46:52Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 pkgname=git-annex
 pkgver=6.20180112
-pkgrel=10
+pkgrel=34
 pkgdesc="Manage files with git, without checking their contents into git"
 url="http://git-annex.branchable.com/"
 license=("AGPL3")

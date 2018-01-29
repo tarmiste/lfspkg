@@ -1,9 +1,9 @@
-# $Id: PKGBUILD 273858 2017-12-11 19:51:08Z jlichtblau $
+# $Id: PKGBUILD 286260 2018-01-24 09:59:20Z bpiotrowski $
 # Maintainer: Antonio Rojas < nqn76sw@gmail.com >
 
 pkgname=linbox
 pkgver=1.5.2
-pkgrel=2
+pkgrel=3
 pkgdesc="A template library for exact, high-performance linear algebra computation with dense, sparse, and structured matrices over the integers and over finite fields"
 arch=(x86_64)
 url="http://linalg.org/"

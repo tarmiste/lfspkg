@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282102 2018-01-14 15:56:34Z felixonmars $
+# $Id: PKGBUILD 286200 2018-01-24 08:06:20Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=configurator-ng
 pkgname=haskell-configurator-ng
 pkgver=0.0.0.1
-pkgrel=9
+pkgrel=11
 pkgdesc="The next generation of configuration management"
 url="https://github.com/lpsmith/configurator-ng"
 license=("custom:BSD3")

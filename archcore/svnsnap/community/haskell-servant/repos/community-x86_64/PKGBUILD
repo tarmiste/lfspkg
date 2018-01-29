@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282408 2018-01-15 05:09:20Z felixonmars $
+# $Id: PKGBUILD 286401 2018-01-24 13:30:38Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=servant
 pkgname=haskell-servant
 pkgver=0.12.1
-pkgrel=5
+pkgrel=7
 pkgdesc="A family of combinators for defining webservices APIs"
 url="http://haskell-servant.readthedocs.org/"
 license=("custom:BSD3")

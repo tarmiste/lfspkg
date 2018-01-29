@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 283204 2018-01-16 10:24:24Z felixonmars $
+# $Id: PKGBUILD 287105 2018-01-26 10:43:54Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 pkgname=postgrest
 pkgver=0.4.4.0
-pkgrel=7
+pkgrel=20
 pkgdesc="REST API for any Postgres database"
 url="https://github.com/begriffs/postgrest"
 license=("MIT")

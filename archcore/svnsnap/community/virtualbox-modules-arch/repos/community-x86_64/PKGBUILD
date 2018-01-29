@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283510 2018-01-16 18:39:42Z eworm $
+# $Id: PKGBUILD 286637 2018-01-24 19:14:51Z heftig $
 # Maintainer: Sébastien Luttringer
 # Contributor: Ionut Biru <ibiru@archlinux.org>
 
 pkgbase=virtualbox-modules-arch
 pkgname=('virtualbox-host-modules-arch' 'virtualbox-guest-modules-arch')
 pkgver=5.2.6
-pkgrel=1
+pkgrel=3
 _linux_major=4
 _linux_minor=14
 arch=('x86_64')

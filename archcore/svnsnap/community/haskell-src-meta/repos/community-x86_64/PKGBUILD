@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 277332 2017-12-30 15:09:50Z felixonmars $
+# $Id: PKGBUILD 285861 2018-01-23 16:16:45Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=haskell-src-meta
 pkgname=haskell-src-meta
 pkgver=0.8.0.1
-pkgrel=14
+pkgrel=16
 pkgdesc="Parse source to template-haskell abstract syntax"
 url="https://github.com/bmillwood/haskell-src-meta"
 license=("custom:BSD3")

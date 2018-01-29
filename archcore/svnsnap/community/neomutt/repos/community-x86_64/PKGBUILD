@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 274903 2017-12-19 18:10:43Z jelle $
+# $Id: PKGBUILD 286241 2018-01-24 09:57:02Z bpiotrowski $
 # Maintainer: Alad Wenter <alad@mailbox.org>
 # Contributor: Chris Salzberg <chris@dejimata.com>
 # Contributor: Leonidas Spyropoulos <artafinde@gmail.com>
 
 pkgname=neomutt
 pkgver=20171215
-pkgrel=1
+pkgrel=2
 pkgdesc='a version of mutt with added features'
 url='http://www.neomutt.org/'
 license=('GPL')

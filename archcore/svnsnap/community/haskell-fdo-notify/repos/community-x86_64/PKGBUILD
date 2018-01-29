@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283186 2018-01-16 09:56:50Z felixonmars $
+# $Id: PKGBUILD 285815 2018-01-23 16:13:38Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=fdo-notify
 pkgname=haskell-fdo-notify
 pkgver=0.3.1
-pkgrel=21
+pkgrel=22
 pkgdesc="Desktop Notifications client"
 url="http://bitbucket.org/taejo/fdo-notify/"
 license=("custom:BSD3")

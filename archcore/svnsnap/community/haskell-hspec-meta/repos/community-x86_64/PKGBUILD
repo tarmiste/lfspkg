@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 281757 2018-01-13 02:24:05Z felixonmars $
+# $Id: PKGBUILD 285767 2018-01-23 16:09:42Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=hspec-meta
 pkgname=haskell-hspec-meta
 pkgver=2.4.6
-pkgrel=1
+pkgrel=2
 pkgdesc="A version of Hspec which is used to test Hspec itself"
 url="http://hspec.github.io/"
 license=('MIT')

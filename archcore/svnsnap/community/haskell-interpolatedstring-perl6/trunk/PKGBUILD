@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 276785 2017-12-29 03:42:15Z felixonmars $
+# $Id: PKGBUILD 285592 2018-01-23 13:44:08Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=interpolatedstring-perl6
 pkgname=haskell-interpolatedstring-perl6
 pkgver=1.0.0
-pkgrel=30
+pkgrel=32
 pkgdesc="QuasiQuoter for Perl6-style multi-line interpolated strings"
 url="https://github.com/audreyt/interpolatedstring-perl6"
 license=('custom:PublicDomain')

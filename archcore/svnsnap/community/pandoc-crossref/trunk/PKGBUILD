@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 283496 2018-01-16 18:30:16Z felixonmars $
+# $Id: PKGBUILD 287335 2018-01-27 00:10:44Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 pkgname=pandoc-crossref
 pkgver=0.3.0.1
-pkgrel=3
+pkgrel=16
 pkgdesc="Pandoc filter for cross-references"
 url="https://hackage.haskell.org/package/${pkgname}"
 license=("GPL2")

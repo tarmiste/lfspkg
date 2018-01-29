@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 276534 2017-12-28 16:35:05Z felixonmars $
+# $Id: PKGBUILD 285943 2018-01-23 17:26:00Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=free
 pkgname=haskell-free
 pkgver=4.12.4
-pkgrel=41
+pkgrel=44
 pkgdesc="Monads for free"
 url="https://github.com/ekmett/free/"
 license=("custom:BSD3")

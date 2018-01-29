@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283108 2018-01-16 08:58:22Z felixonmars $
+# $Id: PKGBUILD 287365 2018-01-27 08:52:16Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=http-conduit
 pkgname=haskell-http-conduit
 pkgver=2.2.4
-pkgrel=15
+pkgrel=22
 pkgdesc="HTTP client package with conduit interface and HTTPS support"
 url="http://www.yesodweb.com/book/http-conduit"
 license=("custom:BSD3")

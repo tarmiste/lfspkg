@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 277204 2017-12-30 15:02:24Z felixonmars $
+# $Id: PKGBUILD 284056 2018-01-19 04:35:13Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=http2
 pkgname=haskell-http2
 pkgver=1.6.3
-pkgrel=15
+pkgrel=16
 pkgdesc="HTTP/2.0 library including frames and HPACK"
 url="https://github.com/kazu-yamamoto/http2"
 license=("custom:BSD3")

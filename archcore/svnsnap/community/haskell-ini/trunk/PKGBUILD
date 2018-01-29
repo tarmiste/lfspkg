@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282128 2018-01-14 16:16:32Z felixonmars $
+# $Id: PKGBUILD 285296 2018-01-22 21:19:37Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=ini
 pkgname=haskell-ini
 pkgver=0.3.5
-pkgrel=3
+pkgrel=4
 pkgdesc="Quick and easy configuration files in the INI format."
 url="http://github.com/chrisdone/ini"
 license=("custom:BSD3")

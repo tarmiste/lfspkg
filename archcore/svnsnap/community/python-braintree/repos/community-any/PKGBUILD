@@ -1,9 +1,9 @@
-# $Id: PKGBUILD 274347 2017-12-14 06:49:15Z felixonmars $
+# $Id: PKGBUILD 284319 2018-01-20 18:30:45Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 pkgbase=python-braintree
 pkgname=(python-braintree python2-braintree)
-pkgver=3.39.1
+pkgver=3.40.0
 pkgrel=1
 pkgdesc="Braintree Python Library"
 arch=('any')

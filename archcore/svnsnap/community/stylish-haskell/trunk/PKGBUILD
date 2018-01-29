@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 283456 2018-01-16 17:16:03Z felixonmars $
+# $Id: PKGBUILD 286188 2018-01-24 07:58:25Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 pkgname=stylish-haskell
 pkgver=0.8.1.0
-pkgrel=34
+pkgrel=37
 pkgdesc="Haskell code prettifier"
 url="https://github.com/jaspervdj/stylish-haskell"
 license=("custom:BSD3")

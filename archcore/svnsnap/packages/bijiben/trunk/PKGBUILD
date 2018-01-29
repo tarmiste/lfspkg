@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 310585 2017-11-22 13:16:26Z jgc $
+# $Id: PKGBUILD 315061 2018-01-18 09:40:58Z heftig $
 # Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
 
 pkgname=bijiben
@@ -10,7 +10,6 @@ arch=(x86_64)
 license=(GPL)
 depends=(tracker webkit2gtk gnome-online-accounts evolution-data-server)
 makedepends=(intltool itstool evolution python appstream-glib yelp-tools autoconf-archive git)
-groups=(gnome-extra)
 _commit=bae6c22d229980d412d7edcb589e54732d1279bc  # tags/BIJIBEN_3_26_2^0
 source=("git+https://git.gnome.org/browse/bijiben#commit=$_commit"
         "git+https://git.gnome.org/browse/libgd")

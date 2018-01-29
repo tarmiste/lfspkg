@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 282386 2018-01-15 05:08:32Z felixonmars $
+# $Id: PKGBUILD 285735 2018-01-23 16:06:50Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=openpgp-asciiarmor
 pkgname=haskell-openpgp-asciiarmor
 pkgver=0.1
-pkgrel=25
+pkgrel=26
 pkgdesc="OpenPGP (RFC4880) ASCII Armor codec"
 url="http://floss.scru.org/openpgp-asciiarmor"
 license=('custom:ISC')

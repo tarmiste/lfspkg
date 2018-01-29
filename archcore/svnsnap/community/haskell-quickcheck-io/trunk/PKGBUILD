@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 269047 2017-11-26 19:36:29Z felixonmars $
+# $Id: PKGBUILD 285233 2018-01-22 20:34:54Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=quickcheck-io
 pkgname=haskell-quickcheck-io
 pkgver=0.2.0
-pkgrel=6
+pkgrel=7
 pkgdesc="Use HUnit assertions as QuickCheck properties"
 url="https://github.com/hspec/quickcheck-io"
 license=('MIT')

@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 281973 2018-01-14 10:37:54Z felixonmars $
+# $Id: PKGBUILD 285774 2018-01-23 16:10:09Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=hspec-core
 pkgname=haskell-hspec-core
 pkgver=2.4.7
-pkgrel=1
+pkgrel=2
 pkgdesc="A Testing Framework for Haskell"
 url="http://hspec.github.io/"
 license=('MIT')

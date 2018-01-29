@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 281417 2018-01-11 20:03:18Z felixonmars $
+# $Id: PKGBUILD 287060 2018-01-26 10:12:27Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=crypto-cipher-types
 pkgname=haskell-crypto-cipher-types
 pkgver=0.0.9
-pkgrel=31
+pkgrel=34
 pkgdesc="Generic cryptography cipher types"
 url="https://github.com/vincenthz/hs-crypto-cipher"
 license=("custom:BSD3")

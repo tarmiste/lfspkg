@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 281992 2018-01-14 10:57:02Z felixonmars $
+# $Id: PKGBUILD 286068 2018-01-23 19:16:52Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=binary-tagged
 pkgname=haskell-binary-tagged
 pkgver=0.1.4.2
-pkgrel=38
+pkgrel=40
 pkgdesc="Tagged binary serialisation."
 url="https://github.com/phadej/binary-tagged#readme"
 license=("custom:BSD3")

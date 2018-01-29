@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 271512 2017-12-02 02:46:37Z felixonmars $
+# $Id: PKGBUILD 285762 2018-01-23 16:09:20Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=data-clist
 pkgname=haskell-data-clist
 pkgver=0.1.1.0
-pkgrel=7
+pkgrel=8
 pkgdesc="Simple functional ring type."
 url="https://github.com/sw17ch/data-clist"
 license=("custom:BSD3")

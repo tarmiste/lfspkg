@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 277187 2017-12-30 15:00:39Z felixonmars $
+# $Id: PKGBUILD 285806 2018-01-23 16:11:49Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=critbit
 pkgname=haskell-critbit
 pkgver=0.2.0.0
-pkgrel=5
+pkgrel=6
 pkgdesc="Crit-bit maps and sets"
 url="https://github.com/bos/critbit"
 license=("custom:BSD3")

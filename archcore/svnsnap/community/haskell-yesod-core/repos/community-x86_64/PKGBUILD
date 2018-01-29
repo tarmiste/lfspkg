@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283423 2018-01-16 16:36:34Z felixonmars $
+# $Id: PKGBUILD 287224 2018-01-26 19:15:21Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=yesod-core
 pkgname=haskell-yesod-core
 pkgver=1.4.37.2
-pkgrel=26
+pkgrel=34
 pkgdesc="Creation of type-safe, RESTful web applications."
 url="http://www.yesodweb.com/"
 license=("MIT")

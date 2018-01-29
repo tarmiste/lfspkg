@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 281735 2018-01-13 02:05:48Z felixonmars $
+# $Id: PKGBUILD 285346 2018-01-23 06:04:29Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=quickcheck-instances
 pkgname=haskell-quickcheck-instances
 pkgver=0.3.16.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Common quickcheck instances"
 url="https://github.com/phadej/qc-instances"
 license=("custom:BSD3")

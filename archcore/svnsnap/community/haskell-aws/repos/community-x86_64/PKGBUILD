@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283127 2018-01-16 09:00:26Z felixonmars $
+# $Id: PKGBUILD 287367 2018-01-27 08:52:22Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=aws
 pkgname=haskell-aws
 pkgver=0.18
-pkgrel=20
+pkgrel=29
 pkgdesc="Amazon Web Services (AWS) for Haskell"
 url="https://github.com/aristidb/aws"
 license=("custom:BSD3")

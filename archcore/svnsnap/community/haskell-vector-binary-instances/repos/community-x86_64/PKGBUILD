@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 271779 2017-12-02 03:01:44Z felixonmars $
+# $Id: PKGBUILD 285881 2018-01-23 16:19:07Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=vector-binary-instances
 pkgname=haskell-vector-binary-instances
 pkgver=0.2.3.5
-pkgrel=5
+pkgrel=6
 pkgdesc="Instances of Data.Binary and Data.Serialize for vector"
 url="https://github.com/bos/vector-binary-instances"
 license=("custom:BSD3")

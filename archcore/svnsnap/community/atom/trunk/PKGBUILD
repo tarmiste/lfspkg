@@ -1,9 +1,9 @@
-# $Id: PKGBUILD 281693 2018-01-12 20:27:36Z tensor5 $
+# $Id: PKGBUILD 287127 2018-01-26 11:02:29Z tensor5 $
 # Maintainer: Nicola Squartini <tensor5@gmail.com>
 
 pkgname=atom
 pkgver=1.23.3
-pkgrel=1
+pkgrel=2
 pkgdesc='A hackable text editor for the 21st Century'
 arch=('x86_64')
 url='https://github.com/atom/atom'

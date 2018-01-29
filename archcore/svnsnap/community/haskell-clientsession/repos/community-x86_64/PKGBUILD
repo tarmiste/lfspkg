@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 281622 2018-01-12 15:46:50Z felixonmars $
+# $Id: PKGBUILD 287223 2018-01-26 19:15:19Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=clientsession
 pkgname=haskell-clientsession
 pkgver=0.9.1.2
-pkgrel=35
+pkgrel=39
 pkgdesc="Securely store session data in a client-side cookie."
 url="https://github.com/yesodweb/clientsession/tree/master"
 license=("MIT")

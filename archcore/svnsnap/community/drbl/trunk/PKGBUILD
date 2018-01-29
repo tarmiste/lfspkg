@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 177498 2016-05-31 08:09:27Z jsteel $
+# $Id: PKGBUILD 286710 2018-01-24 23:01:13Z jsteel $
 # Maintainer: Jonathan Steel <jsteel at archlinux.org>
 # Contributor: M0Rf30
 
@@ -13,9 +13,9 @@ depends=('perl' 'bc')
 makedepends=('vim')
 backup=('etc/drbl/drbl.conf')
 options=('!emptydirs')
-source=(http://free.nchc.org.tw/$pkgname-core/src/stable/$pkgname-$pkgver.tar.bz2
+source=(https://downloads.sourceforge.net/drbl/$pkgname-$pkgver.tar.bz2
         usrbin.patch)
-md5sums=('ae7d2ff042084b359671536c0d9cf20c'
+md5sums=('e8bf0b91c5d2a319371e6ef4142c61d8'
          'f01eac478f1ae62f505de645de96c68a')
 
 prepare() {

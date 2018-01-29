@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 281393 2018-01-11 19:45:28Z felixonmars $
+# $Id: PKGBUILD 287038 2018-01-26 09:55:08Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=cryptonite
 pkgname=haskell-cryptonite
 pkgver=0.24
-pkgrel=14
+pkgrel=17
 pkgdesc="Cryptography Primitives sink"
 url="https://github.com/vincenthz/cryptonite"
 license=("custom:BSD3")

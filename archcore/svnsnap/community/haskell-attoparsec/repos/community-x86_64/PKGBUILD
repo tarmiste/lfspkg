@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282322 2018-01-15 05:05:28Z felixonmars $
+# $Id: PKGBUILD 285717 2018-01-23 16:05:55Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=attoparsec
 pkgname=haskell-attoparsec
 pkgver=0.13.2.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Fast combinator parsing for bytestrings and text"
 url="https://github.com/bos/attoparsec"
 license=("BSD3")

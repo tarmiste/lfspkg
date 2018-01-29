@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283389 2018-01-16 16:33:17Z felixonmars $
+# $Id: PKGBUILD 287342 2018-01-27 00:20:38Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=yesod-auth
 pkgname=haskell-yesod-auth
 pkgver=1.4.21
-pkgrel=33
+pkgrel=46
 pkgdesc="Authentication for Yesod."
 url="http://www.yesodweb.com/"
 license=("MIT")

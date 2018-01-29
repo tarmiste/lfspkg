@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282114 2018-01-14 16:06:38Z felixonmars $
+# $Id: PKGBUILD 287046 2018-01-26 10:02:11Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=hit
 pkgname=haskell-hit
 pkgver=0.6.3
-pkgrel=61
+pkgrel=66
 pkgdesc="Git operations in haskell"
 url="https://github.com/vincenthz/hit"
 license=("custom:BSD3")

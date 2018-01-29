@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 310007 2017-11-15 14:11:34Z foutrelis $
+# $Id: PKGBUILD 315058 2018-01-18 09:40:10Z heftig $
 # Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
 
 pkgname=aisleriot
@@ -8,13 +8,11 @@ pkgdesc="A collection of patience games written in guile scheme"
 url="https://wiki.gnome.org/Apps/Aisleriot"
 arch=(x86_64)
 license=(GPL)
-groups=(gnome-extra)
 depends=(guile gtk3 librsvg libcanberra gconf dconf)
 makedepends=(intltool itstool docbook-xsl yelp-tools appdata-tools gnome-common git)
 optdepends=('libkdegames: KDE card sets'
             'pysolfc: PySol card sets'
             'pysolfc-cardsets: PySol card sets')
-options=(!emptydirs)
 _commit=ee57be8209a52e956420293be16df0d87c496dff  # tags/3.22.4^0
 source=("git+https://git.gnome.org/browse/aisleriot#commit=$_commit")
 sha256sums=('SKIP')

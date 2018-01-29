@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283098 2018-01-16 08:57:58Z felixonmars $
+# $Id: PKGBUILD 285713 2018-01-23 16:05:44Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=sandi
 pkgname=haskell-sandi
 pkgver=0.4.1
-pkgrel=10
+pkgrel=11
 pkgdesc="Data encoding library"
 url="https://hackage.haskell.org/package/sandi"
 license=("custom:BSD3")

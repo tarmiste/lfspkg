@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 271629 2017-12-02 02:52:28Z felixonmars $
+# $Id: PKGBUILD 285711 2018-01-23 16:05:40Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=MonadRandom
 pkgname=haskell-monadrandom
 pkgver=0.5.1
-pkgrel=6
+pkgrel=7
 pkgdesc="Random-number generation monad."
 url="https://hackage.haskell.org/package/${_hkgname}"
 license=("custom")

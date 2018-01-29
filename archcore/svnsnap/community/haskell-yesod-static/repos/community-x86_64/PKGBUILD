@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283426 2018-01-16 16:36:44Z felixonmars $
+# $Id: PKGBUILD 287264 2018-01-26 19:22:38Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=yesod-static
 pkgname=haskell-yesod-static
 pkgver=1.5.3.1
-pkgrel=61
+pkgrel=69
 pkgdesc="Static file serving subsite for Yesod Web Framework."
 url="http://www.yesodweb.com/"
 license=("MIT")

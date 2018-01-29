@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 276783 2017-12-29 03:41:23Z felixonmars $
+# $Id: PKGBUILD 285590 2018-01-23 13:43:14Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=interpolate
 pkgname=haskell-interpolate
 pkgver=0.1.1
-pkgrel=3
+pkgrel=5
 pkgdesc="String interpolation done right"
 url="https://github.com/sol/interpolate"
 license=("MIT")

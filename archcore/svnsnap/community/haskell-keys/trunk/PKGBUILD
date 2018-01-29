@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 276540 2017-12-28 16:38:30Z felixonmars $
+# $Id: PKGBUILD 285951 2018-01-23 17:30:57Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=keys
 pkgname=haskell-keys
 pkgver=3.11
-pkgrel=45
+pkgrel=48
 pkgdesc="Keyed functors and containers"
 url="https://github.com/ekmett/keys/"
 license=("custom:BSD3")

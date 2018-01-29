@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 277316 2017-12-30 15:08:32Z felixonmars $
+# $Id: PKGBUILD 284937 2018-01-22 14:14:53Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=system-fileio
 pkgname=haskell-system-fileio
 pkgver=0.3.16.3
-pkgrel=7
+pkgrel=8
 pkgdesc="Consistent filesystem interaction across GHC versions"
 url="https://github.com/fpco/haskell-filesystem"
 license=("MIT")

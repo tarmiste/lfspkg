@@ -1,9 +1,9 @@
-# $Id: PKGBUILD 282463 2018-01-15 06:11:12Z felixonmars $
+# $Id: PKGBUILD 286678 2018-01-24 19:56:34Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 pkgname=git-repair
 pkgver=1.20170626
-pkgrel=13
+pkgrel=16
 pkgdesc="Repairs a damaged git repisitory"
 url="http://git-repair.branchable.com/"
 license=("GPL")

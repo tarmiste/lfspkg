@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 273521 2017-12-10 09:46:22Z felixonmars $
+# $Id: PKGBUILD 284698 2018-01-21 18:50:20Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=bifunctors
 pkgname=haskell-bifunctors
 pkgver=5.5
-pkgrel=1
+pkgrel=2
 pkgdesc="Bifunctors"
 url="https://github.com/ekmett/bifunctors/"
 license=("custom:BSD3")

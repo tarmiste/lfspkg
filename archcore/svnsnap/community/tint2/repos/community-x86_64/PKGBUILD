@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 281513 2018-01-12 00:05:53Z arodseth $
+# $Id: PKGBUILD 285539 2018-01-23 12:01:28Z arodseth $
 # Maintainer: Alexander F Rødseth <xyproto@archlinux.org>
 # Contributor: Blue Peppers <bluepeppers@archlinux.us>
 # Contributor: Stefan Husmann <stefan-husmann@t-online.de>
 # Contributor: Yannick LM <LMyannicklm1337@gmail.com>
 
 pkgname=tint2
-pkgver=16.1
+pkgver=16.2
 pkgrel=1
 pkgdesc='Basic, good-looking task manager for WMs'
 arch=('x86_64')

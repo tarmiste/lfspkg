@@ -3,7 +3,7 @@
 # Contributor: Dan McGee <dan@archlinux.org>
 
 pkgname=irssi
-pkgver=1.0.5
+pkgver=1.1.0
 pkgrel=1
 pkgdesc='Modular text mode IRC client with Perl scripting'
 url='https://irssi.org/'
@@ -13,7 +13,7 @@ depends=('glib2' 'openssl')
 optdepends=('perl-libwww: for the scriptassist script')
 backup=('etc/irssi.conf')
 source=(https://github.com/irssi/irssi/releases/download/${pkgver}/${pkgname}-${pkgver}.tar.xz{,.asc})
-sha512sums=('c3fa94b6ddfa30b18f5ae5de0e607a226eb6e2c20c03a712243b75e8b5896f353c1e7d096094f66e304b5b2691ad3479e26c024245b32b399f08e29815f02bfb'
+sha512sums=('a1dfe03706fe5194f9a8c21b7795f250f6f19051f4e56075cba8153debb3cea8f635cadcea91691fba3c82989435dc2c8dfe2e67eb7e7ca825457b0bdaf395b5'
             'SKIP')
 validpgpkeys=('7EE65E3082A5FB06AC7C368D00CCB587DDBEF0E1') # The Irssi project <staff@irssi.org>
 

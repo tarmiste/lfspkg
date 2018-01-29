@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282808 2018-01-15 17:53:35Z felixonmars $
+# $Id: PKGBUILD 286194 2018-01-24 08:01:43Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=brick
 pkgname=haskell-brick
 pkgver=0.32.1
-pkgrel=4
+pkgrel=7
 pkgdesc="A declarative terminal user interface library"
 url="https://github.com/jtdaugherty/brick"
 license=("custom:BSD3")

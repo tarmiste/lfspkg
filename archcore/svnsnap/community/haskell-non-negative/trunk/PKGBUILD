@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 270655 2017-11-29 12:08:40Z felixonmars $
+# $Id: PKGBUILD 285382 2018-01-23 06:38:40Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=non-negative
 pkgname=haskell-non-negative
 pkgver=0.1.1.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Non-negative numbers"
 url="http://code.haskell.org/~thielema/non-negative/"
 license=("GPL")

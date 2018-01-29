@@ -1,14 +1,14 @@
-# $Id: PKGBUILD 264995 2017-11-01 11:18:41Z arodseth $
+# $Id: PKGBUILD 287151 2018-01-26 14:10:16Z arodseth $
 # Maintainer: Alexander F Rødseth <xyproto@archlinux.org>
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 # Contributor: Ryan Coyner <rcoyner@gmail.com>
 
 pkgbase=mod_wsgi
 pkgname=($pkgbase 'mod_wsgi2')
-pkgver=4.5.20
+pkgver=4.5.24
 pkgrel=1
 pkgdesc='Python WSGI adapter module for Apache'
-arch=('x86_64' 'i686')
+arch=('x86_64')
 url='http://www.modwsgi.org/'
 license=('APACHE')
 makedepends=('apache' 'git' 'python' 'python2')

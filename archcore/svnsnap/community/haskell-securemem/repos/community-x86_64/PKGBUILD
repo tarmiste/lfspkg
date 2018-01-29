@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 281617 2018-01-12 15:46:38Z felixonmars $
+# $Id: PKGBUILD 287218 2018-01-26 19:13:59Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=securemem
 pkgname=haskell-securemem
 pkgver=0.1.9
-pkgrel=31
+pkgrel=34
 pkgdesc="abstraction to an auto scrubbing and const time eq, memory chunk."
 url="https://github.com/vincenthz/hs-securemem"
 license=("custom:BSD3")

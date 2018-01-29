@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 310007 2017-11-15 14:11:34Z foutrelis $
+# $Id: PKGBUILD 315039 2018-01-18 09:20:44Z heftig $
 # Maintainer: Jan de Groot <jgc@archlinux.org>
 
 pkgname=gnome-characters
@@ -10,7 +10,7 @@ url="https://git.gnome.org/browse/gnome-characters"
 license=(GPL2)
 depends=(gjs gtk3 libunistring gnome-desktop)
 makedepends=(intltool gobject-introspection appstream-glib git gperf)
-groups=(gnome-extra)
+groups=(gnome)
 _commit=f84930f30778174a91bbfbdfe4f9e28b569f8ff6  # tags/v3.26.2^0
 source=("git+https://git.gnome.org/browse/gnome-characters#commit=$_commit")
 sha256sums=('SKIP')

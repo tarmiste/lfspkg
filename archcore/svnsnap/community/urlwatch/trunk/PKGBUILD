@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 268017 2017-11-22 13:52:24Z bgyorgy $
+# $Id: PKGBUILD 284482 2018-01-21 02:56:31Z bgyorgy $
 # Maintainer: Balló György <ballogyor+arch at gmail dot com>
 # Contributor: Skydrome <skydrome@i2pmail.org>
 # Contributor: Allan McRae <allan@archlinux.org>
@@ -21,6 +21,6 @@ build() {
 
 package() {
   cd $pkgname-$pkgver
-  python3 setup.py install --root="$pkgdir"
+  python3 setup.py install --root="$pkgdir" --optimize=1
   install -Dm644 COPYING "$pkgdir/usr/share/licenses/$pkgname/COPYING"
 }

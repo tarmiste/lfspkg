@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 281447 2018-01-11 20:20:36Z felixonmars $
+# $Id: PKGBUILD 287086 2018-01-26 10:28:47Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=nettle
 pkgname=haskell-nettle
 pkgver=0.2.0
-pkgrel=29
+pkgrel=32
 pkgdesc="Safe nettle binding"
 url="https://github.com/stbuehler/haskell-nettle"
 license=('MIT')

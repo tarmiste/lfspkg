@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 269660 2017-11-27 10:43:18Z felixonmars $
+# $Id: PKGBUILD 285638 2018-01-23 14:30:34Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=monad-par
 pkgname=haskell-monad-par
 pkgver=0.3.4.8
-pkgrel=11
+pkgrel=12
 pkgdesc="A library for parallel programming based on a monad"
 url="https://github.com/simonmar/monad-par"
 license=("custom:BSD3")

@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282354 2018-01-15 05:07:12Z felixonmars $
+# $Id: PKGBUILD 286377 2018-01-24 13:29:09Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=aeson-compat
 pkgname=haskell-aeson-compat
 pkgver=0.3.7.1
-pkgrel=10
+pkgrel=12
 pkgdesc="Compatibility layer for aeson"
 url="https://hackage.haskell.org/package/${_hkgname}"
 license=("custom:BSD3")

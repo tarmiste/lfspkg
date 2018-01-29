@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 281465 2018-01-11 20:34:55Z felixonmars $
+# $Id: PKGBUILD 287107 2018-01-26 10:45:16Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=x509-store
 pkgname=haskell-x509-store
 pkgver=1.6.5
-pkgrel=14
+pkgrel=17
 pkgdesc="X.509 collection accessing and storing methods"
 url="https://github.com/vincenthz/hs-certificate"
 license=("custom:BSD3")

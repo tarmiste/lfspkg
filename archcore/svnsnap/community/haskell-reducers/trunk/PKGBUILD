@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 276631 2017-12-28 23:47:57Z felixonmars $
+# $Id: PKGBUILD 284662 2018-01-21 18:16:58Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=reducers
 pkgname=haskell-reducers
 pkgver=3.12.2
-pkgrel=6
+pkgrel=8
 pkgdesc="Semigroups, specialized containers and a general map/reduce framework"
 url="https://github.com/ekmett/reducers/"
 license=("custom:BSD3")

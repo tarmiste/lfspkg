@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 276643 2017-12-28 23:53:33Z felixonmars $
+# $Id: PKGBUILD 285251 2018-01-22 20:48:03Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=scientific
 pkgname=haskell-scientific
 pkgver=0.3.5.2
-pkgrel=4
+pkgrel=5
 pkgdesc="Numbers represented using scientific notation"
 url="https://github.com/basvandijk/scientific"
 license=("custom:BSD3")

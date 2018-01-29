@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 283467 2018-01-16 17:36:33Z felixonmars $
+# $Id: PKGBUILD 286473 2018-01-24 13:36:46Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 pkgname=hindent
 pkgver=5.2.4.1
-pkgrel=13
+pkgrel=17
 pkgdesc="Extensible Haskell pretty printer"
 url="https://github.com/commercialhaskell/hindent"
 license=("custom:BSD3")

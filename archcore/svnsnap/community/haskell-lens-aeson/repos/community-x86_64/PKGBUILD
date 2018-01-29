@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 282382 2018-01-15 05:08:25Z felixonmars $
+# $Id: PKGBUILD 286954 2018-01-25 21:06:36Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=lens-aeson
 pkgname=haskell-lens-aeson
 pkgver=1.0.2
-pkgrel=19
+pkgrel=25
 pkgdesc="Law-abiding lenses for aeson"
 url="http://github.com/lens/lens-aeson/"
 license=('MIT')

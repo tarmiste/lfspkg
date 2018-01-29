@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 310429 2017-11-19 14:26:45Z jgc $
+# $Id: PKGBUILD 315059 2018-01-18 09:40:34Z heftig $
 # Maintainer: Andreas Radke <andyrtr@archlinux.org>
 # Contributor: Harley Laue <losinggeneration@yahoo.com>
 
@@ -48,7 +48,6 @@ package_libanjuta(){
 package_anjuta(){
   pkgdesc="GNOME Integrated Development Environment (IDE)"
   depends=(libanjuta vte3 autogen devhelp glade libgda subversion neon vala dconf)
-  groups=('gnome-extra')
 
   cd $pkgbase-$pkgver
   make -j1 DESTDIR="$pkgdir" install

@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282110 2018-01-14 16:03:30Z felixonmars $
+# $Id: PKGBUILD 285284 2018-01-22 21:11:57Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=email-validate
 pkgname=haskell-email-validate
 pkgver=2.3.2
-pkgrel=4
+pkgrel=5
 pkgdesc="Validating an email address string against RFC 5322"
 url="http://porg.es/blog/email-address-validation-simpler-faster-more-correct"
 license=("custom:BSD3")

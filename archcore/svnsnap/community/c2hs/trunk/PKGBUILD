@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 270706 2017-11-29 14:13:04Z felixonmars $
+# $Id: PKGBUILD 286196 2018-01-24 08:03:46Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 pkgname=c2hs
 pkgver=0.28.3
-pkgrel=1
+pkgrel=2
 pkgdesc="C->Haskell FFI tool that gives some cross-language type safety"
 url="https://github.com/haskell/c2hs"
 license=("GPL2")

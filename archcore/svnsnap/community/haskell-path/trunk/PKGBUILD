@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282031 2018-01-14 11:19:48Z felixonmars $
+# $Id: PKGBUILD 286100 2018-01-23 20:27:17Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=path
 pkgname=haskell-path
 pkgver=0.6.1
-pkgrel=14
+pkgrel=16
 pkgdesc="Path"
 url="https://hackage.haskell.org/package/${_hkgname}"
 license=("custom:BSD3")

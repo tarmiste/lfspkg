@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 281027 2018-01-10 14:29:04Z dvzrv $
+# $Id: PKGBUILD 283779 2018-01-18 01:03:35Z dvzrv $
 # Maintainer: David Runge <dave@sleepmap.de>
 # Maintainer: Ray Rashif <schiv@archlinux.org>
 # Contributor: Wes Brewer <brewerw@gmail.com>
@@ -6,7 +6,7 @@
 
 pkgname=nfoview
 pkgver=1.23
-pkgrel=1
+pkgrel=2
 pkgdesc="Simple NFO file viewer in GTK+ 3"
 arch=('any')
 url="https://otsaloma.io/nfoview/"
@@ -24,7 +24,7 @@ build() {
 }
 
 package() {
-  cd "$srcdir/$pkgname-$pkgver"
+  cd "${pkgname}-${pkgver}"
 
   python setup.py install --skip-build \
     --optimize=1 \

@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 276391 2017-12-28 09:42:01Z felixonmars $
+# $Id: PKGBUILD 285255 2018-01-22 20:52:58Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=quickcheck-unicode
 pkgname=haskell-quickcheck-unicode
 pkgver=1.0.1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Generator and shrink functions for testing Unicode-related software."
 url="https://github.com/bos/quickcheck-unicode"
 license=('BSD')

@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 277219 2017-12-30 15:03:06Z felixonmars $
+# $Id: PKGBUILD 287426 2018-01-27 13:22:22Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=shake
 pkgname=haskell-shake
 pkgver=0.16
-pkgrel=5
+pkgrel=8
 pkgdesc="Build system library, like Make, but more accurate dependencies."
 url="http://shakebuild.com"
 license=("custom:BSD3")

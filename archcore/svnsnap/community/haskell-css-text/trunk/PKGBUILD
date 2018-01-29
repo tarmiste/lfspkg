@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282104 2018-01-14 15:57:31Z felixonmars $
+# $Id: PKGBUILD 285280 2018-01-22 21:08:52Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=css-text
 pkgname=haskell-css-text
 pkgver=0.1.2.2
-pkgrel=24
+pkgrel=25
 pkgdesc="CSS parser and renderer."
 url="http://www.yesodweb.com/"
 license=("MIT")

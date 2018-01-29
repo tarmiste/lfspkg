@@ -1,12 +1,12 @@
-# $Id: PKGBUILD 310339 2017-11-17 22:52:35Z foutrelis $
+# $Id: PKGBUILD 315384 2018-01-24 09:56:09Z bpiotrowski $
 # Maintainer: Rémy Oudompheng <remy@archlinux.org>
 # Contributor: francois <francois.archlinux.org>
 
 pkgname=('texlive-bin' 'libsynctex')
 pkgver=2017.44590
-pkgrel=9
+pkgrel=10
 license=('GPL')
-arch=('i686' 'x86_64')
+arch=('x86_64')
 makedepends=('cairo' 'pixman' 'graphite' 't1lib' 'gd' 'poppler'
          'libsigsegv' 'zziplib' 'libpng' 'libjpeg' 'freetype2'
          'icu' 'harfbuzz' 'harfbuzz-icu' 'gmp' 'mpfr' 'potrace' 'libpaper'

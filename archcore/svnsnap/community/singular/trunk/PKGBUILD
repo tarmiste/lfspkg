@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 266875 2017-11-15 14:29:11Z foutrelis $
+# $Id: PKGBUILD 284014 2018-01-18 22:59:52Z arojas $
 # Maintainer: Antonio Rojas <arojas@archlinux.org>
 # Contributor: Rémy Oudompheng <oudomphe@clipper.ens.fr>
 
@@ -7,7 +7,7 @@ _majver=4-1-0
 _patchver=3
 pkgver=${_majver//-/.}.p${_patchver}
 #pkgver=${_majver//-/.}
-pkgrel=5
+pkgrel=6
 pkgdesc="Computer Algebra System for polynomial computations"
 arch=(x86_64)
 url="http://www.singular.uni-kl.de/"

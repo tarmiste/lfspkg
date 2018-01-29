@@ -1,9 +1,9 @@
-# $Id: PKGBUILD 267169 2017-11-17 22:56:23Z foutrelis $
+# $Id: PKGBUILD 287132 2018-01-26 11:36:12Z tensor5 $
 # Maintainer: Nicola Squartini <tensor5@gmail.com>
 
 pkgname=messengerfordesktop
 pkgver=2.0.9+42+g4e4d6f1
-pkgrel=3
+pkgrel=4
 _commit=4e4d6f1fd4bf3b8c0fa48ed6459efda9c4064461
 pkgdesc='A simple & beautiful desktop client for Facebook Messenger'
 arch=('x86_64')

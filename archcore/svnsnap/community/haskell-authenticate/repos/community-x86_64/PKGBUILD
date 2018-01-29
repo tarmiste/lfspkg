@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283130 2018-01-16 09:00:34Z felixonmars $
+# $Id: PKGBUILD 287366 2018-01-27 08:52:19Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=authenticate
 pkgname=haskell-authenticate
 pkgver=1.3.4
-pkgrel=15
+pkgrel=24
 pkgdesc="Authentication methods for Haskell web applications."
 url="https://github.com/yesodweb/authenticate"
 license=("MIT")

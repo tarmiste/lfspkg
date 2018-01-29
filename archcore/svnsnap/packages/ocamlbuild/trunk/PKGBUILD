@@ -1,9 +1,9 @@
-# $Id: PKGBUILD 310427 2017-11-19 09:54:35Z arojas $
+# $Id: PKGBUILD 315270 2018-01-22 20:24:22Z juergen $
 # Maintainer: Jürgen Hötzel <juergen@hoetzel.info>
 
 pkgname=ocamlbuild
 pkgver=0.12.0
-pkgrel=1
+pkgrel=2
 pkgdesc='Build tool, that has built-in rules for building OCaml library and programs'
 arch=('x86_64')
 license=('GPL2')

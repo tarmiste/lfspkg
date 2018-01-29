@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282355 2018-01-15 05:07:14Z felixonmars $
+# $Id: PKGBUILD 285803 2018-01-23 16:11:40Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=cassava
 pkgname=haskell-cassava
 pkgver=0.5.1.0
-pkgrel=8
+pkgrel=9
 pkgdesc="A CSV parsing and encoding library"
 url="https://github.com/tibbe/cassava"
 license=("custom:BSD3")

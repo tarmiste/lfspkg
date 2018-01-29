@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 283757 2018-01-17 18:43:26Z felixonmars $
+# $Id: PKGBUILD 287554 2018-01-27 20:37:32Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 pkgname=stack
 pkgver=1.6.3
-pkgrel=35
+pkgrel=51
 pkgdesc="The Haskell Tool Stack"
 url="https://github.com/commercialhaskell/stack"
 license=("custom:BSD3")

@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283164 2018-01-16 09:34:00Z felixonmars $
+# $Id: PKGBUILD 285276 2018-01-22 21:06:34Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=project-template
 pkgname=haskell-project-template
 pkgver=0.2.0.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Specify Haskell project templates and generate files"
 url="https://github.com/fpco/haskell-ide"
 license=("custom:BSD3")

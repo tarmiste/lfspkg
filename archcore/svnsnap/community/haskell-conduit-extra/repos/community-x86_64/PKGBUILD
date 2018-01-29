@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283101 2018-01-16 08:58:04Z felixonmars $
+# $Id: PKGBUILD 285719 2018-01-23 16:06:02Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=conduit-extra
 pkgname=haskell-conduit-extra
 pkgver=1.2.3.2
-pkgrel=6
+pkgrel=7
 pkgdesc="Batteries included conduit: adapters for common libraries."
 url="https://github.com/snoyberg/conduit"
 license=("MIT")

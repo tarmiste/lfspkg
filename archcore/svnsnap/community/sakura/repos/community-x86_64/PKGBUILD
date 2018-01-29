@@ -1,18 +1,18 @@
-# $Id: PKGBUILD 175242 2016-05-13 20:10:16Z arojas $
+# $Id: PKGBUILD 284667 2018-01-21 18:23:52Z arojas $
 # Maintainer: Ronald van Haren <ronald.archlinux.org>
 # Contributor: Dmitry N. Shilov <stormblast@land.ru>
 
 pkgname=sakura
-pkgver=3.3.4
-pkgrel=2
+pkgver=3.5.0
+pkgrel=1
 pkgdesc="A terminal emulator based on GTK and VTE"
-arch=('i686' 'x86_64')
+arch=('x86_64')
 url="https://launchpad.net/sakura"
 license=('GPL')
 depends=('vte3' 'libxft')
 makedepends=('cmake')
 source=("https://launchpad.net/sakura/trunk/${pkgver}/+download/${pkgname}-${pkgver}.tar.bz2")
-sha1sums=('d71f69ea9bb87e2394dd2fa6e21cb44dad399b25')
+sha1sums=('b4db1be2685bcc0eb71685deeb5c3585e6f98484')
 
 prepare() {
   cd "$srcdir/${pkgname}-${pkgver}"

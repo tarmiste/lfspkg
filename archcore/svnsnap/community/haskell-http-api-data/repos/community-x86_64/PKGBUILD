@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282402 2018-01-15 05:09:06Z felixonmars $
+# $Id: PKGBUILD 285872 2018-01-23 16:18:34Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=http-api-data
 pkgname=haskell-http-api-data
 pkgver=0.3.7.1
-pkgrel=23
+pkgrel=24
 pkgdesc="Converting to/from HTTP API data like URL pieces, headers and query parameters."
 url="https://github.com/fizruk/http-api-data"
 license=("custom:BSD3")

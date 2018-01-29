@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 277063 2017-12-30 11:32:52Z felixonmars $
+# $Id: PKGBUILD 284678 2018-01-21 18:30:58Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=wl-pprint-terminfo
 pkgname=haskell-wl-pprint-terminfo
 pkgver=3.7.1.4
-pkgrel=21
+pkgrel=23
 pkgdesc="A color pretty printer with terminfo support"
 url="https://github.com/ekmett/wl-pprint-terminfo/"
 license=('custom:BSD3')

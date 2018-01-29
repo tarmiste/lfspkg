@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282961 2018-01-16 06:38:15Z felixonmars $
+# $Id: PKGBUILD 285247 2018-01-22 20:44:50Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=wai-conduit
 pkgname=haskell-wai-conduit
 pkgver=3.0.0.3
-pkgrel=7
+pkgrel=8
 pkgdesc="Conduit wrappers for WAI"
 url="https://github.com/yesodweb/wai"
 license=("MIT")

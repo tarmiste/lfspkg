@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 271511 2017-12-02 02:46:34Z felixonmars $
+# $Id: PKGBUILD 285757 2018-01-23 16:09:03Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=Ranged-sets
 pkgname=haskell-ranged-sets
 pkgver=0.3.0
-pkgrel=9
+pkgrel=10
 pkgdesc="Ranged sets for Haskell"
 url="http://code.haskell.org/ranged-sets"
 license=('custom:BSD3')

@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 281642 2018-01-12 15:48:36Z felixonmars $
+# $Id: PKGBUILD 287242 2018-01-26 19:17:59Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=x509-system
 pkgname=haskell-x509-system
 pkgver=1.6.6
-pkgrel=14
+pkgrel=17
 pkgdesc="Handle per-operating-system X.509 accessors and storage"
 url="https://github.com/vincenthz/hs-certificate"
 license=("custom:BSD3")

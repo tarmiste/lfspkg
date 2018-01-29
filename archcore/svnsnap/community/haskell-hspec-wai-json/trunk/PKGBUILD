@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283202 2018-01-16 10:20:00Z felixonmars $
+# $Id: PKGBUILD 286180 2018-01-24 07:51:31Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=hspec-wai-json
 pkgname=haskell-hspec-wai-json
 pkgver=0.9.0
-pkgrel=14
+pkgrel=17
 pkgdesc="Testing JSON APIs with hspec-wai"
 url="https://github.com/hspec/hspec-wai"
 license=("MIT")

@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283096 2018-01-16 08:57:54Z felixonmars $
+# $Id: PKGBUILD 285712 2018-01-23 16:05:42Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=conduit
 pkgname=haskell-conduit
 pkgver=1.2.13
-pkgrel=3
+pkgrel=4
 pkgdesc="Streaming data processing library."
 url="https://github.com/snoyberg/conduit"
 license=("MIT")

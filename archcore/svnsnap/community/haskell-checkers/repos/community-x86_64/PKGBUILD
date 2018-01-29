@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 281667 2018-01-12 16:02:11Z felixonmars $
+# $Id: PKGBUILD 285760 2018-01-23 16:09:14Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=checkers
 pkgname=haskell-checkers
 pkgver=0.4.9.5
-pkgrel=1
+pkgrel=4
 pkgdesc="Check properties on standard classes and data structures"
 url="https://github.com/conal/checkers"
 license=('custom:BSD3')

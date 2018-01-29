@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283329 2018-01-16 15:32:34Z felixonmars $
+# $Id: PKGBUILD 286491 2018-01-24 14:45:37Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=persistent-sqlite
 pkgname=haskell-persistent-sqlite
 pkgver=2.6.4
-pkgrel=21
+pkgrel=25
 pkgdesc="Backend for the persistent library using sqlite3"
 url="http://www.yesodweb.com/book/persistent"
 license=("MIT")

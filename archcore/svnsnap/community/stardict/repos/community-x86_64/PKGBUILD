@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 271941 2017-12-02 22:12:54Z jgc $
+# $Id: PKGBUILD 286930 2018-01-25 20:55:00Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Gaetan Bisson <bisson@archlinux.org>
 # Contributor: Aaron Griffin <aaron@archlinux.org>
@@ -7,7 +7,7 @@
 
 pkgname=stardict
 pkgver=3.0.6
-pkgrel=4
+pkgrel=5
 pkgdesc='International dictionary software'
 arch=('x86_64')
 url='http://www.stardict.org/'
@@ -25,6 +25,8 @@ prepare() {
   cd "${srcdir}/${pkgname}-${pkgver}"
   patch -p1 -i ../gcc46.patch
   patch -p1 -i ../glib2.patch
+
+  sed -i 's/, enchant/, enchant-2/' dict/configure.ac
 }
 
 build() {

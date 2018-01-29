@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283428 2018-01-16 16:36:49Z felixonmars $
+# $Id: PKGBUILD 287227 2018-01-26 19:15:29Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=yesod-form
 pkgname=haskell-yesod-form
 pkgver=1.4.16
-pkgrel=52
+pkgrel=62
 pkgdesc="Form handling support for Yesod Web Framework"
 url="http://www.yesodweb.com/"
 license=("MIT")

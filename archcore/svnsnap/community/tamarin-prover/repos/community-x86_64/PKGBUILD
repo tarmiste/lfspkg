@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 283427 2018-01-16 16:36:47Z felixonmars $
+# $Id: PKGBUILD 287267 2018-01-26 19:22:52Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 pkgname=tamarin-prover
 pkgver=1.2.2
-pkgrel=60
+pkgrel=69
 pkgdesc="The Tamarin prover for security protocol analysis"
 url="http://tamarin-prover.github.io"
 license=("GPL")

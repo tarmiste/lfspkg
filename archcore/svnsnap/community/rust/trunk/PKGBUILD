@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 279663 2018-01-06 20:30:56Z demize $
+# $Id: PKGBUILD 286116 2018-01-23 22:14:34Z demize $
 # Maintainer: Johannes Löthberg <johannes@kyriasis.com>
 # Contributor: Alexander F Rødseth <xyproto@archlinux.org>
 # Contributor: Daniel Micay <danielmicay@gmail.com>
@@ -7,7 +7,7 @@
 pkgname=('rust' 'rust-docs')
 epoch=1
 pkgver=1.23.0
-pkgrel=2
+pkgrel=3
 
 pkgdesc='Systems programming language focused on safety, speed and concurrency'
 url='https://www.rust-lang.org/'
@@ -40,7 +40,7 @@ build() {
 }
 
 package_rust() {
-  depends=('gcc-libs')
+  depends=('gcc-libs' 'curl' 'libssh2')
   provides=('cargo' 'rustfmt')
   conflicts=('cargo' 'rustfmt')
   replaces=('cargo' 'rustfmt')
@@ -60,6 +60,9 @@ package_rust() {
 
   # move docs out of the way
   mv "$pkgdir/usr/share/doc" "$srcdir/"
+
+  # The version distributed with rust is old and buggy, and ends up breaking other builds.
+  rm "$pkgdir"/usr/bin/rustfmt
 }
 
 package_rust-docs() {

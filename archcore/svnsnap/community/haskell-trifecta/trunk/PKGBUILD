@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283339 2018-01-16 15:48:14Z felixonmars $
+# $Id: PKGBUILD 286943 2018-01-25 21:05:30Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=trifecta
 pkgname=haskell-trifecta
 pkgver=1.7.1.1
-pkgrel=21
+pkgrel=26
 pkgdesc="A modern parser combinator library with convenient diagnostics"
 url="https://github.com/ekmett/trifecta/"
 license=("custom:BSD3")

@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282829 2018-01-15 18:08:38Z felixonmars $
+# $Id: PKGBUILD 286672 2018-01-24 19:50:36Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Thomas Dziedzic <gostrc@gmail.com>
 
 _hkgname=hasql-pool
 pkgname=haskell-hasql-pool
 pkgver=0.4.3
-pkgrel=8
+pkgrel=13
 pkgdesc="A pool of connections for Hasql"
 url="https://github.com/nikita-volkov/hasql-pool"
 license=('MIT')

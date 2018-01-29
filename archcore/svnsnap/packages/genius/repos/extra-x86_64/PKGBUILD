@@ -1,12 +1,12 @@
-# $Id: PKGBUILD 309915 2017-11-14 09:41:26Z jgc $
+# $Id: PKGBUILD 315378 2018-01-24 09:55:53Z bpiotrowski $
 # Maintainer: Jan de Groot <jgc@archlinux.org>
 # Contributor: Arjan Timmerman <arjan@soulfly.nl>
 
 pkgname=genius
 pkgver=1.0.23
-pkgrel=1
+pkgrel=2
 pkgdesc="Advanced calculator including a mathematical programming language"
-arch=('i686' 'x86_64')
+arch=('x86_64')
 license=('GPL')
 url="http://www.jirka.org/genius.html"
 depends=('vte' 'gtksourceview2' 'mpfr' 'desktop-file-utils')

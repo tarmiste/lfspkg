@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 283106 2018-01-16 08:58:17Z felixonmars $
+# $Id: PKGBUILD 287233 2018-01-26 19:16:18Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=hOpenPGP
 pkgname=haskell-hopenpgp
 pkgver=2.5.5
-pkgrel=142
+pkgrel=152
 pkgdesc="Native Haskell implementation of OpenPGP (RFC4880)"
 url="http://floss.scru.org/hOpenPGP/"
 license=('MIT')

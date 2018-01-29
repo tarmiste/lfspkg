@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282825 2018-01-15 18:05:56Z felixonmars $
+# $Id: PKGBUILD 286668 2018-01-24 19:47:36Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=postgresql-binary
 pkgname=haskell-postgresql-binary
 pkgver=0.12.1
-pkgrel=41
+pkgrel=44
 pkgdesc="Encoders and decoders for the PostgreSQL's binary format"
 url="https://github.com/nikita-volkov/postgresql-binary"
 license=("MIT")

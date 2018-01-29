@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283104 2018-01-16 08:58:12Z felixonmars $
+# $Id: PKGBUILD 287210 2018-01-26 19:13:13Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=cryptohash-conduit
 pkgname=haskell-cryptohash-conduit
 pkgver=0.1.1
-pkgrel=125
+pkgrel=129
 pkgdesc="cryptohash conduit"
 url="https://github.com/vincenthz/hs-cryptohash-conduit"
 license=("custom:BSD3")

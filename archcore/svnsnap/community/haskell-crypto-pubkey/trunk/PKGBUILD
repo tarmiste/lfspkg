@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 281445 2018-01-11 20:19:26Z felixonmars $
+# $Id: PKGBUILD 287084 2018-01-26 10:27:37Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Thomas Dziedzic <gostrc@gmail.com>
 
 _hkgname=crypto-pubkey
 pkgname=haskell-crypto-pubkey
 pkgver=0.2.8
-pkgrel=37
+pkgrel=41
 pkgdesc="Public Key cryptography"
 url="https://github.com/vincenthz/hs-crypto-pubkey"
 license=('custom:BSD3')

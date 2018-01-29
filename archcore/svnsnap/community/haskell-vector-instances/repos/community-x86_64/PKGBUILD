@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 277222 2017-12-30 15:03:14Z felixonmars $
+# $Id: PKGBUILD 286650 2018-01-24 19:25:31Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=vector-instances
 pkgname=haskell-vector-instances
 pkgver=3.4
-pkgrel=24
+pkgrel=29
 pkgdesc="Orphan Instances for \'Data.Vector\'"
 url="https://github.com/ekmett/vector-instances"
 license=("custom:BSD3")

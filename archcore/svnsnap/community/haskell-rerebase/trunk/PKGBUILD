@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 276987 2017-12-30 09:33:00Z felixonmars $
+# $Id: PKGBUILD 287024 2018-01-26 09:44:05Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=rerebase
 pkgname=haskell-rerebase
 pkgver=1.2.1
-pkgrel=3
+pkgrel=10
 pkgdesc='Reexports from "base" with a bunch of other standard libraries'
 url="https://github.com/nikita-volkov/rerebase"
 license=("MIT")

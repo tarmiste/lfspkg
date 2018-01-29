@@ -1,9 +1,9 @@
-# $Id: PKGBUILD 310007 2017-11-15 14:11:34Z foutrelis $
+# $Id: PKGBUILD 315445 2018-01-25 19:26:58Z heftig $
 # Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
 
 pkgname=tracker-miners
 pkgver=2.0.3
-pkgrel=1
+pkgrel=2
 pkgdesc="Collection of data extractors for Tracker/Nepomuk"
 url="https://wiki.gnome.org/Projects/Tracker"
 arch=(x86_64)
@@ -32,7 +32,7 @@ build() {
     --prefix=/usr \
     --sysconfdir=/etc \
     --localstatedir=/var \
-    --libexecdir=/usr/lib/$pkgname \
+    --libexecdir=/usr/lib \
     --enable-unit-tests \
     --enable-functional-tests \
     --enable-libflac \

@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 282416 2018-01-15 05:09:35Z felixonmars $
+# $Id: PKGBUILD 286795 2018-01-25 10:45:26Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=xcffib
 pkgname=haskell-xcffib
 pkgver=0.5.1
-pkgrel=51
+pkgrel=56
 pkgdesc="A cffi-based python binding for X"
 url="https://github.com/tych0/xcffib"
 license=('Apache')

@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 283479 2018-01-16 17:37:05Z felixonmars $
+# $Id: PKGBUILD 287577 2018-01-28 04:15:20Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 pkgname=hledger-web
 pkgver=1.5
-pkgrel=17
+pkgrel=35
 pkgdesc="Web interface for the hledger accounting tool"
 url="http://hledger.org"
 license=("GPL")

@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 281674 2018-01-12 16:21:15Z felixonmars $
+# $Id: PKGBUILD 285839 2018-01-23 16:15:30Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Thomas Dziedzic <gostrc@gmail.com>
 
 _hkgname=incremental-parser
 pkgname=haskell-incremental-parser
 pkgver=0.2.5.3
-pkgrel=1
+pkgrel=2
 pkgdesc="Generic parser library capable of providing partial results from partial input."
 url="https://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')

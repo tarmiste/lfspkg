@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 282869 2018-01-16 03:57:21Z felixonmars $
+# $Id: PKGBUILD 286769 2018-01-25 10:43:21Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=network-ip
 pkgname=haskell-network-ip
 pkgver=0.3.0.2
-pkgrel=13
+pkgrel=15
 pkgdesc="Internet Protocol data structures"
 url="https://github.com/mvv/network-ip"
 license=('custom:BSD3')

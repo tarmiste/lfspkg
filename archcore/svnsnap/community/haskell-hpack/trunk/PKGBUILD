@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 283039 2018-01-16 07:52:50Z felixonmars $
+# $Id: PKGBUILD 287052 2018-01-26 10:08:20Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Daniel Nagy <danielnagy at gmx de>
 # Contributor: Daniel Micay <danielmicay@gmail.com>
@@ -6,7 +6,7 @@
 pkgname=haskell-hpack
 _hkgname=hpack
 pkgver=0.21.2
-pkgrel=10
+pkgrel=19
 pkgdesc="An alternative format for Haskell packages"
 url="https://github.com/sol/hpack#readme"
 license=("MIT")

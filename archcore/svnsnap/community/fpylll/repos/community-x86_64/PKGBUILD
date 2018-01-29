@@ -1,12 +1,12 @@
-# $Id: PKGBUILD 257016 2017-09-11 20:01:34Z arojas $
+# $Id: PKGBUILD 286256 2018-01-24 09:58:50Z bpiotrowski $
 # Maintainer: Antonio Rojas <arojas@archlinux.org>
 
 pkgbase=fpylll
 pkgname=(python-fpylll python2-fpylll)
 pkgver=0.3.0dev
-pkgrel=1
+pkgrel=2
 pkgdesc="A Python interface for fplll"
-arch=(i686 x86_64)
+arch=(x86_64)
 url="https://github.com/fplll/fpylll"
 license=(GPL2)
 makedepends=(fplll python-numpy python-cysignals cython python2-numpy python2-cysignals cython2)

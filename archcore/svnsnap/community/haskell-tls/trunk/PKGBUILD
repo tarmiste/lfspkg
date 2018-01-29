@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282523 2018-01-15 06:58:32Z felixonmars $
+# $Id: PKGBUILD 287115 2018-01-26 10:50:15Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=tls
 pkgname=haskell-tls
 pkgver=1.4.0
-pkgrel=16
+pkgrel=19
 pkgdesc="TLS/SSL protocol native implementation (Server and Client)"
 url="https://github.com/vincenthz/hs-tls"
 license=("custom:BSD3")

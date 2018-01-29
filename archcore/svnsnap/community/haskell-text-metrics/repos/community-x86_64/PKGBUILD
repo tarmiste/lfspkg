@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 277323 2017-12-30 15:08:48Z felixonmars $
+# $Id: PKGBUILD 285857 2018-01-23 16:16:34Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=text-metrics
 pkgname=haskell-text-metrics
 pkgver=0.3.0
-pkgrel=4
+pkgrel=5
 pkgdesc="Calculate various string metrics efficiently"
 url="https://github.com/mrkkrp/text-metrics"
 license=('custom:BSD3')

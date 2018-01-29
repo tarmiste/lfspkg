@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282794 2018-01-15 17:30:49Z felixonmars $
+# $Id: PKGBUILD 285512 2018-01-23 10:11:17Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=microlens-platform
 pkgname=haskell-microlens-platform
 pkgver=0.3.9.0
-pkgrel=10
+pkgrel=11
 pkgdesc="Feature-complete microlens"
 url="https://github.com/aelve/microlens"
 license=("custom:BSD3")

@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282130 2018-01-14 16:17:55Z felixonmars $
+# $Id: PKGBUILD 287101 2018-01-26 10:40:02Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=jose
 pkgname=haskell-jose
 pkgver=0.6.0.3
-pkgrel=11
+pkgrel=20
 pkgdesc="Javascript Object Signing and Encryption and JSON Web Token library"
 url="https://github.com/frasertweedale/hs-jose"
 license=("Apache")

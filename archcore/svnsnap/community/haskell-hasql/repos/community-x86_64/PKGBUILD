@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282871 2018-01-16 03:57:26Z felixonmars $
+# $Id: PKGBUILD 286771 2018-01-25 10:43:31Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Thomas Dziedzic <gostrc@gmail.com>
 
 _hkgname=hasql
 pkgname=haskell-hasql
 pkgver=1.1.1
-pkgrel=8
+pkgrel=13
 pkgdesc="An efficient PostgreSQL driver and a flexible mapping API"
 url="https://github.com/nikita-volkov/hasql"
 license=('MIT')

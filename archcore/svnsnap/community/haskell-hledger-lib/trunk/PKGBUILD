@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283313 2018-01-16 14:39:32Z felixonmars $
+# $Id: PKGBUILD 287382 2018-01-27 09:08:51Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=hledger-lib
 pkgname=haskell-hledger-lib
 pkgver=1.5
-pkgrel=5
+pkgrel=10
 pkgdesc="Core data types, parsers and functionality for the hledger accounting tools"
 url="http://hledger.org"
 license=("GPL")

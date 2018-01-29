@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282017 2018-01-14 11:07:22Z felixonmars $
+# $Id: PKGBUILD 285288 2018-01-22 21:14:32Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=http-date
 pkgname=haskell-http-date
 pkgver=0.0.6.1
-pkgrel=33
+pkgrel=34
 pkgdesc="HTTP Date parser/formatter"
 url="https://hackage.haskell.org/package/${_hkgname}"
 license=("custom:BSD3")

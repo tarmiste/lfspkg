@@ -1,9 +1,9 @@
-# $Id: PKGBUILD 310007 2017-11-15 14:11:34Z foutrelis $
+# $Id: PKGBUILD 315107 2018-01-18 21:02:49Z bpiotrowski $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 pkgname=libbytesize
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc='A tiny library providing a C "class" for working with arbitrary big sizes in bytes'
 arch=('x86_64')
 url="https://github.com/rhinstaller/libbytesize"

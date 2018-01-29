@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 283465 2018-01-16 17:30:22Z arojas $
+# $Id: PKGBUILD 286261 2018-01-24 09:59:24Z bpiotrowski $
 # Maintainer: Antonio Rojas <arojas@archlinux.org>
 # Contributor: Rémy Oudompheng <remy@archlinux.org>
 
 pkgname=mpfi
 pkgver=1.5.3
-pkgrel=1
+pkgrel=2
 pkgdesc="C library for interval arithmetic"
 arch=(x86_64)
 url="http://perso.ens-lyon.fr/nathalie.revol/software.html"

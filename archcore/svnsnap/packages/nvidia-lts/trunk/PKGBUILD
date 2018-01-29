@@ -1,14 +1,14 @@
-# $Id: PKGBUILD 314101 2018-01-05 20:48:27Z andyrtr $
+# $Id: PKGBUILD 315329 2018-01-23 20:55:21Z andyrtr $
 # Maintainer: Eric Bélanger <eric@archlinux.org>
 
 pkgname=nvidia-lts
 pkgver=387.34
 _extramodules=extramodules-4.9-lts
-pkgrel=5
+pkgrel=7
 pkgdesc="NVIDIA drivers for linux-lts"
 arch=('x86_64')
 url="http://www.nvidia.com/"
-makedepends=("nvidia-utils=$pkgver" 'linux-lts>=4.9.75' 'linux-lts-headers>=4.9.75')
+makedepends=("nvidia-utils=$pkgver" 'linux-lts>=4.9.78' 'linux-lts-headers>=4.9.78')
 provides=('nvidia')
 license=('custom')
 install=nvidia-lts.install
@@ -31,7 +31,7 @@ build() {
 }
 
 package() {
-    depends=('linux-lts>=4.9.75' "nvidia-utils=$pkgver" 'libgl')
+    depends=('linux-lts>=4.9.78' "nvidia-utils=$pkgver" 'libgl')
 
     install -D -m644 "${srcdir}/${_pkg}/kernel/nvidia.ko" \
       "${pkgdir}/usr/lib/modules/${_extramodules}/kernel/drivers/video/nvidia.ko"

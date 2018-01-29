@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 208100 2017-01-20 09:52:36Z bgyorgy $
+# $Id: PKGBUILD 284479 2018-01-21 02:50:52Z bgyorgy $
 # Maintainer: Balló György <ballogyor+arch at gmail dot com>
 
 pkgname=gnome-activity-journal
@@ -48,5 +48,5 @@ build() {
 
 package() {
   cd $pkgname-$pkgver
-  python2 setup.py install --root=$pkgdir/ --optimize=1
+  python2 setup.py install --root="$pkgdir" --optimize=1
 }

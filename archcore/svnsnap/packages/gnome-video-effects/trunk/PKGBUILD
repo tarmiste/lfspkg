@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 288526 2017-02-09 19:43:36Z heftig $
+# $Id: PKGBUILD 315033 2018-01-18 09:11:51Z heftig $
 # Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
 
 pkgname=gnome-video-effects
@@ -11,6 +11,7 @@ license=(GPL2)
 depends=(gst-plugins-good gst-plugins-bad frei0r-plugins)
 makedepends=(intltool gnome-common git)
 _commit=f58ea2b2c88403ec1f767da5db85e05a1babaabe  # master
+groups=(gnome)
 source=("git+$url#commit=$_commit")
 sha256sums=('SKIP')
 

@@ -1,9 +1,9 @@
-# $Id: PKGBUILD 281826 2018-01-13 16:09:41Z felixonmars $
+# $Id: PKGBUILD 285661 2018-01-23 14:55:19Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 pkgbase=python-hypothesis
 pkgname=('python-hypothesis' 'python2-hypothesis')
-pkgver=3.44.16
+pkgver=3.44.22
 pkgrel=1
 pkgdesc="Advanced Quickcheck style testing library for Python"
 arch=('any')
@@ -17,7 +17,7 @@ checkdepends=('python-pytest-runner' 'python2-pytest-runner' 'flake8' 'python2-f
               'python-django' 'python2-django' 'python-pytest-xdist' 'python2-pytest-xdist'
               'python-mock' 'python2-mock' 'python-pandas' 'python2-pandas')
 source=("$pkgbase-$pkgver.tar.gz::https://github.com/HypothesisWorks/hypothesis-python/archive/$pkgver.tar.gz")
-sha512sums=('2354946ccf596a83e1c8dd1c38e854e7a7fec146d4e35bee67423472799ddcd9b5cd63f612f4602cb1c569084ef094ae317a3776513da1bb57c80e9d372712de')
+sha512sums=('60be4f37edba51c13314eac5f2a3b3eb6bee7949edd477dd852b86a8c37403bbcd92fa7baabff6259035e44bc18550b9616ce7ec8046bc17355dffca11ed755c')
 
 prepare() {
   # Make tests faster

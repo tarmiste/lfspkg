@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283421 2018-01-16 16:36:28Z felixonmars $
+# $Id: PKGBUILD 286403 2018-01-24 13:30:51Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=xml-hamlet
 pkgname=haskell-xml-hamlet
 pkgver=0.4.1.1
-pkgrel=20
+pkgrel=23
 pkgdesc="Hamlet-style quasiquoter for XML content"
 url="http://www.yesodweb.com/"
 license=("custom:BSD3")

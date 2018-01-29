@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 269648 2017-11-27 10:35:27Z felixonmars $
+# $Id: PKGBUILD 285630 2018-01-23 14:24:48Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=math-functions
 pkgname=haskell-math-functions
 pkgver=0.2.1.0
-pkgrel=6
+pkgrel=7
 pkgdesc="Special functions and Chebyshev polynomials"
 url="https://github.com/bos/math-functions"
 license=("custom:BSD3")

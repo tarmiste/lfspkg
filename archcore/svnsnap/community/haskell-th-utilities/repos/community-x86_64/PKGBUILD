@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 277337 2017-12-30 15:10:13Z felixonmars $
+# $Id: PKGBUILD 285870 2018-01-23 16:18:26Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=th-utilities
 pkgname=haskell-th-utilities
 pkgver=0.2.0.1
-pkgrel=23
+pkgrel=25
 pkgdesc="Collection of useful functions for use with Template Haskell"
 url="https://github.com/fpco/th-utilities"
 license=('MIT')

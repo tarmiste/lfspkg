@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 277232 2017-12-30 15:03:42Z felixonmars $
+# $Id: PKGBUILD 286949 2018-01-25 21:06:25Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=concise
 pkgname=haskell-concise
 pkgver=0.1.0.0
-pkgrel=5
+pkgrel=10
 pkgdesc="Utilities for Control.Lens.Cons"
 url="https://github.com/frasertweedal/hs-concise"
 license=("custom:BSD3")

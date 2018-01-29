@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 239535 2015-05-18 19:00:18Z arojas $
+# $Id: PKGBUILD 315382 2018-01-24 09:56:02Z bpiotrowski $
 # Maintainer: Tom Gundersen <teg@jklm.no>
 # Contributor: AndyRTR <andyrtr@archlinux.org>
 # Contributor: Lawrence Lee <valheru@facticius.net>
@@ -6,11 +6,11 @@
 pkgname=rasqal
 epoch=1
 pkgver=0.9.33
-pkgrel=1
+pkgrel=2
 pkgdesc="A free C library that handles Resource Description Framework (RDF) query syntaxes, query construction and query execution returning result bindings"
 url="http://librdf.org/rasqal"
 license=('GPL' 'LGPL')
-arch=('i686' 'x86_64')
+arch=('x86_64')
 depends=('raptor' 'mpfr' 'util-linux')
 source=(http://download.librdf.org/source/${pkgname}-${pkgver}.tar.gz)
 md5sums=('1f5def51ca0026cd192958ef07228b52')

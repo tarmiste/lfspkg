@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283418 2018-01-16 16:36:15Z felixonmars $
+# $Id: PKGBUILD 286450 2018-01-24 13:35:03Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=tagstream-conduit
 pkgname=haskell-tagstream-conduit
 pkgver=0.5.5.3
-pkgrel=112
+pkgrel=115
 pkgdesc="Streamlined html tag parser"
 url="https://github.com/yihuang/tagstream-conduit"
 license=("custom:BSD3")

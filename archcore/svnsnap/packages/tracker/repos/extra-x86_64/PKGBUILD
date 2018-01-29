@@ -1,14 +1,14 @@
-# $Id: PKGBUILD 310341 2017-11-17 22:52:40Z foutrelis $
+# $Id: PKGBUILD 315446 2018-01-25 19:27:52Z heftig $
 # Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
 # Contributor: Sergej Pupykin <pupykin.s+arch@gmail.com>
 # Contributor: Alexander Fehr <pizzapunk gmail com>
 
 pkgname=tracker
 pkgver=2.0.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Desktop-neutral user information store, search tool and indexer"
 url="https://wiki.gnome.org/Projects/Tracker"
-arch=(i686 x86_64)
+arch=(x86_64)
 license=(GPL)
 depends=(sqlite icu glib2 libffi util-linux libstemmer libseccomp libsoup json-glib upower libnm)
 makedepends=(gobject-introspection intltool vala git gtk-doc bash-completion)
@@ -34,7 +34,7 @@ build() {
     --prefix=/usr \
     --sysconfdir=/etc \
     --localstatedir=/var \
-    --libexecdir=/usr/lib/$pkgname \
+    --libexecdir=/usr/lib \
     --enable-unit-tests \
     --enable-functional-tests \
     --enable-gtk-doc

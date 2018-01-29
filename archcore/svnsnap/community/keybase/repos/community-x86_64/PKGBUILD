@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 275271 2017-12-22 02:58:55Z felixonmars $
+# $Id: PKGBUILD 285353 2018-01-23 06:07:29Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Michael Hansen <zrax0111 gmail com>
 
 pkgname=keybase
 pkgdesc='CLI tool for GPG with keybase.io'
-pkgver=1.0.39
+pkgver=1.0.40
 pkgrel=1
 arch=('x86_64')
 url='http://keybase.io/'
@@ -12,7 +12,7 @@ license=('BSD')
 depends=('gnupg')
 makedepends=('go-pie' 'git' 'mercurial')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/keybase/client/archive/v$pkgver.tar.gz")
-sha512sums=('def416bad6fc3513a3341aecaf03bce356a890667e4c64f9edc1c469b3a1f167c3022f6c1aabaa48257983aaa9826b45117ada6cc26bf862c97092c904cd32f1')
+sha512sums=('919bf012409173f4df9cbbc79d97cfe72b47cb53d941b1426cf3bc771c1e9d6a2d2b5c6d5739e2c9ee79a5ac2f0c5c97b9a91769ad0dbc1679b6e40d96b1c344')
 
 prepare() {
   cd client-$pkgver

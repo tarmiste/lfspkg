@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 276639 2017-12-28 23:51:40Z felixonmars $
+# $Id: PKGBUILD 285554 2018-01-23 13:22:12Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=safecopy
 pkgname=haskell-safecopy
 pkgver=0.9.3.3
-pkgrel=4
+pkgrel=5
 pkgdesc="Binary serialization with version control."
 url="http://acid-state.seize.it/safecopy"
 license=('custom:PublicDomain')

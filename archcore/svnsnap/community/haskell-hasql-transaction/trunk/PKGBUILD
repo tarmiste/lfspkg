@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 282831 2018-01-15 18:09:48Z felixonmars $
+# $Id: PKGBUILD 286674 2018-01-24 19:51:46Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=hasql-transaction
 pkgname=haskell-hasql-transaction
 pkgver=0.5.2
-pkgrel=8
+pkgrel=13
 pkgdesc="A composable abstraction over the retryable transactions for Hasql"
 url="https://github.com/nikita-volkov/hasql-transaction"
 license=('MIT')

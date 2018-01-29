@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 276516 2017-12-28 16:22:28Z felixonmars $
+# $Id: PKGBUILD 285550 2018-01-23 13:19:37Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=resource-pool
 pkgname=haskell-resource-pool
 pkgver=0.2.3.2
-pkgrel=23
+pkgrel=24
 pkgdesc="A high-performance striped resource pooling implementation"
 url="https://github.com/bos/pool"
 license=("custom:BSD3")

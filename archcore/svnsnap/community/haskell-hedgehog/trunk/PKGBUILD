@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282975 2018-01-16 06:48:45Z felixonmars $
+# $Id: PKGBUILD 285249 2018-01-22 20:46:30Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=hedgehog
 pkgname=haskell-hedgehog
 pkgver=0.5.1
-pkgrel=10
+pkgrel=12
 pkgdesc="A modern property-based testing system"
 url="https://hedgehog.qa"
 license=("custom:BSD3")

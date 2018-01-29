@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 281294 2018-01-11 08:55:42Z heftig $
+# $Id: PKGBUILD 286633 2018-01-24 19:14:31Z heftig $
 # Maintainer: Sven-Hendrik Haase <sh@lutzhaase.com>
 # Contributor: M0Rf30
 # Contributor: Samsagax <samsagax@gmail.com>
@@ -6,7 +6,7 @@
 pkgbase=bbswitch
 pkgname=(bbswitch bbswitch-dkms)
 pkgver=0.8
-pkgrel=100
+pkgrel=102
 pkgdesc="Kernel module allowing to switch dedicated graphics card on Optimus laptops"
 arch=('x86_64')
 url="http://github.com/Bumblebee-Project/bbswitch"

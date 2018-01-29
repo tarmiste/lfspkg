@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 283131 2018-01-16 09:00:37Z felixonmars $
+# $Id: PKGBUILD 286452 2018-01-24 13:35:11Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=html-conduit
 pkgname=haskell-html-conduit
 pkgver=1.2.1.2
-pkgrel=7
+pkgrel=11
 pkgdesc="Parse HTML documents using xml-conduit datatypes"
 url="https://github.com/snoyberg/xml"
 license=('MIT')

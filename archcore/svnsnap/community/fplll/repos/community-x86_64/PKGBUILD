@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 257086 2017-09-12 06:28:57Z arojas $
+# $Id: PKGBUILD 286255 2018-01-24 09:58:45Z bpiotrowski $
 # Maintainer: Antonio Rojas <arojas@archlinux.org>
 
 pkgname=fplll
 pkgver=5.2.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Lattice algorithms using floating-point arithmetic"
-arch=(i686 x86_64)
+arch=(x86_64)
 url="https://github.com/fplll/fplll"
 license=(LGPL)
 depends=(mpfr qd)

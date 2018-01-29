@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 277333 2017-12-30 15:09:54Z felixonmars $
+# $Id: PKGBUILD 285864 2018-01-23 16:16:58Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=here
 pkgname=haskell-here
 pkgver=1.2.12
-pkgrel=3
+pkgrel=5
 pkgdesc="Here docs & interpolated strings via quasiquotation"
 url="https://github.com/tmhedberg/here"
 license=("custom:BSD3")

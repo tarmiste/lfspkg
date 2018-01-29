@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 277271 2017-12-30 15:05:29Z felixonmars $
+# $Id: PKGBUILD 286435 2018-01-24 13:34:08Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=haskell-src-exts-util
 pkgname=haskell-src-exts-util
 pkgver=0.2.1.2
-pkgrel=3
+pkgrel=4
 pkgdesc="Helper functions for working with haskell-src-exts trees"
 url="https://github.com/pepeiborra/haskell-src-exts-util"
 license=("custom:BSD3")

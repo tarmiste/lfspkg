@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 269630 2017-11-27 10:09:50Z felixonmars $
+# $Id: PKGBUILD 285672 2018-01-23 15:13:11Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=vector-algorithms
 pkgname=haskell-vector-algorithms
 pkgver=0.7.0.1
-pkgrel=10
+pkgrel=11
 pkgdesc="Efficient algorithms for vector arrays"
 url="http://code.haskell.org/~dolio/"
 license=("custom:BSD3")

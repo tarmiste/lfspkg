@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283262 2018-01-16 13:48:44Z felixonmars $
+# $Id: PKGBUILD 287373 2018-01-27 08:52:38Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=hakyll
 pkgname=haskell-hakyll
 pkgver=4.10.0.0
-pkgrel=28
+pkgrel=49
 pkgdesc="A static website compiler library"
 url="http://jaspervdj.be/hakyll"
 license=("custom:BSD3")

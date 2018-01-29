@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 276562 2017-12-28 16:56:09Z felixonmars $
+# $Id: PKGBUILD 286896 2018-01-25 20:35:03Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=lens
 pkgname=haskell-lens
 pkgver=4.15.4
-pkgrel=8
+pkgrel=13
 pkgdesc="Lenses, Folds and Traversals"
 url="https://github.com/ekmett/lens/"
 license=("custom:BSD3")

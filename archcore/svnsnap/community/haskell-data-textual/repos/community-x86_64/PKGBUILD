@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 282390 2018-01-15 05:08:39Z felixonmars $
+# $Id: PKGBUILD 285750 2018-01-23 16:08:41Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=data-textual
 pkgname=haskell-data-textual
 pkgver=0.3.0.2
-pkgrel=28
+pkgrel=29
 pkgdesc="Human-friendly textual representations."
 url="https://github.com/mvv/data-textual"
 license=('custom:BSD3')

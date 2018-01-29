@@ -1,10 +1,10 @@
-# $Id: PKGBUILD 282331 2018-01-15 05:06:10Z felixonmars $
+# $Id: PKGBUILD 286383 2018-01-24 13:29:30Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 
 _hkgname=doctemplates
 pkgname=haskell-doctemplates
 pkgver=0.2.1
-pkgrel=4
+pkgrel=7
 pkgdesc="Pandoc-style document templates"
 url="https://github.com/jgm/doctemplates"
 license=("custom:BSD3")

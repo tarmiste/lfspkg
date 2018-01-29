@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 276522 2017-12-28 16:25:25Z felixonmars $
+# $Id: PKGBUILD 285939 2018-01-23 17:22:40Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=foldl
 pkgname=haskell-foldl
 pkgver=1.3.5
-pkgrel=3
+pkgrel=6
 pkgdesc="Composable, streaming, and efficient left folds"
 url="https://hackage.haskell.org/package/${_hkgname}"
 license=("custom:BSD3")

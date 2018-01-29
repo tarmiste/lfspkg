@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 270998 2017-12-01 13:51:24Z felixonmars $
+# $Id: PKGBUILD 286825 2018-01-25 15:33:18Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Josip Ponjavic <josipponjavic at gmail dot com>
 # Contributor: Xu Fasheng <fasheng.xu[AT]gmail.com>
 
 pkgname=deepin-screen-recorder
-pkgver=2.6.5.1
-pkgrel=2
+pkgver=2.7.3
+pkgrel=1
 pkgdesc='Deepin Screen Recorder'
 arch=('x86_64')
 url="https://github.com/linuxdeepin/deepin-screen-recorder"
@@ -14,7 +14,7 @@ depends=('deepin-qt5integration' 'dtkwm' 'byzanz' 'ffmpeg')
 makedepends=('qt5-tools')
 groups=('deepin-extra')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/linuxdeepin/deepin-screen-recorder/archive/$pkgver.tar.gz")
-sha512sums=('1f2e6a227ee6aa4f3aa821176b048fade46b1afc779c563f694f290df1a872732f08f00e39a1f5581f527332222688518088867e0e60a40cda0ff7ad06232e47')
+sha512sums=('8efece3c5565049e7364e0e8e095233334316191ca34eec0e365def750e7d2ff6bcbbf7c58a4d766efd60923a01aa4a117e145945b012b4cbf4e7117df714ce4')
 
 build(){
   cd deepin-screen-recorder-$pkgver

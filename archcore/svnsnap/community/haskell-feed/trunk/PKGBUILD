@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 283019 2018-01-16 07:36:02Z felixonmars $
+# $Id: PKGBUILD 285316 2018-01-22 21:33:28Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=feed
 pkgname=haskell-feed
 pkgver=1.0.0.0
-pkgrel=18
+pkgrel=21
 pkgdesc="Interfacing with RSS (v 0.9x, 2.x, 1.0) + Atom feeds."
 url="https://github.com/bergmark/feed"
 license=("custom:BSD3")

@@ -1,9 +1,9 @@
-# $Id: PKGBUILD 280229 2018-01-07 22:53:30Z alucryd $
+# $Id: PKGBUILD 286894 2018-01-25 20:33:49Z alucryd $
 # Maintainer: Maxime Gauduin <alucryd@archlinux.org>
 # Contributor: Phillip Schichtel <phillip@schich.tel>
 
 pkgname=adapta-gtk-theme
-pkgver=3.93.0.12
+pkgver=3.93.0.72
 pkgrel=1
 pkgdesc='An adaptive Gtk+ theme based on Material Design Guidelines'
 arch=('any')

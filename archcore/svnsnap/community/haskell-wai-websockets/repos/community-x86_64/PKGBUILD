@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282740 2018-01-15 14:08:36Z felixonmars $
+# $Id: PKGBUILD 285739 2018-01-23 16:08:05Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=wai-websockets
 pkgname=haskell-wai-websockets
 pkgver=3.0.1.1
-pkgrel=38
+pkgrel=39
 pkgdesc="Provide a bridge between WAI and the websockets package."
 url="https://github.com/yesodweb/wai"
 license=("MIT")

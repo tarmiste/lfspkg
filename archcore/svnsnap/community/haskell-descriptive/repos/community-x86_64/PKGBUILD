@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282330 2018-01-15 05:06:08Z felixonmars $
+# $Id: PKGBUILD 286382 2018-01-24 13:29:27Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=descriptive
 pkgname=haskell-descriptive
 pkgver=0.9.4
-pkgrel=70
+pkgrel=73
 pkgdesc="Self-describing consumers/parsers; forms, cmd-line args, JSON, etc."
 url="https://github.com/chrisdone/descriptive"
 license=("custom:BSD3")

@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 282398 2018-01-15 05:08:56Z felixonmars $
+# $Id: PKGBUILD 286405 2018-01-24 13:31:01Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=sourcemap
 pkgname=haskell-sourcemap
 pkgver=0.1.6
-pkgrel=42
+pkgrel=44
 pkgdesc="Implementation of source maps as proposed by Google and Mozilla."
 url="https://hackage.haskell.org/package/${_hkgname}"
 license=("custom:BSD3")

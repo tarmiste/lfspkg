@@ -1,16 +1,16 @@
-# $Id: PKGBUILD 266875 2017-11-15 14:29:11Z foutrelis $
+# $Id: PKGBUILD 285229 2018-01-22 20:28:38Z juergen $
 # Maintainer: Alexander Rødseth <rodseth@gmail.com>
 # Contributor: Tobias Powalowski <tpowa@archlinux.org>
 
 pkgname=camlp4
-pkgver=4.05
+pkgver=4.06
 pkgrel=1
 pkgdesc='Caml preprocessor and pretty-printer'
 arch=('x86_64')
 license=('GPL2')
 url='https://github.com/ocaml/camlp4/releases'
-depends=('ocaml>=4.05.0')
-makedepends=('git' 'ocamlbuild')
+depends=('ocaml>=4.06.0')
+makedepends=('git' 'ocamlbuild' 'ocaml-compiler-libs')
 options=('!makeflags' '!emptydirs' 'staticlibs')
 source=("git://github.com/ocaml/camlp4#branch=$pkgver")
 md5sums=('SKIP')

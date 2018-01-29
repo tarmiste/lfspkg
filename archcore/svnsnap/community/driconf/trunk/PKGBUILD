@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 282272 2018-01-14 21:15:59Z bgyorgy $
+# $Id: PKGBUILD 284478 2018-01-21 02:48:38Z bgyorgy $
 # Maintainer: Balló György <ballogyor+arch at gmail dot com>
 # Contributor: Sergej Pupykin <pupykin.s+arch@gmail.com>
 # Contributor: Giovanni Scafora <linuxmania@gmail.com>
@@ -33,7 +33,7 @@ build() {
 
 package() {
   cd $pkgname-$pkgver
-  python2 setup.py install --root "$pkgdir" --optimize=1
+  python2 setup.py install --root="$pkgdir" --optimize=1
   install -Dm644 $pkgname.desktop "$pkgdir"/usr/share/applications/$pkgname.desktop
   install -Dm644 drilogo.jpg "$pkgdir"/usr/share/pixmaps/drilogo.jpg
 }

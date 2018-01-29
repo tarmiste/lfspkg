@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 280952 2018-01-10 09:07:50Z felixonmars $
+# $Id: PKGBUILD 285390 2018-01-23 08:05:30Z felixonmars $
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Arch Haskell Team <arch-haskell@haskell.org>
 
 _hkgname=quickcheck-assertions
 pkgname=haskell-quickcheck-assertions
 pkgver=0.3.0
-pkgrel=4
+pkgrel=5
 pkgdesc="HUnit like assertions for QuickCheck"
 url="https://github.com/s9gf4ult/quickcheck-assertions"
 license=("LGPL")

@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 261773 2017-10-05 16:56:02Z spupykin $
+# $Id: PKGBUILD 283677 2018-01-17 14:48:29Z spupykin $
 # Maintainer: Sergej Pupykin <pupykin.s+arch@gmail.com>
 # Contributor: Sergej Pupykin <pupykin.s+arch@gmail.com>
 
@@ -20,14 +20,14 @@ depends=(perl perl-timedate perl-datetime
 	 perl-data-dumper perl-math-random-isaac perl-email-sender perl-json-xs perl-file-slurp)
 optdepends=('perl-dbd-pg'
 	    'perl-dbd-mysql'
-	    'perl-dbd-oracle'
+#	    'perl-dbd-oracle'
 	    'python2'
 	    'ruby'
-	    'perl-class-trigger'
-	    'perl-data-objectdriver'
-	    'perl-html-formattext-withlinks'
-	    'perl-test-taint'
-	    'perl-theschwartz'
+#	    'perl-class-trigger'
+#	    'perl-data-objectdriver'
+#	    'perl-html-formattext-withlinks'
+#	    'perl-test-taint'
+#	    'perl-theschwartz'
 	    'perl-xmlrpc-lite')
 options=(!strip)
 backup=('srv/http/bugzilla/.htaccess')
