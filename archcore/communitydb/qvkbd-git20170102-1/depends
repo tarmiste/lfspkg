@@ -1,6 +1,0 @@
-%DEPENDS%
-qt5-declarative
-qt5-x11extras
-libxtst
-hicolor-icon-theme
-

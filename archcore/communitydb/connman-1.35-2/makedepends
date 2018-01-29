@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-bluez
-wpa_supplicant
-openconnect
-openvpn
-ppp
-

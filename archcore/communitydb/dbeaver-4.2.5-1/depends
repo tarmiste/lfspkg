@@ -1,5 +1,0 @@
-%DEPENDS%
-java-runtime=8
-gtk2
-gtk-update-icon-cache
-

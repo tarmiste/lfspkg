@@ -1,6 +1,0 @@
-%CHECKDEPENDS%
-python-subunit
-python2-subunit
-python-mock
-python2-mock
-

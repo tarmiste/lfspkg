@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-haveged: boost low entropy
-

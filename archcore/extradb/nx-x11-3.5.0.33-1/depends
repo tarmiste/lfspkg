@@ -1,5 +1,0 @@
-%DEPENDS%
-libxcomp
-fontconfig
-xorg-xkbcomp
-

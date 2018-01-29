@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-git
-meson
-gtk-doc
-

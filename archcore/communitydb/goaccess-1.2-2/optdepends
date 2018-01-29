@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-geoip2-database: for geoip support
-

@@ -1,8 +1,0 @@
-%DEPENDS%
-python2-future
-python2-pbr
-python2-subunit
-python2-fixtures
-python2-testtools
-python2-yaml
-

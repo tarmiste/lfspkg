@@ -1,8 +1,0 @@
-%DEPENDS%
-djvulibre
-libspectre
-libgxps
-mathjax
-poppler-glib
-webkit2gtk
-

@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-git
-deepin-gettext-tools
-deepin-dbus-factory
-deepin-gir-generator
-deepin-go-lib
-bzr
-go-pie
-

@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-python-setuptools
-python2-setuptools
-python-mistune
-python2-mistune
-python-docutils
-python2-docutils
-

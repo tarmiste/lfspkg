@@ -1,6 +1,0 @@
-%DEPENDS%
-mplayer
-dbus-glib
-libnotify
-gmtk
-

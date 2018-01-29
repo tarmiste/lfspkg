@@ -1,9 +1,0 @@
-%OPTDEPENDS%
-postgresql-libs
-unixodbc
-libldap
-libmariadbclient
-libsasl
-python2
-pcre
-

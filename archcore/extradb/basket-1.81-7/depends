@@ -1,7 +1,0 @@
-%DEPENDS%
-kdelibs
-gpgme
-qimageblitz
-hicolor-icon-theme
-kdebase-runtime
-

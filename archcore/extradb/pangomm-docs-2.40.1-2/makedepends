@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-git
-mm-common
-glibmm-docs
-cairomm-docs
-

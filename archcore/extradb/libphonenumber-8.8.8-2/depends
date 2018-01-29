@@ -1,5 +1,0 @@
-%DEPENDS%
-icu
-protobuf
-boost-libs
-

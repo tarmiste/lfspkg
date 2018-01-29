@@ -1,6 +1,0 @@
-%DEPENDS%
-freetype2
-libfontenc
-xproto
-fontsproto
-

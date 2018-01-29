@@ -1,7 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-parsers
-haskell-text
-haskell-text-latin1
-haskell-text-printer
-

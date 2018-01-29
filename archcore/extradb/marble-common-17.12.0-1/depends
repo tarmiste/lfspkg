@@ -1,6 +1,0 @@
-%DEPENDS%
-qt5-svg
-qt5-webkit
-phonon-qt5
-hicolor-icon-theme
-

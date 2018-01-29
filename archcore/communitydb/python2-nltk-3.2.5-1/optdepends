@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-nltk-data: test data
-python2-numpy: used for calculations
-python2-matplotlib: used for plotting
-

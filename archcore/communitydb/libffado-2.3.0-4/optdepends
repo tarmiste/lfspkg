@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-python2: ffado-diag
-python2-pyqt: mixer applet
-

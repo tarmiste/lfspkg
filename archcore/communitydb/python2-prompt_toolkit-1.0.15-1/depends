@@ -1,5 +1,0 @@
-%DEPENDS%
-python2-pygments
-python2-six
-python2-wcwidth
-

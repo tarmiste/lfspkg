@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-rasqal
-raptor
-postgresql-libs
-libmariadbclient
-unixodbc
-sqlite
-

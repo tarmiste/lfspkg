@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-intltool
-gettext
-imagemagick
-icon-naming-utils
-librsvg
-python2
-

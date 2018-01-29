@@ -1,5 +1,0 @@
-%DEPENDS%
-perl
-perl-anyevent
-perl-json-xs
-

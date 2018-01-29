@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-gvfs: file deletion support (gvfs-trash)
-kde-cli-tools: file deletion support (kioclient5)
-kdebase-runtime: file deletion support (kioclient)
-trash-cli: file deletion support (trash-put)
-

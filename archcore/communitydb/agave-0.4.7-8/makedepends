@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-gnome-doc-utils
-intltool
-boost
-cppunit
-

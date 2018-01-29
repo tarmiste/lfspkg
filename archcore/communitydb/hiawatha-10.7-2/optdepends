@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-php-fpm: PHP fastcgi
-php: letsencrypt
-

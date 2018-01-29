@@ -1,6 +1,0 @@
-%DEPENDS%
-xkeyboard-config
-xorg-xkbcomp
-xorg-setxkbmap
-xorg-fonts-misc
-

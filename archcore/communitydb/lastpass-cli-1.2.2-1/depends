@@ -1,5 +1,0 @@
-%DEPENDS%
-openssl
-curl
-libxml2
-

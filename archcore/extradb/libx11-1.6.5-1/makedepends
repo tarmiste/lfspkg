@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-xorg-util-macros
-xextproto
-xtrans
-inputproto
-

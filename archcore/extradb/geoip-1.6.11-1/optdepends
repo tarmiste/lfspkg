@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-geoip-database-extra: city/ASN databases (not needed for country lookups)
-

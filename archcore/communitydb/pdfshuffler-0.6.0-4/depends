@@ -1,5 +1,0 @@
-%DEPENDS%
-python2-poppler
-python2-pypdf
-ghostscript
-

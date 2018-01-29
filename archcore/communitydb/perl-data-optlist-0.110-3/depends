@@ -1,5 +1,0 @@
-%DEPENDS%
-perl-params-util
-perl-scalar-list-utils
-perl-sub-install
-

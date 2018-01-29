@@ -1,5 +1,0 @@
-%DEPENDS%
-curl
-libusb
-jansson
-

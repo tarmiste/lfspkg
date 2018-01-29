@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-perl-uri: dynamic playlist
-mpd: playback
-ffmpeg: ReplayGain support
-

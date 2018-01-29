@@ -1,8 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-blaze-builder
-haskell-http-types
-haskell-network
-haskell-text
-haskell-vault
-

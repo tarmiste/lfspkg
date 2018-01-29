@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-perl-io-string
-perl-datetime-format-ical
-perl-text-vfile-asdata
-

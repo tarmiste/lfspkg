@@ -1,6 +1,0 @@
-%DEPENDS%
-gst-plugins-base
-gconf-sharp
-taglib-sharp
-notify-sharp
-

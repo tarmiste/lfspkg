@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-cmake
-python
-python2
-qt4>=4.5
-shiboken>=1.1.1
-python-pyside
-python2-pyside
-

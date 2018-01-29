@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-python2-tornado: for Tornado coroutines support
-

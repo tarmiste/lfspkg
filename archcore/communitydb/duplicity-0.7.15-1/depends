@@ -1,7 +1,0 @@
-%DEPENDS%
-gnupg
-librsync
-ncftp
-python2-paramiko
-python2-fasteners
-

@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-cmake
-boost
-mesa
-git
-llvm35
-gcc6
-cuda
-

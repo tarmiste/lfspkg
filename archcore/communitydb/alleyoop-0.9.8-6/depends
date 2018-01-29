@@ -1,5 +1,0 @@
-%DEPENDS%
-valgrind
-gconf
-gtk2
-

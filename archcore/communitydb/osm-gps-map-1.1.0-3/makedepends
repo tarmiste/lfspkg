@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-gnome-common
-gtk-doc
-gobject-introspection
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-xfce4-panel
-libxml2
-libsoup
-hicolor-icon-theme
-

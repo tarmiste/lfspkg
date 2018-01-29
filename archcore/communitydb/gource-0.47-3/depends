@@ -1,8 +1,0 @@
-%DEPENDS%
-ftgl
-sdl2
-sdl2_image
-pcre
-glew
-boost-libs
-

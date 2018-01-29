@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-python-distribute
-python2-distribute
-protobuf
-

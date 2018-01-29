@@ -1,6 +1,0 @@
-%DEPENDS%
-python2-numpy
-python2-dateutil
-python2-pytz
-python2-setuptools
-

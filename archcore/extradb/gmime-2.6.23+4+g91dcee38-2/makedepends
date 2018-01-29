@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-gtk-sharp-2
-gobject-introspection
-gtk-doc
-git
-vala
-docbook-utils
-

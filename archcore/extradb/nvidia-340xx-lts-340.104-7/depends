@@ -1,5 +1,0 @@
-%DEPENDS%
-linux-lts>=4.9.69
-nvidia-340xx-utils=340.104
-libgl
-

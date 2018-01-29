@@ -1,5 +1,0 @@
-%DEPENDS%
-libsodium
-python
-python-six
-

@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-python
-mesa-libgl
-git
-meson
-doxygen
-graphviz
-

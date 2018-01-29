@@ -1,7 +1,0 @@
-%DEPENDS%
-poppler-qt5
-qt5-svg
-qt5-script
-libxkbcommon-x11
-hicolor-icon-theme
-

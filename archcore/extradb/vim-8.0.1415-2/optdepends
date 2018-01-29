@@ -1,8 +1,0 @@
-%OPTDEPENDS%
-python2: Python 2 language support
-python: Python 3 language support
-ruby: Ruby language support
-lua: Lua language support
-perl: Perl language support
-tcl: Tcl language support
-

@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-git
-tup
-clang
-python-sphinx
-

@@ -1,6 +1,0 @@
-%CHECKDEPENDS%
-python-pytest
-python2-pytest
-python-expects
-python2-expects
-

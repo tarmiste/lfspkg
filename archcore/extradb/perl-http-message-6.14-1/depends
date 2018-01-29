@@ -1,8 +1,0 @@
-%DEPENDS%
-perl
-perl-encode-locale
-perl-http-date
-perl-lwp-mediatypes
-perl-uri
-perl-io-html
-

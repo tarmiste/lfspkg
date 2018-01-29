@@ -1,7 +1,0 @@
-%DEPENDS%
-ghc-libs
-lua
-haskell-exceptions
-haskell-mtl
-haskell-text
-

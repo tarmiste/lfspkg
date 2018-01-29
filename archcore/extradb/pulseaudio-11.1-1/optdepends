@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-pulseaudio-alsa: ALSA configuration (recommended)
-

@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-mesa
-scons
-libshout
-glu
-

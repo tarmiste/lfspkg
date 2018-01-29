@@ -1,7 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-base-compat
-haskell-pcre-light
-haskell-string-conversions
-haskell-semigroups
-

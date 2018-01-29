@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-pavucontrol: default pulseaudio mixer
-

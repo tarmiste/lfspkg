@@ -1,5 +1,0 @@
-%DEPENDS%
-pciutils
-efivar
-zlib
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-gmime3
-libarchive
-libquvi
-libxml2
-

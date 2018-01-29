@@ -1,6 +1,0 @@
-%DEPENDS%
-dleyna-connector-dbus
-gupnp-av
-gupnp-dlna
-libsoup
-

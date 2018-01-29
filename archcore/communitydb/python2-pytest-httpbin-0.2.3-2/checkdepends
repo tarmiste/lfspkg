@@ -1,6 +1,0 @@
-%CHECKDEPENDS%
-python-requests
-python2-requests
-python-pytest-runner
-python2-pytest-runner
-

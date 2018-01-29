@@ -1,8 +1,0 @@
-%CHECKDEPENDS%
-python-pytest-httpbin
-python2-pytest-httpbin
-python-pytest-mock
-python2-pytest-mock
-python-pysocks
-python2-pysocks
-

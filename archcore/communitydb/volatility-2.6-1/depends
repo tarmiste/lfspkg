@@ -1,5 +1,0 @@
-%DEPENDS%
-python2-distorm
-python2-crypto
-python2-ujson
-

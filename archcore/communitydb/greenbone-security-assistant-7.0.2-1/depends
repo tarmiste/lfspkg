@@ -1,5 +1,0 @@
-%DEPENDS%
-libmicrohttpd
-openvas-libraries
-libxslt
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-libsamplerate
-celt
-opus
-libffado
-

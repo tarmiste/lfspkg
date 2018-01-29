@@ -1,6 +1,0 @@
-%DEPENDS%
-neovim
-python
-python-msgpack
-python-greenlet
-

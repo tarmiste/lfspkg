@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-p7zip: 7z, arj, exe and encrypted zip files support
-unrar: better RAR archive support
-unace: ACE archive support
-lrzip: lrzip archive support
-

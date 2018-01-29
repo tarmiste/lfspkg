@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-tk: tcl/tk interface
-texlive-bin: latex sty files
-gcc-fortran: needed to compile some CRAN packages
-

@@ -1,7 +1,0 @@
-%DEPENDS%
-baloo
-qt5-quickcontrols
-qt5-quickcontrols2
-kcmutils
-upnp-player-qt
-

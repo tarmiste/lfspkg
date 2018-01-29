@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-intltool
-gobject-introspection
-vala
-python2
-gtk-doc
-git
-rust
-

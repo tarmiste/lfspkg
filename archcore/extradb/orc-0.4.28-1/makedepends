@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-valgrind
-git
-gtk-doc
-meson
-

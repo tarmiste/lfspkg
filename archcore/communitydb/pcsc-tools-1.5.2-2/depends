@@ -1,6 +1,0 @@
-%DEPENDS%
-pcsclite
-pcsc-perl
-gtk2-perl
-glib-perl
-

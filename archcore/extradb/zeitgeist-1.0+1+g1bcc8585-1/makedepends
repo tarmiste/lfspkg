@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-gobject-introspection
-vala
-raptor
-python2-rdflib
-git
-

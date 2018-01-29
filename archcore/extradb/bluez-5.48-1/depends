@@ -1,6 +1,0 @@
-%DEPENDS%
-libical
-dbus
-glib2
-alsa-lib
-

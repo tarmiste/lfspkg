@@ -1,6 +1,0 @@
-%DEPENDS%
-libsasl=2.1.26
-postgresql-libs
-libmariadbclient
-sqlite
-

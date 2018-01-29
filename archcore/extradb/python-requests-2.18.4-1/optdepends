@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-python-pysocks: SOCKS proxy support
-

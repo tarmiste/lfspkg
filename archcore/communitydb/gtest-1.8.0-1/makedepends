@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-python2
-cmake
-gcc-libs
-sh
-

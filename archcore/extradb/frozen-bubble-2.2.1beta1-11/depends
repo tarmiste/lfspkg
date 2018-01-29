@@ -1,8 +1,0 @@
-%DEPENDS%
-perl-sdl
-perl-ipc-system-simple
-perl-compress-bzip2
-perl-file-which
-perl>=5.26
-perl<5.27
-

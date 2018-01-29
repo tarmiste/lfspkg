@@ -1,7 +1,0 @@
-%DEPENDS%
-acl
-e2fsprogs
-elfutils
-mhash
-pcre
-

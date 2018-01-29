@@ -1,8 +1,0 @@
-%CHECKDEPENDS%
-python-pytest
-python2-pytest
-python-betamax
-python2-betamax
-python-mock
-python2-mock
-

@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-vorbis-tools: OGG encoder
-faac: MP4/M4A/AAC encoder
-flac: FLAC encoder
-lame: MP3 encoder
-

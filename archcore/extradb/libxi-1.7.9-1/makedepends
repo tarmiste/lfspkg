@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-pkgconfig
-xorg-util-macros
-libxfixes
-automake
-

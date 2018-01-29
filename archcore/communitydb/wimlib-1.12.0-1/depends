@@ -1,6 +1,0 @@
-%DEPENDS%
-openssl
-fuse
-libxml2
-ntfs-3g
-

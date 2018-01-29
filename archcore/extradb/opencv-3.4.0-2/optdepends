@@ -1,7 +1,0 @@
-%OPTDEPENDS%
-opencv-samples
-hdf5: support for HDF5 format
-opencl-icd-loader: For coding with OpenCL
-python-numpy: Python 3 interface
-python2-numpy: Python 2 interface
-

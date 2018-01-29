@@ -1,6 +1,0 @@
-%CHECKDEPENDS%
-python-pytest-runner
-python2-pytest-runner
-python-pytest-relaxed
-python2-pytest-relaxed
-

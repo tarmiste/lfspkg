@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-java-environment
-classpath
-git
-maven
-

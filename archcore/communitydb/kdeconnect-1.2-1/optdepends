@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-sshfs: remote filesystem browser
-kde-cli-tools: configuration UI
-

@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-guile: guile support
-emacs: mu4e support
-

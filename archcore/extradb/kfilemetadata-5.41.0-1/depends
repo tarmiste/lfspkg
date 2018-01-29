@@ -1,9 +1,0 @@
-%DEPENDS%
-ki18n
-karchive
-exiv2
-poppler-qt5
-taglib
-ffmpeg
-ebook-tools
-

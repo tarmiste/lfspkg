@@ -1,7 +1,0 @@
-%DEPENDS%
-glibc
-filesystem
-sed
-util-linux
-sh
-

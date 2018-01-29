@@ -1,5 +1,0 @@
-%DEPENDS%
-python
-python-setuptools
-python-pytz
-

@@ -1,7 +1,0 @@
-%DEPENDS%
-perl-dbi>=1.52
-perl
-freetds
-perl>=5.26
-perl<5.27
-

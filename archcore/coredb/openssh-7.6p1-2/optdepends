@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-xorg-xauth: X11 forwarding
-x11-ssh-askpass: input passphrase in X
-

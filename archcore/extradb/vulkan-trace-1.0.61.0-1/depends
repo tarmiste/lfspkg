@@ -1,4 +1,0 @@
-%DEPENDS%
-vulkan-icd-loader
-qt5-svg
-

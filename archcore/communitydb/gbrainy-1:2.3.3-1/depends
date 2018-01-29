@@ -1,6 +1,0 @@
-%DEPENDS%
-gtk-sharp-3
-librsvg
-hicolor-icon-theme
-desktop-file-utils
-

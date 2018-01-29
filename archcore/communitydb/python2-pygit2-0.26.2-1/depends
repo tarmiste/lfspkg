@@ -1,5 +1,0 @@
-%DEPENDS%
-libgit2>=1:0.26.0
-python2-cffi
-python2-six
-

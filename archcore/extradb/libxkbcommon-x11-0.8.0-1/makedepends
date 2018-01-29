@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-libxcb
-doxygen
-git
-graphviz
-wayland
-wayland-protocols
-meson
-

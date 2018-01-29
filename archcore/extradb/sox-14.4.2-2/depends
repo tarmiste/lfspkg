@@ -1,9 +1,0 @@
-%DEPENDS%
-libltdl
-file
-libsndfile
-libpng
-lame
-opencore-amr
-gsm
-

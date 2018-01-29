@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-pkgconfig
-subversion
-xorg-server-xvfb
-imagemagick
-git
-

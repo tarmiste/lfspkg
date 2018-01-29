@@ -1,6 +1,0 @@
-%DEPENDS%
-libmariadbclient=10.1.30
-zlib
-openssl
-jemalloc
-

@@ -1,7 +1,0 @@
-%DEPENDS%
-openssl
-pcre
-zlib
-lua
-libsystemd
-

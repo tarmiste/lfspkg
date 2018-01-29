@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-bison
-flex
-gendesk
-mesa
-

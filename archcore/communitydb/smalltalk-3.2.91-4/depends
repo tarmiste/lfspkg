@@ -1,7 +1,0 @@
-%DEPENDS%
-gmp
-libffi
-libsigsegv
-readline
-libltdl
-

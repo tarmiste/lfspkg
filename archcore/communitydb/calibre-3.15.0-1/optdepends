@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-ipython2: to use calibre-debug
-poppler: required for converting pdf to html
-

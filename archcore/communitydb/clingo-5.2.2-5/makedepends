@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-clang
-cmake
-git
-ninja
-re2c
-

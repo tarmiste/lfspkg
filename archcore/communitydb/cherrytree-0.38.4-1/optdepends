@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-python2-pyenchant: for spell checking support
-p7zip: for password protection support
-

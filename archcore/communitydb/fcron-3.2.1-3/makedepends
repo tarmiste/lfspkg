@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-smtp-forwarder
-vim
-fcron
-

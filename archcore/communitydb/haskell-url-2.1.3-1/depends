@@ -1,4 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-utf8-string
-

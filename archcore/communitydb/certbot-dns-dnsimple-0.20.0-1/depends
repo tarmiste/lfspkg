@@ -1,8 +1,0 @@
-%DEPENDS%
-certbot=0.20.0
-dns-lexicon
-python-acme=0.20.0
-python-mock
-python-setuptools
-python-zope-interface
-

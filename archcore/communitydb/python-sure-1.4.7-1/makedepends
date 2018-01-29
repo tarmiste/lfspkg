@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-python-six
-python2-six
-python-mock
-python2-mock
-python-setuptools
-python2-setuptools
-git
-

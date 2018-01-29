@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-rlwrap: readline support for awesome-client
-dex: autostart your desktop files
-vicious: widgets for the Awesome window manager
-

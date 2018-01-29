@@ -1,6 +1,0 @@
-%DEPENDS%
-grilo
-libevdev
-retro-gtk
-tracker
-

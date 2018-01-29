@@ -1,6 +1,0 @@
-%DEPENDS%
-qt5-webkit
-hicolor-icon-theme
-libarchive
-qt5-x11extras
-

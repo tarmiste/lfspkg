@@ -1,7 +1,0 @@
-%DEPENDS%
-python-ipykernel
-python-traitlets
-python-pyzmq
-python-jupyter_core
-python-dateutil
-

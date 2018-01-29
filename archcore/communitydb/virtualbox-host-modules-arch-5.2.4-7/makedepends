@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-linux>=4.14
-linux<4.15
-linux-headers>=4.14
-linux-headers<4.15
-virtualbox-host-dkms>=5.2.4
-virtualbox-guest-dkms>=5.2.4
-

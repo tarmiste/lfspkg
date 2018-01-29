@@ -1,4 +1,0 @@
-%DEPENDS%
-java-atk-wrapper-common
-java-runtime-headless-openjdk=7
-

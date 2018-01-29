@@ -1,9 +1,0 @@
-%DEPENDS%
-sdl_mixer
-sdl_image
-sdl_gfx
-libogg
-libvorbis
-libgl
-glu
-

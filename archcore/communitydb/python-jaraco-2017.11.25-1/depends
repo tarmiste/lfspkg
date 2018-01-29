@@ -1,5 +1,0 @@
-%DEPENDS%
-python-six
-python-pytz
-python-more-itertools
-

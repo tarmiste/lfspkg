@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-lua-lpeg
-lua51-lpeg
-lua52-lpeg
-

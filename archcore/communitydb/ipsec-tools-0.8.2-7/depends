@@ -1,6 +1,0 @@
-%DEPENDS%
-readline
-openssl-1.0
-krb5
-flex
-

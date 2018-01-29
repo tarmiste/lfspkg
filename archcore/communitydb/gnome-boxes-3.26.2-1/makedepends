@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-gobject-introspection
-intltool
-itstool
-spice-protocol
-vala
-

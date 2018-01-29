@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-texlive-genericextra: to use the calctab package
-texlive-pictures: to use the package overpic
-java-environment: to use pdfannotextractor
-

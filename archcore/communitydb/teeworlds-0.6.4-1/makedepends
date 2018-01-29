@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-python
-bam
-mesa
-imagemagick
-gendesk
-

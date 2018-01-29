@@ -1,6 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-quickcheck
-haskell-ieee754
-haskell-pretty-show
-

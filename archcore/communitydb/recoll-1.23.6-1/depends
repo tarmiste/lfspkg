@@ -1,7 +1,0 @@
-%DEPENDS%
-xapian-core>=1.0.15-1
-qt5-base
-openssl
-hicolor-icon-theme
-qt5-webkit
-

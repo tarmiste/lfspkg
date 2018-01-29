@@ -1,5 +1,0 @@
-%DEPENDS%
-python-requests
-python-cookies
-python-six
-

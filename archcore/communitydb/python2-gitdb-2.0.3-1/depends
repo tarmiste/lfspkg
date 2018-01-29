@@ -1,4 +1,0 @@
-%DEPENDS%
-python2
-python2-smmap>=2.0.0
-

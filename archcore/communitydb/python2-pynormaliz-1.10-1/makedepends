@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-python-setuptools
-python2-setuptools
-normaliz
-boost
-

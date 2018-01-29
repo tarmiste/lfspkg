@@ -1,6 +1,0 @@
-%DEPENDS%
-python2
-python2-canonicaljson
-python2-unpaddedbase64
-python2-pynacl
-

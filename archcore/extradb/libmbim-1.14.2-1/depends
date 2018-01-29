@@ -1,6 +1,0 @@
-%DEPENDS%
-glib2
-bash
-systemd
-libgudev
-

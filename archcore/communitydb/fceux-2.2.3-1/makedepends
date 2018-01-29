@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-scons
-mesa-libgl
-glu
-

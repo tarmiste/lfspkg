@@ -1,8 +1,0 @@
-%OPTDEPENDS%
-python2-numpy: N-dimensional arrays
-python2-scipy: signal/image processing
-python2-h5py: HDF5 support
-python2-matplotlib: interactive 2D/3D data plotting
-python2-sympy: symbolic mathematics for the IPython console
-python2-pandas: view and edit DataFrames and Series in the Variable Explorer
-

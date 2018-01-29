@@ -1,9 +1,0 @@
-%DEPENDS%
-sdl_mixer
-sdl_ttf
-sdl_image
-physfs
-libxml2
-sdl_gfx
-libgl
-

@@ -1,4 +1,0 @@
-%DEPENDS%
-perl
-perl-tie-cycle>=1.21
-

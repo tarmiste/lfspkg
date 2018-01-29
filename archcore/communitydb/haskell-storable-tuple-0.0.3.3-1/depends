@@ -1,6 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-storable-record
-haskell-utility-ht
-haskell-base-orphans
-

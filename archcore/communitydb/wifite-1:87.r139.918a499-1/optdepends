@@ -1,7 +1,0 @@
-%OPTDEPENDS%
-reaver: WPS attack support
-pyrit: detect WPA handshakes
-wireshark-cli: detect handshakes
-cowpatty: detect WPA handshakes
-macchanger: change MAC for attacks
-

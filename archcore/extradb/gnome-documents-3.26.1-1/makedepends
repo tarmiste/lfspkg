@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-gobject-introspection
-git
-gnome-common
-

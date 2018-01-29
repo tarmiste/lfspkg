@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-ghc
-haskell-quickcheck
-haskell-quickcheck-instances
-

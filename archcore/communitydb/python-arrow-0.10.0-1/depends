@@ -1,5 +1,0 @@
-%DEPENDS%
-python
-python-dateutil
-python-nose
-

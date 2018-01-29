@@ -1,5 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-call-stack
-haskell-hunit
-

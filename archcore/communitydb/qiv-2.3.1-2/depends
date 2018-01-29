@@ -1,8 +1,0 @@
-%DEPENDS%
-file
-gtk2
-imlib2
-libexif
-lcms2
-desktop-file-utils
-

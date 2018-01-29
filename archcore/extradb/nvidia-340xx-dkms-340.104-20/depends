@@ -1,5 +1,0 @@
-%DEPENDS%
-dkms
-nvidia-340xx-utils=340.104
-libgl
-

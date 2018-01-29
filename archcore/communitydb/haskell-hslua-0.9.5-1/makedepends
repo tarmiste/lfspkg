@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-ghc
-haskell-quickcheck
-haskell-quickcheck-instances
-haskell-tasty
-haskell-tasty-expected-failure
-haskell-tasty-hunit
-haskell-tasty-quickcheck
-

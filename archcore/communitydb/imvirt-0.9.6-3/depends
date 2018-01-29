@@ -1,7 +1,0 @@
-%DEPENDS%
-perl
-dmidecode
-perl-module-find
-perl-file-slurp
-perl-data-dumper
-

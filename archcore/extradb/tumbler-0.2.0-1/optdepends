@@ -1,7 +1,0 @@
-%OPTDEPENDS%
-ffmpegthumbnailer: for video thumbnails
-poppler-glib: for PDF thumbnails
-libgsf: for ODF thumbnails
-libopenraw: for RAW thumbnails
-freetype2: for font thumbnails
-

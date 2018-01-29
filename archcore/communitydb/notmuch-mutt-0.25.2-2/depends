@@ -1,8 +1,0 @@
-%DEPENDS%
-notmuch-runtime
-perl-mailtools
-perl-mail-box
-perl-term-readline-gnu
-perl-string-shellquote
-perl-file-which
-

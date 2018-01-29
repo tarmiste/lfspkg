@@ -1,7 +1,0 @@
-%DEPENDS%
-yelp-xsl
-libxslt
-libxml2
-itstool
-docbook-xsl
-

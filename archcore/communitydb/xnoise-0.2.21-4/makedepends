@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-vala
-intltool
-git
-gnome-common
-

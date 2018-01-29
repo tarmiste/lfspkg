@@ -1,5 +1,0 @@
-%DEPENDS%
-glibc
-linux-lts>=4.9.75
-linux-lts<4.10
-

@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-python
-appstream-glib
-git
-meson
-gtk-doc
-

@@ -1,5 +1,0 @@
-%DEPENDS%
-tcl=8.6.8
-libxss
-libxft
-

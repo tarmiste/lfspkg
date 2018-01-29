@@ -1,7 +1,0 @@
-%DEPENDS%
-python-flask
-python-markupsafe
-python-itsdangerous
-python-six
-python-decorator
-

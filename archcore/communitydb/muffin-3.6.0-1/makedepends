@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-intltool
-gnome-doc-utils
-gnome-common
-gobject-introspection
-gtk-doc
-

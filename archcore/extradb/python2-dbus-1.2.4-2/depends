@@ -1,5 +1,0 @@
-%DEPENDS%
-python-dbus-common
-python2
-dbus
-

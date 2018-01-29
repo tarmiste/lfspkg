@@ -1,5 +1,0 @@
-%DEPENDS%
-libftdi
-pciutils
-libusb-compat
-

@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-git
-go
-npm
-grunt-cli
-python2
-

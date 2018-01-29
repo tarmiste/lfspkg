@@ -1,7 +1,0 @@
-%DEPENDS%
-mod_dnssd
-dconf
-gtk3
-libnotify
-libcanberra
-

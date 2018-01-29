@@ -1,6 +1,0 @@
-%DEPENDS%
-gtk3
-libsm
-librsvg
-gtksourceview3
-

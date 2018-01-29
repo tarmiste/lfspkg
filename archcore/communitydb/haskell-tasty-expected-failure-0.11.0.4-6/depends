@@ -1,5 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-tagged
-haskell-tasty
-

@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-cmake
-python2
-python
-qt4
-libxslt
-

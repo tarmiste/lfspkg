@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-intltool
-gobject-introspection
-python2
-git
-gnome-common
-

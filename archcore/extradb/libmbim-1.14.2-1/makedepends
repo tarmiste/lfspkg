@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-gtk-doc
-python
-git
-help2man
-

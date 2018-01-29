@@ -1,8 +1,0 @@
-%DEPENDS%
-openexr
-libglade
-gnet
-shared-mime-info
-hicolor-icon-theme
-desktop-file-utils
-

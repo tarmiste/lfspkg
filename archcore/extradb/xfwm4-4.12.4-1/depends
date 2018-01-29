@@ -1,6 +1,0 @@
-%DEPENDS%
-libxfce4ui
-libwnck
-libdrm
-hicolor-icon-theme
-

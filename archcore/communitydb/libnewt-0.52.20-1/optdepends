@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-tcl: whiptcl support
-python: libnewt support with the _snack module
-python2: libnewt support with the _snack module
-

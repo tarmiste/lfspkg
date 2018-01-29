@@ -1,5 +1,0 @@
-%DEPENDS%
-java-runtime
-libxxf86vm
-java-environment
-

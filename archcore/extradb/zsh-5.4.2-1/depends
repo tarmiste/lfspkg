@@ -1,5 +1,0 @@
-%DEPENDS%
-pcre
-libcap
-gdbm
-

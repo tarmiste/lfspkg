@@ -1,7 +1,0 @@
-%DEPENDS%
-ca-certificates
-curl
-git
-glibc
-tar
-

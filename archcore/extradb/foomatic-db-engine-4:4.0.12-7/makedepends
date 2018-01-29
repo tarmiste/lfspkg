@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-cups
-ghostscript
-a2ps
-wget
-perl-xml-libxml
-foomatic-db
-

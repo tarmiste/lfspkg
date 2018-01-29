@@ -1,9 +1,0 @@
-%DEPENDS%
-bluez
-bluez-libs
-gtk3
-libnotify
-python-cairo
-python-dbus
-python-gobject
-

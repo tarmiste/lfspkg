@@ -1,6 +1,0 @@
-%DEPENDS%
-cryptsetup
-nss
-gpgme
-python2
-

@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-gtk2: for distccmon-gnome
-python2
-

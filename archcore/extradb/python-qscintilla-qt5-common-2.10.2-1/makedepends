@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-python-pyqt4
-python2-pyqt4
-python-pyqt5
-python2-pyqt5
-qt5-tools
-

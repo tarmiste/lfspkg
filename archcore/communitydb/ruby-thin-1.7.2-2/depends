@@ -1,7 +1,0 @@
-%DEPENDS%
-glibc
-ruby
-ruby-rack
-ruby-eventmachine
-ruby-daemons
-

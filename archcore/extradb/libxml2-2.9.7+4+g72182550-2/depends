@@ -1,7 +1,0 @@
-%DEPENDS%
-zlib
-readline
-ncurses
-xz
-icu
-

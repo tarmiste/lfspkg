@@ -1,4 +1,0 @@
-%DEPENDS%
-python2
-xapian-core=1:1.4.5
-

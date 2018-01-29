@@ -1,5 +1,0 @@
-%DEPENDS%
-mailcap
-notmuch-runtime
-lua
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-smartmontools
-gtkmm3
-xorg-xmessage
-hicolor-icon-theme
-

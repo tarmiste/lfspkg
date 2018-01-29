@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-gobject-introspection
-python
-vala
-gtk-doc
-

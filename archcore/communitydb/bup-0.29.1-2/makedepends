@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-ruby-ronn
-git
-setconf
-pandoc
-

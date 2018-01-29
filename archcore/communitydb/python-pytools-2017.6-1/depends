@@ -1,6 +1,0 @@
-%DEPENDS%
-python-six
-python-decorator
-python-appdirs
-python-numpy
-

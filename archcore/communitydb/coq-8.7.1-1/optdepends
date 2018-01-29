@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-coqide: graphical Coq IDE
-coq-doc: offline documentation
-

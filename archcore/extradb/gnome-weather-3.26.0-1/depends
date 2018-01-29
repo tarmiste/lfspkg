@@ -1,7 +1,0 @@
-%DEPENDS%
-gtk3
-gjs
-libgweather
-geoclue2
-gnome-desktop
-

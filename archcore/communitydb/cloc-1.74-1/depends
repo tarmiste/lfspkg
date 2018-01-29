@@ -1,5 +1,0 @@
-%DEPENDS%
-perl
-perl-algorithm-diff
-perl-regexp-common
-

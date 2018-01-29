@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-bison
-flex
-gawk
-grep
-pkg-config
-sed
-

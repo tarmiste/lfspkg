@@ -1,8 +1,0 @@
-%DEPENDS%
-portaudio
-ffmpeg
-gtk3
-sdl2
-gsl
-libusb
-

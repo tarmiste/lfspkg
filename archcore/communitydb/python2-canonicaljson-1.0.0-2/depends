@@ -1,5 +1,0 @@
-%DEPENDS%
-python2
-python2-simplejson
-python2-frozendict
-

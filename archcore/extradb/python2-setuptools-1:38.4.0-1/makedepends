@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-python-packaging
-python2-packaging
-python-appdirs
-python2-appdirs
-python-pip
-python2-pip
-

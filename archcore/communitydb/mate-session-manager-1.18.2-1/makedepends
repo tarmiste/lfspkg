@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-intltool
-xtrans
-systemd
-python
-

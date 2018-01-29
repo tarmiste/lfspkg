@@ -1,7 +1,0 @@
-%DEPENDS%
-gconf
-gtk2
-libgnome-keyring
-libgtop
-startup-notification
-

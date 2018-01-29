@@ -1,8 +1,0 @@
-%DEPENDS%
-pcre
-util-linux
-libhx
-libxml2
-openssl
-cryptsetup
-

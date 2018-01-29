@@ -1,6 +1,0 @@
-%CHECKDEPENDS%
-perl-test-pod
-perl-test-leaktrace
-perl-cpan-changes
-perl-uri
-

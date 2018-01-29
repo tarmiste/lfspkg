@@ -1,5 +1,0 @@
-%DEPENDS%
-perl
-perl-net-server
-perl-io-socket-inet6
-

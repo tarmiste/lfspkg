@@ -1,6 +1,0 @@
-%DEPENDS%
-sdl2
-alsa-lib
-zlib
-gcc-libs
-

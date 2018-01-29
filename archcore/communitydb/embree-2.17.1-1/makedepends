@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-cmake
-ispc
-freeglut
-libxmu
-openexr
-

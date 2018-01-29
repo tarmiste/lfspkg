@@ -1,8 +1,0 @@
-%DEPENDS%
-device-mapper
-libgcrypt
-popt
-libutil-linux
-json-c
-argon2
-

@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-jack-audio-connection-kit: JACK audio support
-

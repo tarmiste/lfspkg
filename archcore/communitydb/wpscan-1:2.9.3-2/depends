@@ -1,6 +1,0 @@
-%DEPENDS%
-ruby-bundler
-libxslt
-libyaml
-curl
-

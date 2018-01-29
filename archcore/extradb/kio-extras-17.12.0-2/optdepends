@@ -1,7 +1,0 @@
-%OPTDEPENDS%
-qt5-webengine: HTML thumbnailer
-qt5-imageformats: thumbnails for additional image formats
-kimageformats: thumbnails for additional image formats
-taglib: audio file thumbnails
-khtml: man kioslave
-

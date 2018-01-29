@@ -1,8 +1,0 @@
-%DEPENDS%
-perl-net-server
-perl>=5.6.0
-perl-berkeleydb
-perl-io-multiplex
-db>=4.1
-perl-netaddr-ip
-

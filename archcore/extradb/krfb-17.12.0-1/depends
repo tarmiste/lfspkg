@@ -1,6 +1,0 @@
-%DEPENDS%
-kdnssd
-kxmlgui
-kwallet
-libvncserver
-

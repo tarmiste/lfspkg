@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-gtk-sharp-2: Mono bindings
-python2-gobject2: python bindings
-

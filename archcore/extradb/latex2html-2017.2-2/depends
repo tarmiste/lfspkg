@@ -1,8 +1,0 @@
-%DEPENDS%
-perl
-ghostscript
-texlive-core
-libpng
-giflib
-netpbm
-

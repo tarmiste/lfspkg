@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-cmake
-eigen
-python2
-boost
-

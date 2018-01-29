@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-python2-psutil: improved system information
-python2-pygit2: improved git support
-powerline-vim: vim plugin
-powerline-fonts: patched fonts for powerline
-

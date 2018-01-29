@@ -1,6 +1,0 @@
-%DEPENDS%
-python
-python-msgpack
-python-yaml
-python-six
-

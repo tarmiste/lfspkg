@@ -1,6 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-semigroups
-haskell-wl-pprint-extras
-haskell-text
-

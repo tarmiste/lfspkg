@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-postgresql-libs: for PostgreSQL support
-libmariadbclient: for MariaDB support
-

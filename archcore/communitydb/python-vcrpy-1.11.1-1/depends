@@ -1,6 +1,0 @@
-%DEPENDS%
-python-yaml
-python-wrapt
-python-six
-python-yarl
-

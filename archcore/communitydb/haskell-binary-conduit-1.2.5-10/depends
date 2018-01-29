@@ -1,6 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-conduit
-haskell-resourcet
-haskell-vector
-

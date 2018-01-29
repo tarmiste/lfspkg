@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-python2: for the xasy GUI
-python2-pillow: for the xasy GUI
-tix: for the xasy GUI
-

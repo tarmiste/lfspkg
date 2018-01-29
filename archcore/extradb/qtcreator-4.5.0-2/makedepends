@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-git
-mesa
-llvm
-

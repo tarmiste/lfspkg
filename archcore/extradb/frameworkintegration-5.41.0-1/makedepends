@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-extra-cmake-modules
-python
-appstream-qt
-packagekit-qt5
-

@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-python-nose
-python2-nose
-python2-mock
-python2-unittest2
-git
-

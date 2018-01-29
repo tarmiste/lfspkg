@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-git
-libxslt
-docbook-xsl
-gnome-doc-utils
-

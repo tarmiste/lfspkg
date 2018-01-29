@@ -1,6 +1,0 @@
-%DEPENDS%
-xfce4-panel
-libxklavier
-librsvg
-libwnck3
-

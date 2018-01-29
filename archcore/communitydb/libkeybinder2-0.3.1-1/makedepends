@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-pygtk
-gnome-common
-gtk-doc
-

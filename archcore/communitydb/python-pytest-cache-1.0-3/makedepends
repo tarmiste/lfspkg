@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-python-pytest
-python2-pytest
-python-execnet
-python2-execnet
-mercurial
-

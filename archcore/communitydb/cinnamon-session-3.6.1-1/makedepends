@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-intltool
-mesa
-json-glib
-xtrans
-gnome-common
-

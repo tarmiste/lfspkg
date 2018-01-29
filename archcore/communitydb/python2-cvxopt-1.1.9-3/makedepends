@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-gsl
-fftw
-glpk
-dsdp
-python
-python2
-suitesparse
-

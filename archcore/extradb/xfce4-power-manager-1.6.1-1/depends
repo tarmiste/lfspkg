@@ -1,6 +1,0 @@
-%DEPENDS%
-libxfce4ui
-upower
-libnotify
-hicolor-icon-theme
-

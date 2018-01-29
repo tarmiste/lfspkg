@@ -1,7 +1,0 @@
-%DEPENDS%
-java-environment
-ttf-font
-libxtst
-giflib
-atk
-

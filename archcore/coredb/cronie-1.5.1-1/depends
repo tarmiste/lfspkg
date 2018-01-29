@@ -1,5 +1,0 @@
-%DEPENDS%
-pam
-bash
-run-parts
-

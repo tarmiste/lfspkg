@@ -1,6 +1,0 @@
-%DEPENDS%
-sh
-xz
-gettext
-device-mapper
-

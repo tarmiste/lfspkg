@@ -1,6 +1,0 @@
-%PROVIDES%
-libwinpr-tools2.so=2-64
-libfreerdp-client2.so=2-64
-libfreerdp2.so=2-64
-libwinpr2.so=2-64
-

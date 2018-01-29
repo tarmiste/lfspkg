@@ -1,9 +1,0 @@
-%DEPENDS%
-libsndfile
-libxrandr
-libjpeg
-openal
-glew
-freetype2
-libx11
-

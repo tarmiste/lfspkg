@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-gtk2: required by codegraph and codemap
-

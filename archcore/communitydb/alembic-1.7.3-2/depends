@@ -1,6 +1,0 @@
-%DEPENDS%
-openexr
-boost-libs
-hdf5
-zlib
-

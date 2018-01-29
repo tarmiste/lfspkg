@@ -1,6 +1,0 @@
-%DEPENDS%
-pygtk>=2.10
-recordmydesktop>=0.3.8.1
-xorg-xwininfo
-python2
-

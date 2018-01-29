@@ -1,5 +1,0 @@
-%DEPENDS%
-dbus
-glib2
-libxtst
-

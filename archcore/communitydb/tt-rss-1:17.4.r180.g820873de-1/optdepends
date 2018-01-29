@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-mysql
-postgresql
-php-gd: for coloured feed badges
-

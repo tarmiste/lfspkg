@@ -1,7 +1,0 @@
-%DEPENDS%
-ruby
-gtk2
-ruby-atk=3.2.1
-ruby-pango=3.2.1
-ruby-gdk_pixbuf2=3.2.1
-

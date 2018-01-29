@@ -1,8 +1,0 @@
-%OPTDEPENDS%
-libvncserver
-gdal
-openexr
-poppler-glib
-qt5-base
-ffmpeg
-

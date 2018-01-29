@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-python-setuptools
-python2-setuptools
-python-dnspython
-python2-dnspython
-python-idna
-python2-idna
-

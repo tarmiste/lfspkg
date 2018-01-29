@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-xorg-server: wkhtmltopdf needs X or Xvfb to operate
-

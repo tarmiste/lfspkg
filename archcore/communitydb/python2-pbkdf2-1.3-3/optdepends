@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-python2-crypto: to make use of PyCrypto`s HMAC and SHA
-

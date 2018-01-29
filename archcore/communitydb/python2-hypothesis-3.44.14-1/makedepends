@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-python-setuptools
-python2-setuptools
-python-attrs
-python2-attrs
-python-coverage
-python2-coverage
-python2-enum34
-

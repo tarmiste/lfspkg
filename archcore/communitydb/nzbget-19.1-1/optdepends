@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-python: to run included scripts
-unrar: unpacking archives
-p7zip: unpacking archives
-

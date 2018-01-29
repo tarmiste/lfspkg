@@ -1,9 +1,0 @@
-%DEPENDS%
-kdebase-runtime
-shared-mime-info
-aqbanking
-libofx
-libalkimia
-boost-libs
-libical
-

@@ -1,5 +1,0 @@
-%DEPENDS%
-libgcrypt
-openssl
-iproute2
-

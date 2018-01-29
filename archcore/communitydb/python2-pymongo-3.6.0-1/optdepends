@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-python2-monotonic: enable support for a monotonic clock
-

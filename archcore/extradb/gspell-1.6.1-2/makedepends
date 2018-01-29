@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-intltool
-gobject-introspection
-vala
-gtk-doc
-autoconf-archive
-git
-

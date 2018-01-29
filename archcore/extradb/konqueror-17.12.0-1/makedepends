@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-extra-cmake-modules
-kdoctools
-python
-tidy
-kdesignerplugin
-kdesu
-khtml
-

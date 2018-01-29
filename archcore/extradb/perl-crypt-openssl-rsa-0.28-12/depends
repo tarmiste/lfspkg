@@ -1,6 +1,0 @@
-%DEPENDS%
-perl-crypt-openssl-random
-perl-crypt-openssl-bignum
-perl>=5.26
-perl<5.27
-

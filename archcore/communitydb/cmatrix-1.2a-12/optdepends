@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-fontconfig: custom font
-kbd: cmatrix-tty custom font
-xterm: cmatrix-tty custom font
-

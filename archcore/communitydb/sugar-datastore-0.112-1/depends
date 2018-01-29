@@ -1,5 +1,0 @@
-%DEPENDS%
-python2-dbus
-python2-gobject
-python2-xapian
-

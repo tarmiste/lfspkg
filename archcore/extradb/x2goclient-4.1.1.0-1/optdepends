@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-xorg-xauth: may be required by X2goservers running a different linux distribution giving MIT-COOKIE errors
-

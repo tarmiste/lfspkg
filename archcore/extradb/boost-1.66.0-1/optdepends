@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-python: for python bindings
-python2: for python2 bindings
-

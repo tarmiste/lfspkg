@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-guile: for use with Guile bindings
-

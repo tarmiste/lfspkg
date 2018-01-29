@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-boost
-cmake
-emacs
-qt5-tools
-

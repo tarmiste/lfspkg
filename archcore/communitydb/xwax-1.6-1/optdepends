@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-cdparanoia: for CD import
-mpg123: for MP3 import
-ffmpeg: for video fallback import
-

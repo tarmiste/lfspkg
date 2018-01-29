@@ -1,6 +1,0 @@
-%DEPENDS%
-gtk2>=2.8
-libxtst
-libsm
-freetype2
-

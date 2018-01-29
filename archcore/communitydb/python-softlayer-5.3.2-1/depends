@@ -1,8 +1,0 @@
-%DEPENDS%
-python-setuptools
-python-prettytable
-python-click
-python-requests
-python-prompt_toolkit
-python-pygments
-

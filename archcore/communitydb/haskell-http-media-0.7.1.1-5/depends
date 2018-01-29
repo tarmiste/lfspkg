@@ -1,5 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-case-insensitive
-haskell-utf8-string
-

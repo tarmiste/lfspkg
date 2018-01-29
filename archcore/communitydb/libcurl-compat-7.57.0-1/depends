@@ -1,9 +1,0 @@
-%DEPENDS%
-curl
-glibc
-krb5
-openssl
-libpsl
-zlib
-libssh2.so=1-64
-

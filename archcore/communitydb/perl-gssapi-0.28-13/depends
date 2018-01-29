@@ -1,5 +1,0 @@
-%DEPENDS%
-krb5
-perl>=5.26
-perl<5.27
-

@@ -1,8 +1,0 @@
-%OPTDEPENDS%
-perl-async-interrupt: for fast signal handling
-perl-ev: for the recommended EV event loop backend
-perl-guard: to speed up guards
-perl-json: send or receive JSON with AnyEvent::Handle
-perl-json-xs: send or receive JSON with AnyEvent::Handle
-perl-net-ssleay: TLS/SSL connections with AnyEvent::Handle
-

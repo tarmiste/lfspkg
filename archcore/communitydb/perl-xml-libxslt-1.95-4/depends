@@ -1,6 +1,0 @@
-%DEPENDS%
-perl-xml-libxml
-libxslt
-perl>=5.26
-perl<5.27
-

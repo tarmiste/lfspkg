@@ -1,6 +1,0 @@
-%DEPENDS%
-sdl
-libpulse
-v4l-utils
-libldap
-

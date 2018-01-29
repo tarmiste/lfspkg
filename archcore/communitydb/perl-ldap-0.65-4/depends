@@ -1,5 +1,0 @@
-%DEPENDS%
-perl-convert-asn1
-perl-xml-sax-writer
-perl-text-soundex
-

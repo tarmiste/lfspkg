@@ -1,8 +1,0 @@
-%DEPENDS%
-ptlib
-libtheora
-libx264
-speex
-gsm
-celt
-

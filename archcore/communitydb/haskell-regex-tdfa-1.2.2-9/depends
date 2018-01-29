@@ -1,6 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-mtl
-haskell-parsec
-haskell-regex-base
-

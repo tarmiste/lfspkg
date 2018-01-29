@@ -1,8 +1,0 @@
-%DEPENDS%
-xz
-ncurses
-expat
-python
-guile2.0
-gdb-common
-

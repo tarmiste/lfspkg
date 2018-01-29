@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-notify-sharp
-log4net
-nini
-gtkspell
-stfl
-intltool
-

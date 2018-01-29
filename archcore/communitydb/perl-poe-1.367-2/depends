@@ -1,5 +1,0 @@
-%DEPENDS%
-perl>=5.10.0
-perl-io-tty>=1.08
-perl-io-pipely
-

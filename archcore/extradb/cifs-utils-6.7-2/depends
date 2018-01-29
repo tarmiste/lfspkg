@@ -1,8 +1,0 @@
-%DEPENDS%
-libcap-ng
-keyutils
-krb5
-talloc
-libwbclient
-pam
-

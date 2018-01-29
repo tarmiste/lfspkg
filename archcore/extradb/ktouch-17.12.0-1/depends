@@ -1,8 +1,0 @@
-%DEPENDS%
-kqtquickcharts
-libxkbfile
-kcmutils
-hicolor-icon-theme
-qt5-quickcontrols
-qt5-graphicaleffects
-

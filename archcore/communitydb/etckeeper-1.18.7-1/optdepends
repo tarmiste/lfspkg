@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-mercurial: use mercurial for version control
-bzr: use bazaar for version control
-

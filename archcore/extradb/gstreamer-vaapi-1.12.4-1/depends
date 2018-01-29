@@ -1,7 +1,0 @@
-%DEPENDS%
-gst-plugins-base
-gst-plugins-bad
-libva
-libxrandr
-libvpx
-

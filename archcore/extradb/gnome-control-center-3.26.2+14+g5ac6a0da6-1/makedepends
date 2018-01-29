@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-intltool
-docbook-xsl
-modemmanager
-gnome-common
-git
-python
-

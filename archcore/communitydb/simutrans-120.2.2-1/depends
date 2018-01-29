@@ -1,7 +1,0 @@
-%DEPENDS%
-gcc-libs
-zlib
-sdl_mixer
-bzip2
-simutrans-pak64
-

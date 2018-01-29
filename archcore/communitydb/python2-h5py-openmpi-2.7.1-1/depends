@@ -1,7 +1,0 @@
-%DEPENDS%
-hdf5-openmpi
-python2-numpy
-python2-six
-cython2
-python2-mpi4py
-

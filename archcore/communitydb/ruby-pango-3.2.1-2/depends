@@ -1,7 +1,0 @@
-%DEPENDS%
-ruby
-pango
-ruby-cairo
-ruby-cairo-gobject=3.2.1
-ruby-gobject-introspection=3.2.1
-

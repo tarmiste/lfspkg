@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-python-nose: needed for integrated test suite
-python-scipy: needed for integrated benchmarks
-

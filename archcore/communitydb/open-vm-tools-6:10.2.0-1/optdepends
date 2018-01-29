@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-gtkmm3: DnD/CP plugin
-libxtst: DnD/CP, resolution set plugins
-netctl: suspend-resume network state
-networkmanager: suspend-resume network state
-

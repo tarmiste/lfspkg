@@ -1,5 +1,0 @@
-%DEPENDS%
-gcc-libs=7.2.1+20171224-2
-binutils>=2.28
-libmpc
-

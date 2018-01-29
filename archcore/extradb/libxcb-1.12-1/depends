@@ -1,5 +1,0 @@
-%DEPENDS%
-xcb-proto>=1.12
-libxdmcp
-libxau
-

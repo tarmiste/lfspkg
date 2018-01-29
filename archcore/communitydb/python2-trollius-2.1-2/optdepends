@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-python2-unittest2: to pass trollius unit tests
-

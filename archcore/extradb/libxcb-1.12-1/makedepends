@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-libxslt
-python
-xorg-util-macros
-

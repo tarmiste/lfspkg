@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-gnome-doc-utils
-intltool
-caja
-libnautilus-extension
-nemo
-

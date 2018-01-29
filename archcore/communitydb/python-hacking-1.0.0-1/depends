@@ -1,6 +1,0 @@
-%DEPENDS%
-python-six
-python-pbr
-flake8
-python-mccabe
-

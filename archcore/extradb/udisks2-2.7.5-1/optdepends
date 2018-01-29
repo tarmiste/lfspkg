@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-gptfdisk: GUID partition table support
-ntfs-3g: NTFS filesystem management support
-dosfstools: VFAT filesystem management support
-libiscsi: iSCSI support
-

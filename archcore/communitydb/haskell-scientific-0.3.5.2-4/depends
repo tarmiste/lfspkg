@@ -1,7 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-hashable
-haskell-integer-logarithms
-haskell-primitive
-haskell-text
-

@@ -1,5 +1,0 @@
-%CHECKDEPENDS%
-dbus
-libx11
-gobject-introspection
-

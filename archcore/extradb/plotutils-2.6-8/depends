@@ -1,5 +1,0 @@
-%DEPENDS%
-libpng
-gcc-libs
-libxaw>=1.0.5
-

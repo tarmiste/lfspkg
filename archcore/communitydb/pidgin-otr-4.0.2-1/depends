@@ -1,5 +1,0 @@
-%DEPENDS%
-libotr>=4.0.2
-pidgin
-perl-xml-parser
-

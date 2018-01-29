@@ -1,5 +1,0 @@
-%DEPENDS%
-python-pbr
-python-six
-python-testtools
-

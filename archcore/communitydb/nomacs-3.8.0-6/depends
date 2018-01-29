@@ -1,6 +1,0 @@
-%DEPENDS%
-qt5-svg
-exiv2
-libraw
-opencv
-

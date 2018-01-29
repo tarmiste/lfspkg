@@ -1,5 +1,0 @@
-%DEPENDS%
-gtk3
-vte-common
-pcre2
-

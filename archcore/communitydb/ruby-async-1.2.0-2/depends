@@ -1,5 +1,0 @@
-%DEPENDS%
-ruby
-ruby-nio4r
-ruby-timers
-

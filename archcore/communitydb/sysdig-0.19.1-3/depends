@@ -1,8 +1,0 @@
-%DEPENDS%
-dkms
-jsoncpp
-luajit
-curl
-jq
-libb64
-

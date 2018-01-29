@@ -1,8 +1,0 @@
-%DEPENDS%
-libevent
-boost-libs
-libmariadbclient
-postgresql-libs
-sqlite
-hiredis
-

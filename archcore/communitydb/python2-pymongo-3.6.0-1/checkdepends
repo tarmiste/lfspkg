@@ -1,8 +1,0 @@
-%CHECKDEPENDS%
-python-nose
-python2-nose
-python2-gevent
-python2-monotonic
-python-pifpaf
-mongodb
-

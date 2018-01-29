@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-bash-completion: completion for bash
-perl: perl based john scripts
-ruby: ruby based john scripts
-python2: python based john scripts
-

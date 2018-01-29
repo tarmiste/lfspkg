@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-addinclude>=1.0
-mesa
-scons
-setconf
-

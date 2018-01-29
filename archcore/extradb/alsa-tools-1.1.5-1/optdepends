@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-fltk: hdspconf, hdspmixer
-gtk2: other GUI tools
-gtk3: hdajackretask
-bash: couple of tools
-

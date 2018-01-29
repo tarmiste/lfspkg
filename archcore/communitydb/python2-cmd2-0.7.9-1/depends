@@ -1,5 +1,0 @@
-%DEPENDS%
-python2-pyparsing
-python2-pyperclip
-python2-subprocess32
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-gcc-libs
-vulkan-icd-loader
-vulkan-headers
-libx11
-

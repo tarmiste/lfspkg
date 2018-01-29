@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-python-setuptools
-python-sphinx
-python-six
-python2-setuptools
-python2-sphinx
-python2-six
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-gcc-libs
-boost-libs
-orc
-python2
-

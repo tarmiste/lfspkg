@@ -1,5 +1,0 @@
-%DEPENDS%
-opensp
-curl
-libxml++2.6
-

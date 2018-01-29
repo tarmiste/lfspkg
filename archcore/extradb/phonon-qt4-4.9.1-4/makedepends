@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-extra-cmake-modules
-automoc4
-libpulse
-qt5-base
-qt5-tools
-

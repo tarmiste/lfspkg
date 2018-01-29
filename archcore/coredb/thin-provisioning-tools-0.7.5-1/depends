@@ -1,5 +1,0 @@
-%DEPENDS%
-expat
-gcc-libs
-libaio
-

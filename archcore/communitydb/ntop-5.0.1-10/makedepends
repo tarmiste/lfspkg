@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-subversion
-wget
-ca-certificates
-

@@ -1,5 +1,0 @@
-%DEPENDS%
-python-traitlets
-python-jupyter_core
-python-jsonschema
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-perl
-rsync
-openssh
-perl-lchown
-

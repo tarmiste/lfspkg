@@ -1,6 +1,0 @@
-%DEPENDS%
-dconf
-gtk3
-gsettings-desktop-schemas
-librsvg
-

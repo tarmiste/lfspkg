@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-intltool
-docbook-xsl
-gobject-introspection
-python2
-git
-gtk-doc
-

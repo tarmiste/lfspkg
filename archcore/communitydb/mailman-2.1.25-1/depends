@@ -1,7 +1,0 @@
-%DEPENDS%
-glibc
-python2
-smtp-server
-python2-dnspython
-systemd
-

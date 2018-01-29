@@ -1,7 +1,0 @@
-%DEPENDS%
-jack
-libxcursor
-libxpm
-libxxf86dga
-libxxf86vm
-

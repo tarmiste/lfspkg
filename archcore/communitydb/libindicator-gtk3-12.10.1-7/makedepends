@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-gtk2
-gtk3
-pkg-config
-

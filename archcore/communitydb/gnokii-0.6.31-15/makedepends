@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-gtk2
-libmariadbclient
-postgresql-libs
-intltool
-

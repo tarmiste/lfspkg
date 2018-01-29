@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-python2
-boost
-cmake
-vim
-

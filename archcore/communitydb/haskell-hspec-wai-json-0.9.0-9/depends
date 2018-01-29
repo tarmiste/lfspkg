@@ -1,7 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-aeson
-haskell-aeson-qq
-haskell-case-insensitive
-haskell-hspec-wai
-

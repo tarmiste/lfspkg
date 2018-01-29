@@ -1,6 +1,0 @@
-%DEPENDS%
-protobuf
-ncurses
-curl
-openssl-1.0
-

@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-python-webob: query wsgi app
-

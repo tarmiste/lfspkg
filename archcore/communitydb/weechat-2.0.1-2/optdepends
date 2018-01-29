@@ -1,9 +1,0 @@
-%OPTDEPENDS%
-perl
-python2
-lua
-tcl
-ruby
-aspell
-guile2.0
-

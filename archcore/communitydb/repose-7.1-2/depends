@@ -1,5 +1,0 @@
-%DEPENDS%
-pacman
-libarchive
-gnupg
-

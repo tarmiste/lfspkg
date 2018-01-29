@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-netpbm: for use together with man -H command interaction in browsers
-psutils: for use together with man -H command interaction in browsers
-libxaw: for gxditview
-

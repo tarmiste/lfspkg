@@ -1,5 +1,0 @@
-%DEPENDS%
-libxcb
-xcb-util-wm
-xcb-util
-

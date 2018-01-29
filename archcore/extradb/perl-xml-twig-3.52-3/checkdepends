@@ -1,8 +1,0 @@
-%CHECKDEPENDS%
-perl-libwww
-perl-test-pod
-perl-xml-simple
-perl-html-tree
-perl-xml-xpath
-perl-tie-ixhash
-

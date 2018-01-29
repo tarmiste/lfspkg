@@ -1,7 +1,0 @@
-%DEPENDS%
-webkit2gtk
-yelp-xsl
-libxslt
-xz
-bzip2
-

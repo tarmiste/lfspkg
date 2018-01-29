@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-python-btchip: BTChip hardware wallet support
-python-matplotlib: plot transaction history in graphical mode
-zbar: QR code reading support
-

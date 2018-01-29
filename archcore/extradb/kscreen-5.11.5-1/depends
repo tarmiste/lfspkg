@@ -1,6 +1,0 @@
-%DEPENDS%
-kxmlgui
-libkscreen
-qt5-graphicaleffects
-hicolor-icon-theme
-

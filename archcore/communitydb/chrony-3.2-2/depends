@@ -1,6 +1,0 @@
-%DEPENDS%
-nss
-readline
-libcap
-libedit
-

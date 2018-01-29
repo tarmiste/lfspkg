@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-kio-extras: extra protocols support (sftp, fish and more)
-kdoctools: for the help kioslave
-knetattach: to add new kio-remote entries
-

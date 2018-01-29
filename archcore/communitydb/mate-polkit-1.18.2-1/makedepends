@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-accountsservice
-gobject-introspection
-intltool
-

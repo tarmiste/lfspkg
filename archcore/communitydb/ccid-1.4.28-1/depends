@@ -1,5 +1,0 @@
-%DEPENDS%
-pcsclite
-libusb
-flex
-

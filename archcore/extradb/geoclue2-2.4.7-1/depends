@@ -1,6 +1,0 @@
-%DEPENDS%
-libsoup
-json-glib
-libmm-glib
-avahi
-

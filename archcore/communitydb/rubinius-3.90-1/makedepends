@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-llvm
-ruby
-clang
-valgrind
-

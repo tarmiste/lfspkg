@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-cmake
-libvncserver
-qt5-base
-ffmpeg
-mesa
-

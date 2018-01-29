@@ -1,8 +1,0 @@
-%DEPENDS%
-libexif
-libjpeg
-gd
-libltdl
-libusb
-libxml2
-

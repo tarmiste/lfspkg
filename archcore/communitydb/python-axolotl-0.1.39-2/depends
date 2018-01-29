@@ -1,5 +1,0 @@
-%DEPENDS%
-python-protobuf
-python-crypto
-python-axolotl-curve25519
-

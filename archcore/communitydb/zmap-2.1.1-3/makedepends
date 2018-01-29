@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-byacc
-cmake
-gengetopt
-pkg-config
-

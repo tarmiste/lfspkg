@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-ffmpeg: fix issues with audio file downloads
-youtube-dl: alternative backend
-

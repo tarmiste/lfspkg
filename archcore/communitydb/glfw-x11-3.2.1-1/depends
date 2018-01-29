@@ -1,7 +1,0 @@
-%DEPENDS%
-libxi
-libxrandr
-libxinerama
-libxcursor
-libgl
-

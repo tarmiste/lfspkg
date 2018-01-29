@@ -1,6 +1,0 @@
-%DEPENDS%
-mate-desktop
-libcanberra
-libgtop
-libsm
-

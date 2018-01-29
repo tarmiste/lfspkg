@@ -1,5 +1,0 @@
-%DEPENDS%
-gtk2-perl
-perl>=5.26
-perl<5.27
-

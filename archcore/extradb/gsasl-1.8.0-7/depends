@@ -1,6 +1,0 @@
-%DEPENDS%
-gnutls
-libidn
-krb5
-libgcrypt
-

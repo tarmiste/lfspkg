@@ -1,7 +1,0 @@
-%DEPENDS%
-libpng
-libmng
-jasper
-lcms
-openexr
-

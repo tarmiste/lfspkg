@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-git
-boost
-msgpack-c
-autoconf-archive
-

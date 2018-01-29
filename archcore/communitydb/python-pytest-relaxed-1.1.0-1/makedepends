@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-python-pytest
-python2-pytest
-python-decorator
-python2-decorator
-python-six
-python2-six
-

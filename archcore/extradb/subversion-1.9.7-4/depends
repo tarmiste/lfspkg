@@ -1,6 +1,0 @@
-%DEPENDS%
-sqlite
-file
-serf
-systemd
-

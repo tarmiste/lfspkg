@@ -1,5 +1,0 @@
-%DEPENDS%
-perl
-perl-archive-zip
-perl-archive-cpio
-

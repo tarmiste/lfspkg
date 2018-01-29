@@ -1,8 +1,0 @@
-%DEPENDS%
-qt4
-qscintilla-qt4
-cgal
-opencsg
-boost-libs
-shared-mime-info
-

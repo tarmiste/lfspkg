@@ -1,9 +1,0 @@
-%DEPENDS%
-hicolor-icon-theme
-gdal
-routino>=3.1
-qt5-script
-qt5-webkit
-proj
-quazip
-

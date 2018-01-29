@@ -1,8 +1,0 @@
-%OPTDEPENDS%
-libgpod: support for Apple iPod audio devices
-libmtp: support for portable media devices
-loudmouth: backend needed by mp3tunes for syncing
-ifuse: support for Apple iPod Touch and iPhone
-libmygpo-qt: gpodder.net Internet Service
-gst-libav: MP3 codecs
-

@@ -1,8 +1,0 @@
-%DEPENDS%
-chromaprint
-mutagen
-python2-configobj
-python2-musicbrainz2
-python2-pyparsing
-python2-pyqt4
-

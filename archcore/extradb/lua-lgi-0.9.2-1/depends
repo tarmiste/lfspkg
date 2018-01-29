@@ -1,7 +1,0 @@
-%DEPENDS%
-glibc
-glib2
-libffi
-lua
-gobject-introspection-runtime
-

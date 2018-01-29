@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-glproto
-dri2proto
-cmake
-

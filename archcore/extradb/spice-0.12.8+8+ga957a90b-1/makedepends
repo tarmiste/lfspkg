@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-python2-pyparsing
-python2-six
-qemu
-spice-protocol
-git
-libcacard
-

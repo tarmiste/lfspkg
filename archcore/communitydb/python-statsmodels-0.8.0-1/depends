@@ -1,5 +1,0 @@
-%DEPENDS%
-python-scipy
-python-pandas
-python-patsy
-

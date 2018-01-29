@@ -1,9 +1,0 @@
-%CHECKDEPENDS%
-python-mock
-python-eventlet
-python-pytest
-python-aiohttp
-python2-mock
-python2-eventlet
-python2-pytest
-

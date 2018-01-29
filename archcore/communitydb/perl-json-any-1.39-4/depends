@@ -1,6 +1,0 @@
-%DEPENDS%
-perl-json>=2.02
-perl-json-xs>=2.3
-perl-yaml-syck
-perl-namespace-clean
-

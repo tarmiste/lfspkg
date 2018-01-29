@@ -1,8 +1,0 @@
-%DEPENDS%
-qt5-tools
-qt5-quickcontrols
-qt5-quickcontrols2
-qt5-webengine
-clang=5.0.1
-qbs
-

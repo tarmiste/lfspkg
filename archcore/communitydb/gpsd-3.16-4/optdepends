@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-php: generate a PHP status page for your GPS
-php-gd: image support for the PHP status page
-pygtk: GUI frontends
-

@@ -1,8 +1,0 @@
-%DEPENDS%
-arpack
-fftw
-glu
-portaudio
-qt4
-libffi
-

@@ -1,5 +1,0 @@
-%DEPENDS%
-gdbm
-db
-glibc
-

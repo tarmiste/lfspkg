@@ -1,7 +1,0 @@
-%OPTDEPENDS%
-bluez-libs
-python
-glpk
-libpulse
-opus
-

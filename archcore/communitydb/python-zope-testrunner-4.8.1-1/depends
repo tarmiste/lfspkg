@@ -1,6 +1,0 @@
-%DEPENDS%
-python-setuptools
-python-zope-interface
-python-zope-exceptions
-python-six
-

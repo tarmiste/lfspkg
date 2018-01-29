@@ -1,9 +1,0 @@
-%DEPENDS%
-dbus
-libasyncns
-libcap
-libxtst
-libsm
-libsndfile
-systemd
-

@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-python2
-re2c
-emacs-nox
-

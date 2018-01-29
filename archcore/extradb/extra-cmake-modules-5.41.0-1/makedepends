@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-python-sphinx
-python-requests
-qt5-tools
-

@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-systemd
-gobject-introspection
-gtk-doc
-git
-gnome-common
-

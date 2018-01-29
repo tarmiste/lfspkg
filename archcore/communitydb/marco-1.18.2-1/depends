@@ -1,6 +1,0 @@
-%DEPENDS%
-libcanberra
-libgtop
-mate-desktop
-zenity
-

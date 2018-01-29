@@ -1,9 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-mtl
-haskell-network-uri
-haskell-pandoc-types
-haskell-parsec
-haskell-syb
-haskell-xml
-

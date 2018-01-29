@@ -1,5 +1,0 @@
-%DEPENDS%
-perl-file-basedir
-perl-file-desktopentry
-shared-mime-info
-

@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-at-spi2-core: X11/GNOME Apps accessibility
-atk: ATK bridge for X11/GNOME accessibility
-

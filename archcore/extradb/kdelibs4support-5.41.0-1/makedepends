@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-extra-cmake-modules
-kdoctools
-qt5-tools
-networkmanager
-perl-uri
-python
-kdesignerplugin
-

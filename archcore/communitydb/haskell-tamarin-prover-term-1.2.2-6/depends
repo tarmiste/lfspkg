@@ -1,9 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-hunit
-haskell-attoparsec
-haskell-dlist
-haskell-mtl
-haskell-safe
-haskell-tamarin-prover-utils
-

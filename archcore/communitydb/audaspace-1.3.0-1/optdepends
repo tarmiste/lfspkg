@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-python: python language bindings
-python-numpy: python language bindings
-

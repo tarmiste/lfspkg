@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-graphviz: graph_models extension
-python-werkzeug: runserver_plus extension
-ipython: shell_plus extension
-

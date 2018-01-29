@@ -1,6 +1,0 @@
-%DEPENDS%
-perl
-perl-ipc-run
-perl-timedate
-perl-time-duration
-

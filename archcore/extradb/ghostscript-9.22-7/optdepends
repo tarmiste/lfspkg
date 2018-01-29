@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-texlive-core: needed for dvipdf
-gtk3: needed for gsx
-

@@ -1,8 +1,0 @@
-%DEPENDS%
-kparts
-kpty
-libarchive
-libzip
-kitemmodels
-hicolor-icon-theme
-

@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-python2-unidecode: Needed if same-id objects or recursion is used within serialized data
-

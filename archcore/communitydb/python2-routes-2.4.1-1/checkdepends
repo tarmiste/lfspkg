@@ -1,8 +1,0 @@
-%CHECKDEPENDS%
-python-nose
-python2-nose
-python-webob
-python2-webob
-python-coverage
-python2-coverage
-

@@ -1,8 +1,0 @@
-%CHECKDEPENDS%
-python-jinja
-python2-jinja
-python-nose
-python2-nose
-python-docutils
-python2-docutils
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-perl
-perl-params-util
-perl
-perl-file-slurp
-

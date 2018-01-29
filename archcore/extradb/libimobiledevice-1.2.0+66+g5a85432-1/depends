@@ -1,5 +1,0 @@
-%DEPENDS%
-libusbmuxd
-usbmuxd
-gnutls
-

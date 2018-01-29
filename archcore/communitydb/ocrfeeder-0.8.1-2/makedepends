@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-intltool
-gnome-doc-utils
-python2-gobject2
-

@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-caja
-dbus-glib
-intltool
-itstool
-libcanberra
-libnotify
-

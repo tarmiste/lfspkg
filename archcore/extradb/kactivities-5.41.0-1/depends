@@ -1,6 +1,0 @@
-%DEPENDS%
-kcoreaddons
-kconfig
-kwindowsystem
-qt5-declarative
-

@@ -1,9 +1,0 @@
-%DEPENDS%
-glibc
-libdrm
-libgl
-libx11
-libxext
-libxfixes
-wayland
-

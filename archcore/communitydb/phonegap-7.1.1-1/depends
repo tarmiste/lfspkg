@@ -1,7 +1,0 @@
-%DEPENDS%
-npm
-acorn
-semver
-cordova
-browserify
-

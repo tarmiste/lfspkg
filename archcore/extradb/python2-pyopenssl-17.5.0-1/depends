@@ -1,5 +1,0 @@
-%DEPENDS%
-openssl
-python2-six
-python2-cryptography
-

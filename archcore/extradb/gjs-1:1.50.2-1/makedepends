@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-gobject-introspection
-git
-autoconf-archive
-xorg-server-xvfb
-

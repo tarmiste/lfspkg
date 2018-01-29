@@ -1,9 +1,0 @@
-%DEPENDS%
-boost-libs
-libevent
-qt5-base
-miniupnpc
-qrencode
-protobuf
-zeromq
-

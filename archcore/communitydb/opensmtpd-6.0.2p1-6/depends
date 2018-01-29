@@ -1,6 +1,0 @@
-%DEPENDS%
-libasr
-libevent
-openssl-1.0
-pam
-

@@ -1,8 +1,0 @@
-%OPTDEPENDS%
-logrotate: for rotating log files
-json-c: for json-plugin
-curl: for the HTTP module
-librabbitmq-c: for the AMQP plugin
-libmongoc: for the MongoDB plugin
-python: for the Python plugin
-

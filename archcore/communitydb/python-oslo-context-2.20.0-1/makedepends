@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-python-setuptools
-python2-setuptools
-python-pbr
-python2-pbr
-python-debtcollector
-python2-debtcollector
-

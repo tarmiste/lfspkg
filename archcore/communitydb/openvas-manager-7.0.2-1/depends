@@ -1,6 +1,0 @@
-%DEPENDS%
-libxslt
-openvas-libraries
-rsync
-sqlite3
-

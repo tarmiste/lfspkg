@@ -1,7 +1,0 @@
-%DEPENDS%
-poppler
-djvulibre
-gcc-libs
-graphicsmagick
-exiv2
-

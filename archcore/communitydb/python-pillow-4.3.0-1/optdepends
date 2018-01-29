@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-tk: for the ImageTK module
-sane: for the Sane module
-python-pyqt4: for the ImageQt module
-

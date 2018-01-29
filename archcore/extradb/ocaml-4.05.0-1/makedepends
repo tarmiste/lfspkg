@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-tk>=8.6.0
-ncurses>=5.6-7
-libx11
-

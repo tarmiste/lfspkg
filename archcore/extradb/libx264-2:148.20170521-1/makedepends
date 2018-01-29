@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-yasm
-git
-ffmpeg
-l-smash
-

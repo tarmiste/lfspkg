@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-librsvg: GUI support
-gtk2: GUI support
-

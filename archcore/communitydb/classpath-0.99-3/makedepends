@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-gtk2>=2.8
-libxtst
-gconf
-java-environment
-antlr2
-

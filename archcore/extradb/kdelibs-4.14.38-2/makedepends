@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-cmake
-automoc4
-avahi
-libgl
-mesa
-

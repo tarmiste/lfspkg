@@ -1,6 +1,0 @@
-%DEPENDS%
-glibc
-glib2
-icu
-db
-

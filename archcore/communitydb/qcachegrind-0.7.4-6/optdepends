@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-graphviz: For drawing call graphs
-php: pprof2calltree
-python2: hotshot2calltree
-

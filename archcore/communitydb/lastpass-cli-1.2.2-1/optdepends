@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-xclip: clipboard support
-pinentry: securely read passwords
-

@@ -1,5 +1,0 @@
-%DEPENDS%
-python-setuptools
-python-colorama
-python-gevent
-

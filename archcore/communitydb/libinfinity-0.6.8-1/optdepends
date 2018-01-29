@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-avahi: zeroconf support
-gtk2: gtk support
-

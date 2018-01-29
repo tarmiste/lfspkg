@@ -1,5 +1,0 @@
-%DEPENDS%
-freeimage
-sdl2_ttf
-fontconfig
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-libnotify
-gtk3
-gstreamer
-curl
-

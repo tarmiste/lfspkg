@@ -1,8 +1,0 @@
-%DEPENDS%
-freeglut
-glew
-openal
-qt5-base
-qt5-multimedia
-sdl2
-

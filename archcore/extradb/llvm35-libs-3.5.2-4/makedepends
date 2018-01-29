@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-libffi
-python2
-python-sphinx
-gcc-multilib
-

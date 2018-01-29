@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-intltool
-gobject-introspection
-autoconf-archive
-appstream-glib
-git
-

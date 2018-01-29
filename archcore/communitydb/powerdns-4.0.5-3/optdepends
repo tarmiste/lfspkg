@@ -1,7 +1,0 @@
-%OPTDEPENDS%
-libmariadbclient: MariaDB/MySQL backend
-postgresql-libs: PostgreSQL backend
-libldap: LDAP backend
-geoip: GeoIP backend
-yaml-cpp: GeoIP backend
-

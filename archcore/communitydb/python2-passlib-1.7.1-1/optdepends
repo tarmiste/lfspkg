@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-python2-fastpbkdf2: accelerate PBKDF2-based hashes
-python2-bcrypt: accelerate Bcrypt hashes
-python2-scrypt: accelerate SCrypt hashes
-

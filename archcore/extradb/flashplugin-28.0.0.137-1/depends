@@ -1,7 +1,0 @@
-%DEPENDS%
-libxt
-gtk2
-nss
-curl
-hicolor-icon-theme
-

@@ -1,5 +1,0 @@
-%DEPENDS%
-libpcap
-openssl
-libnetfilter_queue
-

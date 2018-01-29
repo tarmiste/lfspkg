@@ -1,4 +1,0 @@
-%DEPENDS%
-nginx=1.12.2
-pam
-

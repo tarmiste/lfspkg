@@ -1,6 +1,0 @@
-%DEPENDS%
-babl
-libspiro
-json-glib
-libgexiv2
-

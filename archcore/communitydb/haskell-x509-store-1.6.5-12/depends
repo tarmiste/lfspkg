@@ -1,9 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-asn1-encoding
-haskell-asn1-types
-haskell-mtl
-haskell-cryptonite
-haskell-pem
-haskell-x509
-

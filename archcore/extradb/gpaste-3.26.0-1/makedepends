@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-intltool
-vala
-appstream-glib
-gobject-introspection
-gnome-shell
-gnome-control-center
-git
-

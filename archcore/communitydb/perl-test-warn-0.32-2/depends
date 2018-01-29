@@ -1,5 +1,0 @@
-%DEPENDS%
-perl-tree-dag-node
-perl-sub-uplevel>=0.12
-perl>=5.10.0
-

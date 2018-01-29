@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-gtk-doc
-git
-python
-valgrind
-

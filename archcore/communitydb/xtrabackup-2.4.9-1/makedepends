@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-cmake
-python-sphinx
-zlib
-vim
-libedit
-libevent
-

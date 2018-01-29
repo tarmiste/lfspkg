@@ -1,5 +1,0 @@
-%DEPENDS%
-libxi
-libxrandr
-libgl
-

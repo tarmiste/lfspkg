@@ -1,6 +1,0 @@
-%DEPENDS%
-python-future
-python-requests
-python-setuptools
-python-tldextract
-

@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-alex
-happy
-ghc
-

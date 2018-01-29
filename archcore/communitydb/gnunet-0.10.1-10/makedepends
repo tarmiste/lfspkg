@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-gettext
-pkgconfig
-bluez-libs
-python
-glpk
-libpulse
-opus
-

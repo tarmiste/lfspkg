@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-ghc
-haskell-aeson-qq
-haskell-cabal-doctest
-haskell-doctest
-

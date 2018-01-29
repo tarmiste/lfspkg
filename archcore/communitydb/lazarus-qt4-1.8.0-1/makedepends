@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-fpc
-fpc-src
-gtk2
-qt4pas
-qt5pas
-rsync
-

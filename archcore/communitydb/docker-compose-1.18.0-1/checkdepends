@@ -1,4 +1,0 @@
-%CHECKDEPENDS%
-python-pytest-runner
-python-mock
-

@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-qt4
-qt5-base
-cmake
-doxygen
-nss
-pkcs11-helper
-botan1.10
-

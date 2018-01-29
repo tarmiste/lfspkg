@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-xclip: xclip backend
-xsel: xsel backend
-python-pyqt4: qt backend
-plasma-workspace: klipper backend
-

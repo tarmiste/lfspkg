@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-extra-cmake-modules
-boost
-python
-doxygen
-qt5-tools
-

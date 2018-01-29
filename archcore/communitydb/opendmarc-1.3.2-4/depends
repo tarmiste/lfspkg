@@ -1,6 +1,0 @@
-%DEPENDS%
-smtp-server
-libspf2
-libbsd
-libidn
-

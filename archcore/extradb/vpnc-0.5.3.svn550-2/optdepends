@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-openresolv: Let vpnc manage resolv.conf
-

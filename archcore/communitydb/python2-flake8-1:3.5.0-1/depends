@@ -1,7 +1,0 @@
-%DEPENDS%
-python2-pyflakes
-python2-mccabe
-python2-pycodestyle
-python2-enum34
-python2-configparser
-

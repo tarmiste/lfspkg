@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-intltool
-gtk2
-gtk3
-gnome-common
-git
-

@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-erlang-unixodbc: database support
-java-environment: for Java support
-lksctp-tools: for SCTP support
-

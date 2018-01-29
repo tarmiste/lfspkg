@@ -1,5 +1,0 @@
-%DEPENDS%
-gambas3-runtime
-bzip2
-zlib
-

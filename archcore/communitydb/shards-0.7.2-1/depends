@@ -1,7 +1,0 @@
-%DEPENDS%
-libyaml
-git
-pcre
-libevent
-gc
-

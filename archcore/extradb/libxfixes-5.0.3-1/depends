@@ -1,4 +1,0 @@
-%DEPENDS%
-libx11
-fixesproto>=5.0
-

@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-docbook-xsl
-doxygen
-python
-python2
-samba
-systemd
-

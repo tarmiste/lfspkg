@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-java-environment: for using clojure
-ruby: for using websockify addon
-

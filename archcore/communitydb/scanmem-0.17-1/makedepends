@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-intltool
-gtk3
-python-gobject
-polkit
-glibc
-readline
-

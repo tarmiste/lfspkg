@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-libgsf>=1.14.26
-doxygen
-boost
-

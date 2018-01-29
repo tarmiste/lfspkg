@@ -1,5 +1,0 @@
-%DEPENDS%
-libltdl
-hwloc
-openssh
-

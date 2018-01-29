@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-docbook-xsl
-gobject-introspection
-gnome-common
-intltool
-parted
-libiscsi
-

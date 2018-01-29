@@ -1,7 +1,0 @@
-%DEPENDS%
-appstream
-libarchive
-librsvg
-lmdb
-optipng
-

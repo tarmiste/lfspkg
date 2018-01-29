@@ -1,7 +1,0 @@
-%DEPENDS%
-bash
-kmod
-gcc
-make
-patch
-

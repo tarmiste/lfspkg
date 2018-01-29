@@ -1,7 +1,0 @@
-%DEPENDS%
-curl
-glew
-glu
-sdl
-c-ares
-

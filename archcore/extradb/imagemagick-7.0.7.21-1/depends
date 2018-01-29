@@ -1,5 +1,0 @@
-%DEPENDS%
-libmagick=7.0.7.21-1
-perl>=5.26
-perl<5.27
-

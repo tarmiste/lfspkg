@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-git
-gd
-lib32-gcc-libs
-

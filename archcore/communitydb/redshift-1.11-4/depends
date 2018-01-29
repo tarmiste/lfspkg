@@ -1,6 +1,0 @@
-%DEPENDS%
-geoclue2
-libdrm
-libxcb
-libxxf86vm
-

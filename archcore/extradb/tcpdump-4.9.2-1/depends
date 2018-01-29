@@ -1,5 +1,0 @@
-%DEPENDS%
-libpcap
-libcap-ng
-openssl
-

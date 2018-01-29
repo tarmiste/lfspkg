@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-intltool
-vala
-gobject-introspection
-gnome-common
-glade
-git
-

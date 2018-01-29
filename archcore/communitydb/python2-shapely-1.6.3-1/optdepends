@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-python2-numpy: for shapely.vectorized submodule
-

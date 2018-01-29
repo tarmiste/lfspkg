@@ -1,5 +1,0 @@
-%DEPENDS%
-sh
-tar
-glibc
-

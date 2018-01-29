@@ -1,9 +1,0 @@
-%OPTDEPENDS%
-qt5-svg: to use SVG icon themes
-postgresql-libs: PostgreSQL driver
-libmariadbclient: MariaDB driver
-unixodbc: ODBC driver
-libfbclient: Firebird/iBase driver
-freetds: MS SQL driver
-gtk3: GTK platform plugin
-

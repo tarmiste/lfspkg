@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-python-setuptools
-python2-setuptools
-python-click
-python2-click
-python-twisted
-python2-twisted
-

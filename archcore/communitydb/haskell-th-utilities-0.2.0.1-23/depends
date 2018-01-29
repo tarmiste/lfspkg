@@ -1,7 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-primitive
-haskell-syb
-haskell-text
-haskell-th-orphans
-

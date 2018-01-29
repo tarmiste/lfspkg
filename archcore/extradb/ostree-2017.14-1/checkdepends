@@ -1,7 +1,0 @@
-%CHECKDEPENDS%
-parallel
-syslinux
-gjs
-cpio
-elfutils
-

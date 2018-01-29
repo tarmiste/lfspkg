@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-python2
-gutenprint>=5.2.9
-optipng
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-libcups
-poppler-qt5
-qt5-svg
-texlive-bin
-

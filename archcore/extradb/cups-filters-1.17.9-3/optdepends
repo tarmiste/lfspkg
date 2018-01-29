@@ -1,7 +1,0 @@
-%OPTDEPENDS%
-ghostscript: for non-PostScript printers to print with CUPS to convert PostScript to raster images
-foomatic-db: drivers use Ghostscript to convert PostScript to a printable form directly
-foomatic-db-engine: drivers use Ghostscript to convert PostScript to a printable form directly
-foomatic-db-nonfree: drivers use Ghostscript to convert PostScript to a printable form directly
-antiword: needed to convert MS Word documents (requires also docx2txt (AUR)
-

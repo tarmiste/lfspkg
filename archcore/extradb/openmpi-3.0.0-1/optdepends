@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-gcc-fortran: fortran support
-

@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-bluez: Support for Bluetooth devices
-wpa_supplicant: for WiFi devices
-pptpclient: for ppp support
-openvpn: for VPN Support
-

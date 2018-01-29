@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-ncurses
-gtk2
-libcap
-

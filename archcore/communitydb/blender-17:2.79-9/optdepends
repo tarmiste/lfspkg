@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-cuda: cycles renderer cuda support
-

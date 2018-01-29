@@ -1,7 +1,0 @@
-%DEPENDS%
-python2-six
-python2-pytz
-python2-more-itertools
-python2-jaraco
-python2-tempora
-

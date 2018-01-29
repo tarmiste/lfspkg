@@ -1,4 +1,0 @@
-%DEPENDS%
-python2
-postgresql-libs>=8.4.1
-

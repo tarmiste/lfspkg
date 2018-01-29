@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-ruby: for running t2tmake.rb
-sh: for running html-update.sh
-vim: for using the vim-files
-

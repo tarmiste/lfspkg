@@ -1,4 +1,0 @@
-%DEPENDS%
-passenger
-nginx=1.12.2
-

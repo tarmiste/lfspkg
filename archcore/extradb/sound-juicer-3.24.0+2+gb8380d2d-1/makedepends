@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-intltool
-itstool
-gnome-common
-appstream-glib
-git
-

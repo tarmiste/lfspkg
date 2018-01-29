@@ -1,5 +1,0 @@
-%DEPENDS%
-ghc-libs
-gnutls
-haskell-monads-tf
-

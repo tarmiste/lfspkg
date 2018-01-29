@@ -1,9 +1,0 @@
-%DEPENDS%
-python-six
-python-pbr
-python-cmd2
-python-prettytable
-python-pyparsing
-python-stevedore
-python-yaml
-

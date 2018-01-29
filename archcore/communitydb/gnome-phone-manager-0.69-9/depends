@@ -1,8 +1,0 @@
-%DEPENDS%
-evolution-data-server
-gconf
-gnokii
-gnome-bluetooth
-libcanberra
-telepathy-glib
-

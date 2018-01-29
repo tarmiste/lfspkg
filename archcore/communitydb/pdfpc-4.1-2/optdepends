@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-gst-plugins-good: more codecs for video playback support
-gst-libav: more codecs for video playback support
-

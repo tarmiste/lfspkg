@@ -1,7 +1,0 @@
-%DEPENDS%
-kcmutils
-pciutils
-glu
-libraw1394
-kwayland
-

@@ -1,4 +1,0 @@
-%DEPENDS%
-perl-number-compare
-perl-text-glob>=0.07
-

@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-python2: for two of the commands (garchive, tragesym)
-gawk: for sw2asc
-

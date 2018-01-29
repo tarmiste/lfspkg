@@ -1,6 +1,0 @@
-%DEPENDS%
-dbus-glib
-gtk3
-libsm
-mate-desktop
-

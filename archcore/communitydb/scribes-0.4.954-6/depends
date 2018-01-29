@@ -1,8 +1,0 @@
-%DEPENDS%
-python2-dbus
-pygtksourceview2
-python2-gtkspell
-python2-xdg
-hicolor-icon-theme
-desktop-file-utils
-

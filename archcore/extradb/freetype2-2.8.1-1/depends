@@ -1,7 +1,0 @@
-%DEPENDS%
-zlib
-bzip2
-sh
-libpng
-harfbuzz
-

@@ -1,5 +1,0 @@
-%DEPENDS%
-python2
-python2-pynacl
-python2-six
-

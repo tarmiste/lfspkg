@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-libao
-libmad
-libid3tag
-wavpack
-libpulse
-opusfile
-twolame
-

@@ -1,7 +1,0 @@
-%DEPENDS%
-python2-flask
-python2-babel
-python2-pytz
-python2-speaklater
-python2-jinja
-

@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-tomcat-native: to allow optimal performance in production environments
-

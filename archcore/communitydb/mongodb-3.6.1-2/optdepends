@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-libpcap: needed for mongosniff
-mongodb-tools: mongoimport, mongodump, mongotop, etc
-

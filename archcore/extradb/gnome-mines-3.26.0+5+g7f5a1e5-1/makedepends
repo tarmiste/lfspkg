@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-itstool
-gobject-introspection
-yelp-tools
-appstream-glib
-vala
-git
-meson
-

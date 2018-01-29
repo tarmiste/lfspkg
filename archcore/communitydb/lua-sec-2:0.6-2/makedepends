@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-openssl
-lua
-lua-socket
-lua51
-lua51-socket
-lua52
-lua52-socket
-

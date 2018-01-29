@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-intltool
-gobject-introspection
-git
-docbook-xsl
-xmlto
-libdwarf
-

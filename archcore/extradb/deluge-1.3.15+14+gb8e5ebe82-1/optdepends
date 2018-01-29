@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-python2-notify: libnotify notifications
-pygtk: needed for gtk ui
-librsvg: needed for gtk ui
-python2-mako: needed for web ui
-

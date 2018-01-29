@@ -1,7 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-base64-bytestring
-haskell-blaze-builder
-haskell-random
-haskell-text
-

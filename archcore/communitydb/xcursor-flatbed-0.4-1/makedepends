@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-git
-xorg-xcursorgen
-librsvg
-bc
-

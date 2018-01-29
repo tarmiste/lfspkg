@@ -1,6 +1,0 @@
-%DEPENDS%
-libpcap
-pcre
-bluez-libs
-libcap
-

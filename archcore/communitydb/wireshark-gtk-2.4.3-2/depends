@@ -1,7 +1,0 @@
-%DEPENDS%
-desktop-file-utils
-gtk3
-portaudio
-wireshark-cli
-wireshark-common
-

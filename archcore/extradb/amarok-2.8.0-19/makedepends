@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-automoc4
-cmake
-libgpod
-libmtp
-loudmouth
-libmygpo-qt
-qca-qt4
-

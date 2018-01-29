@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-openssl
-expat
-pkg-config
-doxygen
-

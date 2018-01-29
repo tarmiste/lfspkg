@@ -1,8 +1,0 @@
-%DEPENDS%
-perl
-perl-user-identity
-perl-mailtools
-perl-mime-types
-perl-io-stringy
-perl-uri
-

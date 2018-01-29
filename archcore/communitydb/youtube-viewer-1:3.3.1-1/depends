@@ -1,7 +1,0 @@
-%DEPENDS%
-perl>=5.16.0
-perl-data-dump
-perl-json
-perl-lwp-protocol-https
-perl-libwww
-

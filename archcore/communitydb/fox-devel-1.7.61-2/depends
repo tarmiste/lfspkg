@@ -1,9 +1,0 @@
-%DEPENDS%
-glu
-libsm
-libtiff
-libxcursor
-libxft
-libxi
-libxrandr
-

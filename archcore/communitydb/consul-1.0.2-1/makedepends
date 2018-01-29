@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-git
-go-pie
-procps-ng
-syslog-ng
-

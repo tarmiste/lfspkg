@@ -1,7 +1,0 @@
-%OPTDEPENDS%
-gtkspell3: Spell Check plugin
-libsoup: Pastebin plugin
-vala: Outline plugin
-vte3: Terminal plugin
-webkit2gtk: Browser Preview plugin
-

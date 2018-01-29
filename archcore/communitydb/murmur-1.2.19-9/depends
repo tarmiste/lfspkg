@@ -1,8 +1,0 @@
-%DEPENDS%
-avahi
-lsb-release
-protobuf
-qt4
-icu
-zeroc-ice
-

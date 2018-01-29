@@ -1,8 +1,0 @@
-%OPTDEPENDS%
-gvfs: for trash support, mounting with udisk and remote filesystems
-xfce4-panel: for trash applet
-tumbler: for thumbnail previews
-thunar-volman: manages removable devices
-thunar-archive-plugin: create and deflate archives
-thunar-media-tags-plugin: view/edit id3/ogg tags
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-python-virtualenv
-python2-virtualenv
-python-virtualenv-clone
-python-stevedore
-

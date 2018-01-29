@@ -1,6 +1,0 @@
-%DEPENDS%
-poppler-glib
-djvulibre
-libspectre
-webkit2gtk
-

@@ -1,7 +1,0 @@
-%DEPENDS%
-openssl
-lzo
-iproute2
-libsystemd
-pkcs11-helper
-

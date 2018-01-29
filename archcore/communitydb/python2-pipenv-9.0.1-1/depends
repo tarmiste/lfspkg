@@ -1,9 +1,0 @@
-%DEPENDS%
-python2
-python2-pip
-python-pew
-python2-virtualenv
-python2-flake8
-python2-requests
-python2-urllib3
-

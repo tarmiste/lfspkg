@@ -1,7 +1,0 @@
-%DEPENDS%
-buddy
-cvc4
-libtecla
-gmp
-libsigsegv
-

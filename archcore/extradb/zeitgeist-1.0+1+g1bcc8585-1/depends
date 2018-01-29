@@ -1,7 +1,0 @@
-%DEPENDS%
-json-glib
-telepathy-glib
-gtk3
-xapian-core
-sqlite
-

@@ -1,9 +1,0 @@
-%DEPENDS%
-dbus-glib
-libwnck3
-libcanberra
-libmateweather
-libsm
-mate-menus
-mate-desktop
-

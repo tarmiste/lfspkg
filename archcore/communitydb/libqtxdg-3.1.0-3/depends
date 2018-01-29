@@ -1,6 +1,0 @@
-%DEPENDS%
-libsm
-libxkbcommon-x11
-qt5-base
-qt5-svg
-

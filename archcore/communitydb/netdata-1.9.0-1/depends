@@ -1,5 +1,0 @@
-%DEPENDS%
-libmnl
-libnetfilter_acct
-zlib
-

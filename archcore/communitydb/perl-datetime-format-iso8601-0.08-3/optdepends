@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-perl-file-find-rule
-perl-test-distribution
-perl-test-pod
-

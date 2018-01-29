@@ -1,5 +1,0 @@
-%DEPENDS%
-python-kombu
-python-billiard
-python-pytz
-

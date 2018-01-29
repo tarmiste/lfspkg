@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-cmake
-doxygen
-lame
-qt5-script
-texlive-core
-

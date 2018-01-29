@@ -1,7 +1,0 @@
-%DEPENDS%
-curl
-gconf
-gpsd
-libexif
-libglade
-

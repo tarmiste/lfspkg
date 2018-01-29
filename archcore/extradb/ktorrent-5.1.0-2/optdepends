@@ -1,8 +1,0 @@
-%OPTDEPENDS%
-plasma-workspace: shutdown plugin
-kdnssd: zeroconf plugin
-taglib: mediaplayer plugin
-kde-syndication: syndication plugin
-kdewebkit: search plugin, syndication plugin
-kplotting: statistics plugin
-

@@ -1,9 +1,0 @@
-%DEPENDS%
-gcc-libs
-glibc
-libgl
-libpng
-sdl2
-sfml
-zlib
-

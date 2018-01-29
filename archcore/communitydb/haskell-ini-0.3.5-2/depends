@@ -1,6 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-attoparsec
-haskell-text
-haskell-unordered-containers
-

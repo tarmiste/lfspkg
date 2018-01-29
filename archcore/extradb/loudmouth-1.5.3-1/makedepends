@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-intltool
-pkgconfig
-gtk-doc
-

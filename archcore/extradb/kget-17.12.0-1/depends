@@ -1,8 +1,0 @@
-%DEPENDS%
-kcmutils
-knotifyconfig
-qca-qt5
-qgpgme
-kdelibs4support
-hicolor-icon-theme
-

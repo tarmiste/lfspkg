@@ -1,5 +1,0 @@
-%DEPENDS%
-perl-mailtools
-perl-io-stringy
-perl-convert-binhex
-

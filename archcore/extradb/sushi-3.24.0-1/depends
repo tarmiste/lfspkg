@@ -1,9 +1,0 @@
-%DEPENDS%
-clutter-gtk
-clutter-gst
-gjs
-libmusicbrainz5
-webkit2gtk
-gtksourceview3
-evince
-

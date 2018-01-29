@@ -1,6 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-case-insensitive
-haskell-psqueues
-haskell-stm
-

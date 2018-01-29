@@ -1,6 +1,0 @@
-%DEPENDS%
-ghc-libs
-sh
-haskell-mtl
-haskell-text
-

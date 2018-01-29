@@ -1,6 +1,0 @@
-%DEPENDS%
-python2-webob
-python2-six
-python2-beautifulsoup4
-python2-waitress
-

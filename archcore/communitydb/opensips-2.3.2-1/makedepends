@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-postgresql-libs>=8.4.1
-unixodbc
-libldap>=2.4.18
-libmariadbclient
-lynx
-libxslt
-libmicrohttpd
-

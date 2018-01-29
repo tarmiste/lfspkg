@@ -1,6 +1,0 @@
-%DEPENDS%
-python
-guile2.0
-xz
-gdb-common
-

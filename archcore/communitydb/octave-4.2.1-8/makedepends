@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-gcc-fortran
-texlive-core
-suitesparse
-texinfo
-gnuplot
-qt5-tools
-portaudio
-

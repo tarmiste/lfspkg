@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-cmake
-python2
-suitesparse
-doxygen
-gcc-fortran
-

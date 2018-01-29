@@ -1,5 +1,0 @@
-%DEPENDS%
-perl-date-calc
-perl-gd
-perl-yaml-tiny
-

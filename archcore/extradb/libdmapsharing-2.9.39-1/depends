@@ -1,6 +1,0 @@
-%DEPENDS%
-libsoup
-avahi
-gst-plugins-base-libs
-gdk-pixbuf2
-

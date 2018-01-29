@@ -1,5 +1,0 @@
-%DEPENDS%
-perl-b-hooks-endofscope
-perl-sub-identify
-perl-namespace-clean
-

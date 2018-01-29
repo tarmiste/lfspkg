@@ -1,5 +1,0 @@
-%DEPENDS%
-jre8-openjdk-headless=8.u144-1
-xdg-utils
-hicolor-icon-theme
-

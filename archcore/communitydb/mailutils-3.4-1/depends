@@ -1,6 +1,0 @@
-%DEPENDS%
-libldap
-pam
-gnutls
-gsasl
-

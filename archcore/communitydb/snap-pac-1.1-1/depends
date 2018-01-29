@@ -1,6 +1,0 @@
-%DEPENDS%
-snapper
-pacman
-btrfs-progs
-procps-ng
-

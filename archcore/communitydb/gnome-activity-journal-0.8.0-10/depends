@@ -1,6 +1,0 @@
-%DEPENDS%
-python2-dbus
-python2-gconf
-python2-xdg
-zeitgeist
-

@@ -1,8 +1,0 @@
-%DEPENDS%
-postgresql-libs>=10.1
-krb5
-libxml2
-readline>=6.0
-openssl>=1.0.0
-pam
-

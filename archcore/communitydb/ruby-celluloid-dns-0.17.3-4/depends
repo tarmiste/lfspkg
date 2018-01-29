@@ -1,7 +1,0 @@
-%DEPENDS%
-ruby
-ruby-timers
-ruby-celluloid
-ruby-celluloid-io
-ruby-rspec-core
-

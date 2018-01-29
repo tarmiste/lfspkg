@@ -1,8 +1,0 @@
-%DEPENDS%
-coreutils
-gawk
-grep
-pciutils
-procps-ng
-sed
-

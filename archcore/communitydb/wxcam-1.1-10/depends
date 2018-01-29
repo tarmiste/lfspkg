@@ -1,9 +1,0 @@
-%DEPENDS%
-mjpegtools
-wxgtk3
-xvidcore
-v4l-utils
-alsa-lib
-cimg
-ffmpeg
-

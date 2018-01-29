@@ -1,5 +1,0 @@
-%DEPENDS%
-lapack
-python2
-cblas
-

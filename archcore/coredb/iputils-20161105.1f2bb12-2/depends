@@ -1,6 +1,0 @@
-%DEPENDS%
-openssl
-sysfsutils
-libcap
-libidn
-

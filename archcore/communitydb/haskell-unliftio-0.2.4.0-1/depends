@@ -1,6 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-async
-haskell-stm
-haskell-unliftio-core
-

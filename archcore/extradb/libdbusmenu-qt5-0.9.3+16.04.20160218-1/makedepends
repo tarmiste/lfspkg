@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-cmake
-doxygen
-qjson
-qt4
-qt5-base
-

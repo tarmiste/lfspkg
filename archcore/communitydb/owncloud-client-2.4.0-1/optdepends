@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-python2-nautilus: integration with Nautilus
-nemo-python: integration with Nemo
-python2-caja: integration with Caja
-

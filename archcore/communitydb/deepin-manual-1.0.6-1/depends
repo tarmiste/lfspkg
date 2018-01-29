@@ -1,7 +1,0 @@
-%DEPENDS%
-python-jieba
-python-pyqt5
-python-gobject
-deepin-qml-widgets
-python-dae
-

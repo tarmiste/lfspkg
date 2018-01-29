@@ -1,6 +1,0 @@
-%DEPENDS%
-gcc-libs
-zlib
-libffi
-ncurses
-

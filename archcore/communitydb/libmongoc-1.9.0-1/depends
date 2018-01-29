@@ -1,6 +1,0 @@
-%DEPENDS%
-libbson
-libsasl
-snappy
-zlib
-

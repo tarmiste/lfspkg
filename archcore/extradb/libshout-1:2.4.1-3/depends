@@ -1,6 +1,0 @@
-%DEPENDS%
-libvorbis
-libtheora
-speex
-openssl
-

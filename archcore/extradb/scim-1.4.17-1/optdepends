@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-qt4: qt4 immodule
-gtk3: gtk3 immodule
-

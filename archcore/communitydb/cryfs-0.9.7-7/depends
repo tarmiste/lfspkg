@@ -1,5 +1,0 @@
-%DEPENDS%
-crypto++
-fuse2
-curl
-

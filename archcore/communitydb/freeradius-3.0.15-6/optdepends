@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-unixodbc: for ODBC
-python2: for Python
-json-c: rlm_rest module
-curl: for REST
-

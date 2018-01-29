@@ -1,6 +1,0 @@
-%DEPENDS%
-bzip2
-file
-util-linux
-e2fsprogs
-

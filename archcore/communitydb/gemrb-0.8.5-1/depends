@@ -1,9 +1,0 @@
-%DEPENDS%
-python2
-sdl2
-sdl2_mixer
-openal
-hicolor-icon-theme
-libpng
-freetype2
-

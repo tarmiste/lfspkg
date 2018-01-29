@@ -1,6 +1,0 @@
-%DEPENDS%
-dbus-glib
-cinnamon-desktop
-libsm
-libcanberra
-

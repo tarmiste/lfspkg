@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-intltool
-pygtk
-librsvg
-python2-mako
-git
-

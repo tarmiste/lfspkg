@@ -1,6 +1,0 @@
-%DEPENDS%
-python-py
-python-setuptools
-python-pluggy
-python-attrs
-

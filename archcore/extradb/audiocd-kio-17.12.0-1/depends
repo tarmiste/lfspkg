@@ -1,6 +1,0 @@
-%DEPENDS%
-kdelibs4support
-libkcddb
-libkcompactdisc
-lame
-

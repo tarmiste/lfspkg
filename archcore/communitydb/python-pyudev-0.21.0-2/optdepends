@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-pyqt: PyQt integration
-python-gobject2: Glib integration
-

@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-git: for Git support
-dmenu: for passmenu
-qrencode: for QR code support
-

@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-singular: ideal library
-ppl: polytope library
-java-runtime: java module
-

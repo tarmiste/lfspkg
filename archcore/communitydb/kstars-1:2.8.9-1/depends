@@ -1,9 +1,0 @@
-%DEPENDS%
-wcslib
-libraw
-kplotting
-knewstuff
-knotifyconfig
-libindi
-hicolor-icon-theme
-

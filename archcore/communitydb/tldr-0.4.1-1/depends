@@ -1,5 +1,0 @@
-%DEPENDS%
-python-setuptools
-python-termcolor
-python-colorama
-

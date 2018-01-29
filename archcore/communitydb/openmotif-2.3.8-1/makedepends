@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-xbitmaps
-xproto
-printproto
-xextproto
-automake
-

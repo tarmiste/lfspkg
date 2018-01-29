@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-yelp-tools
-intltool
-nmap
-net-tools
-git
-gnome-common
-

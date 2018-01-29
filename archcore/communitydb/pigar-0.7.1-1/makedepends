@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-python-setuptools
-python2-setuptools
-python-colorama
-python2-colorama
-python2-futures
-python-gevent
-python2-gevent
-

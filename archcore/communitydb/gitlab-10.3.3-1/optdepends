@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-postgresql: database backend
-mysql: database backend
-python2-docutils: reStructuredText markup language support
-smtp-server: mail server in order to receive mail notifications
-

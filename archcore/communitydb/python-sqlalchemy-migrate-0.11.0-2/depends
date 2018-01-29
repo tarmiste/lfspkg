@@ -1,8 +1,0 @@
-%DEPENDS%
-python-six
-python-pbr
-python-sqlalchemy
-python-decorator
-python-sqlparse
-python-tempita
-

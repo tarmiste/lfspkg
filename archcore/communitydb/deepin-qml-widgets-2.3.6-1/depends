@@ -1,7 +1,0 @@
-%DEPENDS%
-dtkwidget
-gtk2
-qt5-graphicaleffects
-qt5-webkit
-qt5-x11extras
-

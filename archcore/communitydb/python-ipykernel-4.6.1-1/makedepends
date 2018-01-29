@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-python-setuptools
-python2-setuptools
-ipython2
-python2-jupyter_client
-

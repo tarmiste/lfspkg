@@ -1,6 +1,0 @@
-%DEPENDS%
-libxres
-qt5-webkit
-kwindowsystem
-kconfigwidgets
-

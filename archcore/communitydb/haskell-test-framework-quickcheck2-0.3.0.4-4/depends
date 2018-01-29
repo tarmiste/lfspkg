@@ -1,7 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-test-framework
-haskell-quickcheck
-haskell-extensible-exceptions
-haskell-random
-

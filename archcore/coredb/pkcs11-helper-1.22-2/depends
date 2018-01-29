@@ -1,5 +1,0 @@
-%DEPENDS%
-gnutls
-nss
-openssl
-

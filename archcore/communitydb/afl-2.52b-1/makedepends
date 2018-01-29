@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-clang
-llvm
-gcc
-wget
-python
-

@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-ghc
-haskell-hspec-meta
-haskell-stringbuilder
-

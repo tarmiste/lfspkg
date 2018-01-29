@@ -1,7 +1,0 @@
-%DEPENDS%
-wireless_tools
-confuse
-yajl
-libpulse
-libnl
-

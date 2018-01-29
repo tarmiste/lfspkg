@@ -1,6 +1,0 @@
-%DEPENDS%
-glib2
-numactl
-libcap-ng
-libsystemd
-

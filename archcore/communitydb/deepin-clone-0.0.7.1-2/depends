@@ -1,7 +1,0 @@
-%DEPENDS%
-deepin-qt5integration
-partclone
-e2fsprogs
-jfsutils
-xfsprogs
-

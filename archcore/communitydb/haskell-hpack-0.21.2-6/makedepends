@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-ghc
-haskell-hunit
-haskell-quickcheck
-haskell-hspec
-haskell-interpolate
-haskell-mockery
-haskell-temporary
-

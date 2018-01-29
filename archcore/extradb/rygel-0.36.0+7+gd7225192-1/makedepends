@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-vala
-intltool
-python2
-gobject-introspection
-git
-valadoc
-

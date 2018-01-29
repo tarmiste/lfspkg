@@ -1,5 +1,0 @@
-%DEPENDS%
-openssl
-lua52
-lua52-socket
-

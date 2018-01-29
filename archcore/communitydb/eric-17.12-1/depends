@@ -1,6 +1,0 @@
-%DEPENDS%
-eric-common
-python-qscintilla-qt5
-qt5-svg
-qt5-webkit
-

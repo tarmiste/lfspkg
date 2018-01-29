@@ -1,7 +1,0 @@
-%DEPENDS%
-kidentitymanagement
-libkleo
-pimcommon
-kmailtransport
-kross
-

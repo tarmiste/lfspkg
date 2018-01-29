@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-kwallet: kf5 kwallet integration
-libgnome-keyring: gnome keyring integration
-

@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-pandoc-citeproc: for citation rendering with pandoc-citeproc filter
-pandoc-crossref: for numbering figures, equations, tables and cross-references to them with pandoc-crossref filter
-texlive-core: for pdf output
-

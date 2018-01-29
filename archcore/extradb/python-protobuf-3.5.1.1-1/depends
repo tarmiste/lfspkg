@@ -1,5 +1,0 @@
-%DEPENDS%
-python
-python-six
-protobuf=3.5.1.1
-

@@ -1,7 +1,0 @@
-%OPTDEPENDS%
-jack: for jack support
-a52dec: for A52 support
-faad2: for AAC support
-libmad: for mp3 support
-sdl2: for sdl support
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-clutter-gtk
-libsoup
-cairo
-sqlite
-

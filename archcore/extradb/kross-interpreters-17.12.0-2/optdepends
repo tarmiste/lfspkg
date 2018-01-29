@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-python2: kross-python plugin
-ruby: kross ruby plugin
-

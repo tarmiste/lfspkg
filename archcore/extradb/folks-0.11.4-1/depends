@@ -1,6 +1,0 @@
-%DEPENDS%
-telepathy-glib
-libgee
-libxml2
-evolution-data-server
-

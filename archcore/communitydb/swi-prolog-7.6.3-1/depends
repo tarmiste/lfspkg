@@ -1,6 +1,0 @@
-%DEPENDS%
-gmp
-libarchive
-openssl
-readline
-

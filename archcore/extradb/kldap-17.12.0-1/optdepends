@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-kio: LDAP kioslave
-

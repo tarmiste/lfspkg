@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-perl: to run some scirpts in the tools directory
-gtk2: to compile gtk2 apps
-qt4pas: to compile qt4 apps and use help viewer
-qt5pas: to compile qt5 apps and use help viewer
-

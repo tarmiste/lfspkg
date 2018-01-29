@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-libxext
-libx11
-glproto
-python
-

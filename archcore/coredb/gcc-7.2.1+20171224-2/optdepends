@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-lib32-gcc-libs: for generating code for 32-bit ABI
-

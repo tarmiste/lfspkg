@@ -1,4 +1,0 @@
-%DEPENDS%
-python2
-sqlite3>=3.7.5
-

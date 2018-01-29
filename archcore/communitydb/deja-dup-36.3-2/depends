@@ -1,8 +1,0 @@
-%DEPENDS%
-duplicity
-gnome-online-accounts
-gvfs
-libpeas
-libnotify
-python2-gobject
-

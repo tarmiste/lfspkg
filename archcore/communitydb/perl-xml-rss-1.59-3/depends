@@ -1,7 +1,0 @@
-%DEPENDS%
-perl-datetime
-perl-datetime-format-mail
-perl-datetime-format-w3cdtf
-perl-html-parser
-perl-xml-parser
-

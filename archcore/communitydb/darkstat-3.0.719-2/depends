@@ -1,5 +1,0 @@
-%DEPENDS%
-libpcap
-zlib
-gcc-libs
-

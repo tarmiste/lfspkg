@@ -1,8 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-async
-haskell-constraints
-haskell-lifted-base
-haskell-monad-control
-haskell-transformers-base
-

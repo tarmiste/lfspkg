@@ -1,5 +1,0 @@
-%CHECKDEPENDS%
-perl-test-pod
-perl-mime-base32
-perl-net-dns-sec
-

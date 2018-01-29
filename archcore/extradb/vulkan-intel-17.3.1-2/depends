@@ -1,5 +1,0 @@
-%DEPENDS%
-wayland
-libx11
-libxshmfence
-

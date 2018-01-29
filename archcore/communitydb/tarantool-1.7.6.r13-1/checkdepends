@@ -1,5 +1,0 @@
-%CHECKDEPENDS%
-python2-daemon
-python2-gevent
-python2-tarantool
-

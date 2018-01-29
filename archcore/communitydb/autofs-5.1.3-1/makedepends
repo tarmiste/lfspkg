@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-libldap
-krb5
-kmod
-sssd
-

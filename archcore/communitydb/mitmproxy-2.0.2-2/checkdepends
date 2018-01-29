@@ -1,7 +1,0 @@
-%CHECKDEPENDS%
-python-beautifulsoup4
-python-flask
-python-pytz
-python-pytest-runner
-protobuf
-

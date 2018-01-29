@@ -1,5 +1,0 @@
-%DEPENDS%
-jack
-qt5-x11extras
-hicolor-icon-theme
-

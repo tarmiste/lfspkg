@@ -1,7 +1,0 @@
-%DEPENDS%
-bash
-cd-discid
-wget
-vorbis-tools
-python2-eyed3
-

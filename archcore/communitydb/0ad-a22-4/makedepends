@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-boost
-cmake
-mesa
-zip
-python2
-libsm
-

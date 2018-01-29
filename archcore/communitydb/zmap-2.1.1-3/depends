@@ -1,7 +1,0 @@
-%DEPENDS%
-gmp
-hiredis
-json-c
-libpcap
-libmongoc
-

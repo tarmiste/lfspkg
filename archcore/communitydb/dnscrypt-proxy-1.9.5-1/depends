@@ -1,6 +1,0 @@
-%DEPENDS%
-libsodium
-systemd
-libtool
-ldns
-

@@ -1,8 +1,0 @@
-%DEPENDS%
-python
-pyalpm>=0.5
-licenses
-binutils
-elfutils
-python-pyelftools
-

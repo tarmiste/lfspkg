@@ -1,8 +1,0 @@
-%DEPENDS%
-mpfr
-perl-xml-writer
-perl-xml-libxml
-perl-xml-libxslt
-perl-term-readline-gnu
-perl-term-readkey
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-gnutls>=1.7.2
-gsasl>=0.2.21
-glib2>=2.16
-libxml2>=2.0
-

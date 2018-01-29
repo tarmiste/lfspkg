@@ -1,5 +1,0 @@
-%DEPENDS%
-python-botocore
-python-jmespath
-python-s3transfer
-

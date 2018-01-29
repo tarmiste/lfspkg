@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-go-pie
-godep
-git
-mercurial
-

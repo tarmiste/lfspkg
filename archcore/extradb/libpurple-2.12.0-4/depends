@@ -1,8 +1,0 @@
-%DEPENDS%
-farstream
-libsasl
-libidn
-libgadu
-dbus-glib
-nss
-

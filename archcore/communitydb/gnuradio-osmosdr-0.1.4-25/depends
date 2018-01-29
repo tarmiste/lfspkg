@@ -1,9 +1,0 @@
-%DEPENDS%
-gnuradio
-gnuradio-iqbal
-rtl-sdr
-gnuradio-fcdproplus
-hackrf
-bladerf
-airspy
-

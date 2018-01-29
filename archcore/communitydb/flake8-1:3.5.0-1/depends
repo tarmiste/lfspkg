@@ -1,5 +1,0 @@
-%DEPENDS%
-python-pyflakes
-python-mccabe
-python-pycodestyle
-

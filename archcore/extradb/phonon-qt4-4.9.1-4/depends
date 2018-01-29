@@ -1,5 +1,0 @@
-%DEPENDS%
-qt4
-libpulse
-phonon-qt4-backend
-

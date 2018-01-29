@@ -1,7 +1,0 @@
-%DEPENDS%
-pcre
-libxml2
-curl
-liboauth
-json-c
-

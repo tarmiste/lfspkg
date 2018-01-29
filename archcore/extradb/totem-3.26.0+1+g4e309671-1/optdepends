@@ -1,7 +1,0 @@
-%OPTDEPENDS%
-gst-plugins-ugly: Extra media codecs
-gst-libav: Extra media codecs
-lirc-utils: Infrared Remote Control plugin
-grilo-plugins: Media discovery
-python-dbus: MPRIS plugin
-

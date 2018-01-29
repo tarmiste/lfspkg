@@ -1,8 +1,0 @@
-%DEPENDS%
-qt5-script
-mpv
-hicolor-icon-theme
-libx11
-zlib
-gcc-libs
-

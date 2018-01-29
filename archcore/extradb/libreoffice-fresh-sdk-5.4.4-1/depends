@@ -1,9 +1,0 @@
-%DEPENDS%
-libreoffice-fresh
-gcc-libs
-sh
-make
-zip
-gcc
-java-environment
-

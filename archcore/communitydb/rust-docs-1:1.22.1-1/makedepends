@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-rust
-libffi
-perl
-python2
-curl
-cmake
-

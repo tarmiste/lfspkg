@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-qt5-virtualkeyboard: virtual keyboard support for kwin-wayland
-

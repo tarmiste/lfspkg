@@ -1,6 +1,0 @@
-%DEPENDS%
-gambas3-gb-image-io
-sdl2_ttf
-sdl2_image
-glew
-

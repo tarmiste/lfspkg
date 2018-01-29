@@ -1,7 +1,0 @@
-%DEPENDS%
-glibc
-libgl
-libva
-libvdpau
-libx11
-

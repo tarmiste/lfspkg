@@ -1,4 +1,0 @@
-%DEPENDS%
-libxfce4util
-dbus-glib
-

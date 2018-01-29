@@ -1,9 +1,0 @@
-%DEPENDS%
-evolution-data-server
-gnome-desktop
-gnome-menus
-libgdm
-libwnck3
-nautilus
-polkit
-

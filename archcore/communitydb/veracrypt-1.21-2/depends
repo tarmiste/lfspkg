@@ -1,6 +1,0 @@
-%DEPENDS%
-fuse2>=2.8.0
-wxgtk3>=3.0
-libsm
-device-mapper
-

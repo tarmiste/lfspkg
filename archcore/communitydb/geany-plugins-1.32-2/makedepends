@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-cppcheck
-gdb
-intltool
-libgit2
-vala
-

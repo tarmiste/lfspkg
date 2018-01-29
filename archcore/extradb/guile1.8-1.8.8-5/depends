@@ -1,6 +1,0 @@
-%DEPENDS%
-gmp
-libltdl
-ncurses>=5.7
-texinfo
-

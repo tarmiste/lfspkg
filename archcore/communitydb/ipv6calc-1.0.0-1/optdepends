@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-geoip: for country GeoIP support
-geoip-database-extra: for city-level GeoIP support
-

@@ -1,8 +1,0 @@
-%DEPENDS%
-libxfont2
-libxext
-libunwind
-pixman
-xorg-server-common
-libsystemd
-

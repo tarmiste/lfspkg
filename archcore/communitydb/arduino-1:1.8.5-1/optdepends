@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-arduino-docs: Offline documentation for arduino
-arduino-avr-core: AVR core with upstream avr-gcc and avrdude
-python2: Intel Galileo Board installation
-

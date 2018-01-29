@@ -1,9 +1,0 @@
-%CHECKDEPENDS%
-python-ukpostcodeparser
-python2-ukpostcodeparser
-python-mock
-python2-mock
-python-email-validator
-python2-email-validator
-python2-ipaddress
-

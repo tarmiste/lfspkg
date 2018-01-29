@@ -1,5 +1,0 @@
-%DEPENDS%
-perl
-perl-data-dump
-perl-test-tester
-

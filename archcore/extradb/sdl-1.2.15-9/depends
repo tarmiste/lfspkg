@@ -1,6 +1,0 @@
-%DEPENDS%
-glibc
-libxext
-libxrender
-libx11
-

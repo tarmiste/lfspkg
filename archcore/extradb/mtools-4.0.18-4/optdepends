@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-libx11: required by floppyd
-libsm: required by floppyd
-

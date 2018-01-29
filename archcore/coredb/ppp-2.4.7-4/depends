@@ -1,4 +1,0 @@
-%DEPENDS%
-glibc
-libpcap>=1.0.0
-

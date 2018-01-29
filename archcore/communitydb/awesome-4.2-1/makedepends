@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-asciidoc
-cmake
-docbook-xsl
-doxygen
-imagemagick
-ldoc
-xmlto
-

@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-parallel: for jpeg-archive
-dcraw: for jpeg-archive
-perl-image-exiftool: for jpeg-archive
-

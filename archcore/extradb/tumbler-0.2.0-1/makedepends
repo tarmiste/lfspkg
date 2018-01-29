@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-intltool
-python
-ffmpegthumbnailer
-poppler-glib
-libgsf
-libopenraw
-freetype2
-

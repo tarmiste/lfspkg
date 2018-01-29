@@ -1,9 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-hunit
-haskell-quickcheck
-haskell-call-stack
-haskell-hspec-core
-haskell-hspec-discover
-haskell-hspec-expectations
-

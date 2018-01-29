@@ -1,6 +1,0 @@
-%DEPENDS%
-gcc-libs
-glibc
-libgl
-libretro-core-info
-

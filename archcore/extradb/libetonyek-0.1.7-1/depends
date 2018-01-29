@@ -1,8 +1,0 @@
-%DEPENDS%
-libxml2
-zlib
-libwpd
-boost-libs
-librevenge
-liblangtag
-

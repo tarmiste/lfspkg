@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-gobject-introspection
-intltool
-gtk-doc
-

@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-libxft
-perl
-startup-notification
-

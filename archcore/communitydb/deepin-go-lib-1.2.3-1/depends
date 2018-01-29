@@ -1,6 +1,0 @@
-%DEPENDS%
-libpulse
-gdk-pixbuf2
-mobile-broadband-provider-info
-libx11
-

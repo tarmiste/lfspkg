@@ -1,8 +1,0 @@
-%DEPENDS%
-xapian-core
-akonadi-mime
-kcontacts
-kcalcore
-krunner
-kcmutils
-

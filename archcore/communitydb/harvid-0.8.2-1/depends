@@ -1,6 +1,0 @@
-%DEPENDS%
-ffmpeg
-libpng
-libjpeg-turbo
-xxd
-

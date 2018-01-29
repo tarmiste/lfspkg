@@ -1,6 +1,0 @@
-%DEPENDS%
-mtdev
-systemd
-libevdev
-libwacom
-

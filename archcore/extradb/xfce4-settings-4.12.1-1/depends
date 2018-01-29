@@ -1,9 +1,0 @@
-%DEPENDS%
-exo
-garcon
-libxfce4ui
-libnotify
-libxklavier
-gnome-icon-theme
-gnome-themes-standard
-

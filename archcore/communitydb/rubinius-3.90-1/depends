@@ -1,5 +1,0 @@
-%DEPENDS%
-libffi
-openssl-1.0
-libyaml
-

@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-make
-intltool>=0.35
-pkgconfig>=0.9
-perl>=5.8.1
-gnome-common
-

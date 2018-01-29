@@ -1,6 +1,0 @@
-%DEPENDS%
-polkit
-libatasmart
-libgudev
-libblockdev
-

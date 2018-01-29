@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-sqlite: sqlite module
-tk: tk module
-

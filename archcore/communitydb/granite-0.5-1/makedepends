@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-cmake
-gobject-introspection
-vala
-

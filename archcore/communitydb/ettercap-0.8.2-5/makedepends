@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-ghostscript
-cmake
-libpcap
-libltdl
-libnet
-gtk2
-

@@ -1,6 +1,0 @@
-%CHECKDEPENDS%
-net-tools
-procps-ng
-python2-nose
-python-nose
-

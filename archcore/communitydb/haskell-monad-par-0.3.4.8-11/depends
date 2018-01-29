@@ -1,9 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-abstract-deque
-haskell-abstract-par
-haskell-monad-par-extras
-haskell-mtl
-haskell-mwc-random
-haskell-parallel
-

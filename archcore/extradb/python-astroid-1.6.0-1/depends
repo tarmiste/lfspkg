@@ -1,5 +1,0 @@
-%DEPENDS%
-python-six
-python-lazy-object-proxy
-python-wrapt
-

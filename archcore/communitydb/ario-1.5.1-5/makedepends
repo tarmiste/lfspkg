@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-intltool
-perl-xml-parser
-patch
-

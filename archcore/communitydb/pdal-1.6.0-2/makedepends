@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-cmake
-python
-python-numpy
-laz-perf
-hexer-hobu
-

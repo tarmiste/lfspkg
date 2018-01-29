@@ -1,9 +1,0 @@
-%DEPENDS%
-gtk3
-libcanberra
-libgweather
-gnome-desktop
-geoclue2
-geocode-glib
-gsound
-

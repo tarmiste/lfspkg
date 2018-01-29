@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-ruby
-mesa
-opencl-headers>=2.1
-

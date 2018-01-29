@@ -1,9 +1,0 @@
-%DEPENDS%
-glib2
-bluez-libs
-curl
-libmariadbclient
-postgresql-libs
-libusb
-libgudev
-

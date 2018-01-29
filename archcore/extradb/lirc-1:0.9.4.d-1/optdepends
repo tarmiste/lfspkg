@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-python: for lirc-setup, irdb-get and pronto2lirc
-

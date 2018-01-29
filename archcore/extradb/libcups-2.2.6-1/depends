@@ -1,8 +1,0 @@
-%DEPENDS%
-gnutls
-libtiff>=4.0.0
-libpng>=1.5.7
-krb5
-avahi
-libusb
-

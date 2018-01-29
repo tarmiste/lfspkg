@@ -1,7 +1,0 @@
-%DEPENDS%
-libpng
-libxext
-libsm
-libxv
-minizip
-

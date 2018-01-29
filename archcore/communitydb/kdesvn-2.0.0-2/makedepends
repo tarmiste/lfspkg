@@ -1,4 +1,0 @@
-%MAKEDEPENDS%
-extra-cmake-modules
-patch
-

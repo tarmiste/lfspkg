@@ -1,9 +1,0 @@
-%DEPENDS%
-hicolor-icon-theme
-wxgtk3
-curl
-libtorrent-rasterbar
-boost-libs
-alure
-libsm
-

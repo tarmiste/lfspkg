@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-extra-cmake-modules
-python2
-ki18n
-marble-common
-

@@ -1,7 +1,0 @@
-%DEPENDS%
-pcre
-zlib
-openssl
-geoip
-mailcap
-

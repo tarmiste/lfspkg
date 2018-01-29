@@ -1,5 +1,0 @@
-%DEPENDS%
-iptables
-net-tools
-util-linux
-

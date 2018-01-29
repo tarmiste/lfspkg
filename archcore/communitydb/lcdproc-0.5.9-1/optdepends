@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-perl: needed for some lcdproc tools
-g15daemon: needed if you want g15 support
-

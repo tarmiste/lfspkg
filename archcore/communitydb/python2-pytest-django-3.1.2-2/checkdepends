@@ -1,6 +1,0 @@
-%CHECKDEPENDS%
-python-django
-python2-django
-python-pytest-xdist
-python2-pytest-xdist
-

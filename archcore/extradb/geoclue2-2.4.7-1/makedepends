@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-intltool
-geoip
-python2
-systemd
-gobject-introspection
-gnome-common
-git
-

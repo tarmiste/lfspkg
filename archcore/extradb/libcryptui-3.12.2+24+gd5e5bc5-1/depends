@@ -1,9 +1,0 @@
-%DEPENDS%
-gtk3
-gpgme
-dbus-glib
-libnotify
-gcr
-dconf
-libsm
-

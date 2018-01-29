@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-git
-python
-extra-cmake-modules
-

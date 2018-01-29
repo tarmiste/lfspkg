@@ -1,7 +1,0 @@
-%DEPENDS%
-libdvdread
-libmagick6
-libxml2
-libpng
-fribidi
-

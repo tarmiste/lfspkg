@@ -1,6 +1,0 @@
-%DEPENDS%
-python-astroid
-python-setuptools
-python-mccabe
-python-isort
-

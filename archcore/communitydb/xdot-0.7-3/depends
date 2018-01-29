@@ -1,7 +1,0 @@
-%DEPENDS%
-graphviz
-python-gobject
-python-cairo
-gtk3
-desktop-file-utils
-

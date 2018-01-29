@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-python-urllib3
-python2-urllib3
-python-setuptools
-python2-setuptools
-git
-

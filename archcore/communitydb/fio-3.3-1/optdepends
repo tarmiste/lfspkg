@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-gtk2: for gfio - fio GUI frontend
-gnuplot: generating plots using fio_generate_plots
-

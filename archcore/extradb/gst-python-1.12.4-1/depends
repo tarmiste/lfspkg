@@ -1,4 +1,0 @@
-%DEPENDS%
-python-gobject
-gst-plugins-base
-

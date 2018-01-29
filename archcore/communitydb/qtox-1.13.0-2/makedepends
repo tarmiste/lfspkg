@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-qt5-tools
-git
-check
-cmake
-

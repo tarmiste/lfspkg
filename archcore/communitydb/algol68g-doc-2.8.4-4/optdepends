@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-postgresql-libs: for postgresql support
-

@@ -1,4 +1,0 @@
-%DEPENDS%
-aarch64-linux-gnu-gcc
-aarch64-linux-gnu-linux-api-headers
-

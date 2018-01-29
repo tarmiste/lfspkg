@@ -1,5 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-ansi-wl-pprint
-haskell-transformers-compat
-

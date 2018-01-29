@@ -1,4 +1,0 @@
-%DEPENDS%
-perl-gd>=1.18
-perl-gdtextutil>=0.80
-

@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-extra-cmake-modules
-kidletime
-kdoctools
-

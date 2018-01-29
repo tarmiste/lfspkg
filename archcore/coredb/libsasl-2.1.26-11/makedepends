@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-postgresql-libs
-libmariadbclient
-libldap
-krb5
-openssl
-sqlite
-

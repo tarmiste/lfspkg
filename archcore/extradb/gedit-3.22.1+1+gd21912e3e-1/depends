@@ -1,8 +1,0 @@
-%DEPENDS%
-gtksourceview3
-gsettings-desktop-schemas
-libpeas
-gspell
-python-gobject
-dconf
-

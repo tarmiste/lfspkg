@@ -1,5 +1,0 @@
-%DEPENDS%
-java-environment>=8
-java-openjfx>=8
-sh
-

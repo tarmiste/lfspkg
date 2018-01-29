@@ -1,6 +1,0 @@
-%DEPENDS%
-libao
-ffmpeg
-curl
-json-c
-

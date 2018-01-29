@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-glibc
-gcc
-systemd
-

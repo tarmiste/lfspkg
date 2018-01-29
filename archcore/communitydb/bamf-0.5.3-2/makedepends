@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-gobject-introspection
-python2-lxml
-vala
-

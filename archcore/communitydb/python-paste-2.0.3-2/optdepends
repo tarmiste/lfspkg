@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-python2-flup: WSGI utilities
-python-openid: Support for OpenID
-

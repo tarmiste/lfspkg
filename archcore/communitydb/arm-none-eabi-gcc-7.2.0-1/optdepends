@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-arm-none-eabi-newlib: Standard C library optimized for embedded systems
-

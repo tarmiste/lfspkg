@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-cmake
-postgresql
-mariadb
-yarn
-go
-

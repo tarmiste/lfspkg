@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-gobject-introspection-runtime: use with liblangtag-gobject
-

@@ -1,7 +1,0 @@
-%DEPENDS%
-perl-sub-exporter
-perl-test-tester
-perl-test-pod
-perl-test-pod-coverage
-perl-capture-tiny
-

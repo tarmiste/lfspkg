@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-libmariadbclient: MySQL plugin
-postgresql: PostgreSQL plugin
-

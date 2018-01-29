@@ -1,6 +1,0 @@
-%DEPENDS%
-telepathy-glib
-avahi
-libsoup
-util-linux
-

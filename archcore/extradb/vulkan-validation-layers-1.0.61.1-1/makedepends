@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-git
-cmake
-python-lxml
-libx11
-libxrandr
-wayland
-

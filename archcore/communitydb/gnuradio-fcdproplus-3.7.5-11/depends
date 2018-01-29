@@ -1,6 +1,0 @@
-%DEPENDS%
-gnuradio
-libusb
-alsa-lib
-boost-libs
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-fcitx
-libpinyin
-fcitx-qt5
-qt5-webengine
-

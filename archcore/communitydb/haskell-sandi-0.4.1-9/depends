@@ -1,6 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-conduit
-haskell-exceptions
-haskell-stringsearch
-

@@ -1,5 +1,0 @@
-%DEPENDS%
-gnome-settings-daemon
-python-gobject
-nautilus
-

@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-gawk
-flex
-zip
-unzip
-asciidoc
-mesa
-

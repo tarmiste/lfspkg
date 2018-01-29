@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-python
-docbook-xsl
-git
-valgrind
-meson
-gobject-introspection
-gtk-doc
-

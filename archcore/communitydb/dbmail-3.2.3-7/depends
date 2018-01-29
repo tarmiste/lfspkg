@@ -1,6 +1,0 @@
-%DEPENDS%
-gmime
-libzdb
-mhash
-libevent
-

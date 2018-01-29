@@ -1,7 +1,0 @@
-%DEPENDS%
-kdiagram
-threadweaver
-kitemmodels
-kio
-boost-libs
-

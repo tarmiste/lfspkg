@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-ocaml
-ocaml-findlib
-camlp4
-

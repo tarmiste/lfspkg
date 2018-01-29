@@ -1,6 +1,0 @@
-%DEPENDS%
-wxgtk2
-postgresql-libs
-libxslt
-libgcrypt
-

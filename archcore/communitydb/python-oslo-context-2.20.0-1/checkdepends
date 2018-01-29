@@ -1,6 +1,0 @@
-%CHECKDEPENDS%
-python-mock
-python2-mock
-python-oslotest
-python2-oslotest
-

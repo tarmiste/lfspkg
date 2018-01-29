@@ -1,5 +1,0 @@
-%DEPENDS%
-python-setuptools
-python-dateutil
-python-text-unidecode
-

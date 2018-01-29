@@ -1,8 +1,0 @@
-%DEPENDS%
-giflib
-libjpeg
-libpng
-libtiff
-zlib
-libwebp
-

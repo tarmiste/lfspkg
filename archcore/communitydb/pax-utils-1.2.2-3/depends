@@ -1,5 +1,0 @@
-%DEPENDS%
-bash
-libcap
-python-pyelftools
-

@@ -1,5 +1,0 @@
-%DEPENDS%
-gst-plugins-base
-gconf-sharp
-gtkspell
-

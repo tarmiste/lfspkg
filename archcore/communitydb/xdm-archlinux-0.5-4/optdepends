@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-systemd-sysvcompat: if you use systemd
-

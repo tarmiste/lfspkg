@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-sdl
-jack
-libpulse
-

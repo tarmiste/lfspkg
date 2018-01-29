@@ -1,9 +1,0 @@
-%DEPENDS%
-perl
-guile1.8
-texlive-core
-python2
-libxext
-freetype2
-qt5-base
-

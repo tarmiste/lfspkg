@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-libjpeg
-freeglut
-libxmu
-glu
-cmake
-doxygen
-

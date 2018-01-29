@@ -1,8 +1,0 @@
-%DEPENDS%
-libcap
-gcc-libs
-libuecc>=6
-libsodium
-json-c
-openssl
-

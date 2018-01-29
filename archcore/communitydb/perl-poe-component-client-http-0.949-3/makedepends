@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-perl-uri
-perl-poe-component-client-keepalive
-perl-poe
-

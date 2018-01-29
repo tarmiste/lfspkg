@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-polkit: restart the application as root
-

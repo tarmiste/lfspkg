@@ -1,4 +1,0 @@
-%DEPENDS%
-libgksu>=2.0.12
-xorg-xauth
-

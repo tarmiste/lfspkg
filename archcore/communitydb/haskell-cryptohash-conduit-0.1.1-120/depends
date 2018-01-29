@@ -1,7 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-conduit
-haskell-conduit-extra
-haskell-cryptohash
-haskell-resourcet
-

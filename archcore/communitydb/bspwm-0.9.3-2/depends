@@ -1,5 +1,0 @@
-%DEPENDS%
-xcb-util
-xcb-util-wm
-xcb-util-keysyms
-

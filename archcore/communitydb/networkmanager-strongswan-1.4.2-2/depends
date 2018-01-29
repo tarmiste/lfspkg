@@ -1,6 +1,0 @@
-%DEPENDS%
-networkmanager
-strongswan>=5.5.1
-libnm-gtk
-libsecret
-

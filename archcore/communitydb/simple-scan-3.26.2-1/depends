@@ -1,7 +1,0 @@
-%DEPENDS%
-sane
-dconf
-gtk3
-colord
-libgusb
-

@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-gtk2
-pkgconfig
-python2
-

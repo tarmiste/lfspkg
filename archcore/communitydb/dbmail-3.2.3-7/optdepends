@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-libldap: for LDAP authentication
-libsieve: for dbmail-sieve
-python2-mysql2pgsql: migrate from MySQL to PostreSQL
-

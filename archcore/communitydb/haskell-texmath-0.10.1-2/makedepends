@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-ghc
-haskell-split
-haskell-temporary
-haskell-utf8-string
-

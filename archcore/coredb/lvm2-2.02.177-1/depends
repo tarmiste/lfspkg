@@ -1,7 +1,0 @@
-%DEPENDS%
-bash
-device-mapper>=2.02.177
-libsystemd
-readline
-thin-provisioning-tools
-

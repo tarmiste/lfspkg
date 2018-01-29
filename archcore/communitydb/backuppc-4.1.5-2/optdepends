@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-openssh: ssh transfert support
-rsync: rsync transfert support
-smbclient: smb/cifs transfert support
-rrdtool: graphs of the pool usage
-

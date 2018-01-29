@@ -1,9 +1,0 @@
-%DEPENDS%
-nss
-dbus-glib
-gtk2
-gtk3
-hunspell
-hyphen
-libxt
-

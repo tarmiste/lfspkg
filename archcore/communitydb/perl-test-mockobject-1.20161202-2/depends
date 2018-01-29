@@ -1,4 +1,0 @@
-%DEPENDS%
-perl-universal-can>=1.11
-perl-universal-isa>=0.06
-

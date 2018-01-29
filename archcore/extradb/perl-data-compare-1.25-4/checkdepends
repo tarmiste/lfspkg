@@ -1,5 +1,0 @@
-%CHECKDEPENDS%
-perl-test-pod
-perl-json
-perl-clone
-

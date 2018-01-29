@@ -1,6 +1,0 @@
-%DEPENDS%
-ncurses
-gzip
-perl
-sh
-

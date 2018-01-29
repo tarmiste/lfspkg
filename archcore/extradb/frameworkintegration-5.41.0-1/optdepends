@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-appstream-qt: dependency resolving via AppStream
-packagekit-qt5: dependency resolving via AppStream
-

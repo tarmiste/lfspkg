@@ -1,9 +1,0 @@
-%DEPENDS%
-python2-six
-python2-pbr
-python2-jsonpatch
-python2-stevedore
-python2-keystoneauth1
-python2-os-client-config
-python2-deprecation
-

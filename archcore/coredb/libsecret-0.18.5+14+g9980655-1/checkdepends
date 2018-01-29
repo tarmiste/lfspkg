@@ -1,6 +1,0 @@
-%CHECKDEPENDS%
-python-dbus
-dbus-glib
-python-gobject
-gjs
-

@@ -1,5 +1,0 @@
-%CHECKDEPENDS%
-perl-test-nowarnings
-perl-test-pod
-perl-test-pod-coverage
-

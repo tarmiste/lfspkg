@@ -1,9 +1,0 @@
-%DEPENDS%
-autoconf
-automake
-gettext
-gtk-doc
-intltool
-libtool
-pkg-config
-

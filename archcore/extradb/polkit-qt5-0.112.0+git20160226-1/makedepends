@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-cmake
-automoc4
-polkit
-qt4
-qt5-base
-

@@ -1,7 +1,0 @@
-%DEPENDS%
-knewstuff
-libksysguard
-lm_sensors
-hicolor-icon-theme
-kinit
-

@@ -1,8 +1,0 @@
-%DEPENDS%
-openexr
-boost-libs
-intel-tbb
-zlib
-jemalloc
-blosc
-

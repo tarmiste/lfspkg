@@ -1,4 +1,0 @@
-%MAKEDEPENDS%
-ocaml>=4.0.3
-camlp4>=4.03+1
-

@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-nmap: Port scanning
-net-tools: Network statistics
-

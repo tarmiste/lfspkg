@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-man2html
-perl-extutils-makemaker
-systemd
-

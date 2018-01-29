@@ -1,5 +1,0 @@
-%DEPENDS%
-python
-python-psutil
-python-setuptools
-

@@ -1,5 +1,0 @@
-%DEPENDS%
-perl
-perl-mime-charset
-libthai
-

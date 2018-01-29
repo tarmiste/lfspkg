@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-linux-headers: build modules against Arch kernel
-linux-lts-headers: build modules against LTS kernel
-linux-zen-headers: build modules against ZEN kernel
-

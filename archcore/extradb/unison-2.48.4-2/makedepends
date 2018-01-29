@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-ocaml
-lablgtk2
-imagemagick
-

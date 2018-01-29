@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-python-setuptools-scm
-python2-setuptools-scm
-m2r
-python2-m2r
-python-attrs
-python2-attrs
-

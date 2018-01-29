@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-ghc
-haskell-test-framework
-haskell-test-framework-hunit
-haskell-hunit
-haskell-shelly
-haskell-text
-

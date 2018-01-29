@@ -1,7 +1,0 @@
-%DEPENDS%
-coreutils
-gettext
-perl
-perl>=5.26
-perl<5.27
-

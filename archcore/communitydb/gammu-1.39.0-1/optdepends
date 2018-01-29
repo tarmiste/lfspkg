@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-dialog: support for the gammu-config script
-python2: for python bindings
-

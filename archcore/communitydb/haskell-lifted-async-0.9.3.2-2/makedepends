@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-ghc
-haskell-hunit
-haskell-mtl
-haskell-tasty
-haskell-tasty-hunit
-haskell-tasty-th
-

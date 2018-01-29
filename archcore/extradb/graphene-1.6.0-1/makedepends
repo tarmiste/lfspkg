@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-git
-gtk-doc
-gobject-introspection
-meson
-

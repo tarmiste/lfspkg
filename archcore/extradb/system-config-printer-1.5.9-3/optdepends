@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-python-pysmbc: SMB browser support
-cups-pk-helper: PolicyKit helper to configure cups with fine-grained privileges
-

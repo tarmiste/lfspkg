@@ -1,5 +1,0 @@
-%DEPENDS%
-virtualgl
-glib2
-mesa-libgl
-

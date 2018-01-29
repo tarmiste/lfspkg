@@ -1,8 +1,0 @@
-%DEPENDS%
-ncurses
-glib2
-loudmouth
-gpgme
-libotr
-aspell
-

@@ -1,5 +1,0 @@
-%DEPENDS%
-gnome-shell
-python-requests
-python-gobject
-

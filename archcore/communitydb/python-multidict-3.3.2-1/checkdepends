@@ -1,5 +1,0 @@
-%CHECKDEPENDS%
-python-pytest
-python-pytest-cov
-python-psutil
-

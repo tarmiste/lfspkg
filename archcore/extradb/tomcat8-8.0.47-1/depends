@@ -1,6 +1,0 @@
-%DEPENDS%
-java-runtime>=7
-java-jsvc
-java-commons-daemon
-eclipse-ecj
-

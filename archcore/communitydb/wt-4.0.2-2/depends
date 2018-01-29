@@ -1,7 +1,0 @@
-%DEPENDS%
-boost-libs
-libharu
-graphicsmagick
-pango
-zlib
-

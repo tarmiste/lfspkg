@@ -1,7 +1,0 @@
-%DEPENDS%
-jack
-hicolor-icon-theme
-liblo
-lv2
-qt5-base
-

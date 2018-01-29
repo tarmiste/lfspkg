@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-kipi-plugins: export to various online services
-hugin: panorama tool
-qt5-imageformats: support for additional image formats (WEBP, TIFF)
-

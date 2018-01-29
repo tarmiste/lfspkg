@@ -1,5 +1,0 @@
-%DEPENDS%
-gmp
-fuse
-libgcrypt
-

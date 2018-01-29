@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-python-gobject
-python2-gobject
-at-spi2-core
-gnome-common
-git
-

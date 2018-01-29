@@ -1,8 +1,0 @@
-%DEPENDS%
-jack
-gamin
-gsl
-fftw
-gtk2
-libmpc
-

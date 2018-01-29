@@ -1,8 +1,0 @@
-%CHECKDEPENDS%
-python-testresources
-python2-testresources
-python-pytz
-python2-pytz
-python-testscenarios
-python2-testscenarios
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-pam
-lockdev
-boost-libs
-e2fsprogs
-

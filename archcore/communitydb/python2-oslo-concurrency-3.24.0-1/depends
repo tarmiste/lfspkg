@@ -1,9 +1,0 @@
-%DEPENDS%
-python2-six
-python2-pbr
-python2-oslo-config
-python2-oslo-i18n
-python2-oslo-utils
-python2-fasteners
-python2-enum34
-

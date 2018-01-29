@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-hunspell: spell checking via hunspell
-aspell: spell checking via aspell
-hspell: spell checking for Hebrew
-libvoikko: Finnish support via Voikko
-

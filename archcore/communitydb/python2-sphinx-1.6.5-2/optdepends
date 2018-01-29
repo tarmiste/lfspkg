@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-texlive-latexextra: for generation of PDF documentation
-imagemagick: ext.imageconverter
-

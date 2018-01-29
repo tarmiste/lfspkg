@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-unzip
-nasm
-mesa
-glu
-wget
-python2
-

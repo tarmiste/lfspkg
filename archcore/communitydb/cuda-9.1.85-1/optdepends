@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-gdb: for cuda-gdb
-java-runtime: for nsight and nvvp
-

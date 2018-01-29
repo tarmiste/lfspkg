@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-ghc
-haskell-hunit
-haskell-tasty
-haskell-tasty-golden
-haskell-tasty-hunit
-haskell-random
-haskell-diff
-

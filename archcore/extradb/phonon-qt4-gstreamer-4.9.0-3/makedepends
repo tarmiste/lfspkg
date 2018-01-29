@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-gst-plugins-base
-extra-cmake-modules
-automoc4
-phonon-qt4
-phonon-qt5
-qt5-x11extras
-

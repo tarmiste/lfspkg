@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-texinfo
-python
-guile2.0
-ncurses
-expat
-xz
-

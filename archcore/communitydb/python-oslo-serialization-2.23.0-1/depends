@@ -1,8 +1,0 @@
-%DEPENDS%
-python-six
-python-pbr
-python-babel
-python-msgpack
-python-oslo-utils
-python-pytz
-

@@ -1,5 +1,0 @@
-%DEPENDS%
-python-libnacl
-python-ioflo
-python-six
-

@@ -1,5 +1,0 @@
-%CHECKDEPENDS%
-xorg-server-xvfb
-perl-devel-leak
-perl-test-pod
-

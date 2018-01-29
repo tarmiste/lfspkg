@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-flex
-bison
-m4
-

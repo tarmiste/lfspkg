@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-python2-gnomekeyring: for storing passwords in gnome-keyring
-

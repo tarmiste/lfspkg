@@ -1,7 +1,0 @@
-%OPTDEPENDS%
-groff: about page using man page syntax
-python-pygments: syntax highlighting support
-python-docutils: about page formatted with reStructuredText
-python-markdown: about page formatted with markdown
-mime-types: serve file with correct content-type header
-

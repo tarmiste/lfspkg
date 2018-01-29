@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-notification-daemon: Desktop notification support
-transmission-cli: daemon and web support
-

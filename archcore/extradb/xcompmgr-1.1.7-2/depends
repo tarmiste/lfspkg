@@ -1,6 +1,0 @@
-%DEPENDS%
-libxcomposite
-libxdamage
-libxrender
-libxext
-

@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-gnuplot: draw charts
-gpsbabel: load data directly from GPS receivers
-perl-image-exiftool: save coordinates into JPEG files
-

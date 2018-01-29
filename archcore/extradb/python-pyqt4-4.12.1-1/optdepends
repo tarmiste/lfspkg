@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-phonon-qt4: enable audio and video in PyQt applications
-qt-assistant-compat: add PyQt online help in Qt Assistant
-

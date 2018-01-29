@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-libwpg
-boost
-doxygen
-cppunit
-

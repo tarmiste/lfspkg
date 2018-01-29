@@ -1,5 +1,0 @@
-%DEPENDS%
-perl-carp-clan
-perl>=5.26
-perl<5.27
-

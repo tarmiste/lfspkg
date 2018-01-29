@@ -1,6 +1,0 @@
-%DEPENDS%
-alsa-lib
-libx11
-libftdi
-libusb-compat
-

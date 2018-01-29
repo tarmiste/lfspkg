@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-haskell-gtk2hs-buildtools
-mesa
-ghc
-

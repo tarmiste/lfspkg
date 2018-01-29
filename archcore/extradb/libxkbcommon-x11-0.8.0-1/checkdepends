@@ -1,4 +1,0 @@
-%CHECKDEPENDS%
-xorg-server-xvfb
-libgl
-

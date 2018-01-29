@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-python-docutils: for reStructuredText language support
-qt5-webkit: for WebKit preview
-python-pyenchant: for spell checking support
-

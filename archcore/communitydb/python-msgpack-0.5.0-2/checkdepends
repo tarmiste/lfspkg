@@ -1,6 +1,0 @@
-%CHECKDEPENDS%
-python-pytest
-python2-pytest
-python-six
-python2-six
-

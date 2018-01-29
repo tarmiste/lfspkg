@@ -1,8 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-blaze-builder
-haskell-ieee754
-haskell-mtl
-haskell-syb
-haskell-text
-

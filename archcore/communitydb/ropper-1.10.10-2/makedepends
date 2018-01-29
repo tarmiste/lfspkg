@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-python-setuptools
-python-capstone
-python-filebytes
-python2-setuptools
-python2-capstone
-python2-filebytes
-

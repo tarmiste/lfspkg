@@ -1,9 +1,0 @@
-%DEPENDS%
-python-pyqt5
-python-markups>=2.0.0
-shared-mime-info
-xdg-utils
-desktop-file-utils
-hicolor-icon-theme
-python-markdown
-

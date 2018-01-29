@@ -1,9 +1,0 @@
-%DEPENDS%
-khtml
-kdelibs4support
-knewstuff
-kplotting
-avogadrolibs
-openbabel
-chemical-mime-data
-

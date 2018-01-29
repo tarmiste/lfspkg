@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-gtk3: GTK file picker
-libdbus: Notification support
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-hdf5
-python2-numpy
-python2-six
-cython2
-

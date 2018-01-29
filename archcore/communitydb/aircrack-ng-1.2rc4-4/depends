@@ -1,8 +1,0 @@
-%DEPENDS%
-openssl
-sqlite
-iw
-net-tools
-wireless_tools
-ethtool
-

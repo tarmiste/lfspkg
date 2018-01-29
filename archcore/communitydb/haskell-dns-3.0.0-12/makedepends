@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-ghc
-haskell-doctest
-haskell-hspec
-haskell-word8
-haskell-quickcheck
-

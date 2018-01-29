@@ -1,5 +1,0 @@
-%DEPENDS%
-perl>=5.8.1
-perl-class-data-inheritable>=0.02
-perl-devel-stacktrace>=2.00
-

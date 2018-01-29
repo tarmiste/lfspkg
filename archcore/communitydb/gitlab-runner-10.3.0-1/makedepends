@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-git
-go-pie
-git
-go-bindata
-mercurial
-

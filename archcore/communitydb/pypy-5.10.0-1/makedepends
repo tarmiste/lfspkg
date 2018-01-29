@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-python2
-tk
-sqlite
-mercurial
-python2-pycparser
-

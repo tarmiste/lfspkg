@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-extra-cmake-modules
-python
-mesa
-doxygen
-qt5-tools
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-python-requests
-python-retrying
-python-setuptools
-python-packaging
-

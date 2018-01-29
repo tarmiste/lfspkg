@@ -1,5 +1,0 @@
-%DEPENDS%
-kdebase-runtime
-ffmpeg
-xdg-utils
-

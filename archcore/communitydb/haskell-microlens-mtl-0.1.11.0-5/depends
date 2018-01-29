@@ -1,6 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-microlens
-haskell-mtl
-haskell-transformers-compat
-

@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-p7zip: for ISO compress/decompress support
-

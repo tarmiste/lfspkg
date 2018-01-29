@@ -1,9 +1,0 @@
-%DEPENDS%
-gtk2
-openexr
-lcms
-libxpm
-fltk
-ftgl
-libxxf86vm
-

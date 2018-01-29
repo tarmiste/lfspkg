@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-cmake
-libsndfile
-libvorbis
-flac
-mpg123
-dumb
-fluidsynth
-

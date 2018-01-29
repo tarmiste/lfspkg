@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-sqlite: for nfsdcltrack usage
-python: for nfsiostat and mountstats usage
-

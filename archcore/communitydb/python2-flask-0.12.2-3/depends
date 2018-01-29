@@ -1,6 +1,0 @@
-%DEPENDS%
-python2-werkzeug
-python2-jinja
-python2-itsdangerous
-python2-click
-

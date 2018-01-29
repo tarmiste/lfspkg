@@ -1,8 +1,0 @@
-%CHECKDEPENDS%
-python-pytest
-python2-pytest
-mercurial
-git
-python-pip
-python2-pip
-

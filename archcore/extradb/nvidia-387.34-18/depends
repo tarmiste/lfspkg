@@ -1,6 +1,0 @@
-%DEPENDS%
-linux>=4.14
-linux<4.15
-nvidia-utils=387.34
-libgl
-

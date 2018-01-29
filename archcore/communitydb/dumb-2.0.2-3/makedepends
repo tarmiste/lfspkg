@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-allegro
-allegro4
-cmake
-ninja
-

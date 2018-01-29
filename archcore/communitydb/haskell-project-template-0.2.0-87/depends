@@ -1,9 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-base64-bytestring
-haskell-conduit
-haskell-conduit-extra
-haskell-mtl
-haskell-resourcet
-haskell-text
-

@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-inetutils
-valgrind
-gcc-fortran
-

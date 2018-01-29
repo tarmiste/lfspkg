@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-e2fsprogs
-gobject-introspection
-gtk-doc
-libxslt
-systemd
-git
-python2
-

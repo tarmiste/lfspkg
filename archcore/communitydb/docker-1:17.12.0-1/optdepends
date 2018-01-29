@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-btrfs-progs: btrfs backend support
-lxc: lxc backend support
-

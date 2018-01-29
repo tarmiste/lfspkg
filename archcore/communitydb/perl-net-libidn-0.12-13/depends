@@ -1,6 +1,0 @@
-%DEPENDS%
-perl
-libidn
-perl>=5.26
-perl<5.27
-

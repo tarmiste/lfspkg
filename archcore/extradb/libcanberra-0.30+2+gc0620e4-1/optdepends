@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-libcanberra-pulse: PulseAudio driver
-libcanberra-gstreamer: GStreamer driver
-

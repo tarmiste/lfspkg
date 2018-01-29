@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-spice-protocol
-python2
-ceph
-libiscsi
-glusterfs
-

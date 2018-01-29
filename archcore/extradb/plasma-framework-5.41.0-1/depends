@@ -1,6 +1,0 @@
-%DEPENDS%
-qt5-quickcontrols
-kactivities
-kdeclarative
-kwayland
-

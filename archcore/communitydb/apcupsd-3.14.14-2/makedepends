@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-pkgconfig
-gd
-gconf
-gtk2
-

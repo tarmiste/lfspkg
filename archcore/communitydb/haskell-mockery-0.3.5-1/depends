@@ -1,6 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-base-compat
-haskell-temporary
-haskell-logging-facade
-

@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-extra-cmake-modules
-kdoctools
-v4l-utils
-python
-

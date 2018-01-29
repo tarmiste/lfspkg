@@ -1,9 +1,0 @@
-%DEPENDS%
-gtksourceview3
-libxslt
-python2
-libsecret
-graphviz
-goocanvas
-iso-codes
-

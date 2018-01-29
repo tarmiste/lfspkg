@@ -1,8 +1,0 @@
-%DEPENDS%
-zsh
-coreutils
-inetutils
-grep
-sed
-procps
-

@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-perl-io-socket-inet6: IPv6 support
-perl-socket6: IPv6 support
-

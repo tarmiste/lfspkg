@@ -1,7 +1,0 @@
-%OPTDEPENDS%
-libxrandr: for intel-virtual-output
-libxinerama: for intel-virtual-output
-libxcursor: for intel-virtual-output
-libxtst: for intel-virtual-output
-libxss: for intel-virtual-output
-

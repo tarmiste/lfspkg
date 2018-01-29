@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-easy-rsa: easy CA and certificate handling
-pam: authenticate via PAM
-

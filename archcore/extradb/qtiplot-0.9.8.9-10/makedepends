@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-pkg-config
-boost
-mesa
-

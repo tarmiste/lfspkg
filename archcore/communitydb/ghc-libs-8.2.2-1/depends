@@ -1,6 +1,0 @@
-%DEPENDS%
-gcc
-gmp
-libffi
-perl
-

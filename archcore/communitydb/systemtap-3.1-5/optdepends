@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-sqlite3: for storing results in a database
-

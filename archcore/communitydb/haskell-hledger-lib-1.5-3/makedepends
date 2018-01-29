@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-ghc
-haskell-doctest
-haskell-glob
-haskell-test-framework
-haskell-test-framework-hunit
-

@@ -1,7 +1,0 @@
-%DEPENDS%
-sh
-autoconf-archive
-intltool
-yelp-tools
-gtk-doc
-

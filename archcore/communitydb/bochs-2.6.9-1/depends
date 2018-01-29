@@ -1,6 +1,0 @@
-%DEPENDS%
-gcc-libs
-libxrandr
-libxpm
-gtk2
-

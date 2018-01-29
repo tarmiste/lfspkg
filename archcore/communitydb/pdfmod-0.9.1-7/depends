@@ -1,5 +1,0 @@
-%DEPENDS%
-gconf-sharp
-poppler-glib
-desktop-file-utils
-

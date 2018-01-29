@@ -1,5 +1,0 @@
-%DEPENDS%
-perl-crypt-openssl-rsa>=0.24
-perl-mailtools
-perl-net-dns
-

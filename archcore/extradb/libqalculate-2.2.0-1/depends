@@ -1,5 +1,0 @@
-%DEPENDS%
-libxml2
-curl
-mpfr
-

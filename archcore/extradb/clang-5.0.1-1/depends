@@ -1,5 +1,0 @@
-%DEPENDS%
-llvm-libs
-gcc
-libxml2
-

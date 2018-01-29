@@ -1,5 +1,0 @@
-%DEPENDS%
-readline>=5.1
-ncurses
-gdb
-

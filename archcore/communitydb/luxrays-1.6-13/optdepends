@@ -1,8 +1,0 @@
-%OPTDEPENDS%
-amdapp-sdk: OpenCL support for AMD GPUs
-intel-opencl-runtime: OpenCL support for Intel CPUs
-glew: demos (SmallLuxGPU etc.)
-gtk3: luxcoreui
-freeglut: demos (SmallLuxGPU etc.)
-boost-libs: demos (SmallLuxGPU etc.)
-

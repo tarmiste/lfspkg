@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-perl-extutils-depends
-perl-extutils-pkgconfig
-glib-perl
-intltool
-gtk-doc
-chrpath
-

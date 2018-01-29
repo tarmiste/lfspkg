@@ -1,8 +1,0 @@
-%DEPENDS%
-python-basemap-common
-python-matplotlib
-geos
-shapelib
-python-numpy
-python-httplib2
-

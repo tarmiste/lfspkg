@@ -1,6 +1,0 @@
-%DEPENDS%
-awk
-systemd
-glib2
-libdbi
-

@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-python2-nose: needed for integrated test suite
-python2-scipy: needed for spline-related functions
-

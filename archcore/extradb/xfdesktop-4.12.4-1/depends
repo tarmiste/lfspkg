@@ -1,7 +1,0 @@
-%DEPENDS%
-libxfce4ui
-thunar
-garcon
-hicolor-icon-theme
-libwnck
-

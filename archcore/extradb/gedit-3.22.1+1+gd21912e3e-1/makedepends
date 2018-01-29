@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-yelp-tools
-intltool
-vala
-gobject-introspection
-gnome-common
-git
-gtk-doc
-

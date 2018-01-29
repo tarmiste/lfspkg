@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-git
-libparserutils>=0.2.3
-netsurf-buildsystem
-

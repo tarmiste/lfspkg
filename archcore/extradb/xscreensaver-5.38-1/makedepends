@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-bc
-intltool
-libxpm
-gdm
-

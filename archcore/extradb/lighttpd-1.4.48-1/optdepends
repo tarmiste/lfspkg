@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-libxml2: mod_webdav
-lua: mod_cml/mod_magnet
-libmariadbclient: mod_mysql_vhost/mod_authn_mysql
-sqlite: mod_webdav
-

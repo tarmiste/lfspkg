@@ -1,9 +1,0 @@
-%DEPENDS%
-certbot=0.20.0
-python-acme=0.20.0
-python-augeas
-python-mock
-python-setuptools
-python-zope-component
-python-zope-interface
-

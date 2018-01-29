@@ -1,9 +1,0 @@
-%DEPENDS%
-gsettings-desktop-schemas
-gtk3
-libxkbfile
-xkeyboard-config
-iso-codes
-libseccomp
-bubblewrap
-

@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-swig
-gtk-doc
-xorg-util-macros
-dri2proto
-

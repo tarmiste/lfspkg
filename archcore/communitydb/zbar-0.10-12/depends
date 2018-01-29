@@ -1,8 +1,0 @@
-%DEPENDS%
-libmagick6
-libxv
-python2
-gtk2
-pygtk
-v4l-utils
-

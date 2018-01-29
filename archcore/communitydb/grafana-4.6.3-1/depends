@@ -1,5 +1,0 @@
-%DEPENDS%
-glibc
-freetype2
-fontconfig
-

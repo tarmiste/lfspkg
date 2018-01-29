@@ -1,8 +1,0 @@
-%DEPENDS%
-guile
-gtk3
-librsvg
-libcanberra
-gconf
-dconf
-

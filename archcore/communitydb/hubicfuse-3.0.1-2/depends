@@ -1,7 +1,0 @@
-%DEPENDS%
-curl
-file
-fuse
-json-c
-libxml2
-

@@ -1,5 +1,0 @@
-%DEPENDS%
-libcddb
-ncurses
-gcc-libs
-

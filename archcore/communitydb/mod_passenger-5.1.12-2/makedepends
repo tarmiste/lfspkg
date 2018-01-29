@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-ruby
-ruby-rack
-curl
-apache
-

@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-gnome-bluetooth: Bluetooth support
-python2-pybluez: Bluetooth support
-

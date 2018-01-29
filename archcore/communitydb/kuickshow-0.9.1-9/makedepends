@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-pkg-config
-cmake
-automoc4
-docbook-xsl
-

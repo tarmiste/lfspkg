@@ -1,6 +1,0 @@
-%DEPENDS%
-qt5-base
-gst-plugins-base-libs
-libpulse
-openal
-

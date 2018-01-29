@@ -1,8 +1,0 @@
-%DEPENDS%
-boost-libs
-opencc
-yaml-cpp
-leveldb
-google-glog
-marisa
-

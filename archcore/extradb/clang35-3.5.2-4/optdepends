@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-llvm-libs: for compiling with -flto
-

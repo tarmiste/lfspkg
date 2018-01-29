@@ -1,7 +1,0 @@
-%DEPENDS%
-yubikey-manager
-python
-qt5-base
-qt5-quickcontrols
-python-pyotherside
-

@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-cython
-python-sphinx
-python-guzzle-sphinx-theme
-

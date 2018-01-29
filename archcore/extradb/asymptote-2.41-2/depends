@@ -1,9 +1,0 @@
-%DEPENDS%
-texlive-core
-gc
-freeglut
-glu
-gsl
-fftw
-libsigsegv
-

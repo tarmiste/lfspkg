@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-gcc
-gtk2
-sqlite
-

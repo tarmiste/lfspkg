@@ -1,7 +1,0 @@
-%OPTDEPENDS%
-qemu-arch-extra: extra architectures support
-samba: SMB/CIFS server support
-qemu-block-iscsi: iSCSI block support
-qemu-block-rbd: RBD block support
-qemu-block-gluster: glusterfs block support
-

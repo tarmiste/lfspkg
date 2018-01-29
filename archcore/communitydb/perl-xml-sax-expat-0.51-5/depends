@@ -1,5 +1,0 @@
-%DEPENDS%
-perl-xml-namespacesupport
-perl-xml-parser
-perl-xml-sax
-

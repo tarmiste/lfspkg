@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-boost
-intltool
-itstool
-gconf
-gnome-common
-yelp-tools
-git
-

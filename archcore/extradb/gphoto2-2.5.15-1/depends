@@ -1,5 +1,0 @@
-%DEPENDS%
-libgphoto2
-popt
-readline
-

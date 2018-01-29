@@ -1,5 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-crypto-random
-haskell-vector
-

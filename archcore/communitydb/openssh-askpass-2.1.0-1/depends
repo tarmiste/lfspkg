@@ -1,5 +1,0 @@
-%DEPENDS%
-openssh
-qt4
-xcb-util-keysyms
-

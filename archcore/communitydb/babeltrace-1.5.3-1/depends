@@ -1,6 +1,0 @@
-%DEPENDS%
-popt
-util-linux
-glib2>=2.22.0
-elfutils>=0.154
-

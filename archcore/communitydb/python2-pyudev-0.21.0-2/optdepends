@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-python2-pyqt: PyQt integration
-python2-gobject2: Glib integration
-wxpython: WX integration
-

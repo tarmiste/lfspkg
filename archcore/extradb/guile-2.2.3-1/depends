@@ -1,9 +1,0 @@
-%DEPENDS%
-gmp
-libltdl
-ncurses
-texinfo
-libunistring
-gc
-libffi
-

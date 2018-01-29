@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-git
-gobject-introspection
-gtk-doc
-vala
-

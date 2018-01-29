@@ -1,5 +1,0 @@
-%DEPENDS%
-python-requests
-python-future
-python-yaml
-

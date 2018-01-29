@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-dmidecode: for SMBIOS/DMI table decoder support
-

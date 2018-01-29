@@ -1,8 +1,0 @@
-%DEPENDS%
-m4rie
-flint
-fplll
-iml
-fflas-ffpack
-tinyxml2
-

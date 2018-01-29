@@ -1,8 +1,0 @@
-%DEPENDS%
-java-runtime-openjdk=8
-gstreamer
-libxtst
-webkit2gtk
-ffmpeg
-qt5-base
-

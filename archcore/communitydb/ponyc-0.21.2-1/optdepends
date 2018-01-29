@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-pcre2: Needed for the regex package
-

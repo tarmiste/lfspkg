@@ -1,6 +1,0 @@
-%CHECKDEPENDS%
-python-pytest
-python-blinker
-python2-pytest
-python2-blinker
-

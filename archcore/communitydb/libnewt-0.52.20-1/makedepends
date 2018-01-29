@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-tcl>=8.6
-python
-python2
-

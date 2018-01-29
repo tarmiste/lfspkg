@@ -1,7 +1,0 @@
-%DEPENDS%
-dbus-glib
-libcanberra
-libgnome-keyring
-libnotify
-upower
-

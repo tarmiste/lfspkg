@@ -1,5 +1,0 @@
-%DEPENDS%
-qt5-declarative
-xorg-xauth
-xorg-server
-

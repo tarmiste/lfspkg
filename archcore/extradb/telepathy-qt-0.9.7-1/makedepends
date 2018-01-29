@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-cmake
-doxygen
-python2
-qt5-tools
-

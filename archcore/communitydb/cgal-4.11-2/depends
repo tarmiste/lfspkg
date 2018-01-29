@@ -1,7 +1,0 @@
-%DEPENDS%
-mpfr
-gmp
-mesa
-glu
-boost-libs
-

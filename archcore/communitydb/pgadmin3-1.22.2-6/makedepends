@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-libpqxx
-krb5
-postgresql
-imagemagick
-

@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-foomatic-db: linuxprinting.org xml files database to create ppd driver files
-

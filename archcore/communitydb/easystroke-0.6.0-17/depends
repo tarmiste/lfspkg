@@ -1,7 +1,0 @@
-%DEPENDS%
-gtkmm3
-boost-libs
-libxtst
-dbus-glib
-xorg-server
-

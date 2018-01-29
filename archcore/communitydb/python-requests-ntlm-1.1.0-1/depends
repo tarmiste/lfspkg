@@ -1,5 +1,0 @@
-%DEPENDS%
-python
-python-requests
-python-ntlm-auth
-

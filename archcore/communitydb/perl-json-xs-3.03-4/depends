@@ -1,8 +1,0 @@
-%DEPENDS%
-perl
-perl-common-sense
-perl-types-serialiser
-perl-canary-stability
-perl>=5.26
-perl<5.27
-

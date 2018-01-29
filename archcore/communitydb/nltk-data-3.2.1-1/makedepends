@@ -1,4 +1,0 @@
-%MAKEDEPENDS%
-unzip
-python-nltk=3.2.1
-

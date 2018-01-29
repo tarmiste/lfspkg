@@ -1,8 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-exceptions
-haskell-mmorph
-haskell-mtl
-haskell-semigroups
-haskell-void
-

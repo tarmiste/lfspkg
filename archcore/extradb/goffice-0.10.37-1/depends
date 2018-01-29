@@ -1,8 +1,0 @@
-%DEPENDS%
-librsvg
-gtk3
-libgsf
-libspectre
-libxslt
-lasem
-

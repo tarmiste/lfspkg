@@ -1,9 +1,0 @@
-%OPTDEPENDS%
-bash-completion: enable bash auto completion
-imagemagick: X11 picture viewer for captchas
-sxiv: X11 picture viewer for captchas
-feh: X11 picture viewer for captchas
-qiv: X11 picture viewer for captchas
-fbida: framebuffer picture viewer for captchas
-libcaca: framebuffer ascii picture viewer for captchas
-

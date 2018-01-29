@@ -1,7 +1,0 @@
-%DEPENDS%
-ipython
-python-jupyter_client
-python-ipykernel
-python-pygments
-python-prompt_toolkit
-

@@ -1,7 +1,0 @@
-%DEPENDS%
-rpcbind
-nfsidmap
-gssproxy
-libevent
-device-mapper
-

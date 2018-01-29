@@ -1,8 +1,0 @@
-%DEPENDS%
-zlib
-libpng
-libzip
-libedit
-ffmpeg
-libmagick
-

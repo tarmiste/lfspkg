@@ -1,8 +1,0 @@
-%OPTDEPENDS%
-libmariadbclient: MySQL databases support
-sqlite: SQLite3 databases support
-postgresql-libs: PostgreSQL databases support
-libdbi: DBI abstraction databases support
-libpcap: PCAP output support
-jansson: JSON output support
-

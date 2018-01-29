@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-libgda-firebird: provider for Firebird
-libgda-jdbc: provider for JDBC
-libgda-mysql: provider for MySQL
-libgda-postgres: provider for PostgreSQL
-

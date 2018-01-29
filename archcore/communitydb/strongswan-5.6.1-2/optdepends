@@ -1,7 +1,0 @@
-%OPTDEPENDS%
-libnm-glib: for networkmanager support
-mariadb: MySQL support
-ruby: Ruby support
-python: Python support
-openldap: LDAP support
-

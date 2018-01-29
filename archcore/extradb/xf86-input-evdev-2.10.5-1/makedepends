@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-xorg-server-devel
-X-ABI-XINPUT_VERSION=24.1
-resourceproto
-scrnsaverproto
-

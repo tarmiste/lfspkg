@@ -1,8 +1,0 @@
-%DEPENDS%
-glib2
-libxkbfile
-libxml2
-xkeyboard-config
-libxi
-iso-codes
-

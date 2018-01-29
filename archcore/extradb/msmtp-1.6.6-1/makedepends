@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-texlive-plainextra
-gsasl
-libsecret
-

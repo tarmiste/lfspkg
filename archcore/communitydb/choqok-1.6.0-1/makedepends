@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-extra-cmake-modules
-telepathy-qt5
-kdoctools
-python
-

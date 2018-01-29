@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-glib2
-gtk2
-pango
-poppler
-intltool
-setconf
-git
-

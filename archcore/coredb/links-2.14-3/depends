@@ -1,6 +1,0 @@
-%DEPENDS%
-bzip2
-xz
-gpm
-libevent
-

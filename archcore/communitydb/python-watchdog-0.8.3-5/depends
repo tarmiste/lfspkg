@@ -1,5 +1,0 @@
-%DEPENDS%
-python-pathtools
-python-yaml
-python-argh
-

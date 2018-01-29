@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-cuda: Required for using CUDA backend
-nvidia-utils: Required for using CUDA backend
-libclc: Required for using OpenCL backend
-

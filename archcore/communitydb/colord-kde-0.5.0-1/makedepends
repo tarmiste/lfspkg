@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-extra-cmake-modules
-plasma-framework
-kcmutils
-kitemviews
-python
-

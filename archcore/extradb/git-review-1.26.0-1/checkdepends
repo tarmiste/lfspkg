@@ -1,8 +1,0 @@
-%CHECKDEPENDS%
-java-runtime>=8
-libcups
-openssh
-procps-ng
-python-testrepository
-python-mock
-

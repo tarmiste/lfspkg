@@ -1,8 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-aeson
-haskell-parsec
-haskell-text
-haskell-unordered-containers
-haskell-vector
-

@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-gtk2
-pangomm
-atkmm
-glibmm-docs
-

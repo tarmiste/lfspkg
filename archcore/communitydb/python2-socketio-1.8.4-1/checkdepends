@@ -1,6 +1,0 @@
-%CHECKDEPENDS%
-python-pytest
-python-mock
-python2-pytest
-python2-mock
-

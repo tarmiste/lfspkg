@@ -1,9 +1,0 @@
-%DEPENDS%
-gconf-sharp
-gkeyfile-sharp
-gnome-keyring-sharp
-librsvg
-libwnck
-mono-addins
-notify-sharp
-

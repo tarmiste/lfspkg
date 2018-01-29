@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-rrdtool: for logging with sensord
-

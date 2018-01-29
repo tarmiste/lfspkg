@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-git
-gnome-common
-intltool
-yelp-tools
-

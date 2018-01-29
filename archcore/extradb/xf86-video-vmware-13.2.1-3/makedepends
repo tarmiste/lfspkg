@@ -1,4 +1,0 @@
-%MAKEDEPENDS%
-xorg-server-devel
-X-ABI-VIDEODRV_VERSION=23
-

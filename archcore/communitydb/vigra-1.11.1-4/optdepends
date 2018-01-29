@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-python: for python bindings
-boost-libs: for python bindings
-

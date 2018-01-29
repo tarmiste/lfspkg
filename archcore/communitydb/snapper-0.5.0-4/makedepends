@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-boost
-lvm2
-libxslt
-docbook-xsl
-pam
-git
-systemd
-

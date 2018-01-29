@@ -1,6 +1,0 @@
-%DEPENDS%
-cairo
-gobject-introspection-runtime
-js52
-gtk3
-

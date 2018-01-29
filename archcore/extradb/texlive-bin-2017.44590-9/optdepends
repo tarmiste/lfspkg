@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-ed: for texconfig
-biber: for bibliography processing
-

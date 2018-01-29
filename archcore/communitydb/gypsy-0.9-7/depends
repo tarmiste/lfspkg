@@ -1,6 +1,0 @@
-%DEPENDS%
-dbus-glib
-bluez
-bluez-libs
-libgudev
-

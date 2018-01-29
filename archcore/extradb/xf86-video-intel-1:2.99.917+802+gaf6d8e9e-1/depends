@@ -1,7 +1,0 @@
-%DEPENDS%
-mesa
-libxvmc
-pixman
-xcb-util>=0.3.9
-libsystemd
-

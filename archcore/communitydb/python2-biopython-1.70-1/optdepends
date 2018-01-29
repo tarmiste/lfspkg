@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-python2-reportlab: for pdf graphics code
-python2-mysql-connector: for BioSQL module
-mysql-python: for BioSQL module
-

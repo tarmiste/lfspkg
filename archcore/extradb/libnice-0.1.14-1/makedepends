@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-gstreamer
-gtk-doc
-git
-

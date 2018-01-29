@@ -1,5 +1,0 @@
-%DEPENDS%
-perl>=5.10.0
-perl-parse-recdescent
-perl-tie-ixhash
-

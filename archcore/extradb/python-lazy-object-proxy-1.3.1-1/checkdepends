@@ -1,6 +1,0 @@
-%CHECKDEPENDS%
-python-pytest-capturelog
-python2-pytest-capturelog
-python-pytest-benchmark
-python2-pytest-benchmark
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-pygtk
-desktop-file-utils
-gtk-update-icon-cache
-hicolor-icon-theme
-

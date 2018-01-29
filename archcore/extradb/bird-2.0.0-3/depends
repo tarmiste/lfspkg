@@ -1,6 +1,0 @@
-%DEPENDS%
-glibc
-readline
-ncurses
-libssh
-

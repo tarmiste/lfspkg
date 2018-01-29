@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-intltool
-pkgconfig
-gtk-doc
-gobject-introspection
-bash-completion
-python2-gobject
-

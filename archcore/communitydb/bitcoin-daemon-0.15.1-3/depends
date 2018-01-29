@@ -1,6 +1,0 @@
-%DEPENDS%
-boost-libs
-libevent
-miniupnpc
-zeromq
-

@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-mariadb: lease information database
-postgresql: lease information database
-python: to use kea-shell
-kea-devel-docs: developer documentation
-

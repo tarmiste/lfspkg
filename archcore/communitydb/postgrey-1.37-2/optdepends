@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-postfix: the recommended MTA for use with postgrey
-exim: an alternative MTA
-perl-net-dns: for postgreyreport tool
-

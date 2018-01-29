@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-extra-cmake-modules
-kdoctools
-doxygen
-python
-librsvg
-opus
-

@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-qt5-svg: for CGAL_Qt5
-eigen: for some packages, see the CGAL manual
-

@@ -1,8 +1,0 @@
-%DEPENDS%
-minetest-common
-leveldb
-curl
-sqlite
-hiredis
-luajit
-

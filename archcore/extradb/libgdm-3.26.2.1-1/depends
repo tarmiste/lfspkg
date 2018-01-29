@@ -1,5 +1,0 @@
-%DEPENDS%
-systemd
-glib2
-dconf
-

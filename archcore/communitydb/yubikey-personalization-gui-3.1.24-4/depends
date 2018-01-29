@@ -1,5 +1,0 @@
-%DEPENDS%
-yubikey-personalization
-qt5-base
-libxkbcommon-x11
-

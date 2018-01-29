@@ -1,4 +1,0 @@
-%DEPENDS%
-python-dbus
-python-gobject
-

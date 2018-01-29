@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-java-environment
-gobject-introspection
-gnome-common
-gtk2
-gtk3
-xorg-xprop
-

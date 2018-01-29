@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-gcc-fortran
-cmake
-chrpath
-

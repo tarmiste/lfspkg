@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-intltool
-itstool
-docbook-xsl
-gnome-common
-git
-libnautilus-extension
-

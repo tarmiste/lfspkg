@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-gnome-keyring: keyring support
-xdg-user-dirs-gtk: manage user directories
-

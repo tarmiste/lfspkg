@@ -1,6 +1,0 @@
-%DEPENDS%
-qt5-base
-libtiff
-hicolor-icon-theme
-desktop-file-utils
-

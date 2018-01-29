@@ -1,5 +1,0 @@
-%DEPENDS%
-libxcb
-xcb-util-renderutil
-xcb-util-image
-

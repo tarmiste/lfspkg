@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-python
-python2
-libxml2
-python2-setuptools
-python-setuptools
-

@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-mesa
-cmake
-doxygen
-git
-systemd
-

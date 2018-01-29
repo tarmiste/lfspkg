@@ -1,6 +1,0 @@
-%DEPENDS%
-lzo
-hdf5
-python2-numexpr
-blosc
-

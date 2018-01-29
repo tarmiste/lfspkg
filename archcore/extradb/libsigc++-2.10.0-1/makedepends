@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-gcc-libs
-git
-mm-common
-doxygen
-libxslt
-graphviz
-

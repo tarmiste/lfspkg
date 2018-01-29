@@ -1,5 +1,0 @@
-%DEPENDS%
-xorg-mkfontdir
-xorg-mkfontscale
-fontconfig
-

@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-cmake
-docbook-xsl
-qt5-tools
-libxkbcommon-x11
-

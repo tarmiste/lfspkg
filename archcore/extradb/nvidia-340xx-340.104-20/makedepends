@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-nvidia-340xx-utils=340.104
-linux
-linux-headers>=4.14
-linux-headers<4.15
-

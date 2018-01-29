@@ -1,5 +1,0 @@
-%DEPENDS%
-boost-libs
-orc
-libusb
-

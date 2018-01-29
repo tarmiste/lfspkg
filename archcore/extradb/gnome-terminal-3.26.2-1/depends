@@ -1,5 +1,0 @@
-%DEPENDS%
-vte3
-gsettings-desktop-schemas
-dconf
-

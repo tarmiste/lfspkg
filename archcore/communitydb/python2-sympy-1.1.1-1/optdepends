@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-python2-pyglet: plotting
-ipython2: user friendly interface for isympy
-

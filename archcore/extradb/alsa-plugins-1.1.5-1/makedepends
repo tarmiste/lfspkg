@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-libpulse
-jack
-ffmpeg
-

@@ -1,7 +1,0 @@
-%DEPENDS%
-python-alembic
-python-flask
-python-flask-script
-python-flask-sqlalchemy
-python-setuptools
-

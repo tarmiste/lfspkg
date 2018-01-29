@@ -1,5 +1,0 @@
-%DEPENDS%
-python2-mistune
-python2-docutils
-python2-setuptools
-

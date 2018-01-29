@@ -1,9 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-base-orphans
-haskell-comonad
-haskell-semigroups
-haskell-tagged
-haskell-th-abstraction
-haskell-transformers-compat
-

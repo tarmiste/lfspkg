@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-ebtables
-arptables
-ipset
-

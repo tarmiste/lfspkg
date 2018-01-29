@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-python2
-python
-postgresql-libs>=8.4.1
-

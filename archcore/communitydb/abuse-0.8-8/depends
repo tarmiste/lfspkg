@@ -1,7 +1,0 @@
-%DEPENDS%
-desktop-file-utils
-gcc-libs
-glu
-libgl
-sdl_mixer
-

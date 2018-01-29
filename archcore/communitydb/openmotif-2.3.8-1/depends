@@ -1,9 +1,0 @@
-%DEPENDS%
-libxext
-libxp
-libxft
-libxt
-libxmu
-libpng
-libjpeg
-

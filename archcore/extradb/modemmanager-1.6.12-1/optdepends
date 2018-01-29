@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-usb_modeswitch: install if your modem shows up as a storage drive
-

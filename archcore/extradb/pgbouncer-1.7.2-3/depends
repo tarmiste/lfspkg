@@ -1,5 +1,0 @@
-%DEPENDS%
-libevent>=2.0
-c-ares
-systemd
-

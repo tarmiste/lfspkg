@@ -1,7 +1,0 @@
-%DEPENDS%
-graphviz
-doxygen
-gtk-doc
-libsigc++-docs
-perl-xml-parser
-

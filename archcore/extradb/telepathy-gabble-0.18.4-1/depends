@@ -1,5 +1,0 @@
-%DEPENDS%
-telepathy-glib
-libsoup
-libnice
-

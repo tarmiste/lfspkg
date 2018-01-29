@@ -1,9 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-blaze-builder
-haskell-wai
-haskell-warp
-haskell-http-types
-haskell-streaming-commons
-haskell-async
-

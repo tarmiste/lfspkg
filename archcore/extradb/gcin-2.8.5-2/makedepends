@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-qt5-base
-qt4
-gtk3
-anthy
-libchewing
-

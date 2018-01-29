@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-extra-cmake-modules
-boost
-libktorrent
-kdoctools
-kdesignerplugin
-

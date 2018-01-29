@@ -1,5 +1,0 @@
-%DEPENDS%
-libgl
-glew
-freeglut
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-popt
-gcc-libs
-zlib
-sh
-

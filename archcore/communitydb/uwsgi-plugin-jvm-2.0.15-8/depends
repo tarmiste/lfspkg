@@ -1,5 +1,0 @@
-%DEPENDS%
-uwsgi
-java-environment=7
-classpath
-

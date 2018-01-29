@@ -1,9 +1,0 @@
-%DEPENDS%
-gcc-libs
-libxtst
-libxinerama
-libxkbcommon-x11
-avahi
-curl
-openssl
-

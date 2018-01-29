@@ -1,8 +1,0 @@
-%DEPENDS%
-dbus
-ncurses
-perl
-libxml2
-glib2
-gnutls
-

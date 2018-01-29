@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-caja: file archiver extension
-p7zip: 7Z and ARJ archive support
-unace: ACE archive support
-unrar: RAR archive support
-

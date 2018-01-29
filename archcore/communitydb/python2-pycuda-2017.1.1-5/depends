@@ -1,9 +1,0 @@
-%DEPENDS%
-cuda
-nvidia-utils
-python2-numpy
-python2-pytools
-python2
-boost-libs
-pycuda-headers
-

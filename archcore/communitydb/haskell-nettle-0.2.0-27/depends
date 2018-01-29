@@ -1,8 +1,0 @@
-%DEPENDS%
-ghc-libs
-nettle
-haskell-byteable
-haskell-crypto-cipher-types
-haskell-tagged
-haskell-securemem
-

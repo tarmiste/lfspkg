@@ -1,5 +1,0 @@
-%DEPENDS%
-audiofile
-liblo>=0.28
-lilv
-

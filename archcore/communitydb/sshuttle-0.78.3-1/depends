@@ -1,6 +1,0 @@
-%DEPENDS%
-python-setuptools
-iptables
-openssh
-net-tools
-

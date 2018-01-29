@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-cmake
-automoc4
-boost
-mediastreamer
-libgadu
-jsoncpp
-openssl-1.0
-

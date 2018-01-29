@@ -1,9 +1,0 @@
-%DEPENDS%
-python2-astroid
-python2-setuptools
-python2-mccabe
-python2-isort
-python2-backports.functools_lru_cache
-python2-configparser
-python2-singledispatch
-

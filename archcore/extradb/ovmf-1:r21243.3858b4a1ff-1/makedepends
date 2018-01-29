@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-git
-python2
-iasl
-nasm
-subversion
-perl-libwww
-

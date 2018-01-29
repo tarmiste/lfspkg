@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-alsa-lib
-mesa
-libpulse
-glu
-

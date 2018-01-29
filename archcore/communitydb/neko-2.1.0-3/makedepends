@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-apache
-apr
-cmake
-git
-mbedtls
-ninja
-pkgconfig
-

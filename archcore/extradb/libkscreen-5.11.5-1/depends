@@ -1,5 +1,0 @@
-%DEPENDS%
-qt5-x11extras
-libxrandr
-kwayland
-

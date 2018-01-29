@@ -1,9 +1,0 @@
-%DEPENDS%
-bash
-perl
-libseccomp
-libcap
-python
-cgmanager
-rsync
-

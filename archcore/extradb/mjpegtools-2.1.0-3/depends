@@ -1,7 +1,0 @@
-%DEPENDS%
-libjpeg
-libpng
-sdl
-gcc-libs
-libdv
-

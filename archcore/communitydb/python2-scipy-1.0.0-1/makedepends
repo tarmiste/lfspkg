@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-gcc-fortran
-python-numpy
-python2-numpy
-python-setuptools
-python2-setuptools
-

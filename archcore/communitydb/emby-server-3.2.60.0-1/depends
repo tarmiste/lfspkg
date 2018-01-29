@@ -1,6 +1,0 @@
-%DEPENDS%
-dotnet-runtime
-ffmpeg
-skia-sharp58
-sqlite
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-gtk2
-desktop-file-utils
-hicolor-icon-theme
-shared-mime-info
-

@@ -1,8 +1,0 @@
-%DEPENDS%
-openbox
-gtk2
-libglade
-desktop-file-utils
-libsm
-libobrender.so=32-64
-

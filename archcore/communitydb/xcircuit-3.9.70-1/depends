@@ -1,6 +1,0 @@
-%DEPENDS%
-tk
-libxpm
-zlib
-cairo
-

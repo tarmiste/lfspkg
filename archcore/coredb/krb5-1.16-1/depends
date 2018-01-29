@@ -1,5 +1,0 @@
-%DEPENDS%
-e2fsprogs
-libldap
-keyutils
-

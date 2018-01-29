@@ -1,6 +1,0 @@
-%DEPENDS%
-vte
-gtksourceview2
-mpfr
-desktop-file-utils
-

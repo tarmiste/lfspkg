@@ -1,6 +1,0 @@
-%DEPENDS%
-libsoup
-liboauth
-gcr
-gnome-online-accounts
-

@@ -1,5 +1,0 @@
-%DEPENDS%
-libtiff
-proj
-libjpeg>=7
-

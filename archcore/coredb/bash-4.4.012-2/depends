@@ -1,5 +1,0 @@
-%DEPENDS%
-readline>=7.0
-glibc
-ncurses
-

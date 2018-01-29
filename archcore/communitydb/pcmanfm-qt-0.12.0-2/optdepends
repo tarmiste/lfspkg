@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-gvfs: for trash support, mounting with udisks and remote filesystems
-gvfs-mtp: MTP support (Media Transfer Protocol)
-xarchiver: archive management
-

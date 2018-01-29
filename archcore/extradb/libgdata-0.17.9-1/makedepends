@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-intltool
-gobject-introspection
-vala
-uhttpmock
-git
-gtk-doc
-autoconf-archive
-

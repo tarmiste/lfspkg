@@ -1,7 +1,0 @@
-%DEPENDS%
-glib2
-libgudev
-nss
-libutil-linux
-jansson
-

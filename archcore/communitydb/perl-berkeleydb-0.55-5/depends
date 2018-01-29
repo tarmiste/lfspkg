@@ -1,7 +1,0 @@
-%DEPENDS%
-perl
-db>=5.3
-db<5.4
-perl>=5.26
-perl<5.27
-

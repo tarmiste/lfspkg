@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-lua51: scripting
-p7zip: support for 7zip archives
-libunrar: support for rar archives
-

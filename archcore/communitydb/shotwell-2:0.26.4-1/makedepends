@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-intltool
-vala>=0.17.2
-gnome-doc-utils
-itstool
-

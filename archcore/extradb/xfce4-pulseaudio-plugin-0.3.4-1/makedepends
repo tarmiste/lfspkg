@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-intltool
-dbus-glib
-git
-xfce4-dev-tools
-

@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-boost
-cppunit
-gperf
-doxygen
-

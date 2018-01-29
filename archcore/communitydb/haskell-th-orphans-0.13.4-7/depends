@@ -1,7 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-mtl
-haskell-th-lift
-haskell-th-lift-instances
-haskell-th-reify-many
-

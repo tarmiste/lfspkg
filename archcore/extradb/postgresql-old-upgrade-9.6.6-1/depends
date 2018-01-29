@@ -1,7 +1,0 @@
-%DEPENDS%
-postgresql-libs>=9.6
-libxml2
-openssl>=1.0.0
-pam
-zlib
-

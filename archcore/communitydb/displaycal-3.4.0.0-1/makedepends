@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-libx11
-libxrandr
-libxinerama
-libxxf86vm
-python2-setuptools
-

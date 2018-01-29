@@ -1,9 +1,0 @@
-%DEPENDS%
-openssl
-libpcap
-pcre
-libltdl
-libnet
-ethtool
-curl
-

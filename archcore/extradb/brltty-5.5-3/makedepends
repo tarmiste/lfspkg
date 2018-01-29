@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-at-spi2-core
-tcl
-speech-dispatcher
-cython
-

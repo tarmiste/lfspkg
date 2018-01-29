@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-cython2
-cython
-pari
-

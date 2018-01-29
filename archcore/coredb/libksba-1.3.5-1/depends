@@ -1,5 +1,0 @@
-%DEPENDS%
-bash
-libgpg-error
-glibc
-

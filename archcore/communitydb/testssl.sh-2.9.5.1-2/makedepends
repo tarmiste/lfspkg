@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-perl
-perl-data-dump
-perl-json
-perl-test-base
-

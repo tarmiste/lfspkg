@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-perl: perl bindings
-ncurses: noping CLI tool
-

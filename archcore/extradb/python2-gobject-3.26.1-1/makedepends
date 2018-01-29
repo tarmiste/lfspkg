@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-python-cairo
-python2-cairo
-gobject-introspection
-git
-gnome-common
-

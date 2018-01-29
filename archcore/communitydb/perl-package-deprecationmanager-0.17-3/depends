@@ -1,8 +1,0 @@
-%DEPENDS%
-perl-params-util
-perl-sub-install
-perl-sub-name
-perl-package-stash
-perl-module-implementation
-perl-namespace-autoclean
-

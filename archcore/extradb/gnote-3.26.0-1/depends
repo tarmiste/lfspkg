@@ -1,7 +1,0 @@
-%DEPENDS%
-gtkmm3
-gtkspell3
-libxslt
-dconf
-libsecret
-

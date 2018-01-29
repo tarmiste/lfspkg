@@ -1,5 +1,0 @@
-%DEPENDS%
-gcc-libs
-zlib
-expat
-

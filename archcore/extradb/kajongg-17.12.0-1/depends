@@ -1,6 +1,0 @@
-%DEPENDS%
-python-twisted
-python-pyqt5
-libkmahjongg
-hicolor-icon-theme
-

@@ -1,9 +1,0 @@
-%OPTDEPENDS%
-bbswitch: switch on/off discrete card
-nvidia: NVIDIA kernel driver
-nvidia-340xx: NVIDIA kernel driver for older devices
-nvidia-304xx: NVIDIA kernel driver for even older devices
-primus: faster back-end for optirun
-lib32-virtualgl: run 32bit applications with optirun
-lib32-primus: faster back-end for optirun
-

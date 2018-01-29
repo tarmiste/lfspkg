@@ -1,5 +1,0 @@
-%DEPENDS%
-openssl
-c-ares
-libwebsockets
-

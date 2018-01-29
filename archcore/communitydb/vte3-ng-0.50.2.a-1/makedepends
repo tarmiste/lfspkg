@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-intltool
-gobject-introspection
-gtk3
-vala
-gtk-doc
-gperf
-

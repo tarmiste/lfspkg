@@ -1,8 +1,0 @@
-%DEPENDS%
-wxgtk2
-gd
-geoip
-libupnp
-crypto++
-boost-libs
-

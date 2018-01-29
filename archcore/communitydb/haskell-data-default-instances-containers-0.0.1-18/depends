@@ -1,4 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-data-default-class
-

@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-gcc-fortran
-cmake
-python
-doxygen
-

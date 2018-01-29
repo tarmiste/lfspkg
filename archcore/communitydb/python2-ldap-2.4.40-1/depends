@@ -1,4 +1,0 @@
-%DEPENDS%
-python2
-libldap>=2.4.26
-

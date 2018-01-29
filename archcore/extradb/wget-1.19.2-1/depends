@@ -1,7 +1,0 @@
-%DEPENDS%
-gnutls
-libidn
-libutil-linux
-libpsl
-pcre
-

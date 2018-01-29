@@ -1,7 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-blaze-builder
-haskell-language-javascript
-haskell-optparse-applicative
-haskell-text
-

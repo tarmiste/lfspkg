@@ -1,9 +1,0 @@
-%DEPENDS%
-bash
-glibc
-libarchive
-curl
-gpgme
-pacman-mirrorlist
-archlinux-keyring
-

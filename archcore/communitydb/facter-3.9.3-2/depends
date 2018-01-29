@@ -1,6 +1,0 @@
-%DEPENDS%
-ruby
-yaml-cpp
-boost-libs
-curl
-

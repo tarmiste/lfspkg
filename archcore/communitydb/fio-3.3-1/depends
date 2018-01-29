@@ -1,8 +1,0 @@
-%DEPENDS%
-bash
-libaio
-python2
-numactl
-glusterfs
-ceph
-

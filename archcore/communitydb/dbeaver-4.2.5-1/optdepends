@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-dbeaver-plugin-office: export data in Microsoft Office Excel format
-dbeaver-plugin-svg-format: save diagrams in SVG format
-

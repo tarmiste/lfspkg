@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-python-gobject
-python2-gobject
-gobject-introspection
-vala
-git
-meson
-

@@ -1,7 +1,0 @@
-%CHECKDEPENDS%
-python2-mock
-python-pygments
-python2-pygments
-python-pytest-runner
-python2-pytest-runner
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-python2-libnacl
-python2-ioflo
-python2-six
-python2-enum34
-

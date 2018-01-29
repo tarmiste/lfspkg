@@ -1,6 +1,0 @@
-%DEPENDS%
-rxvt-unicode-terminfo
-libxft
-perl
-startup-notification
-

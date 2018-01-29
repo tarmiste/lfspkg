@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-cmake
-garmindev
-mesa
-qt5-tools
-

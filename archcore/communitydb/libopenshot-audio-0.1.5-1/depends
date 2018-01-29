@@ -1,7 +1,0 @@
-%DEPENDS%
-alsa-lib
-freetype2
-libxcursor
-libxinerama
-libxrandr
-

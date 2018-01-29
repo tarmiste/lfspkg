@@ -1,9 +1,0 @@
-%PROVIDES%
-ati-dri
-intel-dri
-nouveau-dri
-svga-dri
-mesa-dri
-mesa-libgl
-opengl-driver
-

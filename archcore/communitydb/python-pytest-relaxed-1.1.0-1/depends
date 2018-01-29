@@ -1,5 +1,0 @@
-%DEPENDS%
-python-pytest
-python-decorator
-python-six
-

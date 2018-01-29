@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-cmake
-zlib
-mesa
-boost
-gettext
-wxpython
-swig
-

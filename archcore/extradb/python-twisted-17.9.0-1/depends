@@ -1,7 +1,0 @@
-%DEPENDS%
-python-zope-interface
-python-incremental
-python-constantly
-python-automat
-python-hyperlink
-

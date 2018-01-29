@@ -1,5 +1,0 @@
-%DEPENDS%
-curl
-libxslt
-icu
-

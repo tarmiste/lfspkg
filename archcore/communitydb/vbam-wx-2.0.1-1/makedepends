@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-cmake
-ffmpeg
-wxgtk3
-zip
-

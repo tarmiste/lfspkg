@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-ghc
-haskell-glob
-haskell-doctest
-

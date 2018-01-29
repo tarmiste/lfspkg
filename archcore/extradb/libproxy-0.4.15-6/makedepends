@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-cmake
-networkmanager
-python
-python2
-perl
-webkit2gtk
-

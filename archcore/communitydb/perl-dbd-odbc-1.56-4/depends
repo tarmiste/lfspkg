@@ -1,7 +1,0 @@
-%DEPENDS%
-perl-dbi
-perl
-unixodbc
-perl>=5.26
-perl<5.27
-

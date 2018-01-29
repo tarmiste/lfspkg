@@ -1,6 +1,0 @@
-%CHECKDEPENDS%
-python-zope-testing
-python2-zope-testing
-python-zope-testrunner
-python2-zope-testrunner
-

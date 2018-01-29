@@ -1,7 +1,0 @@
-%DEPENDS%
-bzip2
-xz
-gtk2
-desktop-file-utils
-gconf
-

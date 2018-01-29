@@ -1,7 +1,0 @@
-%OPTDEPENDS%
-emacs: for using the emacs interface
-vim: for using the vim interface
-python2: for using the python2 bindings
-ruby: for using the ruby bindings
-gnupg: for email encryption
-

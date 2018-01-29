@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-itstool
-yelp-tools
-gettext
-gnome-common
-git
-

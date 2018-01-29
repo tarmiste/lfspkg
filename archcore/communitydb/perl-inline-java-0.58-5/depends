@@ -1,7 +1,0 @@
-%DEPENDS%
-perl
-perl-inline
-java-runtime
-perl>=5.26
-perl<5.27
-

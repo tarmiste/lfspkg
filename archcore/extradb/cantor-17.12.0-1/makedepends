@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-extra-cmake-modules
-python
-python2
-kdoctools
-luajit
-r
-julia
-

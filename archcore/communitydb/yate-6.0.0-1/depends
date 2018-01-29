@@ -1,9 +1,0 @@
-%DEPENDS%
-speex
-gsm
-postgresql-libs
-libmariadbclient
-alsa-lib
-openssl-1.0
-sqlite
-

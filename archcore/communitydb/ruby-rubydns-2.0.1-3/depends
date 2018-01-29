@@ -1,5 +1,0 @@
-%DEPENDS%
-ruby
-ruby-celluloid-dns
-ruby-async-dns
-

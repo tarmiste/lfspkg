@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-imake
-cmake
-qt5-tools
-

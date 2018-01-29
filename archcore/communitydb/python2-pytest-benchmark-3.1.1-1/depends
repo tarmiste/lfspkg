@@ -1,6 +1,0 @@
-%DEPENDS%
-python2-pytest
-python-py-cpuinfo
-python2-statistics
-python2-pathlib
-

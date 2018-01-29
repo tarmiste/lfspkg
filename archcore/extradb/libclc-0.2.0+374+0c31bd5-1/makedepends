@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-clang
-llvm
-python2
-git
-

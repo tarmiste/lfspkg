@@ -1,5 +1,0 @@
-%DEPENDS%
-openssl
-zlib
-gcc-libs
-

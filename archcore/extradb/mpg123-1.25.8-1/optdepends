@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-sdl: for sdl audio support
-jack: for jack audio support
-libpulse: for pulse audio support
-

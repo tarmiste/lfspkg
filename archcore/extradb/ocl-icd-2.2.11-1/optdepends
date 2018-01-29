@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-opencl-driver: packaged opencl driver
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-python-requests
-python-six
-python-websocket-client
-python-docker-pycreds
-

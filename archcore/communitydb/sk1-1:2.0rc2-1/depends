@@ -1,9 +1,0 @@
-%DEPENDS%
-zenity
-python2-cairo
-python2-lcms
-python2-pillow
-libmagick6
-python2-reportlab
-wxpython
-

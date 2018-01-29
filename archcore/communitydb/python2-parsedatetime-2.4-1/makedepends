@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-python-future
-python2-future
-python-setuptools
-python2-setuptools
-

@@ -1,9 +1,0 @@
-%OPTDEPENDS%
-python2-psycopg2: PostgreSQL support
-python2-netaddr: URL previewing
-python2-lxml: URL previewing
-python2-jinja: e-mail notifications
-python2-bleach: e-mail notifications
-python2-psutil: metrics
-python2-matrix-angular-sdk: built-in web client
-

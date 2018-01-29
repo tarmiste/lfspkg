@@ -1,7 +1,0 @@
-%DEPENDS%
-libftdi
-libserialport
-glibmm
-libzip
-libieee1284
-

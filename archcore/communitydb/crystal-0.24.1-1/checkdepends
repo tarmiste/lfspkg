@@ -1,7 +1,0 @@
-%CHECKDEPENDS%
-libyaml
-libxml2
-gmp
-inetutils
-git
-

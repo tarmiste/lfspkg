@@ -1,6 +1,0 @@
-%DEPENDS%
-libxml2
-curl
-libzip
-pcre
-

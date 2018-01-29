@@ -1,5 +1,0 @@
-%DEPENDS%
-python2-flask
-python2-eventlet
-python-socketio
-

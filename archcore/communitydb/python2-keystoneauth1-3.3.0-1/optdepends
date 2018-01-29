@@ -1,8 +1,0 @@
-%OPTDEPENDS%
-python2-requests-kerberos: for kerberos support
-python2-lxml: for saml2 support
-python2-oauthlib: for oauth1 support
-python2-betamax: for betamax support
-python2-fixtures: for betamax support
-python2-mock: for betamax support
-

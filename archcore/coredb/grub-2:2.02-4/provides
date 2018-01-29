@@ -1,6 +1,0 @@
-%PROVIDES%
-grub-common
-grub-bios
-grub-emu
-grub-efi-x86_64
-

@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-ghc
-haskell-yesod-form
-haskell-lifted-base
-haskell-hspec
-

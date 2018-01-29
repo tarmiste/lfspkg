@@ -1,8 +1,0 @@
-%OPTDEPENDS%
-hddtemp: HDD temperature monitoring support
-python-bottle: web server support
-python-docker: for the Docker monitoring support
-python-matplotlib: for graphical/chart support
-python-netifaces: for the IP plugin
-python-zeroconf: for the autodiscover mode
-

@@ -1,7 +1,0 @@
-%DEPENDS%
-tk
-mesa
-libxmu
-ftgl
-vtk6
-

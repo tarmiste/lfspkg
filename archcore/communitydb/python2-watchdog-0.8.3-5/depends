@@ -1,5 +1,0 @@
-%DEPENDS%
-python2-pathtools
-python2-yaml
-python2-argh
-

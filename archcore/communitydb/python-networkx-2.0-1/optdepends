@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-python-numpy: Provides sparse matrix representation of graphs and many numerical scientific tools.
-python-scipy: Provides flexible drawing of graphs.
-python-pyparsing: Required for pydot, GML file reading.
-python-yaml: Required for YAML format reading and writing.
-

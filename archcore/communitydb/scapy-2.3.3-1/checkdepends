@@ -1,8 +1,0 @@
-%CHECKDEPENDS%
-python2-crypto
-python2-pyx
-python2-gnuplot
-python2-mock
-graphviz
-sox
-

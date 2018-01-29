@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-gobject-introspection
-vala
-autoconf-archive
-git
-valadoc
-

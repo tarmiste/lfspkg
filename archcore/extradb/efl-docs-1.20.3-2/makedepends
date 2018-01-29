@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-doxygen
-python
-texlive-core
-ghostscript
-imagemagick
-mesa
-

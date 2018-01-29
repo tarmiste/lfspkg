@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-libmariadbclient
-libpcap
-libdbi
-postgresql-libs
-sqlite
-jansson
-

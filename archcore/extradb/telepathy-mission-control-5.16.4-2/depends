@@ -1,5 +1,0 @@
-%DEPENDS%
-telepathy-glib
-dconf
-libnm-glib
-

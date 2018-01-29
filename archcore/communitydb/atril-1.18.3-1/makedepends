@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-caja
-gobject-introspection
-intltool
-itstool
-texlive-bin
-

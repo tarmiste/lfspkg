@@ -1,6 +1,0 @@
-%DEPENDS%
-sdl
-sdl_mixer
-pdcurses
-yaml-cpp
-

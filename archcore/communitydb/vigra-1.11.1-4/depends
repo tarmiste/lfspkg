@@ -1,9 +1,0 @@
-%DEPENDS%
-libpng
-libtiff
-openexr
-gcc-libs
-sh
-hdf5
-fftw
-

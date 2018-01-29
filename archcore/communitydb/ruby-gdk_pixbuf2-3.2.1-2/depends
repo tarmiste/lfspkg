@@ -1,5 +1,0 @@
-%DEPENDS%
-ruby
-ruby-gio2=3.2.1
-gdk-pixbuf2
-

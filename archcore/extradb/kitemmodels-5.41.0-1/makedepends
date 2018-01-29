@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-extra-cmake-modules
-python2-pyqt5
-python-pyqt5
-clang
-doxygen
-qt5-tools
-

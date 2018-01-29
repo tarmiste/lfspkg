@@ -1,5 +1,0 @@
-%DEPENDS%
-python2-hpack
-python2-hyperframe
-python2-enum34
-

@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-gucharmap: for charmap plugin
-json-glib: for open-tran plugin
-

@@ -1,5 +1,0 @@
-%DEPENDS%
-python-six
-python-pbr
-python-babel
-

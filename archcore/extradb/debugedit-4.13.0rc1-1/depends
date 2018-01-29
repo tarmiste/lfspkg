@@ -1,7 +1,0 @@
-%DEPENDS%
-glibc
-libelf
-nss
-popt
-zlib
-

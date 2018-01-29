@@ -1,7 +1,0 @@
-%DEPENDS%
-xcb-util-image
-libev
-cairo
-libxkbcommon-x11
-pam
-

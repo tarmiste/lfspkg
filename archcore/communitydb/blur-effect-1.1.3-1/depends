@@ -1,6 +1,0 @@
-%DEPENDS%
-gdk-pixbuf2
-mesa
-libegl
-libgles
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-xorg-server
-libxt
-libxext
-fuse2
-

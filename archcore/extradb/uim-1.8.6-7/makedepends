@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-intltool
-gettext
-gtk2
-gtk3
-qt4
-anthy
-

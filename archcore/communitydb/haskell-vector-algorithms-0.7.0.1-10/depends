@@ -1,7 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-mtl
-haskell-mwc-random
-haskell-primitive
-haskell-vector
-

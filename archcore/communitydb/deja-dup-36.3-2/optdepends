@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-gnome-keyring: save passwords
-nautilus: backup extension
-python2-boto: Amazon S3 and Google Cloud Storage backend
-

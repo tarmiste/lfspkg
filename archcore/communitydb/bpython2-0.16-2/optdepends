@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-python2-urwid: for bpython2-urwid
-python2-jedi: multiline completion
-

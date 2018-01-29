@@ -1,7 +1,0 @@
-%DEPENDS%
-fcitx
-libkkc
-libkkc-data
-skk-jisyo
-fcitx-qt5
-

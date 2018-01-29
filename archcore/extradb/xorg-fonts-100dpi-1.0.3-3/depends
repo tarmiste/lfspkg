@@ -1,6 +1,0 @@
-%DEPENDS%
-xorg-fonts-encodings
-xorg-fonts-alias
-xorg-font-utils
-fontconfig
-

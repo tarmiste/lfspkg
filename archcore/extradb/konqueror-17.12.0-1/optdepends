@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-tidy: tidy HTML plugin
-kdesu: shell command plugin
-khtml: alternative web engine
-

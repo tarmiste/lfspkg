@@ -1,8 +1,0 @@
-%DEPENDS%
-qt4
-fftw
-jack
-ladspa
-liblo
-zita-alsa-pcmi
-

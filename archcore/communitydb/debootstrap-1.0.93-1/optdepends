@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-gnupg: check release signatures
-debian-archive-keyring: check release signatures for Debian
-ubuntu-keyring: check release signatures for Ubuntu
-

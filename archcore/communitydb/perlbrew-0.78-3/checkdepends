@@ -1,7 +1,0 @@
-%CHECKDEPENDS%
-perl-test-exception
-perl-test-output
-perl-test-spec
-perl-path-class
-perl-io-all
-

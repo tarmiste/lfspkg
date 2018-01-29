@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-extra-cmake-modules
-kdoctools
-kross
-python
-kdesignerplugin
-

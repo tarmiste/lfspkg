@@ -1,6 +1,0 @@
-%DEPENDS%
-openssl
-gc
-ncurses
-gpm
-

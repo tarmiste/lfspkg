@@ -1,7 +1,0 @@
-%OPTDEPENDS%
-gpscorrelate: geotag photos
-jhead: add photos to database
-python2-beautifulsoup4: georss2foxtrotgps-poi tool
-python2-feedparser: georss2foxtrotgps-poi tool
-python2-sqlalchemy: poi2osm tool
-

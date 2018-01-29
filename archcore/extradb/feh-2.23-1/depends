@@ -1,6 +1,0 @@
-%DEPENDS%
-imlib2
-curl
-libxinerama
-libexif
-

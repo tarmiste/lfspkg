@@ -1,7 +1,0 @@
-%DEPENDS%
-dconf
-gtk3
-qqwing
-libgee
-json-glib
-

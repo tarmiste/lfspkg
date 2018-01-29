@@ -1,9 +1,0 @@
-%DEPENDS%
-gnome-desktop
-libexif
-lcms2
-exempi
-libpeas
-librsvg
-dconf
-

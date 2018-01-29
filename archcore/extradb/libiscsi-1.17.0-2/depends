@@ -1,5 +1,0 @@
-%DEPENDS%
-glibc
-popt
-libgcrypt
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-perl
-perl-data-optlist
-perl-params-util
-perl-sub-install
-

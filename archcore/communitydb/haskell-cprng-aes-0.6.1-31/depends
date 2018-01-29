@@ -1,6 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-byteable
-haskell-cipher-aes
-haskell-crypto-random
-

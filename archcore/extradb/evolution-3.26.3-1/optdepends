@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-highlight: text highlight plugin
-evolution-spamassassin: Spamassassin spam check plugin
-evolution-bogofilter: Bogofilter spam check plugin
-

@@ -1,9 +1,0 @@
-%DEPENDS%
-gcc-libs
-boost-libs
-libsystemd
-lua
-openssl
-protobuf
-libboost_context.so=1.66.0-64
-

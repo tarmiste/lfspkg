@@ -1,8 +1,0 @@
-%OPTDEPENDS%
-icedtea-web: web browser plugin + Java Web Start
-alsa-lib: for basic sound support
-giflib: for gif format support
-libpulse: for advanced sound support
-gtk2: for the Gtk+ look and feel - desktop usage
-libxtst: linked in xawt/libmawt.so - desktop usage
-

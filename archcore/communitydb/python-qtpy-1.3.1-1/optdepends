@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-python-pyqt4: Qt4 Python bindings
-python-pyqt5: Qt5 Python bindings
-python-pyside: PySide Qt4 Python bindings
-

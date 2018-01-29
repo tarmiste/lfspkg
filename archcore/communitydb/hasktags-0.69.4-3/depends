@@ -1,6 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-hunit
-haskell-json
-haskell-utf8-string
-

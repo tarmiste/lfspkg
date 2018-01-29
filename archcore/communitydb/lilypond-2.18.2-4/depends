@@ -1,8 +1,0 @@
-%DEPENDS%
-guile1.8
-python2
-texlive-core
-ghostscript
-pango
-fontconfig
-

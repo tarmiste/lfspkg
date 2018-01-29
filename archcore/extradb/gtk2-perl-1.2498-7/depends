@@ -1,6 +1,0 @@
-%DEPENDS%
-gtk2
-pango-perl
-perl>=5.26
-perl<5.27
-

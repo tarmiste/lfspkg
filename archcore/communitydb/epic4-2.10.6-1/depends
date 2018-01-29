@@ -1,6 +1,0 @@
-%DEPENDS%
-openssl
-ncurses
-tcl
-perl
-

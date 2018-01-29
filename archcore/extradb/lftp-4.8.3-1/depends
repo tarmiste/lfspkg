@@ -1,9 +1,0 @@
-%DEPENDS%
-gcc-libs
-readline
-gnutls
-libidn
-expat
-sh
-hicolor-icon-theme
-

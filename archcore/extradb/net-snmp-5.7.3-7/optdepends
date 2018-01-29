@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-perl-term-readkey: for snmpcheck application
-perl-tk: for snmpcheck and tkmib applications
-python2: for the python modules
-

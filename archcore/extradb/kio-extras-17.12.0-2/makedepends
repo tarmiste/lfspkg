@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-extra-cmake-modules
-kdoctools
-qt5-webengine
-gperf
-taglib
-khtml
-

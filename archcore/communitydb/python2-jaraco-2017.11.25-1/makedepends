@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-python-setuptools
-python2-setuptools
-python2-backports.functools_lru_cache
-python2-more-itertools
-python2-pytz
-

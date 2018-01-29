@@ -1,5 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-network
-haskell-network-uri
-

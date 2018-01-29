@@ -1,7 +1,0 @@
-%DEPENDS%
-lxqt-themes
-liblxqt
-libkscreen
-libxcursor
-qt5-svg
-

@@ -1,5 +1,0 @@
-%DEPENDS%
-python-cffi
-cairo
-python-xcffib
-

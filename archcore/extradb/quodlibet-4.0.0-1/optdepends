@@ -1,9 +1,0 @@
-%OPTDEPENDS%
-gst-libav: for ffmpeg (ASF/WMA) support
-gst-plugins-bad: for Musepack support
-libkeybinder3: for the multimedia keys support
-python-musicbrainzngs: for "MusicBrainz Lookup" plugin
-python-pyinotify: for "Automatic library update" plugin
-kakasi: for "Kana/Kanji Simple Inverter" plugin
-gst-plugins-bad: for "Audio Pitch/Speed" plugin
-

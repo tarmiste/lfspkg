@@ -1,4 +1,0 @@
-%CHECKDEPENDS%
-rsync
-python2-tornado
-

@@ -1,5 +1,0 @@
-%DEPENDS%
-openssl
-fuse2
-tinyxml2
-

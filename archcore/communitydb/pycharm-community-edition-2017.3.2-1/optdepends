@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-ipython2: IPython integration for Python 2
-ipython: IPython integration for Python 3
-python2: Python 2 support
-python: Python 3 support
-

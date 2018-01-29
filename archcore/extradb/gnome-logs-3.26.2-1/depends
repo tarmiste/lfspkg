@@ -1,5 +1,0 @@
-%DEPENDS%
-systemd
-gtk3
-gsettings-desktop-schemas
-

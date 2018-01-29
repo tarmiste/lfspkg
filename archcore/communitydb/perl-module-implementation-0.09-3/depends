@@ -1,4 +1,0 @@
-%DEPENDS%
-perl-module-runtime>=0.012
-perl-try-tiny
-

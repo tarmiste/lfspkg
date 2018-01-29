@@ -1,7 +1,0 @@
-%DEPENDS%
-xterm
-perl-exception-class
-perl-try-tiny
-perl-tk
-perl-x11-protocol-other
-

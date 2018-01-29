@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-python2-shiboken: for compilation against python2
-python-shiboken: for compilation against python
-

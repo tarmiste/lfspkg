@@ -1,5 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-gitrev
-haskell-optparse-applicative
-

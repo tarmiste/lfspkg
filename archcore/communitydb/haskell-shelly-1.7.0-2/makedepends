@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-ghc
-haskell-hunit
-haskell-hspec
-

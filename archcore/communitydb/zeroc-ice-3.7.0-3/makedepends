@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-bzip2
-gradle
-java-environment=8
-

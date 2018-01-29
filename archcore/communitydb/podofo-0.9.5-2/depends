@@ -1,8 +1,0 @@
-%DEPENDS%
-lua
-openssl
-fontconfig
-libtiff
-libidn
-libjpeg-turbo
-

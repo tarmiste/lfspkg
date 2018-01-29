@@ -1,8 +1,0 @@
-%DEPENDS%
-exempi
-gvfs
-libexif
-libsm
-mate-desktop
-libnotify
-

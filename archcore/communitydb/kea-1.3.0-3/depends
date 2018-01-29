@@ -1,7 +1,0 @@
-%DEPENDS%
-botan
-boost-libs
-log4cplus
-libmariadbclient
-postgresql-libs
-

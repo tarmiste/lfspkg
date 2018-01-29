@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-python2-webob: to query wsgi app
-python2-restkit: to get url directly with a HostProxy app
-

@@ -1,9 +1,0 @@
-%DEPENDS%
-bash
-coreutils
-util-linux
-openssl
-inetutils
-bind-tools
-procps-ng
-

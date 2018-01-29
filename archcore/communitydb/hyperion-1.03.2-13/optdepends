@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-xorg-server: X11 grabbing
-

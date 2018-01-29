@@ -1,4 +1,0 @@
-%DEPENDS%
-java-runtime>=7
-libxtst
-

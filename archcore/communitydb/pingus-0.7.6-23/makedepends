@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-scons
-boost>=1.49
-mesa
-glu
-

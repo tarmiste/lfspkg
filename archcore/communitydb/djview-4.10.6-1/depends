@@ -1,6 +1,0 @@
-%DEPENDS%
-qt5-base
-djvulibre
-libxkbcommon-x11
-libsm
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-gcc-libs
-plotutils
-gd
-libmagick6
-

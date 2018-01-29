@@ -1,7 +1,0 @@
-%DEPENDS%
-libxml2
-fontconfig
-libvpx
-libva
-sqlite
-

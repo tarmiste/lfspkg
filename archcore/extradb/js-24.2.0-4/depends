@@ -1,6 +1,0 @@
-%DEPENDS%
-nspr
-gcc-libs
-readline
-zlib
-

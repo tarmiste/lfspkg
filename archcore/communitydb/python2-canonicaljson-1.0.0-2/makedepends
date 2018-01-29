@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-python-setuptools
-python-simplejson
-python-frozendict
-python2-setuptools
-python2-simplejson
-python2-frozendict
-

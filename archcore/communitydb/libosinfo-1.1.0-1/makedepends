@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-check
-gobject-introspection
-intltool
-libsoup
-vala
-gtk-doc
-

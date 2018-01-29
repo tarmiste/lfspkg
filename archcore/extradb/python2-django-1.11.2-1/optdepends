@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-mysql-python: for MySQL backend
-python2-psycopg2: for PostgreSQL backend
-

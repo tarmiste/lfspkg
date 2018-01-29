@@ -1,7 +1,0 @@
-%DEPENDS%
-nspr>=4.15
-sqlite
-zlib
-sh
-p11-kit
-

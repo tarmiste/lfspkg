@@ -1,6 +1,0 @@
-%DEPENDS%
-fontconfig
-gcc-libs
-glibc
-libfreetype.so=6-64
-

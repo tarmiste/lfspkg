@@ -1,9 +1,0 @@
-%OPTDEPENDS%
-java-environment
-emacs
-zip
-sqlite
-alsa-lib
-flac
-avahi
-

@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-gtk3: libinput debug-gui
-python-pyudev: libinput measure
-python-evdev: libinput measure
-

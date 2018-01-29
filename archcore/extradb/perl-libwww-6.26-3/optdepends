@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-perl-lwp-protocol-https: for https:// url schemes
-

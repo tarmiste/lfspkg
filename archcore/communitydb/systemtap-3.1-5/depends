@@ -1,5 +1,0 @@
-%DEPENDS%
-elfutils
-nss
-python2
-

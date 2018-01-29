@@ -1,8 +1,0 @@
-%OPTDEPENDS%
-dmenu: As menu.
-i3lock: For locking your screen.
-i3status: To display systeminformation with a bar.
-perl: i3-save-tree and i3-dmenu-desktop
-perl-anyevent-i3: Features like saving the layout.
-perl-json-xs: Features like saving the layout.
-

@@ -1,9 +1,0 @@
-%DEPENDS%
-expat
-libdrm
-libelf
-lm_sensors
-libunwind
-libclc
-clang
-

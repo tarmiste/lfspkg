@@ -1,9 +1,0 @@
-%DEPENDS%
-dangerdeep-data
-fftw
-glu
-libgl
-sdl_image
-sdl_mixer
-sdl_net
-

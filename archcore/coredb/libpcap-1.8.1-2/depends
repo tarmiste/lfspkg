@@ -1,7 +1,0 @@
-%DEPENDS%
-glibc
-libnl
-sh
-libusbx
-dbus
-

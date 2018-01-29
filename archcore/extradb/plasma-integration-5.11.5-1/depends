@@ -1,8 +1,0 @@
-%DEPENDS%
-kio
-kwayland
-libxcursor
-noto-fonts
-ttf-hack
-qqc2-desktop-style
-

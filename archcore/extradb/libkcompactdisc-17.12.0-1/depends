@@ -1,6 +1,0 @@
-%DEPENDS%
-solid
-ki18n
-kcoreaddons
-phonon-qt5
-

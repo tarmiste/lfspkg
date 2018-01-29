@@ -1,6 +1,0 @@
-%DEPENDS%
-qt4pas
-desktop-file-utils
-hicolor-icon-theme
-shared-mime-info
-

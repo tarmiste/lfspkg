@@ -1,6 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-mtl
-haskell-network
-haskell-old-locale
-

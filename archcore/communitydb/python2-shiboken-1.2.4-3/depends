@@ -1,6 +1,0 @@
-%DEPENDS%
-qt4>=4.8
-libxslt
-python2
-shiboken
-

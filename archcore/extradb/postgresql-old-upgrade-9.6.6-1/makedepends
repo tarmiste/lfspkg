@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-krb5
-python2
-perl
-tcl>=8.6.0
-

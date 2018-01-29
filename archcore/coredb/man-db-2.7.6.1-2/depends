@@ -1,8 +1,0 @@
-%DEPENDS%
-bash
-gdbm
-zlib
-groff
-libpipeline
-less
-

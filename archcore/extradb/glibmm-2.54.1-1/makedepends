@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-git
-mm-common
-perl-xml-parser
-clang
-

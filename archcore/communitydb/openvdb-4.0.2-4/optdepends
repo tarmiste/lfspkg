@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-glfw: for tools
-glu: for tools
-python: python module
-

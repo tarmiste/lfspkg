@@ -1,5 +1,0 @@
-%OPTDEPENDS%
-gap-packages: extra packages
-gap-data: additional databases
-gap-doc: documentation
-

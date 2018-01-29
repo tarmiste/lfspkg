@@ -1,9 +1,0 @@
-%OPTDEPENDS%
-ebtables: required for default NAT networking
-dnsmasq: required for default NAT/DHCP for guests
-bridge-utils: for bridged networking
-openbsd-netcat: for remote management over ssh
-qemu
-radvd
-dmidecode
-

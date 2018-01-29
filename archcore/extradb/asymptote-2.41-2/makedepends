@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-ghostscript
-imagemagick
-mesa
-texlive-plainextra
-

@@ -1,5 +1,0 @@
-%DEPENDS%
-libpulse
-qt5-base
-phonon-qt5-backend
-

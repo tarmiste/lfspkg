@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-unzip
-python-setuptools
-python2-setuptools
-clang
-

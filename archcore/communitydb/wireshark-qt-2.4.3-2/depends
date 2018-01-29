@@ -1,6 +1,0 @@
-%DEPENDS%
-desktop-file-utils
-qt5-multimedia
-wireshark-cli
-wireshark-common
-

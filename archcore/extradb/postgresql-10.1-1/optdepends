@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-python2: for PL/Python support
-perl: for PL/Perl support
-tcl: for PL/Tcl support
-postgresql-old-upgrade: upgrade from previous major version using pg_upgrade
-

@@ -1,8 +1,0 @@
-%CHECKDEPENDS%
-python-mock
-python2-mock
-python-betamax-serializers
-python2-betamax-serializers
-python-betamax-matchers
-python2-betamax-matchers
-

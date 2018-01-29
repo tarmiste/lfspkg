@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-intltool
-gnome-doc-utils
-evolution-data-server
-boost
-python
-

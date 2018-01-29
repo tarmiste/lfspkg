@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-extra-cmake-modules
-kdoctools
-kdevelop-pg-qt
-python
-

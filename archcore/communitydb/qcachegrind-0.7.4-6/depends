@@ -1,6 +1,0 @@
-%DEPENDS%
-qt5-base
-desktop-file-utils
-hicolor-icon-theme
-libxkbcommon-x11
-

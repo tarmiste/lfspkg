@@ -1,7 +1,0 @@
-%DEPENDS%
-libmnl
-libnetfilter_acct
-libnetfilter_conntrack
-libnetfilter_log
-libnfnetlink
-

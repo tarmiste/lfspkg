@@ -1,8 +1,0 @@
-%DEPENDS%
-java-runtime-common
-libjpeg-turbo
-lcms2
-nss
-ca-certificates-utils
-libcups
-

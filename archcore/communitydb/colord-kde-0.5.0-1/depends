@@ -1,6 +1,0 @@
-%DEPENDS%
-colord
-libxrandr
-kservice
-kconfigwidgets
-

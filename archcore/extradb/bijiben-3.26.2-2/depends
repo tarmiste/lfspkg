@@ -1,6 +1,0 @@
-%DEPENDS%
-tracker
-webkit2gtk
-gnome-online-accounts
-evolution-data-server
-

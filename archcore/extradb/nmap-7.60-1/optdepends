@@ -1,7 +1,0 @@
-%OPTDEPENDS%
-pygtk: zenmap
-sudo: privilege escalation for zenmap
-xterm: privilege escalation for zenmap
-kde-cli-tools: privilege escalation for zenmap
-gksu: privilege escalation for zenmap
-

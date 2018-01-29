@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-setconf
-libuv
-git
-python2
-

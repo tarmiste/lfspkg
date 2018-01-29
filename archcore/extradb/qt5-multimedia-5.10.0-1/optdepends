@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-qt5-declarative: QML bindings
-gst-plugins-bad: camera support
-

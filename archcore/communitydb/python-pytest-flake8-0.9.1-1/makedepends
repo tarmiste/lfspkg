@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-python-pytest
-python2-pytest
-flake8
-python2-flake8
-

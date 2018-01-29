@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-lsof: show files opened by a process
-strace: attach to a running process
-

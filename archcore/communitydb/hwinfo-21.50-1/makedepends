@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-sysfsutils
-flex
-git
-

@@ -1,8 +1,0 @@
-%OPTDEPENDS%
-cppunit: unit testing
-intel-tbb: better threading support
-poco: portability
-python: python bindings
-boost: for developing using ogre
-ogre-docs: documentation
-

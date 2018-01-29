@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-opencl-headers
-rebar
-git
-

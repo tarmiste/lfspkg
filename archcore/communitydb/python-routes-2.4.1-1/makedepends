@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-python-setuptools
-python2-setuptools
-python-repoze.lru
-python2-repoze.lru
-python-six
-python2-six
-

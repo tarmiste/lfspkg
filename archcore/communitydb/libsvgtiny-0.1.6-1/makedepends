@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-netsurf-buildsystem
-git
-libwapcaplet>=0.4.0
-libdom>=0.3.2
-gperf
-

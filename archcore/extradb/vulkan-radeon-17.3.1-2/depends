@@ -1,8 +1,0 @@
-%DEPENDS%
-wayland
-libx11
-libxshmfence
-libelf
-libdrm
-llvm-libs
-

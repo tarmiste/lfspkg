@@ -1,8 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-base-compat
-haskell-ghc
-haskell-syb
-haskell-code-page
-haskell-ghc-paths
-

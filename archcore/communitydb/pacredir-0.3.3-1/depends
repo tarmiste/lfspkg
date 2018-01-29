@@ -1,8 +1,0 @@
-%DEPENDS%
-libsystemd
-avahi
-curl
-iniparser
-darkhttpd
-libmicrohttpd
-

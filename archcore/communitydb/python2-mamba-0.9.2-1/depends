@@ -1,6 +1,0 @@
-%DEPENDS%
-python2-coverage
-python2-watchdog
-python2-clint
-python2-setuptools
-

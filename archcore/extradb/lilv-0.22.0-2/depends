@@ -1,6 +1,0 @@
-%DEPENDS%
-python2-numpy
-sratom>=0.4.6
-sord>=0.14.0
-jack
-

@@ -1,7 +1,0 @@
-%OPTDEPENDS%
-libopenraw: openraw plugin
-openexr: openexr plugin
-ffmpeg: ffmpeg plugin
-librsvg: svg plugin
-jasper: jasper plugin
-

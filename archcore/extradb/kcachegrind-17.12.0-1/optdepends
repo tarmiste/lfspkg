@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-php: PHP support
-graphviz: for plotting support
-

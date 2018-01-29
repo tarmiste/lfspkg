@@ -1,9 +1,0 @@
-%DEPENDS%
-boost-libs
-libsodium
-systemd
-lua
-openssl
-protobuf
-sqlite
-

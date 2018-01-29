@@ -1,7 +1,0 @@
-%DEPENDS%
-libmnl
-libnftnl
-gmp
-readline
-ncurses
-

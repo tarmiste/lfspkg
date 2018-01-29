@@ -1,6 +1,0 @@
-%CHECKDEPENDS%
-memcached
-python-pytest-runner
-python2-pytest-runner
-python2-mock
-

@@ -1,3 +1,0 @@
-%OPTDEPENDS%
-openmpi: for mpi support
-

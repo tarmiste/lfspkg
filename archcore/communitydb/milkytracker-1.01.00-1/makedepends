@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-jack-audio-connection-kit
-gendesk
-cmake
-ninja
-sdl2
-

@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-perl-test-fatal
-perl-test-requires
-perl-test-warnings>=0.009
-perl-test-without-module
-

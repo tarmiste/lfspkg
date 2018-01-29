@@ -1,6 +1,0 @@
-%DEPENDS%
-appstream-glib
-fwupdate
-colord
-python
-

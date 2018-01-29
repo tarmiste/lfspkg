@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-openssh: For integration with ssh-agent
-gnupg: For integration with GnuPG SSH agent
-

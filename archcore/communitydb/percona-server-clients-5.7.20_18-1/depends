@@ -1,7 +1,0 @@
-%DEPENDS%
-libperconaserverclient
-zlib
-lz4
-jemalloc
-readline
-

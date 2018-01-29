@@ -1,9 +1,0 @@
-%DEPENDS%
-python-pytz
-python-numpy
-python-pyqt5
-python-dateutil
-python-pyparsing
-python-cycler
-libxkbcommon-x11
-

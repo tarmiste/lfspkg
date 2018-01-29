@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-python-pytest
-python2-pytest
-python-werkzeug
-python2-werkzeug
-

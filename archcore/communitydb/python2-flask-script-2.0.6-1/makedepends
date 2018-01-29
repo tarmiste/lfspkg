@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-python-setuptools
-python-flask
-python2-setuptools
-python2-flask
-

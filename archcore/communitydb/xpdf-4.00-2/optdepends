@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-poppler: tools that used to be included in xpdf
-desktop-file-utils: for desktop environments
-

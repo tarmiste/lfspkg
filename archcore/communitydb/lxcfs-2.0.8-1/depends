@@ -1,7 +1,0 @@
-%DEPENDS%
-lxc
-cgmanager>=0.35-1
-libnih
-fuse2
-dbus-glib
-

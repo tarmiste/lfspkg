@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-ghc
-haskell-hspec
-haskell-quickcheck
-haskell-safe
-haskell-split
-

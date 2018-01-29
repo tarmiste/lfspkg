@@ -1,5 +1,0 @@
-%DEPENDS%
-python-pandas
-python-requests-file
-python-requests-ftp
-

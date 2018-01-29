@@ -1,6 +1,0 @@
-%DEPENDS%
-sugar
-xorg-xinit
-xorg-server-xephyr
-xorg-xrandr
-

@@ -1,6 +1,0 @@
-%DEPENDS%
-openssl
-python2
-zlib
-libpcap
-

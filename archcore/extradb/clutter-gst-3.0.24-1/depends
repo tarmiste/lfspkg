@@ -1,6 +1,0 @@
-%DEPENDS%
-clutter
-gst-plugins-base-libs
-libxdamage
-libgudev
-

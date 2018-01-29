@@ -1,6 +1,0 @@
-%DEPENDS%
-gcc-libs
-http-parser
-libnatpmp
-miniupnpc
-

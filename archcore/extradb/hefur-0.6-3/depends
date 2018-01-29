@@ -1,5 +1,0 @@
-%DEPENDS%
-gnutls
-xz
-protobuf
-

@@ -1,7 +1,0 @@
-%DEPENDS%
-freetype2
-jbig2dec
-libjpeg
-openjpeg2
-harfbuzz
-

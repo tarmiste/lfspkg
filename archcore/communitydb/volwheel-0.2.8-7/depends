@@ -1,5 +1,0 @@
-%DEPENDS%
-perl-gtk2-trayicon
-hicolor-icon-theme
-desktop-file-utils
-

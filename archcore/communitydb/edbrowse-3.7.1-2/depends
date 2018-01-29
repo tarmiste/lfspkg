@@ -1,6 +1,0 @@
-%DEPENDS%
-duktape
-tidy
-curl
-pcre
-

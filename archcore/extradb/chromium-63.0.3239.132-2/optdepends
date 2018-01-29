@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-pepper-flash: support for Flash content
-kdialog: needed for file dialogs in KDE
-gnome-keyring: for storing passwords in GNOME keyring
-kwallet: for storing passwords in KWallet
-

@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-mathjax: latex equation rendering
-pandoc: notebook export
-

@@ -1,8 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-base64-bytestring
-haskell-entropy
-haskell-text
-haskell-unliftio
-haskell-unliftio-core
-

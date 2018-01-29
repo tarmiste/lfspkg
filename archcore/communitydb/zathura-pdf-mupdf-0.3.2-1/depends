@@ -1,8 +1,0 @@
-%DEPENDS%
-zathura
-jbig2dec
-openjpeg2
-cairo
-desktop-file-utils
-openssl
-

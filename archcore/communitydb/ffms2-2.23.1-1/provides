@@ -1,4 +1,0 @@
-%PROVIDES%
-vapoursynth-plugin-ffms2
-libffms2.so=4-64
-

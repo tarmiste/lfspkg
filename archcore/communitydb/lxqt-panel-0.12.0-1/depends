@@ -1,9 +1,0 @@
-%DEPENDS%
-libdbusmenu-qt5
-libxcomposite
-lxmenu-data
-lxqt-globalkeys
-menu-cache
-solid
-libxcb
-

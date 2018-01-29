@@ -1,7 +1,0 @@
-%OPTDEPENDS%
-gutenprint: for sophisticated printing only as gimp has built-in cups print support
-poppler-glib: for pdf support
-alsa-lib: for MIDI event controller module
-curl: for URI support
-ghostscript: for postscript support
-

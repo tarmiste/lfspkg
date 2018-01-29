@@ -1,4 +1,0 @@
-%OPTDEPENDS%
-libcanberra-pulse: PulseAudio support
-pulseaudio-alsa: PulseAudio support
-

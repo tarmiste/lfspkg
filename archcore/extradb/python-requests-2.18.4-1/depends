@@ -1,5 +1,0 @@
-%DEPENDS%
-python-urllib3
-python-chardet
-python-idna
-

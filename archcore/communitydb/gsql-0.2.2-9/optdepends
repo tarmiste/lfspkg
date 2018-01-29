@@ -1,6 +1,0 @@
-%OPTDEPENDS%
-libmariadbclient: MySQL engine
-libssh: SSH tunneling plugin
-postgresql-libs: PostgreSQL engine
-vte: Terminal session plugin
-

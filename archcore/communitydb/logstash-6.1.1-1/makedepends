@@ -1,6 +1,0 @@
-%MAKEDEPENDS%
-java-environment=8
-gradle
-git
-jruby
-

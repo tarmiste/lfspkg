@@ -1,5 +1,0 @@
-%DEPENDS%
-python2
-python2-greenlet
-python2-subprocess32
-

@@ -1,5 +1,0 @@
-%DEPENDS%
-efivar
-nss
-libutil-linux
-

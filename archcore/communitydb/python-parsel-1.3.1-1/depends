@@ -1,6 +1,0 @@
-%DEPENDS%
-python-cssselect
-python-lxml
-python-six
-python-w3lib
-

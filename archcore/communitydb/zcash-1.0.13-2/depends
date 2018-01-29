@@ -1,5 +1,0 @@
-%DEPENDS%
-boost-libs
-libevent
-zeromq
-

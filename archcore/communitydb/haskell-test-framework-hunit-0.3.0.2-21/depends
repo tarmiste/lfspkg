@@ -1,6 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-hunit
-haskell-extensible-exceptions
-haskell-test-framework
-

@@ -1,4 +1,0 @@
-%MAKEDEPENDS%
-python2-sphinx
-xapian-core=1:1.4.5
-

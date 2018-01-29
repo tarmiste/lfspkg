@@ -1,5 +1,0 @@
-%DEPENDS%
-java-environment>=8
-webkit2gtk
-unzip
-

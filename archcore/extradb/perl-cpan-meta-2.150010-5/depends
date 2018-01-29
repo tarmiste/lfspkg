@@ -1,6 +1,0 @@
-%DEPENDS%
-perl>=5.8
-perl-cpan-meta-requirements>=2.121
-perl-cpan-meta-yaml>=0.008
-perl-cpan-meta>=2.150008
-

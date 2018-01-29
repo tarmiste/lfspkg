@@ -1,7 +1,0 @@
-%DEPENDS%
-bzip2
-libltdl
-libxml2
-curl
-pcre
-

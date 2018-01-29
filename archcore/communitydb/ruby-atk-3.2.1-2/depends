@@ -1,5 +1,0 @@
-%DEPENDS%
-ruby
-atk
-ruby-glib2=3.2.1
-

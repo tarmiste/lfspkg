@@ -1,8 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-byteable
-haskell-crypto-numbers
-haskell-crypto-pubkey-types
-haskell-crypto-random
-haskell-cryptohash
-

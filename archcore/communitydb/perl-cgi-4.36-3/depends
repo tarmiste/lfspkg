@@ -1,4 +1,0 @@
-%DEPENDS%
-perl>=5.8.1
-perl-html-parser
-

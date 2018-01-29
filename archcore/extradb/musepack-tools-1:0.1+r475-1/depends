@@ -1,5 +1,0 @@
-%DEPENDS%
-libcue
-libreplaygain
-libmpcdec>=1:0.1+r475
-

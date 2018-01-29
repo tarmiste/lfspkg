@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-pkg-config
-cmake
-automoc4
-doxygen
-networkmanager
-boost
-

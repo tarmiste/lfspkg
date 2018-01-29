@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-ghc
-haskell-tagged
-haskell-tasty
-haskell-tasty-golden
-haskell-tasty-rerun
-nodejs
-

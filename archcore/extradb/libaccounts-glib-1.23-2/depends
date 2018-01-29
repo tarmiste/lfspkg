@@ -1,5 +1,0 @@
-%DEPENDS%
-dbus-glib
-libxml2
-sqlite
-

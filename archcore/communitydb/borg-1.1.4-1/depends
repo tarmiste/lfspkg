@@ -1,8 +1,0 @@
-%DEPENDS%
-acl
-lz4
-openssl
-python-msgpack
-python-setuptools
-xz
-

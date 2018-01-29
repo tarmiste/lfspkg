@@ -1,7 +1,0 @@
-%MAKEDEPENDS%
-itstool
-python
-yelp-tools
-autoconf-archive
-git
-

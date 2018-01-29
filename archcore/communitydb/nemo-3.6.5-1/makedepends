@@ -1,9 +1,0 @@
-%MAKEDEPENDS%
-gtk-doc
-gobject-introspection
-intltool
-gnome-common
-python-gobject
-python-polib
-python2-gobject
-

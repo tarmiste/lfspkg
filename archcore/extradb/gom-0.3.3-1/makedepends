@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-gtk-doc
-gobject-introspection
-gdk-pixbuf2
-git
-meson
-python-gobject
-

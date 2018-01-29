@@ -1,5 +1,0 @@
-%DEPENDS%
-curl
-glib2
-sqlite3
-

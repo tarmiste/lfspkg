@@ -1,6 +1,0 @@
-%DEPENDS%
-ncurses
-expat
-xz
-gdb-common=8.0.1
-

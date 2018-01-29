@@ -1,5 +1,0 @@
-%DEPENDS%
-givaro
-cblas
-lapack
-

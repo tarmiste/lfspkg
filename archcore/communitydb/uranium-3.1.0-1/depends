@@ -1,8 +1,0 @@
-%DEPENDS%
-python
-qt5-quickcontrols
-pyqt5-common
-python-pyqt5
-python-numpy
-arcus
-

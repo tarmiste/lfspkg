@@ -1,7 +1,0 @@
-%DEPENDS%
-libxml2
-perl-xml-sax
-perl-xml-namespacesupport
-perl>=5.26
-perl<5.27
-

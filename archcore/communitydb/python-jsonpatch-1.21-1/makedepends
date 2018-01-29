@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-python-setuptools
-python2-setuptools
-python-jsonpointer
-python2-jsonpointer
-python-pypandoc
-python2-pypandoc
-

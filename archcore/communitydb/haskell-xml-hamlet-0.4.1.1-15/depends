@@ -1,7 +1,0 @@
-%DEPENDS%
-ghc-libs
-haskell-parsec
-haskell-shakespeare
-haskell-text
-haskell-xml-conduit
-

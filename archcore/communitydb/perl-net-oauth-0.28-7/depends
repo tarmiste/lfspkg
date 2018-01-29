@@ -1,9 +1,0 @@
-%DEPENDS%
-perl-class-accessor
-perl-class-data-inheritable
-perl-digest-hmac
-perl-digest-sha1
-perl-uri
-perl-libwww
-perl-file-slurp-tiny
-

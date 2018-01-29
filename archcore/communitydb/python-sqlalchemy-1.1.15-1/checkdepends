@@ -1,8 +1,0 @@
-%CHECKDEPENDS%
-python-pytest-runner
-python2-pytest-runner
-python-pytest-xdist
-python2-pytest-xdist
-python-mock
-python2-mock
-

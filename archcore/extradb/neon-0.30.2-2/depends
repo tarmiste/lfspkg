@@ -1,6 +1,0 @@
-%DEPENDS%
-krb5
-expat
-ca-certificates
-zlib
-

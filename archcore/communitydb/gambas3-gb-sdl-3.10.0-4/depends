@@ -1,6 +1,0 @@
-%DEPENDS%
-gambas3-gb-image-io
-sdl_ttf
-libxcursor
-glew
-

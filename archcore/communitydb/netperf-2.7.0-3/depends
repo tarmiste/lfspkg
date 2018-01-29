@@ -1,5 +1,0 @@
-%DEPENDS%
-glibc
-libsmbios
-lksctp-tools
-

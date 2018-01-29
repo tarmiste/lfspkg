@@ -1,7 +1,0 @@
-%OPTDEPENDS%
-libraw: read RAW files
-exiv2: metadata support
-libchamplain: map viewer
-brasero: burn discs
-liboauth: web albums
-

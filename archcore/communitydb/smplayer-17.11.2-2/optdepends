@@ -1,7 +1,0 @@
-%OPTDEPENDS%
-smplayer-themes: icon themes collection
-smplayer-skins: skin themes collection
-smtube: browse and play youtube videos
-youtube-dl: youtube videos and streaming
-mplayer: alternative multimedia engine
-

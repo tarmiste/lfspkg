@@ -1,8 +1,0 @@
-%MAKEDEPENDS%
-python-setuptools
-python2-setuptools
-python-docutils
-python2-docutils
-python-lockfile
-python2-lockfile
-

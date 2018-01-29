@@ -1,5 +1,0 @@
-%MAKEDEPENDS%
-jdk7-openjdk
-gcc-fortran
-tk
-

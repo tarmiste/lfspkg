@@ -1,5 +1,0 @@
-%DEPENDS%
-opencv
-fftw
-qt5-base
-
