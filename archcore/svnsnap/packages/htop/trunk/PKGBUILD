@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 310007 2017-11-15 14:11:34Z foutrelis $
+# $Id: PKGBUILD 315579 2018-01-29 16:51:13Z bpiotrowski $
 # Maintainer: Christian Hesse <mail@eworm.de>
 # Maintainer: Angel Velasquez <angvp@archlinux.org>
 # Contributor: Eric Belanger <eric@archlinux.org>
@@ -15,7 +15,7 @@ depends=('ncurses')
 makedepends=('python')
 optdepends=('lsof: show files opened by a process'
             'strace: attach to a running process')
-options=('!emptydirs')
+options=('!emptydirs' debug)
 validpgpkeys=('8460980B2B79786DE0C7FCC83FD8F43C2BB3C478') # Hisham Muhammad <h@hisham.hm>
 source=("https://hisham.hm/$pkgname/releases/$pkgver/$pkgname-$pkgver.tar.gz"{,.asc})
 sha256sums=('179be9dccb80cee0c5e1a1f58c8f72ce7b2328ede30fb71dcdf336539be2f487'

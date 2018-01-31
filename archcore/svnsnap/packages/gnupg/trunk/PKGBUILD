@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 313418 2017-12-20 20:13:44Z bisson $
+# $Id: PKGBUILD 315589 2018-01-29 18:17:20Z bisson $
 # Maintainer: Gaetan Bisson <bisson@archlinux.org>
 # Contributor: Tobias Powalowski <tpowa@archlinux.org>
 # Contributor: Andreas Radke <andyrtr@archlinux.org>
@@ -6,14 +6,15 @@
 
 pkgname=gnupg
 pkgver=2.2.4
-pkgrel=1
+pkgrel=2
 pkgdesc='Complete and free implementation of the OpenPGP standard'
 url='http://www.gnupg.org/'
 license=('GPL')
 arch=('x86_64')
 optdepends=('libldap: gpg2keys_ldap'
-            'libusb-compat: scdaemon')
-makedepends=('libldap' 'libusb-compat')
+            'libusb-compat: scdaemon'
+            'pcsclite: scdaemon')
+makedepends=('libldap' 'libusb-compat' 'pcsclite')
 checkdepends=('openssh')
 depends=('npth' 'libgpg-error' 'libgcrypt' 'libksba' 'libassuan'
          'pinentry' 'bzip2' 'readline' 'gnutls' 'sqlite')

@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 314365 2018-01-11 12:17:04Z eworm $
+# $Id: PKGBUILD 315568 2018-01-29 15:27:14Z eworm $
 # Maintainer: Christian Hesse <mail@eworm.de>
 # Maintainer: Dave Reisner <dreisner@archlinux.org>
 # Maintainer: Tom Gundersen <teg@jklm.no>
@@ -6,10 +6,10 @@
 pkgbase=systemd
 pkgname=('systemd' 'libsystemd' 'systemd-sysvcompat')
 # latest commit on stable branch
-_commit='3e14c4c1876b4dfeb8bf511185f70fef8d04a153'
+_commit='46659f7deb962f55c728e70597e37c2a3ab6326d'
 # Bump this to latest major release for signed tag verification,
 # the commit count is handled by pkgver() function.
-pkgver=236.80
+pkgver=237.0
 pkgrel=1
 arch=('x86_64')
 url="https://www.github.com/systemd/systemd"
