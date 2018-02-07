@@ -30,7 +30,10 @@ case $(uname -m) in
       ln -sv lib /usr/local/lib64 ;;
 esac
 
-mkdir -v /var/{log,mail,spool}
+mkdir -v /var/{empty,ftp,lib,log,mail,spool,www}
+mkdir -v /var/lib/pkg
+mkdir -v /var/log/old
+mkdir -v /var/spool/mail
 ln -sv /run /var/run
 ln -sv /run/lock /var/lock
 mkdir -pv /var/{opt,cache,lib/{color,misc,locate},local}</userinput></screen>
