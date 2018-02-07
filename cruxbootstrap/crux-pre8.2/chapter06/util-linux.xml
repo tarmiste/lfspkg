@@ -75,7 +75,6 @@
             --disable-setpriv    \
             --disable-runuser    \
             --disable-pylibmount \
-            --disable-static     \
             --without-python     \
             --without-systemd    \
             --without-systemdsystemunitdir</userinput></screen>
@@ -89,7 +88,6 @@
             --disable-setpriv    \
             --disable-runuser    \
             --disable-pylibmount \
-            --disable-static     \
             --without-python</userinput></screen>
 
     <para>The --disable and --without options prevent warnings about
