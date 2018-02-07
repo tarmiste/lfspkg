@@ -65,7 +65,6 @@
 
 <screen revision="sysv"><userinput remap="configure">./configure --prefix=/usr    \
             --bindir=/bin    \
-            --disable-static \
             --libexecdir=/usr/lib</userinput></screen>
 
 <screen revision="systemd"><userinput remap="configure">./configure --prefix=/usr    \
